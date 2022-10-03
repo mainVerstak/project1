@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/fotorama.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fotorama.js"></script>
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top-nav">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <div class="dropdown header-city">
+                                <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Москва
+                                    <span class="caret"></span>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Москва</a></li>
+                                    <li><a href="#">Москва2</a></li>
+                                    <li><a href="#">Москва3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                                <i class="fa fa-edit fa-lg"></i>
+                                Выписки
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile">
+                            <a href="#">
+                                <i class="fas fa-money-bill-wave"></i>
+                                Тарифы и цены
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile" i>
+                            <a href="#">
+                                <i class="fas fa-file-code"></i>
+                                Пакетная загрузка
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/">
+                                <img src="img/logo.svg" class="navbar-brand__logo">
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color">
+                                        <a data-no-turbolink="true" href="/estate-new">
+                                            <div class="btn btn-warning">
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                Подать объявление
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+        <div class="publications">
+            <div class="publications__title1">
+                Ваше объявление успешно создано
+            </div>
+            <div class="publications__announcing">
+                <div class="object-announce object-announce_default">
+                    <div class="object-announce__gallery">
+                        <div class="object-announce__gallery-wrapper">
+                            <div class="fotorama object-announce__fotorama" data-nav="false" data-arrows="false"
+                                data-click="false" data-width="100%" data-ratio="237/162">
+                                <img src="img/img5.jpg">
+                                <img src="img/img6.jpg">
+                                <img src="img/img.png">
+                                <img src="img/img1.png">
+                                <img src="img/img2.png">
+                                <img src="img/img3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-announce__inner">
+                        <div class="object-announce__content">
+                            <a href="#" class="object-announce__title">
+                                Сдаю посуточно 2-комнатную квартиру 49м2
+                            </a>
+                            <div class="object-announce__price">
+                                5000 ₽
+                            </div>
+                            <div class="object-announce__location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                г. Сочи, пер. Центральный, ул. Роз, 63
+                            </div>
+                            <div class="object-announce__text">
+                                Квартира подходит для тихого отдыха. Самый центр города, тихая улица с
+                                односторонним движением. Дом заходится в глубине за пальмами.
+                            </div>
+                            <div class="object-announce__status">
+                                <time class="object-announce__date">
+                                    Только что
+                                </time>
+                            </div>
+                        </div>
+                        <div class="object-announce__owner">
+                            <div class="object-announce__owner-name">
+                                <i class="fas fa-check"></i>
+                                <noindex>Собственник</noindex>
+                            </div>
+                            <noindex>
+                                <button class="btn btn-xs object-announce__show-phone ShowAdvPhoneAction"
+                                    data-id="44833678">
+                                    <i class="fas fa-phone"></i>
+                                    Показать телефон
+                                </button>
+                            </noindex>
+                        </div>
+                        <div class="object-announce__action">
+                            <span class="notepad_action">
+                                <form action="/notepads?id=44833678&amp;notepad=true" class="withoutBootstrapValidator"
+                                    data-remote="true" method="post">
+                                    <button class="object-announce__actions-item" title="Добавить в избранное"
+                                        type="submit">
+                                        <i class="far fa-star"></i>
+                                    </button>
+                                    <input name="authenticity_token" type="hidden"
+                                        value="cEQjZCqlkyCPWf/EABB38PkzU+PrxihV56u/xh/OehM=">
+                                </form>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="publications__title2">Публикация объявления</div>
+            <div class="publications__text">
+                <p>
+                    Ваше объявление было успешно создано. Чтобы посетители сайта смогли просматривать его в течение
+                    одного месяца, оплатите публикацию.
+                </p>
+            </div>
+            <div class="publications__items">
+                <label class="publication-item">
+                    <input type="radio" class="publication-item__input" name="publication" data-type="default" checked>
+                    <span class="publication-item__checkmark"></span>
+                    <span class="publication-item__content">
+                        <span class="publication-item__text">
+                            Публикация
+                        </span>
+                        <span class="publication-item__prices">
+                            <span class="publication-item__price-current">
+                                <span class="publication-item__price-value">300</span> ₽
+                            </span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+            <div class="publications__title2">Срочное объявление</div>
+            <div class="publications__text publications__text_urgent">
+                <p>
+                    Дополнительно закрепите объявление в самом верху страницы поиска и выделите его пометкой “Срочное”.
+                    Больше клиентов увидят объявление и недвижимость будет реализована максимально быстро. Вне
+                    зависимости от выбранного тарифа, объявление будет опубликовано на 31 день.
+                </p>
+            </div>
+            <div class="publications__items">
+                <label class="publication-item">
+                    <input type="radio" class="publication-item__input" data-type="urgent" name="publication">
+                    <span class="publication-item__checkmark"></span>
+                    <span class="publication-item__content">
+                        <span class="publication-item__content-inner">
+                            <span class="publication-item__text">
+                                Публикация и
+                                <span class="publication-item__term">1&nbsp;месяц</span>&nbsp;выделения
+                            </span>
+                            <span class="publication-item__saving publication-item__saving_red">Экономия 60%</span>
+                        </span>
+                        <span class="publication-item__prices">
+                            <span class="publication-item__price">1249 ₽</span>
+                            <span class="publication-item__price-current">
+                                <span class="publication-item__price-value">649</span> ₽
+                            </span>
+                        </span>
+                    </span>
+                </label>
+                <label class="publication-item">
+                    <input type="radio" class="publication-item__input" data-type="urgent" name="publication">
+                    <span class="publication-item__checkmark"></span>
+                    <span class="publication-item__content">
+                        <span class="publication-item__content-inner">
+                            <span class="publication-item__text">
+                                Публикация и <span class="publication-item__term">14&nbsp;дней</span>&nbsp;выделения
+                            </span>
+                            <span class="publication-item__saving publication-item__saving_yellow">Экономия 50%</span>
+                        </span>
+                        <span class="publication-item__prices">
+                            <span class="publication-item__price">999 ₽</span>
+                            <span class="publication-item__price-current">
+                                <span class="publication-item__price-value">499</span> ₽
+                            </span>
+                        </span>
+                    </span>
+                </label>
+                <label class="publication-item">
+                    <input type="radio" class="publication-item__input" data-type="urgent" name="publication">
+                    <span class="publication-item__checkmark"></span>
+                    <span class="publication-item__content">
+                        <span class="publication-item__content-inner">
+                            <span class="publication-item__text">
+                                Публикация и <span class="publication-item__term">7&nbsp;дней</span>&nbsp;выделения
+                            </span>
+                        </span>
+                        <span class="publication-item__prices">
+                            <span class="publication-item__price-current">
+                                <span class="publication-item__price-value">399</span> ₽
+                            </span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+            <div class="publications__btns">
+                <div class="publications__btn-floating js-floating-container">
+                    <div class="publications__btn-floating-content js-floating-content _fixed">
+                        <button class="publications__btn">
+                            <!-- <i class="fas fa-money-bill publications__btn-icon"></i> -->
+                            <i class="fa fa-money publications__btn-icon"></i>
+                            Оплатить <span class="publications__btn-value">300</span> ₽ и опубликовать
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

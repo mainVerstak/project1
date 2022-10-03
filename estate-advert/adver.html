@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrapValidator.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header"><button class="navbar-toggle sidenav-button" type="button"><span
+                                class="icon-bar"></span><span class="icon-bar"></span><span
+                                class="icon-bar"></span></button><span class="pull-left"><a class="navbar-brand"
+                                href="/" style="color:#337ab7;"><i class="fa fa-building-o fa-lg"></i>
+                                multilisting.su</a></span></div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click"><i class="fa fa-edit fa-lg"></i><span
+                                            class="hidden-sm hidden-md"> Выписки</span></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="nav navbar-nav"><a href="/sign-in">
+                                        <div class="navbar-link"><i class="fa fa-sign-in"></i> Войти</div>
+                                    </a></li>
+                                <li class="nav navbar-nav"><a href="/sign-up">
+                                        <div class="navbar-link"><i class="fa fa-user-plus"></i> Зарегистрироваться
+                                        </div>
+                                    </a></li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color"><a data-no-turbolink="true"
+                                            href="/estate-new">
+                                            <div class="btn btn-warning"><i class="fa fa-plus fa-lg"></i> Подать
+                                                объявление</div>
+                                        </a></div>
+                                </li>
+                            </ul>
+                        </div><button aria-label="Close" class="sidenav__close" type="button"><i
+                                class="fa fa-close"></i></button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+        <div class="adver-box">
+            <div class="adver-box__title">
+                НА MULTILISTING.SU ПРЕДСТАВЛЕНЫ РАЗЛИЧНЫЕ
+                ВАРИНАТ РАЗМЕЩЕНИЯ РЕКЛАМЫНЫХ МОДУЛЕЙ
+            </div>
+            <div class="adver-box__title adver-box__title_2">
+                Тип банеров допустим любой, но без звука.
+            </div>
+            <div class="adver-box__region">
+                <div class="adver-box__region-text">
+                    <i class="fa fa-map-marker"></i>
+                    Регион размещения
+                </div>
+                <div class="adver-box__region-input">
+                    <select class="select-styled-new">
+                        <option value="0" selected>Москва</option>
+                        <option value="1">Москва1</option>
+                        <option value="2">Москва2</option>
+                        <option value="3">Москва3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="adver-grid">
+                <div class="adver-grid__item">
+                    <div class="adver-grid__img">
+                        <img src="img/adver-type1.svg">
+                    </div>
+                    <div class="adver-grid__bottom">
+                        <div class="adver-grid__title">
+                            В слайдере
+                        </div>
+                        <div class="adver-grid__price">
+                            Стоимость: 4 000₽ в месяц
+                        </div>
+                        <div class="adver-grid__quantity">
+                            Показов в месяц: 123456 раз
+                        </div>
+                        <div class="adver-grid__size">
+                            Размер: 300х50 px.
+                        </div>
+                    </div>
+                </div>
+                <div class="adver-grid__item">
+                    <div class="adver-grid__img">
+                        <img src="img/adver-type2.svg">
+                    </div>
+                    <div class="adver-grid__bottom">
+                        <div class="adver-grid__title">
+                            Между фотографиями объявлений
+                        </div>
+                        <div class="adver-grid__price">
+                            Стоимость: 4 500₽ в месяц
+                        </div>
+                        <div class="adver-grid__quantity">
+                            Показов в месяц: 123456 раз
+                        </div>
+                        <div class="adver-grid__size">
+                            Размеры: 320x250 px, 375x280 px, 768x280 px, 992x280 px.
+                        </div>
+                    </div>
+                </div>
+                <div class="adver-grid__item">
+                    <div class="adver-grid__img">
+                        <img src="img/adver-type3.svg">
+                    </div>
+                    <div class="adver-grid__bottom">
+                        <div class="adver-grid__title">
+                            После заголовка в расширенной <br>
+                            карточке объявления
+                        </div>
+                        <div class="adver-grid__price">
+                            Стоимость: 6 000₽ в месяц
+                        </div>
+                        <div class="adver-grid__quantity">
+                            Показов в месяц: 123456 раз
+                        </div>
+                        <div class="adver-grid__size">
+                            Размеры: 320x250 px, 375x280 px, 768x280 px, 992x280 px.
+                        </div>
+                    </div>
+                </div>
+                <div class="adver-grid__item">
+                    <div class="adver-grid__img">
+                        <img src="img/adver-type4.svg">
+                    </div>
+                    <div class="adver-grid__bottom">
+                        <div class="adver-grid__title">
+                            После посковой формы <br>
+                            на страницах секций
+                        </div>
+                        <div class="adver-grid__price">
+                            Стоимость: 4 500₽ в месяц
+                        </div>
+                        <div class="adver-grid__quantity">
+                            Показов в месяц: 123456 раз
+                        </div>
+                        <div class="adver-grid__size">
+                            Размеры: 320x250 px, 375x280 px, 768x280 px, 992x280 px.
+                        </div>
+                    </div>
+                </div>
+                <div class="adver-grid__item">
+                    <div class="adver-grid__img">
+                        <img src="img/adver-type5.svg">
+                    </div>
+                    <div class="adver-grid__bottom">
+                        <div class="adver-grid__title">
+                            После пагинации
+                        </div>
+                        <div class="adver-grid__price">
+                            Стоимость: 4 500₽ в месяц
+                        </div>
+                        <div class="adver-grid__quantity">
+                            Показов в месяц: 123456 раз
+                        </div>
+                        <div class="adver-grid__size">
+                            Размеры: 320x250 px, 375x280 px, 768x280 px, 992x280 px.
+                        </div>
+                    </div>
+                </div>
+                <div class="adver-grid__item">
+                    <div class="adver-grid__img">
+                        <img src="img/adver-type6.svg">
+                    </div>
+                    <div class="adver-grid__bottom">
+                        <div class="adver-grid__title">
+                            Рядом с ценой в расширенной <br>
+                            карточке объявления
+                        </div>
+                        <div class="adver-grid__price">
+                            Стоимость: 4 500₽ в месяц
+                        </div>
+                        <div class="adver-grid__quantity">
+                            Показов в месяц: 123456 раз
+                        </div>
+                        <div class="adver-grid__size">
+                            Размеры: 320x250 px, 375x280 px, 768x280 px.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="adver-form">
+                <div class="adver-form__title">
+                    Телефон для размещения рекламы: <a href="tel:+88005055381">8-800-505-53-81</a>
+                </div>
+                <form class="adver-form__content form-styled-new" id="adver-form-validation">
+                    <div class="adver-form__content-top">
+                        <div class="adver-form__left">
+                            <div class="adver-form__row form-group">
+                                <label class="adver-form__label control-label">Имя</label>
+                                <div class="adver-form__input">
+                                    <input class="input-styled-new" type="text" name="firstName" placeholder="Имя">
+                                </div>
+                            </div>
+                            <div class="adver-form__row form-group">
+                                <label class="adver-form__label control-label">Почта</label>
+                                <div class="adver-form__input">
+                                    <input class="input-styled-new" type="text" name="email" placeholder="Почта">
+                                </div>
+                            </div>
+                            <div class="adver-form__row form-group">
+                                <label class="adver-form__label control-label">Телефон</label>
+                                <div class="adver-form__input">
+                                    <input class="input-styled-new" type="text" name="phone" placeholder="Телефон">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adver-form__right">
+                            <div class="adver-form__row adver-form__row_msg form-group">
+                                <label class="adver-form__label control-label">Сообщение</label>
+                                <div class="adver-form__input">
+                                    <textarea class="input-styled-new input-styled-new_textarea adver-form__textarea"
+                                        name="message" placeholder="Сообщение"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adver-form__content-bottom">
+                        <div class="adver-form__left">
+                            <div class="adver-form__recaptcha form-group">
+                                <div style="width: 237px; height: 60px; background: #aaa;"></div>
+                            </div>
+                        </div>
+                        <div class="adver-form__right adver-form__btns form-group">
+                            <button class="btn btn-styled-new adver-form__btn" type="submit">
+                                Отправить заявку
+                            </button>
+                        </div>
+                    </div>
+                    <div class="adver-form__note">
+                        Нажимая кнопку «Отправить заявку», я принимаю условия Предоставления услуг, Оферты и даю своё
+                        согласие на обработку моих персональных данных, в соответствии с Федеральным законом от
+                        27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой
+                        конфиденциальности.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header-top">
+            <header>
+                <div class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header"><button class="navbar-toggle sidenav-button" type="button"><span
+                                    class="icon-bar"></span><span class="icon-bar"></span><span
+                                    class="icon-bar"></span></button><span class="pull-left"><a class="navbar-brand"
+                                    href="/" style="color:#337ab7;"><i class="fa fa-building-o fa-lg"></i>
+                                    multilisting.su</a></span></div>
+                        <nav class="sidenav loaded">
+                            <div class="sidenav__inner">
+                                <ul class="nav navbar-nav navbar-left">
+                                    <li><a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                            yaparam="header_document_click"><i class="fa fa-edit fa-lg"></i><span
+                                                class="hidden-sm hidden-md"> Выписки</span></a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="nav navbar-nav"><a href="/sign-in">
+                                            <div class="navbar-link"><i class="fa fa-sign-in"></i> Войти</div>
+                                        </a></li>
+                                    <li class="nav navbar-nav"><a href="/sign-up">
+                                            <div class="navbar-link"><i class="fa fa-user-plus"></i> Зарегистрироваться
+                                            </div>
+                                        </a></li>
+                                    <li class="nav navbar-nav">
+                                        <div class="navbar-btn nav-font-color"><a data-no-turbolink="true"
+                                                href="/estate-new">
+                                                <div class="btn btn-warning"><i class="fa fa-plus fa-lg"></i> Подать
+                                                    объявление</div>
+                                            </a></div>
+                                    </li>
+                                </ul>
+                            </div><button aria-label="Close" class="sidenav__close" type="button"><i
+                                    class="fa fa-close"></i></button>
+                        </nav>
+                        <div class="sidenav-overlay"></div>
+                    </div>
+                </div>
+                <div class="notifications top-right"></div>
+            </header>
+        </div>
+        <div class="row">
+            <footer class="footer">
+                <div class="footer__inner">
+                    <div class="footer__left">
+                        <div class="footer__copy">
+                            © 2007–2021
+                        </div>
+                        <div class="footer__left-text">
+                            Электронная база недвижимости
+                        </div>
+                        <div class="footer__metrika">
+                            <div class="footer__metrika-inner">
+                                Metrika
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Правила и условия
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Условия предоставления услуг
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-file-signature"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Оферта
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Политика конфиденциальности
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-book-reader"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Правила
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Удаление объявлений
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Пользователям
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-file-code"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-cash-register"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Способы оплаты
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Войти
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Зарегистрироваться
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-hammer"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Для застройщика
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Общая информация
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-building"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        О проекте
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-life-ring"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Техподдержка сайта
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="footer__social">
+                                <div class="footer__social-text">
+                                    В соцсетях:
+                                </div>
+                                <ul class="footer__social-list">
+                                    <li class="footer__social-item">
+                                        <a href="#" class="footer__social-link">
+                                            <i class="fab fa-twitter footer__social-icon"></i>
+                                        </a>
+                                    </li>
+                                    <li class="footer__social-item">
+                                        <a href="#" class="footer__social-link">
+                                            <i class="fab fa-vk footer__social-icon"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

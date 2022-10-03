@@ -1,0 +1,247 @@
+.list-adtype {
+  max-width: 700px;
+}
+
+.list-adtype .list-adtype__head {
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.list-adtype__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.list-adtype__btn {
+  max-width: 268px;
+  width: 100%;
+}
+
+.list-adtype__help {
+  margin-top: 15px;
+}
+
+.list-adtype__help a {
+  display: inline;
+}
+
+.card-adtype-btn {
+  display: none !important;
+}
+
+.card-adtype {
+  display: block;
+  max-width: 220px;
+  width: 100%;
+  min-height: 144px;
+  margin: 0 10px 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.card-adtype__inner {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: #FEFEDA;
+  overflow: hidden;
+  text-align: center;
+  color: rgba(51, 51, 51, 0.5);
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.card-adtype__head {
+  width: 100%;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: 1px solid #FFA640;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.card-adtype__content {
+  font-size: 11px;
+  padding: 6px 24px 0;
+  line-height: 16px;
+}
+
+.card-adtype__bottom {
+  max-width: 200px;
+  width: 100%;
+  border: 1px solid #FFA640;
+  border-radius: 10px 10px 0 0;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  margin: auto auto 0;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.card-adtype__price {
+  display: block;
+  font-weight: 700;
+}
+
+.card-adtype .card-adtype__btn {
+  width: 100%;
+  display: none;
+  margin: 10px 0;
+}
+
+.card-adtype input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.card-adtype input[type="radio"]:checked ~ .card-adtype__inner {
+  border-color: #FFA640;
+  color: #000000;
+}
+
+.card-adtype input[type="radio"]:checked ~ .card-adtype__inner .card-adtype__head {
+  background: #FFA640;
+}
+
+.card-adtype input[type="radio"]:checked ~ .card-adtype__inner .card-adtype__bottom {
+  background: #FFA640;
+}
+
+.card-adtype_blue .card-adtype__inner {
+  background: #DFF2FD;
+}
+
+.card-adtype_blue .card-adtype__head {
+  border-bottom-color: #80C6FF;
+}
+
+.card-adtype_blue .card-adtype__bottom {
+  border-color: #80C6FF;
+}
+
+.card-adtype_blue input[type="radio"]:checked ~ .card-adtype__inner {
+  border-color: #80C6FF;
+}
+
+.card-adtype_blue input[type="radio"]:checked ~ .card-adtype__inner .card-adtype__head {
+  background: #80C6FF;
+}
+
+.card-adtype_blue input[type="radio"]:checked ~ .card-adtype__inner .card-adtype__bottom {
+  background: #80C6FF;
+}
+
+.card-adtype_white .card-adtype__inner {
+  background: #ffffff;
+}
+
+.card-adtype_white .card-adtype__head {
+  border-bottom-color: #DCDCDC;
+}
+
+.card-adtype_white .card-adtype__bottom {
+  border-color: #DCDCDC;
+}
+
+.card-adtype_white input[type="radio"]:checked ~ .card-adtype__inner {
+  border-color: #DCDCDC;
+}
+
+.card-adtype_white input[type="radio"]:checked ~ .card-adtype__inner .card-adtype__head {
+  background: #DCDCDC;
+}
+
+.card-adtype_white input[type="radio"]:checked ~ .card-adtype__inner .card-adtype__bottom {
+  background: #DCDCDC;
+}
+
+@media only screen and (max-width: 479px) {
+  .list-adtype .list-adtype__head {
+    text-align: left;
+  }
+  .list-adtype__inner {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .list-adtype__btn {
+    display: none !important;
+  }
+  .card-adtype {
+    max-width: 100%;
+    margin: 0 0 20px;
+    min-height: auto;
+    cursor: default;
+  }
+  .card-adtype .card-adtype__btn {
+    display: block;
+  }
+  .card-adtype .card-adtype__bottom {
+    max-width: 210px;
+    background: #FFA640;
+  }
+  .card-adtype .card-adtype__inner {
+    border-color: #FFA640;
+    color: #000000;
+  }
+  .card-adtype .card-adtype__head {
+    background: transparent;
+  }
+  .card-adtype_blue .card-adtype__bottom {
+    background: #80C6FF;
+  }
+  .card-adtype_blue .card-adtype__inner {
+    border-color: #80C6FF;
+  }
+  .card-adtype_white {
+    display: none;
+  }
+  .card-adtype_white .card-adtype__bottom {
+    background: #DCDCDC;
+  }
+  .card-adtype_white .card-adtype__inner {
+    border-color: #DCDCDC;
+  }
+  .card-adtype-btn {
+    display: block !important;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

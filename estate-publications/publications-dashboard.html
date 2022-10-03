@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/fotorama.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fotorama.js"></script>
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/">
+                                <img src="img/logo.svg" class="navbar-brand__logo">
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color">
+                                        <a data-no-turbolink="true" href="/estate-new">
+                                            <div class="btn btn-warning">
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                Подать объявление
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+            <div class="well well-sm">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="https://vsn.ru/abuses?old=false"><i class="fas fa-list"></i>
+                            Активные</a></li>
+                    <li><a href="https://vsn.ru/abuses?old=true"><i class="fas fa-pause"></i> Закрытые</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <ul class="list-unstyled">
+            <li class="object-announce object-announce_full object-announce_odd">
+                <div class="object-announce__outer">
+                    <div class="object-announce__gallery">
+                        <div class="object-announce__gallery-wrapper">
+                            <div class="fotorama object-announce__fotorama" data-nav="false" data-arrows="false"
+                                data-click="false" data-width="100%" data-ratio="237/162">
+                                <img src="img/img5.png">
+                                <img src="img/img1.png">
+                                <img src="img/img2.png">
+                                <img src="img/img3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-announce__inner">
+                        <div class="object-announce__content">
+                            <a href="#" class="object-announce__title">
+                                Сдаю посуточно 2-комнатную квартиру 49м2
+                            </a>
+                            <div class="object-announce__price">
+                                5000 ₽
+                            </div>
+                            <div class="object-announce__location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                г. Сочи, пер. Центральный, ул. Роз, 63
+                            </div>
+                            <div class="object-announce__text">
+                                Квартира подходит для тихого отдыха. Самый центр города, тихая улица с
+                                односторонним движением. Дом заходится в глубине за пальмами.
+                            </div>
+                            <div class="object-announce__status">
+                                <span class="label label-default">avito</span>
+                                <time class="object-announce__date">
+                                    Только что
+                                </time>
+                            </div>
+                        </div>
+                        <div class="object-announce__owner">
+                            <div class="object-announce__owner-name">
+                                <i class="fas fa-check"></i>
+                                <noindex>Собственник</noindex>
+                            </div>
+                            <noindex>
+                                <button class="btn btn-xs object-announce__show-phone ShowAdvPhoneAction"
+                                    data-id="44833678">
+                                    <i class="fas fa-phone"></i>
+                                    Показать телефон
+                                </button>
+                            </noindex>
+                        </div>
+                        <div class="object-announce__action">
+                            <span class="notepad_action">
+                                <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                    <button class="object-announce__actions-item" title="Добавить в избранное"
+                                        type="submit">
+                                        <i class="far fa-star"></i>
+                                    </button>
+                                    <input name="authenticity_token" type="hidden"
+                                        value="cEQjZCqlkyCPWf/EABB38PkzU+PrxihV56u/xh/OehM=">
+                                </form>
+                            </span>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    title="Сделать срочным объявленим" type="submit">
+                                    <i class="fas fa-bolt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="get">
+                                <button class="object-announce__actions-item hidden-xs yaSend"
+                                    title="Поднять объявление" type="submit" yaparam="entity_top">
+                                    <i class="fas fa-level-up-alt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs" title="Редактировать объявление"
+                                    type="submit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                <input name="_method" type="hidden" value="delete">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    data-confirm="Удалить это объявление?" title="Удалить объявление" type="submit">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <input name="authenticity_token" type="hidden"
+                                    value="jNR3E/vTXoOFbJwQ6klQAKIf3Lx2CWXZ/6LHaUZJCBI=">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="object-announce__footer">
+                    <div class="object-announce__category">
+                        <label>телефон неправильный или не обслуживается </label>
+                    </div>
+                    <div class="object-announce__note">
+                        Развод! На нескольких ресурсах объявление с разными
+                        номерами. При договоре о просмотре телефон отключается и объявление пропадает…
+                    </div>
+                    <div class="object-announce__user">
+                        аноним
+                    </div>
+                    <div class="object-announce__control">
+                        <div class="btn-group">
+                            <button class="btn btn-warning accept_abuse_action" name="button" type="submit">
+                                Утвердить
+                            </button>
+                            <button class="btn btn-default not_accept_abuse_action" name="button" type="submit">
+                                Отклонить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="object-announce object-announce_full object-announce_even">
+                <div class="object-announce__outer">
+                    <div class="object-announce__gallery">
+                        <div class="object-announce__gallery-wrapper">
+                            <div class="fotorama object-announce__fotorama" data-nav="false" data-arrows="false"
+                                data-click="false" data-width="100%" data-ratio="237/162">
+                                <img src="img/img4.png">
+                                <img src="img/img1.png">
+                                <img src="img/img2.png">
+                                <img src="img/img3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-announce__inner">
+                        <div class="object-announce__content">
+                            <a href="#" class="object-announce__title">
+                                Сдаю посуточно 2-комнатную квартиру 49м2
+                            </a>
+                            <div class="object-announce__price">
+                                5000 ₽
+                            </div>
+                            <div class="object-announce__location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                г. Сочи, пер. Центральный, ул. Роз, 63
+                            </div>
+                            <div class="object-announce__text">
+                                Квартира подходит для тихого отдыха. Самый центр города, тихая улица с
+                                односторонним движением. Дом заходится в глубине за пальмами.
+                            </div>
+                            <div class="object-announce__status">
+                                <time class="object-announce__date">
+                                    Только что
+                                </time>
+                            </div>
+                        </div>
+                        <div class="object-announce__owner">
+                            <div class="object-announce__owner-name">
+                                <i class="fas fa-check"></i>
+                                <noindex>Собственник</noindex>
+                            </div>
+                            <noindex>
+                                <button class="btn btn-xs object-announce__show-phone ShowAdvPhoneAction"
+                                    data-id="44833678">
+                                    <i class="fas fa-phone"></i>
+                                    Показать телефон
+                                </button>
+                            </noindex>
+                        </div>
+                        <div class="object-announce__action">
+                            <span class="notepad_action">
+                                <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                    <button class="object-announce__actions-item" title="Добавить в избранное"
+                                        type="submit">
+                                        <i class="far fa-star"></i>
+                                    </button>
+                                    <input name="authenticity_token" type="hidden"
+                                        value="cEQjZCqlkyCPWf/EABB38PkzU+PrxihV56u/xh/OehM=">
+                                </form>
+                            </span>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    title="Сделать срочным объявленим" type="submit">
+                                    <i class="fas fa-bolt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="get">
+                                <button class="object-announce__actions-item hidden-xs yaSend"
+                                    title="Поднять объявление" type="submit" yaparam="entity_top">
+                                    <i class="fas fa-level-up-alt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs" title="Редактировать объявление"
+                                    type="submit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                <input name="_method" type="hidden" value="delete">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    data-confirm="Удалить это объявление?" title="Удалить объявление" type="submit">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <input name="authenticity_token" type="hidden"
+                                    value="jNR3E/vTXoOFbJwQ6klQAKIf3Lx2CWXZ/6LHaUZJCBI=">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="object-announce__footer">
+                    <div class="object-announce__category">
+                        <label>другое </label>
+                    </div>
+                    <div class="object-announce__note">
+                        Мошенники. Реализуют чужое имущество без согласия собственника.
+                    </div>
+                    <div class="object-announce__user">
+                        аноним
+                    </div>
+                    <div class="object-announce__control">
+                        <div class="btn-group">
+                            <button class="btn btn-warning accept_abuse_action" name="button" type="submit">
+                                Утвердить
+                            </button>
+                            <button class="btn btn-default not_accept_abuse_action" name="button" type="submit">
+                                Отклонить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="object-announce object-announce_full object-announce_odd">
+                <div class="object-announce__outer">
+                    <div class="object-announce__gallery">
+                        <div class="object-announce__gallery-wrapper">
+                            <div class="fotorama object-announce__fotorama" data-nav="false" data-arrows="false"
+                                data-click="false" data-width="100%" data-ratio="237/162">
+                                <img src="img/img3.png">
+                                <img src="img/img1.png">
+                                <img src="img/img2.png">
+                                <img src="img/img3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-announce__inner">
+                        <div class="object-announce__content">
+                            <a href="#" class="object-announce__title">
+                                Сдаю посуточно 2-комнатную квартиру 49м2
+                            </a>
+                            <div class="object-announce__price">
+                                5000 ₽
+                            </div>
+                            <div class="object-announce__location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                г. Сочи, пер. Центральный, ул. Роз, 63
+                            </div>
+                            <div class="object-announce__text">
+                                Квартира подходит для тихого отдыха. Самый центр города, тихая улица с
+                                односторонним движением. Дом заходится в глубине за пальмами.
+                            </div>
+                            <div class="object-announce__status">
+                                <span class="label label-default">avito</span>
+                                <time class="object-announce__date">
+                                    Только что
+                                </time>
+                            </div>
+                        </div>
+                        <div class="object-announce__owner">
+                            <div class="object-announce__owner-name">
+                                <i class="fas fa-check"></i>
+                                <noindex>Собственник</noindex>
+                            </div>
+                            <noindex>
+                                <button class="btn btn-xs object-announce__show-phone ShowAdvPhoneAction"
+                                    data-id="44833678">
+                                    <i class="fas fa-phone"></i>
+                                    Показать телефон
+                                </button>
+                            </noindex>
+                        </div>
+                        <div class="object-announce__action">
+                            <span class="notepad_action">
+                                <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                    <button class="object-announce__actions-item" title="Добавить в избранное"
+                                        type="submit">
+                                        <i class="far fa-star"></i>
+                                    </button>
+                                    <input name="authenticity_token" type="hidden"
+                                        value="cEQjZCqlkyCPWf/EABB38PkzU+PrxihV56u/xh/OehM=">
+                                </form>
+                            </span>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    title="Сделать срочным объявленим" type="submit">
+                                    <i class="fas fa-bolt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="get">
+                                <button class="object-announce__actions-item hidden-xs yaSend"
+                                    title="Поднять объявление" type="submit" yaparam="entity_top">
+                                    <i class="fas fa-level-up-alt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs" title="Редактировать объявление"
+                                    type="submit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                <input name="_method" type="hidden" value="delete">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    data-confirm="Удалить это объявление?" title="Удалить объявление" type="submit">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <input name="authenticity_token" type="hidden"
+                                    value="jNR3E/vTXoOFbJwQ6klQAKIf3Lx2CWXZ/6LHaUZJCBI=">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="object-announce__footer">
+                    <div class="object-announce__category">
+                        <time class="object-announce__date">
+                            сегодня в 12:30
+                        </time>
+                        <label>телефон неправильный или не обслуживается </label>
+                    </div>
+                    <div class="object-announce__note">
+                        Развод! На нескольких ресурсах объявление с разными
+                        номерами. При договоре о просмотре телефон отключается и объявление пропадает…
+                    </div>
+                    <div class="object-announce__user">
+                        аноним
+                    </div>
+                    <div class="object-announce__control">
+                        <div class="btn-group">
+                            <button class="btn btn-warning accept_abuse_action" name="button" type="submit">
+                                Утвердить
+                            </button>
+                            <button class="btn btn-default not_accept_abuse_action" name="button" type="submit">
+                                Отклонить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="object-announce object-announce_full object-announce_even">
+                <div class="object-announce__outer">
+                    <div class="object-announce__gallery">
+                        <div class="object-announce__gallery-wrapper">
+                            <div class="fotorama object-announce__fotorama" data-nav="false" data-arrows="false"
+                                data-click="false" data-width="100%" data-ratio="237/162">
+                                <img src="img/img.png">
+                                <img src="img/img1.png">
+                                <img src="img/img2.png">
+                                <img src="img/img3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-announce__inner">
+                        <div class="object-announce__content">
+                            <a href="#" class="object-announce__title">
+                                Сдаю посуточно 2-комнатную квартиру 49м2
+                            </a>
+                            <div class="object-announce__price">
+                                5000 ₽
+                            </div>
+                            <div class="object-announce__location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                г. Сочи, пер. Центральный, ул. Роз, 63
+                            </div>
+                            <div class="object-announce__text">
+                                Квартира подходит для тихого отдыха. Самый центр города, тихая улица с
+                                односторонним движением. Дом заходится в глубине за пальмами.
+                            </div>
+                            <div class="object-announce__status">
+                                <span class="label label-default">avito</span>
+                                <time class="object-announce__date">
+                                    Только что
+                                </time>
+                            </div>
+                        </div>
+                        <div class="object-announce__owner">
+                            <div class="object-announce__owner-name">
+                                <i class="fas fa-check"></i>
+                                <noindex>Собственник</noindex>
+                            </div>
+                            <noindex>
+                                <button class="btn btn-xs object-announce__show-phone ShowAdvPhoneAction"
+                                    data-id="44833678">
+                                    <i class="fas fa-phone"></i>
+                                    Показать телефон
+                                </button>
+                            </noindex>
+                        </div>
+                        <div class="object-announce__action">
+                            <span class="notepad_action">
+                                <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                    <button class="object-announce__actions-item" title="Добавить в избранное"
+                                        type="submit">
+                                        <i class="far fa-star"></i>
+                                    </button>
+                                    <input name="authenticity_token" type="hidden"
+                                        value="cEQjZCqlkyCPWf/EABB38PkzU+PrxihV56u/xh/OehM=">
+                                </form>
+                            </span>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    title="Сделать срочным объявленим" type="submit">
+                                    <i class="fas fa-bolt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="get">
+                                <button class="object-announce__actions-item hidden-xs yaSend"
+                                    title="Поднять объявление" type="submit" yaparam="entity_top">
+                                    <i class="fas fa-level-up-alt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs" title="Редактировать объявление"
+                                    type="submit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                <input name="_method" type="hidden" value="delete">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    data-confirm="Удалить это объявление?" title="Удалить объявление" type="submit">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <input name="authenticity_token" type="hidden"
+                                    value="jNR3E/vTXoOFbJwQ6klQAKIf3Lx2CWXZ/6LHaUZJCBI=">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="object-announce__footer">
+                    <div class="object-announce__category">
+                        <time class="object-announce__date">
+                            сегодня в 12:30
+                        </time>
+                        <label>телефон неправильный или не обслуживается </label>
+                    </div>
+                    <div class="object-announce__note">
+                        Развод! На нескольких ресурсах объявление с разными
+                        номерами. При договоре о просмотре телефон отключается и объявление пропадает…
+                    </div>
+                    <div class="object-announce__user">
+                        аноним
+                    </div>
+                    <div class="object-announce__control"></div>
+                </div>
+            </li>
+            <li class="object-announce object-announce_full object-announce_odd">
+                <div class="object-announce__outer">
+                    <div class="object-announce__gallery">
+                        <div class="object-announce__gallery-wrapper">
+                            <div class="fotorama object-announce__fotorama" data-nav="false" data-arrows="false"
+                                data-click="false" data-width="100%" data-ratio="237/162">
+                                <img src="img/img.png">
+                                <img src="img/img1.png">
+                                <img src="img/img2.png">
+                                <img src="img/img3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-announce__inner">
+                        <div class="object-announce__content">
+                            <a href="#" class="object-announce__title">
+                                Сдаю посуточно 2-комнатную квартиру 49м2
+                            </a>
+                            <div class="object-announce__price">
+                                5000 ₽
+                            </div>
+                            <div class="object-announce__location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                г. Сочи, пер. Центральный, ул. Роз, 63
+                            </div>
+                            <div class="object-announce__text">
+                                Квартира подходит для тихого отдыха. Самый центр города, тихая улица с
+                                односторонним движением. Дом заходится в глубине за пальмами.
+                            </div>
+                            <div class="object-announce__status">
+                                <span class="label label-default">avito</span>
+                                <span class="label label-default">
+                                    <i class="fas fa-pause"></i>
+                                    Устаревшее объявление
+                                </span>
+                                <time class="object-announce__date">
+                                    Только что
+                                </time>
+                            </div>
+                        </div>
+                        <div class="object-announce__owner">
+                            <div class="object-announce__owner-name">
+                                <i class="fas fa-check"></i>
+                                <noindex>Собственник</noindex>
+                            </div>
+                            <noindex>
+                                <button class="btn btn-xs object-announce__show-phone ShowAdvPhoneAction"
+                                    data-id="44833678">
+                                    <i class="fas fa-phone"></i>
+                                    Показать телефон
+                                </button>
+                            </noindex>
+                        </div>
+                        <div class="object-announce__action">
+                            <span class="notepad_action">
+                                <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                    <button class="object-announce__actions-item" title="Добавить в избранное"
+                                        type="submit">
+                                        <i class="far fa-star"></i>
+                                    </button>
+                                    <input name="authenticity_token" type="hidden"
+                                        value="cEQjZCqlkyCPWf/EABB38PkzU+PrxihV56u/xh/OehM=">
+                                </form>
+                            </span>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    title="Сделать срочным объявленим" type="submit">
+                                    <i class="fas fa-bolt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="get">
+                                <button class="object-announce__actions-item hidden-xs yaSend"
+                                    title="Поднять объявление" type="submit" yaparam="entity_top">
+                                    <i class="fas fa-level-up-alt"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" method="get">
+                                <button class="object-announce__actions-item hidden-xs" title="Редактировать объявление"
+                                    type="submit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </form>
+                            <form action="" class="withoutBootstrapValidator" data-remote="true" method="post">
+                                <input name="_method" type="hidden" value="delete">
+                                <button class="object-announce__actions-item hidden-xs"
+                                    data-confirm="Удалить это объявление?" title="Удалить объявление" type="submit">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <input name="authenticity_token" type="hidden"
+                                    value="jNR3E/vTXoOFbJwQ6klQAKIf3Lx2CWXZ/6LHaUZJCBI=">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="object-announce__footer">
+                    <div class="object-announce__category">
+                        <time class="object-announce__date">
+                            сегодня в 12:30
+                        </time>
+                        <label>телефон неправильный или не обслуживается </label>
+                    </div>
+                    <div class="object-announce__note">
+                        Развод! На нескольких ресурсах объявление с разными
+                        номерами. При договоре о просмотре телефон отключается и объявление пропадает…
+                    </div>
+                    <div class="object-announce__user">
+                        аноним
+                    </div>
+                    <div class="object-announce__control"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+</body>
+
+</html>

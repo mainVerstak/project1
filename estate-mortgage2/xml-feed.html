@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrapValidator.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-top-nav">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <div class="dropdown header-city">
+                                <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Москва
+                                    <span class="caret"></span>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Москва</a></li>
+                                    <li><a href="#">Москва2</a></li>
+                                    <li><a href="#">Москва3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                                <i class="fa fa-edit fa-lg"></i>
+                                Выписки
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile">
+                            <a href="#">
+                                <i class="fas fa-money-bill-wave"></i>
+                                Тарифы и цены
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile" i>
+                            <a href="#">
+                                <i class="fas fa-file-code"></i>
+                                Пакетная загрузка
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/">
+                                <img src="img/logo.svg" class="navbar-brand__logo">
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color">
+                                        <a data-no-turbolink="true" href="/estate-new">
+                                            <div class="btn btn-warning">
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                Подать объявление
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+        <div class="row">
+            <div class="tariff2-main tariff2-main_xml">
+                <div class="tariff2-main__title">
+                    Пакетная загрузка объявлений из XML-фидов
+                </div>
+                <div class="tariff2-main__balance tariff2-main__balance_sb">
+                    <div class="tariff2-main__balance-info">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span class="tariff2-main__balance-text">Текущий баланс: 450 ₽</span> (хватит на 6 дней)
+                    </div>
+                    <a href="#" class="btn btn-styled-new2 tariff2-main__balance-btn">
+                        <i class="fas fa-plus"></i>
+                        <span class="btn-styled-new2__medium">
+                            Пополнить баланс
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="xml-feed">
+            <div class="xml-feed__title xml-feed__head">
+                Загружаемые фиды:
+            </div>
+            <div class="xml-feed__form">
+                <div class="xml-feed__row">
+                    <div class="xml-feed__input">
+                        <div class="feed-input">
+                            <a href="http://zhilkvartal.ru/exchange/export/yandex.php?pl=hrbftiuew"
+                                class="feed-input__input" target="_blank">
+                                http://zhilkvartal.ru/exchange/export/yandex.php?pl=hrbftiuew
+                            </a>
+                            <div class="feed-input__edit js-open-edit-feed-input" data-toggle="modal"
+                                data-target="#modal-edit-feed">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="feed-input__remove js-remove-feed-input">
+                                <i class="fas fa-lg fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="xml-feed__row">
+                    <div class="xml-feed__input">
+                        <div class="feed-input">
+                            <a href="http://zz-yalta.ru/avito-feed" class="feed-input__input" target="_blank">
+                                http://zz-yalta.ru/avito-feed
+                            </a>
+                            <div class="feed-input__edit js-open-edit-feed-input" data-toggle="modal"
+                                data-target="#modal-edit-feed">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="feed-input__remove js-remove-feed-input">
+                                <i class="fas fa-lg fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="xml-feed__row xml-feed__row_hidden">
+                    <div class="xml-feed__input">
+                        <div class="feed-input">
+                            <a href="#" class="feed-input__input" target="_blank"></a>
+                            <div class="feed-input__edit js-open-edit-feed-input" data-toggle="modal"
+                                data-target="#modal-edit-feed">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="feed-input__remove js-remove-feed-input">
+                                <i class="fas fa-lg fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="xml-feed__btns">
+                    <div class="xml-feed__btns-right">
+                        <div class="xml-feed__btns-note">
+                            Проверяем фиды 2 раза в сутки
+                        </div>
+                        <button
+                            class="btn btn-styled-new2 btn-styled-new2_fz_16 btn-styled-new2_outline xml-feed__add js-open-add-feed-input"
+                            data-toggle="modal" data-target="#modal-add-feed">
+                            <i class="fas fa-plus"></i>
+                            <span class="btn-styled-new2__medium">
+                                Добавить фид
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="xml-feed__feed">
+                <div class="xml-feed__title xml-feed__feed-title">
+                    http://zhilkvartal.ru/exchange/export/yandex.php?pl=hrbftiuew
+                </div>
+                <div class="xml-feed__log">
+                    <div class="xml-feed__log-table">
+                        <table class="xml-feed-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Дата
+                                    </th>
+                                    <th>
+                                        Загруженные
+                                    </th>
+                                    <th>
+                                        Обновленные
+                                    </th>
+                                    <th>
+                                        Пропущенные
+                                    </th>
+                                    <th>
+                                        Ошибки
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                17 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                18 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                19 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                20 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                21 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                22 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                23 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                24 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                25 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-styled-new2 btn-styled-new2_outline xml-feed-table-show">
+                            <span class="btn-styled-new2__medium">
+                                Показать полностью
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="xml-feed__feed-info">
+                    <span class="xml-feed__feed-label">
+                        Обратный фид:
+                    </span>
+                    <a href="http://vsn.ru/developer_reports/9?hash=tjighosr5tughep459pueruhgj"
+                        class="xml-feed__feed-link-reverse">
+                        http://vsn.ru/developer_reports/9?hash=tjighosr5tughep459pueruhgj
+                    </a>
+                </div>
+            </div>
+            <div class="xml-feed__feed">
+                <div class="xml-feed__title xml-feed__feed-title">
+                    http://zz-yalta.ru/avito-feed
+                </div>
+                <div class="xml-feed__log">
+                    <div class="xml-feed__log-table">
+                        <table class="xml-feed-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Дата
+                                    </th>
+                                    <th>
+                                        Загруженные
+                                    </th>
+                                    <th>
+                                        Обновленные
+                                    </th>
+                                    <th>
+                                        Пропущенные
+                                    </th>
+                                    <th>
+                                        Ошибки
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label" data-label="Дата">
+                                            <div class="xml-feed-table__item-inner">
+                                                16 дек в 10:03
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Загруженные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Обновленные">
+                                            <div class="xml-feed-table__item-inner">
+                                                2
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Пропущенные">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="xml-feed-table__item xml-feed-table__item_label"
+                                            data-label="Ошибки">
+                                            <div class="xml-feed-table__item-inner">
+                                                0
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-styled-new2 btn-styled-new2_outline xml-feed-table-show">
+                            <span class="btn-styled-new2__medium">
+                                Показать полностью
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="xml-feed__feed-info">
+                    <span class="xml-feed__feed-label">
+                        Обратный фид:
+                    </span>
+                    <a href="http://vsn.ru/developer_reports/9?hash=woe48rghw8br5oiureqwh"
+                        class="xml-feed__feed-link-reverse">
+                        http://vsn.ru/developer_reports/9?hash=woe48rghw8br5oiureqwh
+                    </a>
+                </div>
+            </div>
+            <div class="xml-feed__features">
+                <div class="xml-feed-features">
+                    <div class="xml-feed-features__head">
+                        Поддержка Yandex-фида
+                    </div>
+                    <div class="xml-feed-features__content">
+                        <div class="xml-feed-features__info">
+                            100% поддержка стандарта
+                        </div>
+                        <ul class="xml-feed-features__list">
+                            <li>
+                                <a href="#" target="_blank">
+                                    Требования к передаче данных Yandex
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    Жильё
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                ,
+                                <a href="#" target="_blank">
+                                    коммерция
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                ,
+                                <a href="#" target="_blank">
+                                    новостройки
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    Частые ошибки
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xml-feed-features">
+                    <div class="xml-feed-features__head">
+                        Поддержка Avito-фида
+                    </div>
+                    <div class="xml-feed-features__content">
+                        <div class="xml-feed-features__info">
+                            100% поддержка стандарта
+                        </div>
+                        <ul class="xml-feed-features__list">
+                            <li>
+                                <a href="#" target="_blank">
+                                    Требования к передаче данных Avito
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xml-feed-features">
+                    <div class="xml-feed-features__head">
+                        Поддержка Cian-фида
+                    </div>
+                    <div class="xml-feed-features__content">
+                        <div class="xml-feed-features__info">
+                            100% поддержка стандарта
+                        </div>
+                        <ul class="xml-feed-features__list">
+                            <li>
+                                <a href="#" target="_blank">
+                                    Требования к передаче данных Cian
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="xml-feed__note">
+                <div class="xml-feed-note">
+                    <div class="xml-feed-note__head">
+                        Актуальность и устаревание объявлений
+                    </div>
+                    <div class="xml-feed-note__content">
+                        <p>
+                            При наличии у объявления параметра expire-date для Yandex-стандарта или DateEnd для
+                            Avito-стандарта в XML-фиде, объявление будет снято с публикации по достижении этой даты.
+                        </p>
+                        <p>
+                            При отсутствии вышеупомянутых параметров, объявление снимается с публикации в момент
+                            исчезновения упоминания о нем в XML-фиде.
+                        </p>
+                        <p>
+                            Оба способа совместимы в одном XML-фиде для разных объявлений.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-custom-new modal-feed _styled" id="modal-add-feed" role="dialog">
+        <div class="modal-dialog">
+            <form class="modal-content form-styled-new modal-feed-form-validation validation-fa-icon">
+                <div class="modal-header">
+                    <button type="button" class="close js-remove-card" data-dismiss="modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="modal-title h4">Добавить фид</div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label">Ссылка на фид:</label>
+                        <div class="form-group__input-row">
+                            <input type="text" name="feedLink" class="form-control modal-new-feed-input"
+                                placeholder="Вставьте ссылку">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-lg modal-feed__btn modal-feed__cancel"
+                        data-dismiss="modal">
+                        Отмена
+                    </button>
+                    <button type="submit"
+                        class="btn btn-primary btn-lg js-add-feed-input modal-feed__btn modal-feed__add">
+                        Добавить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade modal-custom-new modal-feed _styled" id="modal-edit-feed" role="dialog">
+        <div class="modal-dialog">
+            <form class="modal-content form-styled-new modal-feed-form-validation validation-fa-icon">
+                <div class="modal-header">
+                    <button type="button" class="close js-remove-card" data-dismiss="modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="modal-title h4">Изменить фид</div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label">Ссылка на фид:</label>
+                        <div class="form-group__input-row">
+                            <input type="text" name="feedLink" class="form-control modal-edit-feed-input"
+                                placeholder="Вставьте ссылку">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-lg modal-feed__btn modal-feed__cancel"
+                        data-dismiss="modal">
+                        Отмена
+                    </button>
+                    <button type="submit"
+                        class="btn btn-primary btn-lg js-edit-feed-input modal-feed__btn modal-feed__add">
+                        Сохранить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

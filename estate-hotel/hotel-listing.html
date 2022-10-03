@@ -1,0 +1,2607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="css/inputs.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/select2.ru.js"></script>
+
+    <script src="js/ResizeSensor.min.js"></script>
+    <script src="js/theia-sticky-sidebar.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/easepick.umd.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script async src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&onload=getYaMap" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <div class="container container_p30">
+        <header>
+            <div class="header-top-nav">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <div class="dropdown header-city">
+                                <div aria-expanded="false" aria-haspopup="true"
+                                    class="dropdown-toggle header-city-btn get-search-locations-action"
+                                    data-toggle="dropdown" mode="single" type="button">
+                                    Москва
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="" i>
+                            <a href="#">
+                                VSN Недвижимость
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/" style="color:#337ab7;">
+                                <i class="far fa-building fa-lg"></i>
+                                vsn.ru
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+        <div class="hotel">
+            <div class="hotel-head hotel-head_default hotel__head">
+                <div class="hotel-head__content">
+                    <div class="hotel-head__title">
+                        Лучшее жилье для поездок: отели, дома, апартаменты и многое другое
+                    </div>
+                    <div class="hotel-search hotel-head__search">
+                        <div class="hotel-search__inner">
+                            <div class="hotel-search__cell">
+                                <div class="input-label hotel-search__label">
+                                    Направление
+                                </div>
+                                <select class="js-search-select select2_fw500 select2_default select2_fz14">
+                                    <option value="0" selected>Санкт-Петербург</option>
+                                    <option value="1">Москва1</option>
+                                    <option value="2">Москва2</option>
+                                    <option value="3">Москва3</option>
+                                </select>
+                            </div>
+                            <div class="hotel-search__cell">
+                                <div class="input-label hotel-search__label">
+                                    Дата заезда
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="custom-input custom-input_fw500 custom-input_fz14 set-datepicker-from"
+                                        id="set-datepicker-from" type="text" readonly>
+                                    <div class="input-wrapper__label input-wrapper__label_datepicker">
+                                        <i class="far fa-calendar input-wrapper__icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-search__cell">
+                                <div class="input-label hotel-search__label">
+                                    Дата выезда
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="custom-input custom-input_fw500 custom-input_fz14 set-datepicker-to"
+                                        id="set-datepicker-to" type="text" readonly>
+                                    <div class="input-wrapper__label input-wrapper__label_datepicker">
+                                        <i class="far fa-calendar input-wrapper__icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-search__cell">
+                                <div class="input-label hotel-search__label">
+                                    Размещение
+                                </div>
+                                <div class="deployment-input">
+                                    <div class="deployment-input__field">
+                                        <input type="text"
+                                            class="custom-input custom-input_fw500 custom-input_fz14 deployment-input__current"
+                                            value="1 номер, 1 взрослый" autocomplete="off" readonly>
+                                        <div class="deployment-input__arrow"></div>
+                                    </div>
+                                    <div class="deployment-input__drop">
+                                        <div class="deployment-input__drop-outer">
+                                            <div class="deployment-input__drop-inner">
+                                                <div class="deployment-input__drop-header">
+                                                    <div class="deployment-input__drop-title">
+                                                        Выберите размещение
+                                                    </div>
+                                                    <div class="deployment-input__drop-close">
+                                                        <i class="fas fa-times"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="deployment-input__drop-content">
+                                                    <div class="deployment-input__item">
+                                                        <div class="deployment-input__item-head">
+                                                            <span class="deployment-input__item-num">
+                                                                <span>1</span> номер
+                                                            </span>
+                                                            <div class="deployment-input__item-remove">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                                Удалить
+                                                            </div>
+                                                        </div>
+                                                        <div class="deployment-input__item-row">
+                                                            <div class="deployment-input__item-cell">
+                                                                <div class="input-label deployment-input__item-label">
+                                                                    Взрослые
+                                                                </div>
+                                                                <div
+                                                                    class="deployment-counter deployment-input__item-counter">
+                                                                    <div class="deployment-counter__dec js-input-dec">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </div>
+                                                                    <input type="text"
+                                                                        class="deployment-counter__input deployment-counter__input-adult js-input-counter"
+                                                                        value="1" min="1" max="10">
+                                                                    <div class="deployment-counter__inc js-input-inc">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="deployment-input__item-cell">
+                                                                <div class="deployment-input__children">
+                                                                    <div class="deployment-input__children-currnet">
+                                                                        <div
+                                                                            class="input-label deployment-input__item-label">
+                                                                            Дети
+                                                                        </div>
+                                                                        <div class="deployment-input__children-list">
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_h_40 btn-custom_br_4 btn-custom_white deployment-input__children-new">
+                                                                                <span>Добавить ребенка</span>
+                                                                                <i class="fas fa-plus"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="deployment-input__age">
+                                                                        <div
+                                                                            class="input-label deployment-input__item-label">
+                                                                            Возраст ребенка
+                                                                        </div>
+                                                                        <div class="deployment-input__age-row">
+                                                                            <div
+                                                                                class="deployment-counter deployment-input__age-counter">
+                                                                                <div
+                                                                                    class="deployment-counter__dec js-input-dec">
+                                                                                    <i class="fas fa-minus"></i>
+                                                                                </div>
+                                                                                <input type="text"
+                                                                                    class="deployment-counter__input deployment-counter__input-age js-input-counter"
+                                                                                    value="1" min="1" max="17">
+                                                                                <div
+                                                                                    class="deployment-counter__inc js-input-inc">
+                                                                                    <i class="fas fa-plus"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_white btn-custom_h_40 deployment-input__age-add">
+                                                                                <i class="fas fa-user-check"></i>
+                                                                            </button>
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_white btn-custom_h_40 deployment-input__age-remove">
+                                                                                <i class="fas fa-user-times"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="deployment-input__item _hidden-copy">
+                                                        <div class="deployment-input__item-head">
+                                                            <span class="deployment-input__item-num">
+                                                                <span>1</span> номер
+                                                            </span>
+                                                            <div class="deployment-input__item-remove">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                                Удалить
+                                                            </div>
+                                                        </div>
+                                                        <div class="deployment-input__item-row">
+                                                            <div class="deployment-input__item-cell">
+                                                                <div class="input-label deployment-input__item-label">
+                                                                    Взрослые
+                                                                </div>
+                                                                <div
+                                                                    class="deployment-counter deployment-input__item-counter">
+                                                                    <div class="deployment-counter__dec js-input-dec">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </div>
+                                                                    <input type="text"
+                                                                        class="deployment-counter__input deployment-counter__input-adult js-input-counter"
+                                                                        value="1" min="1" max="10">
+                                                                    <div class="deployment-counter__inc js-input-inc">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="deployment-input__item-cell">
+                                                                <div class="deployment-input__children">
+                                                                    <div class="deployment-input__children-currnet">
+                                                                        <div
+                                                                            class="input-label deployment-input__item-label">
+                                                                            Дети
+                                                                        </div>
+                                                                        <div class="deployment-input__children-list">
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_h_40 btn-custom_br_4 btn-custom_white deployment-input__children-new">
+                                                                                <span>Добавить ребенка</span>
+                                                                                <i class="fas fa-plus"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="deployment-input__age">
+                                                                        <div
+                                                                            class="input-label deployment-input__item-label">
+                                                                            Возраст ребенка
+                                                                        </div>
+                                                                        <div class="deployment-input__age-row">
+                                                                            <div
+                                                                                class="deployment-counter deployment-input__age-counter">
+                                                                                <div
+                                                                                    class="deployment-counter__dec js-input-dec">
+                                                                                    <i class="fas fa-minus"></i>
+                                                                                </div>
+                                                                                <input type="text"
+                                                                                    class="deployment-counter__input deployment-counter__input-age js-input-counter"
+                                                                                    value="1" min="1" max="17">
+                                                                                <div
+                                                                                    class="deployment-counter__inc js-input-inc">
+                                                                                    <i class="fas fa-plus"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_white btn-custom_h_40 deployment-input__age-add">
+                                                                                <i class="fas fa-user-check"></i>
+                                                                            </button>
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_white btn-custom_h_40 deployment-input__age-remove">
+                                                                                <i class="fas fa-user-times"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="deployment-input__footer">
+                                                    <div class="deployment-input__add-room">
+                                                        <i class="fas fa-plus"></i>
+                                                        Добавить номер
+                                                    </div>
+                                                    <button
+                                                        class="btn btn-custom btn-custom_h_40 btn-custom_br_4 deployment-input__confirm">
+                                                        Готово
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-search__cell">
+                                <button
+                                    class="btn btn-custom btn-custom_h_40 btn-custom_br_4 hotel-search__btn">Найти</button>
+                            </div>
+                        </div>
+                        <div class="hotel-search__example">
+                            <ul class="hotel-search__example-list">
+                                <li>
+                                    Например:
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Санкт-Петербург
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Москва
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Крым
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Сочи
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Казань
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Абхазия
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-content-grid">
+                <div class="hotel-content-grid__sidebar">
+                    <div class="hotel-sidebar">
+                        <div class="hotel-sidebar__outer">
+                            <div class="hotel-sidebar__inner">
+                                <div class="hotel-sidebar__head">
+                                    <div class="hotel-sidebar__head-title">
+                                        Фильтры
+                                    </div>
+                                    <div class="hotel-sidebar__close js-show-hotel-filter">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Сортировка
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <select
+                                            class="custom-select custom-select_default custom-select_fw500 custom-select_fz14 custom-select_h_37">
+                                            <option value="0" selected>По популярности</option>
+                                            <option value="1">По популярности 2</option>
+                                            <option value="2">По популярности 3</option>
+                                            <option value="3">По популярности 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Цена за ночь
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <div class="price-range-input">
+                                            <div class="price-range-input__inputs">
+                                                <input
+                                                    class="custom-input custom-input_fw500 custom-input_fz14 custom-input_h_37 price-range-input__from"
+                                                    type="text">
+                                                <input
+                                                    class="custom-input custom-input_fw500 custom-input_fz14 custom-input_h_37 price-range-input__to"
+                                                    type="text">
+                                            </div>
+                                            <input type="range" class="price-range-input__range" data-min="100"
+                                                data-max="100000" data-from="100" data-to="100000">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-map-item hotel-sidebar__map-item">
+                                    <div class="sidebar-map-item__inner">
+                                        <img src="img/sidebar-map-pin.svg" alt="" class="sidebar-map-item__pin">
+                                        <button class="btn btn-custom sidebar-map-item__btn js-show-hotel-map">
+                                            Показать на карте
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Тип размещения
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <ul class="hotel-sidebar__option-list">
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Отели, комнаты
+                                                </label>
+                                                <span>
+                                                    2871
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Хостелы
+                                                </label>
+                                                <span>
+                                                    887
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Апартаменты
+                                                </label>
+                                                <span>
+                                                    6101
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Апарт-отели
+                                                </label>
+                                                <span>
+                                                    343
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Гостевые дома
+                                                </label>
+                                                <span>
+                                                    377
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Коттеджи, виллы
+                                                </label>
+                                                <span>
+                                                    17
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Кемпинги
+                                                </label>
+                                                <span>
+                                                    4
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Глэмпинги
+                                                </label>
+                                                <span>
+                                                    1
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Удаленность от центра
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <div class="distance-range-input">
+                                            <div class="distance-range-input__inputs">
+                                                <div class="distance-range-input__input-box">
+                                                    <span class="distance-range-input__label">
+                                                        до
+                                                    </span>
+                                                    <input
+                                                        class="custom-input custom-input_fw500 custom-input_fz14 custom-input_h_37 distance-range-input__input"
+                                                        type="text">
+                                                </div>
+                                            </div>
+                                            <input type="range" class="distance-range-input__range" data-min="1"
+                                                data-max="1000" data-from="50">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Услуги и удобства
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <ul class="hotel-sidebar__option-list">
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Бесплатный трансфер
+                                                </label>
+                                                <span>
+                                                    8741
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Трансфер
+                                                </label>
+                                                <span>
+                                                    3487
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Парковка
+                                                </label>
+                                                <span>
+                                                    5496
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Бассейн
+                                                </label>
+                                                <span>
+                                                    119
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Фитнес
+                                                </label>
+                                                <span>
+                                                    284
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Бар или ресторан
+                                                </label>
+                                                <span>
+                                                    386
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Конференц-зал
+                                                </label>
+                                                <span>
+                                                    34
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Спа-услуги
+                                                </label>
+                                                <span>
+                                                    348
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Горнолыжный склон
+                                                </label>
+                                                <span>
+                                                    12
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Пляж
+                                                </label>
+                                                <span>
+                                                    239
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Джакузи
+                                                </label>
+                                                <span>
+                                                    37
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Особенности размещения
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <ul class="hotel-sidebar__option-list">
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Подходит для детей
+                                                </label>
+                                                <span>
+                                                    3938
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Для гостей с
+                                                    ограниченными
+                                                    возможностями
+                                                </label>
+                                                <span>
+                                                    494
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Разрашено с
+                                                    домашними животными
+                                                </label>
+                                                <span>
+                                                    2317
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Можно курить
+                                                </label>
+                                                <span>
+                                                    1205
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Количество звезд
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <ul class="hotel-sidebar__option-list">
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </label>
+                                                <span>
+                                                    29
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </label>
+                                                <span>
+                                                    171
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </label>
+                                                <span>
+                                                    860
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </label>
+                                                <span>
+                                                    427
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    <i class="fa fa-star"></i>
+                                                </label>
+                                                <span>
+                                                    238
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Без звезд
+                                                </label>
+                                                <span>
+                                                    8120
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Оценка по отзывам
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <ul class="hotel-sidebar__option-list">
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Превосходно: 9+
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Отлично: 8+
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Очень хорошо: 7+
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Хорошо: 6+
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Неплохо: 5+
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Районы
+                                    </div>
+                                    <div class="hotel-sidebar__item-content ">
+                                        <ul class="hotel-sidebar__option-list hotel-sidebar__option-list_hidden">
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Адмиралтейский р-н
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Василеостровский р-н
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Петроградский р-н
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Выборгский р-н
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Центральный р-н
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Петроградский р-н
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Выборгский р-н
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Центральный р-н
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="hotel-sidebar__expand-content">
+                                            <span>Показать все</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Название отеля
+                                    </div>
+                                    <div class="hotel-sidebar__item-content">
+                                        <div class="search-select-container">
+                                            <select
+                                                class="js-search-select select2_fw500 select2_default select2_fz14 select2_h_37 select2_wrap"
+                                                data-placeholder="Например, Hilton" multiple>
+                                                <option value="0">Название отеля</option>
+                                                <option value="1">Название отеля2</option>
+                                                <option value="2">Москва2</option>
+                                                <option value="3">Москва3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Достопримечательности
+                                    </div>
+                                    <div class="hotel-sidebar__item-content ">
+                                        <ul class="hotel-sidebar__option-list hotel-sidebar__option-list_hidden">
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Невский проспект
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Эрмитаж
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Исаакиевский Собор
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Петропавловская
+                                                    крепость
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Петергоф
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Невский проспект
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Эрмитаж
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Исаакиевский Собор
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Петропавловская
+                                                    крепость
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Петергоф
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="hotel-sidebar__expand-content">
+                                            <span>Показать все</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Ближайшее метро
+                                    </div>
+                                    <div class="hotel-sidebar__item-content ">
+                                        <div class="search-select-container">
+                                            <select
+                                                class="js-search-select select2_fw500 select2_default select2_fz14 select2_h_37 select2_wrap"
+                                                data-placeholder="Станция метро" multiple>
+                                                <option value="0">Станция метро</option>
+                                                <option value="1">Станция метро2</option>
+                                                <option value="2">МоскваМосква Москва Москва</option>
+                                                <option value="3">Москва3</option>
+                                                <option value="4">Москва4</option>
+                                                <option value="5">Москва5</option>
+                                                <option value="6">Москва6</option>
+                                                <option value="7">Москва7</option>
+                                                <option value="8">Москва8</option>
+                                                <option value="9">Москва9</option>
+                                                <option value="10">Москва10</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hotel-sidebar__item">
+                                    <div class="hotel-sidebar__item-title">
+                                        Сеть отелей
+                                    </div>
+                                    <div class="hotel-sidebar__item-content ">
+                                        <ul class="hotel-sidebar__option-list hotel-sidebar__option-list_hidden">
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Accor Hotels
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Ibis
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Azimut Hotels
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Novotel
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Worldhotels Luxury
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Azimut Hotels
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Novotel
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <label class="custom-checkbox custom-checkbox_small">
+                                                    <input type="checkbox" class="custom-checkbox__input">
+                                                    <span class="custom-checkbox__checkmark"></span>
+                                                    Worldhotels Luxury
+                                                </label>
+                                                <span>
+                                                    2099
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="hotel-sidebar__expand-content">
+                                            <span>Показать все</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-sidebar__mobile-control">
+                                <button
+                                    class="btn btn-custom btn-custom_light btn-custom_h_40 btn-custom_br_4 hotel-sidebar__reset">
+                                    Очистить
+                                </button>
+                                <button
+                                    class="btn btn-custom btn-custom_h_40 btn-custom_br_4 hotel-sidebar__set js-show-hotel-filter">
+                                    Применить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-content-grid__main">
+                    <div class="hotel-list-wrapper">
+                        <div class="hotel-list-wrapper__default">
+                            <div class="hotel-filters-mobile">
+                                <button
+                                    class="btn btn-custom btn-custom_light btn-custom_h_40 btn-custom_br_4 hotel-filters-mobile__btn js-show-hotel-filter">
+                                    <i class="fas fa-filter"></i>
+                                    Фильтры
+                                </button>
+                                <button
+                                    class="btn btn-custom btn-custom_light btn-custom_h_40 btn-custom_br_4 hotel-filters-mobile__btn js-show-hotel-map">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    На карте
+                                </button>
+                            </div>
+                            <div class="main-hotel-list">
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel1.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Отель Kostas
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        3,1 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    Суворовский проспект, д. 18
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Превосходно
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            301 отзыв
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="hotel-rating hotel-rating_fz14 card-hotel-full__rating">
+                                                    8,8
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Standard
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двуспальная кровать
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li>
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        6381 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel2.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Гранд Отель Эмеральд
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        3,9 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    ул. Профессора Ивашенцова, д. 2А
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Отлично
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            472 отзыва
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="hotel-rating hotel-rating_fz14 card-hotel-full__rating">
+                                                    8,8
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Deluxe Comfort
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двуспальная кровать
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li class="marked-green">
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        4882 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel3.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Талион Империал Отель
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        1,1 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    Мучной переулок, д. 2
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Превосходно
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            751 отзыв
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="hotel-rating hotel-rating_fz14 card-hotel-full__rating">
+                                                    9,3
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Deluxe
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двуспальная кровать
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li>
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        8293 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel4.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Отель Palace Bridge Hotel
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        1,3 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    Биржевой переулок 2-4
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Отлично
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            2782 отзыва
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="hotel-rating hotel-rating_fz14 card-hotel-full__rating">
+                                                    8,3
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Deluxe Comfort
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двухместный номер Standard
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li class="marked-green">
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        6245 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel5.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Отель Vasilievsky
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        1,9 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    8-я линия Васильевского острова, 11-13
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Отлично
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            301 отзыв
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="hotel-rating hotel-rating_fz14 card-hotel-full__rating">
+                                                    8,5
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Deluxe Comfort
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двухместный номер Standard
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li class="marked-green">
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        2429 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel6.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Отель Rozenshteyn Hotel & Spa
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        4,2 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    улица Розенштейна, д. 36
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Очень хорошо
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            10 отзывов
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="hotel-rating hotel-rating_fz14 card-hotel-full__rating">
+                                                    7,8
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Deluxe Comfort
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двухместный номер Standard
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li>
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        6381 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel3.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Талион Империал Отель
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        1,1 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    Мучной переулок, д. 2
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Превосходно
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            751 отзыв
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hotel-rating hotel-rating_red hotel-rating_fz14 card-hotel-full__rating">
+                                                    9,3
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Deluxe
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двуспальная кровать
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li>
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        8293 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel4.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Отель Palace Bridge Hotel
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        1,3 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    Биржевой переулок 2-4
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Отлично
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            2782 отзыва
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hotel-rating hotel-rating_orange hotel-rating_fz14 card-hotel-full__rating">
+                                                    8,3
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Deluxe Comfort
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двухместный номер Standard
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li class="marked-green">
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        6245 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full">
+                                    <div class="card-hotel-full__left">
+                                        <img src="img/hotel/hotel5.png" alt="" class="card-hotel-full__image">
+                                        <div class="card-hotel-full__favorite">
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-hotel-full__right">
+                                        <div class="card-hotel-full__head">
+                                            <div class="card-hotel-full__head-left">
+                                                <div class="card-hotel-full__stars">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="card-hotel-full__name">
+                                                    <a href="#">
+                                                        Отель Vasilievsky
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__location">
+                                                    <span class="card-hotel-full__location-text">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        1,9 км от центра Санкт-Петербурга
+                                                    </span>
+                                                    •
+                                                    <a href="#" class="card-hotel-full__location-btn">
+                                                        Показать на карте
+                                                    </a>
+                                                </div>
+                                                <div class="card-hotel-full__address">
+                                                    8-я линия Васильевского острова, 11-13
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__head-right">
+                                                <div class="card-hotel-full__review">
+                                                    <div class="card-hotel-full__review-text">
+                                                        Отлично
+                                                    </div>
+                                                    <div class="card-hotel-full__review-counter">
+                                                        <a href="#">
+                                                            301 отзыв
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hotel-rating hotel-rating_blue hotel-rating_fz14 card-hotel-full__rating">
+                                                    8,5
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel-full__content">
+                                            <div class="card-hotel-full__type">
+                                                Двухместный номер Deluxe Comfort
+                                            </div>
+                                            <div class="card-hotel-full__content-inner">
+                                                <div class="card-hotel-full__content-left">
+                                                    <div class="card-hotel-full__sleeping-place">
+                                                        Двухместный номер Standard
+                                                    </div>
+                                                    <ul class="card-hotel-full__info-list">
+                                                        <li class="marked-green">
+                                                            Питание включено
+                                                        </li>
+                                                        <li class="marked-green">
+                                                            Бесплатная отмена
+                                                        </li>
+                                                        <li>
+                                                            Оплата на месте
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-hotel-full__content-right">
+                                                    <div class="card-hotel-full__count">
+                                                        1 ночь, 1 взрослый
+                                                    </div>
+                                                    <div class="card-hotel-full__price">
+                                                        2429 ₽
+                                                    </div>
+                                                    <div class="card-hotel-full__taxes">
+                                                        включая налоги и сборы
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-hotel-full__btns">
+                                                <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                                    Посмотреть все номера
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-breadcrumb hotel-breadcrumb_mt_24">
+                                <ul class="hotel-breadcrumb__list">
+                                    <li>
+                                        <a href="#">
+                                            Главная
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Россия
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Ленинградская область
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Санкт-Петербург
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-hotel-list-pagination">
+                                <ul class="pagination">
+                                    <li class="disabled"><span>1</span></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="disabled"><span>...</span></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                                <div class="btn-group pagination">
+                                    <div class="button-dropdown">
+                                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#"
+                                            aria-expanded="false">
+                                            <i class="fas fa-list"></i> 25 объявлений на страницу
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li class="active">
+                                                <a class="per_page_action" href="#" rel="nofollow">25 на
+                                                    страницу</a>
+                                            </li>
+                                            <li>
+                                                <a class="per_page_action" href="#" rel="nofollow">50 на
+                                                    страницу</a>
+                                            </li>
+                                            <li>
+                                                <a class="per_page_action" href="#" rel="nofollow">75 на
+                                                    страницу</a>
+                                            </li>
+                                            <li>
+                                                <a class="per_page_action" href="#" rel="nofollow">100 на
+                                                    страницу</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-list-wrapper__map">
+                            <div class="map-hotel-list">
+                                <div class="map-hotel-list__list-outer">
+                                    <div class="map-hotel-list__list">
+                                        <div class="card-hotel">
+                                            <a href="#" class="card-hotel__top">
+                                                <img src="img/best-hotel/best-hotel1.png" alt=""
+                                                    class="card-hotel__image">
+                                                <div class="hotel-rating card-hotel__rating">
+                                                    8,8
+                                                </div>
+                                            </a>
+                                            <div class="card-hotel__bottom">
+                                                <div class="card-hotel__info">
+                                                    <div class="card-hotel__stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="card-hotel__name">
+                                                        <a href="#">
+                                                            Отель Kostas
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-hotel__location">
+                                                        3,9 км от центра Санкт-Петербурга
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__btns">
+                                                    <button class="btn btn-custom card-hotel__btn">
+                                                        от 464 ₽
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel">
+                                            <a href="#" class="card-hotel__top">
+                                                <img src="img/best-hotel/best-hotel1.png" alt=""
+                                                    class="card-hotel__image">
+                                                <div class="hotel-rating card-hotel__rating">
+                                                    8,8
+                                                </div>
+                                            </a>
+                                            <div class="card-hotel__bottom">
+                                                <div class="card-hotel__info">
+                                                    <div class="card-hotel__stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="card-hotel__name">
+                                                        <a href="#">
+                                                            Отель Kostas
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-hotel__location">
+                                                        3,9 км от центра Санкт-Петербурга
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__btns">
+                                                    <button class="btn btn-custom card-hotel__btn">
+                                                        от 464 ₽
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel">
+                                            <a href="#" class="card-hotel__top">
+                                                <img src="img/best-hotel/best-hotel1.png" alt=""
+                                                    class="card-hotel__image">
+                                                <div class="hotel-rating card-hotel__rating">
+                                                    8,8
+                                                </div>
+                                            </a>
+                                            <div class="card-hotel__bottom">
+                                                <div class="card-hotel__info">
+                                                    <div class="card-hotel__stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="card-hotel__name">
+                                                        <a href="#">
+                                                            Отель Kostas
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-hotel__location">
+                                                        3,9 км от центра Санкт-Петербурга
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__btns">
+                                                    <button class="btn btn-custom card-hotel__btn">
+                                                        от 464 ₽
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map-hotel-list__map">
+                                    <div class="hotel-map">
+                                        <div class="hotel-map__outer">
+                                            <div class="hotel-map__inner">
+                                                <div class="hotel-map__wrapper" id="hotel-map"></div>
+                                                <div class="hotel-map__control-top">
+                                                    <div class="hotel-map__close">
+                                                        <button class="btn hotel-map__btn js-hide-hotel-map">
+                                                            <i class="fas fa-times"></i>
+                                                            Закрыть карту
+                                                        </button>
+                                                    </div>
+                                                    <div class="hotel-map__when-moving">
+                                                        <label class="custom-checkbox custom-checkbox_small">
+                                                            <input type="checkbox" class="custom-checkbox__input">
+                                                            <span class="custom-checkbox__checkmark"></span>
+                                                            Искать при перемещении карты
+                                                        </label>
+                                                    </div>
+                                                    <div class="hotel-map__search">
+                                                        <i class="fas fa-search hotel-map__search-icon"></i>
+                                                        <input type="text" class="hotel-map__search-input">
+                                                    </div>
+                                                </div>
+                                                <div class="hotel-map__control-bottom">
+                                                    <button class="btn hotel-map__btn js-show-hotel-filter">
+                                                        <i class="fas fa-filter"></i>
+                                                        Фильтры
+                                                    </button>
+                                                </div>
+                                                <button
+                                                    class="btn btn-custom btn-custom_h_40 btn-custom_br_4 btn-custom_white js-modal-hotel"
+                                                    style="position: absolute; top: calc(50% - 20px); left: 20px;">
+                                                    Отель Kostas
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <footer class="footer">
+                <div class="footer__inner">
+                    <div class="footer__left">
+                        <div class="footer__copy">
+                            © 2007–2021
+                        </div>
+                        <div class="footer__left-text">
+                            Электронная база недвижимости
+                        </div>
+                        <div class="footer__metrika">
+                            <div class="footer__metrika-inner">
+                                Metrika
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Правила и условия
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Условия предоставления услуг
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-file-signature"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Оферта
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Политика конфиденциальности
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-book-reader"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Правила
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Удаление объявлений
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Пользователям
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-file-code"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-cash-register"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Способы оплаты
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Войти
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Зарегистрироваться
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-hammer"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Для застройщика
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Общая информация
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-building"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        О проекте
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-life-ring"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Техподдержка сайта
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="footer__social">
+                                <div class="footer__social-text">
+                                    В соцсетях:
+                                </div>
+                                <ul class="footer__social-list">
+                                    <li class="footer__social-item">
+                                        <a href="#" class="footer__social-link">
+                                            <i class="fab fa-twitter footer__social-icon"></i>
+                                        </a>
+                                    </li>
+                                    <li class="footer__social-item">
+                                        <a href="#" class="footer__social-link">
+                                            <i class="fab fa-vk footer__social-icon"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal-hotel-card">
+        <div class="modal-hotel-card__outer">
+            <div class="modal-hotel-card__inner">
+                <div class="modal-hotel-card__head">
+                    <div class="modal-hotel-card__back">
+                        <i class="fas fa-chevron-left"></i>
+                        Назад к карте
+                    </div>
+                    <div class="modal-hotel-card__close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="modal-hotel-card__content">
+                    <div class="card-hotel-full card-hotel-full_modal">
+                        <div class="card-hotel-full__left">
+                            <img src="img/hotel/hotel1.png" alt="" class="card-hotel-full__image">
+                            <div class="card-hotel-full__favorite">
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="card-hotel-full__right">
+                            <div class="card-hotel-full__head">
+                                <div class="card-hotel-full__head-left">
+                                    <div class="card-hotel-full__stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="card-hotel-full__name">
+                                        <a href="#">
+                                            Отель Kostas
+                                        </a>
+                                    </div>
+                                    <div class="card-hotel-full__location">
+                                        <span class="card-hotel-full__location-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            3,1 км от центра Санкт-Петербурга
+                                        </span>
+                                        •
+                                        <a href="#" class="card-hotel-full__location-btn">
+                                            Показать на карте
+                                        </a>
+                                    </div>
+                                    <div class="card-hotel-full__address">
+                                        Суворовский проспект, д. 18
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full__head-right">
+                                    <div class="card-hotel-full__review">
+                                        <div class="card-hotel-full__review-text">
+                                            Очень хорошо
+                                        </div>
+                                        <div class="card-hotel-full__review-counter">
+                                            <a href="#">
+                                                301 отзыв
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-rating hotel-rating_fz14 card-hotel-full__rating">
+                                        8,8
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-hotel-full__content">
+                                <div class="card-hotel-full__type">
+                                    Двухместный номер Deluxe Comfort
+                                </div>
+                                <div class="card-hotel-full__content-inner">
+                                    <div class="card-hotel-full__content-left">
+                                        <div class="card-hotel-full__sleeping-place">
+                                            Двуспальная кровать
+                                        </div>
+                                        <ul class="card-hotel-full__info-list">
+                                            <li>
+                                                Питание включено
+                                            </li>
+                                            <li class="marked-green">
+                                                Бесплатная отмена
+                                            </li>
+                                            <li>
+                                                Оплата на месте
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-hotel-full__content-right">
+                                        <div class="card-hotel-full__count">
+                                            1 ночь, 1 взрослый
+                                        </div>
+                                        <div class="card-hotel-full__price">
+                                            4882 ₽
+                                        </div>
+                                        <div class="card-hotel-full__taxes">
+                                            включая налоги и сборы
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-hotel-full__btns">
+                                    <a href="#" class="btn btn-custom btn-custom_br_4 card-hotel-full__btn">
+                                        Посмотреть все номера
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

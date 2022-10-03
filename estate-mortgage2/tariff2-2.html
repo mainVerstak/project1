@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/select2.ru.js"></script>
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-top-nav">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <div class="dropdown header-city">
+                                <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Москва
+                                    <span class="caret"></span>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Москва</a></li>
+                                    <li><a href="#">Москва2</a></li>
+                                    <li><a href="#">Москва3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                                <i class="fa fa-edit fa-lg"></i>
+                                Выписки
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile">
+                            <a href="#">
+                                <i class="fas fa-money-bill-wave"></i>
+                                Тарифы и цены
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile" i>
+                            <a href="#">
+                                <i class="fas fa-file-code"></i>
+                                Пакетная загрузка
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/">
+                                <img src="img/logo.svg" class="navbar-brand__logo">
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color">
+                                        <a data-no-turbolink="true" href="/estate-new">
+                                            <div class="btn btn-warning">
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                Подать объявление
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+        <div class="row">
+            <div class="tariff-main tariff-main_t2">
+                <div class="tariff-main__content">
+                    <div class="tariff-main__title">
+                        На MULTILISTING.SU представлены различные тарифы для застройщиков.
+                    </div>
+                    <img src="img/bg-tariff2.svg" class="tariff-main__img-mobile">
+                    <div class="tariff-main__text">
+                        Выберите нужный регион, от выбранного региона&nbsp;зависит&nbsp;тариф.
+                    </div>
+                    <div class="tariff-main__bottom">
+                        <div class="tariff-main__bottom-text">
+                            <i class="fas fa-map-marker-alt fa-lg"></i>
+                            Регион размещения
+                        </div>
+                        <div class="tariff-main__select">
+                            <select class="js-city-select">
+                                <option value="0" selected>Москва</option>
+                                <option value="1">Москва1</option>
+                                <option value="2">Москва2</option>
+                                <option value="3">Москва3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="tariff-main__img">
+                    <img src="img/bg-tariff2.svg">
+                </div>
+            </div>
+        </div>
+        <div class="table-tariff-list">
+            <div class="table-tariff-wrap">
+                <div class="table-tariff">
+                    <div class="table-tariff__head">
+                        ПЛАТА ЗА РАЗМЕЩЕНИЕ
+                    </div>
+                    <div class="table-tariff__content">
+                        <div class="table-tariff__row table-tariff__row_first">
+                            <div class="table-tariff__row-inner">
+                                <div class="table-tariff__label">Размещение</div>
+                                <div class="table-tariff__value">49 ₽</div>
+                            </div>
+                        </div>
+                        <div class="table-tariff__accordion">
+                            <div class="table-tariff__row table-tariff__accordion-head">
+                                <div class="table-tariff__row-inner">
+                                    <div class="table-tariff__label">
+                                        <i class="fas fa-level-up-alt fa-lg table-tariff__icon"></i>
+                                        Поднятие
+                                    </div>
+                                    <div class="table-tariff__value">от 249 ₽</div>
+                                </div>
+                                <i class="fas fa-chevron-down table-tariff__accordion-arrow"></i>
+                            </div>
+                            <div class="table-tariff__accordion-content">
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        Продажа, Жилая недвижимость, Квартира, Продажа,
+                                        Жилая недвижимость, Квартира, От 5 мл ₽
+                                    </div>
+                                    <div class="table-tariff__value">149 ₽</div>
+                                </div>
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        Квартира
+                                    </div>
+                                    <div class="table-tariff__value">199 ₽</div>
+                                </div>
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        От 5 мл ₽
+                                    </div>
+                                    <div class="table-tariff__value">49 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-tariff__accordion">
+                            <div class="table-tariff__row table-tariff__accordion-head">
+                                <div class="table-tariff__row-inner">
+                                    <div class="table-tariff__label">
+                                        <i class="fa fa-bolt fa-lg table-tariff__icon"></i>
+                                        Горячее
+                                    </div>
+                                    <div class="table-tariff__value">от 399 ₽</div>
+                                </div>
+                                <i class="fas fa-chevron-down table-tariff__accordion-arrow"></i>
+                            </div>
+                            <div class="table-tariff__accordion-content">
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        Продажа, Жилая недвижимость, Квартира, Продажа,
+                                        Жилая недвижимость, Квартира, От 5 мл ₽
+                                    </div>
+                                    <div class="table-tariff__value">149 ₽</div>
+                                </div>
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        Квартира
+                                    </div>
+                                    <div class="table-tariff__value">199 ₽</div>
+                                </div>
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        От 5 мл ₽
+                                    </div>
+                                    <div class="table-tariff__value">49 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-tariff-wrap__balance">
+                    <button class="btn btn-styled-new2  btn-styled-new2_fz_16">
+                        <i class="fa fa-plus"></i>
+                        <span class="btn-styled-new2__bold">Выбрать этот тариф</span>
+                    </button>
+                </div>
+            </div>
+            <div class="table-tariff-wrap">
+                <div class="table-tariff">
+                    <div class="table-tariff__head">
+                        ПЛАТА ЗА ЗВОНОК
+                    </div>
+                    <div class="table-tariff__content">
+                        <div class="table-tariff__row table-tariff__row_first">
+                            <div class="table-tariff__row-inner">
+                                <div class="table-tariff__label">Звонок</div>
+                                <div class="table-tariff__value">49 ₽</div>
+                            </div>
+                        </div>
+                        <div class="table-tariff__accordion">
+                            <div class="table-tariff__row table-tariff__accordion-head">
+                                <div class="table-tariff__row-inner">
+                                    <div class="table-tariff__label">
+                                        <i class="fas fa-level-up-alt fa-lg table-tariff__icon"></i>
+                                        Поднятие
+                                    </div>
+                                    <div class="table-tariff__value">от 249 ₽</div>
+                                </div>
+                                <i class="fas fa-chevron-down table-tariff__accordion-arrow"></i>
+                            </div>
+                            <div class="table-tariff__accordion-content">
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        Продажа, Жилая недвижимость, Квартира, Продажа,
+                                        Жилая недвижимость, Квартира, От 5 мл ₽
+                                    </div>
+                                    <div class="table-tariff__value">149 ₽</div>
+                                </div>
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        Квартира
+                                    </div>
+                                    <div class="table-tariff__value">199 ₽</div>
+                                </div>
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        От 5 мл ₽
+                                    </div>
+                                    <div class="table-tariff__value">49 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-tariff__accordion">
+                            <div class="table-tariff__row table-tariff__accordion-head">
+                                <div class="table-tariff__row-inner">
+                                    <div class="table-tariff__label">
+                                        <i class="fa fa-bolt fa-lg table-tariff__icon"></i>
+                                        Горячее
+                                    </div>
+                                    <div class="table-tariff__value">от 399 ₽</div>
+                                </div>
+                                <i class="fas fa-chevron-down table-tariff__accordion-arrow"></i>
+                            </div>
+                            <div class="table-tariff__accordion-content">
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        Продажа, Жилая недвижимость, Квартира, Продажа,
+                                        Жилая недвижимость, Квартира, От 5 мл ₽
+                                    </div>
+                                    <div class="table-tariff__value">149 ₽</div>
+                                </div>
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        Квартира
+                                    </div>
+                                    <div class="table-tariff__value">199 ₽</div>
+                                </div>
+                                <div class="table-tariff__row table-tariff__row_info">
+                                    <div class="table-tariff__label">
+                                        От 5 мл ₽
+                                    </div>
+                                    <div class="table-tariff__value">49 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-tariff-wrap__balance">
+                    <button class="btn btn-styled-new2  btn-styled-new2_fz_16">
+                        <i class="fa fa-plus"></i>
+                        <span class="btn-styled-new2__bold">Выбрать этот тариф</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="tariff-types">
+            <a href="#" class="tariff-types__item">
+                <div class="tariff-types__img">
+                    <i class="fas fa-users tariff-types__icon"></i>
+                </div>
+                <div class="tariff-types__text">
+                    Для агентов и агентств
+                </div>
+            </a>
+            <a href="#" class="tariff-types__item active">
+                <div class="tariff-types__img">
+                    <i class="fas fa-hammer tariff-types__icon"></i>
+                </div>
+                <div class="tariff-types__text">
+                    Тарифы для застройщиков
+                </div>
+            </a>
+            <a href="#" class="tariff-types__item">
+                <div class="tariff-types__img">
+                    <i class="fas fa-user tariff-types__icon"></i>
+                </div>
+                <div class="tariff-types__text">
+                    Тарифы для собственников
+                </div>
+            </a>
+            <a href="#" class="tariff-types__item">
+                <div class="tariff-types__img">
+                    <i class="fas fa-hands-helping tariff-types__icon"></i>
+                </div>
+                <div class="tariff-types__text">
+                    Тарифы для партнеров
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/rangeslider.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/rangeslider.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/select2.ru.js"></script>
+    <script src="js/tablesort.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-top-nav">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <div class="dropdown header-city">
+                                <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Москва
+                                    <span class="caret"></span>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Москва</a></li>
+                                    <li><a href="#">Москва2</a></li>
+                                    <li><a href="#">Москва3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                                <i class="fa fa-edit fa-lg"></i>
+                                Выписки
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile">
+                            <a href="#">
+                                <i class="fas fa-money-bill-wave"></i>
+                                Тарифы и цены
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile" i>
+                            <a href="#">
+                                <i class="fas fa-file-code"></i>
+                                Пакетная загрузка
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/">
+                                <img src="img/logo.svg" class="navbar-brand__logo">
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color">
+                                        <a data-no-turbolink="true" href="/estate-new">
+                                            <div class="btn btn-warning">
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                Подать объявление
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+        <div class="row">
+            <div class="mortgage-main">
+                <div class="mortgage-main__content">
+                    <div class="mortgage-main__title">
+                        <span class="mortgage-main__title-inner">
+                            Выберите лучшие условия ипотеки <br>
+                            в
+                        </span>
+                        <span class="mortgage-main__city">
+                            <!-- <i class="fas fa-map-marker-alt"></i> -->
+                            <i class="fa fa-map-marker"></i>
+                            <span>Ростове-на-Дону</span>
+                        </span>
+                        <!-- <select class="select-styled-new2 select-styled-new2_inline-title">
+                            <option value="0" selected>Ростове-на-Дону</option>
+                            <option value="1">Ростове-на-Дону1</option>
+                            <option value="2">Ростове-на-Дону2</option>
+                            <option value="3">Город1</option>
+                        </select> -->
+                    </div>
+                    <div class="mortgage-main__text">
+                        В банках России в 2021 году
+                    </div>
+                </div>
+                <div class="mortgage-main__img">
+                    <img src="img/bg-mortgage.svg">
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-show-mortgage-filter js-mortgage-filter">
+            <!-- <i class="fas fa-search"></i> -->
+            <i class="fa fa-search"></i>
+            Развернуть параметры подбора
+        </button>
+        <div class="calc-mortgage-new">
+            <div class="calc-mortgage-new__popup">
+                <div class="calc-mortgage-new__popup-inner">
+                    <div class="calc-mortgage-new__box">
+                        <div class="calc-mortgage-new__close js-mortgage-filter"></div>
+                        <div class="calc-mortgage-new__mobile-head">
+                            Подбор ипотеки
+                        </div>
+                        <div class="calc-mortgage-new__top">
+                            <div class="calc-mortgage-new__row">
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Цель ипотеки
+                                    </div>
+                                    <select class="select-styled-new2">
+                                        <option value="0" selected>Любая</option>
+                                        <option value="1">Москва1</option>
+                                        <option value="2">Москва2</option>
+                                        <option value="3">Москва3</option>
+                                    </select>
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Стоимость недвижимости
+                                    </div>
+                                    <div class="calc-mortgage-new__inputs">
+                                        <div class="input-with-label">
+                                            <input class="input-styled-new2" id="calc-mortgage-summ" type="text"
+                                                value="10 000 000">
+                                            <div class="input-with-label__label">₽</div>
+                                        </div>
+                                        <input type="range" class="range-styled-new" id="mortgage-summ" min="5000000"
+                                            max="20900000" value="10000000" step="20000">
+                                    </div>
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Первоначальный взнос
+                                    </div>
+                                    <div class="calc-mortgage-new__inputs">
+                                        <div class="input-with-label">
+                                            <input class="input-styled-new2" id="calc-mortgage-initial-fee" type="text"
+                                                value="1 200 000">
+                                            <div class="input-with-label__label">₽</div>
+                                        </div>
+                                        <input type="range" class="range-styled-new" id="initial-fee" min="1000000"
+                                            max="2000000" value="1200000" step="100000">
+                                    </div>
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Срок
+                                    </div>
+                                    <div class="calc-mortgage-new__inputs">
+                                        <div class="input-with-label">
+                                            <input class="input-styled-new2" id="calc-mortgage-term" type="text"
+                                                value="5">
+                                            <div class="input-with-label__label">Лет</div>
+                                        </div>
+                                        <input type="range" class="range-styled-new" id="mortgage-term" min="3" max="30"
+                                            value="5" step="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-mortgage-new__middle">
+                            <div class="calc-mortgage-new__row">
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Ваш город
+                                    </div>
+                                    <select class="select-styled-new2 select-styled-new2_hide-first">
+                                        <option value="0" selected>Выберите</option>
+                                        <option value="1">Ваш город1</option>
+                                        <option value="2">Ваш город2</option>
+                                        <option value="3">Ваш город3</option>
+                                    </select>
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Ипотечная программа
+                                    </div>
+                                    <!--  Для Font Awesome 5,6 -  data-icon-base="fas" -->
+                                    <select class="select-styled-new2" multiple data-none-selected-text="Все"
+                                        data-icon-base="fa" data-tick-icon="fa-check">
+                                        <option value="0">Мат. капитал</option>
+                                        <option value="1">Молодая семья</option>
+                                        <option value="2">Военная ипотека</option>
+                                        <option value="3">Социальная ипотека</option>
+                                        <option value="4">Господдержка семей с детьми</option>
+                                    </select>
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Подтверждение дохода
+                                    </div>
+                                    <select class="select-styled-new2">
+                                        <option value="0" selected>Неважно</option>
+                                        <option value="1">Без справок о доходах</option>
+                                        <option value="2">Справка 2-НДФЛ</option>
+                                        <option value="3">Справка по форме банка</option>
+                                    </select>
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Категория заемщика
+                                    </div>
+                                    <select class="select-styled-new2">
+                                        <option value="0" selected>Стандартные</option>
+                                        <option value="1">Бюджетники</option>
+                                        <option value="2">Военнослужащийе</option>
+                                        <option value="3">Предпрениматели</option>
+                                        <option value="4">Зарплатные клиенты</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="calc-mortgage-new__row">
+                                <div class="calc-mortgage-new__column _wide">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Банк
+                                    </div>
+                                    <select class="js-bank-select" multiple="multiple">
+                                        <option value="0">СберБанк</option>
+                                        <option value="1">Альфа</option>
+                                        <option value="2">ГосСтройТрестБанк</option>
+                                        <option value="3">Банк4</option>
+                                        <option value="4">Банк5</option>
+                                        <option value="5">Банк6</option>
+                                        <option value="6">Банк7</option>
+                                        <option value="7">Банк8</option>
+                                        <option value="8">Банк9</option>
+                                        <option value="9">Банк10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="calc-mortgage-new__row">
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Стаж на последнем месте
+                                    </div>
+                                    <select class="select-styled-new2">
+                                        <option value="0" selected>Неважно</option>
+                                        <option value="1">Менее 3 месецев</option>
+                                        <option value="2">От 3 до 5 месецев</option>
+                                        <option value="3">6 и более месецев</option>
+                                    </select>
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <div class="input-label calc-mortgage-new__label">
+                                        Возраст заемщика
+                                    </div>
+                                    <div class="calc-mortgage-new__inputs">
+                                        <input class="input-styled-new2" type="text" placeholder="Неважно">
+                                    </div>
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <!-- <div class="input-label calc-mortgage-new__label">
+                                        Банк
+                                    </div>
+                                    <select class="js-bank-select" multiple="multiple">
+                                        <option value="0">СберБанк</option>
+                                        <option value="1">Альфа</option>
+                                        <option value="2">ГосСтройТрестБанк</option>
+                                        <option value="3">Банк4</option>
+                                        <option value="4">Банк5</option>
+                                        <option value="5">Банк6</option>
+                                        <option value="6">Банк7</option>
+                                        <option value="7">Банк8</option>
+                                        <option value="8">Банк9</option>
+                                        <option value="9">Банк10</option>
+                                    </select> -->
+                                </div>
+                                <div class="calc-mortgage-new__column">
+                                    <button class="btn btn-styled-new2 btn-styled-new2_outline btn-styled-new2_fz_18">
+                                        <span class="btn-styled-new2__bold">Очистить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-mortgage-new__bottom">
+                            <div class="calc-mortgage-new__result">
+                                <div class="calc-mortgage-new__sum">
+                                    67 477 ₽
+                                </div>
+                                <div class="calc-mortgage-new__note">
+                                    Приблизительный
+                                    ежемесячный платеж
+                                </div>
+                            </div>
+                            <div class="calc-mortgage-new__bottom-btns">
+                                <button
+                                    class="btn btn-styled-new2 btn-styled-new2_outline btn-styled-new2_fz_18 js-mortgage-more">
+                                    <span class="btn-styled-new2__inner">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="btn-styled-new2__bold">Еще условия</span>
+                                    </span>
+                                </button>
+                                <button class="btn btn-styled-new2 btn-styled-new2_fz_18">
+                                    <i class="fa fa-search"></i>
+                                    <span class="btn-styled-new2__bold">Подобрать</span>
+                                    <span>(140)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mortgage-filter">
+                        <div class="mortgage-filter__inner">
+                            <div class="mortgage-filter__list">
+                                <div class="mortgage-filter__item active js-mortgage-filter-toggle">
+                                    Все кредиты
+                                </div>
+                                <div class="mortgage-filter__item js-mortgage-filter-toggle">
+                                    Семейная с господдержкой
+                                </div>
+                                <div class="mortgage-filter__item js-mortgage-filter-toggle">
+                                    На строительство
+                                </div>
+                                <div class="mortgage-filter__item js-mortgage-filter-toggle">
+                                    Досрочное погашение
+                                </div>
+                                <div class="mortgage-filter__item js-mortgage-filter-toggle">
+                                    Без первоначального взноса
+                                </div>
+
+                                <div
+                                    class="mortgage-filter__item mortgage-filter__item_hidden js-mortgage-filter-toggle">
+                                    Все кредиты
+                                </div>
+                                <div
+                                    class="mortgage-filter__item mortgage-filter__item_hidden js-mortgage-filter-toggle">
+                                    На строительство
+                                </div>
+                                <div
+                                    class="mortgage-filter__item mortgage-filter__item_hidden js-mortgage-filter-toggle">
+                                    Досрочное погашение
+                                </div>
+                                <div
+                                    class="mortgage-filter__item mortgage-filter__item_hidden js-mortgage-filter-toggle">
+                                    Без первоначального взноса
+                                </div>
+
+                                <div class="mortgage-filter__btn js-mortgage-filter-more">
+                                    <i class="fa  fa-plus"></i>
+                                    Еще
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mortgage-mobile-btn-wrapper"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table-mortgage2" id="table-mortgage2">
+                <thead>
+                    <tr>
+                        <th>
+                            <span class="table-mortgage2__head">
+                                <span class="table-mortgage2__title">Банк</span>
+                            </span>
+                        </th>
+                        <th>
+                            <span class="table-mortgage2__head">
+                                <span class="table-mortgage2__title">Ставка</span>
+                            </span>
+                        </th>
+                        <th>
+                            <span class="table-mortgage2__head">
+                                <span class="table-mortgage2__title">Сумма</span>
+                            </span>
+                        </th>
+                        <th data-sort-method="none">
+                            <span class="table-mortgage2__head">
+                                <span class="table-mortgage2__title">Требования</span>
+                            </span>
+                        </th>
+                        <th data-sort-method="none"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-sort="1">
+                            <div class="table-mortgage2__item table-mortgage2__item_head">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bank-img">
+                                        <img src="img/bank/bank1.png">
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2__mobile-btns">
+                                    <span class="table-mortgage2__btn-detail">
+                                        Показать условия
+                                    </span>
+                                    <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                        <span class="btn-styled-new2__bold">Отправить заявку</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="10">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Ставка">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">от 0,10%</div>
+                                    «Господдержка 2020 (ДомКлик)»
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="300000">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Сумма">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">300 000 ₽ — 12 000 000 ₽</div>
+                                    На срок до 30 лет
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Требования">
+                                <div class="table-mortgage2__item-inner">
+                                    Возраст от 21 года <br>
+                                    Стаж от 4 месяцев <br>
+                                    4 документа <br>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                <span class="btn-styled-new2__bold">Отправить заявку</span>
+                            </button>
+                            <div class="table-mortgage2__btn-bottom">
+                                <span class="table-mortgage2__btn-detail">
+                                    Показать условия
+                                </span>
+                            </div>
+                        </td>
+                        <td class="table-mortgage2__detail">
+                            <div class="table-mortgage2-detail">
+                                <div class="table-mortgage2-detail__tabs tabs">
+                                    <div class="table-mortgage2-detail__tab js-tab _active">Условия</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Требования</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Документы</div>
+                                </div>
+                                <div class="table-mortgage2-detail__contents tabs-content">
+                                    <div class="table-mortgage2-detail__content tab-content _active">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Цель
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Квартира на вторичном рынке, Доля в квартире на вторичном рынке
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Программа
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Материнский капитал
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Первоначальный взнос
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    20% - 70%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ставка
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    8,85% - 9,10%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Сумма
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 7 000 000 ₽
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 36 до 300 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Решение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 1 дня до 3 дней
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок действия решения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    до 3 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обеспечение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Залог приобретаемой недвижимости
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент получения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 21 года
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент погашения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 65 лет
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Стаж на последнем месте
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    6 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ежемесячный доход
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Постоянный
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обязательные документы
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Паспорт, Заверенная копия трудовой книжки или трудовой договор
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Подтверждение дохода (1 документ на выбор)
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Портал «Госуслуги»
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2-detail__more">
+                                    <a href="#" class="btn btn-styled-new2 table-mortgage2-detail__btn">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-sort="2">
+                            <div class="table-mortgage2__item table-mortgage2__item_head">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bank-img">
+                                        <img src="img/bank/bank2.png">
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2__mobile-btns">
+                                    <span class="table-mortgage2__btn-detail">
+                                        Показать условия
+                                    </span>
+                                    <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                        <span class="btn-styled-new2__bold">Отправить заявку</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="15">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Ставка">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">от 0,15%</div>
+                                    «Господдержка 2020 (ДомКлик)»
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="200000">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Сумма">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">200 000 ₽ — 12 000 000 ₽</div>
+                                    На срок до 30 лет
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Требования">
+                                <div class="table-mortgage2__item-inner">
+                                    Возраст от 21 года <br>
+                                    Стаж от 4 месяцев <br>
+                                    4 документа <br>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                <span class="btn-styled-new2__bold">Отправить заявку</span>
+                            </button>
+                            <div class="table-mortgage2__btn-bottom">
+                                <span class="table-mortgage2__btn-detail">
+                                    Показать условия
+                                </span>
+                            </div>
+                        </td>
+                        <td class="table-mortgage2__detail">
+                            <div class="table-mortgage2-detail">
+                                <div class="table-mortgage2-detail__tabs tabs">
+                                    <div class="table-mortgage2-detail__tab js-tab _active">Условия</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Требования</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Документы</div>
+                                </div>
+                                <div class="table-mortgage2-detail__contents tabs-content">
+                                    <div class="table-mortgage2-detail__content tab-content _active">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Цель
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Квартира на вторичном рынке, Доля в квартире на вторичном рынке
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Программа
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Материнский капитал
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Первоначальный взнос
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    20% - 70%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ставка
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    8,85% - 9,10%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Сумма
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 7 000 000 ₽
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 36 до 300 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Решение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 1 дня до 3 дней
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок действия решения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    до 3 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обеспечение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Залог приобретаемой недвижимости
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент получения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 21 года
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент погашения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 65 лет
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Стаж на последнем месте
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    6 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ежемесячный доход
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Постоянный
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обязательные документы
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Паспорт, Заверенная копия трудовой книжки или трудовой договор
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Подтверждение дохода (1 документ на выбор)
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Портал «Госуслуги»
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2-detail__more">
+                                    <a href="#" class="btn btn-styled-new2 table-mortgage2-detail__btn">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-sort="3">
+                            <div class="table-mortgage2__item table-mortgage2__item_head">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bank-img">
+                                        <img src="img/bank/bank3.png">
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2__mobile-btns">
+                                    <span class="table-mortgage2__btn-detail">
+                                        Показать условия
+                                    </span>
+                                    <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                        <span class="btn-styled-new2__bold">Отправить заявку</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="5">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Ставка">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">от 0,5%</div>
+                                    «Господдержка 2020 (ДомКлик)»
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="600000">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Сумма">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">600 000 ₽ — 12 000 000 ₽</div>
+                                    На срок до 30 лет
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Требования">
+                                <div class="table-mortgage2__item-inner">
+                                    Возраст от 21 года <br>
+                                    Стаж от 4 месяцев <br>
+                                    4 документа <br>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                <span class="btn-styled-new2__bold">Отправить заявку</span>
+                            </button>
+                            <div class="table-mortgage2__btn-bottom">
+                                <span class="table-mortgage2__btn-detail">
+                                    Показать условия
+                                </span>
+                            </div>
+                        </td>
+                        <td class="table-mortgage2__detail">
+                            <div class="table-mortgage2-detail">
+                                <div class="table-mortgage2-detail__tabs tabs">
+                                    <div class="table-mortgage2-detail__tab js-tab _active">Условия</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Требования</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Документы</div>
+                                </div>
+                                <div class="table-mortgage2-detail__contents tabs-content">
+                                    <div class="table-mortgage2-detail__content tab-content _active">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Цель
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Квартира на вторичном рынке, Доля в квартире на вторичном рынке
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Программа
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Материнский капитал
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Первоначальный взнос
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    20% - 70%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ставка
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    8,85% - 9,10%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Сумма
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 7 000 000 ₽
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 36 до 300 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Решение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 1 дня до 3 дней
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок действия решения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    до 3 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обеспечение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Залог приобретаемой недвижимости
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент получения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 21 года
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент погашения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 65 лет
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Стаж на последнем месте
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    6 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ежемесячный доход
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Постоянный
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обязательные документы
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Паспорт, Заверенная копия трудовой книжки или трудовой договор
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Подтверждение дохода (1 документ на выбор)
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Портал «Госуслуги»
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2-detail__more">
+                                    <a href="#" class="btn btn-styled-new2 table-mortgage2-detail__btn">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-mortgage2__hide-mobile">
+                        <td data-sort="4">
+                            <div class="table-mortgage2__item table-mortgage2__item_head">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bank-img">
+                                        <img src="img/bank/bank4.png">
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2__mobile-btns">
+                                    <span class="table-mortgage2__btn-detail">
+                                        Показать условия
+                                    </span>
+                                    <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                        <span class="btn-styled-new2__bold">Отправить заявку</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="20">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Ставка">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">от 0,20%</div>
+                                    «Господдержка 2020 (ДомКлик)»
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="100000">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Сумма">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">100 000 ₽ — 12 000 000 ₽</div>
+                                    На срок до 30 лет
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Требования">
+                                <div class="table-mortgage2__item-inner">
+                                    Возраст от 21 года <br>
+                                    Стаж от 4 месяцев <br>
+                                    4 документа <br>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                <span class="btn-styled-new2__bold">Отправить заявку</span>
+                            </button>
+                            <div class="table-mortgage2__btn-bottom">
+                                <span class="table-mortgage2__btn-detail">
+                                    Показать условия
+                                </span>
+                            </div>
+                        </td>
+                        <td class="table-mortgage2__detail">
+                            <div class="table-mortgage2-detail">
+                                <div class="table-mortgage2-detail__tabs tabs">
+                                    <div class="table-mortgage2-detail__tab js-tab _active">Условия</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Требования</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Документы</div>
+                                </div>
+                                <div class="table-mortgage2-detail__contents tabs-content">
+                                    <div class="table-mortgage2-detail__content tab-content _active">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Цель
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Квартира на вторичном рынке, Доля в квартире на вторичном рынке
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Программа
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Материнский капитал
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Первоначальный взнос
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    20% - 70%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ставка
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    8,85% - 9,10%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Сумма
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 7 000 000 ₽
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 36 до 300 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Решение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 1 дня до 3 дней
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок действия решения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    до 3 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обеспечение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Залог приобретаемой недвижимости
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент получения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 21 года
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент погашения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 65 лет
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Стаж на последнем месте
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    6 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ежемесячный доход
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Постоянный
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обязательные документы
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Паспорт, Заверенная копия трудовой книжки или трудовой договор
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Подтверждение дохода (1 документ на выбор)
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Портал «Госуслуги»
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2-detail__more">
+                                    <a href="#" class="btn btn-styled-new2 table-mortgage2-detail__btn">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-mortgage2__hide-mobile">
+                        <td data-sort="5">
+                            <div class="table-mortgage2__item table-mortgage2__item_head">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bank-img">
+                                        <img src="img/bank/bank1.png">
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2__mobile-btns">
+                                    <span class="table-mortgage2__btn-detail">
+                                        Показать условия
+                                    </span>
+                                    <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                        <span class="btn-styled-new2__bold">Отправить заявку</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="10">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Ставка">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">от 0,10%</div>
+                                    «Господдержка 2020 (ДомКлик)»
+                                </div>
+                            </div>
+                        </td>
+                        <td data-sort="300000">
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Сумма">
+                                <div class="table-mortgage2__item-inner">
+                                    <div class="table-mortgage2__bold">300 000 ₽ — 12 000 000 ₽</div>
+                                    На срок до 30 лет
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-mortgage2__item table-mortgage2__item_label" data-label="Требования">
+                                <div class="table-mortgage2__item-inner">
+                                    Возраст от 21 года <br>
+                                    Стаж от 4 месяцев <br>
+                                    4 документа <br>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-styled-new2 btn-styled-new2_fz_14 table-mortgage2__btn">
+                                <span class="btn-styled-new2__bold">Отправить заявку</span>
+                            </button>
+                            <div class="table-mortgage2__btn-bottom">
+                                <span class="table-mortgage2__btn-detail">
+                                    Показать условия
+                                </span>
+                            </div>
+                        </td>
+                        <td class="table-mortgage2__detail">
+                            <div class="table-mortgage2-detail">
+                                <div class="table-mortgage2-detail__tabs tabs">
+                                    <div class="table-mortgage2-detail__tab js-tab _active">Условия</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Требования</div>
+                                    <div class="table-mortgage2-detail__tab js-tab">Документы</div>
+                                </div>
+                                <div class="table-mortgage2-detail__contents tabs-content">
+                                    <div class="table-mortgage2-detail__content tab-content _active">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Цель
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Квартира на вторичном рынке, Доля в квартире на вторичном рынке
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Программа
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Материнский капитал
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Первоначальный взнос
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    20% - 70%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ставка
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    8,85% - 9,10%
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Сумма
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 7 000 000 ₽
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 36 до 300 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Решение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 1 дня до 3 дней
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Срок действия решения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    до 3 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обеспечение
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Залог приобретаемой недвижимости
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент получения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 21 года
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Возраст на момент погашения
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    от 65 лет
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Стаж на последнем месте
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    6 месяцев
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Ежемесячный доход
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Постоянный
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-mortgage2-detail__content tab-content">
+                                        <ul class="table-mortgage2-detail__list">
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Обязательные документы
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Паспорт, Заверенная копия трудовой книжки или трудовой договор
+                                                </div>
+                                            </li>
+                                            <li class="table-mortgage2-detail__item">
+                                                <div class="table-mortgage2-detail__label">
+                                                    Подтверждение дохода (1 документ на выбор)
+                                                </div>
+                                                <div class="table-mortgage2-detail__value">
+                                                    Портал «Госуслуги»
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-mortgage2-detail__more">
+                                    <a href="#" class="btn btn-styled-new2 table-mortgage2-detail__btn">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button
+                class="btn btn-styled-new2 btn-styled-new2_outline btn-styled-new2_fz_12 table-mortgage2-show-all table-mortgage2-show-all_hide-desktop">
+                Показать ещё
+            </button>
+        </div>
+        <div class="often-searched">
+            <div class="often-searched__head">
+                Часто ищут
+            </div>
+            <div class="often-searched__contet">
+                <div class="often-searched__title">
+                    Популярное
+                </div>
+                <div class="often-searched__row">
+                    <ul class="often-searched__list">
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Самая выгодная
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Под материнский капитал
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Военная
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Подать заявку на ипотеку
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На земельный участок
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Без подтверждения дохода
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Под 6 процентов
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Для пенсионеров
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="often-searched__list">
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Без кредитной истории
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Без первоначального взноса для молодой семьи
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Без поручителей
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Без процентов
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Без прописки
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Без риэлтора
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Без залога недвижимости
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                По двум документам
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="often-searched__list">
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На квартиру в другом городе
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На квартиру в строящемся доме
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На 1 комнатную квартиру
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На 2 комнатную квартиру
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На 3 комнатную квартиру
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На дом с земельным участком
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На машиноместо
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Займ под материнский капитал
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="often-searched__list">
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                На загородную недвижимость
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Под залог приобретаемого жилья
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Под залог земельного участка
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Ипотечный калькулятор без первоначального взноса
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Ипотечный калькулятор для молодой семьи
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Рефинансирование военной ипотеки
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Калькулятор рефинансирования ипотеки
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                Ипотека при рождении второго ребенка
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="often-searched__contet">
+                <div class="often-searched__title">
+                    Часто выбирают
+                </div>
+                <div class="often-searched__row">
+                    <ul class="often-searched__list often-searched__list_c4">
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Сбербанке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В банке ВТБ
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Россельхозбанке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В банке Капитал
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Газпромбанке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Альфа-Банке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Росбанке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В ФК Открытие
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Банке Дом.РФ
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Совкомбанке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Райффайзенбанке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Дом Банке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В банке Центр-инвест
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В банке Ак Барс
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Почта Банке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В РНКБ
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Абсолют Банке
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В банке Возрождение
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Банке Санкт-Петербург
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Тинькофф Банке
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="often-searched__contet">
+                <div class="often-searched__title">
+                    Ипотека на первичное жилье в крупных городах
+                </div>
+                <div class="often-searched__row">
+                    <ul class="often-searched__list often-searched__list_c4">
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Москве
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Омске
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Новосибирске
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Санкт-Петербурге
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Екатеринбурге
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Краснодаре
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Тюмени
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Казани
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Уфе
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Воронеже
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Красноярске
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Челябинске
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Самаре
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Нижнем Новгороде
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Ростове-на-Дону
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Перми
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Ижевске
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Оренбурге
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Пензе
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Белгороде
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Томске
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Волгограде
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Калининграде
+                            </a>
+                        </li>
+                        <li class="often-searched__item">
+                            <a href="#" class="often-searched__link">
+                                В Кирове
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

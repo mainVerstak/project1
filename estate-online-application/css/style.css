@@ -1,0 +1,520 @@
+.title-h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  margin-bottom: 20px;
+}
+
+.title-h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+}
+
+.application-steps {
+  margin-bottom: 36px;
+}
+
+.application-steps__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.application-steps__item {
+  max-width: 280px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  position: relative;
+}
+
+.application-steps__num {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #CACEDB;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 20px;
+}
+
+.application-steps__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.application-steps__separator {
+  position: relative;
+}
+
+.application-steps__separator::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-bottom: 1px solid #CACEDB;
+  width: 250px;
+}
+
+.application-steps .fotorama__nav::before, .application-steps .fotorama__nav::after,
+.application-steps .fotorama__stage::before,
+.application-steps .fotorama__stage::after {
+  display: none;
+}
+
+.application-steps .fotorama__html {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.application-steps .fotorama__nav-wrap {
+  margin-top: 20px;
+}
+
+.application-steps .fotorama__dot {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #CACEDB;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.application-steps .fotorama__nav__frame.fotorama__active .fotorama__dot {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #CACEDB;
+  background: #CACEDB;
+}
+
+.application-steps .fotorama__nav__frame,
+.application-steps .fotorama__nav--dot {
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+}
+
+.application-form {
+  border-radius: 4px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  margin-bottom: 36px;
+}
+
+.application-form__content {
+  padding: 32px 30px;
+  background: #F0F2F6;
+  border: 1px solid #CACEDB;
+  border-top: none;
+}
+
+.application-form__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.application-form__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.application-form__note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.application-form__note .btn-note {
+  margin-right: 10px;
+}
+
+.application-form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.application-form__row_mb16 {
+  margin-bottom: 16px;
+}
+
+.application-form__cell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 32px;
+}
+
+.application-form__cell:last-child {
+  margin-right: 0;
+}
+
+.application-form__cell_50 {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+}
+
+.application-form__help {
+  margin-left: 5px;
+}
+
+.application-form__btns {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.application-form__btn {
+  margin-right: 12px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.application-form__btn:last-child {
+  margin-right: 0;
+}
+
+.application-form__btn_next {
+  max-width: 250px;
+  width: 100%;
+}
+
+.application-form__btn_prev {
+  max-width: 200px;
+  width: 100%;
+}
+
+.application-form__btn_complete {
+  max-width: 290px;
+  width: 100%;
+}
+
+.application-form__controll-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.application-form__controll-row .custom-radio {
+  margin-right: 16px;
+}
+
+.application-form__controll-row .custom-radio:last-child {
+  margin-right: 0;
+}
+
+.application-form__controll-label {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  margin-right: 24px;
+}
+
+.application-form__checkbox-row {
+  font-weight: 500;
+}
+
+.application-form__beginning-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.application-form__beginning-year {
+  -webkit-box-flex: 1.15;
+      -ms-flex: 1.15;
+          flex: 1.15;
+  margin-right: 30px;
+}
+
+.application-form__beginning-month {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.application-form-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  border-radius: 4px 4px 0 0;
+  background: #fff;
+  border: 1px solid #CACEDB;
+  overflow: hidden;
+  position: relative;
+}
+
+.application-form-progress__value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #CACEDB;
+}
+
+.application-form-progress__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 1px;
+}
+
+.mortgage-features {
+  max-width: 1080px;
+  margin: 88px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mortgage-features__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  padding: 0 10px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.mortgage-features__item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 43px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #CACEDB;
+}
+
+.mortgage-features__item:last-child::after {
+  display: none;
+}
+
+.mortgage-features__item span {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 991px) {
+  .application-steps__item {
+    max-width: 180px;
+  }
+  .application-steps__text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .application-steps__separator::after {
+    width: 120px;
+  }
+  .application-form__content {
+    padding: 24px;
+  }
+  .application-form__head {
+    margin-bottom: 24px;
+  }
+  .application-form__row {
+    margin-bottom: 16px;
+  }
+  .application-form__row_tablet {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .application-form__row_tablet .application-form__cell {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 16px;
+    margin-right: 0;
+  }
+  .application-form__row_tablet .application-form__cell:last-child {
+    margin-bottom: 0;
+  }
+  .application-form__beginning-year {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .application-form__btns {
+    margin-top: 24px;
+  }
+  .mortgage-features {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  .mortgage-features__item {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .application-steps {
+    margin-bottom: 24px;
+  }
+  .application-steps__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .application-steps__separator {
+    display: none;
+  }
+  .application-form__content {
+    padding: 12px 16px 16px;
+  }
+  .application-form__head {
+    margin-bottom: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .application-form__title {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .application-form__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .application-form__beginning-work {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .application-form__beginning-year {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 0 16px;
+  }
+  .application-form__cell {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .application-form__cell:last-child {
+    margin-bottom: 0;
+  }
+  .application-form__btns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .application-form__btn {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  .application-form__btn:last-child {
+    margin-bottom: 0;
+  }
+  .application-form__btn {
+    max-width: 100%;
+  }
+  .application-form__btn_prev {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 12px 0 0;
+  }
+  .mortgage-features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mortgage-features__item {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  .mortgage-features__item:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .mortgage-features__item::after {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 1px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,110 @@
+.custom-modal__outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  pointer-events: none;
+}
+
+.custom-modal__dialog {
+  max-height: 100%;
+  width: auto;
+  overflow: auto;
+  margin: auto;
+  padding: 20px 15px;
+  font-size: 14px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  pointer-events: auto;
+}
+
+.custom-modal__content {
+  margin: auto;
+  position: relative;
+  background: #FFFFFF;
+  max-width: 100%;
+  width: 555px;
+  padding: 30px 32px;
+  margin: 0;
+}
+
+.custom-modal__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.custom-modal__head {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 26px;
+  padding-right: 45px;
+  margin-bottom: 8px;
+}
+
+.custom-modal__text {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 20px;
+}
+
+.custom-modal__text_phone {
+  max-width: 440px;
+}
+
+.custom-modal__label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+
+.custom-modal__input {
+  margin-bottom: 16px;
+}
+
+.custom-modal__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.custom-modal__btn {
+  max-width: 250px;
+  width: 100%;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  .custom-modal__close {
+    top: 24px;
+    right: 16px;
+  }
+  .custom-modal__content {
+    padding: 24px 16px;
+  }
+  .custom-modal__head {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  .custom-modal__text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .custom-modal__text_phone {
+    max-width: 420px;
+  }
+  .custom-modal__input {
+    margin-bottom: 20px;
+  }
+  .custom-modal__btn {
+    max-width: 100%;
+  }
+}

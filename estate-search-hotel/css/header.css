@@ -1,0 +1,232 @@
+.header-top-nav {
+  background: #435E70;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-top-nav .navbar-right {
+  float: right;
+}
+
+.header-top-nav .navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: none;
+}
+
+.header-top-nav a {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.header-top-nav a .fa, .header-top-nav a .fas, .header-top-nav a .far, .header-top-nav a .fal, .header-top-nav a .fad, .header-top-nav a .fab {
+  color: #fff;
+}
+
+.header-top-nav .nav > li > a:hover,
+.header-top-nav .nav > li > a:focus,
+.header-top-nav .nav > li > a:focus,
+.header-top-nav .nav > li > a:hover {
+  color: #fff;
+  background: transparent;
+}
+
+.header-top-nav .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.header-top-nav .dropdown:hover .dropdown-menu {
+  display: none;
+}
+
+.header-top-nav .dropdown.open > .dropdown-menu {
+  display: block;
+}
+
+.header-top-nav .navbar-left {
+  float: left;
+}
+
+.header-top-nav .container {
+  background: transparent;
+  padding: 0;
+}
+
+.header-top-nav + .navbar {
+  margin-top: 52px;
+}
+
+.header-top-nav_near + .navbar {
+  margin-top: 40px;
+}
+
+header .navbar {
+  position: relative;
+  z-index: 200;
+}
+
+.header-city-btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.header-city-btn .fa-map-marker-alt {
+  color: #fff;
+}
+
+.header-city-btn:hover {
+  color: #fff;
+}
+
+.header-city-btn .caret {
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.navbar-brand {
+  height: 60px;
+  padding: 10px 10px 10px 20px;
+}
+
+.navbar-brand__logo {
+  width: 109px;
+}
+
+.navbar-nav > li > a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar-btn {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.sidenav__hide-desktop {
+  display: none !important;
+}
+
+.sidenav_open {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.navbar-small .navbar-brand {
+  color: #337ab7;
+}
+
+.navbar-small .navbar-btn {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.navbar-small .navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-small .navbar-brand {
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav .navbar-nav__hide-mobile {
+    display: none;
+  }
+  .navbar-brand__logo {
+    width: 90px;
+  }
+  .navbar-brand {
+    padding: 15px 10px;
+  }
+  .navbar-toggle {
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+  .sidenav {
+    width: 310px;
+    right: -310px;
+  }
+  .sidenav .navbar-toggle {
+    width: 44px;
+    margin: 0;
+    position: relative;
+  }
+  .sidenav .navbar-toggle span {
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -11px;
+    margin-top: -1px;
+    background: #707070;
+  }
+  .sidenav .navbar-toggle span:first-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .sidenav .navbar-toggle span:last-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .sidenav__inner {
+    padding-top: 80px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sidenav__hide-desktop {
+    display: block !important;
+  }
+  .sidenav .header-city-btn {
+    color: #777;
+    padding-left: 20px;
+  }
+  .sidenav .header-city-btn .fa-map-marker-alt {
+    color: #777;
+  }
+  .sidenav .navbar-nav > li {
+    border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+  }
+  .sidenav .navbar-nav > li > a {
+    padding: 11px 20px;
+  }
+  .sidenav .navbar-btn {
+    margin: 30px 20px;
+  }
+  .sidenav_open {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+  .sidenav_open .dropdown-menu {
+    display: none;
+  }
+  .sidenav_open .dropdown-toggle {
+    pointer-events: all;
+  }
+  .sidenav_open .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  .navbar-small .navbar-toggle {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}

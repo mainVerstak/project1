@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top-nav">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <div class="dropdown header-city">
+                                <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Москва
+                                    <span class="caret"></span>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Москва</a></li>
+                                    <li><a href="#">Москва2</a></li>
+                                    <li><a href="#">Москва3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                                <i class="fa fa-edit fa-lg"></i>
+                                Выписки
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile">
+                            <a href="#">
+                                <i class="fas fa-money-bill-wave"></i>
+                                Тарифы и цены
+                            </a>
+                        </li>
+                        <li class="navbar-nav__hide-mobile" i>
+                            <a href="#">
+                                <i class="fas fa-file-code"></i>
+                                Пакетная загрузка
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/">
+                                <img src="img/logo.svg" class="navbar-brand__logo">
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color">
+                                        <a data-no-turbolink="true" href="/estate-new">
+                                            <div class="btn btn-warning">
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                Подать объявление
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+        <div class="row">
+            <div class="xml-main">
+                <div class="xml-main__content">
+                    <div class="xml-main__title">
+                        XML-выгрузка
+                        объявлений для&nbsp;агентств
+                        и застройщиков
+                    </div>
+                    <img src="img/bg-xml.svg" class="xml-main__img-mobile">
+                    <div class="xml-main__text">
+                        Выгружайте на сайт и поддерживайте в актуальном состоянии свои объявления недвижимости
+                        с&nbsp;помощью
+                        XML. Ваши предложения найдут больше откликов от клиентов, а вы освободитесь от длительной
+                        кропотливой работы.
+                    </div>
+                </div>
+                <div class="xml-main__img">
+                    <img src="img/bg-xml.svg">
+                </div>
+            </div>
+            <div class="portal-statistics">
+                <div class="portal-statistics__inner">
+                    <div class="new-defaul-head portal-statistics__head">
+                        ПОКАЗАТЕЛИ ПОРТАЛА MULTILISTING.SU В ЦИФРАХ НА 16.04.2021
+                    </div>
+                    <div class="portal-statistics__items">
+                        <div class="portal-statistics-item">
+                            <div class="new-round-icon portal-statistics-item__icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="portal-statistics-item__value">
+                                1 387 254 182 раз
+                            </div>
+                            <div class="portal-statistics-item__text">
+                                Показано объявлений наших пользователей потенциальным покупателям и арендаторам
+                            </div>
+                        </div>
+                        <div class="portal-statistics-item">
+                            <div class="new-round-icon portal-statistics-item__icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="portal-statistics-item__value">
+                                291 544 048 раз
+                            </div>
+                            <div class="portal-statistics-item__text">
+                                Потенциальные покупатели и арендаторы открыли номер телефона в объявлениях, размещенных
+                                на
+                                сайте </div>
+                        </div>
+                        <div class="portal-statistics-item">
+                            <div class="new-round-icon portal-statistics-item__icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="portal-statistics-item__value">
+                                956 фидов
+                            </div>
+                            <div class="portal-statistics-item__text">
+                                Уже подключено для агенств недвижимости и&nbsp;застройщиков </div>
+                        </div>
+                        <div class="portal-statistics-item">
+                            <div class="new-round-icon portal-statistics-item__icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="portal-statistics-item__value">
+                                ТОП 10
+                            </div>
+                            <div class="portal-statistics-item__text">
+                                Multilisting.su входит в ТОП 10 сайтов недвижимости России по версии liveinternet.ru
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portal-statistics__cards">
+                    <div class="portal-statistics-card">
+                        <div class="portal-statistics-card__head">
+                            Принимаем <span class="portal-statistics-card__accent">Яндекс-фиды</span>
+                        </div>
+                        <div class="portal-statistics-card__content">
+                            <ul class="portal-statistics-card__list">
+                                <li>
+                                    <a href="#">Требования к передаче данных Yandex</a>
+                                </li>
+                                <li>
+                                    <a href="#">Жильё</a>,
+                                    <a href="#">коммерция</a>,
+                                    <a href="#">новостройки</a>.
+                                    <a href="#">Частые ошибки</a>.
+                                </li>
+                            </ul>
+                            <div class="portal-statistics-card__text">
+                                Yandex Realty Language — стандарт, разработанный ведущей поисковой системой рунета
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portal-statistics-card">
+                        <div class="portal-statistics-card__head">
+                            Принимаем <span class="portal-statistics-card__accent">Avito-фиды</span>
+                        </div>
+                        <div class="portal-statistics-card__content">
+                            <ul class="portal-statistics-card__list">
+                                <li>
+                                    <a href="#">Требования к передаче данных</a>.
+                                </li>
+                            </ul>
+                            <div class="portal-statistics-card__text">
+                                Авито Автозагрузка — стандарт, разработанный главной доской объявлений рунета
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portal-statistics-card">
+                        <div class="portal-statistics-card__head">
+                            Принимаем <span class="portal-statistics-card__accent">Cian-фиды</span>
+                        </div>
+                        <div class="portal-statistics-card__content">
+                            <ul class="portal-statistics-card__list">
+                                <li>
+                                    <a href="#">Требования к передаче данных</a>.
+                                </li>
+                            </ul>
+                            <div class="portal-statistics-card__text">
+                                Cian XML-фиды — стандарт, разработанный популярным сайтом недвижимости
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="how-works">
+                <div class="new-defaul-head how-works__head">
+                    КАК ЭТО РАБОТАЕТ
+                </div>
+                <div class="how-works__content">
+                    <div class="how-works__left">
+                        <div class="how-works__item">
+                            <div class="new-round-icon how-works__icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="how-works__info">
+                                <div class="how-works__title">
+                                    Введите ссылку на ваш фид
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how-works__item">
+                            <div class="new-round-icon how-works__icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="how-works__info">
+                                <div class="how-works__title">
+                                    Укажите регистрационные данные
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how-works__item">
+                            <div class="new-round-icon how-works__icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="how-works__info">
+                                <div class="how-works__title">
+                                    Оплатите заявку
+                                </div>
+                                <div class="how-works__text">
+                                    <p>
+                                        Предоставляем на тест 20 размещений объявлений. <br>
+                                        Чтобы загрузить нужное вам количество объявлений - оплатите подходящий <a
+                                            href="#">тариф</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how-works__item">
+                            <div class="new-round-icon how-works__icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="how-works__info">
+                                <div class="how-works__title">
+                                    Получайте звонки от клиентов
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how-works__item">
+                            <div class="new-round-icon how-works__icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="how-works__info">
+                                <div class="how-works__title">
+                                    Используйте обратный фид для отчёта в CRM
+                                </div>
+                                <div class="how-works__text">
+                                    <p>
+                                        При каждой загрузке вашего фида формируется и предоставляется обратный XML-фид с
+                                        отчетом, в котором указаны:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Ссылки на размещенные объявления
+                                        </li>
+                                        <li>
+                                            Количество просмотров объявлений
+                                        </li>
+                                        <li>
+                                            Количество просмотров номеров телефонов
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="how-works__right">
+                        <div class="how-works__item">
+                            <div class="new-round-icon how-works__icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="how-works__info">
+                                <div class="how-works__title">
+                                    От Калининграда до Владивостока
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how-works__map">
+                            <img src="img/map-xml.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="how-works__bottom">
+                    <div class="how-works-form">
+                        <div class="how-works-form__head">
+                            У вас есть яндекс-фид?
+                        </div>
+                        <div class="how-works-form__row">
+                            <div class="how-works-form__input">
+                                <input class="input-styled-new2" type="text" placeholder="ВВЕДИТЕ URL ВАШЕГО ФИДА">
+                            </div>
+                            <div class="how-works-form__btn">
+                                <button class="btn btn-styled-new2 btn-styled-new2_fz_16">
+                                    <span class="btn-styled-new2__bold">Продолжить</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="how-works-form__note">
+                            Вопросы? Предложения? <span><a href="tel:+8800505538">8-800-505-53-81</a> — ждём вашего
+                                звонка</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

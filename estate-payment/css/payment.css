@@ -1,0 +1,164 @@
+.pay-box {
+  border: 1px solid #DCDCDC;
+  border-radius: 3px;
+}
+
+.pay-box__head {
+  font-weight: 700;
+  margin-bottom: 1.2em;
+}
+
+.pay-box__term {
+  font-size: 85%;
+}
+
+.pay-box__item {
+  padding: 15px 20px 20px;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.pay-box__item:last-child {
+  border-bottom: none;
+}
+
+.pay-box__item > *:last-child {
+  margin-bottom: 0;
+}
+
+.pay-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pay-list__column {
+  margin: 0 30px 20px 0;
+  max-width: 160px;
+  width: 100%;
+}
+
+.pay-list__column:last-child {
+  margin-right: 0;
+}
+
+.pay-list__label {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.pay-list .card-pay + .card-pay {
+  margin-top: 10px;
+}
+
+.num-list {
+  list-style: none;
+  counter-reset: orderedlist;
+  padding: 0;
+  display: block;
+}
+
+.num-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.num-list li::before {
+  position: absolute;
+  left: 0;
+  counter-increment: orderedlist;
+  content: counter(orderedlist) ". ";
+  font-weight: bold;
+}
+
+.num-list li + li {
+  margin-top: 1em;
+}
+
+.card-pay {
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  max-width: 160px;
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-pay img {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.card-pay_solo {
+  margin-bottom: 20px;
+}
+
+.card-pay-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-pay-row .card-pay {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.card-pay-row .card-pay:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 479px) {
+  .pay-box__head {
+    text-align: center;
+  }
+  .pay-box__term {
+    text-align: center;
+  }
+  .pay-box__mcenter {
+    text-align: center;
+  }
+  .pay-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pay-list__column {
+    margin-right: 0;
+  }
+  .card-pay_solo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .card-pay-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-pay-row .card-pay {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .card-pay-row .card-pay:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,14 @@
+.navbar-brand {
+  padding: 5px 10px 5px 10px;
+  margin-right: 70px;
+}
+
+.navbar-brand__logo {
+  width: 136px;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-brand {
+    margin-right: 20px;
+  }
+}

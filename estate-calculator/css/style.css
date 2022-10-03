@@ -1,0 +1,1246 @@
+.title-h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  margin-bottom: 20px;
+}
+
+.title-h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+}
+
+.btn-show-more {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #F0F2F6;
+  border: 1px solid #ABB1C4;
+  border-radius: 4px;
+  height: 36px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #333C67;
+}
+
+.btn-show-more:hover {
+  border-color: #333C67;
+}
+
+.btn-show-more:focus, .btn-show-more:active {
+  outline: none;
+}
+
+.btn-show-more:focus:active {
+  outline: none;
+}
+
+.btn-show-more_w_160 {
+  width: 160px;
+}
+
+.btn-show-more_center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.calculators {
+  margin-bottom: 36px;
+}
+
+.calculators__tab-content {
+  display: none;
+}
+
+.calculators__tab-content._active {
+  display: block;
+}
+
+.calculators__select {
+  overflow: auto;
+  padding-left: 20px;
+  border: 1px solid #CACEDB;
+  border-top: none;
+}
+
+.calculators__select-mobile {
+  display: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333C67;
+  min-height: 54px;
+  padding: 16px 40px 16px 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.calculators__select-mobile::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  right: 20px;
+  border: 2px solid #323B6A;
+  border-top: none;
+  border-left: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 66% 66%;
+          transform-origin: 66% 66%;
+  margin-top: -8px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.calculators__list {
+  padding: 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculators__list::after {
+  content: "";
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-right: 20px;
+}
+
+.calculators__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  border: 1px solid #CACEDB;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #333C67;
+  white-space: nowrap;
+  padding: 0 20px;
+  height: 30px;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.calculators__item:last-child {
+  margin-right: 0;
+}
+
+.calculators__item:hover {
+  background: #CACEDB;
+}
+
+.calculators__item._active {
+  background: #CACEDB;
+  border-color: #ABB1C4;
+}
+
+.calculator-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+
+.calculator-tabs__inner {
+  border: 1px solid #CACEDB;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculator-tabs__tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right: 1px solid #CACEDB;
+  background: #F0F2F6;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333C67;
+  white-space: nowrap;
+  padding: 0 16px;
+  height: 41px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.calculator-tabs__tab::after {
+  content: attr(data-text);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.calculator-tabs__tab:last-child {
+  border: none;
+}
+
+.calculator-tabs__tab:hover {
+  background: rgba(240, 242, 246, 0);
+}
+
+.calculator-tabs__tab._active {
+  font-weight: bold;
+  background: rgba(240, 242, 246, 0);
+}
+
+.calculator-tabs_default .calculator-tabs__inner {
+  min-width: auto;
+}
+
+.calculator-tabs_default .calculator-tabs__tab {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.calculator-tabs_default .calculator-tabs__tab._active {
+  font-weight: 500;
+}
+
+.calculator-tabs_default .calculator-tabs__tab::after {
+  font-weight: 500;
+}
+
+.calculator-summary {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  margin-bottom: 36px;
+}
+
+.calculator-summary__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+  padding-right: 20px;
+}
+
+.calculator-summary__link {
+  color: #337AB7;
+  text-decoration: underline;
+}
+
+.calculator-summary__link:focus, .calculator-summary__link:visited {
+  color: #337AB7;
+  text-decoration: underline;
+}
+
+.calculator-summary__link:hover {
+  color: #333C67;
+}
+
+.calculator-summary__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculator-summary__chart {
+  width: 270px;
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 26px;
+}
+
+.calculator-summary__list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.calculator-summary__item {
+  min-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #CACEDB;
+}
+
+.calculator-summary__item:last-child {
+  border-bottom: none;
+}
+
+.calculator-summary__label {
+  margin-right: 15px;
+}
+
+.calculator-summary__value span {
+  font-weight: bold;
+}
+
+.bank-offer {
+  border: 1px solid #CACEDB;
+  padding: 32px 30px;
+  margin-bottom: 36px;
+}
+
+.bank-offer__title-h2 {
+  margin-bottom: 12px;
+}
+
+.bank-offer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #CACEDB;
+  min-height: 73px;
+  letter-spacing: -0.004em;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 16px 0;
+}
+
+.bank-offer__item:last-child {
+  border-bottom: 0;
+}
+
+.bank-offer__bank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+  height: 100%;
+  margin-right: 16px;
+}
+
+.bank-offer__logo {
+  max-height: 26px;
+  max-width: 85%;
+}
+
+.bank-offer__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 30px;
+}
+
+.bank-offer__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333C67;
+  margin-bottom: 2px;
+}
+
+.bank-offer__desc {
+  color: rgba(51, 60, 103, 0.65);
+}
+
+.bank-offer__info {
+  text-align: right;
+  white-space: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 0 20px 0 0;
+  margin-right: 20px;
+  position: relative;
+}
+
+.bank-offer__info::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: calc( 100% + 4px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-right: 1px solid #CACEDB;
+}
+
+.bank-offer__label {
+  color: #333C67;
+}
+
+.bank-offer__rate {
+  line-height: 19px;
+  color: #8E95A5;
+}
+
+.bank-offer__value {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333C67;
+}
+
+.bank-offer__percent {
+  color: #333C67;
+}
+
+.bank-offer__btns {
+  width: 96px;
+}
+
+.bank-offer__btn {
+  height: 36px;
+  width: 100%;
+  font-style: 13px;
+  font-weight: 700;
+}
+
+.meida-box {
+  margin-bottom: 36px;
+}
+
+.meida-box img {
+  max-width: 100%;
+}
+
+.interest-payments {
+  margin-bottom: 36px;
+}
+
+.interest-payments__title-h2 {
+  margin-bottom: 20px;
+}
+
+.interest-payments__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.interest-payments__tab {
+  height: 27px;
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+  margin-right: 24px;
+}
+
+.interest-payments__tab:last-child {
+  margin-right: 0;
+}
+
+.interest-payments__tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  -webkit-transition: .2s;
+  transition: .2s;
+  opacity: 0;
+}
+
+.interest-payments__tab:hover::after {
+  opacity: 1;
+}
+
+.interest-payments__tab._active {
+  color: #337AB7;
+}
+
+.interest-payments__tab._active::after {
+  opacity: 1;
+  height: 2px;
+}
+
+.payment-schedule {
+  margin-bottom: 36px;
+}
+
+.payment-schedule__title-h2 {
+  margin-bottom: 20px;
+}
+
+.payment-schedule__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+.payment-schedule__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 19px;
+  color: #333333;
+  text-decoration: none;
+  margin-right: 24px;
+}
+
+.payment-schedule__link:last-child {
+  margin-right: 0;
+}
+
+.payment-schedule__link:focus, .payment-schedule__link:visited {
+  color: #333333;
+}
+
+.payment-schedule__link:hover {
+  color: #337AB7;
+  text-decoration: none;
+}
+
+.payment-schedule__link-icon {
+  font-size: 21px;
+  margin-right: 10px;
+  color: #337AB7;
+}
+
+.payment-schedule__more {
+  margin-top: 16px;
+}
+
+.payment-schedule-table {
+  width: 100%;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333C67;
+}
+
+.payment-schedule-table._cut tr:nth-child(n+7) {
+  display: none;
+}
+
+.payment-schedule-table th {
+  min-height: 58px;
+  padding: 8px 20px 9px;
+  font-weight: 500;
+  border-bottom: 2px solid #333C67;
+}
+
+.payment-schedule-table td {
+  min-height: 42px;
+  padding: 10px 20px 11px;
+}
+
+.payment-schedule-table tbody tr {
+  border-bottom: 1px solid #CACEDB;
+}
+
+.payment-schedule-table tbody tr:nth-child(even) {
+  background: #F0F2F6;
+}
+
+.calculation-assistance__title-h2 {
+  margin-bottom: 20px;
+}
+
+.calculation-assistance__tabs {
+  margin-bottom: 20px;
+}
+
+.calculation-assistance__tab-content {
+  display: none;
+}
+
+.calculation-assistance__tab-content._active {
+  display: block;
+}
+
+.calculators-link {
+  margin-bottom: 48px;
+}
+
+.calculators-link__title-h2 {
+  margin-bottom: 12px;
+}
+
+.calculators-list {
+  padding: 0;
+  margin: 0;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.calculators-list__item {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+}
+
+.calculators-list__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.calculators-list__link:focus, .calculators-list__link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.calculators-list__link:hover {
+  color: #337AB7;
+  text-decoration: none;
+}
+
+.calculator {
+  margin-bottom: 36px;
+}
+
+.calculator__title-h2 {
+  margin-bottom: 12px;
+}
+
+.calculator__inner {
+  padding: 20px 20px 16px;
+  border: 1px solid #CACEDB;
+}
+
+.calculator__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.calculator__cell {
+  margin-right: 25px;
+}
+
+.calculator__cell:nth-child(1), .calculator__cell:nth-child(2) {
+  -webkit-box-flex: 1.42;
+      -ms-flex: 1.42;
+          flex: 1.42;
+}
+
+.calculator__cell:nth-child(3), .calculator__cell:nth-child(4), .calculator__cell:nth-child(5) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.calculator__cell:last-child {
+  margin-right: 0;
+}
+
+.calculator__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
+.calculator__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  max-width: 284px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.calculator._early-repayment .early-repayment {
+  display: block;
+}
+
+.calculator._early-repayment .add-redemption {
+  display: none;
+}
+
+.add-redemption {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  color: #337AB7;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.add-redemption:hover {
+  color: #333C67;
+}
+
+.add-redemption__icon {
+  color: #333C67;
+  font-style: 12px;
+  line-height: 19px;
+  margin-left: 5px;
+}
+
+.payment-scheme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.payment-scheme__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-right: 26px;
+}
+
+.payment-scheme__title-help {
+  margin-left: 6px;
+}
+
+.payment-scheme__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.payment-scheme__radio {
+  margin-right: 16px;
+}
+
+.payment-scheme__radio:last-child {
+  margin-right: 0;
+}
+
+.early-repayment {
+  position: relative;
+  background: #F0F2F6;
+  border: 1px solid #CACEDB;
+  padding: 16px 20px;
+  margin-top: 20px;
+  display: none;
+}
+
+.early-repayment__close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+
+.early-repayment__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.early-repayment__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.early-repayment__control-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 24px;
+}
+
+.early-repayment__radio {
+  margin-right: 16px;
+}
+
+.early-repayment__radio:last-child {
+  margin-right: 0;
+}
+
+.early-repayment__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.early-repayment__cell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 236px;
+  margin-right: 30px;
+}
+
+.early-repayment__checkbox {
+  padding-top: 39px;
+}
+
+.payment-schedule-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .calculators__select {
+    padding-left: 12px;
+  }
+  .calculators__list {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .calculators__list::after {
+    padding-right: 12px;
+  }
+  .calculators__item {
+    margin-right: 9px;
+    font-size: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .calculator__inner {
+    padding: 16px 12px;
+  }
+  .calculator__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .calculator__cell {
+    margin-right: 8px;
+  }
+  .calculator__cell:nth-child(1), .calculator__cell:nth-child(2) {
+    width: calc(50% - 4px);
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin-bottom: 16px;
+  }
+  .calculator__cell:nth-child(2) {
+    margin-right: 0;
+  }
+  .calculator__cell:nth-child(3), .calculator__cell:nth-child(4), .calculator__cell:nth-child(5) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .calculator__cell:nth-child(3) .rangeslider {
+    height: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .calculator__btn {
+    max-width: 202px;
+  }
+  .payment-scheme {
+    margin-bottom: 20px;
+  }
+  .early-repayment {
+    padding: 16px 12px;
+  }
+  .early-repayment__close {
+    top: 12px;
+    right: 11px;
+  }
+  .early-repayment__title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+  .early-repayment__control-title {
+    font-size: 14px;
+  }
+  .early-repayment__cell {
+    max-width: 202px;
+    margin-right: 8px;
+  }
+  .early-repayment__checkbox {
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .early-repayment__inputs .rangeslider {
+    height: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .calculator-summary__head {
+    padding-right: 0;
+  }
+  .calculator-summary__chart {
+    width: 204px;
+    margin-right: 20px;
+  }
+  .calculator-summary__item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .bank-offer {
+    padding: 12px 10px 12px 12px;
+  }
+  .bank-offer__bank {
+    width: 100px;
+    margin-right: 12px;
+  }
+  .bank-offer__logo {
+    max-height: 24px;
+  }
+  .payment-schedule-table th {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .payment-schedule-table th:last-child {
+    padding-right: 0;
+  }
+  .payment-schedule-table td {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .payment-schedule-table td:last-child {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .calculator-tabs {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .calculators {
+    margin-bottom: 24px;
+  }
+  .calculators__select {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 0;
+  }
+  .calculators__select._active .calculators__list {
+    display: block;
+  }
+  .calculators__select._active .calculators__select-mobile::after {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  .calculators__select-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .calculators__list {
+    display: none;
+    padding: 0;
+  }
+  .calculators__item {
+    border-radius: 0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    margin-right: 0;
+    height: 40px;
+  }
+  .calculators__item:last-child {
+    border-bottom: none;
+  }
+  .calculator {
+    margin-bottom: 40px;
+  }
+  .calculator__title-h2 {
+    display: none;
+  }
+  .calculator__inner {
+    padding: 0;
+    border: none;
+  }
+  .calculator__cell {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .calculator__cell:nth-child(1), .calculator__cell:nth-child(2) {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .calculator__cell:nth-child(2) {
+    margin-right: 0;
+  }
+  .calculator__cell:nth-child(3), .calculator__cell:nth-child(4), .calculator__cell:nth-child(5) {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .calculator__cell:last-child {
+    margin-bottom: 0;
+  }
+  .calculator__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .calculator__btn {
+    max-width: 100%;
+  }
+  .calculator__add-redemption {
+    margin-bottom: 16px;
+  }
+  .payment-scheme {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .payment-scheme__title {
+    margin-bottom: 16px;
+  }
+  .payment-scheme__control {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .payment-scheme__radio {
+    margin-bottom: 16px;
+    margin-right: 0;
+  }
+  .payment-scheme__radio:last-child {
+    margin-bottom: 0;
+  }
+  .early-repayment {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding: 16px 8px;
+  }
+  .early-repayment__close {
+    top: 16px;
+    right: 8px;
+  }
+  .early-repayment__title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+  .early-repayment__control {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .early-repayment__control-title {
+    margin-bottom: 16px;
+  }
+  .early-repayment__radio {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .early-repayment__radio:last-child {
+    margin-bottom: 0;
+  }
+  .early-repayment__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .early-repayment__cell {
+    max-width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 0 16px;
+  }
+  .early-repayment__checkbox {
+    padding-top: 0;
+  }
+  .calculator-summary__link {
+    display: none;
+  }
+  .calculator-summary__chart {
+    display: none;
+  }
+  .bank-offer {
+    padding: 0;
+  }
+  .bank-offer__title-h2 {
+    min-height: 46px;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-bottom: 1px solid #CACEDB;
+  }
+  .bank-offer__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 16px;
+  }
+  .bank-offer__bank {
+    width: 190px;
+    height: 60px;
+    margin: 0 0 12px;
+  }
+  .bank-offer__logo {
+    max-height: 40px;
+  }
+  .bank-offer__content {
+    text-align: center;
+    margin: 0 0 12px;
+  }
+  .bank-offer__title {
+    margin-bottom: 12px;
+  }
+  .bank-offer__info {
+    display: none;
+  }
+  .bank-offer__btns {
+    width: 100%;
+  }
+  .meida-box_hide-mobile {
+    display: none;
+  }
+  .interest-payments {
+    display: none;
+  }
+  .payment-schedule {
+    display: none;
+  }
+  .payment-schedule-mobile {
+    display: block;
+    margin-bottom: 36px;
+  }
+  .payment-schedule-mobile__btn {
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}

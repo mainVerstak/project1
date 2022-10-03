@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/inputs.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/select2.ru.js"></script>
+
+    <script src="js/easepick.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div class="container container_p30">
+        <header>
+            <div class="header-top-nav">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <div class="dropdown header-city">
+                                <div aria-expanded="false" aria-haspopup="true"
+                                    class="dropdown-toggle header-city-btn get-search-locations-action"
+                                    data-toggle="dropdown" mode="single" type="button">
+                                    Москва
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="" i>
+                            <a href="#">
+                                VSN Недвижимость
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/" style="color:#337ab7;">
+                                <i class="far fa-building fa-lg"></i>
+                                vsn.ru
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+        <div class="hotel">
+            <div class="hotel-head hotel__head">
+                <div class="hotel-head__content">
+                    <div class="hotel-head__title">
+                        Лучшее жилье для поездок: отели, дома, апартаменты и многое другое
+                    </div>
+                    <div class="hotel-search hotel-head__search">
+                        <div class="hotel-search__inner">
+                            <div class="hotel-search__cell">
+                                <div class="input-label hotel-search__label">
+                                    Направление
+                                </div>
+                                <select class="js-search-select select2_fw500 select2_default select2_fz14">
+                                    <option value="0" selected>Санкт-Петербург</option>
+                                    <option value="1">Москва1</option>
+                                    <option value="2">Москва2</option>
+                                    <option value="3">Москва3</option>
+                                </select>
+                            </div>
+                            <div class="hotel-search__cell">
+                                <div class="input-label hotel-search__label">
+                                    Дата заезда
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="custom-input custom-input_fw500 custom-input_fz14 set-datepicker-from"
+                                        id="set-datepicker-from" type="text" readonly>
+                                    <div class="input-wrapper__label input-wrapper__label_datepicker">
+                                        <i class="far fa-calendar input-wrapper__icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-search__cell">
+                                <div class="input-label hotel-search__label">
+                                    Дата выезда
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="custom-input custom-input_fw500 custom-input_fz14 set-datepicker-to"
+                                        id="set-datepicker-to" type="text" readonly>
+                                    <div class="input-wrapper__label input-wrapper__label_datepicker">
+                                        <i class="far fa-calendar input-wrapper__icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-search__cell">
+                                <div class="input-label hotel-search__label">
+                                    Размещение
+                                </div>
+                                <div class="deployment-input">
+                                    <div class="deployment-input__field">
+                                        <input type="text"
+                                            class="custom-input custom-input_fw500 custom-input_fz14 deployment-input__current"
+                                            value="1 номер, 1 взрослый" autocomplete="off" readonly>
+                                        <div class="deployment-input__arrow"></div>
+                                    </div>
+                                    <div class="deployment-input__drop">
+                                        <div class="deployment-input__drop-outer">
+                                            <div class="deployment-input__drop-inner">
+                                                <div class="deployment-input__drop-header">
+                                                    <div class="deployment-input__drop-title">
+                                                        Выберите размещение
+                                                    </div>
+                                                    <div class="deployment-input__drop-close">
+                                                        <i class="fas fa-times"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="deployment-input__drop-content">
+                                                    <div class="deployment-input__item">
+                                                        <div class="deployment-input__item-head">
+                                                            <span class="deployment-input__item-num">
+                                                                <span>1</span> номер
+                                                            </span>
+                                                            <div class="deployment-input__item-remove">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                                Удалить
+                                                            </div>
+                                                        </div>
+                                                        <div class="deployment-input__item-row">
+                                                            <div class="deployment-input__item-cell">
+                                                                <div class="input-label deployment-input__item-label">
+                                                                    Взрослые
+                                                                </div>
+                                                                <div
+                                                                    class="deployment-counter deployment-input__item-counter">
+                                                                    <div class="deployment-counter__dec js-input-dec">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </div>
+                                                                    <input type="text"
+                                                                        class="deployment-counter__input deployment-counter__input-adult js-input-counter"
+                                                                        value="1" min="1" max="10">
+                                                                    <div class="deployment-counter__inc js-input-inc">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="deployment-input__item-cell">
+                                                                <div class="deployment-input__children">
+                                                                    <div class="deployment-input__children-currnet">
+                                                                        <div
+                                                                            class="input-label deployment-input__item-label">
+                                                                            Дети
+                                                                        </div>
+                                                                        <div class="deployment-input__children-list">
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_h_40 btn-custom_br_4 btn-custom_white deployment-input__children-new">
+                                                                                <span>Добавить ребенка</span>
+                                                                                <i class="fas fa-plus"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="deployment-input__age">
+                                                                        <div
+                                                                            class="input-label deployment-input__item-label">
+                                                                            Возраст ребенка
+                                                                        </div>
+                                                                        <div class="deployment-input__age-row">
+                                                                            <div
+                                                                                class="deployment-counter deployment-input__age-counter">
+                                                                                <div
+                                                                                    class="deployment-counter__dec js-input-dec">
+                                                                                    <i class="fas fa-minus"></i>
+                                                                                </div>
+                                                                                <input type="text"
+                                                                                    class="deployment-counter__input deployment-counter__input-age js-input-counter"
+                                                                                    value="1" min="1" max="17">
+                                                                                <div
+                                                                                    class="deployment-counter__inc js-input-inc">
+                                                                                    <i class="fas fa-plus"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_white btn-custom_h_40 deployment-input__age-add">
+                                                                                <i class="fas fa-user-check"></i>
+                                                                            </button>
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_white btn-custom_h_40 deployment-input__age-remove">
+                                                                                <i class="fas fa-user-times"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="deployment-input__item _hidden-copy">
+                                                        <div class="deployment-input__item-head">
+                                                            <span class="deployment-input__item-num">
+                                                                <span>1</span> номер
+                                                            </span>
+                                                            <div class="deployment-input__item-remove">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                                Удалить
+                                                            </div>
+                                                        </div>
+                                                        <div class="deployment-input__item-row">
+                                                            <div class="deployment-input__item-cell">
+                                                                <div class="input-label deployment-input__item-label">
+                                                                    Взрослые
+                                                                </div>
+                                                                <div
+                                                                    class="deployment-counter deployment-input__item-counter">
+                                                                    <div class="deployment-counter__dec js-input-dec">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </div>
+                                                                    <input type="text"
+                                                                        class="deployment-counter__input deployment-counter__input-adult js-input-counter"
+                                                                        value="1" min="1" max="10">
+                                                                    <div class="deployment-counter__inc js-input-inc">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="deployment-input__item-cell">
+                                                                <div class="deployment-input__children">
+                                                                    <div class="deployment-input__children-currnet">
+                                                                        <div
+                                                                            class="input-label deployment-input__item-label">
+                                                                            Дети
+                                                                        </div>
+                                                                        <div class="deployment-input__children-list">
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_h_40 btn-custom_br_4 btn-custom_white deployment-input__children-new">
+                                                                                <span>Добавить ребенка</span>
+                                                                                <i class="fas fa-plus"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="deployment-input__age">
+                                                                        <div
+                                                                            class="input-label deployment-input__item-label">
+                                                                            Возраст ребенка
+                                                                        </div>
+                                                                        <div class="deployment-input__age-row">
+                                                                            <div
+                                                                                class="deployment-counter deployment-input__age-counter">
+                                                                                <div
+                                                                                    class="deployment-counter__dec js-input-dec">
+                                                                                    <i class="fas fa-minus"></i>
+                                                                                </div>
+                                                                                <input type="text"
+                                                                                    class="deployment-counter__input deployment-counter__input-age js-input-counter"
+                                                                                    value="1" min="1" max="17">
+                                                                                <div
+                                                                                    class="deployment-counter__inc js-input-inc">
+                                                                                    <i class="fas fa-plus"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_white btn-custom_h_40 deployment-input__age-add">
+                                                                                <i class="fas fa-user-check"></i>
+                                                                            </button>
+                                                                            <button
+                                                                                class="btn btn-custom btn-custom_white btn-custom_h_40 deployment-input__age-remove">
+                                                                                <i class="fas fa-user-times"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="deployment-input__footer">
+                                                    <div class="deployment-input__add-room">
+                                                        <i class="fas fa-plus"></i>
+                                                        Добавить номер
+                                                    </div>
+                                                    <button
+                                                        class="btn btn-custom btn-custom_h_40 btn-custom_br_4 deployment-input__confirm">
+                                                        Готово
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hotel-search__cell">
+                                <button
+                                    class="btn btn-custom btn-custom_h_40 btn-custom_br_4 hotel-search__btn">Найти</button>
+                            </div>
+                        </div>
+                        <div class="hotel-search__example">
+                            <ul class="hotel-search__example-list">
+                                <li>
+                                    Например:
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Санкт-Петербург
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Москва
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Крым
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Сочи
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Казань
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-search__example-btn">
+                                        Абхазия
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-section">
+                <div class="hotel-section__title">
+                    Лучшие отели
+                </div>
+                <div class="best-hotel-list">
+                    <div class="card-hotel">
+                        <a href="#" class="card-hotel__top">
+                            <img src="img/best-hotel/best-hotel1.png" alt="" class="card-hotel__image">
+                            <div class="hotel-rating card-hotel__rating">
+                                8,8
+                            </div>
+                        </a>
+                        <div class="card-hotel__bottom">
+                            <div class="card-hotel__info">
+                                <div class="card-hotel__stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="card-hotel__name">
+                                    <a href="#">
+                                        Отель Kostas
+                                    </a>
+                                </div>
+                                <div class="card-hotel__location">
+                                    3,9 км от центра Санкт-Петербурга
+                                </div>
+                            </div>
+                            <div class="card-hotel__btns">
+                                <button class="btn btn-custom card-hotel__btn">
+                                    от 464 ₽
+                                    <i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-hotel">
+                        <a href="#" class="card-hotel__top">
+                            <img src="img/best-hotel/best-hotel2.png" alt="" class="card-hotel__image">
+                            <div class="hotel-rating card-hotel__rating">
+                                8,5
+                            </div>
+                        </a>
+                        <div class="card-hotel__bottom">
+                            <div class="card-hotel__info">
+                                <div class="card-hotel__stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="card-hotel__name">
+                                    <a href="#">
+                                        Гранд Отель Эмеральд
+                                    </a>
+                                </div>
+                                <div class="card-hotel__location">
+                                    3,1 км от центра Санкт-Петербурга
+                                </div>
+                            </div>
+                            <div class="card-hotel__btns">
+                                <button class="btn btn-custom card-hotel__btn">
+                                    от 1364 ₽
+                                    <i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-hotel">
+                        <a href="#" class="card-hotel__top">
+                            <img src="img/best-hotel/best-hotel3.png" alt="" class="card-hotel__image">
+                            <div class="hotel-rating card-hotel__rating">
+                                9,2
+                            </div>
+                        </a>
+                        <div class="card-hotel__bottom">
+                            <div class="card-hotel__info">
+                                <div class="card-hotel__stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="card-hotel__name">
+                                    <a href="#">
+                                        Талион Империал Отель
+                                    </a>
+                                </div>
+                                <div class="card-hotel__location">
+                                    400 м от центра Санкт-Петербурга
+                                </div>
+                            </div>
+                            <div class="card-hotel__btns">
+                                <button class="btn btn-custom card-hotel__btn">
+                                    от 989 ₽
+                                    <i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-section">
+                <div class="hotel-section__title">
+                    Популярные направления
+                </div>
+                <div class="popular-hotel-list">
+                    <div class="card-popular-hotel">
+                        <a href="#" class="card-popular-hotel__top">
+                            <img src="img/popular-hotel/popular-hotel1.png" alt="" class="card-popular-hotel__image">
+                        </a>
+                        <div class="card-popular-hotel__bottom">
+                            <div class="card-popular-hotel__name">
+                                <a href="#">
+                                    Санкт-Петербург
+                                </a>
+                            </div>
+                            <div class="card-popular-hotel__info">
+                                <div class="card-popular-hotel__count">
+                                    962 варианта
+                                </div>
+                                <div class="card-popular-hotel__price">
+                                    от 400 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-popular-hotel">
+                        <a href="#" class="card-popular-hotel__top">
+                            <img src="img/popular-hotel/popular-hotel2.png" alt="" class="card-popular-hotel__image">
+                        </a>
+                        <div class="card-popular-hotel__bottom">
+                            <div class="card-popular-hotel__name">
+                                <a href="#">
+                                    Сочи
+                                </a>
+                            </div>
+                            <div class="card-popular-hotel__info">
+                                <div class="card-popular-hotel__count">
+                                    962 варианта
+                                </div>
+                                <div class="card-popular-hotel__price">
+                                    от 750 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-popular-hotel">
+                        <a href="#" class="card-popular-hotel__top">
+                            <img src="img/popular-hotel/popular-hotel3.png" alt="" class="card-popular-hotel__image">
+                        </a>
+                        <div class="card-popular-hotel__bottom">
+                            <div class="card-popular-hotel__name">
+                                <a href="#">
+                                    Москва
+                                </a>
+                            </div>
+                            <div class="card-popular-hotel__info">
+                                <div class="card-popular-hotel__count">
+                                    962 варианта
+                                </div>
+                                <div class="card-popular-hotel__price">
+                                    от 257 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-popular-hotel">
+                        <a href="#" class="card-popular-hotel__top">
+                            <img src="img/popular-hotel/popular-hotel4.png" alt="" class="card-popular-hotel__image">
+                        </a>
+                        <div class="card-popular-hotel__bottom">
+                            <div class="card-popular-hotel__name">
+                                <a href="#">
+                                    Адлер
+                                </a>
+                            </div>
+                            <div class="card-popular-hotel__info">
+                                <div class="card-popular-hotel__count">
+                                    962 варианта
+                                </div>
+                                <div class="card-popular-hotel__price">
+                                    от 1 158 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-popular-hotel">
+                        <a href="#" class="card-popular-hotel__top">
+                            <img src="img/popular-hotel/popular-hotel5.png" alt="" class="card-popular-hotel__image">
+                        </a>
+                        <div class="card-popular-hotel__bottom">
+                            <div class="card-popular-hotel__name">
+                                <a href="#">
+                                    Анапа
+                                </a>
+                            </div>
+                            <div class="card-popular-hotel__info">
+                                <div class="card-popular-hotel__count">
+                                    962 варианта
+                                </div>
+                                <div class="card-popular-hotel__price">
+                                    от 1 105 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-popular-hotel">
+                        <a href="#" class="card-popular-hotel__top">
+                            <img src="img/popular-hotel/popular-hotel6.png" alt="" class="card-popular-hotel__image">
+                        </a>
+                        <div class="card-popular-hotel__bottom">
+                            <div class="card-popular-hotel__name">
+                                <a href="#">
+                                    Екатеринбург
+                                </a>
+                            </div>
+                            <div class="card-popular-hotel__info">
+                                <div class="card-popular-hotel__count">
+                                    962 варианта
+                                </div>
+                                <div class="card-popular-hotel__price">
+                                    от 525 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-section">
+                <div class="hotel-section__title">
+                    Популярные размещения
+                </div>
+                <div class="popular-hotel-slider-wrapper">
+                    <div class="swiper popular-hotel-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card-popular-hotel card-popular-hotel_slide">
+                                    <a href="#" class="card-popular-hotel__top">
+                                        <img src="img/popular-hotel-slider/popular-hotel-slide1.png" alt=""
+                                            class="card-popular-hotel__image">
+                                    </a>
+                                    <div class="card-popular-hotel__bottom">
+                                        <div class="card-popular-hotel__name">
+                                            <a href="#">
+                                                Санкт-Петербург
+                                            </a>
+                                        </div>
+                                        <div class="card-popular-hotel__info">
+                                            <div class="card-popular-hotel__count">
+                                                962 варианта
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-popular-hotel card-popular-hotel_slide">
+                                    <a href="#" class="card-popular-hotel__top">
+                                        <img src="img/popular-hotel-slider/popular-hotel-slide2.png" alt=""
+                                            class="card-popular-hotel__image">
+                                    </a>
+                                    <div class="card-popular-hotel__bottom">
+                                        <div class="card-popular-hotel__name">
+                                            <a href="#">
+                                                Отели
+                                            </a>
+                                        </div>
+                                        <div class="card-popular-hotel__info">
+                                            <div class="card-popular-hotel__count">
+                                                89 480 вариантов
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-popular-hotel card-popular-hotel_slide">
+                                    <a href="#" class="card-popular-hotel__top">
+                                        <img src="img/popular-hotel-slider/popular-hotel-slide3.png" alt=""
+                                            class="card-popular-hotel__image">
+                                    </a>
+                                    <div class="card-popular-hotel__bottom">
+                                        <div class="card-popular-hotel__name">
+                                            <a href="#">
+                                                Апартаменты и квартиры
+                                            </a>
+                                        </div>
+                                        <div class="card-popular-hotel__info">
+                                            <div class="card-popular-hotel__count">
+                                                90 822 варианта
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-popular-hotel card-popular-hotel_slide">
+                                    <a href="#" class="card-popular-hotel__top">
+                                        <img src="img/popular-hotel-slider/popular-hotel-slide4.png" alt=""
+                                            class="card-popular-hotel__image">
+                                    </a>
+                                    <div class="card-popular-hotel__bottom">
+                                        <div class="card-popular-hotel__name">
+                                            <a href="#">
+                                                Курортные отели и санатории
+                                            </a>
+                                        </div>
+                                        <div class="card-popular-hotel__info">
+                                            <div class="card-popular-hotel__count">
+                                                8198 вариантов
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-popular-hotel card-popular-hotel_slide">
+                                    <a href="#" class="card-popular-hotel__top">
+                                        <img src="img/popular-hotel-slider/popular-hotel-slide2.png" alt=""
+                                            class="card-popular-hotel__image">
+                                    </a>
+                                    <div class="card-popular-hotel__bottom">
+                                        <div class="card-popular-hotel__name">
+                                            <a href="#">
+                                                Виллы и частные дома
+                                            </a>
+                                        </div>
+                                        <div class="card-popular-hotel__info">
+                                            <div class="card-popular-hotel__count">
+                                                77 989 вариантов
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-custom-btn swiper-custom-btn_prev popular-hotel-slider-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-custom-btn swiper-custom-btn_next popular-hotel-slider-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-section">
+                <div class="hotel-section__title">
+                    Все направления
+                </div>
+                <div class="hotel-directions">
+                    <div class="hotel-directions-tabs hotel-directions__tabs tabs">
+                        <div class="hotel-directions-tabs__inner">
+                            <div class="hotel-directions-tabs__tab js-tab _active">
+                                Регионы
+                            </div>
+                            <div class="hotel-directions-tabs__tab js-tab">
+                                Города
+                            </div>
+                            <div class="hotel-directions-tabs__tab js-tab">
+                                Достопримечательности
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-content hotel-directions__tabs-content">
+                        <div class="tab-content hotel-directions__tab-content _active">
+                            <ul class="hotel-directions-list">
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Москва
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        9613 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Санкт-Петербург
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        9607 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Новосибирск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8907 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Екатеринбург
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8709 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Казань
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8659 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Нижний Новгород
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8476 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Челябинск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8317 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Омск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7886 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Самара
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7771 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Ростов-на-Дону
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7630 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Уфа
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7303 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Красноярск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7138 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Пермь
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        5763 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Воронеж
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        Воронеж
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Волгоград
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        4093 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Краснодар
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3810 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Саратов
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3776 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Тюмень
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3319 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Тольятти
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        2908 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Ижевск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        2637 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Барнаул
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        2448 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Иркутск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        1668 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Ульяновск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        1537 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Хабаровск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        589 вариантов
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content hotel-directions__tab-content">
+                            <ul class="hotel-directions-list">
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Москва
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        9613 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Санкт-Петербург
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        9607 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Новосибирск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8907 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Екатеринбург
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8709 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Казань
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8659 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Нижний Новгород
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8476 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Челябинск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8317 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Омск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7886 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Самара
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7771 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Ростов-на-Дону
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7630 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Воронеж
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        Воронеж
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Волгоград
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        4093 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Краснодар
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3810 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Саратов
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3776 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Тюмень
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3319 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Тольятти
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        2908 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Ижевск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        2637 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Барнаул
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        2448 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Иркутск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        1668 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Ульяновск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        1537 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Хабаровск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        589 вариантов
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content hotel-directions__tab-content">
+                            <ul class="hotel-directions-list">
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Москва
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        9613 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Санкт-Петербург
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        9607 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Новосибирск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8907 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Екатеринбург
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8709 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Казань
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8659 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Нижний Новгород
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8476 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Челябинск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        8317 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Омск
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7886 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Самара
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7771 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Ростов-на-Дону
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        7630 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Воронеж
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        Воронеж
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Волгоград
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        4093 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Краснодар
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3810 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Саратов
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3776 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Тюмень
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        3319 вариантов
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hotel-directions-list__name">
+                                        Тольятти
+                                    </a>
+                                    <div class="hotel-directions-list__count">
+                                        2908 вариантов
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-section hotel-section_last">
+                <div class="hotel-features-list">
+                    <div class="hotel-features-item">
+                        <div class="hotel-features-item__icon">
+                            <img src="img/hotel-features/icon-activity.svg" alt="">
+                        </div>
+                        <div class="hotel-features-item__title">
+                            Низкие цены
+                        </div>
+                        <div class="hotel-features-item__text">
+                            Тысячи отелей, десятки прямых партнеров и самые выгодные предложения на все
+                            популярные направления.
+                        </div>
+                    </div>
+                    <div class="hotel-features-item">
+                        <div class="hotel-features-item__icon">
+                            <img src="img/hotel-features/icon-public.svg" alt="">
+                        </div>
+                        <div class="hotel-features-item__title">
+                            Отели по всему миру
+                        </div>
+                        <div class="hotel-features-item__text">
+                            У нас более 1 700 000 вариантов размещения по всему миру. Это отели, хостелы,
+                            апартаменты, виллы и даже кемпинги. В любой сезон вы найдёте то, что подходит именно
+                            вам.
+                        </div>
+                    </div>
+                    <div class="hotel-features-item">
+                        <div class="hotel-features-item__icon">
+                            <img src="img/hotel-features/icon-payments.svg" alt="">
+                        </div>
+                        <div class="hotel-features-item__title">
+                            Гибкая оплата
+                        </div>
+                        <div class="hotel-features-item__text">
+                            Вы сами выбираете способ оплаты. Можно оплатить бронь сразу — мы поддерживаем
+                            большинство банковских карт. А можно заплатить в отеле при заезде.
+                        </div>
+                    </div>
+                    <div class="hotel-features-item">
+                        <div class="hotel-features-item__icon">
+                            <img src="img/hotel-features/icon-support_agent.svg" alt="">
+                        </div>
+                        <div class="hotel-features-item__title">
+                            Поддержка 24/7
+                        </div>
+                        <div class="hotel-features-item__text">
+                            Операторы поддержки помогут с выбором отеля и бронированием. Если вопрос возник в
+                            поездке, оператор будет на связи и найдёт решение в кратчайший срок.
+                        </div>
+                    </div>
+                    <div class="hotel-features-item">
+                        <div class="hotel-features-item__icon">
+                            <img src="img/hotel-features/icon-mark_chat_read.svg" alt="">
+                        </div>
+                        <div class="hotel-features-item__title">
+                            Правдивые отзывы
+                        </div>
+                        <div class="hotel-features-item__text">
+                            Мы собираем и публикуем отзывы путешественников, а также добавляем отзывы
+                            TripAdvisor. Так вы получаете ещё больше информации об отеле.
+                        </div>
+                    </div>
+                    <div class="hotel-features-item">
+                        <div class="hotel-features-item__icon">
+                            <img src="img/hotel-features/icon-business_center.svg" alt="">
+                        </div>
+                        <div class="hotel-features-item__title">
+                            ?
+                        </div>
+                        <div class="hotel-features-item__text">
+                            ?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <footer class="footer">
+                <div class="footer__inner">
+                    <div class="footer__left">
+                        <div class="footer__copy">
+                            © 2007–2021
+                        </div>
+                        <div class="footer__left-text">
+                            Электронная база недвижимости
+                        </div>
+                        <div class="footer__metrika">
+                            <div class="footer__metrika-inner">
+                                Metrika
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="footer__nav">
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Правила и условия
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Условия предоставления услуг
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-file-signature"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Оферта
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Политика конфиденциальности
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-book-reader"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Правила
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Удаление объявлений
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Пользователям
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-file-code"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-cash-register"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Способы оплаты
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Войти
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Зарегистрироваться
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-hammer"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Для застройщика
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav-column">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item footer__nav-item-title">
+                                    Общая информация
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-building"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        О проекте
+                                    </a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <span class="footer__nav-icon">
+                                        <i class="fas fa-life-ring"></i>
+                                    </span>
+                                    <a href="#" class="footer__nav-link">
+                                        Техподдержка сайта
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="footer__social">
+                                <div class="footer__social-text">
+                                    В соцсетях:
+                                </div>
+                                <ul class="footer__social-list">
+                                    <li class="footer__social-item">
+                                        <a href="#" class="footer__social-link">
+                                            <i class="fab fa-twitter footer__social-icon"></i>
+                                        </a>
+                                    </li>
+                                    <li class="footer__social-item">
+                                        <a href="#" class="footer__social-link">
+                                            <i class="fab fa-vk footer__social-icon"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/application.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <div class="dropdown header-city">
+                <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Москва
+                  <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                <i class="fa fa-edit fa-lg"></i>
+                Выписки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <i class="fas fa-money-bill-wave"></i>
+                Тарифы и цены
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <i class="fas fa-file-code"></i>
+                Пакетная загрузка
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button class="navbar-toggle sidenav-button" type="button">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <span class="pull-left">
+              <a class="navbar-brand" href="/">
+                <img src="img/logo.svg" class="navbar-brand__logo">
+              </a>
+            </span>
+          </div>
+          <nav class="sidenav loaded">
+            <div class="sidenav__inner">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="sidenav__hide-desktop">
+                  <div class="dropdown header-city">
+                    <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Москва
+                      <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Москва</a></li>
+                      <li><a href="#">Москва2</a></li>
+                      <li><a href="#">Москва3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav navbar-nav">
+                  <a href="/sign-in">
+                    <div class="navbar-link">
+                      <i class="fas fa-sign-in-alt"></i>
+                      Войти
+                    </div>
+                  </a>
+                </li>
+                <li class="nav navbar-nav">
+                  <a href="/sign-up">
+                    <div class="navbar-link">
+                      <i class="fa fa-user-plus"></i>
+                      Зарегистрироваться
+                    </div>
+                  </a>
+                </li>
+                <li class="nav navbar-nav">
+                  <div class="navbar-btn nav-font-color">
+                    <a data-no-turbolink="true" href="/estate-new">
+                      <div class="btn btn-warning">
+                        <i class="fa fa-plus fa-lg"></i>
+                        Подать объявление
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a href="#">
+                    <i class="fas fa-money-bill-wave"></i>
+                    Тарифы и цены
+                  </a>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                    <i class="fa fa-edit fa-lg"></i>
+                    Выписки
+                  </a>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a href="#">
+                    <i class="fas fa-file-code"></i>
+                    Пакетная загрузка
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+          <div class="sidenav-overlay"></div>
+        </div>
+      </div>
+      <div class="notifications top-right"></div>
+    </header>
+
+    <div style="height: 2222px; background: #c1c1c1;"></div>
+
+    <div class="row">
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <div class="footer__copy">
+              © 2007–2021
+            </div>
+            <div class="footer__left-text">
+              Электронная база недвижимости
+            </div>
+            <div class="footer__metrika">
+              <div class="footer__metrika-inner">
+                Metrika
+              </div>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Правила и условия
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Условия предоставления услуг
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-file-signature"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Оферта
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Политика конфиденциальности
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-book-reader"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Правила
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-trash-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Удаление объявлений
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Пользователям
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-file-code"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Пакетная загрузка
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Тарифы и цены
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-cash-register"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Способы оплаты
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-edit"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Выписки
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-sign-in-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Войти
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-user-plus"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Зарегистрироваться
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-hammer"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Для застройщика
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Общая информация
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-building"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    О проекте
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-life-ring"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Техподдержка сайта
+                  </a>
+                </li>
+              </ul>
+              <div class="footer__social">
+                <div class="footer__social-text">
+                  В соцсетях:
+                </div>
+                <ul class="footer__social-list">
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <i class="fab fa-twitter footer__social-icon"></i>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <i class="fab fa-vk footer__social-icon"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div class="btn-place-an-ad">
+    <div class="btn btn-lg btn-warning btn-place-an-ad__btn">
+      <i class="fa fa-plus fa-lg"></i>
+      Подать объявление
+    </div>
+  </div>
+</body>
+
+</html>

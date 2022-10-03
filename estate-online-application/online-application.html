@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/application.css">
+  <link rel="stylesheet" href="css/rangeslider.css">
+  <link rel="stylesheet" href="css/datepicker.min.css">
+  <link rel="stylesheet" href="css/article.css">
+  <link rel="stylesheet" href="css/inputs.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/fotorama.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap-select.min.js"></script>
+  <script src="js/rangeslider.js"></script>
+  <script src="js/datepicker.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/fotorama.js"></script>
+  <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="header-top-nav">
+      <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <div class="dropdown header-city">
+              <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fas fa-map-marker-alt"></i>
+                Москва
+                <span class="caret"></span>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва2</a></li>
+                <li><a href="#">Москва3</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+              <i class="fa fa-edit fa-lg"></i>
+              Выписки
+            </a>
+          </li>
+          <li class="navbar-nav__hide-mobile">
+            <a href="#">
+              <i class="fas fa-money-bill-wave"></i>
+              Тарифы и цены
+            </a>
+          </li>
+          <li class="navbar-nav__hide-mobile" i="">
+            <a href="#">
+              <i class="fas fa-file-code"></i>
+              Пакетная загрузка
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button class="navbar-toggle sidenav-button" type="button">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <span class="pull-left">
+              <a class="navbar-brand" href="/">
+                <img src="img/logo.svg" class="navbar-brand__logo">
+              </a>
+            </span>
+          </div>
+          <nav class="sidenav loaded">
+            <div class="sidenav__inner">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="sidenav__hide-desktop">
+                  <div class="dropdown header-city">
+                    <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Москва
+                      <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Москва</a></li>
+                      <li><a href="#">Москва2</a></li>
+                      <li><a href="#">Москва3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav navbar-nav">
+                  <a href="/sign-in">
+                    <div class="navbar-link">
+                      <i class="fas fa-sign-in-alt"></i>
+                      Войти
+                    </div>
+                  </a>
+                </li>
+                <li class="nav navbar-nav">
+                  <a href="/sign-up">
+                    <div class="navbar-link">
+                      <i class="fa fa-user-plus"></i>
+                      Зарегистрироваться
+                    </div>
+                  </a>
+                </li>
+                <li class="nav navbar-nav">
+                  <div class="navbar-btn nav-font-color">
+                    <a data-no-turbolink="true" href="/estate-new">
+                      <div class="btn btn-warning">
+                        <i class="fa fa-plus fa-lg"></i>
+                        Подать объявление
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a href="#">
+                    <i class="fas fa-money-bill-wave"></i>
+                    Тарифы и цены
+                  </a>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                    <i class="fa fa-edit fa-lg"></i>
+                    Выписки
+                  </a>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a href="#">
+                    <i class="fas fa-file-code"></i>
+                    Пакетная загрузка
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+          <div class="sidenav-overlay"></div>
+        </div>
+      </div>
+      <div class="notifications top-right"></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="title-h1">
+      Онлайн-заявка на ипотеку во все банки
+    </div>
+    <div class="online-application">
+      <div class="application-steps">
+        <div class="application-steps__list fotorama-steps">
+          <div class="application-steps__item">
+            <div class="application-steps__num">
+              1
+            </div>
+            <div class="application-steps__text">
+              Вы заполняете
+              онлайн&#8209;заявку на&nbsp;ипотеку
+            </div>
+          </div>
+          <div class="application-steps__separator"></div>
+          <div class="application-steps__item">
+            <div class="application-steps__num">
+              2
+            </div>
+            <div class="application-steps__text">
+              Мы сразу покажем предложения банков, которые подойдут именно вам
+            </div>
+          </div>
+          <div class="application-steps__separator"></div>
+          <div class="application-steps__item">
+            <div class="application-steps__num">
+              3
+            </div>
+            <div class="application-steps__text">
+              Вы отправляете заявку в один
+              или&nbsp;несколько банков
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="application-form">
+        <div class="application-form-progress">
+          <div class="application-form-progress__value" style="width: 25%;"></div>
+          <div class="application-form-progress__text">25% полей заполнено</div>
+        </div>
+        <div class="application-form__content">
+          <div class="application-form__head">
+            <div class="application-form__title">
+              Укажите информацию об ипотеке
+            </div>
+            <div class="application-form__note">
+              <span class="btn-note">i</span>
+              Все поля — обязательны
+            </div>
+          </div>
+          <div class="application-form__row">
+            <div class="application-form__cell">
+              <div class="input-label ">
+                Тип ипотеки
+              </div>
+              <select class="custom-select">
+                <option value="0" selected>Новостройка</option>
+                <option value="1">Новостройка1</option>
+                <option value="2">Новостройка2</option>
+                <option value="3">Новостройка3</option>
+              </select>
+            </div>
+            <div class="application-form__cell">
+              <div class="input-label ">
+                Тип недвижимости
+              </div>
+              <select class="custom-select">
+                <option value="0" selected>Квартира</option>
+                <option value="1">Квартира1</option>
+                <option value="2">Квартира2</option>
+                <option value="3">Квартира3</option>
+              </select>
+            </div>
+          </div>
+          <div class="application-form__row">
+            <div class="application-form__cell">
+              <div class="input-label calculator__label">
+                Стоимость жилья
+              </div>
+              <div class="application-form__inputs inputs-box">
+                <div class="input-wrapper">
+                  <input class="custom-input custom-input_white input-money" type="text" value="10000000">
+                  <div class="input-wrapper__label">₽</div>
+                </div>
+                <input type="range" class="custom-range init-range-slider" min="5000000" max="30000000" value="10000000"
+                  step="10000">
+              </div>
+            </div>
+            <div class="application-form__cell">
+              <div class="input-label calculator__label">
+                Стоимость жилья
+              </div>
+              <div class="application-form__inputs inputs-box">
+                <div class="input-wrapper">
+                  <input class="custom-input custom-input_white input-money" type="text" value="10000000">
+                  <div class="input-wrapper__label">₽</div>
+                </div>
+                <input type="range" class="custom-range init-range-slider" min="5000000" max="30000000" value="10000000"
+                  step="10000">
+              </div>
+            </div>
+          </div>
+          <div class="application-form__row">
+            <div class="application-form__cell">
+              <div class="input-label ">
+                Срок ипотеки
+              </div>
+              <select class="custom-select">
+                <option value="0" selected>10 лет</option>
+                <option value="1">15 лет</option>
+                <option value="2">20 лет</option>
+              </select>
+            </div>
+            <div class="application-form__cell">
+              <div class="input-label ">
+                Обеспечение ипотеки
+              </div>
+              <select class="custom-select">
+                <option value="0" selected>Квартира</option>
+                <option value="1">Квартира1</option>
+                <option value="2">Квартира2</option>
+                <option value="3">Квартира3</option>
+              </select>
+            </div>
+          </div>
+          <div class="application-form__row">
+            <div class="application-form__cell">
+              <div class="input-label calculator__label">
+                Город получения ипотеки
+              </div>
+              <div class="application-form__inputs">
+                <input class="custom-input custom-input_white" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="application-form__btns">
+            <button class="btn btn-custom application-form__btn application-form__btn_next">
+              Далее
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mortgage-features">
+      <div class="mortgage-features__item">
+        Низкие ставки <br>
+        от <span>6%</span>
+      </div>
+      <div class="mortgage-features__item">
+        Большие суммы <br>
+        до <span>30 млн. руб.</span>
+      </div>
+      <div class="mortgage-features__item">
+        Подача заявки <br>
+        <span>Онлайн</span>
+      </div>
+      <div class="mortgage-features__item">
+        Решение от банка <br>
+        от <span>10 минут</span>
+      </div>
+    </div>
+
+    <div class="article">
+      <div class="title-h2 article__title-h2">
+        Как оформить ипотеку онлайн
+      </div>
+      <div class="article-user article__user">
+        <div class="article-user__avatar">
+          <img src="img/avatar.png" class="article-user__img">
+        </div>
+        <div class="article-user__content">
+          <div class="article-user__name">
+            Иван Блинов
+          </div>
+          <div class="article-user__info">
+            Автор vsn.ru, <a href="mailto:ivanblinov@vsn.ru">ivanblinov@vsn.ru</a>
+          </div>
+          <div class="article-user__specialization">
+            Специализация: кредиты, микрозаймы, вклады, ипотека, автострахование, дебетовые и кредитные пластиковые
+            карты
+          </div>
+        </div>
+      </div>
+      <div class="article__content">
+        <p>
+          На vsn.ru вы можете оформить онлайн-заявку на ипотеку, выбрав подходящее предложение. Возможно подать заявку
+          на ипотеку во все банки онлайн. Для вашего удобства на одной странице собраны все актуальные предложения от
+          банков.
+        </p>
+        <p>
+          Оформление ипотечного кредита – ответственный шаг на пути к приобретению собственного жилья. Онлайн-заявка на
+          ипотеку позволит вам выбрать наиболее подходящие условия, сэкономив время и силы.
+        </p>
+        <p>
+          Для максимальной выгоды по ипотеке в 2021 году воспользуйтесь льготными предложениями. Обратиться онлайн во
+          все банки можно не выходя из дома. Каждый банковский продукт имеет встроенный калькулятор, благодаря которому
+          вы сможете предварительно рассчитать сумму ежемесячного платежа. Если расчет вас полностью устраивает, вы
+          соответствуете требованиям, выдвигаемых к заемщику, можно будет подать заявку на ипотеку.
+        </p>
+        <p>
+          На нашем сайте можно сделать это быстро и просто:
+        </p>
+        <ol>
+          <li>
+            Выбрать тип недвижимости из выпадающего списка в специальном поле:
+            <ul>
+              <li>
+                квартира;
+              </li>
+              <li>
+                апартаменты;
+              </li>
+              <li>
+                загородная недвижимость;
+              </li>
+              <li>
+                приобретение доли в квартире;
+              </li>
+              <li>
+                коммерческая недвижимость.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Передвигая бегунок, определиться со стоимостью жилья, сроком кредитования и величиной первоначального
+            взноса.
+          </li>
+          <li>
+            Указать контактную информацию и личные данные, чтобы с вами могли связаться. Если вам требуется выгодная
+            ипотека, онлайн-заявка во все банки поможет получить подходящий вариант. Для этого нужно внести свои данные
+            в форму каждой организации.
+          </li>
+          <li>
+            Заявка на ипотеку онлайн дает возможность заранее узнать, получите ли вы одобрение банка, что избавит вас от
+            ожидания в очередях в офисе финансовой организации. Если вы хотите повысить свои шансы на получение
+            ипотечного кредита, заявка на ипотеку во все банки поможет вам достичь цели.
+          </li>
+        </ol>
+        <p>
+          В случае положительного решения по вашему обращению, сотрудник банка свяжется с вами по указанному в заявке
+          номеру телефона. Если до вас не смогут дозвониться, сообщение об одобрении ипотеки будет продублировано в смс
+          и письме, которое придет на указанную вами электронную почту.
+        </p>
+        <p>
+          Заполните единую онлайн-заявку, и мы покажем банки, в которых у вас высокая вероятность получить ипотечный
+          кредит. У нас 92% отправленых заявок получают одобрение.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <div class="footer__copy">
+              © 2007–2021
+            </div>
+            <div class="footer__left-text">
+              Электронная база недвижимости
+            </div>
+            <div class="footer__metrika">
+              <div class="footer__metrika-inner">
+                Metrika
+              </div>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Правила и условия
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Условия предоставления услуг
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-file-signature"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Оферта
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Политика конфиденциальности
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-book-reader"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Правила
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-trash-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Удаление объявлений
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Пользователям
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-file-code"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Пакетная загрузка
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Тарифы и цены
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-cash-register"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Способы оплаты
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-edit"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Выписки
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-sign-in-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Войти
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-user-plus"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Зарегистрироваться
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-hammer"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Для застройщика
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Общая информация
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-building"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    О проекте
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-life-ring"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Техподдержка сайта
+                  </a>
+                </li>
+              </ul>
+              <div class="footer__social">
+                <div class="footer__social-text">
+                  В соцсетях:
+                </div>
+                <ul class="footer__social-list">
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <i class="fab fa-twitter footer__social-icon"></i>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <i class="fab fa-vk footer__social-icon"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

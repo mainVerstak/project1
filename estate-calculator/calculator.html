@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/application.css">
+  <link rel="stylesheet" href="css/rangeslider.css">
+  <link rel="stylesheet" href="css/datepicker.min.css">
+  <link rel="stylesheet" href="css/article.css">
+  <link rel="stylesheet" href="css/inputs.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/rangeslider.js"></script>
+  <script src="js/datepicker.min.js"></script>
+  <script src="js/chart.min.js"></script>
+  <script src="js/chartjs-plugin-labels.min.js"></script>
+  <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="header-top-nav">
+      <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <div class="dropdown header-city">
+              <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fas fa-map-marker-alt"></i>
+                Москва
+                <span class="caret"></span>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва2</a></li>
+                <li><a href="#">Москва3</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+              <i class="fa fa-edit fa-lg"></i>
+              Выписки
+            </a>
+          </li>
+          <li class="navbar-nav__hide-mobile">
+            <a href="#">
+              <i class="fas fa-money-bill-wave"></i>
+              Тарифы и цены
+            </a>
+          </li>
+          <li class="navbar-nav__hide-mobile" i="">
+            <a href="#">
+              <i class="fas fa-file-code"></i>
+              Пакетная загрузка
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button class="navbar-toggle sidenav-button" type="button">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <span class="pull-left">
+              <a class="navbar-brand" href="/">
+                <img src="img/logo.svg" class="navbar-brand__logo">
+              </a>
+            </span>
+          </div>
+          <nav class="sidenav loaded">
+            <div class="sidenav__inner">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="sidenav__hide-desktop">
+                  <div class="dropdown header-city">
+                    <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-map-marker-alt"></i>
+                      Москва
+                      <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Москва</a></li>
+                      <li><a href="#">Москва2</a></li>
+                      <li><a href="#">Москва3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav navbar-nav">
+                  <a href="/sign-in">
+                    <div class="navbar-link">
+                      <i class="fas fa-sign-in-alt"></i>
+                      Войти
+                    </div>
+                  </a>
+                </li>
+                <li class="nav navbar-nav">
+                  <a href="/sign-up">
+                    <div class="navbar-link">
+                      <i class="fa fa-user-plus"></i>
+                      Зарегистрироваться
+                    </div>
+                  </a>
+                </li>
+                <li class="nav navbar-nav">
+                  <div class="navbar-btn nav-font-color">
+                    <a data-no-turbolink="true" href="/estate-new">
+                      <div class="btn btn-warning">
+                        <i class="fa fa-plus fa-lg"></i>
+                        Подать объявление
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a href="#">
+                    <i class="fas fa-money-bill-wave"></i>
+                    Тарифы и цены
+                  </a>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                    <i class="fa fa-edit fa-lg"></i>
+                    Выписки
+                  </a>
+                </li>
+                <li class="sidenav__hide-desktop">
+                  <a href="#">
+                    <i class="fas fa-file-code"></i>
+                    Пакетная загрузка
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+          <div class="sidenav-overlay"></div>
+        </div>
+      </div>
+      <div class="notifications top-right"></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="title-h1">
+      Калькулятор ипотеки онлайн 2021
+    </div>
+    <div class="calculators">
+      <div class="calculator-tabs tabs">
+        <div class="calculator-tabs__inner">
+          <div class="calculator-tabs__tab js-tab" data-text="Кредиты на жилье">
+            Кредиты на жилье
+          </div>
+          <div class="calculator-tabs__tab js-tab" data-text="Новостройки в ипотеку">
+            Новостройки в ипотеку
+          </div>
+          <div class="calculator-tabs__tab js-tab" data-text="Онлайн-заявка">
+            Онлайн-заявка
+          </div>
+          <div class="calculator-tabs__tab js-tab _active" data-text="Калькулятор">
+            Калькулятор
+          </div>
+          <div class="calculator-tabs__tab js-tab" data-text="Рейтинги">
+            Рейтинги
+          </div>
+        </div>
+      </div>
+      <div class="tabs-content">
+        <div class="tab-content calculators__tab-content">
+          <div class="calculators__select">
+            <div class="calculators__select-mobile">
+              Выберите калькулятор
+            </div>
+            <div class="calculators__list">
+              <div class="calculators__item">
+                Калькулятор ипотеки онлайн1
+              </div>
+              <div class="calculators__item">
+                Калькулятор долгосрочного погашения1
+              </div>
+              <div class="calculators__item">
+                Калькулятор рефенансирования1
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content calculators__tab-content">
+          <div class="calculators__select">
+            <div class="calculators__select-mobile">
+              Выберите калькулятор
+            </div>
+            <div class="calculators__list">
+              <div class="calculators__item">
+                Калькулятор ипотеки онлайн2
+              </div>
+              <div class="calculators__item">
+                Калькулятор долгосрочного погашения2
+              </div>
+              <div class="calculators__item">
+                Калькулятор рефенансирования2
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content calculators__tab-content">
+          <div class="calculators__select">
+            <div class="calculators__select-mobile">
+              Выберите калькулятор
+            </div>
+            <div class="calculators__list">
+              <div class="calculators__item">
+                Калькулятор ипотеки онлайн3
+              </div>
+              <div class="calculators__item">
+                Калькулятор долгосрочного погашения3
+              </div>
+              <div class="calculators__item">
+                Калькулятор рефенансирования3
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content calculators__tab-content _active">
+          <div class="calculators__select">
+            <div class="calculators__select-mobile">
+              Выберите калькулятор
+            </div>
+            <div class="calculators__list">
+              <div class="calculators__item _active">
+                Калькулятор ипотеки онлайн
+              </div>
+              <div class="calculators__item">
+                Калькулятор долгосрочного погашения
+              </div>
+              <div class="calculators__item">
+                Калькулятор рефенансирования
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content calculators__tab-content">
+          <div class="calculators__select">
+            <div class="calculators__select-mobile">
+              Выберите калькулятор
+            </div>
+            <div class="calculators__list">
+              <div class="calculators__item">
+                Калькулятор ипотеки онлайн5
+              </div>
+              <div class="calculators__item">
+                Калькулятор долгосрочного погашения5
+              </div>
+              <div class="calculators__item">
+                Калькулятор рефенансирования5
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calculator">
+      <div class="title-h2 calculator__title-h2">
+        Сводка по ипотеке
+      </div>
+      <div class="calculator__inner">
+        <div class="calculator__top">
+          <div class="calculator__row">
+            <div class="calculator__cell">
+              <div class="input-label calculator__label">
+                Стоимость жилья
+              </div>
+              <div class="calculator__inputs inputs-box">
+                <div class="input-wrapper input-wrapper-select">
+                  <input class="custom-input input-money" id="input-price" type="text" value="10000000">
+                  <div class="input-wrapper__label">₽</div>
+                  <div class="input-wrapper-select__btn"></div>
+                  <div class="input-wrapper-select__drop">
+                    <div class="input-wrapper-select__drop-item" data-value="5 000 000">5 000 000</div>
+                    <div class="input-wrapper-select__drop-item">10 000 000</div>
+                    <div class="input-wrapper-select__drop-item">15 000 000</div>
+                    <div class="input-wrapper-select__drop-item">20 000 000</div>
+                    <div class="input-wrapper-select__drop-item">25 000 000</div>
+                    <div class="input-wrapper-select__drop-item">30 000 000</div>
+                  </div>
+                </div>
+                <input type="range" class="custom-range init-range-slider" id="range-price" min="5000000" max="30000000"
+                  value="10000000" step="10000">
+              </div>
+            </div>
+            <div class="calculator__cell">
+              <div class="input-label calculator__label">
+                Сумма первого взноса
+              </div>
+              <div class="calculator__inputs inputs-box">
+                <div class="input-wrapper input-wrapper-select">
+                  <input class="custom-input input-money" id="input-first-installment" type="text" value="1500000">
+                  <div class="input-wrapper__label">₽</div>
+                  <div class="input-wrapper-select__btn"></div>
+                  <div class="input-wrapper-select__drop">
+                    <div class="input-wrapper-select__drop-item">500 000</div>
+                    <div class="input-wrapper-select__drop-item">1 000 000</div>
+                    <div class="input-wrapper-select__drop-item">2 000 000</div>
+                    <div class="input-wrapper-select__drop-item">3 000 000</div>
+                  </div>
+                </div>
+                <input type="range" class="custom-range init-range-slider" id="range-first-installment" min="500000"
+                  max="3000000" value="1500000" step="10000">
+              </div>
+            </div>
+            <div class="calculator__cell">
+              <div class="input-label calculator__label">
+                Срок ипотеки (лет)
+              </div>
+              <div class="calculator__inputs inputs-box">
+                <div class="input-wrapper">
+                  <input class="custom-input input-money" id="input-term" type="text" value="10">
+                </div>
+                <input type="range" class="custom-range init-range-slider" id="range-term" min="3" max="30" value="10"
+                  step="1">
+              </div>
+            </div>
+            <div class="calculator__cell">
+              <div class="input-label calculator__label">
+                % ставка
+              </div>
+              <div class="calculator__inputs">
+                <input class="custom-input interest-rate" type="text" value="8,5" min="1" max="30">
+              </div>
+            </div>
+            <div class="calculator__cell">
+              <div class="input-label calculator__label">
+                Дата выдачи
+              </div>
+              <div class="calculator__inputs">
+                <div class="input-wrapper">
+                  <input class="custom-input set-datepicker" type="text">
+                  <div class="input-wrapper__label input-wrapper__label_datepicker">
+                    <i class="far fa-calendar input-wrapper__icon"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-scheme">
+            <div class="payment-scheme__title">
+              Схема оплаты
+              <button class="btn-help btn-help_tooltip320 btn-help_tooltip-left payment-scheme__title-help init-tooltip" data-toggle="tooltip"
+                data-placement="bottom"
+                title="Возможны два типа платежей по кредиту – равными долями (аннуитентные) и дифференцированные (выплаты уменьшаются к концу срока кредита).">
+                ?
+              </button>
+            </div>
+            <div class="payment-scheme__control">
+              <label class="custom-radio payment-scheme__radio">
+                <input type="radio" name="payment-scheme" class="custom-radio__input" checked>
+                <span class="custom-radio__checkmark"></span>
+                Равными долями
+              </label>
+              <label class="custom-radio payment-scheme__radio">
+                <input type="radio" name="payment-scheme" class="custom-radio__input">
+                <span class="custom-radio__checkmark"></span>
+                Дифференцированные платежи
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="early-repayment">
+          <button class="btn-close early-repayment__close js-early-repayment"></button>
+          <div class="early-repayment__title">
+            Досрочное погашение
+          </div>
+          <div class="early-repayment__control">
+            <div class="early-repayment__control-title">
+              Выберите тип погашения
+            </div>
+            <label class="custom-radio early-repayment__radio">
+              <input type="radio" name="early-repayment" class="custom-radio__input" checked>
+              <span class="custom-radio__checkmark"></span>
+              Уменьшение суммы платежа
+            </label>
+            <label class="custom-radio early-repayment__radio">
+              <input type="radio" name="early-repayment" class="custom-radio__input">
+              <span class="custom-radio__checkmark"></span>
+              Уменьшение срока платежа
+            </label>
+          </div>
+          <div class="early-repayment__row">
+            <div class="early-repayment__cell">
+              <div class="input-label">
+                Сумма
+              </div>
+              <div class="early-repayment__inputs inputs-box">
+                <div class="input-wrapper input-wrapper-select">
+                  <input class="custom-input custom-input_white input-money" id="input-sum" type="text" value="500000">
+                  <div class="input-wrapper__label">₽</div>
+                  <div class="input-wrapper-select__btn"></div>
+                  <div class="input-wrapper-select__drop">
+                    <div class="input-wrapper-select__drop-item">500 000</div>
+                    <div class="input-wrapper-select__drop-item">1 000 000</div>
+                    <div class="input-wrapper-select__drop-item">2 000 000</div>
+                    <div class="input-wrapper-select__drop-item">5 000 000</div>
+                  </div>
+                </div>
+                <input type="range" class="custom-range init-range-slider" id="range-sum" min="500000" max="3000000"
+                  value="500000" step="10000">
+              </div>
+            </div>
+            <div class="early-repayment__cell">
+              <div class="input-label calculator__label">
+                Срок погашения
+              </div>
+              <div class="calculator__inputs">
+                <div class="input-wrapper">
+                  <input class="custom-input custom-input_white set-datepicker" type="text">
+                  <div class="input-wrapper__label input-wrapper__label_datepicker">
+                    <i class="far fa-calendar input-wrapper__icon"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="early-repayment__checkbox">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="early-repayment" class="custom-checkbox__input">
+                <span class="custom-checkbox__checkmark"></span>
+                Материнский капитал
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="calculator__bottom">
+          <div class="add-redemption calculator__add-redemption js-early-repayment">
+            Добавить погашение
+            <i class="fas fa-plus add-redemption__icon"></i>
+          </div>
+          <button class="btn btn-custom calculator__btn">Рассчитать расходы</button>
+        </div>
+      </div>
+    </div>
+    <div class="calculator-summary">
+      <div class="calculator-summary__head">
+        <div class="title-h2">
+          Сводка по ипотеке
+        </div>
+        <a href="#" class="calculator-summary__link">
+          График выплат
+        </a>
+      </div>
+      <div class="calculator-summary__content">
+        <div class="calculator-summary__chart">
+          <div class="calculator-summary__chart-inner">
+            <canvas id="chart-summary" width="200" height="200"></canvas>
+          </div>
+        </div>
+        <div class="calculator-summary__list">
+          <div class="calculator-summary__item">
+            <div class="calculator-summary__label">
+              Ежемесячный платеж
+            </div>
+            <div class="calculator-summary__value">
+              <span>26 037</span> руб.
+            </div>
+          </div>
+          <div class="calculator-summary__item">
+            <div class="calculator-summary__label">
+              К возврату
+            </div>
+            <div class="calculator-summary__value">
+              <span>3 125 635</span> руб.
+            </div>
+          </div>
+          <div class="calculator-summary__item">
+            <div class="calculator-summary__label">
+              Сумма ипотечного кредита
+            </div>
+            <div class="calculator-summary__value">
+              <span>2 100 000</span> руб.
+            </div>
+          </div>
+          <div class="calculator-summary__item">
+            <div class="calculator-summary__label">
+              Сумма процентов
+            </div>
+            <div class="calculator-summary__value">
+              <span>1 025 635</span> руб.
+            </div>
+          </div>
+          <div class="calculator-summary__item">
+            <div class="calculator-summary__label">
+              Процентная ставка
+            </div>
+            <div class="calculator-summary__value">
+              <span>8,5%</span>
+            </div>
+          </div>
+          <div class="calculator-summary__item">
+            <div class="calculator-summary__label">
+              Дата последнего платежа
+            </div>
+            <div class="calculator-summary__value">
+              <span>5 августа 2031 г.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="bank-offer">
+      <div class="title-h2 bank-offer__title-h2">
+        Лучшие предложения банков
+      </div>
+      <div class="bank-offer__item">
+        <div class="bank-offer__bank">
+          <img src="img/bank/raiffeisen.svg" class="bank-offer__logo">
+        </div>
+        <div class="bank-offer__content">
+          <div class="bank-offer__title">
+            Ипотека с господдержкой от Райффайзенбанк
+          </div>
+          <div class="bank-offer__desc">
+            Первоначальный взнос от 15%. Сумма кредита до 12 млн рублей!
+          </div>
+        </div>
+        <div class="bank-offer__info">
+          <div class="bank-offer__label">
+            Процентная ставка
+          </div>
+          <div class="bank-offer__rate">
+            от
+            <span class="bank-offer__value">5,69</span>
+            <span class="bank-offer__percent">%</span>
+          </div>
+        </div>
+        <div class="bank-offer__btns">
+          <button class="btn btn-custom bank-offer__btn">Оформить</button>
+        </div>
+      </div>
+      <div class="bank-offer__item">
+        <div class="bank-offer__bank">
+          <img src="img/bank/vtb.svg" class="bank-offer__logo">
+        </div>
+        <div class="bank-offer__content">
+          <div class="bank-offer__title">
+            Льготная ипотека с господдержкой
+          </div>
+          <div class="bank-offer__desc">
+            Ставка по кредиту от 5,9%. Первоначальный взнос от 15% и срок кредитования до 30 лет.
+          </div>
+        </div>
+        <div class="bank-offer__info">
+          <div class="bank-offer__label">
+            Процентная ставка
+          </div>
+          <div class="bank-offer__rate">
+            от
+            <span class="bank-offer__value">5,9</span>
+            <span class="bank-offer__percent">%</span>
+          </div>
+        </div>
+        <div class="bank-offer__btns">
+          <button class="btn btn-custom bank-offer__btn">Оформить</button>
+        </div>
+      </div>
+      <div class="bank-offer__item">
+        <div class="bank-offer__bank">
+          <img src="img/bank/domclick.svg" class="bank-offer__logo">
+        </div>
+        <div class="bank-offer__content">
+          <div class="bank-offer__title">
+            ДомКлик от Сбера — Выгодная покупка жилья!
+          </div>
+          <div class="bank-offer__desc">
+            Выберите проверенное жилье и проведите безопасную сделку на domclick.ru. Ипотека от 6,05%
+          </div>
+        </div>
+        <div class="bank-offer__info">
+          <div class="bank-offer__label">
+            Процентная ставка
+          </div>
+          <div class="bank-offer__rate">
+            от
+            <span class="bank-offer__value">5,05</span>
+            <span class="bank-offer__percent">%</span>
+          </div>
+        </div>
+        <div class="bank-offer__btns">
+          <button class="btn btn-custom bank-offer__btn">Оформить</button>
+        </div>
+      </div>
+    </div>
+    <div class="meida-box meida-box_hide-mobile">
+      <img src="img/alfa.png">
+    </div>
+    <div class="interest-payments">
+      <div class="title-h2 interest-payments__title-h2">
+        График выплаты процентов
+      </div>
+      <div class="interest-payments__tabs">
+        <div class="interest-payments__tab _active">
+          2021 - 2023
+        </div>
+        <div class="interest-payments__tab">
+          2023 - 2025
+        </div>
+        <div class="interest-payments__tab">
+          2025 - 2027
+        </div>
+        <div class="interest-payments__tab">
+          2027 - 2029
+        </div>
+        <div class="interest-payments__tab">
+          2029 - 2031
+        </div>
+      </div>
+      <div class="interest-payments__chart">
+        <canvas id="interest-payments" width="100%" height="335px"></canvas>
+      </div>
+    </div>
+    <div class="payment-schedule-mobile">
+      <a href="#" class="btn btn-custom btn-custom_grey payment-schedule-mobile__btn" download>
+        Скачать график выплат
+      </a>
+    </div>
+    <div class="payment-schedule">
+      <div class="title-h2 payment-schedule__title-h2">
+        График выплат
+      </div>
+      <div class="payment-schedule__links">
+        <a href="#" class="payment-schedule__link" download>
+          <i class="fas fa-file-pdf payment-schedule__link-icon"></i>
+          Сохранить в pdf
+        </a>
+        <a href="#" class="payment-schedule__link" download>
+          <i class="fas fa-file-excel payment-schedule__link-icon"></i>
+          Сохранить в Excel
+        </a>
+        <a href="#" class="payment-schedule__link" download>
+          <i class="fas fa-print payment-schedule__link-icon"></i>
+          Распечатать
+        </a>
+        <a href="#" class="payment-schedule__link">
+          <i class="fas fa-link payment-schedule__link-icon"></i>
+          Ссылка на расчет
+        </a>
+      </div>
+      <table class="payment-schedule-table _cut">
+        <thead>
+          <tr>
+            <th>
+              Дата <br>
+              платежа
+            </th>
+            <th>
+              Остаток <br>
+              задолженности, руб.
+            </th>
+            <th>
+              Начисленные %, <br>
+              руб.
+            </th>
+            <th>
+              Платеж в <br>
+              основной долг, руб.
+            </th>
+            <th>
+              Сумма <br>
+              платежа, руб.
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+          <tr>
+            <td>
+              07.09.2021
+            </td>
+            <td>
+              2 100 000,00
+            </td>
+            <td>
+              15 160,27
+            </td>
+            <td>
+              10 876,72
+            </td>
+            <td>
+              26 036,99
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-show-more btn-show-more_w_160 btn-show-more_center payment-schedule__more">
+        Показать все
+      </button>
+    </div>
+    <div class="calculation-assistance">
+      <div class="title-h2 calculation-assistance__title-h2">
+        Помощь в расчете ипотеки
+      </div>
+      <div class="calculator-tabs calculator-tabs_default calculation-assistance__tabs tabs">
+        <div class="calculator-tabs__inner">
+          <div class="calculator-tabs__tab js-tab _active" data-text="Подробнее о калькуляторе">
+            Подробнее о калькуляторе
+          </div>
+          <div class="calculator-tabs__tab js-tab" data-text="Интересное о расчете ипотеки">
+            Интересное о расчете ипотеки
+          </div>
+        </div>
+      </div>
+      <div class="tabs-content">
+        <div class="tab-content calculation-assistance__tab-content _active">
+          <div class="article">
+            <div class="article-user article__user">
+              <div class="article-user__avatar">
+                <img src="img/avatar.png" class="article-user__img">
+              </div>
+              <div class="article-user__content">
+                <div class="article-user__name">
+                  Ирина Волкова
+                </div>
+                <div class="article-user__info">
+                  Автор vsn.ru, <a href="mailto:irinavolkova@vsn.ru">irinavolkova@vsn.ru</a>
+                </div>
+                <div class="article-user__specialization">
+                  Специализация: микрозаймы, кредиты, ипотека, страхование
+                </div>
+              </div>
+            </div>
+            <div class="article__content">
+              <p>
+                Выгодно и удобно взять ипотеку в банке можно, примерно рассчитав суммы ежемесячных платежей и оценив
+                свои финансовые возможности. Представленный на этой странице онлайн ипотечный калькулятор с досрочным
+                погашением позволит предварительно оценить условия кредита на квартиру. Вы сможете рассчитать ипотеку,
+                указав стоимость жилья, первоначальный взнос, срок погашения, процентную ставку и схему платежей и
+                другие параметры кредита.
+              </p>
+              <p>
+                Ипотечный калькулятор используют, чтобы получить точный график выплат аннуитетных платежей на полный
+                срок кредитования. Если кредитный договор предусматривает схему погашения дифференцированными платежами,
+                то вы можете выбрать и эту настройку. Вы можете узнать процентные ставки по ипотеке, воспользовавшись
+                нашим сервисом и подобрав подходящие вам программы кредитования, предложения банков.
+              </p>
+              <p>
+                Полученные данные о ежемесячных выплатах и сроке кредитования предварительны. Узнать точную информацию
+                вы можете при оформлении в банке, где специалист проведет предварительный расчет ипотеки.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content calculation-assistance__tab-content">
+          <div class="article">
+            <div class="article-user article__user">
+              <div class="article-user__avatar">
+                <img src="img/avatar.png" class="article-user__img">
+              </div>
+              <div class="article-user__content">
+                <div class="article-user__name">
+                  Ирина Волкова 2
+                </div>
+                <div class="article-user__info">
+                  Автор vsn.ru, <a href="mailto:irinavolkova@vsn.ru">irinavolkova@vsn.ru</a>
+                </div>
+                <div class="article-user__specialization">
+                  Специализация: микрозаймы, кредиты, ипотека, страхование
+                </div>
+              </div>
+            </div>
+            <div class="article__content">
+              <p>
+                Выгодно и удобно взять ипотеку в банке можно, примерно рассчитав суммы ежемесячных платежей и оценив
+                свои финансовые возможности. Представленный на этой странице онлайн ипотечный калькулятор с досрочным
+                погашением позволит предварительно оценить условия кредита на квартиру. Вы сможете рассчитать ипотеку,
+                указав стоимость жилья, первоначальный взнос, срок погашения, процентную ставку и схему платежей и
+                другие параметры кредита.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calculators-link">
+        <div class="title-h2 calculators-link__title-h2">
+          Ипотечные калькуляторы банков
+        </div>
+        <ul class="calculators-list">
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Сбербанк России
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Банк «ВТБ»
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Альфа-Банк
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Газпромбанк
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Россельхозбанк
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Росбанк
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              ПАО Банк «ФК Открытие»
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Почта Банк
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Совкомбанк
+            </a>
+          </li>
+          <li class="calculators-list__item">
+            <a href="#" class="calculators-list__link">
+              Райффайзенбанк
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <div class="footer__copy">
+              © 2007–2021
+            </div>
+            <div class="footer__left-text">
+              Электронная база недвижимости
+            </div>
+            <div class="footer__metrika">
+              <div class="footer__metrika-inner">
+                Metrika
+              </div>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Правила и условия
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Условия предоставления услуг
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-file-signature"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Оферта
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Политика конфиденциальности
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-book-reader"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Правила
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-trash-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Удаление объявлений
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Пользователям
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-file-code"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Пакетная загрузка
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Тарифы и цены
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-cash-register"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Способы оплаты
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-edit"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Выписки
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-sign-in-alt"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Войти
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-user-plus"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Зарегистрироваться
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-hammer"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Для застройщика
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-column">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item footer__nav-item-title">
+                  Общая информация
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-building"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    О проекте
+                  </a>
+                </li>
+                <li class="footer__nav-item">
+                  <span class="footer__nav-icon">
+                    <i class="fas fa-life-ring"></i>
+                  </span>
+                  <a href="#" class="footer__nav-link">
+                    Техподдержка сайта
+                  </a>
+                </li>
+              </ul>
+              <div class="footer__social">
+                <div class="footer__social-text">
+                  В соцсетях:
+                </div>
+                <ul class="footer__social-list">
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <i class="fab fa-twitter footer__social-icon"></i>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                      <i class="fab fa-vk footer__social-icon"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

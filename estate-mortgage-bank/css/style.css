@@ -1,0 +1,1348 @@
+.calculator-summary {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  margin-bottom: 36px;
+}
+
+.calculator-summary__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+  padding-right: 20px;
+}
+
+.calculator-summary__link {
+  color: #337AB7;
+  text-decoration: underline;
+}
+
+.calculator-summary__link:focus, .calculator-summary__link:visited {
+  color: #337AB7;
+  text-decoration: underline;
+}
+
+.calculator-summary__link:hover {
+  color: #333C67;
+}
+
+.calculator-summary__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculator-summary__chart {
+  width: 270px;
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 26px;
+}
+
+.calculator-summary__list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.calculator-summary__item {
+  min-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #CACEDB;
+}
+
+.calculator-summary__item:last-child {
+  border-bottom: none;
+}
+
+.calculator-summary__label {
+  margin-right: 15px;
+}
+
+.calculator-summary__value span {
+  font-weight: bold;
+}
+
+.calculator-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+
+.calculator-tabs__inner {
+  border: 1px solid #CACEDB;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculator-tabs__tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right: 1px solid #CACEDB;
+  background: #F0F2F6;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333C67;
+  white-space: nowrap;
+  padding: 0 16px;
+  height: 41px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.calculator-tabs__tab::after {
+  content: attr(data-text);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.calculator-tabs__tab:last-child {
+  border: none;
+}
+
+.calculator-tabs__tab:hover {
+  background: rgba(240, 242, 246, 0);
+}
+
+.calculator-tabs__tab._active {
+  font-weight: bold;
+  background: rgba(240, 242, 246, 0);
+}
+
+.calculator-tabs_default .calculator-tabs__inner {
+  min-width: auto;
+}
+
+.calculator-tabs_default .calculator-tabs__tab {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.calculator-tabs_default .calculator-tabs__tab._active {
+  font-weight: 500;
+}
+
+.calculator-tabs_default .calculator-tabs__tab::after {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 991px) {
+  .calculator-summary__head {
+    padding-right: 0;
+  }
+  .calculator-summary__chart {
+    width: 204px;
+    margin-right: 20px;
+  }
+  .calculator-summary__item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .calculator-summary__link {
+    display: none;
+  }
+  .calculator-summary__chart {
+    display: none;
+  }
+}
+
+.table-mortgage2 {
+  width: 100%;
+  font-size: 14px;
+  color: #323b6a;
+  margin: 10px 0 30px;
+  display: block;
+}
+
+.table-mortgage2 a {
+  color: #2f8dd3;
+}
+
+.table-mortgage2 thead {
+  display: block;
+  border-bottom: solid 1px #323b6a;
+}
+
+.table-mortgage2 th {
+  height: 45px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 0 0 20px;
+  border-radius: 6px 6px 0 0;
+  -webkit-transition: .15s;
+  transition: .15s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.table-mortgage2 th:hover {
+  color: #2F8DD3;
+}
+
+.table-mortgage2 th:hover .table-mortgage2__head::before, .table-mortgage2 th:hover .table-mortgage2__head::after {
+  border-color: #2F8DD3;
+}
+
+.table-mortgage2 th[role="columnheader"] {
+  cursor: pointer;
+}
+
+.table-mortgage2 th[data-sort-method="none"] {
+  cursor: auto;
+  color: #323b6a;
+}
+
+.table-mortgage2 th[data-sort-method="none"] .table-mortgage2__head::after, .table-mortgage2 th[data-sort-method="none"] .table-mortgage2__head::before {
+  display: none;
+}
+
+.table-mortgage2 th[aria-sort="ascending"] .table-mortgage2__head::before {
+  border-color: #323B6A;
+}
+
+.table-mortgage2 th[aria-sort="descending"] .table-mortgage2__head::after {
+  border-color: #323B6A;
+}
+
+.table-mortgage2__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table-mortgage2__head::after, .table-mortgage2__head::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #DCE1EA;
+  border-bottom: none;
+  border-left: none;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.table-mortgage2__head::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+
+.table-mortgage2__head::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-bottom: -6px;
+}
+
+.table-mortgage2__title {
+  margin-right: 20px;
+}
+
+.table-mortgage2 td {
+  padding: 20px 20px 12px 20px;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #323b6a;
+  vertical-align: top;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+.table-mortgage2 td:nth-child(1),
+.table-mortgage2 th:nth-child(1) {
+  width: 250px;
+}
+
+.table-mortgage2 td:nth-child(2),
+.table-mortgage2 th:nth-child(2) {
+  width: 220px;
+}
+
+.table-mortgage2 td:nth-child(3),
+.table-mortgage2 th:nth-child(3) {
+  width: 220px;
+}
+
+.table-mortgage2 td:nth-child(4),
+.table-mortgage2 th:nth-child(4) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.table-mortgage2 td:nth-child(5),
+.table-mortgage2 th:nth-child(5) {
+  width: 240px;
+  padding-right: 40px;
+}
+
+.table-mortgage2 td:nth-child(6),
+.table-mortgage2 th:nth-child(6) {
+  width: 100%;
+}
+
+.table-mortgage2 td.hover,
+.table-mortgage2 th.hover {
+  background: #f0f2f7;
+}
+
+.table-mortgage2 tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+.table-mortgage2 tbody {
+  display: block;
+}
+
+.table-mortgage2 tbody tr {
+  border-bottom: 1px solid #dce1ea;
+}
+
+.table-mortgage2 tbody tr:hover {
+  background: #f0f2f7;
+}
+
+.table-mortgage2__bank-img {
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table-mortgage2__bank-img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.table-mortgage2__bold {
+  font-weight: 700;
+}
+
+.table-mortgage2__btn-bottom {
+  text-align: center;
+}
+
+.table-mortgage2__btn-detail {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #337AB7;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.table-mortgage2__btn-detail::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+  border-top: none;
+  border-left: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-left: 8px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform-origin: 66% 66%;
+          transform-origin: 66% 66%;
+}
+
+.table-mortgage2__btn-detail:hover {
+  color: #323B6A;
+}
+
+.table-mortgage2__btn-detail._active::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.table-mortgage2__btn {
+  max-width: 180px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.table-mortgage2__mobile-btns {
+  display: none;
+  padding: 6px 0;
+}
+
+.table-mortgage2__mobile-btns .btn {
+  height: 34px;
+  font-size: 12px;
+  width: 140px;
+  margin-bottom: 0;
+}
+
+.table-mortgage2__mobile-btns .table-mortgage2__btn-detail {
+  margin-right: 30px;
+}
+
+.table-mortgage2 td.table-mortgage2__detail {
+  display: none;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  background: #fff;
+}
+
+.table-mortgage2 td.table-mortgage2__detail._active {
+  display: block;
+}
+
+.table-mortgage2-detail__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.table-mortgage2-detail__tab {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  padding-bottom: 13px;
+  margin-right: 32px;
+  cursor: pointer;
+  position: relative;
+}
+
+.table-mortgage2-detail__tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: currentColor;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.table-mortgage2-detail__tab:last-child {
+  margin-right: 0;
+}
+
+.table-mortgage2-detail__tab:hover::after {
+  height: 1px;
+  width: 100%;
+}
+
+.table-mortgage2-detail__tab._active::after {
+  height: 3px;
+  width: 100%;
+}
+
+.table-mortgage2-detail__content {
+  display: none;
+}
+
+.table-mortgage2-detail__content._active {
+  display: block;
+}
+
+.table-mortgage2-detail__list {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+}
+
+.table-mortgage2-detail__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  min-height: 49;
+  padding: 13px 20px;
+}
+
+.table-mortgage2-detail__item:nth-child(odd) {
+  background: #F0F2F6;
+}
+
+.table-mortgage2-detail__label {
+  width: 42%;
+  padding-right: 10px;
+}
+
+.table-mortgage2-detail__value {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 500;
+}
+
+.table-mortgage2-detail__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 16px 0 0;
+}
+
+.table-mortgage2-detail .table-mortgage2-detail__btn {
+  color: #fff;
+  font-weight: 500;
+  background: #333C67;
+  padding: 6px 20px;
+}
+
+.table-mortgage2-detail .table-mortgage2-detail__btn:hover {
+  background: #434f89;
+}
+
+.table-mortgage2-show-all {
+  display: none;
+  margin: 20px auto 20px;
+  width: 210px;
+}
+
+.table-mortgage2-show-all_hide-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .table-mortgage2 th,
+  .table-mortgage2 td {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .table-mortgage2 td:nth-child(1),
+  .table-mortgage2 th:nth-child(1) {
+    padding-left: 20px;
+    width: 200px;
+  }
+  .table-mortgage2 td:nth-child(2),
+  .table-mortgage2 th:nth-child(2) {
+    width: 200px;
+  }
+  .table-mortgage2 td:nth-child(3),
+  .table-mortgage2 th:nth-child(3) {
+    width: 200px;
+  }
+  .table-mortgage2 td:nth-child(4),
+  .table-mortgage2 th:nth-child(4) {
+    width: auto;
+  }
+  .table-mortgage2 td:nth-child(5),
+  .table-mortgage2 th:nth-child(5) {
+    width: 200px;
+    padding-right: 20px;
+  }
+  .table-mortgage2__bank-img {
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .table-mortgage2 {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .table-mortgage2 thead {
+    display: block;
+  }
+  .table-mortgage2 thead th[data-sort-method="none"] {
+    display: none;
+  }
+  .table-mortgage2 thead tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .table-mortgage2 thead th {
+    height: auto;
+    width: auto !important;
+    padding: 10px 15px 10px 0;
+  }
+  .table-mortgage2 thead th:first-child {
+    padding-left: 10px;
+  }
+  .table-mortgage2 thead th.hover {
+    background: #fff;
+  }
+  .table-mortgage2 tbody {
+    display: block;
+  }
+  .table-mortgage2 tbody tr {
+    display: block;
+    border-bottom-color: #323b6a;
+  }
+  .table-mortgage2 tbody tr:hover {
+    background: #fff;
+  }
+  .table-mortgage2 tbody td {
+    padding: 8px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.12px;
+    position: relative;
+  }
+  .table-mortgage2 tbody td:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    left: 10px;
+    border-top: solid 1px #dce1ea;
+  }
+  .table-mortgage2 tbody td:first-child:after {
+    right: 0;
+    left: 0;
+  }
+  .table-mortgage2 tbody td:nth-last-child(3):after {
+    display: none;
+  }
+  .table-mortgage2 tbody td:nth-last-child(2) {
+    display: none;
+  }
+  .table-mortgage2 td {
+    width: auto !important;
+    padding-left: 10px !important;
+  }
+  .table-mortgage2__mobile-btns {
+    display: block;
+  }
+  .table-mortgage2__item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .table-mortgage2__item_head {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .table-mortgage2__item_label::before {
+    content: attr(data-label);
+    margin-right: 10px;
+    font-weight: 700;
+  }
+  .table-mortgage2__item-inner {
+    text-align: right;
+  }
+  .table-mortgage2__bank-img {
+    height: 40px;
+    width: 160px;
+  }
+  .table-mortgage2 .table-mortgage2__hide-mobile {
+    display: none;
+  }
+  .table-mortgage2_all .table-mortgage2__hide-mobile {
+    display: block;
+  }
+  .table-mortgage2-detail__label {
+    width: 50%;
+  }
+  .table-mortgage2-show-all_hide-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .table-mortgage2__mobile-btns .table-mortgage2__btn-detail {
+    display: none;
+  }
+  .table-mortgage2 tbody td:nth-last-child(2) {
+    display: block;
+    background: none;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .table-mortgage2 tbody td:nth-last-child(2)::after {
+    display: none;
+  }
+  .table-mortgage2 tbody td:nth-last-child(2) .btn {
+    display: none;
+  }
+  .table-mortgage2 td.table-mortgage2__detail {
+    padding-top: 4px;
+    padding-bottom: 20px;
+  }
+  .table-mortgage2-detail__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 12px 20px;
+  }
+  .table-mortgage2-detail__label {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 4px;
+  }
+  .table-mortgage2-detail__value {
+    width: 100%;
+  }
+  .table-mortgage2-detail__btn {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .table-mortgage2__title {
+    margin-right: 10px;
+  }
+  .table-mortgage2__bank-img {
+    width: 140px;
+  }
+}
+
+.mortgage-bank-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  margin-bottom: 16px;
+}
+
+.mortgage-bank-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px 0 26px;
+}
+
+.mortgage-bank-head__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.01em;
+  color: #333C67;
+  margin: 0 15px 0 0;
+}
+
+.mortgage-bank-head__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mortgage-bank-item {
+  margin-bottom: 64px;
+}
+
+.mortgage-bank-info {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 12px rgba(50, 59, 106, 0.15);
+          box-shadow: 0px 0px 12px rgba(50, 59, 106, 0.15);
+  border-radius: 4px;
+  padding: 28px 40px;
+}
+
+.mortgage-bank-info__content {
+  position: relative;
+}
+
+.mortgage-bank-info__grid {
+  max-width: 796px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr auto;
+      grid-template-columns: 1fr 1fr auto;
+  gap: 24px 24px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+}
+
+.mortgage-bank-info__label {
+  font-size: 14px;
+  line-height: 136%;
+  opacity: 0.65;
+  margin-bottom: 4px;
+}
+
+.mortgage-bank-info__icon {
+  color: #CACEDB;
+  margin-right: 8px;
+}
+
+.mortgage-bank-info__value {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.mortgage-bank-info__more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.mortgage-bank-info__more:visited {
+  color: #337AB7;
+}
+
+.mortgage-bank-info__more:hover {
+  text-decoration: none;
+}
+
+.mortgage-bank-info__more span {
+  text-decoration: underline;
+}
+
+.mortgage-bank-info__more-icon {
+  margin-left: 7px;
+}
+
+.calculator-bank__title {
+  margin-bottom: 16px;
+}
+
+.calculator-bank__inner {
+  border: 1px solid #CACEDB;
+  border-radius: 4px;
+  padding: 24px 20px;
+}
+
+.calculator-bank__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 190px;
+      grid-template-columns: 1fr 1fr 1fr 190px;
+  gap: 20px 20px;
+}
+
+.calculator-bank__cell_btn {
+  padding-top: 29px;
+}
+
+.calculator-bank__btn {
+  height: 40px;
+  width: 100%;
+}
+
+.calculator-summary.calculator-summary_bank {
+  letter-spacing: -0.01em;
+}
+
+.calculator-summary.calculator-summary_bank .calculator-summary__title {
+  margin-bottom: 0;
+}
+
+.calculator-summary.calculator-summary_bank .calculator-summary__head {
+  padding: 0;
+}
+
+.calculator-summary.calculator-summary_bank .calculator-summary__chart {
+  width: 254px;
+  height: auto;
+  margin-right: 31px;
+}
+
+.calculator-summary.calculator-summary_bank .calculator-summary__item {
+  min-height: 44px;
+  padding: 12px 0 11px;
+}
+
+.calculator-summary.calculator-summary_bank .calculator-summary__value {
+  font-size: 16px;
+  color: #8E95A5;
+}
+
+.calculator-summary.calculator-summary_bank .calculator-summary__value span {
+  color: #333C67;
+}
+
+.calculator-tabs_r-border .calculator-tabs__inner {
+  border-radius: 4px;
+}
+
+.calculator-tabs_r-border .calculator-tabs__tab:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.calculator-tabs_r-border .calculator-tabs__tab:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.mortgage-options__title {
+  margin-bottom: 16px;
+}
+
+.mortgage-options__tabs {
+  margin-bottom: 8px;
+}
+
+.mortgage-options__tab-content {
+  display: none;
+}
+
+.mortgage-options__tab-content._active {
+  display: block;
+}
+
+.mortgage-options-table {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.01em;
+  color: #333C67;
+  background: #FFFFFF;
+}
+
+.mortgage-options-table th {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  min-height: 60px;
+  padding: 24px 0 16px;
+}
+
+.mortgage-options-table td {
+  vertical-align: top;
+  padding: 11px 0 12px;
+  border-top: 1px solid #CACEDB;
+}
+
+.mortgage-options-table td:first-child {
+  width: 384px;
+  padding-right: 15px;
+}
+
+.mortgage-options-table tr:first-child td {
+  border-top: none;
+}
+
+.mortgage-options-table__title-help {
+  vertical-align: text-bottom;
+}
+
+.mortgage-options-table__title-help-container::before {
+  content: "\00A0";
+}
+
+.mortgage-options-table_requirement td:first-child {
+  width: 528px;
+}
+
+.mortgage-options-table_documents td:first-child {
+  width: 384px;
+}
+
+.mortgage-options-table_security td:first-child {
+  width: 530px;
+}
+
+.mortgage-options-table_additionally td:first-child {
+  width: 338px;
+}
+
+.mortgage-rate__title {
+  margin-bottom: 16px;
+}
+
+.mortgage-rate__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: -0.004em;
+  color: #333C67;
+}
+
+.mortgage-rate__text p {
+  margin: 0;
+}
+
+.mortgage-rate__text p + p {
+  margin-top: 12px;
+}
+
+.mortgage-rate__text-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  margin: 28px 0 12px;
+}
+
+.mortgage-rate-table {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.004em;
+  color: #333C67;
+  margin-bottom: 16px;
+}
+
+.mortgage-rate-table th {
+  border-bottom: 1px solid #333C67;
+  padding: 13px 0 14px;
+}
+
+.mortgage-rate-table td {
+  padding: 16px 0;
+  border-top: 1px solid #CACEDB;
+}
+
+.mortgage-rate-table tr:first-child td {
+  border-top: none;
+}
+
+@media screen and (max-width: 991px) {
+  .mortgage-bank-head {
+    margin: 32px 0 24px;
+  }
+  .mortgage-bank-head__title {
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: -0.004em;
+  }
+  .mortgage-bank-item {
+    margin-bottom: 48px;
+  }
+  .mortgage-bank-info {
+    padding: 24px 28px;
+  }
+  .mortgage-bank-info__grid {
+    max-width: 646px;
+    gap: 20px 20px;
+  }
+  .calculator-bank__row {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .calculator-bank__cell_btn {
+    padding: 0;
+    grid-column: auto /span 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .calculator-bank__btn {
+    max-width: 190px;
+    width: 100%;
+  }
+  .calculator-summary.calculator-summary_bank .calculator-summary__chart {
+    width: 198px;
+    margin-right: 26px;
+  }
+  .mortgage-options-table th {
+    padding: 20px 0 15px;
+  }
+  .mortgage-options-table td:first-child {
+    width: 284px;
+  }
+  .mortgage-options-table_requirement td:first-child {
+    width: 480px;
+  }
+  .mortgage-options-table_documents td:first-child {
+    width: 284px;
+  }
+  .mortgage-options-table_security td:first-child {
+    width: 350px;
+  }
+  .mortgage-options-table_additionally td:first-child {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mortgage-bank-title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  .mortgage-bank-head {
+    margin: 32px 0 32px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .mortgage-bank-head__title {
+    width: 100%;
+    margin: 16px 0 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .mortgage-bank-item {
+    margin-bottom: 32px;
+  }
+  .mortgage-bank-info {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 20px 16px;
+    border-radius: 0;
+  }
+  .mortgage-bank-info__grid {
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+    gap: 16px 16px;
+  }
+  .mortgage-bank-info__label {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .mortgage-bank-info__value {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .mortgage-bank-info__icon {
+    display: none;
+  }
+  .calculator-bank__row {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .calculator-bank__cell_btn {
+    grid-column: auto;
+  }
+  .calculator-bank__btn {
+    max-width: 100%;
+  }
+  .calculator-summary.calculator-summary_bank .calculator-summary__head {
+    margin-bottom: 16px;
+  }
+  .calculator-summary.calculator-summary_bank .calculator-summary__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .calculator-summary.calculator-summary_bank .calculator-summary__chart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: 0 0 12px;
+  }
+  .calculator-summary.calculator-summary_bank .calculator-summary__list {
+    width: 100%;
+  }
+  .mortgage-options__tabs {
+    margin-right: -15px;
+    margin-left: -15px;
+    scrollbar-width: none;
+  }
+  .mortgage-options__tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .mortgage-options .calculator-tabs__inner {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    border-radius: 0px;
+    border-left: none;
+    border-right: none;
+  }
+  .mortgage-options .calculator-tabs__tab {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .mortgage-options .calculator-tabs__tab:first-child {
+    border-radius: 0;
+  }
+  .mortgage-options .calculator-tabs__tab:last-child {
+    border-radius: 0;
+  }
+  .mortgage-options-table {
+    display: block;
+  }
+  .mortgage-options-table tbody {
+    display: block;
+  }
+  .mortgage-options-table tr {
+    display: block;
+  }
+  .mortgage-options-table th {
+    padding: 16px 0 12px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .mortgage-options-table td {
+    display: block;
+  }
+  .mortgage-options-table td:first-child {
+    padding: 12px 0 8px;
+    width: 100%;
+    padding-right: 0;
+    font-weight: 700;
+  }
+  .mortgage-options-table td:first-child:last-child {
+    font-weight: 400;
+  }
+  .mortgage-options-table td:last-child {
+    padding: 0 0 12px;
+    border-top: none;
+  }
+  .mortgage-rate__text {
+    line-height: 150%;
+  }
+  .mortgage-rate-table thead {
+    display: none;
+  }
+  .mortgage-rate-table tr:first-child td {
+    border-top: 1px solid #CACEDB;
+  }
+  .mortgage-rate-table tr:first-child td:first-child {
+    border-top: none;
+  }
+  .mortgage-rate-table td {
+    padding: 12px 0;
+    display: block;
+    width: 100%;
+    line-height: 19px;
+  }
+  .mortgage-rate-table td:first-child {
+    border-top: 1px solid #333C67;
+  }
+  .mortgage-rate-table__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .mortgage-rate-table__item_label::before {
+    content: attr(data-label);
+    font-weight: 500;
+    padding-right: 15px;
+  }
+  .mortgage-rate-table__item-inner {
+    display: block;
+    text-align: right;
+  }
+}
