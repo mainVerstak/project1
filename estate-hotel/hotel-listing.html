@@ -163,7 +163,8 @@
                                     Дата заезда
                                 </div>
                                 <div class="input-wrapper">
-                                    <input class="custom-input custom-input_fw500 custom-input_fz14 set-datepicker-from"
+                                    <input
+                                        class="custom-input custom-input_fw500 custom-input_fz14 custom-input_datepicker set-datepicker-from"
                                         id="set-datepicker-from" type="text" readonly>
                                     <div class="input-wrapper__label input-wrapper__label_datepicker">
                                         <i class="far fa-calendar input-wrapper__icon"></i>
@@ -175,7 +176,8 @@
                                     Дата выезда
                                 </div>
                                 <div class="input-wrapper">
-                                    <input class="custom-input custom-input_fw500 custom-input_fz14 set-datepicker-to"
+                                    <input
+                                        class="custom-input custom-input_fw500 custom-input_fz14 custom-input_datepicker set-datepicker-to"
                                         id="set-datepicker-to" type="text" readonly>
                                     <div class="input-wrapper__label input-wrapper__label_datepicker">
                                         <i class="far fa-calendar input-wrapper__icon"></i>
@@ -467,6 +469,7 @@
                                     </div>
                                 </div>
                                 <div class="sidebar-map-item hotel-sidebar__map-item">
+                                    <div class="sidebar-map-item__map" id="hotel-sidebar-map"></div>
                                     <div class="sidebar-map-item__inner">
                                         <img src="img/sidebar-map-pin.svg" alt="" class="sidebar-map-item__pin">
                                         <button class="btn btn-custom sidebar-map-item__btn js-show-hotel-map">
@@ -486,7 +489,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Отели, комнаты
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2871
                                                 </span>
                                             </li>
@@ -496,7 +499,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Хостелы
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     887
                                                 </span>
                                             </li>
@@ -506,7 +509,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Апартаменты
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     6101
                                                 </span>
                                             </li>
@@ -516,7 +519,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Апарт-отели
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     343
                                                 </span>
                                             </li>
@@ -526,7 +529,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Гостевые дома
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     377
                                                 </span>
                                             </li>
@@ -536,7 +539,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Коттеджи, виллы
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     17
                                                 </span>
                                             </li>
@@ -546,7 +549,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Кемпинги
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     4
                                                 </span>
                                             </li>
@@ -556,7 +559,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Глэмпинги
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     1
                                                 </span>
                                             </li>
@@ -596,7 +599,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Бесплатный трансфер
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     8741
                                                 </span>
                                             </li>
@@ -606,7 +609,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Трансфер
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     3487
                                                 </span>
                                             </li>
@@ -616,7 +619,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Парковка
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     5496
                                                 </span>
                                             </li>
@@ -626,7 +629,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Бассейн
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     119
                                                 </span>
                                             </li>
@@ -636,7 +639,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Фитнес
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     284
                                                 </span>
                                             </li>
@@ -646,7 +649,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Бар или ресторан
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     386
                                                 </span>
                                             </li>
@@ -656,7 +659,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Конференц-зал
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     34
                                                 </span>
                                             </li>
@@ -666,7 +669,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Спа-услуги
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     348
                                                 </span>
                                             </li>
@@ -676,7 +679,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Горнолыжный склон
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     12
                                                 </span>
                                             </li>
@@ -686,7 +689,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Пляж
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     239
                                                 </span>
                                             </li>
@@ -696,7 +699,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Джакузи
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     37
                                                 </span>
                                             </li>
@@ -715,7 +718,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Подходит для детей
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     3938
                                                 </span>
                                             </li>
@@ -727,7 +730,7 @@
                                                     ограниченными
                                                     возможностями
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     494
                                                 </span>
                                             </li>
@@ -738,7 +741,7 @@
                                                     Разрашено с
                                                     домашними животными
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2317
                                                 </span>
                                             </li>
@@ -748,7 +751,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Можно курить
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     1205
                                                 </span>
                                             </li>
@@ -771,7 +774,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     29
                                                 </span>
                                             </li>
@@ -784,7 +787,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     171
                                                 </span>
                                             </li>
@@ -796,7 +799,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     860
                                                 </span>
                                             </li>
@@ -807,7 +810,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     427
                                                 </span>
                                             </li>
@@ -817,7 +820,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     <i class="fa fa-star"></i>
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     238
                                                 </span>
                                             </li>
@@ -827,7 +830,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Без звезд
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     8120
                                                 </span>
                                             </li>
@@ -846,7 +849,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Превосходно: 9+
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -856,7 +859,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Отлично: 8+
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -866,7 +869,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Очень хорошо: 7+
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -876,7 +879,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Хорошо: 6+
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -886,7 +889,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Неплохо: 5+
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -905,7 +908,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Адмиралтейский р-н
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -915,7 +918,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Василеостровский р-н
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -925,7 +928,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Петроградский р-н
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -935,7 +938,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Выборгский р-н
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -945,7 +948,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Центральный р-н
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -955,7 +958,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Петроградский р-н
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -965,7 +968,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Выборгский р-н
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -975,7 +978,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Центральный р-н
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1015,7 +1018,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Невский проспект
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1025,7 +1028,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Эрмитаж
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1035,7 +1038,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Исаакиевский Собор
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1046,7 +1049,7 @@
                                                     Петропавловская
                                                     крепость
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1056,7 +1059,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Петергоф
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1066,7 +1069,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Невский проспект
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1076,7 +1079,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Эрмитаж
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1086,7 +1089,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Исаакиевский Собор
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1097,7 +1100,7 @@
                                                     Петропавловская
                                                     крепость
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1107,7 +1110,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Петергоф
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1154,7 +1157,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Accor Hotels
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1164,7 +1167,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Ibis
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1174,7 +1177,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Azimut Hotels
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1184,7 +1187,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Novotel
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1194,7 +1197,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Worldhotels Luxury
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1204,7 +1207,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Azimut Hotels
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1214,7 +1217,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Novotel
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1224,7 +1227,7 @@
                                                     <span class="custom-checkbox__checkmark"></span>
                                                     Worldhotels Luxury
                                                 </label>
-                                                <span>
+                                                <span class="hotel-sidebar__option-quantity">
                                                     2099
                                                 </span>
                                             </li>
@@ -1268,7 +1271,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel1.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -1362,7 +1365,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel2.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -1454,7 +1457,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel3.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -1547,7 +1550,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel4.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -1640,7 +1643,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel5.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -1733,7 +1736,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel6.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -1776,7 +1779,8 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="hotel-rating hotel-rating_fz14 card-hotel-full__rating">
+                                                <div
+                                                    class="hotel-rating hotel-rating_fz14 hotel-rating_blue card-hotel-full__rating">
                                                     7,8
                                                 </div>
                                             </div>
@@ -1825,7 +1829,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel3.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -1871,7 +1875,7 @@
                                                 </div>
                                                 <div
                                                     class="hotel-rating hotel-rating_red hotel-rating_fz14 card-hotel-full__rating">
-                                                    9,3
+                                                    3,5
                                                 </div>
                                             </div>
                                         </div>
@@ -1919,7 +1923,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel4.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -1965,7 +1969,7 @@
                                                 </div>
                                                 <div
                                                     class="hotel-rating hotel-rating_orange hotel-rating_fz14 card-hotel-full__rating">
-                                                    8,3
+                                                    5,5
                                                 </div>
                                             </div>
                                         </div>
@@ -2013,7 +2017,7 @@
                                 <div class="card-hotel-full">
                                     <div class="card-hotel-full__left">
                                         <img src="img/hotel/hotel5.png" alt="" class="card-hotel-full__image">
-                                        <div class="card-hotel-full__favorite">
+                                        <div class="card-hotel-full__favorite js-favorite-hotel">
                                             <i class="far fa-star"></i>
                                         </div>
                                     </div>
@@ -2059,7 +2063,7 @@
                                                 </div>
                                                 <div
                                                     class="hotel-rating hotel-rating_blue hotel-rating_fz14 card-hotel-full__rating">
-                                                    8,5
+                                                    7,5
                                                 </div>
                                             </div>
                                         </div>
@@ -2179,6 +2183,45 @@
                                                 <div class="hotel-rating card-hotel__rating">
                                                     8,8
                                                 </div>
+                                                <div class="card-hotel__favorite js-favorite-hotel">
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </a>
+                                            <div class="card-hotel__bottom">
+                                                <div class="card-hotel__info">
+                                                    <div class="card-hotel__stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="card-hotel__name">
+                                                        <a href="#">
+                                                            Map Pin 1 Отель Kostas
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-hotel__location">
+                                                        3,9 км от центра Санкт-Петербурга
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__btns">
+                                                    <button class="btn btn-custom card-hotel__btn">
+                                                        от 464 ₽
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel">
+                                            <a href="#" class="card-hotel__top">
+                                                <img src="img/best-hotel/best-hotel1.png" alt=""
+                                                    class="card-hotel__image">
+                                                <div class="hotel-rating card-hotel__rating">
+                                                    8,8
+                                                </div>
+                                                <div class="card-hotel__favorite js-favorite-hotel">
+                                                    <i class="far fa-star"></i>
+                                                </div>
                                             </a>
                                             <div class="card-hotel__bottom">
                                                 <div class="card-hotel__info">
@@ -2191,6 +2234,108 @@
                                                     <div class="card-hotel__name">
                                                         <a href="#">
                                                             Отель Kostas
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-hotel__location">
+                                                        3,9 км от центра Санкт-Петербурга
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__btns">
+                                                    <button class="btn btn-custom card-hotel__btn">
+                                                        от 464 ₽
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel">
+                                            <a href="#" class="card-hotel__top">
+                                                <img src="img/best-hotel/best-hotel1.png" alt=""
+                                                    class="card-hotel__image">
+                                                <div class="hotel-rating card-hotel__rating">
+                                                    8,8
+                                                </div>
+                                            </a>
+                                            <div class="card-hotel__bottom">
+                                                <div class="card-hotel__info">
+                                                    <div class="card-hotel__stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="card-hotel__name">
+                                                        <a href="#">
+                                                            Отель Kostas
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-hotel__location">
+                                                        3,9 км от центра Санкт-Петербурга
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__btns">
+                                                    <button class="btn btn-custom card-hotel__btn">
+                                                        от 464 ₽
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel">
+                                            <a href="#" class="card-hotel__top">
+                                                <img src="img/best-hotel/best-hotel1.png" alt=""
+                                                    class="card-hotel__image">
+                                                <div class="hotel-rating card-hotel__rating">
+                                                    8,8
+                                                </div>
+                                                <div class="card-hotel__favorite js-favorite-hotel">
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </a>
+                                            <div class="card-hotel__bottom">
+                                                <div class="card-hotel__info">
+                                                    <div class="card-hotel__stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="card-hotel__name">
+                                                        <a href="#">
+                                                            Отель Kostas
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-hotel__location">
+                                                        3,9 км от центра Санкт-Петербурга
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__btns">
+                                                    <button class="btn btn-custom card-hotel__btn">
+                                                        от 464 ₽
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel">
+                                            <a href="#" class="card-hotel__top">
+                                                <img src="img/best-hotel/best-hotel1.png" alt=""
+                                                    class="card-hotel__image">
+                                                <div class="hotel-rating card-hotel__rating">
+                                                    8,8
+                                                </div>
+                                            </a>
+                                            <div class="card-hotel__bottom">
+                                                <div class="card-hotel__info">
+                                                    <div class="card-hotel__stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <div class="card-hotel__name">
+                                                        <a href="#">
+                                                            Map Pin 2 Отель Kostas
                                                         </a>
                                                     </div>
                                                     <div class="card-hotel__location">
@@ -2303,11 +2448,6 @@
                                                         Фильтры
                                                     </button>
                                                 </div>
-                                                <button
-                                                    class="btn btn-custom btn-custom_h_40 btn-custom_br_4 btn-custom_white js-modal-hotel"
-                                                    style="position: absolute; top: calc(50% - 20px); left: 20px;">
-                                                    Отель Kostas
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -2508,7 +2648,7 @@
                     <div class="card-hotel-full card-hotel-full_modal">
                         <div class="card-hotel-full__left">
                             <img src="img/hotel/hotel1.png" alt="" class="card-hotel-full__image">
-                            <div class="card-hotel-full__favorite">
+                            <div class="card-hotel-full__favorite js-favorite-hotel">
                                 <i class="far fa-star"></i>
                             </div>
                         </div>

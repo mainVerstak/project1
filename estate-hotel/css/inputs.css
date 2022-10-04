@@ -922,6 +922,9 @@
 .custom-input_h_37 {
   height: 37px;
 }
+.custom-input_datepicker {
+  cursor: pointer;
+}
 
 .select2_fw500 + .select2 .select2-selection__rendered {
   font-weight: 500;
@@ -1033,7 +1036,7 @@
 .irs--round .irs-line {
   top: 7px;
   height: 2px;
-  background-color: #427FB9;
+  background-color: #CACEDB;
   border-radius: 0;
 }
 .irs--round .irs-handle {
@@ -1433,7 +1436,8 @@
   }
 }
 @media screen and (max-width: 767px) {
-  + .tooltip .tooltip-inner {
+  .btn-help + .tooltip .tooltip-inner,
+.btn-note + .tooltip .tooltip-inner {
     max-width: 280px;
   }
 }

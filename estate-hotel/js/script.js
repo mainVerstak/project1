@@ -40,6 +40,12 @@ $(function () {
 
     $('.hotel-room__more').on('click', function () {
         let $list = $(this).closest('.hotel-room__bottom').find('.hotel-room__list');
+        let $listInner = $(this).closest('.hotel-room__bottom').find('.hotel-room__list-inner');
+        let currentHeight = $listInner.height();
+        $list.css({
+            height: currentHeight,
+            overflow: 'hidden'
+        })
         if ($list.hasClass('_show')) {
             let count = $list.find('.hotel-room-row._hidden').length;
             if (count < 2) {
@@ -52,10 +58,30 @@ $(function () {
             $(this).removeClass('_active');
             $(this).find('span').text('Показать еще ' + count);
             $list.removeClass('_show');
+            let newHeight = $listInner.height();
+            $list.addClass('_show');
+            $list.animate({
+                height: newHeight
+            }, 400, function () {
+                $list.css({
+                    height: '',
+                    overflow: ''
+                })
+                $list.removeClass('_show');
+            });
         } else {
             $(this).addClass('_active');
             $(this).find('span').text('Скрыть');
             $list.addClass('_show');
+            let newHeight = $listInner.height();
+            $list.animate({
+                height: newHeight
+            }, 400, function () {
+                $list.css({
+                    height: '',
+                    overflow: ''
+                })
+            });
         }
     });
 
@@ -80,25 +106,25 @@ $(function () {
             breadcrumbItem.parent().addClass('_collapsed');
 
             if (breadcrumbItem.children().length >= 4) {
-                let breadcrumbDetached = breadcrumbItem.children().slice(1, -1).detach();
+                let breadcrumbDetached = breadcrumbItem.children().slice(0, -2).detach();
 
                 breadcrumb.push({ 'list': breadcrumbItem, 'detached': breadcrumbDetached })
 
                 let expand_breadcrumb = $('<li><a href=""><strong>...</strong></a></li>');
                 expand_breadcrumb.on('click', function (event) {
                     event.preventDefault();
-                    breadcrumbItem.children().slice(1, -1).remove();
-                    breadcrumbItem.children().eq(0).after(breadcrumbDetached);
+                    breadcrumbItem.children().slice(0, -2).remove();
+                    breadcrumbItem.children().eq(0).before(breadcrumbDetached);
                 });
-                breadcrumbItem.children().eq(0).after(expand_breadcrumb);
+                breadcrumbItem.children().eq(0).before(expand_breadcrumb);
             }
         });
     }
     function expandBreadcrumb() {
         let i = breadcrumb.length;
         while (i--) {
-            breadcrumb[i].list.children().slice(1, -1).remove();
-            breadcrumb[i].list.children().eq(0).after(breadcrumb[i].detached);
+            breadcrumb[i].list.children().slice(0, -2).remove();
+            breadcrumb[i].list.children().eq(0).before(breadcrumb[i].detached);
             breadcrumb[i].list.parent().removeClass('_collapsed');
             breadcrumb.splice(i, 1);
         }
@@ -116,18 +142,22 @@ $(function () {
         }
     });
 
-    $('.js-modal-hotel').on('click', function () {
-        $('.modal-hotel-card').addClass('_active');
-        $('body').addClass('_modal-hotel-card');
-    });
     $('.modal-hotel-card__close, .modal-hotel-card__back').on('click', function () {
-        $('.modal-hotel-card').removeClass('_active');
         $('body').removeClass('_modal-hotel-card');
+        let $modal = $('.modal-hotel-card')
+        $modal.fadeOut(400, function () {
+            $modal.removeClass('_active');
+            $modal.css('display', '')
+        });
     });
     $('.modal-hotel-card').on('click', function (e) {
         if ($(e.target).hasClass('modal-hotel-card')) {
-            $(this).removeClass('_active');
             $('body').removeClass('_modal-hotel-card');
+            let $modal = $('.modal-hotel-card')
+            $modal.fadeOut(400, function () {
+                $modal.removeClass('_active');
+                $modal.css('display', '')
+            });
         }
     })
 
@@ -297,17 +327,14 @@ $(function () {
         $('.hotel-list-wrapper').removeClass('_show-map');
     });
     $('.js-show-hotel-map').on('click', function () {
-        if (yaMapReady) {
-            ymaps.ready(initHotelMap)
-        } else {
-            runHotelMap = true;
-        }
         $('body').addClass('_show-hotel-map');
         $('.hotel-sidebar__map-item').addClass('_hide');
         $('.hotel-list-wrapper').addClass('_show-map');
 
-        let containerOffset = $('.hotel-content-grid').offset().top - 20;
-        $("html, body").animate({ scrollTop: containerOffset });
+        if ($(window).width() > 992) {
+            let containerOffset = $('.hotel-content-grid').offset().top - 20;
+            $("html, body").animate({ scrollTop: containerOffset });
+        }
 
     });
 
@@ -320,7 +347,8 @@ $(function () {
             $('body').addClass('_hotel-sidebar');
         }
     });
-    $('.card-hotel-full__favorite').on('click', function () {
+    $('.js-favorite-hotel').on('click', function (e) {
+        e.preventDefault();
         if ($(this).hasClass('_active')) {
             $(this).removeClass('_active');
             $(this).find('i').addClass('far').removeClass('fas');
@@ -426,7 +454,42 @@ $(function () {
             prevEl: ".hotel-gallery-slider-prev",
         },
     });
-    var swiperAboutReviews = new Swiper(".popular-hotel-slider", {
+    var swiperSimilarHotel = new Swiper(".similar-hotel-slider", {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        watchOverflow: true,
+        enabled: false,
+        navigation: {
+            nextEl: ".similar-hotel-slider-next",
+            prevEl: ".similar-hotel-slider-prev",
+        },
+        breakpoints: {
+            1200: {
+                enabled: true,
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        }
+    });
+
+    var swiperPopularHotel = new Swiper(".popular-hotel-slider_desktop", {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        watchOverflow: true,
+        enabled: false,
+        navigation: {
+            nextEl: ".popular-hotel-slider-next",
+            prevEl: ".popular-hotel-slider-prev",
+        },
+        breakpoints: {
+            1200: {
+                enabled: true,
+                slidesPerView: 4,
+                spaceBetween: 16
+            }
+        }
+    });
+    var swiperPopularHotel = new Swiper(".popular-hotel-slider_full", {
         slidesPerView: 'auto',
         spaceBetween: 16,
         watchOverflow: true,
@@ -484,13 +547,14 @@ $(function () {
         ],
         zIndex: 10,
         lang: "ru-RU",
-        format: "DD MMM YYYY",
+        format: "DD MMMM YYYY",
         grid: 2,
         calendars: 2,
         RangePlugin: {
             elementEnd: "#set-datepicker-to",
             startDate: new Date(),
             endDate: new Date(),
+            repick: true,
             locale: {
                 one: "день",
                 other: "дни"
@@ -506,41 +570,102 @@ $(function () {
         ]
     })
 
-    let runHotelMap = false;
     let yaMapReady = false;
 
     window.getYaMap = function () {
         yaMapReady = true
-        if ($('#hotel-map').length > 0 && runHotelMap)
+        if ($('#hotel-map').length > 0)
             ymaps.ready(initHotelMap);
         if ($('#hotel-disposition-map').length > 0)
             ymaps.ready(initHoteDispositionlMap);
+        if ($('#hotel-sidebar-map').length > 0)
+            ymaps.ready(initHoteSidebarMap);
     };
     function initHotelMap() {
         let mapX = 55.753215;
         let mapY = 37.622504;
-        let contactsMap = new ymaps.Map('hotel-map', {
+        let hotelMap = new ymaps.Map('hotel-map', {
             center: [mapX, mapY],
             zoom: 16,
             controls: []
         })
 
-        contactsMap.controls.add("zoomControl", {
+        var myPlacemark = new ymaps.Placemark([55.753215, 37.622504], {
+            hintContent: 'Отель Kostas',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/map-pin.svg',
+            iconImageSize: [36, 36],
+            iconImageOffset: [-18, -32]
+        });
+        myPlacemark.events.add(['click'], function (e) {
+            showHotel(0)
+        })
+        hotelMap.geoObjects.add(myPlacemark);
+
+        var myPlacemark1 = new ymaps.Placemark([55.755215, 37.622504], {
+            hintContent: 'Отель Kostas',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/map-pin.svg',
+            iconImageSize: [36, 36],
+            iconImageOffset: [-18, -32]
+        });
+        myPlacemark1.events.add(['click'], function (e) {
+            showHotel(4)
+        })
+        hotelMap.geoObjects.add(myPlacemark1);
+
+        hotelMap.controls.add("zoomControl", {
             position: { top: 120, right: 20 }
         });
+    }
+    function showHotel(i) {
+        let card = $('.map-hotel-list__list').find('.card-hotel').eq(i);
+        if ($(window).width() >= 992) {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: card.offset().top - 16
+            }, 400);
+        } else {
+            let $modal = $('.modal-hotel-card')
+            $('body').addClass('_modal-hotel-card');
+            $modal.fadeIn(400, function () {
+                $modal.addClass('_active');
+                $modal.css('display', '')
+            });
+        }
     }
 
     function initHoteDispositionlMap() {
         let mapX = 55.753215;
         let mapY = 37.622504;
-        let contactsMap = new ymaps.Map('hotel-disposition-map', {
+        let hoteDispositionlMap = new ymaps.Map('hotel-disposition-map', {
             center: [mapX, mapY],
             zoom: 16,
             controls: []
         })
 
-        contactsMap.controls.add("zoomControl", {
+        var myPlacemark = new ymaps.Placemark(hoteDispositionlMap.getCenter(), {
+            hintContent: 'Отель Kostas',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/map-pin.svg',
+            iconImageSize: [36, 36],
+            iconImageOffset: [-18, -32]
+        });
+        hoteDispositionlMap.geoObjects.add(myPlacemark);
+        hoteDispositionlMap.controls.add("zoomControl", {
             position: { top: 120, right: 20 }
         });
+    }
+
+    function initHoteSidebarMap() {
+        let mapX = 55.753215;
+        let mapY = 37.622504;
+        let hoteSidebarMap = new ymaps.Map('hotel-sidebar-map', {
+            center: [mapX, mapY],
+            zoom: 12,
+            controls: []
+        })
     }
 });

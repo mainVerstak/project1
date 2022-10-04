@@ -476,7 +476,8 @@
                                 Дата заезда
                             </div>
                             <div class="input-wrapper">
-                                <input class="custom-input custom-input_fw500 custom-input_fz14 set-datepicker-from"
+                                <input
+                                    class="custom-input custom-input_fw500 custom-input_fz14 custom-input_datepicker set-datepicker-from"
                                     id="set-datepicker-from" type="text" readonly>
                                 <div class="input-wrapper__label input-wrapper__label_datepicker">
                                     <i class="far fa-calendar input-wrapper__icon"></i>
@@ -488,7 +489,8 @@
                                 Дата выезда
                             </div>
                             <div class="input-wrapper">
-                                <input class="custom-input custom-input_fw500 custom-input_fz14 set-datepicker-to"
+                                <input
+                                    class="custom-input custom-input_fw500 custom-input_fz14 custom-input_datepicker set-datepicker-to"
                                     id="set-datepicker-to" type="text" readonly>
                                 <div class="input-wrapper__label input-wrapper__label_datepicker">
                                     <i class="far fa-calendar input-wrapper__icon"></i>
@@ -794,266 +796,262 @@
                         </div>
                         <div class="hotel-room__bottom">
                             <div class="hotel-room__list">
-                                <div class="hotel-room-row">
-                                    <div class="hotel-room-row__cell">
-                                        <ul class="hotel-room-row__list">
-                                            <li>
-                                                Двуспальная кровать
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                        </ul>
-                                        <div class="hotel-room-row__list-more">
-                                            <span>
-                                                Больше информации
-                                            </span>
-                                            <i class="fas fa-chevron-down"></i>
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__cancellation">
-                                            Бесплатная отмена до 23 сентября*
-                                        </div>
-                                        <div class="hotel-room-row__payment">
-                                            Оплата сейчас
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell hotel-room-row__cell_green">
-                                        <div class="hotel-room-row__price">
-                                            5580 ₽
-                                        </div>
-                                        <div class="hotel-room-row__term">
-                                            за ночь для 2 гостей
-                                        </div>
-                                        <div class="hotel-room-row__additionally">
-                                            <div class="hotel-room-row__taxes">
-                                                Налоги включены
+                                <div class="hotel-room__list-inner">
+                                    <div class="hotel-room-row">
+                                        <div class="hotel-room-row__cell">
+                                            <ul class="hotel-room-row__list">
+                                                <li>
+                                                    Двуспальная кровать
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                            </ul>
+                                            <div class="hotel-room-row__list-more">
+                                                <span>
+                                                    Больше информации
+                                                </span>
+                                                <i class="fas fa-chevron-down"></i>
                                             </div>
-                                            <div class="hotel-room-row__note hotel-room-row__note_mobile">
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__cancellation">
+                                                Бесплатная отмена до 23 сентября*
+                                            </div>
+                                            <div class="hotel-room-row__payment">
+                                                Оплата сейчас
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell hotel-room-row__cell_green">
+                                            <div class="hotel-room-row__price">
+                                                5580 ₽
+                                            </div>
+                                            <div class="hotel-room-row__term">
+                                                за ночь для 2 гостей
+                                            </div>
+                                            <div class="hotel-room-row__additionally">
+                                                <div class="hotel-room-row__taxes">
+                                                    Налоги включены
+                                                </div>
+                                                <div class="hotel-room-row__note hotel-room-row__note_mobile">
+                                                    Лучшая цена
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="hotel-room-row__cell hotel-room-row__cell_green">
+                                            <div class="hotel-room-row__note hotel-room-row__note_desktop">
                                                 Лучшая цена
                                             </div>
+                                            <button
+                                                class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
+                                                Забронировать
+                                            </button>
                                         </div>
+                                    </div>
+                                    <div class="hotel-room-row">
+                                        <div class="hotel-room-row__cell">
+                                            <ul class="hotel-room-row__list">
+                                                <li>
+                                                    Двуспальная кровать
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                            </ul>
+                                            <div class="hotel-room-row__list-more">
+                                                <span>
+                                                    Больше информации
+                                                </span>
+                                                <i class="fas fa-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__cancellation">
+                                                Бесплатная отмена до 23 сентября*
+                                            </div>
+                                            <div class="hotel-room-row__payment">
+                                                Оплата сейчас
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__price">
+                                                5580 ₽
+                                            </div>
+                                            <div class="hotel-room-row__term">
+                                                за ночь для 2 гостей
+                                            </div>
+                                            <div class="hotel-room-row__additionally">
+                                                <div class="hotel-room-row__taxes">
+                                                    Налоги включены
+                                                </div>
+                                            </div>
 
-                                    </div>
-                                    <div class="hotel-room-row__cell hotel-room-row__cell_green">
-                                        <div class="hotel-room-row__note hotel-room-row__note_desktop">
-                                            Лучшая цена
                                         </div>
-                                        <button
-                                            class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
-                                            Забронировать
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="hotel-room-row">
-                                    <div class="hotel-room-row__cell">
-                                        <ul class="hotel-room-row__list">
-                                            <li>
-                                                Двуспальная кровать
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                        </ul>
-                                        <div class="hotel-room-row__list-more">
-                                            <span>
-                                                Больше информации
-                                            </span>
-                                            <i class="fas fa-chevron-down"></i>
+                                        <div class="hotel-room-row__cell">
+                                            <button
+                                                class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
+                                                Забронировать
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__cancellation">
-                                            Бесплатная отмена до 23 сентября*
-                                        </div>
-                                        <div class="hotel-room-row__payment">
-                                            Оплата сейчас
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__price">
-                                            5580 ₽
-                                        </div>
-                                        <div class="hotel-room-row__term">
-                                            за ночь для 2 гостей
-                                        </div>
-                                        <div class="hotel-room-row__additionally">
-                                            <div class="hotel-room-row__taxes">
-                                                Налоги включены
+                                    <div class="hotel-room-row">
+                                        <div class="hotel-room-row__cell">
+                                            <ul class="hotel-room-row__list">
+                                                <li>
+                                                    Двуспальная кровать
+                                                </li>
+                                                <li class="_marked-item">
+                                                    Завтрак включен
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                            </ul>
+                                            <div class="hotel-room-row__list-more">
+                                                <span>
+                                                    Больше информации
+                                                </span>
+                                                <i class="fas fa-chevron-down"></i>
                                             </div>
                                         </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__cancellation">
+                                                Бесплатная отмена до 23 сентября*
+                                            </div>
+                                            <div class="hotel-room-row__payment">
+                                                Оплата сейчас
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell hotel-room-row__cell_yellow">
+                                            <div class="hotel-room-row__price">
+                                                7140 ₽
+                                            </div>
+                                            <div class="hotel-room-row__term">
+                                                за ночь для 2 гостей
+                                            </div>
+                                            <div class="hotel-room-row__additionally">
+                                                <div class="hotel-room-row__taxes">
+                                                    Налоги включены
+                                                </div>
+                                                <div class="hotel-room-row__note hotel-room-row__note_mobile">
+                                                    Лучшая цена
+                                                </div>
+                                            </div>
 
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <button
-                                            class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
-                                            Забронировать
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="hotel-room-row">
-                                    <div class="hotel-room-row__cell">
-                                        <ul class="hotel-room-row__list">
-                                            <li>
-                                                Двуспальная кровать
-                                            </li>
-                                            <li class="_marked-item">
-                                                Завтрак включен
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                        </ul>
-                                        <div class="hotel-room-row__list-more">
-                                            <span>
-                                                Больше информации
-                                            </span>
-                                            <i class="fas fa-chevron-down"></i>
                                         </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__cancellation">
-                                            Бесплатная отмена до 23 сентября*
-                                        </div>
-                                        <div class="hotel-room-row__payment">
-                                            Оплата сейчас
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell hotel-room-row__cell_yellow">
-                                        <div class="hotel-room-row__price">
-                                            7140 ₽
-                                        </div>
-                                        <div class="hotel-room-row__term">
-                                            за ночь для 2 гостей
-                                        </div>
-                                        <div class="hotel-room-row__additionally">
-                                            <div class="hotel-room-row__taxes">
-                                                Налоги включены
+                                        <div class="hotel-room-row__cell hotel-room-row__cell_yellow">
+                                            <div class="hotel-room-row__note hotel-room-row__note_desktop">
+                                                Лучшая цена с питанием
                                             </div>
-                                            <div class="hotel-room-row__note hotel-room-row__note_mobile">
-                                                Лучшая цена
+                                            <button
+                                                class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
+                                                Забронировать
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-room-row _hidden">
+                                        <div class="hotel-room-row__cell">
+                                            <ul class="hotel-room-row__list">
+                                                <li>
+                                                    Двуспальная кровать
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                            </ul>
+                                            <div class="hotel-room-row__list-more">
+                                                <span>
+                                                    Больше информации
+                                                </span>
+                                                <i class="fas fa-chevron-down"></i>
                                             </div>
                                         </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__cancellation">
+                                                Бесплатная отмена до 23 сентября*
+                                            </div>
+                                            <div class="hotel-room-row__payment">
+                                                Оплата сейчас
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__price">
+                                                5580 ₽
+                                            </div>
+                                            <div class="hotel-room-row__term">
+                                                за ночь для 2 гостей
+                                            </div>
+                                            <div class="hotel-room-row__additionally">
+                                                <div class="hotel-room-row__taxes">
+                                                    Налоги включены
+                                                </div>
+                                            </div>
 
-                                    </div>
-                                    <div class="hotel-room-row__cell hotel-room-row__cell_yellow">
-                                        <div class="hotel-room-row__note hotel-room-row__note_desktop">
-                                            Лучшая цена с питанием
                                         </div>
-                                        <button
-                                            class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
-                                            Забронировать
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="hotel-room-row _hidden">
-                                    <div class="hotel-room-row__cell">
-                                        <ul class="hotel-room-row__list">
-                                            <li>
-                                                Двуспальная кровать
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                        </ul>
-                                        <div class="hotel-room-row__list-more">
-                                            <span>
-                                                Больше информации
-                                            </span>
-                                            <i class="fas fa-chevron-down"></i>
+                                        <div class="hotel-room-row__cell">
+                                            <button
+                                                class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
+                                                Забронировать
+                                            </button>
                                         </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__cancellation">
-                                            Бесплатная отмена до 23 сентября*
-                                        </div>
-                                        <div class="hotel-room-row__payment">
-                                            Оплата сейчас
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell hotel-room-row__cell_green">
-                                        <div class="hotel-room-row__price">
-                                            5580 ₽
-                                        </div>
-                                        <div class="hotel-room-row__term">
-                                            за ночь для 2 гостей
-                                        </div>
-                                        <div class="hotel-room-row__additionally">
-                                            <div class="hotel-room-row__taxes">
-                                                Налоги включены
-                                            </div>
-                                            <div class="hotel-room-row__note hotel-room-row__note_mobile">
-                                                Лучшая цена
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="hotel-room-row__cell hotel-room-row__cell_green">
-                                        <div class="hotel-room-row__note hotel-room-row__note_desktop">
-                                            Лучшая цена
-                                        </div>
-                                        <button
-                                            class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
-                                            Забронировать
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -1160,247 +1158,249 @@
                         </div>
                         <div class="hotel-room__bottom">
                             <div class="hotel-room__list">
-                                <div class="hotel-room-row">
-                                    <div class="hotel-room-row__cell">
-                                        <ul class="hotel-room-row__list">
-                                            <li>
-                                                Двуспальная кровать
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                        </ul>
-                                        <div class="hotel-room-row__list-more">
-                                            <span>
-                                                Больше информации
-                                            </span>
-                                            <i class="fas fa-chevron-down"></i>
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__cancellation">
-                                            Бесплатная отмена до 23 сентября*
-                                        </div>
-                                        <div class="hotel-room-row__payment">
-                                            Оплата сейчас
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__price">
-                                            5580 ₽
-                                        </div>
-                                        <div class="hotel-room-row__term">
-                                            за ночь для 2 гостей
-                                        </div>
-                                        <div class="hotel-room-row__additionally">
-                                            <div class="hotel-room-row__taxes">
-                                                Налоги включены
+                                <div class="hotel-room__list-inner">
+                                    <div class="hotel-room-row">
+                                        <div class="hotel-room-row__cell">
+                                            <ul class="hotel-room-row__list">
+                                                <li>
+                                                    Двуспальная кровать
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                            </ul>
+                                            <div class="hotel-room-row__list-more">
+                                                <span>
+                                                    Больше информации
+                                                </span>
+                                                <i class="fas fa-chevron-down"></i>
                                             </div>
                                         </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__cancellation">
+                                                Бесплатная отмена до 23 сентября*
+                                            </div>
+                                            <div class="hotel-room-row__payment">
+                                                Оплата сейчас
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__price">
+                                                5580 ₽
+                                            </div>
+                                            <div class="hotel-room-row__term">
+                                                за ночь для 2 гостей
+                                            </div>
+                                            <div class="hotel-room-row__additionally">
+                                                <div class="hotel-room-row__taxes">
+                                                    Налоги включены
+                                                </div>
+                                            </div>
 
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <button
-                                            class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
-                                            Забронировать
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="hotel-room-row">
-                                    <div class="hotel-room-row__cell">
-                                        <ul class="hotel-room-row__list">
-                                            <li>
-                                                Двуспальная кровать
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                        </ul>
-                                        <div class="hotel-room-row__list-more">
-                                            <span>
-                                                Больше информации
-                                            </span>
-                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <button
+                                                class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
+                                                Забронировать
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__cancellation">
-                                            Бесплатная отмена до 23 сентября*
-                                        </div>
-                                        <div class="hotel-room-row__payment">
-                                            Оплата сейчас
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__price">
-                                            5580 ₽
-                                        </div>
-                                        <div class="hotel-room-row__term">
-                                            за ночь для 2 гостей
-                                        </div>
-                                        <div class="hotel-room-row__additionally">
-                                            <div class="hotel-room-row__taxes">
-                                                Налоги включены
+                                    <div class="hotel-room-row">
+                                        <div class="hotel-room-row__cell">
+                                            <ul class="hotel-room-row__list">
+                                                <li>
+                                                    Двуспальная кровать
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                            </ul>
+                                            <div class="hotel-room-row__list-more">
+                                                <span>
+                                                    Больше информации
+                                                </span>
+                                                <i class="fas fa-chevron-down"></i>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <button
-                                            class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
-                                            Забронировать
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="hotel-room-row">
-                                    <div class="hotel-room-row__cell">
-                                        <ul class="hotel-room-row__list">
-                                            <li>
-                                                Двуспальная кровать
-                                            </li>
-                                            <li class="_marked-item">
-                                                Завтрак включен
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                        </ul>
-                                        <div class="hotel-room-row__list-more">
-                                            <span>
-                                                Больше информации
-                                            </span>
-                                            <i class="fas fa-chevron-down"></i>
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__cancellation">
-                                            Бесплатная отмена до 23 сентября*
-                                        </div>
-                                        <div class="hotel-room-row__payment">
-                                            Оплата сейчас
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__price">
-                                            7140 ₽
-                                        </div>
-                                        <div class="hotel-room-row__term">
-                                            за ночь для 2 гостей
-                                        </div>
-                                        <div class="hotel-room-row__additionally">
-                                            <div class="hotel-room-row__taxes">
-                                                Налоги включены
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__cancellation">
+                                                Бесплатная отмена до 23 сентября*
+                                            </div>
+                                            <div class="hotel-room-row__payment">
+                                                Оплата сейчас
                                             </div>
                                         </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__price">
+                                                5580 ₽
+                                            </div>
+                                            <div class="hotel-room-row__term">
+                                                за ночь для 2 гостей
+                                            </div>
+                                            <div class="hotel-room-row__additionally">
+                                                <div class="hotel-room-row__taxes">
+                                                    Налоги включены
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <button
+                                                class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
+                                                Забронировать
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="hotel-room-row">
+                                        <div class="hotel-room-row__cell">
+                                            <ul class="hotel-room-row__list">
+                                                <li>
+                                                    Двуспальная кровать
+                                                </li>
+                                                <li class="_marked-item">
+                                                    Завтрак включен
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                            </ul>
+                                            <div class="hotel-room-row__list-more">
+                                                <span>
+                                                    Больше информации
+                                                </span>
+                                                <i class="fas fa-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__cancellation">
+                                                Бесплатная отмена до 23 сентября*
+                                            </div>
+                                            <div class="hotel-room-row__payment">
+                                                Оплата сейчас
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__price">
+                                                7140 ₽
+                                            </div>
+                                            <div class="hotel-room-row__term">
+                                                за ночь для 2 гостей
+                                            </div>
+                                            <div class="hotel-room-row__additionally">
+                                                <div class="hotel-room-row__taxes">
+                                                    Налоги включены
+                                                </div>
+                                            </div>
 
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <button
-                                            class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
-                                            Забронировать
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="hotel-room-row _hidden">
-                                    <div class="hotel-room-row__cell">
-                                        <ul class="hotel-room-row__list">
-                                            <li>
-                                                Двуспальная кровать
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                            <li>
-                                                Питание не включено
-                                            </li>
-                                            <li>
-                                                Кровать размера «queen size»
-                                            </li>
-                                            <li>
-                                                Окно
-                                            </li>
-                                        </ul>
-                                        <div class="hotel-room-row__list-more">
-                                            <span>
-                                                Больше информации
-                                            </span>
-                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <button
+                                                class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
+                                                Забронировать
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__cancellation">
-                                            Бесплатная отмена до 23 сентября*
-                                        </div>
-                                        <div class="hotel-room-row__payment">
-                                            Оплата сейчас
-                                        </div>
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <div class="hotel-room-row__price">
-                                            5580 ₽
-                                        </div>
-                                        <div class="hotel-room-row__term">
-                                            за ночь для 2 гостей
-                                        </div>
-                                        <div class="hotel-room-row__additionally">
-                                            <div class="hotel-room-row__taxes">
-                                                Налоги включены
+                                    <div class="hotel-room-row _hidden">
+                                        <div class="hotel-room-row__cell">
+                                            <ul class="hotel-room-row__list">
+                                                <li>
+                                                    Двуспальная кровать
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                                <li>
+                                                    Питание не включено
+                                                </li>
+                                                <li>
+                                                    Кровать размера «queen size»
+                                                </li>
+                                                <li>
+                                                    Окно
+                                                </li>
+                                            </ul>
+                                            <div class="hotel-room-row__list-more">
+                                                <span>
+                                                    Больше информации
+                                                </span>
+                                                <i class="fas fa-chevron-down"></i>
                                             </div>
                                         </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__cancellation">
+                                                Бесплатная отмена до 23 сентября*
+                                            </div>
+                                            <div class="hotel-room-row__payment">
+                                                Оплата сейчас
+                                            </div>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <div class="hotel-room-row__price">
+                                                5580 ₽
+                                            </div>
+                                            <div class="hotel-room-row__term">
+                                                за ночь для 2 гостей
+                                            </div>
+                                            <div class="hotel-room-row__additionally">
+                                                <div class="hotel-room-row__taxes">
+                                                    Налоги включены
+                                                </div>
+                                            </div>
 
-                                    </div>
-                                    <div class="hotel-room-row__cell">
-                                        <button
-                                            class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
-                                            Забронировать
-                                        </button>
+                                        </div>
+                                        <div class="hotel-room-row__cell">
+                                            <button
+                                                class="btn btn-custom btn-custom_h_40 btn-custom_w_100p hotel-room-row__book">
+                                                Забронировать
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1664,7 +1664,6 @@
                     <div class="hotel-paid-locally__grid">
                         <div class="hotel-paid-locally-item">
                             <div class="hotel-paid-locally-item__title">
-                                <i class="fas fa-sign-in-alt hotel-paid-locally-item__icon"></i>
                                 Депозит
                             </div>
                             <div class="hotel-paid-locally-item__inner">
@@ -1688,7 +1687,6 @@
                         </div>
                         <div class="hotel-paid-locally-item">
                             <div class="hotel-paid-locally-item__title">
-                                <i class="fas fa-sign-in-alt hotel-paid-locally-item__icon"></i>
                                 Дополнительная кровать
                             </div>
                             <div class="hotel-paid-locally-item__inner">
@@ -1712,7 +1710,6 @@
                         </div>
                         <div class="hotel-paid-locally-item">
                             <div class="hotel-paid-locally-item__title">
-                                <i class="fas fa-sign-in-alt hotel-paid-locally-item__icon"></i>
                                 Детская люлька
                             </div>
                             <div class="hotel-paid-locally-item__inner">
@@ -1736,7 +1733,6 @@
                         </div>
                         <div class="hotel-paid-locally-item">
                             <div class="hotel-paid-locally-item__title">
-                                <i class="fas fa-sign-in-alt hotel-paid-locally-item__icon"></i>
                                 Животные
                             </div>
                             <div class="hotel-paid-locally-item__inner">
@@ -2494,114 +2490,187 @@
                     Похожие отели
                 </div>
                 <div class="popular-hotel-slider-wrapper">
-                    <div class="swiper popular-hotel-slider">
+                    <div class="swiper similar-hotel-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="card-popular-hotel card-popular-hotel_slide">
-                                    <a href="#" class="card-popular-hotel__top">
-                                        <img src="img/popular-hotel-slider/popular-hotel-slide1.png" alt=""
-                                            class="card-popular-hotel__image">
-                                    </a>
-                                    <div class="card-popular-hotel__bottom">
-                                        <div class="card-popular-hotel__name">
-                                            <a href="#">
-                                                Санкт-Петербург
-                                            </a>
+                                <div class="card-hotel">
+                                    <a href="#" class="card-hotel__top">
+                                        <img src="img/best-hotel/best-hotel1.png" alt="" class="card-hotel__image">
+                                        <div class="hotel-rating card-hotel__rating">
+                                            8,8
                                         </div>
-                                        <div class="card-popular-hotel__info">
-                                            <div class="card-popular-hotel__count">
-                                                962 варианта
+                                    </a>
+                                    <div class="card-hotel__bottom">
+                                        <div class="card-hotel__info">
+                                            <div class="card-hotel__stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
                                             </div>
+                                            <div class="card-hotel__name">
+                                                <a href="#">
+                                                    Отель Kostas
+                                                </a>
+                                            </div>
+                                            <div class="card-hotel__location">
+                                                3,9 км от центра Санкт-Петербурга
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel__btns">
+                                            <button class="btn btn-custom card-hotel__btn">
+                                                от 464 ₽
+                                                <i class="fa fa-chevron-right"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="card-popular-hotel card-popular-hotel_slide">
-                                    <a href="#" class="card-popular-hotel__top">
-                                        <img src="img/popular-hotel-slider/popular-hotel-slide2.png" alt=""
-                                            class="card-popular-hotel__image">
-                                    </a>
-                                    <div class="card-popular-hotel__bottom">
-                                        <div class="card-popular-hotel__name">
-                                            <a href="#">
-                                                Отели
-                                            </a>
+                                <div class="card-hotel">
+                                    <a href="#" class="card-hotel__top">
+                                        <img src="img/best-hotel/best-hotel2.png" alt="" class="card-hotel__image">
+                                        <div class="hotel-rating card-hotel__rating">
+                                            8,5
                                         </div>
-                                        <div class="card-popular-hotel__info">
-                                            <div class="card-popular-hotel__count">
-                                                89 480 вариантов
+                                    </a>
+                                    <div class="card-hotel__bottom">
+                                        <div class="card-hotel__info">
+                                            <div class="card-hotel__stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
                                             </div>
+                                            <div class="card-hotel__name">
+                                                <a href="#">
+                                                    Гранд Отель Эмеральд
+                                                </a>
+                                            </div>
+                                            <div class="card-hotel__location">
+                                                3,1 км от центра Санкт-Петербурга
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel__btns">
+                                            <button class="btn btn-custom card-hotel__btn">
+                                                от 1364 ₽
+                                                <i class="fa fa-chevron-right"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="card-popular-hotel card-popular-hotel_slide">
-                                    <a href="#" class="card-popular-hotel__top">
-                                        <img src="img/popular-hotel-slider/popular-hotel-slide3.png" alt=""
-                                            class="card-popular-hotel__image">
-                                    </a>
-                                    <div class="card-popular-hotel__bottom">
-                                        <div class="card-popular-hotel__name">
-                                            <a href="#">
-                                                Апартаменты и квартиры
-                                            </a>
+                                <div class="card-hotel">
+                                    <a href="#" class="card-hotel__top">
+                                        <img src="img/best-hotel/best-hotel3.png" alt="" class="card-hotel__image">
+                                        <div class="hotel-rating card-hotel__rating">
+                                            9,2
                                         </div>
-                                        <div class="card-popular-hotel__info">
-                                            <div class="card-popular-hotel__count">
-                                                90 822 варианта
+                                    </a>
+                                    <div class="card-hotel__bottom">
+                                        <div class="card-hotel__info">
+                                            <div class="card-hotel__stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
                                             </div>
+                                            <div class="card-hotel__name">
+                                                <a href="#">
+                                                    Талион Империал Отель
+                                                </a>
+                                            </div>
+                                            <div class="card-hotel__location">
+                                                400 м от центра Санкт-Петербурга
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel__btns">
+                                            <button class="btn btn-custom card-hotel__btn">
+                                                от 989 ₽
+                                                <i class="fa fa-chevron-right"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="card-popular-hotel card-popular-hotel_slide">
-                                    <a href="#" class="card-popular-hotel__top">
-                                        <img src="img/popular-hotel-slider/popular-hotel-slide4.png" alt=""
-                                            class="card-popular-hotel__image">
-                                    </a>
-                                    <div class="card-popular-hotel__bottom">
-                                        <div class="card-popular-hotel__name">
-                                            <a href="#">
-                                                Курортные отели и санатории
-                                            </a>
+                                <div class="card-hotel">
+                                    <a href="#" class="card-hotel__top">
+                                        <img src="img/best-hotel/best-hotel1.png" alt="" class="card-hotel__image">
+                                        <div class="hotel-rating card-hotel__rating">
+                                            8,8
                                         </div>
-                                        <div class="card-popular-hotel__info">
-                                            <div class="card-popular-hotel__count">
-                                                8198 вариантов
+                                    </a>
+                                    <div class="card-hotel__bottom">
+                                        <div class="card-hotel__info">
+                                            <div class="card-hotel__stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
                                             </div>
+                                            <div class="card-hotel__name">
+                                                <a href="#">
+                                                    Отель Kostas
+                                                </a>
+                                            </div>
+                                            <div class="card-hotel__location">
+                                                3,9 км от центра Санкт-Петербурга
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel__btns">
+                                            <button class="btn btn-custom card-hotel__btn">
+                                                от 464 ₽
+                                                <i class="fa fa-chevron-right"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="card-popular-hotel card-popular-hotel_slide">
-                                    <a href="#" class="card-popular-hotel__top">
-                                        <img src="img/popular-hotel-slider/popular-hotel-slide2.png" alt=""
-                                            class="card-popular-hotel__image">
-                                    </a>
-                                    <div class="card-popular-hotel__bottom">
-                                        <div class="card-popular-hotel__name">
-                                            <a href="#">
-                                                Виллы и частные дома
-                                            </a>
+                                <div class="card-hotel">
+                                    <a href="#" class="card-hotel__top">
+                                        <img src="img/best-hotel/best-hotel2.png" alt="" class="card-hotel__image">
+                                        <div class="hotel-rating card-hotel__rating">
+                                            8,5
                                         </div>
-                                        <div class="card-popular-hotel__info">
-                                            <div class="card-popular-hotel__count">
-                                                77 989 вариантов
+                                    </a>
+                                    <div class="card-hotel__bottom">
+                                        <div class="card-hotel__info">
+                                            <div class="card-hotel__stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
                                             </div>
+                                            <div class="card-hotel__name">
+                                                <a href="#">
+                                                    Гранд Отель Эмеральд
+                                                </a>
+                                            </div>
+                                            <div class="card-hotel__location">
+                                                3,1 км от центра Санкт-Петербурга
+                                            </div>
+                                        </div>
+                                        <div class="card-hotel__btns">
+                                            <button class="btn btn-custom card-hotel__btn">
+                                                от 1364 ₽
+                                                <i class="fa fa-chevron-right"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-custom-btn swiper-custom-btn_prev popular-hotel-slider-prev">
+                    <div class="swiper-custom-btn swiper-custom-btn_prev similar-hotel-slider-prev">
                         <i class="fas fa-chevron-left"></i>
                     </div>
-                    <div class="swiper-custom-btn swiper-custom-btn_next popular-hotel-slider-next">
+                    <div class="swiper-custom-btn swiper-custom-btn_next similar-hotel-slider-next">
                         <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
