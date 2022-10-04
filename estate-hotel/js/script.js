@@ -594,7 +594,7 @@ $(function () {
             hintContent: 'Отель Kostas',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/map-pin.svg',
+            iconImageHref: './img/map-pin.svg',
             iconImageSize: [36, 36],
             iconImageOffset: [-18, -32]
         });
@@ -607,7 +607,7 @@ $(function () {
             hintContent: 'Отель Kostas',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/map-pin.svg',
+            iconImageHref: './img/map-pin.svg',
             iconImageSize: [36, 36],
             iconImageOffset: [-18, -32]
         });
@@ -649,7 +649,7 @@ $(function () {
             hintContent: 'Отель Kostas',
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/map-pin.svg',
+            iconImageHref: './img/map-pin.svg',
             iconImageSize: [36, 36],
             iconImageOffset: [-18, -32]
         });
