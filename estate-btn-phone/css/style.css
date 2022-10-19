@@ -1,0 +1,29 @@
+.btn-phone-floating {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: 0.4s;
+  padding: 0 16px 20px;
+  width: 100%;
+}
+.btn-phone-floating._hide {
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+}
+.btn-phone-floating__btn {
+  width: 100%;
+}
+.btn-phone-floating__btn i {
+  margin-right: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-phone-floating {
+    display: none;
+  }
+}
