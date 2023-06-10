@@ -1,3 +1,9 @@
+
+
+.pull-left img {
+  width: 100px;
+}
+
 .modal-body-payment p {
   font-size: 18px;
   margin-bottom: 20px;
