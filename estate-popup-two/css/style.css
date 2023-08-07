@@ -215,7 +215,12 @@
   color: #000;
   margin-bottom: 20px; 
 }
-
+.modal-application__title.col-sm-12 {
+  padding-left: 60px;
+  padding-right: 80px;
+  margin-bottom: 8px;
+  padding-top: 12px;
+}
 
 .modal-application-list {
   background: whitesmoke;
@@ -250,7 +255,7 @@
   color: #333333; }
 
 .modal-application-form {
-  padding-top: 58px; 
+  /*padding-top: 58px; */
 }
 
 
@@ -388,6 +393,12 @@
   .modal-application .modal-body {
     padding: 8px 14px 17px 14px; 
   } 
+  .modal-application__title.col-sm-12 {
+    padding-left: 29px;
+    padding-right: 29px;
+    margin-bottom: 8px;
+    padding-top: 12px;
+  }
   .modal-application__button {
     font-size: 14px;
     line-height: 18px; 
@@ -420,5 +431,11 @@
   .modal-application .modal-body > *{
     padding-left: 0;
     padding-right: 0;
+  }
+  .modal-application__title.col-sm-12 {
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-bottom: 8px;
+    padding-top: 12px;
   }
 }

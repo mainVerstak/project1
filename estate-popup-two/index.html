@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/" style="color:#337ab7;">
+                                <img src="img/logo.svg" alt="">
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click"><i class="fa fa-edit fa-lg"></i><span
+                                            class="hidden-sm hidden-md"> Выписки</span></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="nav navbar-nav"><a href="/sign-in">
+                                        <div class="navbar-link"><i class="fa fa-sign-in"></i> Войти</div>
+                                    </a></li>
+                                <li class="nav navbar-nav"><a href="/sign-up">
+                                        <div class="navbar-link"><i class="fa fa-user-plus"></i> Зарегистрироваться
+                                        </div>
+                                    </a></li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color"><a data-no-turbolink="true"
+                                            href="/estate-new">
+                                            <div class="btn btn-warning"><i class="fa fa-plus fa-lg"></i> Подать
+                                                объявление</div>
+                                        </a></div>
+                                </li>
+                            </ul>
+                        </div><button aria-label="Close" class="sidenav__close" type="button"><i
+                                class="fa fa-close"></i></button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+
+
+        <div>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-payment">
+                Popap с картами
+            </button>
+        </div>
+        <br>
+        <div>
+            <button typee="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-1">
+                Popap "форма"
+            </button>
+        </div>
+        <br>
+        <div>
+            <button typee="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-2">
+                Popap "текст"
+            </button>
+        </div>
+        <br>
+        <div>
+            <button typee="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-3">
+                Popap "ссылка"
+            </button>
+        </div>
+        <br>
+        <div>
+            <button typee="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-4">
+                Popap "одобрено"
+            </button>
+        </div>
+        <br>
+
+        <div class="modal fade" id="modal-payment" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close js-remove-card" data-dismiss="modal">&times;</button>
+                        <div class="modal-title h4">Оплата</div>
+                    </div>
+                    <div class="modal-body modal-body-payment">
+                        <p>К оплате: 150 рублей</p>
+                        <label class="radio-card">
+                            <input type="radio" checked="checked" name="card-radio">
+                            <span class="radio-card__inner">
+                                <span class="radio-card__checkmark"></span>
+                                <span class="radio-card__content">
+                                    <span class="radio-card__img">
+                                        <img src="img/payment-vis.png">
+                                    </span>
+                                    <span class="radio-card__text">55559 49** **** 0050</span>
+                                </span>
+                                <button type="button" class="close js-remove-card" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            </span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="card-radio">
+                            <span class="radio-card__inner">
+                                <span class="radio-card__checkmark"></span>
+                                <span class="radio-card__content">
+                                    <span class="radio-card__img">
+                                        <img src="img/payment-mc.png">
+                                    </span>
+                                    <span class="radio-card__text">55559 49** **** 0050</span>
+                                </span>
+                                <button type="button" class="close js-remove-card" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            </span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="card-radio">
+                            <span class="radio-card__inner">
+                                <span class="radio-card__checkmark"></span>
+                                <span class="radio-card__content">
+                                    <span class="radio-card__img">
+                                        <img src="img/payment-m.png">
+                                    </span>
+                                    <span class="radio-card__text">55559 49** **** 0050</span>
+                                </span>
+                                <button type="button" class="close js-remove-card" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            </span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="card-radio">
+                            <span class="radio-card__inner">
+                                <span class="radio-card__checkmark"></span>
+                                <span class="radio-card__content">
+                                    <span class="radio-card__img">
+                                        <img src="img/payment-jcb.png">
+                                    </span>
+                                    <span class="radio-card__text">55559 49** **** 0050</span>
+                                </span>
+                                <button type="button" class="close js-remove-card" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            </span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="card-radio">
+                            <span class="radio-card__inner">
+                                <span class="radio-card__checkmark"></span>
+                                <span class="radio-card__content">
+                                    <span class="radio-card__img">
+                                        <img src="img/payment-up.png">
+                                    </span>
+                                    <span class="radio-card__text">55559 49** **** 0050</span>
+                                </span>
+                                <button type="button" class="close js-remove-card" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            </span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="card-radio">
+                            <span class="radio-card__inner">
+                                <span class="radio-card__checkmark"></span>
+                                <span class="radio-card__content">
+                                    <span class="radio-card__img">
+                                        <img src="img/payment-maestro.png">
+                                    </span>
+                                    <span class="radio-card__text">55559 49** **** 0050</span>
+                                </span>
+                                <button type="button" class="close js-remove-card" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            </span>
+                        </label>
+                        <button type="button" class="btn btn-default btn-lg modal-body-payment__btn-add">
+                            <i class="fa fa-plus"></i>
+                            Новая карта
+                        </button>
+                    </div>
+                    <div class="modal-footer modal-footer-payment">
+                        <button class="btn btn-primary btn-lg modal-body-payment__btn-pay">
+                            Оплатить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-application fade" id="modal-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close js-remove-card" data-dismiss="modal">
+                            <img src="img/exet-icon.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="modal-title col-sm-12 modal-application__title">Заявка на бронирование Какой то текст: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sequi </div>
+                    <div class="modal-body row">
+                        <div class="col-sm-6">
+                            <div class="modal-application-list">
+                                <h5 class="modal-application-list__title">
+                                    Комната
+                                </h5>
+                                <ul>
+                                    <li class="modal-application-list__item">
+                                        Этаж: 3
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Этажей: 5
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Площадь: 20.0 м.кв
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Тип дома: кирпичный дом
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Адрес: г.Москва, ул Валовая, 10
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Метро: метро Пелевецкая
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form class="col-sm-6 modal-application-form _form">
+                            <div class="signup-box__input-inner modal-application-input">
+                                <h5>
+                                    Ваше имя
+                                </h5>
+                                <input autocomplete="off" placeholder="Имя" type="text" class="form-control _req">
+                                <span class="modal-application-input__errore">
+                                    Пожалуйста, введите имя
+                                </span>
+                            </div>
+                            <div class="signup-box__input-inner modal-application-input">
+                                <h5>
+                                    Введите номер телефона
+                                </h5>
+                                <input data-tel-input autocomplete="off" placeholder="Телефон" type="tel" class="form-control _req">
+                                <span class="modal-application-input__errore">
+                                    Пожалуйста, введите верный телефон
+                                </span>
+                            </div>
+                            <button class="btn btn-primary btn-lg col-xs-12 modal-application__button">
+                                <img src="img/arrow-icon.svg" alt="">
+                                Получить код подтвержения
+                            </button>
+                            <div class="col-xs-12 modal-application__text">
+                                <p>
+                                    Нажимая кнопку, я даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных <a href="#">Политикой конфиденциальности.</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-application fade" id="modal-2">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close js-remove-card" data-dismiss="modal">
+                            <img src="img/exet-icon.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="modal-title col-sm-12 modal-application__title">Заявка на бронирование Какой то текст: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sequi </div>
+                    <div class="modal-body row">
+                        <div class="col-sm-6">
+                            <div class="modal-application-list">
+                                <h5 class="modal-application-list__title">
+                                    Комната
+                                </h5>
+                                <ul>
+                                    <li class="modal-application-list__item">
+                                        Этаж: 3
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Этажей: 5
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Площадь: 20.0 м.кв
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Тип дома: кирпичный дом
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Адрес: г.Москва, ул Валовая, 10
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Метро: метро Пелевецкая
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form class="col-sm-6 modal-application-form _form">
+                            <div class="signup-box__input-inner modal-application-input">
+                                <h5>
+                                    Введите полученный код
+                                </h5>
+                                <input autocomplete="off" placeholder="код" type="number" class="form-control _req">
+                                <span class="modal-application-input__errore">
+                                    Пожалуйста, введите код
+                                </span>
+                            </div>
+                            <button class="btn btn-primary btn-lg col-xs-12 modal-application__button">
+                                Подтвердить
+                            </button>
+                            <div class="col-xs-12 modal-application__text">
+                                <p>
+                                    Запросить новый код через <span>00:46</span>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-application fade" id="modal-3">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close js-remove-card" data-dismiss="modal">
+                            <img src="img/exet-icon.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="modal-title col-sm-12 modal-application__title">Заявка на бронирование Какой то текст: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sequi </div>
+                    <div class="modal-body row">
+                        <div class="col-sm-6">
+                            <div class="modal-application-list">
+                                <h5 class="modal-application-list__title">
+                                    Комната
+                                </h5>
+                                <ul>
+                                    <li class="modal-application-list__item">
+                                        Этаж: 3
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Этажей: 5
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Площадь: 20.0 м.кв
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Тип дома: кирпичный дом
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Адрес: г.Москва, ул Валовая, 10
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Метро: метро Пелевецкая
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form class="col-sm-6 modal-application-form _form">
+                            <div class="signup-box__input-inner modal-application-input">
+                                <h5>
+                                    Введите полученный код
+                                </h5>
+                                <input autocomplete="off" placeholder="код" type="number" class="form-control _req">
+                                <span class="modal-application-input__errore">
+                                    Пожалуйста, введите код
+                                </span>
+                            </div>
+                            <button class="btn btn-primary btn-lg col-xs-12 modal-application__button">
+                                Подтвердить
+                            </button>
+                            <div class="col-xs-12 modal-application__text">
+                                <p>
+                                    <a href="#">Запросить код повторно</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-application fade" id="modal-4">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close js-remove-card" data-dismiss="modal">
+                            <img src="img/exet-icon.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="modal-title col-sm-12 modal-application__title">Заявка на бронирование Какой то текст: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sequi </div>
+                    <div class="modal-body row">
+                        <div class="col-sm-6">
+                            <div class="modal-application-list">
+                                <h5 class="modal-application-list__title">
+                                    Комната
+                                </h5>
+                                <ul>
+                                    <li class="modal-application-list__item">
+                                        Этаж: 3
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Этажей: 5
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Площадь: 20.0 м.кв
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Тип дома: кирпичный дом
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Адрес: г.Москва, ул Валовая, 10
+                                    </li>
+                                    <li class="modal-application-list__item">
+                                        Метро: метро Пелевецкая
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form class="col-sm-6 modal-application-form _form">
+                            <div>
+                                <img src="img/confirmation-icon.svg" alt="" class="modal-application-form__img">
+                            </div>
+                            <div>
+                                <h5 class="modal-application-form__title">
+                                    Заявка на бронирование
+                                </h5>
+                            </div>
+                            <div>
+                                <p class="modal-application-form__text">
+                                    Мы свяжемся с вами в ближайшее время
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
