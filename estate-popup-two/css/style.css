@@ -433,13 +433,13 @@
   }
   .modal-application .modal-header {
     padding-top: 0;
-    min-height: 0;
+    min-height: 2px;
     position: relative;
     z-index: 10;
   }
   .modal-application .close {
     position: absolute;
-    top: 12px;
+    top: 14px;
     right: 29px;
   }
   .modal-application__text {
@@ -447,8 +447,10 @@
   }
 
   .modal-application .modal-body {
-    padding-bottom: 2px;
-
+    padding-bottom: 4px;
+  }
+  .modal-application__button {
+    margin-top: 2px;
   }
 }
 
