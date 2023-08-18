@@ -4361,6 +4361,107 @@ label.input-label {
   color: #333333;
 }
 
+/*==================================*/
+
+.tariff-footer {
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tariff-paginaton {
+  font-size: 0;
+  display: flex;
+}
+.tariff-paginaton__item {
+  height: 40px;
+  min-width: 40px;
+  border: 1px solid rgba(50, 59, 106, 0.3);
+  border-right: 0px solid rgba(50, 59, 106, 0.3);
+
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+
+  font-size: 15px;
+  color: #323b6a !important;
+  text-decoration: none !important;
+}
+.tariff-paginaton__item:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.tariff-paginaton__item:last-child {
+  border-right: 1px solid rgba(50, 59, 106, 0.3);
+  border-radius: 0 4px 4px 0;
+}
+.tariff-paginaton__item img {
+  height: 10px;
+}
+
+
+.tariff-select {
+  max-width: 100%;
+}
+.tariff-select .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  display: block !important;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(5px);
+}
+.tariff-select .dropdown-toggle {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+.tariff-select.open .dropdown-menu {
+  opacity: 1 !important;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+.tariff-select.open .caret {
+  transform: rotate(-45deg);
+  margin-top: 3px;
+}
+.tariff-select .caret {
+  transition: all 0.3s ease 0s;
+}
+
+
+.tariff-select * {
+  font-size: 14px;
+  color: #323b6a !important;
+}
+
+/*====================*/
+
+.tariff-header .mortgage-main__text {
+  color: #323b6a;
+  margin-bottom: 6px;
+  font-size: 21px;
+  line-height: 100%;
+  text-align: left !important;
+  font-weight: bold;
+}
+.tariff-header .calc-mortgage-new__label {
+  margin-bottom: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .tariff-footer {
+    display: block;
+  }
+  .tariff-header .mortgage-main__text {
+    margin-bottom: 4px;
+    font-size: 19px;
+  }
+}
+
+
 @media screen and (max-width: 1279px) {
   .swiper-custom-btn_prev {
     left: -10px;
