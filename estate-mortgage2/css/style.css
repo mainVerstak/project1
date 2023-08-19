@@ -4412,7 +4412,7 @@ label.input-label {
   opacity: 0;
   transform: translateY(12px);
   border: 2px solid  #d1daf3;
-  border-bottom: 2px solid #fff;
+  border-bottom: 0px solid #fff;
 }
 .tariff-select .dropdown-toggle {
   /*padding-right: 0;
