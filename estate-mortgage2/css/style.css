@@ -4493,6 +4493,21 @@ label.input-label {
     margin-bottom: 4px;
     font-size: 19px;
   }
+
+  .table-tariff2.table-tariff2_no-last-pading .table-tariff2__item-inner{
+    max-width: 35vw;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  .table-tariff2.table-tariff2_no-last-pading .table-tariff2__item-inner:after{
+    content: "...";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    padding-left: 2px;
+  }
 }
 
 
