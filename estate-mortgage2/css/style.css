@@ -4376,8 +4376,8 @@ label.input-label {
 .tariff-paginaton__item {
   height: 40px;
   min-width: 40px;
-  border: 1px solid rgba(50, 59, 106, 0.3);
-  border-right: 0px solid rgba(50, 59, 106, 0.3);
+  border: 1px solid #323b6a;
+  border-right: 0px solid #323b6a;
 
   display: flex;
   justify-content:  center;
@@ -4388,11 +4388,11 @@ label.input-label {
   text-decoration: none !important;
 }
 .tariff-paginaton__item:first-child {
-  border-radius: 4px 0 0 4px;
+  /*border-radius: 4px 0 0 4px;*/
 }
 .tariff-paginaton__item:last-child {
-  border-right: 1px solid rgba(50, 59, 106, 0.3);
-  border-radius: 0 4px 4px 0;
+  border-right: 1px solid #323b6a;
+  /*border-radius: 0 4px 4px 0*/
 }
 .tariff-paginaton__item img {
   height: 10px;
@@ -4410,11 +4410,20 @@ label.input-label {
   display: block !important;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(5px);
+  transform: translateY(12px);
+  border: 2px solid  #d1daf3;
+  border-bottom: 2px solid #fff;
 }
 .tariff-select .dropdown-toggle {
-  padding-right: 0;
-  padding-left: 0;
+  /*padding-right: 0;
+  padding-left: 0;*/
+  background: #F0F2F7;
+  z-index: 1001;
+  position: relative;
+}
+.tariff-select.open .dropdown-toggle {
+  background: #d1daf3 !important;
+  opacity: 1 !important;
 }
 
 
@@ -4438,7 +4447,9 @@ label.input-label {
 }
 
 /*====================*/
-
+.tariff-header {
+  margin-top: 0;
+}
 .tariff-header .mortgage-main__text {
   color: #323b6a;
   margin-bottom: 6px;
@@ -4448,12 +4459,35 @@ label.input-label {
   font-weight: bold;
 }
 .tariff-header .calc-mortgage-new__label {
-  margin-bottom: 14px;
+  margin-bottom: 0px;
 }
 
+
+.table-tariff2.table-tariff2_no-last-pading tr:last-child td {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.table-tariff2.table-tariff2_no-last-pading .table-tariff2-head th {
+  border: 0px solid #000;
+}
+@media screen and (min-width: 1064px) {
+  .tariff-select .dropdown-toggle,
+  .tariff-paginaton__item {
+    transition: all 0.3s ease 0s;
+  }
+  .tariff-select .dropdown-toggle:hover {
+    background: #dfe5f4;
+  }
+  .tariff-paginaton__item:hover {
+    background: #F0F2F7;
+  }
+}
 @media screen and (max-width: 767px) {
   .tariff-footer {
     display: block;
+  }
+  .tariff-select {
+    margin-top: 12px;
   }
   .tariff-header .mortgage-main__text {
     margin-bottom: 4px;
