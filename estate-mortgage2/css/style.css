@@ -4494,13 +4494,13 @@ label.input-label {
     font-size: 19px;
   }
 
-  .table-tariff2.table-tariff2_no-last-pading .table-tariff2__item-inner{
+  .table-tariff2.table-tariff2_no-last-pading a.table-tariff2__item-inner{
     max-width: 35vw;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
   }
-  .table-tariff2.table-tariff2_no-last-pading .table-tariff2__item-inner:after{
+  .table-tariff2.table-tariff2_no-last-pading a.table-tariff2__item-inner:after{
     content: "...";
     position: absolute;
     right: 0;
