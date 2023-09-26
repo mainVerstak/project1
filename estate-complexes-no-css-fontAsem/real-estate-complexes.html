@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/application.css">
+    <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-solid-900-46ceebee30b67c3a4069e6c3628ecb3b.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-regular-400-2993c60da9be4d93171c0ef84f526296.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-brands-400-bdf20237f332cb149d1257204b9c7a37.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-solid-900-da502dd49429929efe4491ea717385df.woff" rel="preload" type="font/woff">
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-regular-400-bb16ff1cf8f16a7afc0d69f3e285b259.woff" rel="preload" type="font/woff">
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-brands-400-91d46316549eed7674ab4d84d1eed0ab.woff" rel="preload" type="font/woff">
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-solid-900-52d6eb8288d6fc7758d69a214834493e.ttf" rel="preload" type="font/ttf">
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-regular-400-34c0c48ead8cf921906a034ac359c3b1.ttf" rel="preload" type="font/ttf">
+    <link as="font" crossorigin="anonymous" href="https://s.olan.ru/assets/font-awesome/fa-brands-400-d801107638bbc6fdbe35e6c94a4fd3ec.ttf" rel="preload" type="font/ttf">
+    <link rel="stylesheet" media="screen" href="https://s.olan.ru/assets/application-401e186d2d8564453ddf39d73f865303.css">
+
+    <link rel="stylesheet" href="css/fotorama.css">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <style type="text/css">
+        .card-complex__favorite-icon {
+            font-size: 14px;
+        }
+        .header-top-nav {
+            position: relative;
+            z-index: 1000;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top-nav">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <div class="dropdown header-city">
+                            <div class="dropdown-toggle header-city-btn" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Москва
+                                <span class="caret"></span>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Москва</a></li>
+                                <li><a href="#">Москва2</a></li>
+                                <li><a href="#">Москва3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="yaSend" href="/documents" title="Выписки из ЕГРН" yaparam="header_document_click">
+                            <i class="fa fa-edit fa-lg"></i>
+                            Выписки
+                        </a>
+                    </li>
+                    <li class="navbar-nav__hide-mobile">
+                        <a href="#">
+                            <i class="fas fa-money-bill-wave"></i>
+                            Тарифы и цены
+                        </a>
+                    </li>
+                    <li class="navbar-nav__hide-mobile" i>
+                        <a href="#">
+                            <i class="fas fa-file-code"></i>
+                            Пакетная загрузка
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle sidenav-button" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="pull-left">
+                            <a class="navbar-brand" href="/">
+                                <img src="img/logo.svg" class="navbar-brand__logo">
+                            </a>
+                        </span>
+                    </div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="sidenav__hide-desktop">
+                                    <div class="dropdown header-city">
+                                        <div class="dropdown-toggle header-city-btn" type="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Москва
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Москва</a></li>
+                                            <li><a href="#">Москва2</a></li>
+                                            <li><a href="#">Москва3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-in">
+                                        <div class="navbar-link">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Войти
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <a href="/sign-up">
+                                        <div class="navbar-link">
+                                            <i class="fa fa-user-plus"></i>
+                                            Зарегистрироваться
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color">
+                                        <a data-no-turbolink="true" href="/estate-new">
+                                            <div class="btn btn-warning">
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                Подать объявление
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Тарифы и цены
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click">
+                                        <i class="fa fa-edit fa-lg"></i>
+                                        Выписки
+                                    </a>
+                                </li>
+                                <li class="sidenav__hide-desktop">
+                                    <a href="#">
+                                        <i class="fas fa-file-code"></i>
+                                        Пакетная загрузка
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Недвижимость от собственников и агентов: 5861807 объявлений в базе Всн ру</h1>
+        <div class="searchFormPage well well-sm clearfix" itemscope="itemscope" itemtype="http://schema.org/WebSite">
+            <form accept-charset="UTF-8" action="/"
+                class="form form-inline withoutBootstrapValidator search_form_action" data-remote="true"
+                data-root-section-class="Section" itemprop="potentialAction" itemscope="itemscope"
+                itemtype="http://schema.org/SearchAction" method="get" role="form">
+                <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
+                <meta content="https://vsn.ru?advertisement[description]={q}" itemprop="target">
+                <div itemprop="query-input" itemscope="itemscope"
+                    itemtype="http://schema.org/PropertyValueSpecification">
+                    <meta content="q" itemprop="valueName">
+                </div>
+                <div class="form-group offerTypeButtons"><label>Я хочу</label>
+                    <div class="btn-group" data-toggle="buttons"><label
+                            class="btn btn-default click_additional_search_params_action"><input
+                                name="advertisement[offer_type][]" type="checkbox" value="0">купить</label><label
+                            class="btn btn-default click_additional_search_params_action"><input
+                                name="advertisement[offer_type][]" type="checkbox" value="2">снять</label><label
+                            class="btn btn-default click_additional_search_params_action"><input
+                                name="advertisement[offer_type][]" type="checkbox" value="3">посуточно</label></div>
+                </div>
+                <div class="form-group categoryButtons">
+                    <div class="btn-group" data-toggle="buttons"><label
+                            class="btn btn-default click_additional_search_params_action"><span class="hidden-xs"><i
+                                    class="fa fa-home fa-lg"></i> </span><input name="advertisement[property_type][]"
+                                type="checkbox" value="1">жильё</label><label
+                            class="btn btn-default click_additional_search_params_action"><input
+                                name="advertisement[category][]" type="checkbox" value="1"> квартиру</label><label
+                            class="btn btn-default click_additional_search_params_action"><input
+                                name="advertisement[category][]" type="checkbox" value="2"> дом</label><label
+                            class="btn btn-default click_additional_search_params_action"><input
+                                name="advertisement[category][]" type="checkbox" value="4"> комнату</label></div>
+                    <div class="form-group propertyTypeButtons">
+                        <div class="btn-group" data-toggle="buttons"><label
+                                class="btn btn-default click_additional_search_params_action"><span class="hidden-xs"><i
+                                        class="fa fa-map-o"></i> </span><input name="advertisement[property_type][]"
+                                    type="checkbox" value="2">участок</label></div>
+                        <div class="btn-group" data-toggle="buttons"><label
+                                class="btn btn-default click_additional_search_params_action"><span class="hidden-xs"><i
+                                        class="fa fa-briefcase"></i> </span><input name="advertisement[property_type][]"
+                                    type="checkbox" value="0">коммерческую</label></div>
+                        <div class="btn-group" data-toggle="buttons"><label
+                                class="btn btn-default click_additional_search_params_action"><span class="hidden-xs"><i
+                                        class="fa fa-car"></i> </span><input name="advertisement[property_type][]"
+                                    type="checkbox" value="3">гараж</label></div>
+                    </div>
+                </div><br><span class="search_control_action"></span>
+                <div class="form-group"><label>место</label>
+                    <div class="btn-group">
+                        <div class="btn btn-default get-search-locations-action dropdown-toggle" data-toggle="dropdown"
+                            mode="single" style="min-width: 100px;"><span class="hidden-xs"><i
+                                    class="fa fa-globe fa-lg"></i> </span><span
+                                class="title-search-locations-action">выбрать</span> <i class="caret"></i></div>
+                    </div>
+                </div>
+                <div class="form-group"><label>цена</label>
+                    <div class="input-group"> <input autocomplete="off" class="form-control text-input-lg"
+                            name="advertisement[price_from]" placeholder="от" style="margin-right: -1px;"
+                            type="text"><input autocomplete="off" class="form-control text-input-lg"
+                            name="advertisement[price_to]" placeholder="до" type="text"><span
+                            class="input-group-addon input-sm"><i class="fa fa-rouble"></i></span></div>
+                </div>
+                <div class="btn-group" data-toggle="buttons"><label class="btn btn-xs btn-default"
+                        yaparam="from_owner"><i class="fa fa-check yaSend"></i> <input name="advertisement[owner]"
+                            type="checkbox" value="1">без посредников</label></div> <span
+                    class="additional_search_categories_container_action"></span> <span
+                    class="additional_search_subcategories_container_action"></span> <span
+                    class="additional_search_params_container_action"></span> <span
+                    class="additional_category_search_params_container_action"></span>
+                <div class="form-group"><label><i class="fa fa-tag"></i></label>
+                    <div class="description-group"><input autocomplete="off" class="form-control"
+                            name="advertisement[description]" placeholder=" поиск по тексту или №" type="text"></div>
+                </div>
+                <div class="form-group pull-right hidden-xs search_buttons"><span
+                        class="add_search_link_block_action"></span> <button class="btn btn-default map_search_btn"><i
+                            class="fa fa-map-o fa-lg"></i> На карте</button> <button class="btn btn-primary yaSend"
+                        style="width: 140px;" type="submit" yaparam="search"><i class="fa fa-search fa-lg"></i>
+                        Найти</button></div>
+                <div class="visible-xs"><input class="hidden" id="submitSearchForm" type="submit"><span
+                        class="add_search_link_block_action"></span></div>
+            </form>
+        </div>
+        <div class="complex-list">
+            <div class="card-complex">
+                <div class="card-complex__top">
+                    <div class="fotorama card-complex__fotorama" data-arrows="true" data-click="false" data-width="100%"
+                        data-height="100%">
+                        <img src="img/img1.png">
+                        <img src="img/img2.png">
+                        <img src="img/img3.png">
+                    </div>
+                    <div class="card-complex__tag-list">
+                        <div class="card-complex__tag">Строится</div>
+                        <div class="card-complex__tag">комфорт</div>
+                    </div>
+                    <div class="card-complex__favorite">
+                        <!--  fontawesome v5
+                            <i class="far fa-star card-complex__favorite-icon card-complex__favorite-inactive"></i>
+                            <i class="fas fa-star card-complex__favorite-icon card-complex__favorite-active"></i> 
+                        -->
+                        <i class="far fa-star card-complex__favorite-icon card-complex__favorite-inactive"></i>
+                        <i class="fas fa-star card-complex__favorite-icon card-complex__favorite-active"></i>
+                    </div>
+                </div>
+                <a href="#" class="card-complex__content">
+                    <div class="card-complex__name">
+                        Акватория
+                    </div>
+                    <div class="card-complex__company">
+                        Застройщик Московская Строительная Компания
+                    </div>
+                    <div class="card-complex__location">
+                        Ростов-на-Дону, пр. Космонавтов, 1В
+                    </div>
+                    <div class="card-complex__info">
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                Студии
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 24,48 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 1 765 008 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                1-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 42,9 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 3 654 150 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                2-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 43,2 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 3 576 150 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                3-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 64,3 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 5 078 120 ₽
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-complex__btn" data-num="+ 7 961 270 29 08">
+                        + 7 961 270 ×× ××
+                    </div>
+                </a>
+            </div>
+            <div class="card-complex">
+                <div class="card-complex__top">
+                    <div class="fotorama card-complex__fotorama" data-arrows="true" data-click="false" data-width="100%"
+                        data-height="100%">
+                        <img src="img/img1.png">
+                    </div>
+                    <div class="card-complex__tag-list">
+                        <div class="card-complex__tag">сдан</div>
+                        <div class="card-complex__tag">бизнес</div>
+                    </div>
+                    <div class="card-complex__favorite">
+                        <!--  fontawesome v5
+                            <i class="far fa-star card-complex__favorite-icon card-complex__favorite-inactive"></i>
+                            <i class="fas fa-star card-complex__favorite-icon card-complex__favorite-active"></i> 
+                        -->
+                        <i class="far fa-star card-complex__favorite-icon card-complex__favorite-inactive"></i>
+                        <i class="fas fa-star card-complex__favorite-icon card-complex__favorite-active"></i>
+                    </div>
+                </div>
+                <a href="#" class="card-complex__content">
+                    <div class="card-complex__name">
+                        Самоцветы
+                    </div>
+                    <div class="card-complex__company">
+                        Застройщик СУ-5 АКСАЙ
+                    </div>
+                    <div class="card-complex__location">
+                        Аксай, ул. Строителей
+                    </div>
+                    <div class="card-complex__info">
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                Студии
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 24,48 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 1 765 008 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                1-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 42,9 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 3 654 150 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                2-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 43,2 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 3 576 150 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                3-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 64,3 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 5 078 120 ₽
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-complex__btn" data-num="+ 7 961 270 29 08">
+                        + 7 961 270 ×× ××
+                    </div>
+                </a>
+            </div>
+            <div class="card-complex">
+                <div class="card-complex__top">
+                    <div class="fotorama card-complex__fotorama" data-arrows="true" data-click="false" data-width="100%"
+                        data-height="100%">
+                        <img src="img/img2.png">
+                        <img src="img/img3.png">
+                        <img src="img/img1.png">
+                    </div>
+                    <div class="card-complex__tag-list">
+                        <div class="card-complex__tag">Строится</div>
+                        <div class="card-complex__tag">комфорт</div>
+                    </div>
+                    <div class="card-complex__favorite">
+                        <!--  fontawesome v5
+                            <i class="far fa-star card-complex__favorite-icon card-complex__favorite-inactive"></i>
+                            <i class="fas fa-star card-complex__favorite-icon card-complex__favorite-active"></i> 
+                        -->
+                        <i class="far fa-star card-complex__favorite-icon card-complex__favorite-inactive"></i>
+                        <i class="fas fa-star card-complex__favorite-icon card-complex__favorite-active"></i>
+                    </div>
+                </div>
+                <a href="#" class="card-complex__content">
+                    <div class="card-complex__name">
+                        Акватория
+                    </div>
+                    <div class="card-complex__company">
+                        Застройщик Московская Строительная Компания
+                    </div>
+                    <div class="card-complex__location">
+                        Ростов-на-Дону, пр. Космонавтов, 1В
+                    </div>
+                    <div class="card-complex__info">
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                Студии
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 24,48 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 1 765 008 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                1-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 42,9 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 3 654 150 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                2-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 43,2 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 3 576 150 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                3-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 64,3 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 5 078 120 ₽
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-complex__btn" data-num="+ 7 961 270 29 08">
+                        + 7 961 270 ×× ××
+                    </div>
+                </a>
+            </div>
+            <div class="media-content-box">
+                <img src="img/img4.png" class="media-content-box__img">
+            </div>
+            <div class="card-complex">
+                <div class="card-complex__top">
+                    <div class="fotorama card-complex__fotorama" data-arrows="true" data-click="false" data-width="100%"
+                        data-height="100%">
+                        <img src="img/img3.png">
+                        <img src="img/img2.png">
+                        <img src="img/img1.png">
+                    </div>
+                    <div class="card-complex__tag-list">
+                        <div class="card-complex__tag">Строится</div>
+                        <div class="card-complex__tag">комфорт</div>
+                    </div>
+                    <div class="card-complex__favorite">
+                        <!--  fontawesome v5
+                            <i class="far fa-star card-complex__favorite-icon card-complex__favorite-inactive"></i>
+                            <i class="fas fa-star card-complex__favorite-icon card-complex__favorite-active"></i> 
+                        -->
+                        <i class="far fa-star card-complex__favorite-icon card-complex__favorite-inactive"></i>
+                        <i class="fas fa-star card-complex__favorite-icon card-complex__favorite-active"></i>
+                    </div>
+                </div>
+                <a href="#" class="card-complex__content">
+                    <div class="card-complex__name">
+                        Акватория
+                    </div>
+                    <div class="card-complex__company">
+                        Застройщик Московская Строительная Компания
+                    </div>
+                    <div class="card-complex__location">
+                        Ростов-на-Дону, пр. Космонавтов, 1В
+                    </div>
+                    <div class="card-complex__info">
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                Студии
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 24,48 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 1 765 008 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                1-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 42,9 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 3 654 150 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                2-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 43,2 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 3 576 150 ₽
+                            </div>
+                        </div>
+                        <div class="card-complex__info-row">
+                            <div class="card-complex__info-column">
+                                3-комн.
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 64,3 м²
+                            </div>
+                            <div class="card-complex__info-column">
+                                от 5 078 120 ₽
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-complex__btn" data-num="+ 7 961 270 29 08">
+                        + 7 961 270 ×× ××
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
