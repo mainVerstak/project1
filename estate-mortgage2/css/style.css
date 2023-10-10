@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .form-styled-new .has-error .help-block,
 .form-styled-new .has-error .control-label,
 .form-styled-new .has-error .radio,
@@ -9,24 +10,24 @@
 .form-styled-new .has-error.checkbox label,
 .form-styled-new .has-error.radio-inline label,
 .form-styled-new .has-error.checkbox-inline label {
-  color: #CE4D05;
+	color: #CE4D05;
 }
 
 .form-styled-new .has-error .form-control-feedback {
-  color: #CE4D05;
-  display: none !important;
+	color: #CE4D05;
+	display: none !important;
 }
 
 .form-styled-new .has-error .input-styled-new2 {
-  border-color: #CE4D05;
-  color: #CE4D05;
-  background: #fff;
+	border-color: #CE4D05;
+	color: #CE4D05;
+	background: #fff;
 }
 
 .form-styled-new .has-error .help-block {
-  margin: 8px 0 0;
-  font-size: 14px;
-  line-height: 16px;
+	margin: 8px 0 0;
+	font-size: 14px;
+	line-height: 16px;
 }
 
 .form-styled-new .has-success .help-block,
@@ -39,4780 +40,5110 @@
 .form-styled-new .has-success.checkbox label,
 .form-styled-new .has-success.radio-inline label,
 .form-styled-new .has-success.checkbox-inline label {
-  color: #323B6A;
+	color: #323B6A;
 }
 
 .form-styled-new .has-success .form-control-feedback {
-  color: #323B6A;
+	color: #323B6A;
 }
 
 .form-styled-new .has-success .input-styled-new2 {
-  border-color: #323B6A;
-  color: #323B6A;
-  background: #fff;
+	border-color: #323B6A;
+	color: #323B6A;
+	background: #fff;
 }
 
 .form-styled-new .form-control-feedback {
-  height: 40px;
-  line-height: 40px;
+	height: 40px;
+	line-height: 40px;
 }
 
 .btn-styled-new2 {
-  height: 40px;
-  border-radius: 6px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-  background: #2f8dd3;
-  -webkit-transition: .25s;
-  transition: .25s;
-  line-height: 1;
+	height: 40px;
+	border-radius: 6px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	background: #2f8dd3;
+	-webkit-transition: .25s;
+	transition: .25s;
+	line-height: 1;
 }
 
 .btn-styled-new2:visited {
-  color: #fff;
+	color: #fff;
 }
 
 .btn-styled-new2:hover {
-  background: #323B6A;
-  color: #fff;
+	background: #323B6A;
+	color: #fff;
 }
 
-.btn-styled-new2:focus, .btn-styled-new2:active {
-  color: #fff;
-  outline: none;
+.btn-styled-new2:focus,
+.btn-styled-new2:active {
+	color: #fff;
+	outline: none;
 }
 
 .btn-styled-new2:focus:active {
-  outline: none;
+	outline: none;
 }
 
 .btn-styled-new2:disabled {
-  pointer-events: none;
-  background: #D1D8E5;
-  color: #323B6A;
+	pointer-events: none;
+	background: #D1D8E5;
+	color: #323B6A;
 }
 
 .btn-styled-new2:disabled:focus {
-  border-color: #333C67;
-  background: #333C67;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+	border-color: #333C67;
+	background: #333C67;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .btn-styled-new2_fz_12 {
-  font-size: 12px;
-  letter-spacing: 0.01em;
+	font-size: 12px;
+	letter-spacing: 0.01em;
 }
 
 .btn-styled-new2_fz_14 {
-  font-size: 14px;
-  letter-spacing: 0.14px;
+	font-size: 14px;
+	letter-spacing: 0.14px;
 }
 
 .btn-styled-new2_fz_16 {
-  font-size: 16px;
-  letter-spacing: 0.16px;
+	font-size: 16px;
+	letter-spacing: 0.16px;
 }
 
 .btn-styled-new2_fz_18 {
-  font-size: 18px;
-  letter-spacing: 0.18px;
+	font-size: 18px;
+	letter-spacing: 0.18px;
 }
 
 .btn-styled-new2_outline {
-  border: solid 1px #2f8dd3;
-  color: #2f8dd3;
-  background: transparent;
+	border: solid 1px #2f8dd3;
+	color: #2f8dd3;
+	background: transparent;
 }
 
 .btn-styled-new2_outline:visited {
-  color: #2f8dd3;
+	color: #2f8dd3;
 }
 
 .btn-styled-new2_outline:hover {
-  border-color: #323B6A;
-  color: #323B6A;
-  background: transparent;
+	border-color: #323B6A;
+	color: #323B6A;
+	background: transparent;
 }
 
-.btn-styled-new2_outline:focus, .btn-styled-new2_outline:active {
-  border-color: #323B6A;
-  color: #323B6A;
+.btn-styled-new2_outline:focus,
+.btn-styled-new2_outline:active {
+	border-color: #323B6A;
+	color: #323B6A;
 }
 
 .btn-styled-new2_theme_green {
-  background: #009245;
+	background: #009245;
 }
 
 .btn-styled-new2_theme_green:hover {
-  background: #009245;
-  border-color: #009245;
+	background: #009245;
+	border-color: #009245;
 }
 
 .btn-styled-new2_theme_green.btn-styled-new2_outline {
-  border: solid 1px #009245;
-  color: #009245;
-  background: transparent;
+	border: solid 1px #009245;
+	color: #009245;
+	background: transparent;
 }
 
 .btn-styled-new2_theme_green.btn-styled-new2_outline:hover {
-  border-color: #009245;
-  color: #009245;
-  background: transparent;
+	border-color: #009245;
+	color: #009245;
+	background: transparent;
 }
 
 .btn-styled-new2 span {
-  margin-right: 4px;
+	margin-right: 4px;
 }
 
 .btn-styled-new2 span:last-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
-.btn-styled-new2 .fa, .btn-styled-new2 .fas, .btn-styled-new2 .far, .btn-styled-new2 .fal, .btn-styled-new2 .fad, .btn-styled-new2 .fab {
-  margin-right: 4px;
+.btn-styled-new2 .fa,
+.btn-styled-new2 .fas,
+.btn-styled-new2 .far,
+.btn-styled-new2 .fal,
+.btn-styled-new2 .fad,
+.btn-styled-new2 .fab {
+	margin-right: 4px;
 }
 
 .btn-styled-new2__mobile {
-  display: none;
+	display: none;
 }
 
 .btn-styled-new2__bold {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .select2-selection--multiple.select2-container--focus .select2-selection--multiple,
 .select2-selection--multiple.select2-container--focus .select2-selection--single,
 .select2-container--default.select2-container--focus .select2-selection--multiple,
 .select2-container--default.select2-container--focus .select2-selection--single {
-  border: 1px solid #F0F2F7;
-  outline: none;
+	border: 1px solid #F0F2F7;
+	outline: none;
 }
 
 .select2-selection--multiple .select2-selection--single,
 .select2-container--default .select2-selection--single {
-  height: 40px;
-  background: #F0F2F7;
-  border: 1px solid #F0F2F7;
-  border-radius: 0;
+	height: 40px;
+	background: #F0F2F7;
+	border: 1px solid #F0F2F7;
+	border-radius: 0;
 }
 
 .select2-selection--multiple .select2-selection--single .select2-selection__rendered,
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 38px;
-  color: #323B6A;
-  padding: 0 35px 0 10px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 38px;
+	color: #323B6A;
+	padding: 0 35px 0 10px;
 }
 
 .select2-selection--multiple .select2-selection--single .select2-selection__arrow,
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-  width: 12px;
-  height: 12px;
-  top: 50%;
-  -webkit-transform-origin: 66% 66%;
-          transform-origin: 66% 66%;
-  right: 20px;
-  margin-top: -8px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: .2s;
-  transition: .2s;
+	width: 12px;
+	height: 12px;
+	top: 50%;
+	-webkit-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
+	right: 20px;
+	margin-top: -8px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .select2-selection--multiple .select2-selection--single .select2-selection__arrow b,
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  position: static;
-  display: block;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #323B6A;
-  border-top: none;
-  border-left: none;
-  -webkit-transition: .2s;
-  transition: .2s;
+	position: static;
+	display: block;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #323B6A;
+	border-top: none;
+	border-left: none;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .select2-selection--multiple .select2-search--dropdown,
 .select2-container--default .select2-search--dropdown {
-  padding: 14px 10px;
+	padding: 14px 10px;
 }
 
 .select2-selection--multiple .select2-search--dropdown .select2-search__field,
 .select2-container--default .select2-search--dropdown .select2-search__field {
-  font-size: 18px;
-  background: #F0F2F7;
-  border: 1px solid #F0F2F7;
-  border-radius: 0;
-  height: 30px;
-  padding: 6px 8px;
+	font-size: 18px;
+	background: #F0F2F7;
+	border: 1px solid #F0F2F7;
+	border-radius: 0;
+	height: 30px;
+	padding: 6px 8px;
 }
 
-.select2-selection--multiple .select2-search--dropdown .select2-search__field:focus-visible, .select2-selection--multiple .select2-search--dropdown .select2-search__field:focus,
+.select2-selection--multiple .select2-search--dropdown .select2-search__field:focus-visible,
+.select2-selection--multiple .select2-search--dropdown .select2-search__field:focus,
 .select2-container--default .select2-search--dropdown .select2-search__field:focus-visible,
 .select2-container--default .select2-search--dropdown .select2-search__field:focus {
-  background: #fff;
-  border-color: #323B6A;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  outline: none;
+	background: #fff;
+	border-color: #323B6A;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
 }
 
 .select2-selection--multiple .select2-results__option,
 .select2-container--default .select2-results__option {
-  font-size: 18px;
-  padding: 14px 10px;
-  color: #323B6A;
-  border-bottom: 1px solid #f0f2f7;
-  background: #fff;
+	font-size: 18px;
+	padding: 14px 10px;
+	color: #323B6A;
+	border-bottom: 1px solid #f0f2f7;
+	background: #fff;
 }
 
 .select2-selection--multiple .select2-results__option:last-child,
 .select2-container--default .select2-results__option:last-child {
-  border-bottom: none;
+	border-bottom: none;
 }
 
 .select2-selection--multiple .select2-results__option--selected,
 .select2-container--default .select2-results__option--selected {
-  background: #F0F2F7;
+	background: #F0F2F7;
 }
 
 .select2-selection--multiple .select2-results__option--highlighted.select2-results__option--selectable,
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background: #fff;
-  color: #2f8dd3;
+	background: #fff;
+	color: #2f8dd3;
 }
 
 .select2-selection--multiple .select2-results__option--highlighted.select2-results__option--selected,
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selected {
-  background: #F0F2F7;
-  color: #2f8dd3;
+	background: #F0F2F7;
+	color: #2f8dd3;
 }
 
 .select2-selection--multiple .select2-dropdown,
 .select2-container--default .select2-dropdown {
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  border: none;
-  line-height: 1.3;
-  -webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-          box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-  background-color: #ffffff;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+	border: none;
+	line-height: 1.3;
+	-webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	background-color: #ffffff;
 }
 
 .select2-selection--multiple.select2-container--open .select2-selection--single .select2-selection__arrow,
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	transform: rotate(-135deg);
 }
 
 .select2-selection--multiple.select2-container--open .select2-selection--single .select2-selection__arrow b,
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  border: 2px solid #323B6A;
-  border-top: none;
-  border-left: none;
+	border: 2px solid #323B6A;
+	border-top: none;
+	border-left: none;
 }
 
 .select2-selection--multiple .select2-selection--multiple,
 .select2-container--default .select2-selection--multiple {
-  background: #F0F2F7;
-  border: 1px solid #F0F2F7;
-  border-radius: 0;
-  padding: 5px 10px 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
+	background: #F0F2F7;
+	border: 1px solid #F0F2F7;
+	border-radius: 0;
+	padding: 5px 10px 0 10px;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-selection__choice,
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 0 32px 0 12px;
-  color: #fff;
-  background: #333C67;
-  border-radius: 4px;
-  margin: 0 8px 5px 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  min-height: 28px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: none;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+	padding: 0 32px 0 12px;
+	color: #fff;
+	background: #333C67;
+	border-radius: 4px;
+	margin: 0 8px 5px 0;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	min-height: 28px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border: none;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-selection__choice__remove,
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  right: 8px;
-  left: auto;
-  border: none;
-  padding: 0;
-  color: #fff;
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	right: 8px;
+	left: auto;
+	border: none;
+	padding: 0;
+	color: #fff;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-selection__choice__remove::after,
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove::after {
-  content: "✕";
+	content: "✕";
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-selection__choice__remove span,
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove span {
-  display: none;
+	display: none;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-selection__choice__remove:hover,
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-search--inline .select2-search__field,
 .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field {
-  margin: 0;
-  height: 32px;
-  color: #323B6A;
-  font-weight: 700;
-  font-size: 18px;
+	margin: 0;
+	height: 32px;
+	color: #323B6A;
+	font-weight: 700;
+	font-size: 18px;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-search--inline .select2-search__field::-webkit-input-placeholder,
 .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field::-webkit-input-placeholder {
-  color: #323B6A;
-  opacity: 1;
+	color: #323B6A;
+	opacity: 1;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-search--inline .select2-search__field:-ms-input-placeholder,
 .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field:-ms-input-placeholder {
-  color: #323B6A;
-  opacity: 1;
+	color: #323B6A;
+	opacity: 1;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-search--inline .select2-search__field::-ms-input-placeholder,
 .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field::-ms-input-placeholder {
-  color: #323B6A;
-  opacity: 1;
+	color: #323B6A;
+	opacity: 1;
 }
 
 .select2-selection--multiple .select2-selection--multiple .select2-search--inline .select2-search__field::placeholder,
 .select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field::placeholder {
-  color: #323B6A;
-  opacity: 1;
+	color: #323B6A;
+	opacity: 1;
 }
 
 .preloader-overlay {
-  position: relative;
+	position: relative;
 }
 
 .preloader-overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(50, 59, 106, 0.4);
-  z-index: 50;
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(50, 59, 106, 0.4);
+	z-index: 50;
+	-webkit-backdrop-filter: blur(1px);
+	backdrop-filter: blur(1px);
 }
 
 .preloader-overlay::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
-  border: 4px solid #323B6A;
-  border-right-color: rgba(50, 59, 106, 0);
-  border-left-color: rgba(50, 59, 106, 0);
-  border-radius: 50%;
-  -webkit-animation: preloader-animation 1s linear infinite;
-          animation: preloader-animation 1s linear infinite;
-  z-index: 60;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	border: 4px solid #323B6A;
+	border-right-color: rgba(50, 59, 106, 0);
+	border-left-color: rgba(50, 59, 106, 0);
+	border-radius: 50%;
+	-webkit-animation: preloader-animation 1s linear infinite;
+	animation: preloader-animation 1s linear infinite;
+	z-index: 60;
 }
 
 @-webkit-keyframes preloader-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes preloader-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
 }
 
 .select-styled-new2 {
-  width: 100% !important;
-  margin-bottom: 0;
-  font-size: 18px;
+	width: 100% !important;
+	margin-bottom: 0;
+	font-size: 18px;
 }
 
 .select-styled-new2.open .btn.btn-default {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  z-index: 10002;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	z-index: 10002;
 }
 
 .select-styled-new2.open .btn.btn-default .bs-caret .caret {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
-  border-color: #2f8dd3;
+	-webkit-transform: rotate(225deg);
+	transform: rotate(225deg);
+	border-color: #2f8dd3;
 }
 
 .select-styled-new2 .btn.btn-default {
-  background: #F0F2F7;
-  border-radius: 0;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 7px 30px 7px 10px;
-  font-size: 18px;
-  font-weight: 700;
-  -webkit-transition: .2s;
-  transition: .2s;
-  width: 100%;
-  max-width: 100%;
-  height: 40px;
-  color: #323B6A;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	background: #F0F2F7;
+	border-radius: 0;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 7px 30px 7px 10px;
+	font-size: 18px;
+	font-weight: 700;
+	-webkit-transition: .2s;
+	transition: .2s;
+	width: 100%;
+	max-width: 100%;
+	height: 40px;
+	color: #323B6A;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .select-styled-new2 .btn.btn-default .filter-option {
-  overflow: hidden;
-  text-overflow: ellipsis;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-.select-styled-new2 .btn.btn-default:hover, .select-styled-new2 .btn.btn-default:focus {
-  color: #323B6A;
-  background: #F0F2F7;
-  border-color: #323B6A;
-  outline: none !important;
+.select-styled-new2 .btn.btn-default:hover,
+.select-styled-new2 .btn.btn-default:focus {
+	color: #323B6A;
+	background: #F0F2F7;
+	border-color: #323B6A;
+	outline: none !important;
 }
 
 .select-styled-new2 .btn.btn-default .bs-caret .caret {
-  width: 12px;
-  height: 12px;
-  right: 20px;
-  border: 2px solid #323B6A;
-  border-top: none;
-  border-left: none;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: 66% 66%;
-          transform-origin: 66% 66%;
-  margin-top: -8px;
-  -webkit-transition: .2s;
-  transition: .2s;
+	width: 12px;
+	height: 12px;
+	right: 20px;
+	border: 2px solid #323B6A;
+	border-top: none;
+	border-left: none;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
+	margin-top: -8px;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .select-styled-new2 .dropdown-menu {
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  border: none;
-  font-size: 18px;
-  line-height: 1.3;
-  -webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-          box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-  background-color: #ffffff;
-  max-width: 100%;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+	border: none;
+	font-size: 18px;
+	line-height: 1.3;
+	-webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	background-color: #ffffff;
+	max-width: 100%;
 }
 
-.select-styled-new2 .dropdown-menu > li {
-  border-bottom: 1px solid #f0f2f7;
+.select-styled-new2 .dropdown-menu>li {
+	border-bottom: 1px solid #f0f2f7;
 }
 
-.select-styled-new2 .dropdown-menu > li:last-child {
-  border-bottom: none;
+.select-styled-new2 .dropdown-menu>li:last-child {
+	border-bottom: none;
 }
 
-.select-styled-new2 .dropdown-menu > li.active > a {
-  background: #F0F2F7;
+.select-styled-new2 .dropdown-menu>li.active>a {
+	background: #F0F2F7;
 }
 
-.select-styled-new2 .dropdown-menu > li.selected > a {
-  background: #fff;
-  font-weight: bold;
-  color: #2f8dd3;
+.select-styled-new2 .dropdown-menu>li.selected>a {
+	background: #fff;
+	font-weight: bold;
+	color: #2f8dd3;
 }
 
-.select-styled-new2 .dropdown-menu > li > a {
-  white-space: normal;
-  padding: 14px 10px;
-  color: #323B6A;
+.select-styled-new2 .dropdown-menu>li>a {
+	white-space: normal;
+	padding: 14px 10px;
+	color: #323B6A;
 }
 
-.select-styled-new2 .dropdown-menu > li > a:focus {
-  outline: none;
+.select-styled-new2 .dropdown-menu>li>a:focus {
+	outline: none;
 }
 
-.select-styled-new2 .dropdown-menu > li > a:hover {
-  background: #fff;
-  color: #2f8dd3;
+.select-styled-new2 .dropdown-menu>li>a:hover {
+	background: #fff;
+	color: #2f8dd3;
 }
 
-.select-styled-new2 .dropdown-menu > li.no-results {
-  padding: 14px 10px;
-  margin-right: 0;
-  margin-left: 0;
+.select-styled-new2 .dropdown-menu>li.no-results {
+	padding: 14px 10px;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 .select-styled-new2 .bs-searchbox {
-  padding: 14px 10px;
+	padding: 14px 10px;
 }
 
 .select-styled-new2 .bs-searchbox .form-control {
-  background: #F0F2F7;
-  border: 1px solid #F0F2F7;
-  border-radius: 0;
+	background: #F0F2F7;
+	border: 1px solid #F0F2F7;
+	border-radius: 0;
 }
 
 .select-styled-new2 .bs-searchbox .form-control:focus {
-  background: #fff;
-  border-color: #323B6A;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none;
+	background: #fff;
+	border-color: #323B6A;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
 }
 
 .select-styled-new2_inline-title {
-  width: auto !important;
-  display: inline-block;
+	width: auto !important;
+	display: inline-block;
 }
 
 .select-styled-new2_inline-title .btn.btn-default {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: transparent;
-  font-size: inherit;
-  font-weight: inherit;
-  -webkit-transition: .2s;
-  transition: .2s;
-  height: auto;
-  color: #2f8dd3;
-  padding: 0;
-  white-space: nowrap;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: transparent;
+	font-size: inherit;
+	font-weight: inherit;
+	-webkit-transition: .2s;
+	transition: .2s;
+	height: auto;
+	color: #2f8dd3;
+	padding: 0;
+	white-space: nowrap;
 }
 
 .select-styled-new2_inline-title .btn.btn-default .bs-caret {
-  display: none;
+	display: none;
 }
 
 .select-styled-new2_inline-title .btn.btn-default::before {
-  font-family: 'FontAwesome';
-  content: "\f041";
-  margin-right: 5px;
+	font-family: 'FontAwesome';
+	content: "\f041";
+	margin-right: 5px;
 }
 
 .select-styled-new2_inline-title .btn.btn-default span {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .select-styled-new2_inline-title .btn.btn-default:hover {
-  color: #468DCD;
-  background: transparent;
+	color: #468DCD;
+	background: transparent;
 }
 
 .select-styled-new2_inline-title .dropdown-menu {
-  max-width: none;
+	max-width: none;
 }
 
-.select-styled-new2_inline-title .dropdown-menu > li > a {
-  white-space: nowrap;
+.select-styled-new2_inline-title .dropdown-menu>li>a {
+	white-space: nowrap;
 }
 
-.select-styled-new2_hide-first .dropdown-menu > li:first-child {
-  display: none;
+.select-styled-new2_hide-first .dropdown-menu>li:first-child {
+	display: none;
 }
 
 .input-styled-new2 {
-  background: #F0F2F7;
-  border: 1px solid #F0F2F7;
-  padding: 0 10px 0 10px;
-  font-size: 18px;
-  font-weight: 700;
-  -webkit-transition: .2s;
-  transition: .2s;
-  width: 100%;
-  max-width: 100%;
-  height: 40px;
-  line-height: normal;
+	background: #F0F2F7;
+	border: 1px solid #F0F2F7;
+	padding: 0 10px 0 10px;
+	font-size: 18px;
+	font-weight: 700;
+	-webkit-transition: .2s;
+	transition: .2s;
+	width: 100%;
+	max-width: 100%;
+	height: 40px;
+	line-height: normal;
 }
 
-.input-styled-new2:focus, .input-styled-new2:active {
-  background: #fff;
-  border-color: #323B6A;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none;
+.input-styled-new2:focus,
+.input-styled-new2:active {
+	background: #fff;
+	border-color: #323B6A;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
 }
 
 .input-styled-new2::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 1;
+	color: inherit;
+	opacity: 1;
 }
 
 .input-styled-new2:-ms-input-placeholder {
-  color: inherit;
-  opacity: 1;
+	color: inherit;
+	opacity: 1;
 }
 
 .input-styled-new2::-ms-input-placeholder {
-  color: inherit;
-  opacity: 1;
+	color: inherit;
+	opacity: 1;
 }
 
 .input-styled-new2::placeholder {
-  color: inherit;
-  opacity: 1;
+	color: inherit;
+	opacity: 1;
 }
 
 .input-styled-new2_textarea {
-  padding: 7px 30px 7px 10px;
-  resize: none;
-  height: auto;
-  line-height: inherit;
+	padding: 7px 30px 7px 10px;
+	resize: none;
+	height: auto;
+	line-height: inherit;
 }
 
 .input-styled-new2:disabled {
-  color: #fff;
-  background: #333C67;
-  border-color: #333C67;
+	color: #fff;
+	background: #333C67;
+	border-color: #333C67;
 }
 
 .input-styled-new2:disabled:focus {
-  border-color: #333C67;
-  background: #333C67;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+	border-color: #333C67;
+	background: #333C67;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .input-with-label {
-  position: relative;
+	position: relative;
 }
 
 .input-with-label .input-styled-new2 {
-  padding-right: 35px;
+	padding-right: 35px;
 }
 
 .input-with-label__label {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  padding-right: 20px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 1.35px;
-  pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	padding-right: 20px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 40px;
+	letter-spacing: 1.35px;
+	pointer-events: none;
 }
 
 .input-label {
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: 0.14px;
-  margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1.29;
+	letter-spacing: 0.14px;
+	margin-bottom: 10px;
 }
 
-.range-styled-new + .rangeslider--horizontal {
-  height: 2px;
-  background: #2f8dd3;
-  position: relative;
-  margin: 10px 0;
-  border-radius: 0;
+.range-styled-new+.rangeslider--horizontal {
+	height: 2px;
+	background: #2f8dd3;
+	position: relative;
+	margin: 10px 0;
+	border-radius: 0;
 }
 
-.range-styled-new + .rangeslider--horizontal .rangeslider__fill {
-  position: absolute;
-  top: -1px;
-  height: 4px;
-  background: #2f8dd3;
-  border-radius: 0;
+.range-styled-new+.rangeslider--horizontal .rangeslider__fill {
+	position: absolute;
+	top: -1px;
+	height: 4px;
+	background: #2f8dd3;
+	border-radius: 0;
 }
 
-.range-styled-new + .rangeslider--horizontal .rangeslider__handle {
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: transparent;
-  width: 16px;
-  height: 16px;
-  top: calc(50% - 8px);
+.range-styled-new+.rangeslider--horizontal .rangeslider__handle {
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: transparent;
+	width: 16px;
+	height: 16px;
+	top: calc(50% - 8px);
 }
 
-.range-styled-new + .rangeslider--horizontal .rangeslider__handle::after {
-  width: 16px;
-  height: 16px;
-  background: #323b6a;
-  border: 1px solid #fff;
-  -webkit-box-shadow: 0 0 5px rgba(50, 59, 106, 0.2);
-          box-shadow: 0 0 5px rgba(50, 59, 106, 0.2);
-  top: 50%;
-  left: auto;
-  bottom: auto;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: .15s;
-  transition: .15s;
+.range-styled-new+.rangeslider--horizontal .rangeslider__handle::after {
+	width: 16px;
+	height: 16px;
+	background: #323b6a;
+	border: 1px solid #fff;
+	-webkit-box-shadow: 0 0 5px rgba(50, 59, 106, 0.2);
+	box-shadow: 0 0 5px rgba(50, 59, 106, 0.2);
+	top: 50%;
+	left: auto;
+	bottom: auto;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: .15s;
+	transition: .15s;
 }
 
-.range-styled-new + .rangeslider--horizontal .rangeslider__handle:hover::after {
-  width: 32px;
-  height: 32px;
-  border-width: 2px;
+.range-styled-new+.rangeslider--horizontal .rangeslider__handle:hover::after {
+	width: 32px;
+	height: 32px;
+	border-width: 2px;
 }
 
-.range-styled-new + .rangeslider--horizontal.rangeslider--active .rangeslider__handle::after {
-  width: 32px;
-  height: 32px;
-  border-width: 2px;
+.range-styled-new+.rangeslider--horizontal.rangeslider--active .rangeslider__handle::after {
+	width: 32px;
+	height: 32px;
+	border-width: 2px;
 }
 
 .mortgage-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 15px 10px;
-  margin-top: -10px;
-  position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 0 15px 10px;
+	margin-top: -10px;
+	position: relative;
 }
 
 .mortgage-main::before {
-  content: "";
-  position: absolute;
-  top: -84px;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 84px + 100px);
-  background-color: #f0f2f7;
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	top: -84px;
+	left: 0;
+	width: 100%;
+	height: calc(100% + 84px + 100px);
+	background-color: #f0f2f7;
+	pointer-events: none;
 }
 
 .mortgage-main__content {
-  padding: 10px 0;
-  max-width: 420px;
-  width: 100%;
-  min-height: 290px;
-  margin-right: 40px;
-  color: #323b6a;
-  position: relative;
+	padding: 10px 0;
+	max-width: 420px;
+	width: 100%;
+	min-height: 290px;
+	margin-right: 40px;
+	color: #323b6a;
+	position: relative;
 }
 
 .mortgage-main__img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: relative;
 }
 
 .mortgage-main__img img {
-  width: 100%;
-  max-height: 100%;
-  height: auto;
+	width: 100%;
+	max-height: 100%;
+	height: auto;
 }
 
 .mortgage-main__title {
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 1.28;
-  letter-spacing: 1.8px;
-  margin-bottom: 20px;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1.28;
+	letter-spacing: 1.8px;
+	margin-bottom: 20px;
 }
 
-.mortgage-main__title .select-styled-new2_inline-title > .dropdown-menu {
-  min-width: 260px !important;
+.mortgage-main__title .select-styled-new2_inline-title>.dropdown-menu {
+	min-width: 260px !important;
 }
 
 .mortgage-main__city {
-  color: #2f8dd3;
-  cursor: pointer;
-  -webkit-transition: .2s;
-  transition: .2s;
+	color: #2f8dd3;
+	cursor: pointer;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .mortgage-main__city:hover {
-  opacity: .8;
+	opacity: .8;
 }
 
 .mortgage-main__city span {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .mortgage-main__text {
-  font-size: 21px;
-  line-height: 0.86;
-  letter-spacing: 0.21px;
+	font-size: 21px;
+	line-height: 0.86;
+	letter-spacing: 0.21px;
 }
 
 .btn-show-mortgage-filter {
-  width: 100%;
-  height: 40px;
-  border-radius: 4px;
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 500;
-  font-size: 14px;
-  color: #337AB7;
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#FAFAFA));
-  background: linear-gradient(180deg, #EEEEEE 0%, #FAFAFA 100%);
-  border: 1px solid #DCDCDC;
-  -webkit-transition: .25s;
-  transition: .25s;
-  line-height: 1;
-  margin: 0 0 30px;
+	width: 100%;
+	height: 40px;
+	border-radius: 4px;
+	display: none;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-weight: 500;
+	font-size: 14px;
+	color: #337AB7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#FAFAFA));
+	background: linear-gradient(180deg, #EEEEEE 0%, #FAFAFA 100%);
+	border: 1px solid #DCDCDC;
+	-webkit-transition: .25s;
+	transition: .25s;
+	line-height: 1;
+	margin: 0 0 30px;
 }
 
 .btn-show-mortgage-filter:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#EEEEEE));
-  background: linear-gradient(180deg, #EEEEEE 0%, #EEEEEE 100%);
-  border-color: #adadad;
-  color: #337AB7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#EEEEEE));
+	background: linear-gradient(180deg, #EEEEEE 0%, #EEEEEE 100%);
+	border-color: #adadad;
+	color: #337AB7;
 }
 
-.btn-show-mortgage-filter:focus, .btn-show-mortgage-filter:active {
-  outline: none;
-  color: #337AB7;
+.btn-show-mortgage-filter:focus,
+.btn-show-mortgage-filter:active {
+	outline: none;
+	color: #337AB7;
 }
 
 .btn-show-mortgage-filter:focus:active {
-  outline: none;
+	outline: none;
 }
 
-.btn-show-mortgage-filter .fa, .btn-show-mortgage-filter .fas, .btn-show-mortgage-filter .far, .btn-show-mortgage-filter .fal, .btn-show-mortgage-filter .fad, .btn-show-mortgage-filter .fab {
-  margin-right: 8px;
+.btn-show-mortgage-filter .fa,
+.btn-show-mortgage-filter .fas,
+.btn-show-mortgage-filter .far,
+.btn-show-mortgage-filter .fal,
+.btn-show-mortgage-filter .fad,
+.btn-show-mortgage-filter .fab {
+	margin-right: 8px;
 }
 
 .calc-mortgage-new__box {
-  -webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-          box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-  background-color: #ffffff;
-  margin: 0;
-  padding: 20px;
-  color: #323b6a;
-  position: relative;
+	-webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	background-color: #ffffff;
+	margin: 0;
+	padding: 20px;
+	color: #323b6a;
+	position: relative;
 }
 
 .calc-mortgage-new__bottom {
-  border-top: 1px solid #dce1ea;
-  padding: 20px 20px 0;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+	border-top: 1px solid #dce1ea;
+	padding: 20px 20px 0;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .calc-mortgage-new__result {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin-right: 20px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+	margin-right: 20px;
 }
 
 .calc-mortgage-new__sum {
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 0.91;
-  letter-spacing: 2.4px;
-  margin-right: 20px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 0.91;
+	letter-spacing: 2.4px;
+	margin-right: 20px;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
 }
 
 .calc-mortgage-new__note {
-  font-size: 14px;
-  line-height: 1;
+	font-size: 14px;
+	line-height: 1;
 }
 
 .calc-mortgage-new__bottom-btns {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
 }
 
 .calc-mortgage-new__bottom-btns .btn {
-  width: 260px;
-  margin-right: 20px;
+	width: 260px;
+	margin-right: 20px;
 }
 
 .calc-mortgage-new__bottom-btns .btn:last-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 .calc-mortgage-new__middle {
-  padding-bottom: 10px;
-  display: none;
+	padding-bottom: 10px;
+	display: none;
 }
 
 .calc-mortgage-new__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 -10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0 -10px;
 }
 
 .calc-mortgage-new__row .btn {
-  width: 100%;
-  margin-top: auto;
+	width: 100%;
+	margin-top: auto;
 }
 
 .calc-mortgage-new__column {
-  width: calc(25% - 20px);
-  margin: 0 10px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+	width: calc(25% - 20px);
+	margin: 0 10px 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 .calc-mortgage-new__column._wide {
-  width: 100%;
+	width: 100%;
 }
 
 .calc-mortgage-new__mobile-head {
-  display: none;
-  font-weight: bold;
-  font-size: 16px;
-  letter-spacing: -0.004em;
-  color: #333C67;
-  padding: 0 15px;
-  margin-bottom: 24px;
+	display: none;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: -0.004em;
+	color: #333C67;
+	padding: 0 15px;
+	margin-bottom: 24px;
 }
 
 .calc-mortgage-new.active .calc-mortgage-new__middle {
-  display: block;
+	display: block;
 }
 
 .mortgage-filter {
-  background-color: #f0f2f7;
-  margin: 0 20px;
-  padding: 20px 0 10px;
+	background-color: #f0f2f7;
+	margin: 0 20px;
+	padding: 20px 0 10px;
 }
 
 .mortgage-filter__inner {
-  overflow: auto;
-  padding-left: 20px;
+	overflow: auto;
+	padding-left: 20px;
 }
 
 .mortgage-filter__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .mortgage-filter__list::after {
-  content: "";
-  display: block;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  padding-right: 20px;
+	content: "";
+	display: block;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	padding-right: 20px;
 }
 
 .mortgage-filter__item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 16px;
-  border: 1px solid rgba(50, 59, 106, 0.2);
-  font-size: 14px;
-  line-height: 1.2;
-  text-align: center;
-  color: #323b6a;
-  white-space: nowrap;
-  padding: 0 17px;
-  height: 32px;
-  margin: 0 14px 10px 0;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: .2s;
-  transition: .2s;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-radius: 16px;
+	border: 1px solid rgba(50, 59, 106, 0.2);
+	font-size: 14px;
+	line-height: 1.2;
+	text-align: center;
+	color: #323b6a;
+	white-space: nowrap;
+	padding: 0 17px;
+	height: 32px;
+	margin: 0 14px 10px 0;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .mortgage-filter__item_hidden {
-  display: none;
+	display: none;
 }
 
 .mortgage-filter__item.active {
-  background: rgba(50, 59, 106, 0.2);
+	background: rgba(50, 59, 106, 0.2);
 }
 
 .mortgage-filter__btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 16px;
-  border: solid 1px #323b6a;
-  background: #fff;
-  font-size: 14px;
-  line-height: 1.2;
-  text-align: center;
-  color: #323b6a;
-  white-space: nowrap;
-  padding: 0 17px;
-  height: 32px;
-  margin: 0 0 10px;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  margin-left: auto;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-radius: 16px;
+	border: solid 1px #323b6a;
+	background: #fff;
+	font-size: 14px;
+	line-height: 1.2;
+	text-align: center;
+	color: #323b6a;
+	white-space: nowrap;
+	padding: 0 17px;
+	height: 32px;
+	margin: 0 0 10px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-left: auto;
 }
 
 .mortgage-filter__btn .fa {
-  margin-right: 3px;
+	margin-right: 3px;
 }
 
 .mortgage-filter.active .mortgage-filter__inner {
-  padding-right: 20px;
+	padding-right: 20px;
 }
 
 .mortgage-filter.active .mortgage-filter__list {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .mortgage-filter.active .mortgage-filter__list::after {
-  display: none;
+	display: none;
 }
 
 .mortgage-filter.active .mortgage-filter__item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
 }
 
 .mortgage-filter.active .mortgage-filter__btn {
-  margin-left: 0;
+	margin-left: 0;
 }
 
 .often-searched {
-  color: #323b6a;
-  margin-bottom: 40px;
+	color: #323b6a;
+	margin-bottom: 40px;
 }
 
 .often-searched__head {
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 1.68;
-  letter-spacing: 0.22px;
-  margin-bottom: 18px;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.68;
+	letter-spacing: 0.22px;
+	margin-bottom: 18px;
 }
 
 .often-searched__title {
-  font-size: 14px;
-  font-weight: bold;
-  padding-bottom: 18px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 18px;
 }
 
 .often-searched__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 25px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 25px;
 }
 
 .often-searched__list {
-  list-style: none;
-  padding: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 20px;
-  margin-bottom: 0;
+	list-style: none;
+	padding: 0;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin-right: 20px;
+	margin-bottom: 0;
 }
 
 .often-searched__list:first-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 .often-searched__list_c4 {
-  margin-right: 0;
-  -webkit-column-count: 4;
-          column-count: 4;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+	margin-right: 0;
+	-webkit-column-count: 4;
+	column-count: 4;
+	-webkit-column-gap: 20px;
+	column-gap: 20px;
 }
 
 .often-searched__item {
-  margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 .often-searched__item:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .often-searched__link {
-  font-size: 12px;
-  color: #2f8dd3;
+	font-size: 12px;
+	color: #2f8dd3;
 }
 
 .often-searched__link:visited {
-  color: #2f8dd3;
+	color: #2f8dd3;
 }
 
 .often-searched__link:hover {
-  color: #323B6A;
+	color: #323B6A;
 }
 
 .table-mortgage2 {
-  width: 100%;
-  font-size: 14px;
-  color: #323b6a;
-  margin: 10px 0 30px;
-  display: block;
+	width: 100%;
+	font-size: 14px;
+	color: #323b6a;
+	margin: 10px 0 30px;
+	display: block;
 }
 
 .table-mortgage2 a {
-  color: #2f8dd3;
+	color: #2f8dd3;
 }
 
 .table-mortgage2 thead {
-  display: block;
-  border-bottom: solid 1px #323b6a;
+	display: block;
+	border-bottom: solid 1px #323b6a;
 }
 
 .table-mortgage2 th {
-  height: 45px;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 0 0 0 20px;
-  border-radius: 6px 6px 0 0;
-  -webkit-transition: .15s;
-  transition: .15s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+	height: 45px;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 0 0 0 20px;
+	border-radius: 6px 6px 0 0;
+	-webkit-transition: .15s;
+	transition: .15s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .table-mortgage2 th:hover {
-  color: #2F8DD3;
+	color: #2F8DD3;
 }
 
-.table-mortgage2 th:hover .table-mortgage2__head::before, .table-mortgage2 th:hover .table-mortgage2__head::after {
-  border-color: #2F8DD3;
+.table-mortgage2 th:hover .table-mortgage2__head::before,
+.table-mortgage2 th:hover .table-mortgage2__head::after {
+	border-color: #2F8DD3;
 }
 
 .table-mortgage2 th[role="columnheader"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .table-mortgage2 th[data-sort-method="none"] {
-  cursor: auto;
-  color: #323b6a;
+	cursor: auto;
+	color: #323b6a;
 }
 
-.table-mortgage2 th[data-sort-method="none"] .table-mortgage2__head::after, .table-mortgage2 th[data-sort-method="none"] .table-mortgage2__head::before {
-  display: none;
+.table-mortgage2 th[data-sort-method="none"] .table-mortgage2__head::after,
+.table-mortgage2 th[data-sort-method="none"] .table-mortgage2__head::before {
+	display: none;
 }
 
 .table-mortgage2 th[aria-sort="ascending"] .table-mortgage2__head::before {
-  border-color: #323B6A;
+	border-color: #323B6A;
 }
 
 .table-mortgage2 th[aria-sort="descending"] .table-mortgage2__head::after {
-  border-color: #323B6A;
+	border-color: #323B6A;
 }
 
 .table-mortgage2__head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
-.table-mortgage2__head::after, .table-mortgage2__head::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border: 2px solid #DCE1EA;
-  border-bottom: none;
-  border-left: none;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+.table-mortgage2__head::after,
+.table-mortgage2__head::before {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #DCE1EA;
+	border-bottom: none;
+	border-left: none;
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
 }
 
 .table-mortgage2__head::before {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  margin-right: 10px;
-  margin-bottom: 7px;
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+	margin-right: 10px;
+	margin-bottom: 7px;
 }
 
 .table-mortgage2__head::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  margin-bottom: -6px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	margin-bottom: -6px;
 }
 
 .table-mortgage2__title {
-  margin-right: 20px;
+	margin-right: 20px;
 }
 
 .table-mortgage2 td {
-  padding: 20px 20px 12px 20px;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #323b6a;
-  vertical-align: top;
-  -webkit-transition: .15s;
-  transition: .15s;
+	padding: 20px 20px 12px 20px;
+	font-size: 14px;
+	line-height: 1.43;
+	color: #323b6a;
+	vertical-align: top;
+	-webkit-transition: .15s;
+	transition: .15s;
 }
 
 .table-mortgage2 td:nth-child(1),
 .table-mortgage2 th:nth-child(1) {
-  width: 250px;
+	width: 250px;
 }
 
 .table-mortgage2 td:nth-child(2),
 .table-mortgage2 th:nth-child(2) {
-  width: 220px;
+	width: 220px;
 }
 
 .table-mortgage2 td:nth-child(3),
 .table-mortgage2 th:nth-child(3) {
-  width: 220px;
+	width: 220px;
 }
 
 .table-mortgage2 td:nth-child(4),
 .table-mortgage2 th:nth-child(4) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
 }
 
 .table-mortgage2 td:nth-child(5),
 .table-mortgage2 th:nth-child(5) {
-  width: 240px;
-  padding-right: 40px;
+	width: 240px;
+	padding-right: 40px;
 }
 
 .table-mortgage2 td:nth-child(6),
 .table-mortgage2 th:nth-child(6) {
-  width: 100%;
+	width: 100%;
 }
 
 .table-mortgage2 td.hover,
 .table-mortgage2 th.hover {
-  background: #f0f2f7;
+	background: #f0f2f7;
 }
 
 .table-mortgage2 tr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-transition: .15s;
-  transition: .15s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-transition: .15s;
+	transition: .15s;
 }
 
 .table-mortgage2 tbody {
-  display: block;
+	display: block;
 }
 
 .table-mortgage2 tbody tr {
-  border-bottom: 1px solid #dce1ea;
+	border-bottom: 1px solid #dce1ea;
 }
 
 .table-mortgage2 tbody tr:hover {
-  background: #f0f2f7;
+	background: #f0f2f7;
 }
 
 .table-mortgage2__bank-img {
-  width: 180px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+	width: 180px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .table-mortgage2__bank-img img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .table-mortgage2__bold {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .table-mortgage2__btn-bottom {
-  text-align: center;
+	text-align: center;
 }
 
 .table-mortgage2__btn-detail {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  color: #337AB7;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: .2s;
-  transition: .2s;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+	color: #337AB7;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .table-mortgage2__btn-detail::after {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border: 1px solid currentColor;
-  border-top: none;
-  border-left: none;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  margin-left: 8px;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-  -webkit-transform-origin: 66% 66%;
-          transform-origin: 66% 66%;
+	content: "";
+	display: block;
+	width: 6px;
+	height: 6px;
+	border: 1px solid currentColor;
+	border-top: none;
+	border-left: none;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	margin-left: 8px;
+	-webkit-transition: -webkit-transform 0.2s;
+	transition: -webkit-transform 0.2s;
+	transition: transform 0.2s;
+	transition: transform 0.2s, -webkit-transform 0.2s;
+	-webkit-transform-origin: 66% 66%;
+	transform-origin: 66% 66%;
 }
 
 .table-mortgage2__btn-detail:hover {
-  color: #323B6A;
+	color: #323B6A;
 }
 
 .table-mortgage2__btn-detail._active::after {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	transform: rotate(-135deg);
 }
 
 .table-mortgage2__btn {
-  max-width: 180px;
-  width: 100%;
-  margin-bottom: 12px;
+	max-width: 180px;
+	width: 100%;
+	margin-bottom: 12px;
 }
 
 .table-mortgage2__mobile-btns {
-  display: none;
-  padding: 6px 0;
+	display: none;
+	padding: 6px 0;
 }
 
 .table-mortgage2__mobile-btns .btn {
-  height: 34px;
-  font-size: 12px;
-  width: 140px;
-  margin-bottom: 0;
+	height: 34px;
+	font-size: 12px;
+	width: 140px;
+	margin-bottom: 0;
 }
 
 .table-mortgage2__mobile-btns .table-mortgage2__btn-detail {
-  margin-right: 30px;
+	margin-right: 30px;
 }
 
 .table-mortgage2 td.table-mortgage2__detail {
-  display: none;
-  padding-top: 8px;
-  padding-bottom: 16px;
-  background: #fff;
+	display: none;
+	padding-top: 8px;
+	padding-bottom: 16px;
+	background: #fff;
 }
 
 .table-mortgage2 td.table-mortgage2__detail._active {
-  display: block;
+	display: block;
 }
 
 .table-mortgage2-detail__tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 16px;
 }
 
 .table-mortgage2-detail__tab {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 19px;
-  letter-spacing: -0.004em;
-  color: #333C67;
-  padding-bottom: 13px;
-  margin-right: 32px;
-  cursor: pointer;
-  position: relative;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: -0.004em;
+	color: #333C67;
+	padding-bottom: 13px;
+	margin-right: 32px;
+	cursor: pointer;
+	position: relative;
 }
 
 .table-mortgage2-detail__tab::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background: currentColor;
-  -webkit-transition: .2s;
-  transition: .2s;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	background: currentColor;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .table-mortgage2-detail__tab:last-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 .table-mortgage2-detail__tab:hover::after {
-  height: 1px;
-  width: 100%;
+	height: 1px;
+	width: 100%;
 }
 
 .table-mortgage2-detail__tab._active::after {
-  height: 3px;
-  width: 100%;
+	height: 3px;
+	width: 100%;
 }
 
 .table-mortgage2-detail__content {
-  display: none;
+	display: none;
 }
 
 .table-mortgage2-detail__content._active {
-  display: block;
+	display: block;
 }
 
 .table-mortgage2-detail__list {
-  margin: 0;
-  padding: 0;
-  display: block;
-  list-style: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	list-style: none;
 }
 
 .table-mortgage2-detail__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  line-height: 19px;
-  letter-spacing: -0.004em;
-  color: #333C67;
-  min-height: 49;
-  padding: 13px 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: -0.004em;
+	color: #333C67;
+	min-height: 49;
+	padding: 13px 20px;
 }
 
 .table-mortgage2-detail__item:nth-child(odd) {
-  background: #F0F2F6;
+	background: #F0F2F6;
 }
 
 .table-mortgage2-detail__label {
-  width: 42%;
-  padding-right: 10px;
+	width: 42%;
+	padding-right: 10px;
 }
 
 .table-mortgage2-detail__value {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-weight: 500;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	font-weight: 500;
 }
 
 .table-mortgage2-detail__more {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin: 16px 0 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	margin: 16px 0 0;
 }
 
 .table-mortgage2-detail .table-mortgage2-detail__btn {
-  color: #fff;
-  font-weight: 500;
-  background: #333C67;
-  padding: 6px 20px;
+	color: #fff;
+	font-weight: 500;
+	background: #333C67;
+	padding: 6px 20px;
 }
 
 .table-mortgage2-detail .table-mortgage2-detail__btn:hover {
-  background: #434f89;
+	background: #434f89;
 }
 
 .table-mortgage2-show-all {
-  display: none;
-  margin: 20px auto 20px;
-  width: 210px;
+	display: none;
+	margin: 20px auto 20px;
+	width: 210px;
 }
 
 .table-mortgage2-show-all_hide-desktop {
-  display: none;
+	display: none;
 }
 
 .tariff-main {
-  height: 438px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 15px;
-  margin-top: -10px;
-  position: relative;
+	height: 438px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0 15px;
+	margin-top: -10px;
+	position: relative;
 }
 
 .tariff-main::before {
-  content: "";
-  position: absolute;
-  top: -84px;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 84px + 92px);
-  background-color: #f0f2f7;
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	top: -84px;
+	left: 0;
+	width: 100%;
+	height: calc(100% + 84px + 92px);
+	background-color: #f0f2f7;
+	pointer-events: none;
 }
 
 .tariff-main_t4 .tariff-main__img img {
-  max-width: 470px;
+	max-width: 470px;
 }
 
 .tariff-main_t3 .tariff-main__img img {
-  max-width: 500px;
+	max-width: 500px;
 }
 
 .tariff-main_row.tariff-main {
-  height: auto;
+	height: auto;
 }
 
 .tariff-main_row .tariff-main__content {
-  max-width: 100%;
-  padding-top: 10px;
+	max-width: 100%;
+	padding-top: 10px;
 }
 
 .tariff-main_row .tariff-main__text {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .tariff-main__content {
-  padding-top: 30px;
-  max-width: 560px;
-  width: 100%;
-  margin-right: 16px;
-  color: #323b6a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
+	padding-top: 30px;
+	max-width: 560px;
+	width: 100%;
+	margin-right: 16px;
+	color: #323b6a;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: relative;
 }
 
 .tariff-main__img-mobile {
-  display: none;
+	display: none;
 }
 
 .tariff-main__img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: relative;
 }
 
 .tariff-main__img img {
-  max-width: 545px;
-  width: 100%;
-  max-height: 100%;
-  height: auto;
+	max-width: 545px;
+	width: 100%;
+	max-height: 100%;
+	height: auto;
 }
 
 .tariff-main__title {
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 1.28;
-  letter-spacing: 0.36px;
-  margin-bottom: 20px;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1.28;
+	letter-spacing: 0.36px;
+	margin-bottom: 20px;
 }
 
 .tariff-main__text {
-  font-size: 21px;
-  line-height: 1.33;
-  letter-spacing: 0.21px;
-  margin-bottom: 24px;
+	font-size: 21px;
+	line-height: 1.33;
+	letter-spacing: 0.21px;
+	margin-bottom: 24px;
 }
 
 .tariff-main__bottom {
-  margin: auto 0 35px;
-  padding: 20px 30px;
-  -webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-          box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-  background-color: #ffffff;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-shadow: 0px 0px 8px rgba(50, 59, 106, 0.33);
-          box-shadow: 0px 0px 8px rgba(50, 59, 106, 0.33);
-  border-radius: 4px;
+	margin: auto 0 35px;
+	padding: 20px 30px;
+	-webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	background-color: #ffffff;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-shadow: 0px 0px 8px rgba(50, 59, 106, 0.33);
+	box-shadow: 0px 0px 8px rgba(50, 59, 106, 0.33);
+	border-radius: 4px;
 }
 
 .tariff-main__bottom-text {
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0.18px;
-  color: #323b6a;
-  margin-right: 40px;
+	font-size: 18px;
+	line-height: 1;
+	letter-spacing: 0.18px;
+	color: #323b6a;
+	margin-right: 40px;
 }
 
 .tariff-main__bottom-text .fas {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 .tariff-main__select {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
 }
 
 .table-tariff-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  position: relative;
-  z-index: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	position: relative;
+	z-index: 1;
 }
 
 .table-tariff-list .table-tariff-wrap {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 20px;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin-right: 20px;
 }
 
 .table-tariff-list .table-tariff-wrap:last-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 .table-tariff-wrap {
-  -webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-          box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-  background-color: #ffffff;
-  padding: 1px;
+	-webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	background-color: #ffffff;
+	padding: 1px;
 }
 
 .table-tariff-wrap__balance {
-  padding: 20px 10px;
+	padding: 20px 10px;
 }
 
 .table-tariff-wrap__balance .btn {
-  width: 260px;
+	width: 260px;
 }
 
 .table-tariff {
-  width: 100%;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #323b6a;
-  background: #fff;
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #323b6a;
+	background: #fff;
 }
 
 .table-tariff__head {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 1.05px;
-  color: #ffffff;
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #323B6A;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.2;
+	letter-spacing: 1.05px;
+	color: #ffffff;
+	padding: 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background: #323B6A;
 }
 
 .table-tariff__label {
-  width: calc(100% - 110px);
-  line-height: 1.2;
+	width: calc(100% - 110px);
+	line-height: 1.2;
 }
 
 .table-tariff__value {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-align: right;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	text-align: right;
 }
 
 .table-tariff__icon {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 .table-tariff__btn-popover {
-  color: #2f8dd3;
-  margin-left: 5px;
+	color: #2f8dd3;
+	margin-left: 5px;
 }
 
 .table-tariff__btn-popover:hover {
-  color: #323b6a;
+	color: #323b6a;
 }
 
 .table-tariff__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-height: 56px;
-  padding: 5px 20px 5px 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	min-height: 56px;
+	padding: 5px 20px 5px 10px;
 }
 
 .table-tariff__row_first {
-  padding: 16px 20px 16px 20px;
-  font-weight: bold;
-  border-bottom: 1px solid #323B6A;
+	padding: 16px 20px 16px 20px;
+	font-weight: bold;
+	border-bottom: 1px solid #323B6A;
 }
 
 .table-tariff__row_info {
-  padding: 0 50px 0 46px;
-  margin-bottom: 15px;
-  min-height: auto;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+	padding: 0 50px 0 46px;
+	margin-bottom: 15px;
+	min-height: auto;
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
 }
 
 .table-tariff__row_info:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .table-tariff__row_info2 {
-  padding: 14px 50px 10px 70px;
-  margin-bottom: 15px;
-  min-height: 45px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  background: #DDE1E9;
-  border-bottom: 1px solid #fff;
-  margin: 0;
-  font-weight: 500;
+	padding: 14px 50px 10px 70px;
+	margin-bottom: 15px;
+	min-height: 45px;
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
+	background: #DDE1E9;
+	border-bottom: 1px solid #fff;
+	margin: 0;
+	font-weight: 500;
 }
 
 .table-tariff__row_info2:last-child {
-  border-bottom: none;
+	border-bottom: none;
 }
 
 .table-tariff__row-inner {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .table-tariff__accordion {
-  border-bottom: 1px solid #323B6A;
-  -webkit-transition: .15s;
-  transition: .15s;
+	border-bottom: 1px solid #323B6A;
+	-webkit-transition: .15s;
+	transition: .15s;
 }
 
 .table-tariff__accordion_t2 {
-  border-color: #CACEDB;
+	border-color: #CACEDB;
 }
 
-.table-tariff__accordion._active > .table-tariff__accordion-head {
-  background: #DCE1EA;
+.table-tariff__accordion._active>.table-tariff__accordion-head {
+	background: #DCE1EA;
 }
 
-.table-tariff__accordion._active > .table-tariff__accordion-head_t2 {
-  background: #fff;
+.table-tariff__accordion._active>.table-tariff__accordion-head_t2 {
+	background: #fff;
 }
 
-.table-tariff__accordion._active > .table-tariff__accordion-head_t3 {
-  background: #F0F2F6;
+.table-tariff__accordion._active>.table-tariff__accordion-head_t3 {
+	background: #F0F2F6;
 }
 
-.table-tariff__accordion._active > .table-tariff__accordion-head .table-tariff__accordion-arrow {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  color: #323B6A;
+.table-tariff__accordion._active>.table-tariff__accordion-head .table-tariff__accordion-arrow {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	color: #323B6A;
 }
 
-.table-tariff__accordion._active > .table-tariff__accordion-content {
-  display: block;
+.table-tariff__accordion._active>.table-tariff__accordion-content {
+	display: block;
 }
 
 .table-tariff__accordion-head {
-  padding: 16px 50px 16px 20px;
-  position: relative;
-  cursor: pointer;
-  font-weight: 700;
+	padding: 16px 50px 16px 20px;
+	position: relative;
+	cursor: pointer;
+	font-weight: 700;
 }
 
 .table-tariff__accordion-head:hover {
-  background: #DCE1EA;
-  -webkit-transition: .15s;
-  transition: .15s;
+	background: #DCE1EA;
+	-webkit-transition: .15s;
+	transition: .15s;
 }
 
 .table-tariff__accordion-head .table-tariff__label {
-  width: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 10px;
+	width: auto;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin-right: 10px;
 }
 
 .table-tariff__accordion-head .table-tariff__value {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
 }
 
 .table-tariff__accordion-head_t2 {
-  background: #fff;
+	background: #fff;
 }
 
 .table-tariff__accordion-head_t2:hover {
-  background: #F0F2F6;
+	background: #F0F2F6;
 }
 
 .table-tariff__accordion-head_t3 {
-  background: #F0F2F6;
-  padding-left: 46px;
-  font-weight: 500;
+	background: #F0F2F6;
+	padding-left: 46px;
+	font-weight: 500;
 }
 
 .table-tariff__accordion-head_t3:hover {
-  background: #DDE1E9;
+	background: #DDE1E9;
 }
 
 .table-tariff__accordion-arrow {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  margin-top: -10px;
-  font-size: 20px;
-  color: #2f8dd3;
-  -webkit-transition: .15s;
-  transition: .15s;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -10px;
+	font-size: 20px;
+	color: #2f8dd3;
+	-webkit-transition: .15s;
+	transition: .15s;
 }
 
 .table-tariff__accordion-content {
-  border-top: 1px solid #fff;
-  background: #DCE1EA;
-  padding: 20px 0;
-  display: none;
+	border-top: 1px solid #fff;
+	background: #DCE1EA;
+	padding: 20px 0;
+	display: none;
 }
 
 .table-tariff__accordion-content_t2 {
-  padding: 0;
-  border-color: #CACEDB;
+	padding: 0;
+	border-color: #CACEDB;
 }
 
 .table-tariff._active .table-tariff__head {
-  background: #009245;
+	background: #009245;
 }
 
 .tariff-types {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 40px 0 65px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 40px 0 65px;
 }
 
 .tariff-types__item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  margin-right: 30px;
-  padding: 19px 10px;
-  color: #2f8dd3;
-  -webkit-transition: .15s;
-  transition: .15s;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	margin-right: 30px;
+	padding: 19px 10px;
+	color: #2f8dd3;
+	-webkit-transition: .15s;
+	transition: .15s;
 }
 
 .tariff-types__item:last-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 .tariff-types__item:visited {
-  color: #2f8dd3;
-  text-decoration: none;
+	color: #2f8dd3;
+	text-decoration: none;
 }
 
 .tariff-types__item:hover {
-  color: #323B6A;
-  border-color: #e5e9ef;
-  text-decoration: none;
+	color: #323B6A;
+	border-color: #e5e9ef;
+	text-decoration: none;
 }
 
 .tariff-types__item:hover .tariff-types__img {
-  background: #323B6A;
+	background: #323B6A;
 }
 
 .tariff-types__item.active {
-  color: #323B6A;
-  border-color: #e5e9ef;
+	color: #323B6A;
+	border-color: #e5e9ef;
 }
 
 .tariff-types__item.active .tariff-types__img {
-  background: #323B6A;
+	background: #323B6A;
 }
 
 .tariff-types__img {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 14px;
-  background: #2f8dd3;
-  -webkit-transition: .15s;
-  transition: .15s;
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-bottom: 14px;
+	background: #2f8dd3;
+	-webkit-transition: .15s;
+	transition: .15s;
 }
 
 .tariff-types__icon {
-  font-size: 18px;
-  color: #fff;
+	font-size: 18px;
+	color: #fff;
 }
 
 .tariff-types__text {
-  font-size: 16px;
-  text-align: center;
-  color: inherit;
+	font-size: 16px;
+	text-align: center;
+	color: inherit;
 }
 
 .modal-custom-new.modal {
-  text-align: center;
-  padding: 0 !important;
+	text-align: center;
+	padding: 0 !important;
 }
 
 .modal-custom-new.modal:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px;
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -4px;
 }
 
 .modal-custom-new.modal .modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
 }
 
 .modal-feed .modal-footer {
-  padding-right: 9px;
-  padding-left: 9px;
+	padding-right: 9px;
+	padding-left: 9px;
 }
 
 .modal-feed .modal-footer .modal-feed__btn {
-  max-width: 200px;
-  width: 100%;
-  font-weight: 500;
-  font-size: 16px;
-  margin: 0 6px 12px;
+	max-width: 200px;
+	width: 100%;
+	font-weight: 500;
+	font-size: 16px;
+	margin: 0 6px 12px;
 }
 
 .modal-feed .form-group {
-  margin: 0;
+	margin: 0;
 }
 
 .modal-feed._styled .modal-content {
-  border-radius: 0;
-  border: none;
+	border-radius: 0;
+	border: none;
 }
 
 .modal-feed._styled .modal-content .modal-header {
-  border: none;
-  min-height: auto;
-  padding: 32px 30px 24px;
+	border: none;
+	min-height: auto;
+	padding: 32px 30px 24px;
 }
 
 .modal-feed._styled .modal-content .modal-title {
-  font-size: 21px;
-  font-weight: 500;
-  font-size: 21px;
-  letter-spacing: -0.004em;
-  color: #333C67;
+	font-size: 21px;
+	font-weight: 500;
+	font-size: 21px;
+	letter-spacing: -0.004em;
+	color: #333C67;
 }
 
 .modal-feed._styled .modal-content .modal-body {
-  padding: 0 30px 24px;
+	padding: 0 30px 24px;
 }
 
 .modal-feed._styled .modal-content .modal-footer {
-  padding: 0 24px 20px;
-  border: none;
+	padding: 0 24px 20px;
+	border: none;
 }
 
 .modal-feed._styled label {
-  font-weight: 500;
-  color: #333C67;
-  margin-bottom: 10px;
+	font-weight: 500;
+	color: #333C67;
+	margin-bottom: 10px;
 }
 
 .modal-feed._styled .form-group {
-  margin: 0;
+	margin: 0;
 }
 
 .modal-feed._styled .form-group .form-control {
-  background: #F0F2F7;
-  border: 1px solid #F0F2F7;
-  padding: 0 10px 0 10px;
-  font-size: 18px;
-  color: #333C67;
-  font-weight: 700;
-  -webkit-transition: .2s;
-  transition: .2s;
-  width: 100%;
-  max-width: 100%;
-  height: 40px;
-  line-height: normal;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-radius: 0;
+	background: #F0F2F7;
+	border: 1px solid #F0F2F7;
+	padding: 0 10px 0 10px;
+	font-size: 18px;
+	color: #333C67;
+	font-weight: 700;
+	-webkit-transition: .2s;
+	transition: .2s;
+	width: 100%;
+	max-width: 100%;
+	height: 40px;
+	line-height: normal;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
 }
 
-.modal-feed._styled .form-group .form-control:focus, .modal-feed._styled .form-group .form-control:active {
-  background: #fff;
-  border-color: #323B6A;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none;
+.modal-feed._styled .form-group .form-control:focus,
+.modal-feed._styled .form-group .form-control:active {
+	background: #fff;
+	border-color: #323B6A;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
 }
 
 .modal-feed._styled .form-group .form-control::-webkit-input-placeholder {
-  color: #8E95A5;
-  opacity: 1;
+	color: #8E95A5;
+	opacity: 1;
 }
 
 .modal-feed._styled .form-group .form-control:-ms-input-placeholder {
-  color: #8E95A5;
-  opacity: 1;
+	color: #8E95A5;
+	opacity: 1;
 }
 
 .modal-feed._styled .form-group .form-control::-ms-input-placeholder {
-  color: #8E95A5;
-  opacity: 1;
+	color: #8E95A5;
+	opacity: 1;
 }
 
 .modal-feed._styled .form-group .form-control::placeholder {
-  color: #8E95A5;
-  opacity: 1;
+	color: #8E95A5;
+	opacity: 1;
 }
 
 .modal-feed._styled .form-group .form-control:disabled {
-  color: #fff;
-  background: #333C67;
-  border-color: #333C67;
+	color: #fff;
+	background: #333C67;
+	border-color: #333C67;
 }
 
 .modal-feed._styled .form-group .form-control:disabled:focus {
-  border-color: #333C67;
-  background: #333C67;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+	border-color: #333C67;
+	background: #333C67;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .modal-feed._styled .modal-feed__btn {
-  height: 40px;
-  border-radius: 6px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-  background: #2f8dd3;
-  -webkit-transition: .25s;
-  transition: .25s;
-  line-height: 1;
-  font-weight: 500;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  text-shadow: none;
+	height: 40px;
+	border-radius: 6px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	background: #2f8dd3;
+	-webkit-transition: .25s;
+	transition: .25s;
+	line-height: 1;
+	font-weight: 500;
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
 }
 
 .modal-feed._styled .modal-feed__btn:visited {
-  color: #fff;
+	color: #fff;
 }
 
 .modal-feed._styled .modal-feed__btn:hover {
-  background: #323B6A;
-  color: #fff;
+	background: #323B6A;
+	color: #fff;
 }
 
-.modal-feed._styled .modal-feed__btn:focus, .modal-feed._styled .modal-feed__btn:active {
-  color: #fff;
-  outline: none;
+.modal-feed._styled .modal-feed__btn:focus,
+.modal-feed._styled .modal-feed__btn:active {
+	color: #fff;
+	outline: none;
 }
 
 .modal-feed._styled .modal-feed__btn:focus:active {
-  outline: none;
+	outline: none;
 }
 
 .modal-feed._styled .modal-feed__btn.btn-default {
-  border: solid 1px #CACEDB;
-  color: #8E95A5;
-  background: transparent;
+	border: solid 1px #CACEDB;
+	color: #8E95A5;
+	background: transparent;
 }
 
 .modal-feed._styled .modal-feed__btn.btn-default:visited {
-  color: #8E95A5;
+	color: #8E95A5;
 }
 
 .modal-feed._styled .modal-feed__btn.btn-default:hover {
-  border-color: #323B6A;
-  color: #323B6A;
-  background: transparent;
+	border-color: #323B6A;
+	color: #323B6A;
+	background: transparent;
 }
 
-.modal-feed._styled .modal-feed__btn.btn-default:focus, .modal-feed._styled .modal-feed__btn.btn-default:active {
-  border-color: #323B6A;
-  color: #323B6A;
+.modal-feed._styled .modal-feed__btn.btn-default:focus,
+.modal-feed._styled .modal-feed__btn.btn-default:active {
+	border-color: #323B6A;
+	color: #323B6A;
 }
 
 @media only screen and (max-width: 1199px) {
-  .calc-mortgage-new__bottom-btns .btn {
-    width: 220px;
-  }
-  .table-mortgage2 th,
-  .table-mortgage2 td {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-  .table-mortgage2 td:nth-child(1),
-  .table-mortgage2 th:nth-child(1) {
-    padding-left: 20px;
-    width: 200px;
-  }
-  .table-mortgage2 td:nth-child(2),
-  .table-mortgage2 th:nth-child(2) {
-    width: 200px;
-  }
-  .table-mortgage2 td:nth-child(3),
-  .table-mortgage2 th:nth-child(3) {
-    width: 200px;
-  }
-  .table-mortgage2 td:nth-child(4),
-  .table-mortgage2 th:nth-child(4) {
-    width: auto;
-  }
-  .table-mortgage2 td:nth-child(5),
-  .table-mortgage2 th:nth-child(5) {
-    width: 200px;
-    padding-right: 20px;
-  }
-  .table-mortgage2__bank-img {
-    width: 170px;
-  }
-  .tariff-main:not(.tariff-main_row) .tariff-main__bottom {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .tariff-main:not(.tariff-main_row) .tariff-main__bottom-text {
-    margin-right: 16px;
-  }
-  .table-tariff-list .table-tariff-wrap {
-    margin-right: 10px;
-  }
-  .mortgage-main__content {
-    max-width: 380px;
-    min-height: 230px;
-  }
-  .mortgage-main__title {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-  .mortgage-main__text {
-    font-size: 18px;
-  }
+	.calc-mortgage-new__bottom-btns .btn {
+		width: 220px;
+	}
+
+	.table-mortgage2 th,
+	.table-mortgage2 td {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	.table-mortgage2 td:nth-child(1),
+	.table-mortgage2 th:nth-child(1) {
+		padding-left: 20px;
+		width: 200px;
+	}
+
+	.table-mortgage2 td:nth-child(2),
+	.table-mortgage2 th:nth-child(2) {
+		width: 200px;
+	}
+
+	.table-mortgage2 td:nth-child(3),
+	.table-mortgage2 th:nth-child(3) {
+		width: 200px;
+	}
+
+	.table-mortgage2 td:nth-child(4),
+	.table-mortgage2 th:nth-child(4) {
+		width: auto;
+	}
+
+	.table-mortgage2 td:nth-child(5),
+	.table-mortgage2 th:nth-child(5) {
+		width: 200px;
+		padding-right: 20px;
+	}
+
+	.table-mortgage2__bank-img {
+		width: 170px;
+	}
+
+	.tariff-main:not(.tariff-main_row) .tariff-main__bottom {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.tariff-main:not(.tariff-main_row) .tariff-main__bottom-text {
+		margin-right: 16px;
+	}
+
+	.table-tariff-list .table-tariff-wrap {
+		margin-right: 10px;
+	}
+
+	.mortgage-main__content {
+		max-width: 380px;
+		min-height: 230px;
+	}
+
+	.mortgage-main__title {
+		font-size: 28px;
+		margin-bottom: 15px;
+	}
+
+	.mortgage-main__text {
+		font-size: 18px;
+	}
 }
 
 @media only screen and (max-width: 991px) {
-  .select-styled-new2 .dropdown-menu {
-    font-size: 16px;
-  }
-  .select-styled-new2 .dropdown-menu > li > a {
-    padding: 10px;
-  }
-  .btn-styled-new2__mobile {
-    display: inline;
-  }
-  .btn-styled-new2__desktop {
-    display: none;
-  }
-  .mortgage-main {
-    height: auto;
-    padding: 0 15px 20px;
-    background: #fff;
-  }
-  .mortgage-main::before {
-    display: none;
-  }
-  .mortgage-main__img {
-    display: none;
-  }
-  .mortgage-main__content {
-    padding: 0;
-    max-width: 100%;
-    min-height: auto;
-    margin-right: 0;
-  }
-  .mortgage-main__title {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.16px;
-    margin-bottom: 4px;
-  }
-  .mortgage-main__title .select-styled-new2_inline-title > .dropdown-menu {
-    min-width: auto !important;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .mortgage-main__title-inner {
-    display: block;
-  }
-  .mortgage-main__title-inner br {
-    display: none;
-  }
-  .mortgage-main__text {
-    font-size: 12px;
-    line-height: 1.5;
-    letter-spacing: 0.12px;
-    text-align: center;
-  }
-  .input-label {
-    margin-bottom: 5px;
-  }
-  .input-styled-new2 {
-    font-size: 16px;
-  }
-  .input-with-label__label {
-    font-size: 16px;
-  }
-  .select-styled-new2 .btn.btn-default {
-    font-size: 16px;
-  }
-  .btn-show-mortgage-filter {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .calc-mortgage-new {
-    display: none;
-    padding: 15px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    position: static;
-  }
-  .calc-mortgage-new__box {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    padding: 32px 0 0;
-    border-radius: 4px;
-    position: relative;
-  }
-  .calc-mortgage-new__bottom-btns {
-    width: 100%;
-    padding: 12px 15px 32px;
-    background: #fff;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-radius: 0 0 4px 4px;
-  }
-  .calc-mortgage-new__bottom-btns .btn {
-    width: auto;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    font-size: 12px;
-    margin-right: 0;
-    max-width: 100%;
-  }
-  .calc-mortgage-new__bottom-btns .btn:first-child {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-left: 12px;
-  }
-  .calc-mortgage-new__row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 0;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .calc-mortgage-new__column {
-    width: 100%;
-    margin: 0 0 12px;
-  }
-  .calc-mortgage-new__column:empty {
-    display: none;
-  }
-  .calc-mortgage-new__bottom {
-    background: #F0F2F7;
-    margin-top: 16px;
-    padding-top: 12px;
-  }
-  .calc-mortgage-new__middle {
-    padding: 0;
-  }
-  .calc-mortgage-new__result {
-    width: 100%;
-    margin-right: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .calc-mortgage-new__sum {
-    margin-right: 0;
-    font-size: 16px;
-    line-height: 1.54;
-    text-align: center;
-  }
-  .calc-mortgage-new__note {
-    text-align: center;
-    font-size: 13px;
-  }
-  .calc-mortgage-new__close {
-    position: absolute;
-    top: 32px;
-    right: 15px;
-    width: 18px;
-    height: 18px;
-    visibility: hidden;
-    cursor: pointer;
-  }
-  .calc-mortgage-new__close::after, .calc-mortgage-new__close::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 2px;
-    background: #323B6A;
-  }
-  .calc-mortgage-new__close::before {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  .calc-mortgage-new__close::after {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .calc-mortgage-new__mobile-head {
-    display: block;
-  }
-  .calc-mortgage-new__close {
-    visibility: visible;
-  }
-  .calc-mortgage-new__popup {
-    min-height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .calc-mortgage-new__popup-inner {
-    width: 100%;
-  }
-  .calc-mortgage-new._show {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(50, 59, 106, 0.8);
-    overflow: auto;
-    z-index: 300;
-  }
-  .mortgage-filter-popup-show {
-    overflow: hidden;
-  }
-  .mortgage-filter-popup-show .dropdown-backdrop {
-    display: none !important;
-  }
-  .mortgage-filter {
-    margin: 0;
-    padding-top: 16px;
-  }
-  .mortgage-filter__inner {
-    padding-left: 15px;
-  }
-  .mortgage-filter__list::after {
-    padding-right: 15px;
-  }
-  .mortgage-filter__item {
-    font-size: 12px;
-    padding: 0 12px;
-    margin: 0 8px 8px 0;
-  }
-  .mortgage-filter.active .mortgage-filter__inner {
-    padding-right: 15px;
-  }
-  .table-mortgage2 {
-    display: block;
-    margin-bottom: 20px;
-  }
-  .table-mortgage2 thead {
-    display: block;
-  }
-  .table-mortgage2 thead th[data-sort-method="none"] {
-    display: none;
-  }
-  .table-mortgage2 thead tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-  }
-  .table-mortgage2 thead th {
-    height: auto;
-    width: auto !important;
-    padding: 10px 15px 10px 0;
-  }
-  .table-mortgage2 thead th:first-child {
-    padding-left: 10px;
-  }
-  .table-mortgage2 thead th.hover {
-    background: #fff;
-  }
-  .table-mortgage2 tbody {
-    display: block;
-  }
-  .table-mortgage2 tbody tr {
-    display: block;
-    border-bottom-color: #323b6a;
-  }
-  .table-mortgage2 tbody tr:hover {
-    background: #fff;
-  }
-  .table-mortgage2 tbody td {
-    padding: 8px 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 12px;
-    line-height: 1.6;
-    letter-spacing: 0.12px;
-    position: relative;
-  }
-  .table-mortgage2 tbody td:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-    left: 10px;
-    border-top: solid 1px #dce1ea;
-  }
-  .table-mortgage2 tbody td:first-child:after {
-    right: 0;
-    left: 0;
-  }
-  .table-mortgage2 tbody td:nth-last-child(3):after {
-    display: none;
-  }
-  .table-mortgage2 tbody td:nth-last-child(2) {
-    display: none;
-  }
-  .table-mortgage2 td {
-    width: auto !important;
-    padding-left: 10px !important;
-  }
-  .table-mortgage2__mobile-btns {
-    display: block;
-  }
-  .table-mortgage2__item {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .table-mortgage2__item_head {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .table-mortgage2__item_label::before {
-    content: attr(data-label);
-    margin-right: 10px;
-    font-weight: 700;
-  }
-  .table-mortgage2__item-inner {
-    text-align: right;
-  }
-  .table-mortgage2__bank-img {
-    height: 40px;
-    width: 160px;
-  }
-  .table-mortgage2 .table-mortgage2__hide-mobile {
-    display: none;
-  }
-  .table-mortgage2_all .table-mortgage2__hide-mobile {
-    display: block;
-  }
-  .table-mortgage2-detail__label {
-    width: 50%;
-  }
-  .table-mortgage2-show-all_hide-desktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .often-searched__head {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.16px;
-    margin-bottom: 14px;
-  }
-  .often-searched__row {
-    display: none;
-    padding: 6px 10px 20px;
-    margin-bottom: 0;
-  }
-  .often-searched__list {
-    margin-bottom: 8px;
-    margin-right: 0;
-  }
-  .often-searched__list:last-child {
-    margin-bottom: 0;
-  }
-  .often-searched__list_c4 {
-    -webkit-column-count: 1;
-            column-count: 1;
-  }
-  .often-searched__title {
-    padding: 10px;
-    font-size: 12px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    cursor: pointer;
-  }
-  .often-searched__title::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border: 2px solid #323B6A;
-    border-top: none;
-    border-left: none;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-transform-origin: 66% 66%;
-            transform-origin: 66% 66%;
-    margin-top: -5px;
-    margin-left: 10px;
-    -webkit-transition: .2s;
-    transition: .2s;
-  }
-  .often-searched__contet {
-    border-top: solid 1px #dce1ea;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-  .often-searched__contet:last-child {
-    border-bottom: solid 1px #dce1ea;
-  }
-  .often-searched__contet.show .often-searched__row {
-    display: block;
-  }
-  .often-searched__contet.show .often-searched__title::after {
-    -webkit-transform: rotate(225deg);
-            transform: rotate(225deg);
-    border-color: #2f8dd3;
-  }
-  .tariff-main {
-    height: 375px;
-    padding-right: 10px;
-    padding-bottom: 64px;
-    margin-bottom: 24px;
-  }
-  .tariff-main::before {
-    height: calc(100% + 84px - 28px);
-  }
-  .tariff-main__title {
-    font-size: 28px;
-    position: relative;
-  }
-  .tariff-main__content {
-    max-width: 410px;
-    position: static;
-    padding-top: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-right: 10px;
-  }
-  .tariff-main__text {
-    font-size: 16px;
-    position: relative;
-    margin: 0;
-  }
-  .tariff-main__bottom {
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-    max-width: 100%;
-    width: calc(100% - 30px);
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0;
-    padding: 12px 20px;
-    border-radius: 0;
-  }
-  .tariff-main__select {
-    max-width: 444px;
-  }
-  .table-tariff-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-right: -5px;
-    margin-left: -5px;
-  }
-  .table-tariff-list .table-tariff-wrap {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  .table-tariff-list .table-tariff-wrap:last-child {
-    margin-bottom: 0;
-  }
-  .table-tariff-wrap__balance .btn {
-    width: 100%;
-    font-size: 12px;
-    margin-right: 0;
-  }
-  .table-tariff__label {
-    width: calc(100% - 64px);
-  }
+	.select-styled-new2 .dropdown-menu {
+		font-size: 16px;
+	}
+
+	.select-styled-new2 .dropdown-menu>li>a {
+		padding: 10px;
+	}
+
+	.btn-styled-new2__mobile {
+		display: inline;
+	}
+
+	.btn-styled-new2__desktop {
+		display: none;
+	}
+
+	.mortgage-main {
+		height: auto;
+		padding: 0 15px 20px;
+		background: #fff;
+	}
+
+	.mortgage-main::before {
+		display: none;
+	}
+
+	.mortgage-main__img {
+		display: none;
+	}
+
+	.mortgage-main__content {
+		padding: 0;
+		max-width: 100%;
+		min-height: auto;
+		margin-right: 0;
+	}
+
+	.mortgage-main__title {
+		text-align: center;
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 0.16px;
+		margin-bottom: 4px;
+	}
+
+	.mortgage-main__title .select-styled-new2_inline-title>.dropdown-menu {
+		min-width: auto !important;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+
+	.mortgage-main__title-inner {
+		display: block;
+	}
+
+	.mortgage-main__title-inner br {
+		display: none;
+	}
+
+	.mortgage-main__text {
+		font-size: 12px;
+		line-height: 1.5;
+		letter-spacing: 0.12px;
+		text-align: center;
+	}
+
+	.input-label {
+		margin-bottom: 5px;
+	}
+
+	.input-styled-new2 {
+		font-size: 16px;
+	}
+
+	.input-with-label__label {
+		font-size: 16px;
+	}
+
+	.select-styled-new2 .btn.btn-default {
+		font-size: 16px;
+	}
+
+	.btn-show-mortgage-filter {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.calc-mortgage-new {
+		display: none;
+		padding: 15px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		position: static;
+	}
+
+	.calc-mortgage-new__box {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 32px 0 0;
+		border-radius: 4px;
+		position: relative;
+	}
+
+	.calc-mortgage-new__bottom-btns {
+		width: 100%;
+		padding: 12px 15px 32px;
+		background: #fff;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		border-radius: 0 0 4px 4px;
+	}
+
+	.calc-mortgage-new__bottom-btns .btn {
+		width: auto;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		font-size: 12px;
+		margin-right: 0;
+		max-width: 100%;
+	}
+
+	.calc-mortgage-new__bottom-btns .btn:first-child {
+		-webkit-box-ordinal-group: 3;
+		-ms-flex-order: 2;
+		order: 2;
+		margin-left: 12px;
+	}
+
+	.calc-mortgage-new__row {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin: 0;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.calc-mortgage-new__column {
+		width: 100%;
+		margin: 0 0 12px;
+	}
+
+	.calc-mortgage-new__column:empty {
+		display: none;
+	}
+
+	.calc-mortgage-new__bottom {
+		background: #F0F2F7;
+		margin-top: 16px;
+		padding-top: 12px;
+	}
+
+	.calc-mortgage-new__middle {
+		padding: 0;
+	}
+
+	.calc-mortgage-new__result {
+		width: 100%;
+		margin-right: 0;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	.calc-mortgage-new__sum {
+		margin-right: 0;
+		font-size: 16px;
+		line-height: 1.54;
+		text-align: center;
+	}
+
+	.calc-mortgage-new__note {
+		text-align: center;
+		font-size: 13px;
+	}
+
+	.calc-mortgage-new__close {
+		position: absolute;
+		top: 32px;
+		right: 15px;
+		width: 18px;
+		height: 18px;
+		visibility: hidden;
+		cursor: pointer;
+	}
+
+	.calc-mortgage-new__close::after,
+	.calc-mortgage-new__close::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		height: 2px;
+		background: #323B6A;
+	}
+
+	.calc-mortgage-new__close::before {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+	.calc-mortgage-new__close::after {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.calc-mortgage-new__mobile-head {
+		display: block;
+	}
+
+	.calc-mortgage-new__close {
+		visibility: visible;
+	}
+
+	.calc-mortgage-new__popup {
+		min-height: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	.calc-mortgage-new__popup-inner {
+		width: 100%;
+	}
+
+	.calc-mortgage-new._show {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(50, 59, 106, 0.8);
+		overflow: auto;
+		z-index: 300;
+	}
+
+	.mortgage-filter-popup-show {
+		overflow: hidden;
+	}
+
+	.mortgage-filter-popup-show .dropdown-backdrop {
+		display: none !important;
+	}
+
+	.mortgage-filter {
+		margin: 0;
+		padding-top: 16px;
+	}
+
+	.mortgage-filter__inner {
+		padding-left: 15px;
+	}
+
+	.mortgage-filter__list::after {
+		padding-right: 15px;
+	}
+
+	.mortgage-filter__item {
+		font-size: 12px;
+		padding: 0 12px;
+		margin: 0 8px 8px 0;
+	}
+
+	.mortgage-filter.active .mortgage-filter__inner {
+		padding-right: 15px;
+	}
+
+	.table-mortgage2 {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.table-mortgage2 thead {
+		display: block;
+	}
+
+	.table-mortgage2 thead th[data-sort-method="none"] {
+		display: none;
+	}
+
+	.table-mortgage2 thead tr {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.table-mortgage2 thead th {
+		height: auto;
+		width: auto !important;
+		padding: 10px 15px 10px 0;
+	}
+
+	.table-mortgage2 thead th:first-child {
+		padding-left: 10px;
+	}
+
+	.table-mortgage2 thead th.hover {
+		background: #fff;
+	}
+
+	.table-mortgage2 tbody {
+		display: block;
+	}
+
+	.table-mortgage2 tbody tr {
+		display: block;
+		border-bottom-color: #323b6a;
+	}
+
+	.table-mortgage2 tbody tr:hover {
+		background: #fff;
+	}
+
+	.table-mortgage2 tbody td {
+		padding: 8px 10px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		font-size: 12px;
+		line-height: 1.6;
+		letter-spacing: 0.12px;
+		position: relative;
+	}
+
+	.table-mortgage2 tbody td:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 10px;
+		left: 10px;
+		border-top: solid 1px #dce1ea;
+	}
+
+	.table-mortgage2 tbody td:first-child:after {
+		right: 0;
+		left: 0;
+	}
+
+	.table-mortgage2 tbody td:nth-last-child(3):after {
+		display: none;
+	}
+
+	.table-mortgage2 tbody td:nth-last-child(2) {
+		display: none;
+	}
+
+	.table-mortgage2 td {
+		width: auto !important;
+		padding-left: 10px !important;
+	}
+
+	.table-mortgage2__mobile-btns {
+		display: block;
+	}
+
+	.table-mortgage2__item {
+		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+
+	.table-mortgage2__item_head {
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	.table-mortgage2__item_label::before {
+		content: attr(data-label);
+		margin-right: 10px;
+		font-weight: 700;
+	}
+
+	.table-mortgage2__item-inner {
+		text-align: right;
+	}
+
+	.table-mortgage2__bank-img {
+		height: 40px;
+		width: 160px;
+	}
+
+	.table-mortgage2 .table-mortgage2__hide-mobile {
+		display: none;
+	}
+
+	.table-mortgage2_all .table-mortgage2__hide-mobile {
+		display: block;
+	}
+
+	.table-mortgage2-detail__label {
+		width: 50%;
+	}
+
+	.table-mortgage2-show-all_hide-desktop {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.often-searched__head {
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 0.16px;
+		margin-bottom: 14px;
+	}
+
+	.often-searched__row {
+		display: none;
+		padding: 6px 10px 20px;
+		margin-bottom: 0;
+	}
+
+	.often-searched__list {
+		margin-bottom: 8px;
+		margin-right: 0;
+	}
+
+	.often-searched__list:last-child {
+		margin-bottom: 0;
+	}
+
+	.often-searched__list_c4 {
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
+
+	.often-searched__title {
+		padding: 10px;
+		font-size: 12px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+
+	.often-searched__title::after {
+		content: "";
+		width: 10px;
+		height: 10px;
+		border: 2px solid #323B6A;
+		border-top: none;
+		border-left: none;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		-webkit-transform-origin: 66% 66%;
+		transform-origin: 66% 66%;
+		margin-top: -5px;
+		margin-left: 10px;
+		-webkit-transition: .2s;
+		transition: .2s;
+	}
+
+	.often-searched__contet {
+		border-top: solid 1px #dce1ea;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	.often-searched__contet:last-child {
+		border-bottom: solid 1px #dce1ea;
+	}
+
+	.often-searched__contet.show .often-searched__row {
+		display: block;
+	}
+
+	.often-searched__contet.show .often-searched__title::after {
+		-webkit-transform: rotate(225deg);
+		transform: rotate(225deg);
+		border-color: #2f8dd3;
+	}
+
+	.tariff-main {
+		height: 375px;
+		padding-right: 10px;
+		padding-bottom: 64px;
+		margin-bottom: 24px;
+	}
+
+	.tariff-main::before {
+		height: calc(100% + 84px - 28px);
+	}
+
+	.tariff-main__title {
+		font-size: 28px;
+		position: relative;
+	}
+
+	.tariff-main__content {
+		max-width: 410px;
+		position: static;
+		padding-top: 0;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin-right: 10px;
+	}
+
+	.tariff-main__text {
+		font-size: 16px;
+		position: relative;
+		margin: 0;
+	}
+
+	.tariff-main__bottom {
+		position: absolute;
+		bottom: 0;
+		left: 15px;
+		max-width: 100%;
+		width: calc(100% - 30px);
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		margin: 0;
+		padding: 12px 20px;
+		border-radius: 0;
+	}
+
+	.tariff-main__select {
+		max-width: 444px;
+	}
+
+	.table-tariff-list {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-right: -5px;
+		margin-left: -5px;
+	}
+
+	.table-tariff-list .table-tariff-wrap {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.table-tariff-list .table-tariff-wrap:last-child {
+		margin-bottom: 0;
+	}
+
+	.table-tariff-wrap__balance .btn {
+		width: 100%;
+		font-size: 12px;
+		margin-right: 0;
+	}
+
+	.table-tariff__label {
+		width: calc(100% - 64px);
+	}
 }
 
 @media only screen and (max-width: 767px) {
-  .table-mortgage2__mobile-btns .table-mortgage2__btn-detail {
-    display: none;
-  }
-  .table-mortgage2 tbody td:nth-last-child(2) {
-    display: block;
-    background: none;
-    padding-top: 0;
-    padding-bottom: 20px;
-  }
-  .table-mortgage2 tbody td:nth-last-child(2)::after {
-    display: none;
-  }
-  .table-mortgage2 tbody td:nth-last-child(2) .btn {
-    display: none;
-  }
-  .table-mortgage2 td.table-mortgage2__detail {
-    padding-top: 4px;
-    padding-bottom: 20px;
-  }
-  .table-mortgage2-detail__item {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 12px 20px;
-  }
-  .table-mortgage2-detail__label {
-    width: 100%;
-    padding: 0;
-    margin-bottom: 4px;
-  }
-  .table-mortgage2-detail__value {
-    width: 100%;
-  }
-  .table-mortgage2-detail__btn {
-    width: 100%;
-  }
-  .tariff-types {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 30px 0;
-  }
-  .tariff-types__item {
-    width: 260px;
-    margin-bottom: 5px;
-    margin-right: 0;
-  }
-  .tariff-types__item:last-child {
-    margin-bottom: 0;
-  }
-  .table-tariff__row_first {
-    padding-right: 40px;
-    padding-left: 12px;
-  }
-  .table-tariff__row_info {
-    padding-right: 16px;
-    padding-left: 40px;
-  }
-  .table-tariff__row_info2 {
-    padding-right: 16px;
-    padding-left: 40px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .table-tariff__accordion-head {
-    padding-right: 40px;
-    padding-left: 12px;
-  }
-  .table-tariff__accordion-head_t3 {
-    padding-left: 40px;
-  }
-  .table-tariff__accordion-arrow {
-    right: 12px;
-  }
-  .tariff-main {
-    padding-right: 10px;
-    padding-bottom: 0;
-    padding-left: 10px;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  .tariff-main::before {
-    height: calc(100% + 84px - 60px);
-  }
-  .tariff-main__img {
-    display: none;
-  }
-  .tariff-main__img-mobile {
-    display: block;
-    margin: 0 auto 24px;
-    width: 88%;
-    max-width: 450px;
-  }
-  .tariff-main__content {
-    margin-right: 0;
-    padding-top: 0;
-    max-width: 100%;
-    position: relative;
-  }
-  .tariff-main__title {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1;
-    letter-spacing: normal;
-    margin-bottom: 24px;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-  .tariff-main__text {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.004em;
-    text-align: center;
-    margin-bottom: 16px;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-  .tariff-main__bottom {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 20px 15px;
-    margin-bottom: 0;
-    max-width: 100%;
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 100%;
-    border-radius: 4px;
-  }
-  .tariff-main__bottom-text {
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: 0.14px;
-    margin: 0 0 12px;
-  }
-  .tariff-main__select {
-    max-width: 100%;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
+	.table-mortgage2__mobile-btns .table-mortgage2__btn-detail {
+		display: none;
+	}
+
+	.table-mortgage2 tbody td:nth-last-child(2) {
+		display: block;
+		background: none;
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
+
+	.table-mortgage2 tbody td:nth-last-child(2)::after {
+		display: none;
+	}
+
+	.table-mortgage2 tbody td:nth-last-child(2) .btn {
+		display: none;
+	}
+
+	.table-mortgage2 td.table-mortgage2__detail {
+		padding-top: 4px;
+		padding-bottom: 20px;
+	}
+
+	.table-mortgage2-detail__item {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		padding: 12px 20px;
+	}
+
+	.table-mortgage2-detail__label {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 4px;
+	}
+
+	.table-mortgage2-detail__value {
+		width: 100%;
+	}
+
+	.table-mortgage2-detail__btn {
+		width: 100%;
+	}
+
+	.tariff-types {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		margin: 30px 0;
+	}
+
+	.tariff-types__item {
+		width: 260px;
+		margin-bottom: 5px;
+		margin-right: 0;
+	}
+
+	.tariff-types__item:last-child {
+		margin-bottom: 0;
+	}
+
+	.table-tariff__row_first {
+		padding-right: 40px;
+		padding-left: 12px;
+	}
+
+	.table-tariff__row_info {
+		padding-right: 16px;
+		padding-left: 40px;
+	}
+
+	.table-tariff__row_info2 {
+		padding-right: 16px;
+		padding-left: 40px;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	.table-tariff__accordion-head {
+		padding-right: 40px;
+		padding-left: 12px;
+	}
+
+	.table-tariff__accordion-head_t3 {
+		padding-left: 40px;
+	}
+
+	.table-tariff__accordion-arrow {
+		right: 12px;
+	}
+
+	.tariff-main {
+		padding-right: 10px;
+		padding-bottom: 0;
+		padding-left: 10px;
+		height: auto;
+		margin-bottom: 15px;
+	}
+
+	.tariff-main::before {
+		height: calc(100% + 84px - 60px);
+	}
+
+	.tariff-main__img {
+		display: none;
+	}
+
+	.tariff-main__img-mobile {
+		display: block;
+		margin: 0 auto 24px;
+		width: 88%;
+		max-width: 450px;
+	}
+
+	.tariff-main__content {
+		margin-right: 0;
+		padding-top: 0;
+		max-width: 100%;
+		position: relative;
+	}
+
+	.tariff-main__title {
+		text-align: center;
+		font-size: 18px;
+		line-height: 1;
+		letter-spacing: normal;
+		margin-bottom: 24px;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+
+	.tariff-main__text {
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: -0.004em;
+		text-align: center;
+		margin-bottom: 16px;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+
+	.tariff-main__bottom {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		padding: 20px 15px;
+		margin-bottom: 0;
+		max-width: 100%;
+		position: relative;
+		left: auto;
+		top: auto;
+		width: 100%;
+		border-radius: 4px;
+	}
+
+	.tariff-main__bottom-text {
+		font-size: 14px;
+		line-height: 1.29;
+		letter-spacing: 0.14px;
+		margin: 0 0 12px;
+	}
+
+	.tariff-main__select {
+		max-width: 100%;
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+	}
 }
 
 @media only screen and (max-width: 359px) {
-  .table-mortgage2__title {
-    margin-right: 10px;
-  }
-  .table-mortgage2__bank-img {
-    width: 140px;
-  }
+	.table-mortgage2__title {
+		margin-right: 10px;
+	}
+
+	.table-mortgage2__bank-img {
+		width: 140px;
+	}
 }
 
 @media only screen and (min-width: 992px) {
-  .table-tariff__mobile {
-    display: none;
-  }
+	.table-tariff__mobile {
+		display: none;
+	}
 }
 
 .tariff2-main {
-  background: #F0F2F7;
-  padding: 0 15px 20px;
-  position: relative;
-  z-index: 1;
+	background: #F0F2F7;
+	padding: 0 15px 20px;
+	position: relative;
+	z-index: 1;
 }
 
 .tariff2-main::before {
-  content: "";
-  position: absolute;
-  top: -94px;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 94px);
-  background-color: #f0f2f7;
-  z-index: -1;
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	top: -94px;
+	left: 0;
+	width: 100%;
+	height: calc(100% + 94px);
+	background-color: #f0f2f7;
+	z-index: -1;
+	pointer-events: none;
 }
 
 .tariff2-main__title {
-  color: #323b6a;
-  margin-bottom: 12px;
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+	color: #323b6a;
+	margin-bottom: 12px;
+	font-size: 36px;
+	font-weight: 700;
+	letter-spacing: 0.01em;
 }
 
 .tariff2-main__edit {
-  font-size: 18px;
-  color: #427ab1;
-  letter-spacing: 0.01em;
+	font-size: 18px;
+	color: #427ab1;
+	letter-spacing: 0.01em;
 }
 
 .tariff2-main__edit:visited {
-  color: #427ab1;
+	color: #427ab1;
 }
 
 .tariff2-main__balance {
-  margin-top: 28px;
-  background: #FFFFFF;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-          box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
-  padding: 15px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 18px;
-  letter-spacing: 0.01em;
-  color: #323B6A;
+	margin-top: 28px;
+	background: #FFFFFF;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	box-shadow: 0 0 8px 0 rgba(50, 59, 106, 0.2);
+	padding: 15px 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 18px;
+	letter-spacing: 0.01em;
+	color: #323B6A;
 }
 
 .tariff2-main__balance-btn {
-  margin-left: 24px;
-  max-width: 180px;
-  width: 100%;
-  height: 35px;
+	margin-left: 24px;
+	max-width: 180px;
+	width: 100%;
+	height: 35px;
 }
 
 .tariff2-main__balance-text {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .table-tariff2-head {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 1.05px;
-  color: #ffffff;
-  padding: 10px;
-  background: #323B6A;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.2;
+	letter-spacing: 1.05px;
+	color: #ffffff;
+	padding: 10px;
+	background: #323B6A;
 }
 
 .table-tariff-column {
-  padding: 20px 0 30px;
+	padding: 20px 0 30px;
 }
 
 .table-tariff-column .table-tariff-wrap {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .table-tariff-column .table-tariff-wrap:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .table-tariff2-result {
-  border-top: 2px solid #323B6A;
-  padding: 18px 15px 40px;
-  color: #323B6A;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+	border-top: 2px solid #323B6A;
+	padding: 18px 15px 40px;
+	color: #323B6A;
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 0.01em;
 }
 
 .table-tariff2 {
-  width: 100%;
-  font-size: 14px;
+	width: 100%;
+	font-size: 14px;
 }
 
 .table-tariff2__bold {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .table-tariff2 th {
-  border-bottom: 1px solid #323B6A;
+	border-bottom: 1px solid #323B6A;
 }
 
-.table-tariff2 th, .table-tariff2 td {
-  padding: 17px 10px;
+.table-tariff2 th,
+.table-tariff2 td {
+	padding: 17px 10px;
 }
 
 .table-tariff2 td {
-  border-bottom: 1px solid rgba(50, 59, 106, 0.3);
+	border-bottom: 1px solid rgba(50, 59, 106, 0.3);
 }
 
 .table-tariff2 tr:last-child td {
-  border-bottom: none;
-  padding-top: 17px;
-  padding-bottom: 17px;
+	border-bottom: none;
+	padding-top: 17px;
+	padding-bottom: 17px;
 }
 
 .table-tariff2 tbody td {
-  padding-top: 0;
-  padding-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .table-tariff2 tbody .table-tariff2__item {
-  padding-top: 17px;
-  padding-bottom: 17px;
+	padding-top: 17px;
+	padding-bottom: 17px;
 }
 
 .table-tariff2__more td {
-  padding: 0;
+	padding: 0;
 }
 
 .table-tariff2__show-all {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 20px 10px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #337AB7;
-  -webkit-transition: .2s;
-  transition: .2s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding: 20px 10px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #337AB7;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .table-tariff2__show-all i {
-  margin-left: 8px;
+	margin-left: 8px;
 }
 
 .table-tariff2__show-all:hover {
-  color: #323B6A;
+	color: #323B6A;
 }
 
 .table-tariff2__show-all-active {
-  display: none;
+	display: none;
 }
 
 .table-tariff2._show .table-tariff2__show-all-default {
-  display: none;
+	display: none;
 }
 
 .table-tariff2._show .table-tariff2__show-all-active {
-  display: block;
+	display: block;
 }
 
 .table-tariff2__hidden .table-tariff2__item {
-  display: none;
+	display: none;
 }
 
 .table-tariff2:not(._show) .table-tariff2__hidden td {
-  border-width: 0;
+	border-width: 0;
 }
 
 @media only screen and (max-width: 767px) {
-  .table-tariff-column {
-    padding-bottom: 70px;
-  }
-  .tariff2-main__title {
-    margin-bottom: 8px;
-    font-size: 16px;
-  }
-  .tariff2-main__edit {
-    font-size: 14px;
-  }
-  .tariff2-main__balance {
-    margin-top: 12px;
-    padding: 10px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .tariff2-main__balance-info {
-    width: 100%;
-    font-size: 14px;
-  }
-  .tariff2-main__balance-btn {
-    margin: 10px 0 0;
-  }
-  .table-tariff2 thead {
-    display: none;
-  }
-  .table-tariff2 td {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    display: block;
-    width: 100%;
-  }
-  .table-tariff2 tbody .table-tariff2__item {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  .table-tariff2__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .table-tariff2__item_label::before {
-    content: attr(data-label);
-    font-weight: 700;
-  }
-  .table-tariff2__item-inner {
-    display: block;
-    text-align: right;
-  }
-  .table-tariff2__more td {
-    padding: 0;
-  }
-  .table-tariff2__more td:first-child {
-    border-top: none !important;
-  }
-  .table-tariff2__show-all {
-    padding: 16px 10px;
-  }
-  .table-tariff2 tr td:first-child {
-    border-top: 1px solid #333333;
-  }
-  .table-tariff2 tr:last-child td {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  .table-tariff2 tr:last-child td:first-child {
-    border-top: none !important;
-  }
-  .table-tariff2-result {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    padding: 16px 15px 20px;
-    margin: 0;
-    background: #fff;
-    border: none;
-    font-size: 18px;
-    -webkit-box-shadow: 0 0 8px rgba(50, 59, 106, 0.2);
-            box-shadow: 0 0 8px rgba(50, 59, 106, 0.2);
-  }
+	.table-tariff-column {
+		padding-bottom: 70px;
+	}
+
+	.tariff2-main__title {
+		margin-bottom: 8px;
+		font-size: 16px;
+	}
+
+	.tariff2-main__edit {
+		font-size: 14px;
+	}
+
+	.tariff2-main__balance {
+		margin-top: 12px;
+		padding: 10px;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.tariff2-main__balance-info {
+		width: 100%;
+		font-size: 14px;
+	}
+
+	.tariff2-main__balance-btn {
+		margin: 10px 0 0;
+	}
+
+	.table-tariff2 thead {
+		display: none;
+	}
+
+	.table-tariff2 td {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		display: block;
+		width: 100%;
+	}
+
+	.table-tariff2 tbody .table-tariff2__item {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+
+	.table-tariff2__item {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+
+	.table-tariff2__item_label::before {
+		content: attr(data-label);
+		font-weight: 700;
+	}
+
+	.table-tariff2__item-inner {
+		display: block;
+		text-align: right;
+	}
+
+	.table-tariff2__more td {
+		padding: 0;
+	}
+
+	.table-tariff2__more td:first-child {
+		border-top: none !important;
+	}
+
+	.table-tariff2__show-all {
+		padding: 16px 10px;
+	}
+
+	.table-tariff2 tr td:first-child {
+		border-top: 1px solid #333333;
+	}
+
+	.table-tariff2 tr:last-child td {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+
+	.table-tariff2 tr:last-child td:first-child {
+		border-top: none !important;
+	}
+
+	.table-tariff2-result {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		padding: 16px 15px 20px;
+		margin: 0;
+		background: #fff;
+		border: none;
+		font-size: 18px;
+		-webkit-box-shadow: 0 0 8px rgba(50, 59, 106, 0.2);
+		box-shadow: 0 0 8px rgba(50, 59, 106, 0.2);
+	}
 }
 
 .tariff2-main__balance_sb {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .tariff2-main__balance_red {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F2DEDE), to(#E6C4C4));
-  background: linear-gradient(180deg, #F2DEDE 0%, #E6C4C4 100%);
-  border: 1px solid #C95E58;
-  color: #C95E58;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F2DEDE), to(#E6C4C4));
+	background: linear-gradient(180deg, #F2DEDE 0%, #E6C4C4 100%);
+	border: 1px solid #C95E58;
+	color: #C95E58;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .tariff2-main__balance_red .btn-styled-new2 {
-  background: #C95E58;
+	background: #C95E58;
 }
 
 .tariff2-main__balance_red .btn-styled-new2:hover {
-  background: #D95E58;
+	background: #D95E58;
 }
 
 .tariff2-main__balance-info {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .xml-feed {
-  padding: 32px 0 50px;
+	padding: 32px 0 50px;
 }
 
 .xml-feed__title {
-  font-weight: 500;
-  font-size: 18px;
-  color: #333C67;
+	font-weight: 500;
+	font-size: 18px;
+	color: #333C67;
 }
 
 .xml-feed__head {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .xml-feed__row_hidden {
-  display: none;
+	display: none;
 }
 
-.xml-feed__row + .xml-feed__row {
-  margin-top: 12px;
+.xml-feed__row+.xml-feed__row {
+	margin-top: 12px;
 }
 
 .xml-feed__btns {
-  margin-top: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+	margin-top: 24px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .xml-feed__add {
-  width: 220px;
+	width: 220px;
 }
 
 .xml-feed__save {
-  width: 255px;
+	width: 255px;
 }
 
 .xml-feed__btns-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-left: auto;
 }
 
 .xml-feed__btns-note {
-  font-size: 14px;
-  color: #6F7278;
-  margin-right: 16px;
+	font-size: 14px;
+	color: #6F7278;
+	margin-right: 16px;
 }
 
 .xml-feed__feed {
-  margin-top: 48px;
+	margin-top: 48px;
 }
 
 .xml-feed__feed-title {
-  font-weight: 700;
-  margin-bottom: 16px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #333C67;
+	font-weight: 700;
+	margin-bottom: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #333C67;
 }
 
 .xml-feed__features {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 64px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 64px;
 }
 
 .xml-feed__feed-info {
-  margin-top: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
+	margin-top: 24px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	white-space: nowrap;
 }
 
 .xml-feed__feed-link-reverse {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #337AB7;
-  text-decoration: underline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #337AB7;
+	text-decoration: underline;
 }
 
 .xml-feed__feed-label {
-  font-weight: bold;
-  margin-right: 12px;
+	font-weight: bold;
+	margin-right: 12px;
 }
 
 .xml-feed__note {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 .btn-styled-new2__medium {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .feed-input {
-  background: #F0F2F7;
-  border: 1px solid #F0F2F7;
-  padding: 0 10px;
-  font-size: 18px;
-  font-weight: 700;
-  -webkit-transition: .2s;
-  transition: .2s;
-  width: 100%;
-  max-width: 100%;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+	background: #F0F2F7;
+	border: 1px solid #F0F2F7;
+	padding: 0 10px;
+	font-size: 18px;
+	font-weight: 700;
+	-webkit-transition: .2s;
+	transition: .2s;
+	width: 100%;
+	max-width: 100%;
+	height: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .feed-input__input {
-  font-weight: 500;
-  margin-right: 10px;
-  text-decoration: underline;
-  color: #337AB7;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	font-weight: 500;
+	margin-right: 10px;
+	text-decoration: underline;
+	color: #337AB7;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-.feed-input__input:visited, .feed-input__input:active {
-  color: #337AB7;
+.feed-input__input:visited,
+.feed-input__input:active {
+	color: #337AB7;
 }
 
 .feed-input__input:hover {
-  color: #333C67;
+	color: #333C67;
 }
 
-.feed-input__edit, .feed-input__remove {
-  height: 100%;
-  width: 24px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: .2s;
-  transition: .2s;
-  cursor: pointer;
+.feed-input__edit,
+.feed-input__remove {
+	height: 100%;
+	width: 24px;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	font-size: 14px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-transition: .2s;
+	transition: .2s;
+	cursor: pointer;
 }
 
-.feed-input__edit:hover, .feed-input__remove:hover {
-  color: #2f8dd3;
+.feed-input__edit:hover,
+.feed-input__remove:hover {
+	color: #2f8dd3;
 }
 
 .feed-input__remove {
-  color: #333C67;
+	color: #333C67;
 }
 
 .feed-input__edit {
-  color: #000000;
-  margin: 0 10px 0 auto;
+	color: #000000;
+	margin: 0 10px 0 auto;
 }
 
 .form-group__input-row {
-  position: relative;
+	position: relative;
 }
 
 .validation-fa-icon .has-feedback .form-control-feedback {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 .xml-feed-table {
-  width: 100%;
-  font-size: 14px;
-  line-height: 1.5;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 8px rgba(50, 59, 106, 0.33);
-          box-shadow: 0px 0px 8px rgba(50, 59, 106, 0.33);
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.5;
+	background: #FFFFFF;
+	-webkit-box-shadow: 0px 0px 8px rgba(50, 59, 106, 0.33);
+	box-shadow: 0px 0px 8px rgba(50, 59, 106, 0.33);
 }
 
 .xml-feed-table th {
-  font-weight: bold;
-  color: #ffffff;
-  padding: 17px 20px;
-  background: #323B6A;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 17px 20px;
+	background: #323B6A;
 }
 
 .xml-feed-table td {
-  padding: 16px 20px;
+	padding: 16px 20px;
 }
 
 .xml-feed-table td {
-  border-top: 1px solid #CACEDB;
+	border-top: 1px solid #CACEDB;
 }
 
 .xml-feed-table tr:first-child td {
-  border-top: none;
+	border-top: none;
 }
 
 .xml-feed-table-show {
-  display: none;
+	display: none;
 }
 
 .xml-feed-table-show._hide {
-  display: none;
+	display: none;
 }
 
 .xml-feed-features {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 30px;
-  background: #FFFFFF;
-  border: 1px solid #CACEDB;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin-right: 30px;
+	background: #FFFFFF;
+	border: 1px solid #CACEDB;
 }
 
 .xml-feed-features:last-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 .xml-feed-features__head {
-  padding: 7px 12px;
-  min-height: 36px;
-  background: #333C67;
-  font-weight: 500;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  color: #fff;
+	padding: 7px 12px;
+	min-height: 36px;
+	background: #333C67;
+	font-weight: 500;
+	font-size: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
 }
 
 .xml-feed-features__content {
-  padding: 16px 20px 24px;
-  font-size: 14px;
-  line-height: 1.5;
+	padding: 16px 20px 24px;
+	font-size: 14px;
+	line-height: 1.5;
 }
 
 .xml-feed-features__info {
-  margin-bottom: 12px;
+	margin-bottom: 12px;
 }
 
 .xml-feed-features__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
 
 .xml-feed-features__list li {
-  margin-bottom: 8px;
-  color: #337AB7;
+	margin-bottom: 8px;
+	color: #337AB7;
 }
 
 .xml-feed-features__list li::before {
-  content: "\2022";
-  color: #8E95A5;
-  font-weight: bold;
-  display: inline-block;
-  font-size: 1.33333em;
-  line-height: 0.75em;
-  vertical-align: -0.0667em;
-  margin-right: 0.5em;
+	content: "\2022";
+	color: #8E95A5;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 1.33333em;
+	line-height: 0.75em;
+	vertical-align: -0.0667em;
+	margin-right: 0.5em;
 }
 
 .xml-feed-features__list li:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .xml-feed-features__list li a:visited {
-  color: #337AB7;
+	color: #337AB7;
 }
 
 .xml-feed-note {
-  background: #FFFFFF;
-  border: 1px solid #CACEDB;
+	background: #FFFFFF;
+	border: 1px solid #CACEDB;
 }
 
 .xml-feed-note__head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 7px 20px;
-  background: #F2F2F2;
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  min-height: 36px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 7px 20px;
+	background: #F2F2F2;
+	text-align: center;
+	font-weight: 500;
+	font-size: 16px;
+	min-height: 36px;
 }
 
 .xml-feed-note__content {
-  padding: 16px 20px 24px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #6F7278;
+	padding: 16px 20px 24px;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #6F7278;
 }
 
 .xml-feed-note__content p {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 .xml-feed-note__content p:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 @media screen and (max-width: 991px) {
-  .tariff2-main__title {
-    font-size: 28px;
-  }
-  .xml-feed {
-    padding-top: 24px;
-  }
-  .xml-feed__row + .xml-feed__row {
-    margin-top: 10px;
-  }
-  .xml-feed__btns {
-    margin-top: 22px;
-  }
-  .xml-feed__feed {
-    margin-top: 40px;
-  }
-  .xml-feed__features {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-top: 40px;
-  }
-  .xml-feed__note {
-    margin-top: 16px;
-  }
-  .xml-feed-features {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin: 0 0 16px;
-  }
-  .xml-feed-features:last-child {
-    margin-bottom: 0;
-  }
+	.tariff2-main__title {
+		font-size: 28px;
+	}
+
+	.xml-feed {
+		padding-top: 24px;
+	}
+
+	.xml-feed__row+.xml-feed__row {
+		margin-top: 10px;
+	}
+
+	.xml-feed__btns {
+		margin-top: 22px;
+	}
+
+	.xml-feed__feed {
+		margin-top: 40px;
+	}
+
+	.xml-feed__features {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-top: 40px;
+	}
+
+	.xml-feed__note {
+		margin-top: 16px;
+	}
+
+	.xml-feed-features {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+		margin: 0 0 16px;
+	}
+
+	.xml-feed-features:last-child {
+		margin-bottom: 0;
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .tariff2-main__title {
-    font-size: 24px;
-  }
-  .tariff2-main__balance {
-    padding: 20px 18px;
-  }
-  .tariff2-main__balance-btn {
-    max-width: 100%;
-  }
-  .xml-feed__head {
-    margin-bottom: 16px;
-  }
-  .xml-feed__row + .xml-feed__row {
-    margin-top: 12px;
-  }
-  .xml-feed__btns {
-    margin-top: 16px;
-  }
-  .xml-feed__btns-right {
-    width: 100%;
-  }
-  .xml-feed__btns-right {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .xml-feed__btns-note {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin: 20px 0 0;
-  }
-  .xml-feed__add {
-    width: 100%;
-  }
-  .xml-feed__save {
-    width: 100%;
-  }
-  .feed-input__edit, .feed-input__remove {
-    width: 20px;
-  }
-  .feed-input__edit {
-    margin-right: 4px;
-  }
-  .xml-feed-table thead {
-    display: none;
-  }
-  .xml-feed-table tr {
-    display: block;
-  }
-  .xml-feed-table tr:first-child td {
-    border-top: 1px solid #CACEDB;
-  }
-  .xml-feed-table tr:first-child td:first-child {
-    border-top: none;
-  }
-  .xml-feed-table tr:nth-child(1n + 4) {
-    display: none;
-  }
-  .xml-feed-table td {
-    padding: 12px 16px;
-    display: block;
-    width: 100%;
-  }
-  .xml-feed-table td:first-child {
-    border-top: 1px solid #333333;
-  }
-  .xml-feed-table__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .xml-feed-table__item_label::before {
-    content: attr(data-label);
-    font-weight: 700;
-  }
-  .xml-feed-table__item-inner {
-    display: block;
-    text-align: right;
-  }
-  .xml-feed-table._show-all tr:nth-child(1n + 4) {
-    display: block;
-  }
-  .xml-feed-table-show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 16px;
-    width: 100%;
-  }
-  .xml-feed-features__head {
-    font-size: 14px;
-    min-height: 33px;
-  }
-  .xml-feed-note__head {
-    font-size: 14px;
-    min-height: 33px;
-  }
-  .xml-feed-note__content {
-    padding: 12px 16px 16px;
-  }
-  .modal-feed .modal-dialog {
-    max-width: 500px;
-    width: calc(100% - 30px);
-  }
-  .modal-feed .modal-content {
-    width: 100%;
-  }
-  .modal-feed .modal-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .modal-feed .modal-footer .modal-feed__btn {
-    max-width: calc(100% - 12px);
-    width: 100%;
-  }
-  .modal-feed .modal-footer .modal-feed__btn:last-child {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
+	.tariff2-main__title {
+		font-size: 24px;
+	}
+
+	.tariff2-main__balance {
+		padding: 20px 18px;
+	}
+
+	.tariff2-main__balance-btn {
+		max-width: 100%;
+	}
+
+	.xml-feed__head {
+		margin-bottom: 16px;
+	}
+
+	.xml-feed__row+.xml-feed__row {
+		margin-top: 12px;
+	}
+
+	.xml-feed__btns {
+		margin-top: 16px;
+	}
+
+	.xml-feed__btns-right {
+		width: 100%;
+	}
+
+	.xml-feed__btns-right {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.xml-feed__btns-note {
+		-webkit-box-ordinal-group: 3;
+		-ms-flex-order: 2;
+		order: 2;
+		margin: 20px 0 0;
+	}
+
+	.xml-feed__add {
+		width: 100%;
+	}
+
+	.xml-feed__save {
+		width: 100%;
+	}
+
+	.feed-input__edit,
+	.feed-input__remove {
+		width: 20px;
+	}
+
+	.feed-input__edit {
+		margin-right: 4px;
+	}
+
+	.xml-feed-table thead {
+		display: none;
+	}
+
+	.xml-feed-table tr {
+		display: block;
+	}
+
+	.xml-feed-table tr:first-child td {
+		border-top: 1px solid #CACEDB;
+	}
+
+	.xml-feed-table tr:first-child td:first-child {
+		border-top: none;
+	}
+
+	.xml-feed-table tr:nth-child(1n + 4) {
+		display: none;
+	}
+
+	.xml-feed-table td {
+		padding: 12px 16px;
+		display: block;
+		width: 100%;
+	}
+
+	.xml-feed-table td:first-child {
+		border-top: 1px solid #333333;
+	}
+
+	.xml-feed-table__item {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+
+	.xml-feed-table__item_label::before {
+		content: attr(data-label);
+		font-weight: 700;
+	}
+
+	.xml-feed-table__item-inner {
+		display: block;
+		text-align: right;
+	}
+
+	.xml-feed-table._show-all tr:nth-child(1n + 4) {
+		display: block;
+	}
+
+	.xml-feed-table-show {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		margin-top: 16px;
+		width: 100%;
+	}
+
+	.xml-feed-features__head {
+		font-size: 14px;
+		min-height: 33px;
+	}
+
+	.xml-feed-note__head {
+		font-size: 14px;
+		min-height: 33px;
+	}
+
+	.xml-feed-note__content {
+		padding: 12px 16px 16px;
+	}
+
+	.modal-feed .modal-dialog {
+		max-width: 500px;
+		width: calc(100% - 30px);
+	}
+
+	.modal-feed .modal-content {
+		width: 100%;
+	}
+
+	.modal-feed .modal-footer {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.modal-feed .modal-footer .modal-feed__btn {
+		max-width: calc(100% - 12px);
+		width: 100%;
+	}
+
+	.modal-feed .modal-footer .modal-feed__btn:last-child {
+		-webkit-box-ordinal-group: 0;
+		-ms-flex-order: -1;
+		order: -1;
+	}
 }
 
 .about-hero {
-  position: relative;
-  margin-top: -20px;
+	position: relative;
+	margin-top: -20px;
 }
 
 .about-hero__inner {
-  height: 485px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 45px 15px 75px;
-  overflow: hidden;
+	height: 485px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 45px 15px 75px;
+	overflow: hidden;
 }
 
 .about-hero::before {
-  content: "";
-  position: absolute;
-  top: -74px;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 94px - 20px);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(66.89%, #F0F2F6), to(rgba(242, 242, 242, 0)));
-  background: linear-gradient(180deg, #F0F2F6 66.89%, rgba(242, 242, 242, 0) 100%);
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	top: -74px;
+	left: 0;
+	width: 100%;
+	height: calc(100% + 94px - 20px);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(66.89%, #F0F2F6), to(rgba(242, 242, 242, 0)));
+	background: linear-gradient(180deg, #F0F2F6 66.89%, rgba(242, 242, 242, 0) 100%);
+	pointer-events: none;
 }
 
 .about-hero__content {
-  max-width: 545px;
-  width: 100%;
-  margin-right: 45px;
-  color: #323b6a;
+	max-width: 545px;
+	width: 100%;
+	margin-right: 45px;
+	color: #323b6a;
 }
 
 .about-hero__img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: relative;
 }
 
 .about-hero__img img {
-  max-width: 520px;
-  width: 100%;
-  max-height: 100%;
-  height: auto;
+	max-width: 520px;
+	width: 100%;
+	max-height: 100%;
+	height: auto;
 }
 
 .about-hero__title {
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 117%;
-  margin-bottom: 20px;
-  position: relative;
+	font-size: 48px;
+	font-weight: bold;
+	line-height: 117%;
+	margin-bottom: 20px;
+	position: relative;
 }
 
 .about-hero__text {
-  font-size: 16px;
-  line-height: 175%;
-  letter-spacing: -0.004em;
-  position: relative;
+	font-size: 16px;
+	line-height: 175%;
+	letter-spacing: -0.004em;
+	position: relative;
 }
 
 .about-stats-list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  gap: 30px 30px;
-  margin-bottom: 100px;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (1fr)[4];
+	grid-template-columns: repeat(4, 1fr);
+	gap: 30px 30px;
+	margin-bottom: 100px;
 }
 
 .about-stats-item {
-  width: 100%;
-  min-height: 163px;
-  background: #F0F2F6;
-  border-radius: 8px;
-  padding: 24px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: #333C67;
+	width: 100%;
+	min-height: 163px;
+	background: #F0F2F6;
+	border-radius: 8px;
+	padding: 24px 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	color: #333C67;
 }
 
 .about-stats-item:first-child {
-  color: #fff;
-  background: #333C67;
+	color: #fff;
+	background: #333C67;
 }
 
 .about-stats-item:first-child .about-stats-item__label {
-  color: #fff;
+	color: #fff;
 }
 
 .about-stats-item__head {
-  margin-bottom: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+	margin-bottom: 12px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
 }
 
 .about-stats-item__value {
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 49px;
-  margin-right: 8px;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 49px;
+	margin-right: 8px;
 }
 
 .about-stats-item__label {
-  font-size: 16px;
-  letter-spacing: -0.004em;
-  color: #8E95A5;
+	font-size: 16px;
+	letter-spacing: -0.004em;
+	color: #8E95A5;
 }
 
 .about-stats-item__text {
-  margin-top: auto;
-  font-size: 14px;
-  letter-spacing: -0.004em;
+	margin-top: auto;
+	font-size: 14px;
+	letter-spacing: -0.004em;
 }
 
 .about-info {
-  color: #333C67;
-  margin-bottom: 100px;
+	color: #333C67;
+	margin-bottom: 100px;
 }
 
 .about-info__title {
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 120%;
-  margin-bottom: 48px;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 120%;
+	margin-bottom: 48px;
 }
 
 .about-info__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .about-info__left {
-  max-width: 380px;
-  width: 100%;
-  margin-right: 30px;
+	max-width: 380px;
+	width: 100%;
+	margin-right: 30px;
 }
 
 .about-info__text {
-  font-size: 16px;
-  line-height: 175%;
-  letter-spacing: -0.004em;
+	font-size: 16px;
+	line-height: 175%;
+	letter-spacing: -0.004em;
 }
 
 .about-info__text p {
-  margin: 0;
+	margin: 0;
 }
 
-.about-info__text p + p {
-  margin-top: 0.9em;
+.about-info__text p+p {
+	margin-top: 0.9em;
 }
 
 .about-info__right {
-  max-width: 600px;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+	max-width: 600px;
+	width: 100%;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (1fr)[2];
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
 }
 
 .about-fuatures__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: #F0F2F6;
-  border-radius: 50%;
-  margin-bottom: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	background: #F0F2F6;
+	border-radius: 50%;
+	margin-bottom: 16px;
 }
 
 .about-fuatures__img {
-  width: 24px;
+	width: 24px;
 }
 
 .about-fuatures__title {
-  font-weight: bold;
-  font-size: 21px;
+	font-weight: bold;
+	font-size: 21px;
 }
 
 .about-fuatures__head {
-  margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 .about-fuatures__text {
-  font-size: 14px;
-  line-height: 171%;
-  letter-spacing: -0.004em;
+	font-size: 14px;
+	line-height: 171%;
+	letter-spacing: -0.004em;
 }
 
 .registration-inv {
-  margin: 0 -15px 80px;
-  padding: 0 100px 0 125px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: #333C67;
-  position: relative;
-  overflow: hidden;
+	margin: 0 -15px 80px;
+	padding: 0 100px 0 125px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	background: #333C67;
+	position: relative;
+	overflow: hidden;
 }
 
 .registration-inv__content {
-  padding: 48px 0;
-  max-width: 545px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
+	padding: 48px 0;
+	max-width: 545px;
+	width: 100%;
+	position: relative;
+	z-index: 2;
 }
 
 .registration-inv__img {
-  position: absolute;
-  right: 100px;
-  bottom: 0;
-  width: 350px;
+	position: absolute;
+	right: 100px;
+	bottom: 0;
+	width: 350px;
 }
 
 .registration-inv__title {
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 119%;
-  color: #FFFFFF;
-  margin-bottom: 24px;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 119%;
+	color: #FFFFFF;
+	margin-bottom: 24px;
 }
 
 .registration-inv__btn {
-  max-width: 285px;
-  width: 100%;
+	max-width: 285px;
+	width: 100%;
 }
 
 .registration-inv__btn:hover {
-  background: #337AB7;
+	background: #337AB7;
 }
 
 .about-questions {
-  padding: 48px 15px;
-  color: #333C67;
-  background: #F0F2F6;
+	padding: 48px 15px;
+	color: #333C67;
+	background: #F0F2F6;
 }
 
 .about-questions__title {
-  font-weight: bold;
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 24px;
+	font-weight: bold;
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 24px;
 }
 
 .about-questions-form {
-  max-width: 790px;
-  width: 100%;
-  margin: 0 auto;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 24px rgba(50, 59, 106, 0.05);
-          box-shadow: 0px 0px 24px rgba(50, 59, 106, 0.05);
-  border-radius: 4px;
-  padding: 40px 30px;
+	max-width: 790px;
+	width: 100%;
+	margin: 0 auto;
+	background: #FFFFFF;
+	-webkit-box-shadow: 0px 0px 24px rgba(50, 59, 106, 0.05);
+	box-shadow: 0px 0px 24px rgba(50, 59, 106, 0.05);
+	border-radius: 4px;
+	padding: 40px 30px;
 }
 
 .about-questions-form__top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 24px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 24px;
 }
 
 .about-questions-form__left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 30px;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin-right: 30px;
 }
 
 .about-questions-form__right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
 }
 
 .about-questions-form__btns {
-  margin-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 .about-questions-form__btn {
-  width: 100%;
+	width: 100%;
 }
 
 .about-questions-form__term {
-  max-width: 660px;
-  width: 100%;
-  margin: 0 auto;
-  font-size: 12px;
-  line-height: 133%;
-  letter-spacing: -0.004em;
-  text-align: center;
+	max-width: 660px;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 133%;
+	letter-spacing: -0.004em;
+	text-align: center;
 }
 
 .about-questions-form__term a {
-  color: inherit;
-  text-decoration: underline;
+	color: inherit;
+	text-decoration: underline;
 }
 
 .about-questions-form__row {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .about-questions-form__row:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .about-questions-form .form-group {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .about-questions-form .input-label {
-  margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 .about-questions-form__textarea-group .input-styled-new2_textarea {
-  height: 214px;
+	height: 214px;
 }
 
 .about-questions-form__input-row {
-  position: relative;
+	position: relative;
 }
 
 .input-styled-new2_default {
-  color: #8E95A5;
+	color: #8E95A5;
 }
 
 .input-styled-new2_fz16 {
-  font-size: 16px;
-  font-weight: 500;
+	font-size: 16px;
+	font-weight: 500;
 }
 
 label.input-label {
-  font-weight: normal;
+	font-weight: normal;
 }
 
 .swiper-custom-btn {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  width: 40px;
-  height: 40px;
-  background: #CACEDB;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-  margin-top: -20px;
-  cursor: pointer;
-  -webkit-transition: .2s;
-  transition: .2s;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	width: 40px;
+	height: 40px;
+	background: #CACEDB;
+	border-radius: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	margin-top: -20px;
+	cursor: pointer;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .swiper-custom-btn:hover {
-  color: #333C67;
+	color: #333C67;
 }
 
 .swiper-custom-btn_prev {
-  left: -20px;
+	left: -20px;
 }
 
 .swiper-custom-btn_next {
-  right: -20px;
+	right: -20px;
 }
 
 .swiper-custom-btn.swiper-button-disabled {
-  opacity: 0.4;
-  pointer-events: none;
+	opacity: 0.4;
+	pointer-events: none;
 }
 
 .swiper-custom-btn.swiper-button-lock {
-  display: none;
+	display: none;
 }
 
 .about-reviews {
-  margin-bottom: 80px;
+	margin-bottom: 80px;
 }
 
 .about-reviews__title {
-  font-weight: bold;
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 36px;
-  padding: 0 15px;
+	font-weight: bold;
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 36px;
+	padding: 0 15px;
 }
 
 .about-reviews__slider {
-  padding: 0 44px;
-  position: relative;
+	padding: 0 44px;
+	position: relative;
 }
 
 .reviews-slide {
-  background: #F7F8FA;
-  border-radius: 4px;
-  padding: 16px 20px;
-  color: #333C67;
-  height: auto;
-  position: relative;
+	background: #F7F8FA;
+	border-radius: 4px;
+	padding: 16px 20px;
+	color: #333C67;
+	height: auto;
+	position: relative;
 }
 
 .reviews-slide::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(17, 17, 17, 0.25);
-  -webkit-transition: .2s;
-  transition: .2s;
-  border-radius: inherit;
-  opacity: 0;
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(17, 17, 17, 0.25);
+	-webkit-transition: .2s;
+	transition: .2s;
+	border-radius: inherit;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .reviews-slide__head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 12px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-bottom: 12px;
 }
 
 .reviews-slide__avatar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 52px;
-  height: 52px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-right: 12px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 52px;
+	height: 52px;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	margin-right: 12px;
 }
 
 .reviews-slide__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	border-radius: 50%;
 }
 
 .reviews-slide__user {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .reviews-slide__info {
-  margin-right: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+	margin-right: 10px;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
 }
 
 .reviews-slide__name {
-  font-weight: 500;
-  font-size: 18px;
+	font-weight: 500;
+	font-size: 18px;
 }
 
 .reviews-slide__date {
-  font-size: 14px;
-  line-height: 150%;
-  letter-spacing: -0.004em;
-  color: #8E95A5;
+	font-size: 14px;
+	line-height: 150%;
+	letter-spacing: -0.004em;
+	color: #8E95A5;
 }
 
 .reviews-slide__rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #F5BD4F;
-  font-size: 14px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	color: #F5BD4F;
+	font-size: 14px;
 }
 
 .reviews-slide__rating i {
-  margin-right: 4px;
+	margin-right: 4px;
 }
 
 .reviews-slide__rating i:last-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 .reviews-slide__text {
-  font-size: 14px;
-  line-height: 150%;
-  letter-spacing: -0.004em;
-  color: #333333;
+	font-size: 14px;
+	line-height: 150%;
+	letter-spacing: -0.004em;
+	color: #333333;
 }
 
 /*==================================*/
 
 .tariff-footer {
-  font-size: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
 }
+
 .tariff-paginaton {
-  font-size: 0;
-  display: flex;
+	font-size: 0;
+	display: flex;
 }
+
 .tariff-paginaton__item {
-  height: 40px;
-  min-width: 40px;
-  border: 1px solid #323b6a;
-  border-right: 0px solid #323b6a;
+	height: 40px;
+	min-width: 40px;
+	border: 1px solid #323b6a;
+	border-right: 0px solid #323b6a;
 
-  display: flex;
-  justify-content:  center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  font-size: 15px;
-  color: #323b6a !important;
-  text-decoration: none !important;
+	font-size: 15px;
+	color: #323b6a !important;
+	text-decoration: none !important;
 }
+
+@media screen and (max-width: 380px) {
+	.tariff-paginaton__item:nth-child(4)~* {
+		display: none;
+	}
+
+	.tariff-paginaton__item:last-child,
+	.tariff-paginaton__item:nth-last-child(2) {
+		display: flex;
+	}
+
+}
+
+.tariff-paginaton__item.active {
+	background-color: rgba(51, 121, 183, 0.15) !important;
+	pointer-events: none;
+}
+
+.tariff-paginaton__item:first-child img {
+	transform: rotate(180deg);
+}
+
 .tariff-paginaton__item:first-child {
-  /*border-radius: 4px 0 0 4px;*/
+	/*border-radius: 4px 0 0 4px;*/
 }
+
 .tariff-paginaton__item:last-child {
-  border-right: 1px solid #323b6a;
-  /*border-radius: 0 4px 4px 0*/
+	border-right: 1px solid #323b6a;
+	/*border-radius: 0 4px 4px 0*/
 }
+
 .tariff-paginaton__item img {
-  height: 10px;
+	height: 10px;
 }
 
 
 .tariff-select {
-  max-width: 100%;
+	max-width: 100%;
 }
+
 .tariff-select .dropdown-menu {
-  top: auto;
-  bottom: 100%;
-  width: 100%;
-  transition: all 0.3s ease 0s;
-  display: block !important;
-  pointer-events: none;
-  opacity: 0;
-  transform: translateY(12px);
-  border: 2px solid  #d1daf3;
-  border-bottom: 0px solid #fff;
+	top: auto;
+	bottom: 100%;
+	width: 100%;
+	transition: all 0.3s ease 0s;
+	display: block !important;
+	pointer-events: none;
+	opacity: 0;
+	transform: translateY(12px);
+	border: 2px solid #d1daf3;
+	border-bottom: 0px solid #fff;
 }
+
 .tariff-select .dropdown-toggle {
-  /*padding-right: 0;
+	/*padding-right: 0;
   padding-left: 0;*/
-  background: #F0F2F7;
-  z-index: 1001;
-  position: relative;
+	background: #F0F2F7;
+	z-index: 1001;
+	position: relative;
 }
+
 .tariff-select.open .dropdown-toggle {
-  background: #d1daf3 !important;
-  opacity: 1 !important;
+	background: #d1daf3 !important;
+	opacity: 1 !important;
 }
 
 
 .tariff-select.open .dropdown-menu {
-  opacity: 1 !important;
-  pointer-events: auto;
-  transform: translateY(0px);
+	opacity: 1 !important;
+	pointer-events: auto;
+	transform: translateY(0px);
 }
+
 .tariff-select.open .caret {
-  transform: rotate(-45deg);
-  margin-top: 3px;
+	transform: rotate(-45deg);
+	margin-top: 3px;
 }
+
 .tariff-select .caret {
-  transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
 }
 
 
 .tariff-select * {
-  font-size: 14px;
-  color: #323b6a !important;
+	font-size: 14px;
+	color: #323b6a !important;
 }
 
 /*====================*/
 .tariff-header {
-  margin-top: 0;
+	margin-top: 0;
 }
+
 .tariff-header .mortgage-main__text {
-  color: #323b6a;
-  margin-bottom: 6px;
-  font-size: 21px;
-  line-height: 100%;
-  text-align: left !important;
-  font-weight: bold;
+	color: #323b6a;
+	margin-bottom: 6px;
+	font-size: 21px;
+	line-height: 100%;
+	text-align: left !important;
+	font-weight: bold;
 }
+
 .tariff-header .calc-mortgage-new__label {
-  margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 
 .table-tariff2.table-tariff2_no-last-pading tr:last-child td {
-  padding-top: 0px;
-  padding-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
-.table-tariff2.table-tariff2_no-last-pading .table-tariff2-head th {
-  border: 0px solid #000;
-}
-@media screen and (min-width: 1064px) {
-  .tariff-select .dropdown-toggle,
-  .tariff-paginaton__item {
-    transition: all 0.3s ease 0s;
-  }
-  .tariff-select .dropdown-toggle:hover {
-    background: #dfe5f4;
-  }
-  .tariff-paginaton__item:hover {
-    background: #F0F2F7;
-  }
-}
-@media screen and (max-width: 767px) {
-  .tariff-footer {
-    display: block;
-  }
-  .tariff-select {
-    margin-top: 12px;
-  }
-  .tariff-header .mortgage-main__text {
-    margin-bottom: 4px;
-    font-size: 19px;
-  }
 
-  .table-tariff2.table-tariff2_no-last-pading a.table-tariff2__item-inner{
-    max-width: 35vw;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-  }
-  .table-tariff2.table-tariff2_no-last-pading a.table-tariff2__item-inner:after{
-    content: "...";
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: #fff;
-    padding-left: 2px;
-  }
+.table-tariff2.table-tariff2_no-last-pading .table-tariff2-head th {
+	border: 0px solid #000;
+}
+
+@media screen and (min-width: 1064px) {
+
+	.tariff-select .dropdown-toggle,
+	.tariff-paginaton__item {
+		transition: all 0.3s ease 0s;
+	}
+
+	.tariff-select .dropdown-toggle:hover {
+		background: #dfe5f4;
+	}
+
+	.tariff-paginaton__item:hover {
+		background: #F0F2F7;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.tariff-footer {
+		display: block;
+	}
+
+	.tariff-select {
+		margin-top: 12px;
+	}
+
+	.tariff-header .mortgage-main__text {
+		margin-bottom: 4px;
+		font-size: 19px;
+	}
+
+	.table-tariff2.table-tariff2_no-last-pading a.table-tariff2__item-inner {
+		max-width: 35vw;
+		overflow: hidden;
+		white-space: nowrap;
+		position: relative;
+	}
+
+	.table-tariff2.table-tariff2_no-last-pading a.table-tariff2__item-inner:after {
+		content: "...";
+		position: absolute;
+		right: 0;
+		top: 0;
+		background: #fff;
+		padding-left: 2px;
+	}
 }
 
 
 @media screen and (max-width: 1279px) {
-  .swiper-custom-btn_prev {
-    left: -10px;
-  }
-  .swiper-custom-btn_next {
-    right: -10px;
-  }
+	.swiper-custom-btn_prev {
+		left: -10px;
+	}
+
+	.swiper-custom-btn_next {
+		right: -10px;
+	}
 }
 
 @media screen and (max-width: 1199px) {
-  .about-hero__inner {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .about-hero__img img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 604px;
-    max-width: none;
-    max-height: none;
-  }
-  .about-stats-list {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    gap: 20px 20px;
-  }
-  .about-stats-item {
-    min-height: 146px;
-  }
-  .registration-inv {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-  .registration-inv__img {
-    right: 50px;
-  }
+	.about-hero__inner {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.about-hero__img img {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 604px;
+		max-width: none;
+		max-height: none;
+	}
+
+	.about-stats-list {
+		-ms-grid-columns: (1fr)[2];
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px 20px;
+	}
+
+	.about-stats-item {
+		min-height: 146px;
+	}
+
+	.registration-inv {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	.registration-inv__img {
+		right: 50px;
+	}
 }
 
 @media screen and (max-width: 991px) {
-  .about-hero {
-    margin-bottom: 32px;
-  }
-  .about-hero__inner {
-    height: 410px;
-  }
-  .about-hero__content {
-    max-width: 343px;
-    margin-right: 30px;
-  }
-  .about-hero__title {
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
-  .about-hero__text {
-    font-size: 14px;
-    line-height: 171%;
-  }
-  .about-stats-list {
-    gap: 12px 12px;
-    margin-bottom: 64px;
-  }
-  .about-info {
-    margin-bottom: 64px;
-  }
-  .about-info__title {
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 129%;
-  }
-  .about-info__left {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    margin-right: 39px;
-  }
-  .about-info__right {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    gap: 32px 32px;
-  }
-  .about-info__text {
-    font-size: 14px;
-    line-height: 171%;
-    padding-top: 16px;
-    max-width: 336px;
-  }
-  .about-fuatures__title {
-    font-size: 18px;
-  }
-  .about-fuatures__head {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 12px;
-  }
-  .about-fuatures__image {
-    margin-right: 12px;
-    margin-bottom: 0;
-  }
-  .registration-inv {
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-bottom: 64px;
-  }
-  .registration-inv__title {
-    font-size: 28px;
-    line-height: 129%;
-  }
-  .registration-inv__img {
-    right: 0;
-  }
-  .swiper-custom-btn_prev {
-    left: -5px;
-  }
-  .swiper-custom-btn_next {
-    right: -5px;
-  }
-  .about-reviews__title {
-    font-size: 28px;
-    margin-bottom: 32px;
-  }
-  .about-reviews__slider {
-    padding: 0 40px;
-  }
-  .about-questions-form {
-    max-width: 654px;
-  }
-  .about-questions-form__term {
-    max-width: 570px;
-  }
-  .about-questions__title {
-    font-size: 28px;
-  }
+	.about-hero {
+		margin-bottom: 32px;
+	}
+
+	.about-hero__inner {
+		height: 410px;
+	}
+
+	.about-hero__content {
+		max-width: 343px;
+		margin-right: 30px;
+	}
+
+	.about-hero__title {
+		font-size: 28px;
+		margin-bottom: 8px;
+	}
+
+	.about-hero__text {
+		font-size: 14px;
+		line-height: 171%;
+	}
+
+	.about-stats-list {
+		gap: 12px 12px;
+		margin-bottom: 64px;
+	}
+
+	.about-info {
+		margin-bottom: 64px;
+	}
+
+	.about-info__title {
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 129%;
+	}
+
+	.about-info__left {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		margin-right: 39px;
+	}
+
+	.about-info__right {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		gap: 32px 32px;
+	}
+
+	.about-info__text {
+		font-size: 14px;
+		line-height: 171%;
+		padding-top: 16px;
+		max-width: 336px;
+	}
+
+	.about-fuatures__title {
+		font-size: 18px;
+	}
+
+	.about-fuatures__head {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		margin-bottom: 12px;
+	}
+
+	.about-fuatures__image {
+		margin-right: 12px;
+		margin-bottom: 0;
+	}
+
+	.registration-inv {
+		padding-right: 30px;
+		padding-left: 30px;
+		margin-bottom: 64px;
+	}
+
+	.registration-inv__title {
+		font-size: 28px;
+		line-height: 129%;
+	}
+
+	.registration-inv__img {
+		right: 0;
+	}
+
+	.swiper-custom-btn_prev {
+		left: -5px;
+	}
+
+	.swiper-custom-btn_next {
+		right: -5px;
+	}
+
+	.about-reviews__title {
+		font-size: 28px;
+		margin-bottom: 32px;
+	}
+
+	.about-reviews__slider {
+		padding: 0 40px;
+	}
+
+	.about-questions-form {
+		max-width: 654px;
+	}
+
+	.about-questions-form__term {
+		max-width: 570px;
+	}
+
+	.about-questions__title {
+		font-size: 28px;
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .about-hero {
-    margin-bottom: 0;
-  }
-  .about-hero__inner {
-    height: auto;
-    min-height: 388px;
-    padding-top: 36px;
-    padding-bottom: 36px;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .about-hero__content {
-    max-width: 340px;
-    padding-right: 40px;
-    margin-right: 0;
-  }
-  .about-hero__title {
-    font-size: 24px;
-    line-height: 150%;
-    margin-right: 0;
-    min-height: 110px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .about-hero__img img {
-    width: 130px;
-    top: 0;
-    left: -100px;
-    -webkit-transform: none;
-            transform: none;
-  }
-  .about-stats-list {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .about-stats-item {
-    min-height: auto;
-    padding: 16px 20px 24px;
-  }
-  .about-stats-item__head {
-    margin-bottom: 12px;
-  }
-  .about-info {
-    margin-bottom: 48px;
-  }
-  .about-info__title {
-    font-size: 21px;
-    line-height: 133%;
-    margin-bottom: 12px;
-  }
-  .about-info__inner {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .about-info__left {
-    max-width: 100%;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin-right: 0;
-    margin-bottom: 36px;
-  }
-  .about-info__right {
-    max-width: 100%;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .about-info__text {
-    max-width: 100%;
-    padding-top: 0;
-  }
-  .about-info__text p + p {
-    margin-top: 0.6em;
-  }
-  .registration-inv {
-    padding: 0 15px;
-  }
-  .registration-inv__content {
-    padding: 40px 0;
-    max-width: 232px;
-  }
-  .registration-inv__title {
-    font-size: 21px;
-    line-height: 152%;
-    margin-bottom: 16px;
-  }
-  .registration-inv__btn {
-    max-width: 182px;
-    font-size: 14px;
-  }
-  .registration-inv__img {
-    right: auto;
-    left: 215px;
-    width: 320px;
-  }
-  .about-reviews {
-    overflow: hidden;
-    margin-bottom: 64px;
-  }
-  .about-reviews__slider {
-    padding: 0 26px;
-  }
-  .about-reviews .swiper-custom-btn {
-    display: none;
-  }
-  .about-reviews-slider {
-    overflow: visible;
-  }
-  .swiper-slide-prev.reviews-slide::after,
-  .swiper-slide-next.reviews-slide::after {
-    opacity: 1;
-  }
-  .reviews-slide__user {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .reviews-slide__info {
-    margin: 0;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .reviews-slide__rating {
-    margin-bottom: 5px;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
-  .about-questions {
-    padding: 36px 15px;
-  }
-  .about-questions__title {
-    font-size: 24px;
-  }
-  .about-questions-form {
-    padding: 24px 16px;
-  }
-  .about-questions-form__top {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .about-questions-form__left {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  .about-questions-form__right {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .about-questions-form__term {
-    font-size: 10px;
-    line-height: 140%;
-    max-width: 275px;
-  }
+	.about-hero {
+		margin-bottom: 0;
+	}
+
+	.about-hero__inner {
+		height: auto;
+		min-height: 388px;
+		padding-top: 36px;
+		padding-bottom: 36px;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+	}
+
+	.about-hero__content {
+		max-width: 340px;
+		padding-right: 40px;
+		margin-right: 0;
+	}
+
+	.about-hero__title {
+		font-size: 24px;
+		line-height: 150%;
+		margin-right: 0;
+		min-height: 110px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	.about-hero__img img {
+		width: 130px;
+		top: 0;
+		left: -100px;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	.about-stats-list {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+	}
+
+	.about-stats-item {
+		min-height: auto;
+		padding: 16px 20px 24px;
+	}
+
+	.about-stats-item__head {
+		margin-bottom: 12px;
+	}
+
+	.about-info {
+		margin-bottom: 48px;
+	}
+
+	.about-info__title {
+		font-size: 21px;
+		line-height: 133%;
+		margin-bottom: 12px;
+	}
+
+	.about-info__inner {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.about-info__left {
+		max-width: 100%;
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+		margin-right: 0;
+		margin-bottom: 36px;
+	}
+
+	.about-info__right {
+		max-width: 100%;
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+	}
+
+	.about-info__text {
+		max-width: 100%;
+		padding-top: 0;
+	}
+
+	.about-info__text p+p {
+		margin-top: 0.6em;
+	}
+
+	.registration-inv {
+		padding: 0 15px;
+	}
+
+	.registration-inv__content {
+		padding: 40px 0;
+		max-width: 232px;
+	}
+
+	.registration-inv__title {
+		font-size: 21px;
+		line-height: 152%;
+		margin-bottom: 16px;
+	}
+
+	.registration-inv__btn {
+		max-width: 182px;
+		font-size: 14px;
+	}
+
+	.registration-inv__img {
+		right: auto;
+		left: 215px;
+		width: 320px;
+	}
+
+	.about-reviews {
+		overflow: hidden;
+		margin-bottom: 64px;
+	}
+
+	.about-reviews__slider {
+		padding: 0 26px;
+	}
+
+	.about-reviews .swiper-custom-btn {
+		display: none;
+	}
+
+	.about-reviews-slider {
+		overflow: visible;
+	}
+
+	.swiper-slide-prev.reviews-slide::after,
+	.swiper-slide-next.reviews-slide::after {
+		opacity: 1;
+	}
+
+	.reviews-slide__user {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.reviews-slide__info {
+		margin: 0;
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+	}
+
+	.reviews-slide__rating {
+		margin-bottom: 5px;
+		-webkit-box-ordinal-group: 0;
+		-ms-flex-order: -1;
+		order: -1;
+	}
+
+	.about-questions {
+		padding: 36px 15px;
+	}
+
+	.about-questions__title {
+		font-size: 24px;
+	}
+
+	.about-questions-form {
+		padding: 24px 16px;
+	}
+
+	.about-questions-form__top {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.about-questions-form__left {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.about-questions-form__right {
+		-ms-flex-preferred-size: 100%;
+		flex-basis: 100%;
+	}
+
+	.about-questions-form__term {
+		font-size: 10px;
+		line-height: 140%;
+		max-width: 275px;
+	}
 }
