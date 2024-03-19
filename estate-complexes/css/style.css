@@ -126,6 +126,7 @@
   opacity: 0;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  color: #f0ad4e;
 }
 
 .card-complex__favorite-icon::before {
