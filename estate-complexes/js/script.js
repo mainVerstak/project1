@@ -22,4 +22,31 @@ $(function () {
         $(this).text($(this).attr('data-num'));
         $(this).addClass('_active');
     });
+
+
+    $('.appartments__list > li').each(function() {
+        var subMenu = $(this).find('.appartments__list');
+        $(this).find('.appartments__more').on('click', function(e) {
+            $(this).toggleClass('opened');
+            e.preventDefault();
+            subMenu.slideToggle(300);
+        })
+
+        $('.ds-docs__wrap a').slice(0, 4).addClass('visible');
+
+        $('.ds-docs__more').click(function(e) {
+            e.preventDefault();
+            if ($(this).text() === 'Другие документы') {
+                $('.ds-docs__wrap a').addClass('visible');
+                $(this).text('Свернуть');
+                $(this).addClass('arrow-reverse');
+            } else {
+                $('.ds-docs__wrap a').removeClass('visible');
+                $('.ds-docs__wrap a').slice(0, 4).addClass('visible');
+                $(this).text('Другие документы');
+                $(this).removeClass('arrow-reverse');
+            }
+        });
+    })
+
 });

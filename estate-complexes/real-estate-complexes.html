@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/application.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -14,6 +20,7 @@
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/new.css">
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -243,6 +250,374 @@
                         class="add_search_link_block_action"></span></div>
             </form>
         </div>
+
+        <div class="ds-slider">
+
+            <div class="swiper js-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="ds-slider__wrap" style="background-image: url('img/slide.jpg')"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ds-slider__wrap" style="background-image: url('img/slide.jpg')"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ds-slider__wrap" style="background-image: url('img/slide.jpg')"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ds-slider__wrap" style="background-image: url('img/slide.jpg')"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-slider__content">
+                <p class="ds-slider__title">ЖК «Поклонная 9»</p>
+                <p class="ds-slider__price">от 59,23 млн до 387,13 млн ₽</p>
+                <p class="ds-slider__price-meter">от 1 170 680 до 1 666 865 ₽/м²</p>
+
+                <div class="ds-slider__btns">
+                    <a href="#" class="btn btn-primary">Контакты застройщика</a>
+                    <a href="#" class="btn btn-default">Перезвоните мне</a>
+                </div>
+            </div>
+
+            <div class="ds-slider__nav">
+                <div class="ds-slider__prev">
+                    <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.414 8 5.707.293 4.293 1.707 10.586 8l-6.293 6.293 1.414 1.414L13.414 8Z" fill="currentColor"></path></svg>
+                </div>
+                <div class="ds-slider__next">
+                    <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.414 8 5.707.293 4.293 1.707 10.586 8l-6.293 6.293 1.414 1.414L13.414 8Z" fill="currentColor"></path></svg>
+                </div>
+            </div>
+
+            <script>
+                var dsswiper = new Swiper(".js-slider", {
+                    navigation: {
+                        nextEl: ".ds-slider__next",
+                        prevEl: ".ds-slider__prev",
+                    },
+                });
+            </script>
+
+        </div>
+
+        <div class="ds-info">
+            <div class="ds-info__wrap">
+                <div class="ds-info__col">
+                    <div class="ds-info__content">
+                        Сдача комплекса
+                        <span>Сдан</span>
+                    </div>
+                </div>
+                <div class="ds-info__col">
+                    <div class="ds-info__content">
+                        Ближайшее метро
+                        <span>Парк Победы</span>
+                    </div>
+                </div>
+                <div class="ds-info__col">
+                    <div class="ds-info__content">
+                        Класс комплекса
+                        <span>Премиум</span>
+                    </div>
+                </div>
+                <div class="ds-info__col">
+                    <img class="ds-info__img" src="./img/slide.jpg" alt="">
+                    <div class="ds-info__content">
+                        Застройщик
+                        <a href="#">ANT Development</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="characteristics">
+            <div class="characteristics__head">
+                <div class="characteristics__left">
+                    <div class="characteristics__subtitle">Расположение</div>
+                    <div class="characteristics__title">
+                        Москва, Западный административный округ, район Дорогомилово, Поклонная улица, вл9
+                    </div>
+                    <ul class="characteristics__list">
+                        <li>
+                            <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_current_color--vhuGI" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12.155v1.472h5.556v-1.472h-.89L5.557 9 8 12.155 10.444 9l.89 3.154h-.89v1.472H16v-1.472h-.889l-4-9.884L8 8.37l-3.111-6.1-4 9.884H0Z" fill="currentColor"></path></svg>
+                            м. Парк Победы
+                        </li>
+                        <li>
+                            <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M8.67 4.471c.966 0 1.75-.778 1.75-1.738S9.636.993 8.67.993c-.967 0-1.75.78-1.75 1.74A1.74 1.74 0 0 0 8.142 4.39L3.743 5.68 2.605 8.65l1.868.715.783-2.045 1.12-.328L3.449 15h2.13l.094-.259-.017-.006 2.557-6.937.258-.707L9.662 8H13V6h-2.662L8.275 4.427c.127.03.26.044.395.044Z"></path><path d="M11 15H9v-3.586l-.771-.77.762-2.068 2.01 2.01V15Z"></path></g></svg>
+                            8 мин.
+                        </li>
+                    </ul>
+                    <div class="characteristics__transport">
+                        <div class="icon"></div>
+                        <div class="content">
+                            <p>Оценка 7,5</p>
+                            <a href="#">Транспортная доступность</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="characteristics__right">
+                    <div class="characteristics__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577332.5677448914!2d36.726186007908126!3d55.58103342450881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1716026783789!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="characteristics__wrap">
+                <div class="characteristics__item">
+                    <div class="icon">
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 4a6 6 0 0 0-5.598 8.164l.235.608-.46.46L5 20.414V23h2.586L9 21.586V18h3.586l2.18-2.178.461-.46.607.236c.67.26 1.4.402 2.166.402a6 6 0 0 0 5.38-3.34c.397-.802.62-1.705.62-2.66 0-.7-.12-1.373-.341-1.998a7.66 7.66 0 0 0-1.774.172 3 3 0 1 1-1.296-1.72 9.457 9.457 0 0 1 1.928-.404A5.986 5.986 0 0 0 18 4Zm6.996 2.117A7.998 7.998 0 0 0 18 2a7.976 7.976 0 0 0-5.729 2.416A7.974 7.974 0 0 0 10 10c0 .783.113 1.54.323 2.258l-7.03 7.035-.293.293V25h5.414l.293-.293 2-2 .293-.293V20h2.414l.293-.292 2.034-2.032A8 8 0 0 0 25.834 8.37a7.503 7.503 0 0 1 5.163 7.347l-1.872-1.498-.625-.5-.625.5-7.5 6-.375.3v1.616a7.534 7.534 0 0 1-3.09-3.05l-1.47 1.445A9.533 9.533 0 0 0 20 24.334V37h17V20.52l-.375-.3-3.776-3.022c.099-.55.15-1.118.15-1.698 0-4.738-3.467-8.665-8.003-9.383ZM22 24.882V35h13V21.48l-6.5-5.2-6.5 5.2v1.37a7.531 7.531 0 0 0 3.017-.004 3.5 3.5 0 1 1 .778 1.874 9.523 9.523 0 0 1-3.795.162ZM19 8a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm8 14.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" fill="currentColor"></path></svg>
+                    </div>
+                    <div class="content">
+                        <p>Срок сдачи</p>
+                        <p>2024</p>
+                    </div>
+                </div>
+                <div class="characteristics__item">
+                    <div class="icon">
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"><path d="m19.049 8.422-2.373 7.33H9l-.59 1.808 6.214 4.53-2.374 7.332 1.54 1.116L20 26.011l6.21 4.527 1.54-1.116-2.374-7.332 6.213-4.53L31 15.752h-7.676l-2.373-7.33H19.05Zm-.694 8.638L20 11.977l1.645 5.083a1 1 0 0 0 .952.692h5.334l-4.319 3.15a1 1 0 0 0-.362 1.115l1.648 5.09-4.309-3.142a1 1 0 0 0-1.178 0l-4.309 3.142 1.648-5.09a1 1 0 0 0-.362-1.116l-4.32-3.15h5.335a1 1 0 0 0 .952-.691Z"></path><path d="M37 20.23c0 9.39-7.611 17-17 17s-17-7.61-17-17c0-9.388 7.611-17 17-17s17 7.612 17 17Zm-2 0c0 8.285-6.716 15-15 15-8.284 0-15-6.715-15-15 0-8.284 6.716-15 15-15 8.284 0 15 6.716 15 15Z"></path></g></svg>
+                    </div>
+                    <div class="content">
+                        <p>Класс</p>
+                        <p>Премиум</p>
+                    </div>
+                </div>
+                <div class="characteristics__item">
+                    <div class="icon">
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M16 4H5v8.56l12 7.334V17.55L7 11.44V6h7v4h6v4h8v-2h-6V8h-6V4Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M25 16v4h-6v4h-6v4H6v8h11.281L36 24.56V16H25Zm2 2h7v5.44L16.719 34H8v-4h7v-4h6v-4h6v-4Z"></path></g></svg>
+                    </div>
+                    <div class="content">
+                        <p>Этажность</p>
+                        <p>34</p>
+                    </div>
+                </div>
+                <div class="characteristics__item">
+                    <div class="icon">
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M7 4h17v33H11v-2h11V6H9v6H7V4Zm27 11h-8v-2h5v-2h-5V9h7v4h3v24H26v-2h8V15Z"></path><path d="M14 9h-2v5h2V9Zm3 0h2v5h-2V9Zm2 9h-2v5h2v-5Zm-2 9h2v5h-2v-5Zm14-10h-2v5h2v-5Zm-2 9h2v5h-2v-5Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8 14a1.95 1.95 0 0 0-1.833 1.287L2.395 25.706a5.489 5.489 0 0 0 2.617 6.732A4.941 4.941 0 0 0 7 32.99V37h2v-4.01a4.941 4.941 0 0 0 1.99-.553 5.489 5.489 0 0 0 2.616-6.732L9.834 15.287A1.95 1.95 0 0 0 8 14ZM4.276 26.388 8 16.097l3.725 10.29a3.489 3.489 0 0 1-1.663 4.278c-.42.22-.889.335-1.364.335H7.303c-.475 0-.943-.114-1.364-.335a3.489 3.489 0 0 1-1.663-4.278Z"></path></g></svg>
+                    </div>
+                    <div class="content">
+                        <p>Корпусов</p>
+                        <p>1 корпус</p>
+                    </div>
+                </div>
+                <div class="characteristics__item">
+                    <div class="icon">
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 4h32v32H4V4Zm2 28.586V26h6.586L6 32.586ZM34 34H7.414L34 7.414V34ZM18 6h14.586l-8 8H18V6ZM6 6h10v8H6V6Zm0 18v-8h4v8H6Zm8.586 0 8-8H12v8h2.586ZM15 32a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-11-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm3-3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor"></path></svg>
+                    </div>
+                    <div class="content">
+                        <p>Тип дома</p>
+                        <p>Монолитно-кирпичный</p>
+                    </div>
+                </div>
+                <div class="characteristics__item">
+                    <div class="icon">
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M4 9V3h32v6H23.414l-2-2H34V5H6v2h12.586l-2 2H4Zm0 28v-6h12.757l2 2H6v2h28v-2H21.243l2-2H36v6H4Z"></path><path d="M27.707 16.293 20 8.586l-7.707 7.707 1.414 1.414L19 12.414v15.172l-5.293-5.293-1.414 1.414L20 31.414l7.707-7.707-1.414-1.414L21 27.586V12.414l5.293 5.293 1.414-1.414Z"></path></g></svg>
+                    </div>
+                    <div class="content">
+                        <p>Высота потолков</p>
+                        <p>3,2 м</p>
+                    </div>
+                </div>
+                <div class="characteristics__item">
+                    <div class="icon">
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.629 4.832c.92-2.044 3.822-2.044 4.742 0l6.525 14.5C20.67 21.054 19.412 23 17.525 23H14v-2h3.525a.6.6 0 0 0 .547-.846L11.547 5.653a.6.6 0 0 0-1.095 0l-6.525 14.5a.6.6 0 0 0 .547.847H10v-7h2v11.126c1.725.444 3 2.01 3 3.874v8H7v-8a4.002 4.002 0 0 1 3-3.874V23H4.474c-1.887 0-3.145-1.947-2.37-3.667L8.628 4.832ZM8.999 29a2 2 0 1 1 4 0v6H9v-6Z"></path><path d="M33.3 31.888a4.364 4.364 0 1 1-8.6 0l1.08-6.215c.086-.49-.09-.99-.466-1.319l-2.86-2.503a1.329 1.329 0 0 1-.454-1V19h2v1.546l2.631 2.303a3.427 3.427 0 0 1 1.12 3.167l-1.08 6.215a2.364 2.364 0 1 0 4.658 0l-1.08-6.215a3.428 3.428 0 0 1 1.119-3.167l2.631-2.303V19h2v1.851c0 .383-.165.747-.453 1l-2.861 2.503a1.428 1.428 0 0 0-.467 1.319l1.081 6.215ZM19.645 4H29v2h-6.647l3.385 11h6.466l2.538-11h-1.818l-1.078 5H29.8l1.51-7h5.947l-3.462 15h-9.534L19.645 4Z"></path></g></svg>
+                    </div>
+                    <div class="content">
+                        <p>Варианты отделки</p>
+                        <p>Чистовая</p>
+                    </div>
+                </div>
+                <div class="characteristics__item">
+                    <div class="icon">
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"><path d="M17 20h5.5a5.5 5.5 0 1 0 0-11H15v18h2v-7Zm0-2v-7h5.5a3.5 3.5 0 1 1 0 7H17Z"></path><path d="M4 6a3 3 0 0 1 3-3h26a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H21v6h-2v-6H7a3 3 0 0 1-3-3V6Zm29 25H7a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h26a1 1 0 0 1 1 1v24a1 1 0 0 1-1 1Z"></path></g></svg>
+                    </div>
+                    <div class="content">
+                        <p>Парковка</p>
+                        <p>Подземная, гостевая</p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn-primary" href="#">Все характеристики комплекса</a>
+
+        </div>
+
+
+        <div class="appartments">
+            <h3 class="appartments__title"><a href="#">9 апартаментов от застройщика</a> в ЖК «Поклонная 9»</h3>
+            <div class="appartments__info">
+                <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_error_100--RYlPZ" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.87 1.535a1 1 0 0 0-1.74 0L.346 13.507A1 1 0 0 0 1.216 15h13.568a1 1 0 0 0 .87-1.493L8.87 1.535ZM7 5v5h2V5H7Zm2 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" fill="currentColor"></path></svg>
+                Уточняйте информацию о ценах и наличии
+            </div>
+            <ul class="appartments__list">
+                <li>
+                    <a href="#" class="appartments__heading">
+                        2-комнатные
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                    </a>
+                    <div class="appartments__right">
+                        <span class="appartments__m">от 50 м²</span>
+                        <span class="appartments__price">59,2–60,5 млн ₽</span>
+                        <a class="appartments__more" href="#">
+                            3 предложения
+                            <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m12.707 6.707-1.414-1.414L8 8.586 4.707 5.293 3.293 6.707 8 11.414l4.707-4.707Z" fill="currentColor"></path></svg>
+                        </a>
+                    </div>
+                    <ul class="appartments__list">
+                        <li>
+                            <a href="#" class="appartments__heading">
+                                2-комнатные
+                                <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                            </a>
+                            <div class="appartments__right">
+                                <span class="appartments__m">2023</span>
+                                <span class="appartments__m">от 50 м²</span>
+                                <span class="appartments__price">59,2–60,5 млн ₽</span>
+                                <img class="appartments__img" src="./img/slide.jpg" alt="">
+                            </div>
+                        </li>
+                        <li><a href="#">Смотреть все предложения</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="appartments__heading">
+                        2-комнатные
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                    </a>
+                    <div class="appartments__right">
+                        <span class="appartments__m">от 50 м²</span>
+                        <span class="appartments__price">59,2–60,5 млн ₽</span>
+                        <a class="appartments__more" href="#">
+                            3 предложения
+                            <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m12.707 6.707-1.414-1.414L8 8.586 4.707 5.293 3.293 6.707 8 11.414l4.707-4.707Z" fill="currentColor"></path></svg>
+                        </a>
+                    </div>
+                    <ul class="appartments__list">
+                        <li>
+                            <a href="#" class="appartments__heading">
+                                2-комнатные
+                                <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                            </a>
+                            <div class="appartments__right">
+                                <span class="appartments__m">2023</span>
+                                <span class="appartments__m">от 50 м²</span>
+                                <span class="appartments__price">59,2–60,5 млн ₽</span>
+                                <img class="appartments__img" src="./img/slide.jpg" alt="">
+                            </div>
+                        </li>
+                        <li><a href="#">Смотреть все предложения</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="appartments__heading">
+                        2-комнатные
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                    </a>
+                    <div class="appartments__right">
+                        <span class="appartments__m">от 50 м²</span>
+                        <span class="appartments__price">59,2–60,5 млн ₽</span>
+                        <a class="appartments__more" href="#">
+                            3 предложения
+                            <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m12.707 6.707-1.414-1.414L8 8.586 4.707 5.293 3.293 6.707 8 11.414l4.707-4.707Z" fill="currentColor"></path></svg>
+                        </a>
+                    </div>
+                    <ul class="appartments__list">
+                        <li>
+                            <a href="#" class="appartments__heading">
+                                2-комнатные
+                                <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                            </a>
+                            <div class="appartments__right">
+                                <span class="appartments__m">2023</span>
+                                <span class="appartments__m">от 50 м²</span>
+                                <span class="appartments__price">59,2–60,5 млн ₽</span>
+                                <img class="appartments__img" src="./img/slide.jpg" alt="">
+                            </div>
+                        </li>
+                        <li><a href="#">Смотреть все предложения</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="appartments__foot">
+                <span><a href="#">Посмотреть 79 кв. и апарт.</a> от агентов и собственников</span>
+                <span>Всего <a href="#">88 кв. и апарт.</a> в ЖК</span>
+            </div>
+            <div class="appartments__link">
+                <a href="#">Все планировки</a>
+            </div>
+        </div>
+
+
+        <div class="ds-progress">
+            <h3 class="ds-progress__title">Ход строительства ЖК «Поклонная 9»</h3>
+            <p class="ds-progress__update">Обновлено 1 ноября 2023</p>
+            <div class="ds-progress__wrap">
+                <div class="swiper js-progress">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./img/slide.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/slide.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/slide.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/slide.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/slide.jpg" alt="">
+                      </div>
+                    </div>
+                </div>
+                <div class="ds-progress__prev">
+                    <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.414 8 5.707.293 4.293 1.707 10.586 8l-6.293 6.293 1.414 1.414L13.414 8Z" fill="currentColor"></path></svg>
+                </div>
+                <div class="ds-progress__next">
+                    <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.414 8 5.707.293 4.293 1.707 10.586 8l-6.293 6.293 1.414 1.414L13.414 8Z" fill="currentColor"></path></svg>
+                </div>
+                  <script>
+                    var swiperProgress = new Swiper(".js-progress", {
+                      slidesPerView: 4,
+                      spaceBetween: 25,
+                      navigation: {
+                            nextEl: ".ds-progress__next",
+                            prevEl: ".ds-progress__prev",
+                        },
+                    });
+                  </script>
+            </div>
+           
+            <div class="ds-progress__link"><a href="#">Смотреть все альбомы</a></div>
+        </div>
+
+        <div class="ds-docs">
+            <h3 class="ds-docs__title">Проектная документация</h3>
+            <div class="ds-docs__wrap">
+                <a href="#">Застройщик ANT Development. Проектная декларация на сайте наш.дом.рф</a>
+                <a href="#">Проектная декларация</a>
+                <a href="#">Разрешение на строительство</a>
+                <a href="#">Проектная декларация от 07.07.2020</a>
+                <a href="#">Проектная декларация от 1.06.2023</a>
+                <a href="#">Проектная декларация от 7.09.2023</a>
+                <a href="#">Проектная декларация от 18.10.2023</a>
+                <a href="#">Проектная декларация от 11.11.2023</a>
+                <a href="#">Разрешение на ввод в эксплуатацию</a>
+            </div>
+
+            <a class="ds-docs__more" href="#">Другие документы</a>
+        </div>
+
+        <div class="ds-heading">
+            <h3>Похожие ЖК</h3>
+            <a href="#">Смотрет все</a>
+        </div>
+
+
         <div class="complex-list">
             <div class="card-complex">
                 <div class="card-complex__top">
