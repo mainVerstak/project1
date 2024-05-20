@@ -27,6 +27,8 @@
 
     <script src="js/fotorama.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script src="js/script.js"></script>
 
 
@@ -551,6 +553,89 @@
         </div>
 
 
+        <div class="ds-chart">
+            <h3 class="ds-chart__title">Цены и спрос</h3>
+            <ul class="ds-chart__tabs-list">
+                <li class="active">Динамика цен</li>
+                <li>Динамика продаж</li>
+            </ul>
+            <div class="ds-chart__wrap">
+                <div class="ds-chart__col">
+                    <p class="ds-chart__heading">
+                        Количество комнат
+                    </p>
+                    <div class="ds-chart__wrapper">
+                        <label>
+                            <input type="radio" name="rooms" checked>
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="rooms">
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="rooms">
+                            <span>3</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="ds-chart__col">
+                    <p class="ds-chart__heading">
+                        Период
+                    </p>
+                    <div class="ds-chart__wrapper">
+                        <label>
+                            <input type="radio" name="time" checked>
+                            <span>Полгода</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="time">
+                            <span>Год</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="time">
+                            <span>Всё время</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="ds-chart__col">
+                    <p class="ds-chart__heading">
+                        Стоимость
+                    </p>
+                    <div class="ds-chart__wrapper">
+                        <label>
+                            <input type="radio" name="price" checked>
+                            <span>За квартиру</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="price">
+                            <span>За м²</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="ds-chart__prices">
+                <div class="ds-chart__price">
+                    Средняя цена за квартиру
+                    <span>52,7 млн ₽</span>
+                </div>
+                <div class="ds-chart__price">
+                    Средняя цена м²
+                    <span>1 044 007 ₽/м²</span>
+                </div>
+            </div>
+            <div class="ds-chart__chart-wrapper">
+                <div class="ds-chart__tab active">
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="ds-chart__tab">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+            <div class="ds-chart__text">Данные собираются раз в месяц, последнее обновление: февраль 2024</div>
+        </div>
+
+
         <div class="ds-progress">
             <h3 class="ds-progress__title">Ход строительства ЖК «Поклонная 9»</h3>
             <p class="ds-progress__update">Обновлено 1 ноября 2023</p>
@@ -582,11 +667,25 @@
                 </div>
                   <script>
                     var swiperProgress = new Swiper(".js-progress", {
-                      slidesPerView: 4,
-                      spaceBetween: 25,
+                      slidesPerView: 1,
+                      spaceBetween: 20,
                       navigation: {
                             nextEl: ".ds-progress__next",
                             prevEl: ".ds-progress__prev",
+                        },
+                        breakpoints: {
+                            640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                            },
+                            768: {
+                            slidesPerView: 3,
+                            spaceBetween: 25,
+                            },
+                            930: {
+                            slidesPerView: 4,
+                            spaceBetween: 25,
+                            },
                         },
                     });
                   </script>

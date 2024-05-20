@@ -49,4 +49,65 @@ $(function () {
         });
     })
 
+
+    $('.ds-chart__tabs-list li').on('click', function() {
+        var tabIdx = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.ds-chart__tab').removeClass('active').eq(tabIdx).addClass('active');
+    })
+
+    const ctx = document.getElementById('barChart');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+        labels: ['авг 24', 'дек 23', 'апр 24'],
+        datasets: [{
+            label: 'цена $',
+            data: [1.1, 1, 2],
+            borderWidth: 1
+        }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+    const ctx1 = document.getElementById('lineChart');
+
+    new Chart(ctx1, {
+        type: 'bar',
+        data: {
+        labels: ['авг 24', 'дек 23', 'апр 24'],
+        datasets: [{
+            label: 'цена $',
+            data: [1.1, 1, 2],
+            borderWidth: 1
+        }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
 });
