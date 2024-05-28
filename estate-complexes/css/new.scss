@@ -349,6 +349,7 @@
   }
 
   .ds-button {
+  
     @media (max-width: 600px) {
       display: flex;
       margin: 0 auto;
@@ -903,8 +904,18 @@
   margin-bottom: 50px;
 }
 
-.ds-button {
-  background: #337ab7;
+a.ds-button {
+  height: 44px;
+  border-radius: 6px;
+  color: #333333 !important;
+  background: #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.2s;
+  padding: 0 30px;
+  border: 0;
 }
 
 .fixed-btn {
