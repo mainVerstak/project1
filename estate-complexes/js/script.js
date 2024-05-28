@@ -109,5 +109,11 @@ $(function () {
         }
     });
 
+    $('.appartments__item, .appartments__mobile .item').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $(this).next().slideToggle(100);
+    })
+
 
 });

@@ -521,6 +521,13 @@
     }
     border-bottom: 1px solid #e5e5e5;
 
+    &.active {
+      border-bottom: 1px solid transparent;
+      .appartments__more svg {
+        transform: rotate(180deg);
+      }
+    }
+
     .ttl {
       font-weight: 700;
       width: 20%;
@@ -568,6 +575,12 @@
           right: 0;
           top: 50%;
           transform: translateY(-50%) rotate(-90deg);
+        }
+        &.active {
+          border-bottom: 1px solid transparent;
+          svg {
+            transform: translateY(-50%) rotate(0deg);
+          }
         }
       }
       .head,
@@ -906,4 +919,11 @@
     justify-content: center;
     text-align: center;
   }
+}
+
+.appartments__wrapper {
+  padding-top: 0;
+  display: none;
+  margin-bottom: -7px;
+  border-bottom: 1px solid #e5e5e5;
 }
