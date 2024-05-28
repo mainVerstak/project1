@@ -118,4 +118,30 @@ $(function () {
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
       });
+
+
+      $('.js-fav').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+      })
+
+
+      $('.js-share').on('click', function(event) {
+        event.stopPropagation();
+        $('.ds-share').toggleClass('active');
+      });
+    
+      $(document).on('click', function() {
+        $('.ds-share').removeClass('active');
+      });
+    
+      $('.ds-share').on('click', function(event) {
+        event.stopPropagation();
+      });
+
+      $('..ds-share .close').on('click', function(event) {
+        event.preventDefault();
+        $('.ds-share').removeClass('active');
+      })
+
 });
