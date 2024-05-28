@@ -115,5 +115,7 @@ $(function () {
         $(this).next().slideToggle(100);
     })
 
-
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
 });
