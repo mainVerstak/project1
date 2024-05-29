@@ -1026,3 +1026,31 @@ a.ds-button {
     min-width: 240px;
   }
 }
+
+
+.ds-swiper-2 {
+  position: absolute;
+  z-index: 5;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 330px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+  .swiper-slide {
+    height: auto !important;
+    .ds-slider__wrap {
+      cursor: pointer;
+      width: 180px;
+      height: 80px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 5px;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

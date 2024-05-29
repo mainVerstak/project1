@@ -193,6 +193,23 @@
                 </button>
             </div>
 
+            <div class="swiper ds-swiper-2 js-slider-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="ds-slider__wrap" style="background-image: url('img/slide.jpg')"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ds-slider__wrap" style="background-image: url('img/slide.jpg')"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ds-slider__wrap" style="background-image: url('img/slide.jpg')"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="ds-slider__wrap" style="background-image: url('img/slide.jpg')"></div>
+                    </div>
+                </div>
+            </div>
+
             <div class="swiper js-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -209,6 +226,8 @@
                     </div>
                 </div>
             </div>
+
+
 
             <div class="ds-slider__content">
                 <h1 class="ds-slider__title">ЖК «Поклонная 9»</h1>
@@ -231,10 +250,20 @@
             </div>
 
             <script>
+
+                var swiperThumb = new Swiper(".js-slider-2", {
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    loop: true,
+                    });
+
                 var dsswiper = new Swiper(".js-slider", {
                     navigation: {
                         nextEl: ".ds-slider__next",
                         prevEl: ".ds-slider__prev",
+                    },
+                    thumbs: {
+                        swiper: swiperThumb,
                     },
                 });
             </script>
@@ -481,7 +510,7 @@
 
 
         <div class="new-form">
-            <h1>Недвижимость от собственников и агентов: 5861807 объявлений в базе Всн ру</h1>
+            <h1>Все квартиры в этом ЖК</h1>
         <div class="searchFormPage well well-sm clearfix" itemscope="itemscope" itemtype="http://schema.org/WebSite">
             <form accept-charset="UTF-8" action="/"
                 class="form form-inline withoutBootstrapValidator search_form_action" data-remote="true"
