@@ -1040,6 +1040,9 @@ a.ds-button {
   }
   .swiper-slide {
     height: auto !important;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
     .ds-slider__wrap {
       cursor: pointer;
       width: 180px;
