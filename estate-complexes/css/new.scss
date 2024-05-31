@@ -1150,6 +1150,21 @@ a.ds-button {
     border-right: 1px solid #e5e5e5;
     height: 100%;
     overflow: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #337ab7;
+      border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: yellow;
+    }
+    &::-webkit-scrollbar-track {
+      scrollbar-width: thin;
+      scrollbar-color: #888 #f1f1f1;
+    }
     @media (max-width: 768px) {
       height: 150px;
       border-bottom: 1px solid #e5e5e5;
