@@ -947,6 +947,8 @@ a.ds-button {
   transition: 0.2s;
   padding: 0 30px;
   border: 0;
+  text-shadow: none !important;
+  box-shadow: 0 0 0;
   &:hover {
     text-decoration: none;
     color: #fff !important;
@@ -1153,6 +1155,9 @@ a.ds-button {
     .swiper {
       width: 100%;
       height: 550px;
+      @media (max-width: 768px) {
+        height: 170px;
+      }
     }
 
     .swiper-slide {
@@ -1161,7 +1166,7 @@ a.ds-button {
       box-sizing: border-box;
     }
     @media (max-width: 768px) {
-      height: 150px;
+      height: 170px;
       border-bottom: 1px solid #e5e5e5;
       border-right: 0;
     }
