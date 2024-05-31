@@ -31,8 +31,9 @@ $(function () {
             e.preventDefault();
             subMenu.slideToggle(300);
         })
+    })
 
-        $('.ds-docs__wrap a').slice(0, 4).addClass('visible');
+    $('.ds-docs__wrap a').slice(0, 4).addClass('visible');
 
         $('.ds-docs__more').click(function(e) {
             e.preventDefault();
@@ -47,7 +48,6 @@ $(function () {
                 $(this).removeClass('arrow-reverse');
             }
         });
-    })
 
 
     $('.ds-chart__tabs-list li').on('click', function() {
@@ -139,7 +139,7 @@ $(function () {
         event.stopPropagation();
       });
 
-      $('..ds-share .close').on('click', function(event) {
+      $('.ds-share .close').on('click', function(event) {
         event.preventDefault();
         $('.ds-share').removeClass('active');
       })
