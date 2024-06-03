@@ -39,7 +39,7 @@
 }
 @media (max-width: 600px) {
   .ds-slider__content {
-    padding-bottom: 24px;
+    padding-bottom: 15px;
   }
 }
 .ds-slider__title {
@@ -1109,7 +1109,7 @@ a.ds-button:hover {
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
   height: 90px;
-  padding: 0 24px;
+  padding: 0 24px 0 10px;
 }
 .ds-map__num {
   border-radius: 50%;
