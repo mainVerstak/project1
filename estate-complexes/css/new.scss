@@ -1257,3 +1257,15 @@ a.ds-button {
     text-decoration: none;
   }
 }
+
+.btn-more {
+  width: calc(33.33% - 30px);
+  margin: 0 auto 30px;
+  .card-complex__btn {
+    border: 0;
+    width: 100%;
+    &:after {
+      content: 'Показать еще';
+    }
+  }
+}

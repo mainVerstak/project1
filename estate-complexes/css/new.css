@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .ds-slider {
   position: relative;
 }
@@ -1229,6 +1230,18 @@ a.ds-button:hover {
 
 .ds-swiper-link:hover {
   text-decoration: none;
+}
+
+.btn-more {
+  width: calc(33.33% - 30px);
+  margin: 0 auto 30px;
+}
+.btn-more .card-complex__btn {
+  border: 0;
+  width: 100%;
+}
+.btn-more .card-complex__btn:after {
+  content: "Показать еще";
 }
 
 /*# sourceMappingURL=new.css.map */
