@@ -1259,13 +1259,40 @@ a.ds-button {
 }
 
 .btn-more {
-  width: calc(33.33% - 30px);
-  margin: 0 auto 30px;
+  border: 0;
+  box-shadow: 0 0 0;
+  display: block;
+  &:hover {
+    box-shadow: 0 0 0;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 100px;
+  }
   .card-complex__btn {
     border: 0;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 991px) {
+      padding: 15px 0;
+    }
+    &:hover {
+      color: #fff;
+      background: #386191;
+    }
+    i {
+      font-size: 40px;
+      margin-bottom: 10px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
     &:after {
-      content: 'Показать еще';
+      content: '';
+      display: none;
     }
   }
 }
