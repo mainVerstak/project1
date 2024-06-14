@@ -1261,6 +1261,7 @@ a.ds-button:hover {
 .btn-more .card-complex__btn:hover {
   color: #fff;
   background: #386191;
+  text-decoration: none !important;
 }
 .btn-more .card-complex__btn i {
   font-size: 40px;

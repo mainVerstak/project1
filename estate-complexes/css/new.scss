@@ -1282,6 +1282,8 @@ a.ds-button {
     &:hover {
       color: #fff;
       background: #386191;
+      text-decoration: none !important;
+
     }
     i {
       font-size: 40px;
