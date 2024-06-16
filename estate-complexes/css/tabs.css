@@ -10,6 +10,7 @@
 .ds-tabs .ds-question svg {
   display: flex;
   transform: rotate(-180deg);
+  margin-left: 10px;
 }
 .ds-tabs .ds-question h2 {
   margin: 0;
