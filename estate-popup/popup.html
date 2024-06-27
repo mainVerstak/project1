@@ -261,9 +261,13 @@
                 top: 50%;
                 transform: translateY(-50%);
                 border: 0;
-                display: flex;
                 opacity: .5;
                 transition: opacity .3s ease;
+                display: none;
+            }
+
+            .ds-clear.active {
+                display: flex;
             }
 
             .ds-clear:hover {
@@ -360,6 +364,20 @@
                         }
                     });
             } );
+            $(document).ready(function() {
+                $('.ds-input').on('keyup', function() {
+                    var val = $(this).val().length;
+                    if (val > 0) {
+                        $('.ds-clear').addClass('active');
+                    } else {
+                        $('.ds-clear').removeClass('active');
+                    }
+                })
+                $('.ds-clear').on('click', function() {
+                    $(this).removeClass('active');
+                    $('.ds-input').val('');
+                })
+            })
         </script>
 
 
