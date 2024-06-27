@@ -185,12 +185,17 @@
                     <div class="modal-body modal-body-payment">
                         <div class="row">
                             <div class="signup-box__input-inner col-sm-9">
-                                <div class="ui-widget">
-                                    <input class="form-control" id="tags" size="50" placeholder="Город">
+                                <div class="ui-widget" style="position: relative">
+                                    <input class="form-control ds-input" id="tags" size="50" placeholder="Город">
+                                    <button class="ds-clear">
+                                        <svg>
+                                            <use href="#times-circle-24"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                             <div class="col-sm-3">
-                                <button class="btn btn-primary" style="width: 100%;">
+                                <button class="btn btn-primary ds-btn" style="width: 100%;">
                                     Выбрать
                                 </button>
                             </div>
@@ -239,11 +244,54 @@
             .ui-menu .ui-state-active:hover {
                 color: #23527c;
             }
-            .btn-primary {
+            .ds-btn {
                 background-image: none !important;
             }
 
+            .ds-clear {
+                background: transparent;
+                padding: 0;
+                margin: 0;
+                right: 10px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: 0;
+                display: flex;
+                opacity: .5;
+                transition: opacity .3s ease;
+            }
+
+            .ds-clear:hover {
+                opacity: 1;
+            }
+
+            .ds-clear svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            @media (max-width: 768px) {
+                .ds-input {
+                    margin-bottom: 20px;
+                    height: 60px;
+                }
+                .ds-btn {
+                    height: 60px;
+                }
+                .ds-clear svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
         </style>
+
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol viewBox="0 0 24 24" id="times-circle-24">
+                <path fill="currentColor" fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm3.536-14.95l1.414 1.414L13.414 12l3.536 3.536-1.414 1.414L12 13.414 8.464 16.95 7.05 15.536 10.586 12 7.05 8.464 8.464 7.05 12 10.586l3.536-3.536z"></path>
+            </symbol>
+        </svg>
 
 
         <script>
