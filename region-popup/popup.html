@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/themes/base/jquery-ui.min.css" integrity="sha512-8PjjnSP8Bw/WNPxF6wkklW6qlQJdWJc/3w/ZQPvZ/1bjVDkrrSqLe9mfPYrMxtnzsXFPc434+u4FHLnLjXTSsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js" integrity="sha512-Ww1y9OuQ2kehgVWSD/3nhgfrb424O3802QYP/A5gPXoM4+rRjiKrjHdGxQKrMGQykmsJ/86oGdHszfcVgUr4hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header"><button class="navbar-toggle sidenav-button" type="button"><span
+                                class="icon-bar"></span><span class="icon-bar"></span><span
+                                class="icon-bar"></span></button><span class="pull-left"><a class="navbar-brand"
+                                href="/" style="color:#337ab7;"><i class="fa fa-building-o fa-lg"></i>
+                                multilisting.su</a></span></div>
+                    <nav class="sidenav loaded">
+                        <div class="sidenav__inner">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a class="yaSend" href="/documents" title="Выписки из ЕГРН"
+                                        yaparam="header_document_click"><i class="fa fa-edit fa-lg"></i><span
+                                            class="hidden-sm hidden-md"> Выписки</span></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="nav navbar-nav"><a href="/sign-in">
+                                        <div class="navbar-link"><i class="fa fa-sign-in"></i> Войти</div>
+                                    </a></li>
+                                <li class="nav navbar-nav"><a href="/sign-up">
+                                        <div class="navbar-link"><i class="fa fa-user-plus"></i> Зарегистрироваться
+                                        </div>
+                                    </a></li>
+                                <li class="nav navbar-nav">
+                                    <div class="navbar-btn nav-font-color"><a data-no-turbolink="true"
+                                            href="/estate-new">
+                                            <div class="btn btn-warning"><i class="fa fa-plus fa-lg"></i> Подать
+                                                объявление</div>
+                                        </a></div>
+                                </li>
+                            </ul>
+                        </div><button aria-label="Close" class="sidenav__close" type="button"><i
+                                class="fa fa-close"></i></button>
+                    </nav>
+                    <div class="sidenav-overlay"></div>
+                </div>
+            </div>
+            <div class="notifications top-right"></div>
+        </header>
+
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-region">modal region</button>
+
+        <div class="modal fade" id="modal-region" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close js-remove-card" data-dismiss="modal">&times;</button>
+                        <div class="modal-title h4">Выберите регион</div>
+                    </div>
+                    <div class="modal-body modal-body-payment">
+                        <div class="row">
+                            <div class="signup-box__input-inner col-sm-9">
+                                <div class="ui-widget" style="position: relative">
+                                    <input class="form-control ds-input" id="tags" size="50" placeholder="Город">
+                                    <button class="ds-clear">
+                                        <svg>
+                                            <use href="#times-circle-24"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn btn-primary ds-btn" style="width: 100%;">
+                                    Выбрать
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="modal-footer modal-footer-payment">
+                        <ul class="cities-list">
+                            <li><a href="#">Москва</a></li>
+                            <li><a href="#">Московская область</a></li>
+                            <li><a href="#">Санкт-Петербург</a></li>
+                            <li><a href="#">Ленинградская область</a></li>
+                        </ul>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .ui-front {
+                z-index: 10000;
+            }
+            .cities-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .ui-menu .ui-menu-item-wrapper {
+                padding: 0;
+                font-size: 13px;
+            }
+            .ui-widget.ui-widget-content {
+                border-radius: 3px;
+            }
+            .ui-menu .ui-state-active {
+                margin: 0;
+                border: 0;
+            }
+            .ui-menu .ui-state-active:hover {
+                color: #23527c;
+            }
+            .ds-btn {
+                background-image: none !important;
+            }
+
+            .ds-input {
+                padding-right: 36px;
+            }
+
+            .ds-clear {
+                background: transparent;
+                padding: 0;
+                margin: 0;
+                right: 10px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border: 0;
+                opacity: .5;
+                transition: opacity .3s ease;
+                display: none;
+            }
+
+            .ds-clear.active {
+                display: flex;
+            }
+
+            .ds-clear:hover {
+                opacity: 1;
+            }
+
+            .ds-clear svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            @media (max-width: 768px) {
+                .ds-input {
+                    margin-bottom: 20px;
+                    height: 60px;
+                }
+                .ds-btn {
+                    height: 60px;
+                }
+                .ds-clear svg {
+                    width: 25px;
+                    height: 25px;
+                }
+                .ds-input {
+                    padding-right: 45px;
+                }
+            }
+
+        </style>
+
+        <svg style="display: none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol viewBox="0 0 24 24" id="times-circle-24">
+                <path fill="currentColor" fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm3.536-14.95l1.414 1.414L13.414 12l3.536 3.536-1.414 1.414L12 13.414 8.464 16.95 7.05 15.536 10.586 12 7.05 8.464 8.464 7.05 12 10.586l3.536-3.536z"></path>
+            </symbol>
+        </svg>
+
+
+        <script>
+            $( function() {
+                var availableTags = [
+                    "Москва",
+                    "Санкт-Петербург",
+                    "Новосибирск",
+                    "Екатеринбург",
+                    "Нижний Новгород",
+                    "Казань",
+                    "Челябинск",
+                    "Самара",
+                    "Омск",
+                    "Ростов-на-Дону",
+                    "Уфа",
+                    "Красноярск",
+                    "Пермь",
+                    "Воронеж",
+                    "Волгоград",
+                    "Краснодар",
+                    "Саратов",
+                    "Тюмень",
+                    "Тольятти",
+                    "Ижевск",
+                    "Барнаул",
+                    "Ульяновск",
+                    "Иркутск",
+                    "Хабаровск",
+                    "Ярославль",
+                    "Владивосток",
+                    "Махачкала",
+                    "Томск",
+                    "Оренбург",
+                    "Кемерово"
+                ];
+                function split( val ) {
+                    return val.split( /,\s*/ );
+                }
+                function extractLast( term ) {
+                    return split( term ).pop();
+                }
+
+                $( "#tags" )
+                    .on( "keydown", function( event ) {
+                        if ( event.keyCode === $.ui.keyCode.TAB &&
+                            $( this ).autocomplete( "instance" ).menu.active ) {
+                            event.preventDefault();
+                        }
+                    })
+                    .autocomplete({
+                        minLength: 0,
+                        source: function( request, response ) {
+                            response( $.ui.autocomplete.filter(
+                                availableTags, extractLast( request.term ) ) );
+                        },
+                        focus: function() {
+                            return false;
+                        },
+                        select: function( event, ui ) {
+                            var terms = split( this.value );
+                            terms.pop();
+                            terms.push( ui.item.value );
+                            terms.push( "" );
+                            this.value = terms.join( "" );
+                            return false;
+                        }
+                    });
+            } );
+            $(document).ready(function() {
+                $('.ds-input').on('keyup', function() {
+                    var val = $(this).val().length;
+                    if (val > 0) {
+                        $('.ds-clear').addClass('active');
+                    } else {
+                        $('.ds-clear').removeClass('active');
+                    }
+                })
+                $('.ds-clear').on('click', function() {
+                    $(this).removeClass('active');
+                    $('.ds-input').val('');
+                })
+            })
+        </script>
+
+
+    </div>
+
+</body>
+
+</html>
