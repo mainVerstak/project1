@@ -66,6 +66,17 @@ $(function () {
     $(".ds-chart__tab").removeClass("active").eq(tabIdx).addClass("active");
   });
 
+  function toPercent(current, total) {
+    if (total === 0) return [current];
+    if (current === 0) return [total];
+    const percentage = +((current / total) * 100).toFixed();
+    const remainder = 100 - percentage;
+
+    return [percentage, remainder];
+  }
+
+  Chart.register(ChartDataLabels);
+
   const ctx = document.getElementById("barChart");
 
   new Chart(ctx, {
@@ -77,6 +88,7 @@ $(function () {
           label: "цена $",
           data: [1.1, 1, 2],
           borderWidth: 1,
+          datalabels: { display: false },
         },
       ],
     },
@@ -112,10 +124,14 @@ $(function () {
         {
           type: "line",
           label: "- Средняя цена за 1 м2, руб.",
-          data: [7, 9, 8, 8, 6, 10, 6, 7, 5],
+          data: [9, 11, 10, 10, 8, 12, 8, 9, 7],
           backgroundColor: "#ffffff",
           borderWidth: 1,
           borderColor: "#000000",
+          datalabels: {
+            align: "bottom",
+            font: { size: 14, weight: 700 },
+          },
         },
         {
           type: "bar",
@@ -124,6 +140,11 @@ $(function () {
           backgroundColor: "#2D6BA1",
           borderWidth: 1,
           borderRadius: 5,
+          datalabels: {
+            font: { size: 14, weight: 700 },
+            anchor: "end",
+            align: "top",
+          },
         },
       ],
     },
@@ -139,6 +160,11 @@ $(function () {
           align: "start",
           labels: {
             usePointStyle: true,
+            font: {
+              color: "#000000",
+              size: 14,
+              weight: 700,
+            },
           },
         },
       },
@@ -164,8 +190,19 @@ $(function () {
     data: {
       datasets: [
         {
-          data: [33, 77],
-          backgroundColor: "#2D6BA1",
+          data: toPercent(56, 169),
+          backgroundColor: ["#ffffff", "#579AD4"],
+          borderWidth: 0,
+          datalabels: {
+            display: [true, false],
+            color: "#ffffff",
+            align: 135,
+            formatter: function (value, context) {
+              return value + "%";
+            },
+            offset: 7,
+            font: { size: 18, weight: 700 },
+          },
         },
       ],
     },
@@ -187,8 +224,19 @@ $(function () {
     data: {
       datasets: [
         {
-          data: [33, 77],
-          backgroundColor: "#2D6BA1",
+          data: toPercent(56, 169),
+          backgroundColor: ["#2D6BA1", "#E0E9FF"],
+          borderWidth: 0,
+          datalabels: {
+            display: [true, false],
+            color: "#000000",
+            align: 135,
+            formatter: function (value, context) {
+              return value + "%";
+            },
+            offset: 7,
+            font: { size: 18, weight: 700 },
+          },
         },
       ],
     },
@@ -209,8 +257,19 @@ $(function () {
     data: {
       datasets: [
         {
-          data: [33, 77],
-          backgroundColor: "#2D6BA1",
+          data: toPercent(56, 169),
+          backgroundColor: ["#2D6BA1", "#E0E9FF"],
+          borderWidth: 0,
+          datalabels: {
+            display: [true, false],
+            color: "#000000",
+            align: 135,
+            formatter: function (value, context) {
+              return value + "%";
+            },
+            offset: 7,
+            font: { size: 18, weight: 700 },
+          },
         },
       ],
     },

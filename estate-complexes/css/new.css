@@ -915,6 +915,7 @@
 }
 .ds-chart__tab {
   /* max-height: 250px; */
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif, sans-serif;
 }
 .ds-chart__tab canvas {
   width: 100%;
@@ -927,24 +928,31 @@
 }
 
 .ds-chart__tab h2 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif, sans-serif;
   font-weight: 700;
 }
 
 .ds-chart__tab__line__decription {
+  font-weight: 700;
   width: 100%;
   padding: 16px;
   border-radius: 5px;
   background-color: #f5f5f5;
-  color: #999999;
+  color: #666666;
   margin-bottom: 20px;
 }
 
 .ds-chart__tab__line__wrapper {
+  font-weight: 700;
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-items: stretch;
   gap: 10px;
   margin-bottom: 30px;
+}
+
+.ds-chart__tab__line__wrapper h3 {
+  font-weight: 700;
 }
 
 .ds-chart__tab__line__info_blok {
@@ -968,7 +976,10 @@
 }
 
 .ds-chart__tab__line__info__desc_sales {
-  color: #999999;
+  color: #666666;
+}
+.ds-chart__tab__line__info__desc_sales.active {
+  color: #b2b2b2;
 }
 
 .ds-title {
