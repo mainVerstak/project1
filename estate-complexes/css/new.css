@@ -511,6 +511,7 @@
 .appartments__more {
   display: flex;
   align-items: center;
+  text-wrap: nowrap;
 }
 .appartments__more.opened svg {
   transform: rotate(180deg);
