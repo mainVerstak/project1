@@ -59,10 +59,6 @@ $(function () {
 
   $(document).ready(function () {
     var tabIdx = $(".ds-chart__tabs-list li").index();
-    $(".ds-chart__tabs-list li")
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
     $(".ds-chart__tab").removeClass("active").eq(tabIdx).addClass("active");
   });
 
@@ -130,7 +126,7 @@ $(function () {
           borderColor: "#000000",
           datalabels: {
             align: "bottom",
-            font: { size: 14, weight: 700 },
+            font: { size: 14 },
           },
         },
         {
@@ -141,7 +137,7 @@ $(function () {
           borderWidth: 1,
           borderRadius: 5,
           datalabels: {
-            font: { size: 14, weight: 700 },
+            font: { size: 14 },
             anchor: "end",
             align: "top",
           },
@@ -163,7 +159,6 @@ $(function () {
             font: {
               color: "#000000",
               size: 14,
-              weight: 700,
             },
           },
         },
@@ -283,11 +278,11 @@ $(function () {
     },
   });
 
-  //   $(".appartments__item, .appartments__mobile .item").on("click", function (e) {
-  // e.preventDefault();
-  // $(this).toggleClass("active");
-  // $(this).next().slideToggle(100);
-  //   });
+  // $(".appartments__item, .appartments__mobile .item").on("click", function (e) {
+  //   e.preventDefault();
+  //   $(this).toggleClass("active");
+  //   $(this).next().slideToggle(100);
+  // });
 
   Fancybox.bind("[data-fancybox]", {
     // Your custom options

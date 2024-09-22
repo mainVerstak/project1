@@ -9,13 +9,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- <link
-      href="https://fonts.cdnfonts.com/css/helvetica-neue-5?styles=103510,103513,103511,103506,103508,103502,103504,103500"
-      rel="stylesheet"
-    /> -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-helvetica-neue.min.css" />
     <link rel="stylesheet" href="css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="css/application.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -40,91 +37,6 @@
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    <style>
-      @media (max-width: 1000px) {
-        .ds-slider__content {
-          pointer-events: none;
-        }
-      }
-      @media (max-width: 700px) {
-        .appartments__table {
-          display: block !important;
-        }
-      }
-      .appartments__item .arrow-right {
-        display: none;
-      }
-      @media (max-width: 768px) {
-        .appartments__item {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          padding: 10px 50px 10px 0;
-          position: relative;
-        }
-
-        .appartments__item * {
-          text-decoration: none !important;
-        }
-
-        .appartments__item .ttl {
-          font-weight: 500;
-          width: 50%;
-          margin-bottom: 4px;
-        }
-
-        .appartments__item .ttl::first-letter {
-          text-transform: uppercase;
-        }
-
-        .appartments__item .price {
-          font-weight: bold;
-          width: 50%;
-          text-align: right;
-          margin-bottom: 4px;
-        }
-
-        .appartments__item .metter {
-          color: rgba(0, 0, 0, 0.56) !important;
-          width: auto;
-          order: 5;
-        }
-
-        .appartments__item .plane {
-          color: rgba(0, 0, 0, 0.56) !important;
-          width: auto;
-          order: 3;
-          padding-right: 4px;
-        }
-
-        .appartments__item .more {
-          margin-right: auto;
-          text-align: left;
-          order: 4;
-        }
-
-        .appartments__item .more .appartments__more {
-          margin-left: unset !important;
-        }
-
-        .appartments__item .more .appartments__more svg {
-          display: none;
-        }
-
-        .appartments__item .arrow-right {
-          display: block;
-
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        .appartments__item .more .appartments__more {
-          color: rgba(0, 0, 0, 0.56) !important;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -1409,71 +1321,71 @@
           <li class="active">Динамика цен</li>
           <li>Динамика продаж</li>
         </ul>
-        <div class="ds-chart__wrap">
-          <div class="ds-chart__col">
-            <p class="ds-chart__heading">Количество комнат</p>
-            <div class="ds-chart__wrapper">
-              <label>
-                <input type="radio" name="rooms" checked />
-                <span>1</span>
-              </label>
-              <label>
-                <input type="radio" name="rooms" />
-                <span>2</span>
-              </label>
-              <label>
-                <input type="radio" name="rooms" />
-                <span>3</span>
-              </label>
-            </div>
-          </div>
-          <div class="ds-chart__col">
-            <p class="ds-chart__heading">Период</p>
-            <div class="ds-chart__wrapper">
-              <label>
-                <input type="radio" name="time" checked />
-                <span>Полгода</span>
-              </label>
-              <label>
-                <input type="radio" name="time" />
-                <span>Год</span>
-              </label>
-              <label>
-                <input type="radio" name="time" />
-                <span>Всё время</span>
-              </label>
-            </div>
-          </div>
-          <div class="ds-chart__col">
-            <p class="ds-chart__heading">Стоимость</p>
-            <div class="ds-chart__wrapper">
-              <label>
-                <input type="radio" name="price" checked />
-                <span>За квартиру</span>
-              </label>
-              <label>
-                <input type="radio" name="price" />
-                <span>За м²</span>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="ds-chart__prices">
-          <div class="ds-chart__price">
-            Средняя цена за квартиру
-            <span>52,7 млн ₽</span>
-          </div>
-          <div class="ds-chart__price">
-            Средняя цена м²
-            <span>1 044 007 ₽/м²</span>
-          </div>
-        </div>
         <div class="ds-chart__chart-wrapper">
           <div class="ds-chart__tab active">
+            <div class="ds-chart__wrap">
+              <div class="ds-chart__col">
+                <p class="ds-chart__heading">Количество комнат</p>
+                <div class="ds-chart__wrapper">
+                  <label>
+                    <input type="radio" name="rooms" checked />
+                    <span>1</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="rooms" />
+                    <span>2</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="rooms" />
+                    <span>3</span>
+                  </label>
+                </div>
+              </div>
+              <div class="ds-chart__col">
+                <p class="ds-chart__heading">Период</p>
+                <div class="ds-chart__wrapper">
+                  <label>
+                    <input type="radio" name="time" checked />
+                    <span>Полгода</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="time" />
+                    <span>Год</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="time" />
+                    <span>Всё время</span>
+                  </label>
+                </div>
+              </div>
+              <div class="ds-chart__col">
+                <p class="ds-chart__heading">Стоимость</p>
+                <div class="ds-chart__wrapper">
+                  <label>
+                    <input type="radio" name="price" checked />
+                    <span>За квартиру</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="price" />
+                    <span>За м²</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="ds-chart__prices">
+              <div class="ds-chart__price">
+                Средняя цена за квартиру
+                <span>52,7 млн ₽</span>
+              </div>
+              <div class="ds-chart__price">
+                Средняя цена м²
+                <span>1 044 007 ₽/м²</span>
+              </div>
+            </div>
             <canvas id="barChart" style="width: 100%; height: 250px"></canvas>
           </div>
           <div class="ds-chart__tab active">
-            <h2>Динамика продаж</h2>
+            <!-- <h2>Динамика продаж</h2> -->
             <div class="ds-chart__tab__line__decription">
               Данные по продажам на май 2024 года. <br />
               Интерактивные отчеты с детальной информацией о продажах в

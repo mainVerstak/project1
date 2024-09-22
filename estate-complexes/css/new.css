@@ -913,10 +913,6 @@
 .ds-chart__chart-wrapper {
   margin-bottom: 24px;
 }
-.ds-chart__tab {
-  /* max-height: 250px; */
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif, sans-serif;
-}
 .ds-chart__tab canvas {
   width: 100%;
   height: 100%;
@@ -927,13 +923,7 @@
   display: none;
 }
 
-.ds-chart__tab h2 {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif, sans-serif;
-  font-weight: 700;
-}
-
 .ds-chart__tab__line__decription {
-  font-weight: 700;
   width: 100%;
   padding: 16px;
   border-radius: 5px;
@@ -943,16 +933,11 @@
 }
 
 .ds-chart__tab__line__wrapper {
-  font-weight: 700;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: stretch;
   gap: 10px;
   margin-bottom: 30px;
-}
-
-.ds-chart__tab__line__wrapper h3 {
-  font-weight: 700;
 }
 
 .ds-chart__tab__line__info_blok {
@@ -1345,3 +1330,87 @@ a.ds-button:hover {
 }
 
 /*# sourceMappingURL=new.css.map */
+
+@media (max-width: 1000px) {
+  .ds-slider__content {
+    pointer-events: none;
+  }
+}
+@media (max-width: 700px) {
+  .appartments__table {
+    display: block !important;
+  }
+}
+.appartments__item .arrow-right {
+  display: none;
+}
+@media (max-width: 768px) {
+  .appartments__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 50px 10px 0;
+    position: relative;
+  }
+
+  .appartments__item * {
+    text-decoration: none !important;
+  }
+
+  .appartments__item .ttl {
+    font-weight: 500;
+    width: 50%;
+    margin-bottom: 4px;
+  }
+
+  .appartments__item .ttl::first-letter {
+    text-transform: uppercase;
+  }
+
+  .appartments__item .price {
+    font-weight: bold;
+    width: 50%;
+    text-align: right;
+    margin-bottom: 4px;
+  }
+
+  .appartments__item .metter {
+    color: rgba(0, 0, 0, 0.56) !important;
+    width: auto;
+    order: 5;
+  }
+
+  .appartments__item .plane {
+    color: rgba(0, 0, 0, 0.56) !important;
+    width: auto;
+    order: 3;
+    padding-right: 4px;
+  }
+
+  .appartments__item .more {
+    margin-right: auto;
+    text-align: left;
+    order: 4;
+  }
+
+  .appartments__item .more .appartments__more {
+    margin-left: unset !important;
+  }
+
+  .appartments__item .more .appartments__more svg {
+    display: none;
+  }
+
+  .appartments__item .arrow-right {
+    display: block;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .appartments__item .more .appartments__more {
+    color: rgba(0, 0, 0, 0.56) !important;
+  }
+}
