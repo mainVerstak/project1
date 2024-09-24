@@ -310,20 +310,4 @@ $(function () {
     event.preventDefault();
     $(".ds-share").removeClass("active");
   });
-
-  const slider = document.querySelector(".ds-slider");
-  function noMarginAfterSlider() {
-    let nextElement = false;
-    slider.nextElementSibling.classList.forEach((el) => {
-      if (el === "ds-info") {
-        nextElement = true;
-      }
-    });
-    if (!nextElement) {
-      slider.style.marginBottom = "50px";
-    } else {
-      slider.style.marginBottom = "0px";
-    }
-  }
-  noMarginAfterSlider();
 });

@@ -1,6 +1,12 @@
 .ds-slider {
   position: relative;
+  margin-bottom: 50px;
 }
+
+body:has(.ds-info) .ds-slider {
+  margin-bottom: 0;
+}
+
 .ds-slider .swiper-slide {
   height: 430px;
   border-radius: 3px 3px 0 0;
