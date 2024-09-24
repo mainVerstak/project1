@@ -1,6 +1,5 @@
 .ds-slider {
   position: relative;
-  margin-bottom: 50px;
 }
 .ds-slider .swiper-slide {
   height: 430px;
@@ -1120,8 +1119,8 @@ a.ds-button:hover {
 }
 
 .ds-swiper-2 {
-  position: absolute;
-  z-index: 5;
+  position: absolute !important;
+  z-index: 5 !important;
   bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
