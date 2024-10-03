@@ -224,19 +224,19 @@
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/slide.jpg')"
+                style="background-image: url('img/img5.jpg')"
               ></div>
             </div>
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/slide.jpg')"
+                style="background-image: url('img/img1.png')"
               ></div>
             </div>
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/slide.jpg')"
+                style="background-image: url('img/img3.png')"
               ></div>
             </div>
           </div>
@@ -253,19 +253,19 @@
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/slide.jpg')"
+                style="background-image: url('img/img5.jpg')"
               ></div>
             </div>
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/slide.jpg')"
+                style="background-image: url('img/img1.png')"
               ></div>
             </div>
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/slide.jpg')"
+                style="background-image: url('img/img3.png')"
               ></div>
             </div>
           </div>
@@ -326,16 +326,22 @@
             spaceBetween: 10,
             slidesPerView: 3,
             loop: true,
-          });
-
-          var dsswiper = new Swiper(".js-slider", {
             navigation: {
               nextEl: ".ds-slider__next",
               prevEl: ".ds-slider__prev",
             },
-            thumbs: {
-              swiper: swiperThumb,
+            centeredSlides: true,
+          });
+
+          var dsswiper = new Swiper(".js-slider", {
+            loop: true,
+            navigation: {
+              nextEl: ".ds-slider__next",
+              prevEl: ".ds-slider__prev",
             },
+            // thumbs: {
+            //   swiper: swiperThumb,
+            // },
           });
         </script>
       </div>
