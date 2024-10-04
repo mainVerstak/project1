@@ -224,19 +224,31 @@
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/img5.jpg')"
+                style="background-image: url('img/slide.jpg')"
               ></div>
             </div>
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/img1.png')"
+                style="background-image: url('img/slide.jpg')"
               ></div>
             </div>
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/img3.png')"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
               ></div>
             </div>
           </div>
@@ -253,19 +265,31 @@
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/img5.jpg')"
+                style="background-image: url('img/slide.jpg')"
               ></div>
             </div>
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/img1.png')"
+                style="background-image: url('img/slide.jpg')"
               ></div>
             </div>
             <div class="swiper-slide">
               <div
                 class="ds-slider__wrap"
-                style="background-image: url('img/img3.png')"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
               ></div>
             </div>
           </div>
@@ -324,24 +348,20 @@
         <script>
           var swiperThumb = new Swiper(".js-slider-2", {
             spaceBetween: 10,
-            slidesPerView: 3,
-            loop: true,
-            navigation: {
-              nextEl: ".ds-slider__next",
-              prevEl: ".ds-slider__prev",
-            },
-            centeredSlides: true,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
           });
 
           var dsswiper = new Swiper(".js-slider", {
-            loop: true,
             navigation: {
               nextEl: ".ds-slider__next",
               prevEl: ".ds-slider__prev",
             },
-            // thumbs: {
-            //   swiper: swiperThumb,
-            // },
+            thumbs: {
+              swiper: swiperThumb,
+              slideThumbActiveClass: "swiper-slide-thumb-active",
+            },
           });
         </script>
       </div>
