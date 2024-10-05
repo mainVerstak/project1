@@ -1099,9 +1099,6 @@ a.ds-button:hover {
   font-size: 17px;
   margin-left: 10px;
   background-color: #e9e9ed;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 .ds-fav-btn:hover {
   background-color: #d0d0d7;
