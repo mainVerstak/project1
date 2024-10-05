@@ -1,6 +1,6 @@
 .ds-slider {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 body:has(.ds-info) .ds-slider {
@@ -1098,6 +1098,18 @@ a.ds-button:hover {
   border: 0;
   font-size: 17px;
   margin-left: 10px;
+  background-color: #e9e9ed;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.ds-fav-btn:hover {
+  background-color: #d0d0d7;
+}
+button[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .fav-btn .fas {

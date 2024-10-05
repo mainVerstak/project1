@@ -207,10 +207,34 @@
             <h3 class="card-complex__name">Поделитесь объявлением</h3>
             сюда код яндекса вставите чтобы поделиться в соц. сетях
           </div>
-          <button class="ds-fav-btn js-fav fav-btn">
+          <!-- <button class="ds-fav-btn js-fav fav-btn">
             <i class="far fa-heart"></i>
             <i class="fas fa-heart"></i>
-          </button>
+          </button> -->
+          <form
+            class="button_to fv-form fv-form-bootstrap"
+            method="post"
+            action="/residential_complex_notepads?id=16214&amp;notepad=true"
+            data-remote="true"
+            novalidate="novalidate"
+          >
+            <button
+              type="submit"
+              class="fv-hidden-submit"
+              style="display: none; width: 0px; height: 0px"
+            ></button
+            ><button
+              class="ds-fav-btn fav-btn js-fav"
+              title="Добавить в избранное"
+              type="submit"
+            >
+              <i class="far fa-heart"></i></button
+            ><input
+              type="hidden"
+              name="authenticity_token"
+              value="sAKqciAtvDj4ZzuKZ7ektbsxBYLE+PsKU7sAotX8MK4+vBxhKRbq1YlPkeu8ANxVjkHtyviCHk7NCQzJ2YU7xw=="
+            />
+          </form>
         </div>
 
         <div class="swiper ds-swiper-2 js-slider-2">
