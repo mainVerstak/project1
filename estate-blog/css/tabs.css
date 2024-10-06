@@ -1,0 +1,50 @@
+.ds-tabs {
+  margin-bottom: 10px;
+}
+.ds-tabs .ds-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.ds-tabs .ds-question svg {
+  display: flex;
+  transform: rotate(-180deg);
+  margin-left: 10px;
+}
+.ds-tabs .ds-question h2 {
+  margin: 0;
+}
+.ds-tabs .ds-answer {
+  padding-left: 10px;
+  margin-top: 20px;
+  display: none;
+}
+.ds-tabs .ds-answer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ds-tabs .ds-answer ul li:not(:last-child) {
+  padding-bottom: 5px;
+}
+.ds-tabs .ds-answer table tr:not(:last-child) td {
+  padding-bottom: 5px;
+}
+.ds-tabs .ds-answer table tr td:not(:first-child) {
+  padding-left: 10px;
+}
+
+.ds-item {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.ds-item.active .ds-question svg {
+  transform: rotate(0);
+}
+.ds-item.active .ds-answer {
+  display: block;
+}
+
+/*# sourceMappingURL=tabs.css.map */

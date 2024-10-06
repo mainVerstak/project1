@@ -1,0 +1,60 @@
+.ds-tabs {
+  margin-bottom: 10px;
+  .ds-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    svg {
+      display: flex;
+      transform: rotate(-180deg);
+      margin-left: 10px;
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+  .ds-answer {
+    padding-left: 10px;
+    margin-top: 20px;
+    display: none;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        &:not(:last-child) {
+          padding-bottom: 5px;
+        }
+      }
+    }
+    table {
+      tr {
+        &:not(:last-child) {
+          td {
+            padding-bottom: 5px;
+          }
+        }
+        td {
+          &:not(:first-child) {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ds-item {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  &.active {
+    .ds-question svg {
+      transform: rotate(0);
+    }
+    .ds-answer {
+      display: block;
+    }
+  }
+}
