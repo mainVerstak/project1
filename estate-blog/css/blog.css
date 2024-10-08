@@ -1,7 +1,15 @@
 .ds-blog_slider {
   margin-bottom: 20px;
 }
-.ds-blog_slider h2 {
+.ds-blog_slider h1 {
+  color: #000;
+  font-family: "Helvetica Neue";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.ds-blog-list h1 {
   color: #000;
   font-family: "Helvetica Neue";
   font-size: 32px;
