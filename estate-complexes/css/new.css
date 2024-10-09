@@ -1039,10 +1039,9 @@ a.ds-button {
   border: 0;
   text-shadow: none !important;
   box-shadow: 0 0 0;
-  outline: none;
+  text-decoration: none;
 }
 a.ds-button:hover {
-  text-decoration: none;
   color: #fff !important;
   background: #265a88;
 }
@@ -1463,9 +1462,10 @@ button[type="submit"] {
   text-shadow: none !important;
   width: 182px;
   text-align: center;
+  text-decoration: none !important;
 }
 .ds-slider__btns .mobile_phone_action a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .btn_primary_blue {
@@ -1477,5 +1477,4 @@ button[type="submit"] {
   color: #fff !important;
   display: flex;
   gap: 5px;
-  outline: none !important;
 }
