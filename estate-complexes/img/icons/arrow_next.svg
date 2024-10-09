@@ -1,0 +1,18 @@
+<svg
+  class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9"
+  aria-hidden="true"
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    id="arrow_next"
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M13.414 8 5.707.293 4.293 1.707 10.586 8l-6.293 6.293 1.414 1.414L13.414 8Z"
+    fill="currentColor"
+  ></path>
+</svg>
+

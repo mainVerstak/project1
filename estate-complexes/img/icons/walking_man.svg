@@ -1,0 +1,18 @@
+<svg
+  class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_gray_icons_100--iUfv9"
+  aria-hidden="true"
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="walking_man" fill="currentColor">
+    <path
+      d="M8.67 4.471c.966 0 1.75-.778 1.75-1.738S9.636.993 8.67.993c-.967 0-1.75.78-1.75 1.74A1.74 1.74 0 0 0 8.142 4.39L3.743 5.68 2.605 8.65l1.868.715.783-2.045 1.12-.328L3.449 15h2.13l.094-.259-.017-.006 2.557-6.937.258-.707L9.662 8H13V6h-2.662L8.275 4.427c.127.03.26.044.395.044Z"
+    ></path>
+    <path
+      d="M11 15H9v-3.586l-.771-.77.762-2.068 2.01 2.01V15Z"
+    ></path>
+  </g>
+</svg>

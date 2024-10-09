@@ -1368,11 +1368,6 @@ button[type="submit"] {
 
 /*# sourceMappingURL=new.css.map */
 
-/* @media (max-width: 1000px) {
-  .ds-slider__content {
-    pointer-events: none;
-  }
-} */
 @media (max-width: 700px) {
   .appartments__table {
     display: block !important;
@@ -1450,4 +1445,11 @@ button[type="submit"] {
   .appartments__item .more .appartments__more {
     color: rgba(0, 0, 0, 0.56) !important;
   }
+}
+.mobile_phone_action a {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.mobile_phone_action a:hover {
+  text-decoration: none;
 }
