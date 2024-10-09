@@ -1039,6 +1039,7 @@ a.ds-button {
   border: 0;
   text-shadow: none !important;
   box-shadow: 0 0 0;
+  outline: none;
 }
 a.ds-button:hover {
   text-decoration: none;
@@ -1476,4 +1477,5 @@ button[type="submit"] {
   color: #fff !important;
   display: flex;
   gap: 5px;
+  outline: none !important;
 }
