@@ -1460,9 +1460,9 @@ button[type="submit"] {
   }
 }
 .ds-slider__btns .mobile_phone_action a {
-  padding-left: 8px;
-  padding-right: 8px;
   text-shadow: none !important;
+  width: 182px;
+  text-align: center;
 }
 .ds-slider__btns .mobile_phone_action a:hover {
   text-decoration: none;
