@@ -58,6 +58,18 @@ body:has(.ds-info) .ds-slider {
     padding-bottom: 15px;
   }
 }
+@media (max-width: 355px) {
+  .ds-slider__title {
+    font-size: 1.2em !important;
+  }
+  .ds-slider__price {
+    font-size: 1em !important;
+  }
+  .ds-slider__price-meter {
+    font-size: 0.9em !important;
+  }
+}
+
 .ds-slider__title {
   font-size: 1.4em;
   line-height: 1.1;
