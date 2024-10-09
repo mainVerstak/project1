@@ -1446,10 +1446,10 @@ button[type="submit"] {
     color: rgba(0, 0, 0, 0.56) !important;
   }
 }
-.mobile_phone_action a {
+.ds-slider__btns .mobile_phone_action a {
   padding-left: 8px;
   padding-right: 8px;
 }
-.mobile_phone_action a:hover {
+.ds-slider__btns .mobile_phone_action a:hover {
   text-decoration: none;
 }
