@@ -1028,7 +1028,7 @@ body:has(.ds-info) .ds-slider {
 a.ds-button {
   height: 44px;
   border-radius: 6px;
-  color: #333333 !important;
+  color: #333333;
   background: #f2f2f2;
   display: flex;
   align-items: center;
@@ -1461,7 +1461,19 @@ button[type="submit"] {
 .ds-slider__btns .mobile_phone_action a {
   padding-left: 8px;
   padding-right: 8px;
+  text-shadow: none !important;
 }
 .ds-slider__btns .mobile_phone_action a:hover {
   text-decoration: none;
+}
+
+.btn_primary_blue {
+  background-image: linear-gradient(
+    to bottom,
+    #5bc0de 0%,
+    #2aabd2 100%
+  ) !important;
+  color: #fff !important;
+  display: flex;
+  gap: 5px;
 }
