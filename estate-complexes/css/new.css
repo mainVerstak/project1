@@ -1465,6 +1465,7 @@ button[type="submit"] {
   width: 182px;
   text-align: center;
   text-decoration: none !important;
+  pointer-events: all;
 }
 .ds-slider__btns .mobile_phone_action a:hover {
   text-decoration: none !important;
