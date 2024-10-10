@@ -1470,7 +1470,7 @@ button[type="submit"] {
   text-decoration: none !important;
 }
 
-.btn_primary_blue {
+.btn-primary-blue {
   background-image: linear-gradient(
     to bottom,
     #5bc0de 0%,
