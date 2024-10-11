@@ -36,7 +36,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-    <script src="js/script.js"></script>
+    <script defer src="js/blog.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
   </head>
 
@@ -334,76 +334,74 @@
       </div>
       <div class="ds-blog-list">
         <h2>Статьи</h2>
-        <!-- <div class="ds-blog-list_filters">
-          <div class="ds-blog-list__filter dropdown">
-            <div class="dropdown me-1">
-              <button
-                type="button"
-                class="ds-blog-list__btn"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                data-bs-offset="10,20"
-              >
-                <span class="ds-blog-list__btn__title">Категория</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="11"
-                    height="9"
-                    viewBox="0 0 11 9"
-                    fill="none"
-                  >
-                    <path
-                      d="M5.5 9L0.736861 0.75L10.2631 0.749999L5.5 9Z"
-                      fill="black"
-                    />
-                  </svg>
-                </span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </div>
+        <div class="ds-blog-list_filters">
+          <div class="ds-blog-list-filter dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle ds-blog-list__btn"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="ds-blog-list__btn__title">Категория</span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="11"
+                  height="9"
+                  viewBox="0 0 11 9"
+                  fill="none"
+                >
+                  <path
+                    d="M5.5 9L0.736861 0.75L10.2631 0.749999L5.5 9Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
           </div>
-          <div class="ds-blog-list__sorter">
-            <div class="dropdown me-1">
-              <button
-                type="button"
-                class="ds-blog-list__btn"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                data-bs-offset="10,20"
-              >
-                <span class="ds-blog-list__btn__title">Сначала новые</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="11"
-                    height="9"
-                    viewBox="0 0 11 9"
-                    fill="none"
-                  >
-                    <path
-                      d="M5.5 9L0.736861 0.75L10.2631 0.749999L5.5 9Z"
-                      fill="black"
-                    />
-                  </svg>
-                </span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </div>
+          <div class="ds-blog-list-filter dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle ds-blog-list__btn"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="ds-blog-list__btn__title">Сначала новые</span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="11"
+                  height="9"
+                  viewBox="0 0 11 9"
+                  fill="none"
+                >
+                  <path
+                    d="M5.5 9L0.736861 0.75L10.2631 0.749999L5.5 9Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
           </div>
-        </div> -->
+        </div>
         <div class="ds-blog-list__tops">
           <div class="ds-blog_card">
             <div class="ds-blog_card__thumbnail">
@@ -467,7 +465,6 @@
                 class="ds-blog-list__card_thumd"
                 src="./img/img1.png"
                 alt="thumb"
-                onerror="this.onerror=null;this.src='./img/no-image.svg';"
               />
             </div>
             <div class="ds-blog-list_card__description">
@@ -486,12 +483,7 @@
           </div>
           <div class="ds-blog-list__card">
             <div class="ds-blog-list_card__thumbnail">
-              <img
-                class="ds-blog-list__card_thumd"
-                src=""
-                alt="thumb"
-                onerror="this.onerror=null;this.src='./img/no-image.svg';"
-              />
+              <img class="ds-blog-list__card_thumd" src="/sdga" alt="thumb" />
             </div>
             <div class="ds-blog-list_card__description">
               <div class="ds-blog_card__info">
@@ -513,7 +505,6 @@
                 class="ds-blog-list__card_thumd"
                 src="./img/img1.png"
                 alt="thumb"
-                onerror="this.onerror=null;this.src='./img/no-image.svg';"
               />
             </div>
             <div class="ds-blog-list_card__description">
@@ -536,7 +527,6 @@
                 class="ds-blog-list__card_thumd"
                 src="./img/im51.png"
                 alt="thumb"
-                onerror="this.onerror=null;this.src='./img/no-image.svg';"
               />
             </div>
             <div class="ds-blog-list_card__description">
@@ -559,7 +549,6 @@
                 class="ds-blog-list__card_thumd"
                 src="./img/img1.png"
                 alt="thumb"
-                onerror="this.onerror=null;this.src='./img/no-image.svg';"
               />
             </div>
             <div class="ds-blog-list_card__description">
@@ -582,7 +571,6 @@
                 class="ds-blog-list__card_thumd"
                 src="./img/sf.png"
                 alt="thumb"
-                onerror="this.onerror=null;this.src='./img/no-image.svg';"
               />
             </div>
             <div class="ds-blog-list_card__description">
@@ -605,7 +593,6 @@
                 class="ds-blog-list__card_thumd"
                 src="./img/img1.png"
                 alt="thumb"
-                onerror="this.onerror=null;this.src='./img/no-image.svg';"
               />
             </div>
             <div class="ds-blog-list_card__description">
