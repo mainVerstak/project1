@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-helvetica-neue.min.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script defer src="js/blog.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                  Москва
+                  <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Выписки из ЕГРН"
+                yaparam="header_document_click"
+              >
+                <i class="fa fa-edit fa-lg"></i>
+                Выписки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <i class="fas fa-money-bill-wave"></i>
+                Тарифы и цены
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <i class="fas fa-file-code"></i>
+                Пакетная загрузка
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="sidenav loaded">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                        Москва
+                        <span class="caret"></span>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <i class="fa fa-user-plus"></i>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="navbar-btn nav-font-color">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <i class="fa fa-plus fa-lg"></i>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <i class="fas fa-money-bill-wave"></i>
+                      Тарифы и цены
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <i class="fa fa-edit fa-lg"></i>
+                      Выписки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <i class="fas fa-file-code"></i>
+                      Пакетная загрузка
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                aria-label="Close"
+                class="navbar-toggle sidenav__close"
+                type="button"
+              >
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="ds-blog-breadcrumbs">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="/estate-blog/blog.html">Статьи</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Заголовок статьи
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="ds-blog-article-container">
+        <article class="ds-blog-article-content">
+          <div class="ds-blog-tags">
+            <a href="#">тег 1</a>
+            <a href="#">тег 2</a>
+            <a href="#">тег 3</a>
+          </div>
+          <div class="ds-blog-article-content__title">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+          </div>
+          <div class="ds-blog-article-content-info">
+            <div class="ds-blog-article-content-info_item">
+              <svg class="icon">
+                <use href="./img/icons.svg#user"></use>
+              </svg>
+              Иван
+            </div>
+            <div class="ds-blog-article-content-info_item">
+              <svg class="icon">
+                <use href="./img/icons.svg#time"></use>
+              </svg>
+              15 минут
+            </div>
+            <div class="ds-blog-article-content-info_item">
+              <svg class="icon">
+                <use href="./img/icons.svg#date"></use>
+              </svg>
+              16 сентября 2024
+            </div>
+            <div class="ds-blog-article-content-info_item">
+              <svg class="icon">
+                <use href="./img/icons.svg#eye"></use>
+              </svg>
+              124
+            </div>
+            <div class="ds-blog-article-content-info_item">
+              <svg class="icon">
+                <use href="./img/icons.svg#comment"></use>
+              </svg>
+              12
+            </div>
+            <div class="ds-blog-article-content-info_item">
+              <svg class="icon">
+                <use href="./img/icons.svg#checked-ok"></use>
+              </svg>
+              Проверено
+            </div>
+          </div>
+          <div class="ds-blog-article-image">
+            <img src="./img/img1.png" alt="article image" />
+          </div>
+          <div class="ds-blog-article-summary">
+            <h3>Содержание</h3>
+            <ul>
+              <li>
+                <a href="#"
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="ds-blog-article-content__text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+            <ol>
+              <li>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </li>
+              <li>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </li>
+            </ol>
+
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+            <ul>
+              <li>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </li>
+              <li>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </li>
+            </ul>
+
+            <p>
+              <img src="./img/img2.png" alt="article image" />
+              <img src="./img/img2.png" alt="article image" />
+            </p>
+
+            <div class="ds-blog-article-content__note">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </div>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+
+            <div class="ds-blog-article-summary">
+              <h3>Список литературы</h3>
+              <ul>
+                <li>
+                  <a href="#"
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="ds-blog-article-content__text-end">
+              <h2>Понравилась статья?</h2>
+              <div class="ds-blog-article-content__text-end-buttons">
+                <a href="#" class="btn btn-warning">
+                  <i class="fa fa-thumbs-up"></i>
+                  Нравится
+                </a>
+                <a href="#" class="btn btn-warning">
+                  <i class="fa fa-thumbs-down"></i>
+                  Не нравится
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="ds-blog-article-comments">
+            <h2>Комментарии (15)</h2>
+            <div class="ds-blog-article-comments__wrapper">
+              <div class="ds-blog-article-comments__item">
+                <div class="ds-blog-article-comments__item-info">
+                  <div class="ds-blog-article-comments__item-info-thumb">
+                    <img src="./img/avatar.png" alt="avatar" />
+                  </div>
+                  <div class="ds-blog-article-comments__item-info-description">
+                    <div class="ds-blog-article-comments__item-info-name">
+                      Иван Иванов
+                      <span
+                        class="ds-blog-article-comments__item-info-name-verified"
+                      >
+                        <svg class="icon">
+                          <use href="./img/icons.svg#checked-ok"></use>
+                        </svg>
+                        Эксперт</span
+                      >
+                    </div>
+                    <div class="ds-blog-article-comments__item-info-date">
+                      16 сентября 2024, 14:45
+                    </div>
+                  </div>
+                </div>
+                <div class="ds-blog-article-comments__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <button class="ds-blog-article-comments__item-reply">
+                  Ответить
+                </button>
+              </div>
+              <div class="ds-blog-article-comments__item reply">
+                <div class="ds-blog-article-comments__item-info">
+                  <div class="ds-blog-article-comments__item-info-thumb">
+                    <img src="./img/avatar.png" alt="avatar" />
+                  </div>
+                  <div class="ds-blog-article-comments__item-info-description">
+                    <div class="ds-blog-article-comments__item-info-name">
+                      Иван Иванов
+                      <span
+                        class="ds-blog-article-comments__item-info-name-verified"
+                      >
+                        <svg class="icon">
+                          <use href="./img/icons.svg#checked-ok"></use>
+                        </svg>
+                        Эксперт</span
+                      >
+                    </div>
+                    <div class="ds-blog-article-comments__item-info-date">
+                      16 сентября 2024, 14:45
+                    </div>
+                  </div>
+                </div>
+                <div class="ds-blog-article-comments__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <button class="ds-blog-article-comments__item-reply">
+                  Ответить
+                </button>
+              </div>
+            </div>
+            <form class="ds-blog-article-comments__form">
+              <textarea
+                class="ds-blog-article-comments__form-textarea"
+                placeholder="Ваш комментарий"
+              ></textarea>
+              <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+          </div>
+        </article>
+        <div class="ds-blog-sidebar">
+          <h3>Другие статьи</h3>
+          <div class="ds-blog-sidebar__articles">
+            <div class="ds-blog-sidebar__article">
+              <a href="#">
+                <div class="ds-blog-sidebar__article-date">
+                  16 сентября 2024
+                </div>
+                <h4 class="ds-blog-sidebar__article-title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempo sectetur adipiscing elit, sed do e
+                </h4>
+              </a>
+            </div>
+            <div class="ds-blog-sidebar__article">
+              <a href="#">
+                <div class="ds-blog-sidebar__article-date">
+                  16 сентября 2024
+                </div>
+                <h4 class="ds-blog-sidebar__article-title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempo sectetur adipiscing elit, sed do e
+                </h4>
+              </a>
+            </div>
+            <div class="ds-blog-sidebar__article">
+              <a href="#">
+                <div class="ds-blog-sidebar__article-date">
+                  16 сентября 2024
+                </div>
+                <h4 class="ds-blog-sidebar__article-title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempo sectetur adipiscing elit, sed do e
+                </h4>
+              </a>
+            </div>
+            <div class="ds-blog-sidebar__article">
+              <a href="#">
+                <div class="ds-blog-sidebar__article-date">
+                  16 сентября 2024
+                </div>
+                <h4 class="ds-blog-sidebar__article-title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempo sectetur adipiscing elit, sed do e
+                </h4>
+              </a>
+            </div>
+            <div class="ds-blog-sidebar__article">
+              <a href="#">
+                <div class="ds-blog-sidebar__article-date">
+                  16 сентября 2024
+                </div>
+                <h4 class="ds-blog-sidebar__article-title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempo sectetur adipiscing elit, sed do e
+                </h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
