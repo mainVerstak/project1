@@ -32,6 +32,13 @@
   height: 100%;
   object-fit: cover;
 }
+.ds-blog_slider .ds-blog_slider__card_thumd {
+  height: 245px;
+}
+.slider-arrow {
+  width: 38px;
+  height: 38px;
+}
 .ds-blog_card__info {
   color: #999;
   font-family: "Helvetica Neue";
@@ -619,6 +626,7 @@
 @media screen and (max-width: 768px) {
   .ds-blog-author-info {
     flex-wrap: wrap;
+    gap: 20px;
   }
   .ds-blog-author-info__avatar {
     width: 100%;
@@ -627,5 +635,14 @@
   .ds-blog-author-articles-list__item {
     width: 100%;
     max-width: none;
+  }
+  .ds-blog-author-info__main {
+    position: absolute;
+    top: 160px;
+    left: 200px;
+  }
+  .ds-blog-author-info__name {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
