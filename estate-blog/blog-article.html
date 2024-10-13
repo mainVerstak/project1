@@ -424,14 +424,14 @@
             <div class="ds-blog-article-content__text-end">
               <h2>Понравилась статья?</h2>
               <div class="ds-blog-article-content__text-end-buttons">
-                <a href="#" class="btn btn-warning">
-                  <i class="fa fa-thumbs-up"></i>
+                <button href="#" class="btn btn-like">
+                  <i class="fa fa-thumbs-up primary-color"></i>
                   Нравится
-                </a>
-                <a href="#" class="btn btn-warning">
-                  <i class="fa fa-thumbs-down"></i>
+                </button>
+                <button href="#" class="btn btn-dislike">
+                  <i class="fa fa-thumbs-down primary-color"></i>
                   Не нравится
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -476,14 +476,6 @@
                   <div class="ds-blog-article-comments__item-info-description">
                     <div class="ds-blog-article-comments__item-info-name">
                       Иван Иванов
-                      <span
-                        class="ds-blog-article-comments__item-info-name-verified"
-                      >
-                        <svg class="icon">
-                          <use href="./img/icons.svg#checked-ok"></use>
-                        </svg>
-                        Эксперт</span
-                      >
                     </div>
                     <div class="ds-blog-article-comments__item-info-date">
                       16 сентября 2024, 14:45
@@ -504,7 +496,12 @@
                 class="ds-blog-article-comments__form-textarea"
                 placeholder="Ваш комментарий"
               ></textarea>
-              <button type="submit" class="btn btn-primary">Отправить</button>
+              <button
+                type="submit"
+                class="btn btn-primary ds-blog-article-comments__form-submit"
+              >
+                Отправить
+              </button>
             </form>
           </div>
         </article>
@@ -567,6 +564,120 @@
               </a>
             </div>
           </div>
+        </div>
+        <div class="ds-blog-article-slider-mobile">
+          <h2>Другие статьи</h2>
+          <div class="swiper js-slider article-slider-more">
+            <div class="swiper-wrapper article-slider-more_wrapper">
+              <div class="swiper-slide ds-blog-article-slider-mobile_card">
+                <a href="#">
+                  <div class="ds-blog-article-slider-mobile_card__description">
+                    <div class="ds-blog_card__info">
+                      16 сентября 2024 | Категория | Автор
+                    </div>
+                    <h3>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempo sectetur adipiscing elit, sed do e
+                    </h3>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide ds-blog-article-slider-mobile_card">
+                <a href="#">
+                  <div class="ds-blog-article-slider-mobile_card__description">
+                    <div class="ds-blog_card__info">
+                      16 сентября 2024 | Категория | Автор
+                    </div>
+                    <h3>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempo sectetur adipiscing elit, sed do e
+                    </h3>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide ds-blog-article-slider-mobile_card">
+                <a href="#">
+                  <div class="ds-blog-article-slider-mobile_card__description">
+                    <div class="ds-blog_card__info">
+                      16 сентября 2024 | Категория | Автор
+                    </div>
+                    <h3>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempo sectetur adipiscing elit, sed do e
+                    </h3>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide ds-blog-article-slider-mobile_card">
+                <a href="#">
+                  <div class="ds-blog-article-slider-mobile_card__description">
+                    <div class="ds-blog_card__info">
+                      16 сентября 2024 | Категория | Автор
+                    </div>
+                    <h3>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempo sectetur adipiscing elit, sed do e
+                    </h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="slider_btns">
+            <span class="article-slider-more__prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="38"
+                viewBox="0 0 38 38"
+                fill="none"
+              >
+                <circle
+                  cx="19"
+                  cy="19"
+                  r="19"
+                  transform="rotate(-180 19 19)"
+                  fill="#F0F2F6"
+                />
+                <path
+                  d="M8.29289 18.2929C7.90237 18.6834 7.90237 19.3166 8.29289 19.7071L14.6569 26.0711C15.0474 26.4616 15.6805 26.4616 16.0711 26.0711C16.4616 25.6805 16.4616 25.0474 16.0711 24.6569L10.4142 19L16.0711 13.3431C16.4616 12.9526 16.4616 12.3195 16.0711 11.9289C15.6805 11.5384 15.0474 11.5384 14.6569 11.9289L8.29289 18.2929ZM29 18L9 18L9 20L29 20L29 18Z"
+                  fill="#337AB7"
+                />
+              </svg>
+            </span>
+            <span class="article-slider-more__next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="38"
+                viewBox="0 0 38 38"
+                fill="none"
+              >
+                <circle
+                  cx="19"
+                  cy="19"
+                  r="19"
+                  transform="rotate(0 19 19)"
+                  fill="#F0F2F6"
+                />
+                <path
+                  d="M8.29289 18.2929C7.90237 18.6834 7.90237 19.3166 8.29289 19.7071L14.6569 26.0711C15.0474 26.4616 15.6805 26.4616 16.0711 26.0711C16.4616 25.6805 16.4616 25.0474 16.0711 24.6569L10.4142 19L16.0711 13.3431C16.4616 12.9526 16.4616 12.3195 16.0711 11.9289C15.6805 11.5384 15.0474 11.5384 14.6569 11.9289L8.29289 18.2929ZM29 18L9 18L9 20L29 20L29 18Z"
+                  fill="#337AB7"
+                  transform="rotate(-180 19 19)"
+                />
+              </svg>
+            </span>
+          </div>
+          <script>
+            var articleSliderMore = new Swiper(".article-slider-more", {
+              spaceBetween: 16,
+              slidesPerView: "auto",
+              navigation: {
+                nextEl: ".article-slider-more__next",
+                prevEl: ".article-slider-more__prev",
+              },
+            });
+          </script>
         </div>
       </div>
     </div>

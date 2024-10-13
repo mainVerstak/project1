@@ -10,4 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
   });
+
+  // for show mobile slider
+  const mobileSlider = document.querySelector(".ds-blog-article-slider-mobile");
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    mobileSlider.classList.add("active");
+    document
+      .querySelector(".ds-blog-article-container")
+      .classList.add("active");
+  }
 });
