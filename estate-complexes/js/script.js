@@ -231,105 +231,69 @@ $(function () {
     },
   });
 
-  const cirklAppart = document.getElementById("appartCirklChart");
+  function createDoughnutChart(elementId, data, colors, textColor = "#000000") {
+    const ctx = document.getElementById(elementId);
 
-  new Chart(cirklAppart, {
-    type: "doughnut",
-    data: {
-      datasets: [
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        datasets: [
+          {
+            data: data,
+            backgroundColor: colors,
+            borderWidth: 0,
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false },
+          datalabels: { display: false },
+        },
+      },
+      plugins: [
         {
-          data: toPercent(56, 169),
-          backgroundColor: ["#ffffff", "#579AD4"],
-          borderWidth: 0,
-          datalabels: {
-            display: [true, false],
-            color: "#ffffff",
-            align: 135,
-            formatter: function (value, context) {
-              return value + "%";
-            },
-            offset: 7,
-            font: { size: 18, weight: 700 },
+          id: "centerText",
+          afterDraw: (chart) => {
+            const {
+              ctx,
+              chartArea: { top, bottom, left, right },
+            } = chart;
+            const centerX = (left + right) / 2 + 1;
+            const centerY = (top + bottom) / 2 + 2;
+
+            ctx.save();
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.font = "bold 18px Helvetica";
+            ctx.fillStyle = textColor;
+
+            const percentage = data[0];
+            ctx.fillText(`${percentage}%`, centerX, centerY);
+            ctx.restore();
           },
         },
       ],
-    },
-    options: {
-      plugins: {
-        title: {
-          display: false,
-        },
-        legend: { display: true },
-      },
-      scales: {},
-    },
-  });
+    });
+  }
 
-  const nonResCirkl = document.getElementById("nonResidentCirklChart");
+  const appartData = toPercent(16, 169);
+  createDoughnutChart(
+    "appartCirklChart",
+    appartData,
+    ["#ffffff", "#579AD4"],
+    "#FFFFFF"
+  );
 
-  new Chart(nonResCirkl, {
-    type: "doughnut",
-    data: {
-      datasets: [
-        {
-          data: toPercent(56, 169),
-          backgroundColor: ["#2D6BA1", "#E0E9FF"],
-          borderWidth: 0,
-          datalabels: {
-            display: [true, false],
-            color: "#000000",
-            align: 135,
-            formatter: function (value, context) {
-              return value + "%";
-            },
-            offset: 7,
-            font: { size: 18, weight: 700 },
-          },
-        },
-      ],
-    },
-    options: {
-      plugins: {
-        title: {
-          display: false,
-        },
-      },
-      scales: {},
-    },
-  });
+  const nonResData = toPercent(56, 169);
+  createDoughnutChart("nonResidentCirklChart", nonResData, [
+    "#2D6BA1",
+    "#E0E9FF",
+  ]);
 
-  const parkingCirkl = document.getElementById("parkingCirklChart");
-
-  new Chart(parkingCirkl, {
-    type: "doughnut",
-    data: {
-      datasets: [
-        {
-          data: toPercent(56, 169),
-          backgroundColor: ["#2D6BA1", "#E0E9FF"],
-          borderWidth: 0,
-          datalabels: {
-            display: [true, false],
-            color: "#000000",
-            align: 135,
-            formatter: function (value, context) {
-              return value + "%";
-            },
-            offset: 7,
-            font: { size: 18, weight: 700 },
-          },
-        },
-      ],
-    },
-    options: {
-      plugins: {
-        title: {
-          display: false,
-        },
-      },
-      scales: {},
-    },
-  });
+  const parkingData = toPercent(159, 169);
+  createDoughnutChart("parkingCirklChart", parkingData, ["#2D6BA1", "#E0E9FF"]);
 
   // $(".appartments__item, .appartments__mobile .item").on("click", function (e) {
   //   e.preventDefault();
