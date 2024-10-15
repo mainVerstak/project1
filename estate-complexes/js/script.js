@@ -119,25 +119,34 @@ $(function () {
       datasets: [
         {
           type: "line",
-          label: "- Средняя цена за 1 м2, руб.",
-          data: [9, 11, 10, 10, 8, 12, 8, 9, 7],
+          label: "Средняя цена за 1 м2, руб.",
+          data: [
+            161296, 170818, 166478, 153797, 158849, 156287, 163602, 170711,
+            169501,
+          ],
           backgroundColor: "#ffffff",
           borderWidth: 1,
           borderColor: "#000000",
+          yAxisID: "y-axis-1",
           datalabels: {
-            align: "bottom",
+            align: "top",
+            anchor: "end",
+            offset: 5,
             font: { size: 14 },
+            formatter: (value) =>
+              value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
           },
         },
         {
           type: "bar",
-          label: "- Колличество проданных квартир",
-          data: [5, 7, 6, 6, 4, 8, 4, 5, 3],
+          label: "Количество проданных квартир",
+          data: [19, 10, 10, 3, 2, 4, 4, 4, 13],
           backgroundColor: "#2D6BA1",
           borderWidth: 1,
           borderRadius: 5,
+          yAxisID: "y-axis-2",
           datalabels: {
-            font: { size: 14 },
+            font: { size: 12 },
             anchor: "end",
             align: "top",
           },
@@ -145,9 +154,21 @@ $(function () {
       ],
     },
     options: {
+      responsive: true,
+      aspectRatio: 2.5,
+      interaction: {
+        mode: "index",
+        intersect: false,
+      },
       elements: {
         line: { tension: 0.4 },
-        bar: { borederRadius: 5 },
+        bar: { borderRadius: 5 },
+      },
+      layout: {
+        padding: {
+          top: 20,
+          bottom: 20,
+        },
       },
       plugins: {
         legend: {
@@ -162,18 +183,50 @@ $(function () {
             },
           },
         },
+        tooltip: {
+          mode: "index",
+          intersect: false,
+        },
       },
       scales: {
-        y: {
+        "y-axis-1": {
+          type: "linear",
+          position: "left",
           beginAtZero: true,
-          grid: { display: true },
+          title: {
+            display: false,
+          },
           ticks: {
-            callback: function (value, index, ticks) {
-              return "";
-            },
+            display: false,
+          },
+          grid: {
+            drawBorder: false,
+          },
+          offset: true,
+        },
+        "y-axis-2": {
+          type: "linear",
+          position: "right",
+          beginAtZero: true,
+          max: 25,
+          title: {
+            display: false,
+          },
+          ticks: {
+            display: false,
+          },
+          grid: {
+            drawOnChartArea: false,
+            drawBorder: false,
+          },
+          offset: true,
+        },
+        x: {
+          grid: { display: false },
+          ticks: {
+            display: true,
           },
         },
-        x: { grid: { display: false } },
       },
     },
   });
