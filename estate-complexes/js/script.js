@@ -105,10 +105,9 @@ $(function () {
   function createLineBarChart(elementId, dataBar, dataLine, labels) {
     const ctx1 = document.getElementById(elementId);
 
-    function findMax(arr) {
-      const lineHeight =
-        Math.max.apply(null, dataLine) - Math.min.apply(null, dataLine);
-      return Math.max.apply(null, arr) + lineHeight / 1000;
+    function findMax(realised) {
+      const max = Math.max.apply(null, realised);
+      return max + Math.max(max / 2, 20);
     }
 
     new Chart(ctx1, {
@@ -150,6 +149,7 @@ $(function () {
       options: {
         responsive: true,
         aspectRatio: 2.5,
+        maintainAspectRatio: false,
         interaction: {
           mode: "index",
           intersect: false,
@@ -233,8 +233,8 @@ $(function () {
 
   createLineBarChart(
     "lineChart",
-    [63, 29, 31, 15, 6, 15, 14, 27, 31],
-    [113797, 150818, 156478, 153797, 158849, 156287, 153602, 150711, 159501],
+    [63, 29, 0, 15, 6, 15, 14, 27, 31],
+    [113797, 150818, "", 153797, 158849, 156287, 353602, 150711, 159501],
     // [151296, 153797, 153797, 153797, 153797, 158849, 153797, 156287, 153797],
     [
       "сен 2023",

@@ -999,6 +999,7 @@ body:has(.ds-info) .ds-slider {
 .ds-chart__tab__line__info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .ds-chart__tab__line__info__desc_sales {
@@ -1485,6 +1486,11 @@ button[type="submit"] {
   gap: 5px;
 }
 
+.ds-chart__tab__line__info_blok.empty .ds-chart__tab__line__info h3 {
+  font-weight: 500;
+  color: #666666;
+}
+
 /* Icons */
 .icon-small {
   width: 16px;
@@ -1501,4 +1507,41 @@ button[type="submit"] {
 .icon-link {
   width: 24px;
   height: 20px;
+}
+
+.canvas-cirkl {
+  padding-right: 20px;
+  padding-bottom: 8px;
+}
+
+#js-appartments-chart,
+#js-nonliv-chart,
+#js-parking-chart {
+  width: 100px;
+  height: 100px;
+}
+
+#js-sales-graph-chart,
+#js-sales-graph-nonliving-chart,
+#js-sales-graph-parking-chart {
+  width: 100%;
+  height: 250px;
+  max-height: 450px;
+}
+
+.canvas-cirkl {
+  padding-right: 20px;
+  padding-bottom: 8px;
+}
+#nonResidentCirklChart,
+#parkingCirklChart,
+#appartCirklChart {
+  width: 100px;
+  height: 100px;
+}
+
+#lineChart {
+  width: 100%;
+  height: 250px;
+  max-height: 450px;
 }
