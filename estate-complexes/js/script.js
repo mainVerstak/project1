@@ -102,141 +102,146 @@ $(function () {
     },
   });
 
-  function findMax(arr) {
-    const maxValue = Math.max(...arr);
-    return maxValue + 15;
-  }
+  function createLineBarChart(elementId, dataBar, dataLine, labels) {
+    const ctx1 = document.getElementById(elementId);
 
-  const ctx1 = document.getElementById("lineChart");
+    function findMax(arr) {
+      const maxValue = Math.max.apply(null, arr) + 15;
+      return maxValue + 15;
+    }
+    const max = findMax(dataBar);
 
-  const max = findMax([63, 29, 31, 15, 6, 15, 14, 27, 31]);
-
-  new Chart(ctx1, {
-    data: {
-      labels: [
-        "сен 2023",
-        "окт 2023",
-        "ноя 2023",
-        "дек 2023",
-        "янв 2024",
-        "фев 2024",
-        "мар 2024",
-        "апр 2024",
-      ],
-      datasets: [
-        {
-          type: "line",
-          label: "Средняя цена за 1 м2, руб.",
-          data: [
-            161296, 170818, 166478, 153797, 158849, 156287, 163602, 170711,
-            169501,
-          ],
-          backgroundColor: "#ffffff",
-          borderWidth: 1,
-          borderColor: "#000000",
-          yAxisID: "y-axis-1",
-          datalabels: {
-            align: "top",
-            anchor: "end",
-            offset: 5,
-            font: { size: 14 },
-            formatter: (value) =>
-              value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
-          },
-        },
-        {
-          type: "bar",
-          label: "Количество проданных квартир",
-          data: [63, 29, 31, 15, 6, 15, 14, 27, 31],
-          backgroundColor: "#2D6BA1",
-          borderWidth: 1,
-          borderRadius: 5,
-          yAxisID: "y-axis-2",
-          datalabels: {
-            font: { size: 12 },
-            anchor: "end",
-            align: "top",
-          },
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      aspectRatio: 2.5,
-      interaction: {
-        mode: "index",
-        intersect: false,
-      },
-      elements: {
-        line: { tension: 0.4 },
-        bar: { borderRadius: 5 },
-      },
-      layout: {
-        padding: {
-          top: 20,
-          bottom: 20,
-        },
-      },
-      plugins: {
-        legend: {
-          display: true,
-          position: "bottom",
-          align: "start",
-          labels: {
-            usePointStyle: true,
-            font: {
-              color: "#000000",
-              size: 14,
+    new Chart(ctx1, {
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            type: "line",
+            label: "Средняя цена за 1 м2, руб.",
+            data: dataLine,
+            backgroundColor: "#ffffff",
+            borderWidth: 1,
+            borderColor: "#000000",
+            yAxisID: "y-axis-1",
+            datalabels: {
+              align: "top",
+              anchor: "end",
+              offset: 5,
+              font: { size: 14 },
+              formatter: (value) =>
+                value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
             },
           },
-        },
-        tooltip: {
+          {
+            type: "bar",
+            label: "Количество проданных квартир",
+            data: dataBar,
+            backgroundColor: "#2D6BA1",
+            borderWidth: 1,
+            borderRadius: 5,
+            yAxisID: "y-axis-2",
+            datalabels: {
+              font: { size: 12 },
+              anchor: "end",
+              align: "top",
+            },
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        aspectRatio: 2.5,
+        interaction: {
           mode: "index",
           intersect: false,
         },
-      },
-      scales: {
-        "y-axis-1": {
-          type: "linear",
-          position: "left",
-          beginAtZero: true,
-          title: {
-            display: false,
-          },
-          ticks: {
-            display: false,
-          },
-          grid: {
-            drawBorder: false,
-          },
-          offset: true,
+        elements: {
+          line: { tension: 0.4 },
+          bar: { borderRadius: 5 },
         },
-        "y-axis-2": {
-          type: "linear",
-          position: "right",
-          beginAtZero: true,
-          max: max,
-          title: {
-            display: false,
+        layout: {
+          padding: {
+            top: 20,
+            bottom: 20,
           },
-          ticks: {
-            display: false,
-          },
-          grid: {
-            drawOnChartArea: false,
-            drawBorder: false,
-          },
-          offset: true,
         },
-        x: {
-          grid: { display: false },
-          ticks: {
+        plugins: {
+          legend: {
             display: true,
+            position: "bottom",
+            align: "start",
+            labels: {
+              usePointStyle: true,
+              font: {
+                color: "#000000",
+                size: 14,
+              },
+            },
+          },
+          tooltip: {
+            mode: "index",
+            intersect: false,
+          },
+        },
+        scales: {
+          "y-axis-1": {
+            type: "linear",
+            position: "left",
+            beginAtZero: true,
+            title: {
+              display: false,
+            },
+            ticks: {
+              display: false,
+            },
+            grid: {
+              drawBorder: false,
+            },
+            offset: true,
+          },
+          "y-axis-2": {
+            type: "linear",
+            position: "right",
+            beginAtZero: true,
+            max: max,
+            title: {
+              display: false,
+            },
+            ticks: {
+              display: false,
+            },
+            grid: {
+              drawOnChartArea: false,
+              drawBorder: false,
+            },
+            offset: true,
+          },
+          x: {
+            grid: { display: false },
+            ticks: {
+              display: true,
+            },
           },
         },
       },
-    },
-  });
+    });
+  }
+
+  createLineBarChart(
+    "lineChart",
+    [63, 29, 31, 15, 6, 15, 14, 27, 31],
+    [161296, 170818, 166478, 153797, 158849, 156287, 163602, 170711, 169501],
+    [
+      "сен 2023",
+      "окт 2023",
+      "ноя 2023",
+      "дек 2023",
+      "янв 2024",
+      "фев 2024",
+      "мар 2024",
+      "апр 2024",
+    ]
+  );
 
   function createDoughnutChart(elementId, data, colors, textColor = "#000000") {
     const ctx = document.getElementById(elementId);
