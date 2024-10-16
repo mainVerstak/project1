@@ -102,7 +102,14 @@ $(function () {
     },
   });
 
+  function findMax(arr) {
+    const maxValue = Math.max(...arr);
+    return maxValue + 15;
+  }
+
   const ctx1 = document.getElementById("lineChart");
+
+  const max = findMax([63, 29, 31, 15, 6, 15, 14, 27, 31]);
 
   new Chart(ctx1, {
     data: {
@@ -140,7 +147,7 @@ $(function () {
         {
           type: "bar",
           label: "Количество проданных квартир",
-          data: [19, 10, 10, 3, 2, 4, 4, 4, 13],
+          data: [63, 29, 31, 15, 6, 15, 14, 27, 31],
           backgroundColor: "#2D6BA1",
           borderWidth: 1,
           borderRadius: 5,
@@ -208,7 +215,7 @@ $(function () {
           type: "linear",
           position: "right",
           beginAtZero: true,
-          max: 25,
+          max: max,
           title: {
             display: false,
           },
