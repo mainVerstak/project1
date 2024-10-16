@@ -106,10 +106,10 @@ $(function () {
     const ctx1 = document.getElementById(elementId);
 
     function findMax(arr) {
-      const maxValue = Math.max.apply(null, arr) + 15;
-      return maxValue + 15;
+      const lineHeight =
+        Math.max.apply(null, dataLine) - Math.min.apply(null, dataLine);
+      return Math.max.apply(null, arr) + lineHeight / 1000;
     }
-    const max = findMax(dataBar);
 
     new Chart(ctx1, {
       data: {
@@ -126,7 +126,6 @@ $(function () {
             datalabels: {
               align: "top",
               anchor: "end",
-              offset: 5,
               font: { size: 14 },
               formatter: (value) =>
                 value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
@@ -197,13 +196,16 @@ $(function () {
             grid: {
               drawBorder: false,
             },
-            offset: true,
+            afterFit: (scaleInstance) => {
+              scaleInstance.paddingTop = 30;
+              scaleInstance.paddingBottom = 30;
+            },
           },
           "y-axis-2": {
             type: "linear",
             position: "right",
             beginAtZero: true,
-            max: max,
+            max: findMax(dataBar),
             title: {
               display: false,
             },
@@ -214,7 +216,9 @@ $(function () {
               drawOnChartArea: false,
               drawBorder: false,
             },
-            offset: true,
+            afterFit: (scaleInstance) => {
+              scaleInstance.paddingTop = 30;
+            },
           },
           x: {
             grid: { display: false },
@@ -230,7 +234,8 @@ $(function () {
   createLineBarChart(
     "lineChart",
     [63, 29, 31, 15, 6, 15, 14, 27, 31],
-    [161296, 170818, 166478, 153797, 158849, 156287, 163602, 170711, 169501],
+    [113797, 150818, 156478, 153797, 158849, 156287, 153602, 150711, 159501],
+    // [151296, 153797, 153797, 153797, 153797, 158849, 153797, 156287, 153797],
     [
       "сен 2023",
       "окт 2023",
