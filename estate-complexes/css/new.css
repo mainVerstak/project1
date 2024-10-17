@@ -1501,12 +1501,6 @@ button[type="submit"] {
   }
 }
 
-.chart-container {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 2;
-}
-
 /* Icons */
 .icon-small {
   width: 16px;

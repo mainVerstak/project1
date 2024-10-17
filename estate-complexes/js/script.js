@@ -150,11 +150,6 @@ $(function () {
         responsive: true,
         aspectRatio: 2,
         maintainAspectRatio: false,
-        onResize: (chart, size) => {
-          console.log("chart", chart);
-          console.log("size", size);
-          chart.resize();
-        },
         interaction: {
           mode: "index",
           intersect: false,
