@@ -148,6 +148,14 @@ body:has(.ds-info) .ds-slider {
   align-items: center;
   margin-top: 20px;
 }
+.ds-slider__btns:empty {
+  display: none;
+  margin: 0;
+}
+.ds-slider__content:has(.ds-slider__btns:empty) .ds-slider__title {
+  margin-bottom: 0;
+}
+
 @media (max-width: 600px) {
   .ds-slider__btns {
     margin-top: 10px;
@@ -1384,8 +1392,6 @@ button[type="submit"] {
   display: none;
 }
 
-/*# sourceMappingURL=new.css.map */
-
 @media (max-width: 700px) {
   .appartments__table {
     display: block !important;
@@ -1486,9 +1492,19 @@ button[type="submit"] {
   gap: 5px;
 }
 
-.ds-chart__tab__line__info_blok.empty .ds-chart__tab__line__info h3 {
-  font-weight: 500;
-  color: #666666;
+.ds-chart__tab__line__info_blok.empty {
+  cursor: default;
+
+  .ds-chart__tab__line__info h3 {
+    font-weight: 500;
+    color: #666666;
+  }
+}
+
+.chart-container {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2;
 }
 
 /* Icons */
@@ -1512,36 +1528,4 @@ button[type="submit"] {
 .canvas-cirkl {
   padding-right: 20px;
   padding-bottom: 8px;
-}
-
-#js-appartments-chart,
-#js-nonliv-chart,
-#js-parking-chart {
-  width: 100px;
-  height: 100px;
-}
-
-#js-sales-graph-chart,
-#js-sales-graph-nonliving-chart,
-#js-sales-graph-parking-chart {
-  width: 100%;
-  height: 250px;
-  max-height: 450px;
-}
-
-.canvas-cirkl {
-  padding-right: 20px;
-  padding-bottom: 8px;
-}
-#nonResidentCirklChart,
-#parkingCirklChart,
-#appartCirklChart {
-  width: 100px;
-  height: 100px;
-}
-
-#lineChart {
-  width: 100%;
-  height: 250px;
-  max-height: 450px;
 }
