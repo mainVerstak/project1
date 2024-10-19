@@ -1230,17 +1230,12 @@ button[type="submit"] {
   padding: 0 24px 0 10px;
 }
 .ds-map__num {
-  border-radius: 50%;
-  border: 8px solid #337ab7;
   height: 65px;
   width: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 15px;
-}
-.ds-map__num span {
-  font-weight: bold;
 }
 .ds-map__wrapper {
   display: grid;

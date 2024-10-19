@@ -312,6 +312,60 @@ $(function () {
   const parkingData = toPercent(159, 169);
   createDoughnutChart("parkingCirklChart", parkingData, ["#2D6BA1", "#E0E9FF"]);
 
+  function createCircleMapNum(elementId, data, colors, textColor = "#000000") {
+    const ctx = document.getElementById(elementId);
+
+    const dataPercent = toPercent(data[0], data[1]);
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        datasets: [
+          {
+            data: dataPercent,
+            backgroundColor: colors,
+            borderWidth: 0,
+          },
+        ],
+      },
+      options: {
+        cutout: "70%",
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false },
+          datalabels: { display: false },
+        },
+      },
+      plugins: [
+        {
+          id: "centerText",
+          afterDraw: (chart) => {
+            const {
+              ctx,
+              chartArea: { top, bottom, left, right },
+            } = chart;
+            const centerX = (left + right) / 2 + 1;
+            const centerY = (top + bottom) / 2 + 2;
+
+            ctx.save();
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = textColor;
+
+            ctx.font = "bold 16px Helvetica Neue";
+            ctx.fillText(`${data[0]}/`, centerX - 8, centerY);
+
+            ctx.font = "normal 16px Helvetica Neue";
+            ctx.fillText(`${data[1]}`, centerX + 8, centerY);
+
+            ctx.restore();
+          },
+        },
+      ],
+    });
+  }
+
+  createCircleMapNum("circle-chart-map-num", [9, 10], ["#2D6BA1", "#E0E9FF"]);
+
   // $(".appartments__item, .appartments__mobile .item").on("click", function (e) {
   //   e.preventDefault();
   //   $(this).toggleClass("active");
