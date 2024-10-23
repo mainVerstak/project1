@@ -49,8 +49,19 @@ body {
 .btn-warning.active,
 .btn-danger:active,
 .btn-danger.active {
+  text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+.btn {
+  border-radius: var(--border-radius);
+  padding: var(--padding-btn-small);
+}
+
+.btn-xs {
+  padding: var(--padding-btn-small);
+  font-size: 14px;
 }
 
 .btn-default {
@@ -60,6 +71,7 @@ body {
   border-radius: var(--border-radius);
   color: var(--color-grey-text);
   border: 1px solid var(--color-border);
+  font-weight: 500;
 }
 .btn-default:hover {
   background-color: var(--color-grey-superlight);
@@ -78,6 +90,31 @@ body {
 .btn-default:focus {
   box-shadow: none;
   border: 1px solid var(--color-grey-dark);
+}
+
+.btn-group .dropdown-toggle {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: var(--color-grey);
+  border: 1px solid var(--color-grey);
+  color: var(--color-white);
+}
+.btn-group .dropdown-toggle:hover {
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--color-grey-dark);
+  color: var(--color-white);
+}
+
+.btn-group.open .dropdown-toggle {
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--color-grey-dark);
+  color: var(--color-white);
+}
+.btn-group.open .dropdown-toggle:hover {
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--color-grey-dark);
+  color: var(--color-white);
 }
 
 .btn-primary {
@@ -105,6 +142,69 @@ body {
   border: none;
 }
 
+/* Inputs */
+input.form-control {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 14px !important;
+}
+input.form-control:focus {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid var(--color-blue);
+}
+input.form-control:active {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid var(--color-blue);
+}
+/* Единственный элемент */
+input.form-control:only-child {
+  border-radius: var(--border-radius) !important;
+}
+
+/* Первый элемент */
+input.form-control:first-child:not(:only-child) {
+  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
+}
+
+/* Последний элемент */
+input.form-control:last-child:not(:only-child) {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
+}
+
+/* Предпоследний элемент (не первый и не последний) */
+input.form-control:nth-last-child(2):not(:first-child):not(:last-child) {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
+}
+
+/* Элемент не первый, не последний и не предпоследний */
+input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
+  border-radius: 0 !important;
+}
+.input-group-addon {
+  border-radius: 0;
+  border: none;
+  background: none;
+  padding: 5px;
+  color: var(--color-grey-text);
+}
+.input-group-addon.input-sm {
+  color: var(--color-grey-text);
+  padding: 5px;
+}
+.input-group-sm input.form-control {
+  height: none !important;
+  font-size: 14px !important;
+  width: 38px !important;
+  padding: var(--padding-btn-small) !important;
+}
+
 /*Header */
 .header-top-nav {
   background-color: var(--color-superlight);
@@ -125,12 +225,27 @@ header .container {
   border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
   padding-top: 15px;
 }
-.navbar-default {
+header .navbar.navbar-default {
   background-color: var(--color-white);
   background-image: none;
   border: none;
   box-shadow: none;
+  margin-bottom: 0;
+  min-height: 30px;
 }
+header h1 {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+header .pull-left,
+header .pull-left .navbar-brand,
+header .pull-left .navbar-brand .navbar-brand__logo {
+  height: 30px;
+}
+header .pull-left .navbar-brand {
+  padding: 0 0 0 20px;
+}
+
 header .navbar-default .navbar-nav > li > a {
   background-image: none;
   filter: none;
