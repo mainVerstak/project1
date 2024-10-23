@@ -4047,7 +4047,6 @@ html {
 }
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  /* font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -4146,7 +4145,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
 }
@@ -9228,7 +9227,6 @@ button.close {
   z-index: 1070;
   display: block;
   font-family: "Open Sans", Arial, sans-serif;
-  /* font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -9336,7 +9334,6 @@ button.close {
   max-width: 276px;
   padding: 1px;
   font-family: "Open Sans", Arial, sans-serif;
-  /* font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -10635,7 +10632,6 @@ button.close {
 .daterangepicker .calendar th,
 .daterangepicker .calendar td {
   font-family: "Open Sans", Arial, sans-serif;
-  /* font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; */
   white-space: nowrap;
   text-align: center;
   min-width: 32px;
@@ -13893,7 +13889,6 @@ a.btn-success:visited {
   left: 0;
   right: 0;
   font-family: "Open Sans", Arial, sans-serif;
-  /* font-family:'Helvetica Neue', Arial, sans-serif; */
   font-size: 12px;
   line-height: 1.5;
   color: black;
@@ -14973,7 +14968,6 @@ fieldset[disabled] .btn-vk.focus {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-family: "YS Text", "Open Sans", "Arial", sans-serif;
-  /* font-family:"YS Text","Helvetica Neue","Arial",sans-serif */
 }
 .alfabank-widget .calc-title {
   font-size: 24px;

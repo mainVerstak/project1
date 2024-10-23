@@ -351,10 +351,10 @@ $(function () {
             ctx.textBaseline = "middle";
             ctx.fillStyle = textColor;
 
-            ctx.font = "bold 16px Helvetica Neue";
+            ctx.font = "bold 16px Open Sans";
             ctx.fillText(`${data[0]}/`, centerX - 8, centerY);
 
-            ctx.font = "normal 16px Helvetica Neue";
+            ctx.font = "normal 16px Open Sans";
             ctx.fillText(`${data[1]}`, centerX + 8, centerY);
 
             ctx.restore();

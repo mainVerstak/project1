@@ -612,7 +612,6 @@
   border-radius: 6px;
   padding: 11px 16px 13px;
   font-family: "Open Sans", Arial, sans-serif;
-  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: bold;
   font-size: 16px;
   display: -webkit-box;
@@ -764,7 +763,6 @@
   box-shadow: inset 0 0 0 1px #cacedb;
   border-radius: 2px;
   font-family: "Open Sans", Arial, sans-serif;
-  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: normal;
   font-size: 14px;
   letter-spacing: -0.004em;
@@ -968,7 +966,6 @@
   border-radius: 6px;
   padding: 10px 24px;
   font-family: "Open Sans", Arial, sans-serif;
-  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-weight: bold;
   font-size: 16px;
   letter-spacing: -0.004em;
