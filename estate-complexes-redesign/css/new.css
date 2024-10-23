@@ -75,13 +75,13 @@ body:has(.ds-info) .ds-slider {
   font-size: 1.4em;
   line-height: 1.1;
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .ds-slider__price {
   font-size: 1.4em;
   line-height: 1.1;
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .ds-slider__price-meter {
   font-size: 1.1em;
@@ -1019,7 +1019,7 @@ body:has(.ds-info) .ds-slider {
 
 .ds-title {
   font-size: 1.4em;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   margin-bottom: 10px;
 }
