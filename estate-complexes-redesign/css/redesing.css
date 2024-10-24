@@ -25,6 +25,16 @@ body {
   background-color: var(--color-grey-superlight);
 }
 
+a {
+  color: var(--color-blue);
+}
+a:hover {
+  color: var(--color-blue-hover);
+}
+a:visited {
+  color: var(--color-blue-hover);
+}
+
 /* Buttons */
 .btn-default,
 .btn-primary,
@@ -92,29 +102,49 @@ body {
   border: 1px solid var(--color-grey-dark);
 }
 
-.btn-group .dropdown-toggle {
+.dropdown-toggle {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  background-color: var(--color-grey);
-  border: 1px solid var(--color-grey);
-  color: var(--color-white);
-}
-.btn-group .dropdown-toggle:hover {
-  background-color: var(--color-grey-dark);
-  border: 1px solid var(--color-grey-dark);
-  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 500 !important;
 }
 
-.btn-group.open .dropdown-toggle {
-  background-color: var(--color-grey-dark);
-  border: 1px solid var(--color-grey-dark);
-  color: var(--color-white);
+.dropdown-menu {
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  padding: 0 !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: none !important;
 }
-.btn-group.open .dropdown-toggle:hover {
-  background-color: var(--color-grey-dark);
-  border: 1px solid var(--color-grey-dark);
-  color: var(--color-white);
+.dropdown-menu li a {
+  font-size: 14px;
+  font-weight: 500 !important;
+  color: var(--color-grey-text) !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid var(--color-border) !important;
+}
+.dropdown-menu li a:hover {
+  background-color: var(--color-grey-superlight);
+  background-image: none !important;
+}
+.dropdown-menu li:first-child a {
+  border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+.dropdown-menu li:last-child a {
+  border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+  border: none !important;
+}
+.dropdown-menu li.active a {
+  background-color: var(--color-border) !important;
+  color: var(--color-grey-dark) !important;
+  background-image: none !important;
 }
 
 .btn-primary {
@@ -131,6 +161,28 @@ body {
   border: 1px solid var(--color-grey-dark);
 }
 
+.btn-info {
+  background-color: var(--color-blue);
+  border-radius: var(--border-radius);
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-info:hover {
+  background-color: var(--color-blue-hover);
+}
+.btn-info:focus {
+  background-color: var(--color-blue-hover);
+}
+.btn-info:active {
+  background-color: var(--color-blue-hover);
+}
+.btn-info:active:hover {
+  background-color: var(--color-blue-hover);
+}
+
 .btn-warning {
   background-color: var(--color-yellow);
   border-radius: var(--border-radius);
@@ -139,7 +191,6 @@ body {
 }
 .btn-warning:hover {
   background-color: var(--color-yellow-hover);
-  border: none;
 }
 
 /* Inputs */
@@ -275,6 +326,31 @@ header .navbar-default .navbar-right .navbar-nav {
   background-image: none;
 }
 
+.search_form_action .btn-group .dropdown-toggle {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: var(--color-grey);
+  border: 1px solid var(--color-grey);
+  color: var(--color-white);
+}
+.search_form_action .btn-group .dropdown-toggle:hover {
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--color-grey-dark);
+  color: var(--color-white);
+}
+
+.search_form_action .btn-group.open .dropdown-toggle {
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--color-grey-dark);
+  color: var(--color-white);
+}
+.search_form_action .btn-group.open .dropdown-toggle:hover {
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--color-grey-dark);
+  color: var(--color-white);
+}
+
 /* Cards */
 .object {
   background-color: var(--color-grey-superlight);
@@ -299,63 +375,238 @@ header .navbar-default .navbar-right .navbar-nav {
   padding: 10px 0;
 }
 
-@media (min-width: 1024px) {
-  .container:not(.full-size) .object .object__actions,
-  .modal .object .object__actions {
-    width: 32px;
-  }
+.object .object__actions {
+  margin-top: 10px;
+  position: absolute;
+  right: -10px;
+  bottom: 18px;
+  width: auto;
 }
 
-.col-xs-1,
-.col-sm-1,
-.col-md-1,
-.col-lg-1,
-.col-xs-2,
-.col-sm-2,
-.col-md-2,
-.col-lg-2,
-.col-xs-3,
-.col-sm-3,
-.col-md-3,
-.col-lg-3,
-.col-xs-4,
-.col-sm-4,
-.col-md-4,
-.col-lg-4,
-.col-xs-5,
-.col-sm-5,
-.col-md-5,
-.col-lg-5,
-.col-xs-6,
-.col-sm-6,
-.col-md-6,
-.col-lg-6,
-.col-xs-7,
-.col-sm-7,
-.col-md-7,
-.col-lg-7,
-.col-xs-8,
-.col-sm-8,
-.col-md-8,
-.col-lg-8,
-.col-xs-9,
-.col-sm-9,
-.col-md-9,
-.col-lg-9,
-.col-xs-10,
-.col-sm-10,
-.col-md-10,
-.col-lg-10,
-.col-xs-11,
-.col-sm-11,
-.col-md-11,
-.col-lg-11,
-.col-xs-12,
-.col-sm-12,
-.col-md-12,
-.col-lg-12 {
+.object .col-xs-1,
+.object .col-sm-1,
+.object .col-md-1,
+.object .col-lg-1,
+.object .col-xs-2,
+.object .col-sm-2,
+.object .col-md-2,
+.object .col-lg-2,
+.object .col-xs-3,
+.object .col-sm-3,
+.object .col-md-3,
+.object .col-lg-3,
+.object .col-xs-4,
+.object .col-sm-4,
+.object .col-md-4,
+.object .col-lg-4,
+.object .col-xs-5,
+.object .col-sm-5,
+.object .col-md-5,
+.object .col-lg-5,
+.object .col-xs-6,
+.object .col-sm-6,
+.object .col-md-6,
+.object .col-lg-6,
+.object .col-xs-7,
+.object .col-sm-7,
+.object .col-md-7,
+.object .col-lg-7,
+.object .col-xs-8,
+.object .col-sm-8,
+.object .col-md-8,
+.object .col-lg-8,
+.object .col-xs-9,
+.object .col-sm-9,
+.object .col-md-9,
+.object .col-lg-9,
+.object .col-xs-10,
+.object .col-sm-10,
+.object .col-md-10,
+.object .col-lg-10,
+.object .col-xs-11,
+.object .col-sm-11,
+.object .col-md-11,
+.object .col-lg-11,
+.object .col-xs-12,
+.object .col-sm-12,
+.object .col-md-12,
+.object .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+@media (max-width: 1024px) {
+  .object .col-xs-1,
+  .object .col-sm-1,
+  .object .col-md-1,
+  .object .col-lg-1,
+  .object .col-xs-2,
+  .object .col-sm-2,
+  .object .col-md-2,
+  .object .col-lg-2,
+  .object .col-xs-3,
+  .object .col-sm-3,
+  .object .col-md-3,
+  .object .col-lg-3,
+  .object .col-xs-4,
+  .object .col-sm-4,
+  .object .col-md-4,
+  .object .col-lg-4,
+  .object .col-xs-5,
+  .object .col-sm-5,
+  .object .col-md-5,
+  .object .col-lg-5,
+  .object .col-xs-6,
+  .object .col-sm-6,
+  .object .col-md-6,
+  .object .col-lg-6,
+  .object .col-xs-7,
+  .object .col-sm-7,
+  .object .col-md-7,
+  .object .col-lg-7,
+  .object .col-xs-8,
+  .object .col-sm-8,
+  .object .col-md-8,
+  .object .col-lg-8,
+  .object .col-xs-9,
+  .object .col-sm-9,
+  .object .col-md-9,
+  .object .col-lg-9,
+  .object .col-xs-10,
+  .object .col-sm-10,
+  .object .col-md-10,
+  .object .col-lg-10,
+  .object .col-xs-11,
+  .object .col-sm-11,
+  .object .col-md-11,
+  .object .col-lg-11,
+  .object .col-xs-12,
+  .object .col-sm-12,
+  .object .col-md-12,
+  .object .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .object__actions {
+    right: -15px !important;
+  }
+}
+
+.object .header_adv_short {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--color-grey-dark);
+}
+.object .header_adv_short:hover {
+  color: var(--color-grey-dark);
+}
+
+.object .object__lead {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-grey-dark);
+  margin-bottom: 5px;
+}
+
+.object .text-location {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.object
+  .text-muted.object__text-trim.object__text-comment.tooltip_comment_action.tooltip_comment_loaded {
+  font-size: 14px;
+  color: var(--color-grey-text);
+  font-weight: 400;
+}
+
+.object__status {
+  display: flex;
+  align-items: center;
+  color: var(--color-grey-text);
+  gap: 10px;
+}
+
+.object__status-hot {
+  font-size: 12px;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  width: auto;
+}
+
+.pagination li span,
+.pagination li a {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  padding: 5px 10px;
+  margin: 0 2.5px;
+  font-size: 14px;
+  background-color: var(--color-white);
+  color: var(--color-grey-dark);
+  min-width: 32px;
+  min-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+}
+.pagination li span:hover,
+.pagination li a:hover {
+  background-color: var(--color-grey-superlight);
+  color: var(--color-grey-dark);
+}
+.pagination li.active span,
+.pagination li.active a {
+  background-color: var(--color-border);
+  color: var(--color-grey-dark);
+  border: 1px solid var(--color-border);
+}
+.pagination li.active span:hover,
+.pagination li.active a:hover {
+  background-color: var(--color-border);
+  color: var(--color-grey-dark);
+  border: 1px solid var(--color-border);
+}
+
+.pagination li span,
+.pagination li a {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  padding: 5px 10px;
+  margin: 0 2.5px;
+  font-size: 14px;
+  background-color: var(--color-white);
+  color: var(--color-grey-dark);
+  min-width: 32px;
+  min-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+}
+.pagination li span:hover,
+.pagination li a:hover {
+  background-color: var(--color-grey-superlight);
+  color: var(--color-grey-dark);
+}
+.pagination li.active span,
+.pagination li.active a {
+  background-color: var(--color-border);
+  color: var(--color-grey-dark);
+  border: 1px solid var(--color-border);
+}
+.pagination li.active span:hover,
+.pagination li.active a:hover {
+  background-color: var(--color-border);
+  color: var(--color-grey-dark);
+  border: 1px solid var(--color-border);
 }
