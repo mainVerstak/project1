@@ -54,9 +54,13 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <i class="fas fa-map-marker-alt"></i>
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/new-icons.svg#icon-map"></use>
+                  </svg>
                   Москва
-                  <span class="caret"></span>
+                  <svg class="icon-caret-default">
+                    <use xlink:href="./img/new-icons.svg#caret"></use>
+                  </svg>
                 </div>
                 <ul class="dropdown-menu">
                   <li><a href="#">Москва</a></li>
@@ -74,20 +78,24 @@
                 title="Выписки из ЕГРН"
                 yaparam="header_document_click"
               >
-                <i class="fa fa-edit fa-lg"></i>
-                Выписки
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#appartments"></use>
+                </svg>
+                Новостройки
               </a>
             </li>
             <li class="navbar-nav__hide-mobile">
               <a href="#">
-                <i class="fas fa-money-bill-wave"></i>
-                Тарифы и цены
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
               </a>
             </li>
             <li class="navbar-nav__hide-mobile" i>
               <a href="#">
-                <i class="fas fa-file-code"></i>
-                Пакетная загрузка
+                <i class="fas fa-key icon-default"></i>
+                Ипотека
               </a>
             </li>
           </ul>
@@ -122,7 +130,7 @@
                       >
                         <i class="fas fa-map-marker-alt"></i>
                         Москва
-                        <span class="caret"></span>
+                        <i class="fas fa-caret-down"></i>
                       </div>
                       <ul class="dropdown-menu">
                         <li><a href="#">Москва</a></li>
@@ -142,7 +150,9 @@
                   <li class="nav navbar-nav">
                     <a href="/sign-up">
                       <div class="navbar-link">
-                        <i class="fa fa-user-plus"></i>
+                        <svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#user"></use>
+                        </svg>
                         Зарегистрироваться
                       </div>
                     </a>
@@ -151,7 +161,9 @@
                     <div class="navbar-btn nav-font-color">
                       <a data-no-turbolink="true" href="/estate-new">
                         <div class="btn btn-warning">
-                          <i class="fa fa-plus fa-lg"></i>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#plus"></use>
+                          </svg>
                           Подать объявление
                         </div>
                       </a>
@@ -159,8 +171,10 @@
                   </li>
                   <li class="sidenav__hide-desktop">
                     <a href="#">
-                      <i class="fas fa-money-bill-wave"></i>
-                      Тарифы и цены
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#appartments"></use>
+                      </svg>
+                      Новостройки
                     </a>
                   </li>
                   <li class="sidenav__hide-desktop">
@@ -170,14 +184,16 @@
                       title="Выписки из ЕГРН"
                       yaparam="header_document_click"
                     >
-                      <i class="fa fa-edit fa-lg"></i>
-                      Выписки
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
                     </a>
                   </li>
                   <li class="sidenav__hide-desktop">
                     <a href="#">
-                      <i class="fas fa-file-code"></i>
-                      Пакетная загрузка
+                      <i class="fas fa-key icon-default"></i>
+                      Ипотека
                     </a>
                   </li>
                 </ul>
@@ -306,7 +322,7 @@
               <div class="btn-group" data-toggle="buttons" id="js-land-filter">
                 <label
                   class="btn btn-default click_additional_search_params_action"
-                  ><span class="hidden-xs"><i class="far fa-map"></i> </span
+                  ><span class="hidden-xs"><i class="fas fa-map"></i> </span
                   ><input
                     name="advertisement[property_type][]"
                     type="checkbox"
@@ -373,11 +389,17 @@
                   uid="3236399"
                   aria-expanded="false"
                 >
-                  <span class="hidden-xs"><i class="fas fa-globe"></i> </span
-                  ><span class="title-search-locations-action"
-                    >г Уссурийск</span
+                  <span class="hidden-xs">
+                    <svg class="icon-map-small">
+                      <use xlink:href="./img/new-icons.svg#icon-map"></use>
+                    </svg>
+                  </span>
+                  <span class="title-search-locations-action">
+                    г Уссурийск</span
                   >
-                  <i class="caret"></i>
+                  <svg class="icon-caret-default">
+                    <use xlink:href="./img/new-icons.svg#caret"></use>
+                  </svg>
                 </div>
               </div></div
           ></span>
@@ -579,7 +601,7 @@
                 class="btn btn-default btn-xs buildingTypeSelect"
               >
                 <span class="btnText">выбрать</span>
-                <span class="caret"></span>
+                <i class="fas fa-caret-down"></i>
               </button>
             </div>
             <div class="form-group">
@@ -699,7 +721,7 @@
                 class="btn btn-default btn-xs renovationSelect"
               >
                 <span class="btnText">выбрать</span>
-                <span class="caret"></span>
+                <i class="fas fa-caret-down"></i>
               </button></div
           ></span>
           <span
@@ -720,14 +742,20 @@
           <div class="form-group pull-right hidden-xs search_buttons">
             <span class="add_search_link_block_action"></span>
             <a class="btn btn-default map_search_btn"
-              ><i class="far fa-map fa-lg"></i> На карте</a
+              ><svg class="icon-map-small">
+                <use xlink:href="./img/new-icons.svg#icon-map"></use>
+              </svg>
+              На карте</a
             >
             <button
               class="btn btn-primary yaSend"
               type="submit"
               yaparam="search"
             >
-              <i class="fas fa-search fa-lg"></i> Найти
+              <svg class="icon-default">
+                <use xlink:href="./img/new-icons.svg#search"></use>
+              </svg>
+              Найти
             </button>
           </div>
           <div class="visible-xs">
@@ -749,7 +777,7 @@
             <div class="btn-group small">
               <div class="button-dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#"
-                  >рекомендованные <span class="caret"></span
+                  >рекомендованные <i class="fas fa-caret-down"></i
                 ></a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li>
@@ -1175,7 +1203,7 @@
                 data-toggle="dropdown"
                 href="#"
                 ><i class="fas fa-list"></i> 25 объявлений на страницу
-                <span class="caret"></span
+                <i class="fas fa-caret-down"></i
               ></a>
               <ul class="dropdown-menu dropdown-menu-right">
                 <li class="active">

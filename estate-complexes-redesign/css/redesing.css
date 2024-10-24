@@ -35,16 +35,31 @@ a:visited {
   color: var(--color-blue-hover);
 }
 
+/* Icons */
+.icon-map-small {
+  width: 12px;
+  height: 14px;
+  fill: currentColor;
+}
+.icon-caret-default {
+  width: 10px;
+  height: 6px;
+  fill: currentColor;
+}
+.icon-default {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
 /* Buttons */
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
+.btn {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  vertical-align: bottom;
+  border-radius: var(--border-radius);
+  padding: var(--padding-btn-small);
 }
 
 .btn-default:active,
@@ -62,11 +77,6 @@ a:visited {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-
-.btn {
-  border-radius: var(--border-radius);
-  padding: var(--padding-btn-small);
 }
 
 .btn-xs {
@@ -188,9 +198,14 @@ a:visited {
   border-radius: var(--border-radius);
   background-image: none;
   border: none;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
 }
 .btn-warning:hover {
   background-color: var(--color-yellow-hover);
+  text-decoration: none;
 }
 
 /* Inputs */
@@ -259,13 +274,25 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
 /*Header */
 .header-top-nav {
   background-color: var(--color-superlight);
+  font-weight: 500;
 }
 .header-city-btn,
+.header-top-nav a {
+  color: var(--color-grey-text);
+}
 .header-city-btn .fas,
-.header-top-nav a,
 .header-top-nav a .fa,
 .header-top-nav a .fas {
-  color: var(--color-grey-text);
+  color: currentColor;
+}
+.header-top-nav .nav > li > a:hover,
+.header-top-nav .nav > li > a:focus,
+.header-top-nav .nav > li > a:focus,
+.header-top-nav .nav > li > a:hover {
+  color: var(--color-grey-dark);
+}
+.navbar-btn a:hover {
+  text-decoration: none !important;
 }
 .header-city-btn:hover,
 .header-top-nav .nav > li:hover,
