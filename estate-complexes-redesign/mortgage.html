@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/mortgage.css" />
+    <link rel="stylesheet" href="css/redesing.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/new-icons.svg#icon-map"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-caret-default">
+                    <use xlink:href="./img/new-icons.svg#caret"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Выписки из ЕГРН"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#appartments"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <i class="fas fa-key icon-default"></i>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="sidenav loaded">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                        Москва
+                        <i class="fas fa-caret-down"></i>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#user"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="navbar-btn nav-font-color">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#appartments"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <i class="fas fa-key icon-default"></i>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                aria-label="Close"
+                class="navbar-toggle sidenav__close"
+                type="button"
+              >
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+        <h1>Mortgage</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div
+          class="mortgage-container"
+          data-advertisement-id="132654251"
+          data-alfabank="{}"
+          data-button-text="Отправить заявку"
+          id="banki-ru-widget"
+        >
+          <div class="col-xs-12 col-lg-12 mortgage-calc-blok">
+            <div class="h4">Купить эту квартиру в ипотеку</div>
+            <p>Для пользователей olan.ru</p>
+            <div class="calc-mortgage" id="banki-ru-calculator">
+              <div class="calc-mortgage__popup">
+                <div class="calc-mortgage__popup-outer">
+                  <div class="calc-mortgage__popup-inner">
+                    <div
+                      class="calc-mortgage__close js-calc-mortgage-more"
+                    ></div>
+                    <div class="calc-mortgage__top">
+                      <div class="calc-mortgage__column calc-mortgage__price">
+                        <div class="calc-mortgage__label">
+                          Стоимость недвижимости
+                        </div>
+                        <div class="calc-mortgage__inputs">
+                          <div
+                            class="calc-mortgage__input calc-mortgage__input_disabled"
+                          >
+                            <input
+                              class="calc-mortgage-price"
+                              readonly=""
+                              type="text"
+                              value="11 303 600 "
+                            />
+                            <div class="calc-mortgage__input-c">₽</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc-mortgage__column">
+                        <div class="calc-mortgage__label">
+                          Первоначальный взнос
+                        </div>
+                        <div
+                          class="calc-mortgage__inputs calc-mortgage__inputs_disabled"
+                        >
+                          <div class="calc-mortgage__input">
+                            <input
+                              class="calc-mortgage-summ"
+                              type="text"
+                              value="6 782 160 "
+                            />
+                            <div class="calc-mortgage__input-c">₽</div>
+                          </div>
+                          <input
+                            id="mortgage-summ"
+                            max="11303600"
+                            min="2260720.0"
+                            step="1"
+                            type="range"
+                            value="6782160.0"
+                            style="
+                              position: absolute;
+                              width: 1px;
+                              height: 1px;
+                              overflow: hidden;
+                              opacity: 0;
+                            "
+                          />
+                          <div
+                            class="rangeslider rangeslider--horizontal"
+                            id="js-rangeslider-0"
+                          >
+                            <div
+                              class="rangeslider__fill"
+                              style="width: 130px"
+                            ></div>
+                            <div
+                              class="rangeslider__handle"
+                              style="left: 122px"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc-mortgage__column">
+                        <div class="calc-mortgage__label">
+                          Срок кредита в годах
+                        </div>
+                        <div
+                          class="calc-mortgage__inputs calc-mortgage__inputs_disabled"
+                        >
+                          <div class="calc-mortgage__input">
+                            <input
+                              class="calc-mortgage-term"
+                              type="text"
+                              value="30"
+                            />
+                          </div>
+                          <input
+                            id="mortgage-term"
+                            max="30"
+                            min="0"
+                            step="1"
+                            type="range"
+                            value="30"
+                            style="
+                              position: absolute;
+                              width: 1px;
+                              height: 1px;
+                              overflow: hidden;
+                              opacity: 0;
+                            "
+                          />
+                          <div
+                            class="rangeslider rangeslider--horizontal"
+                            id="js-rangeslider-1"
+                          >
+                            <div
+                              class="rangeslider__fill"
+                              style="width: 252px"
+                            ></div>
+                            <div
+                              class="rangeslider__handle"
+                              style="left: 244px"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc-mortgage__column">
+                        <div class="calc-mortgage__label">
+                          Процентная ставка
+                        </div>
+                        <div
+                          class="calc-mortgage__inputs calc-mortgage__inputs_disabled"
+                        >
+                          <div class="calc-mortgage__input">
+                            <input
+                              class="calc-mortgage-rate"
+                              type="text"
+                              value="11.39"
+                            />
+                            <div class="calc-mortgage__input-c">%</div>
+                          </div>
+                          <input
+                            id="mortgage-rate"
+                            max="22.771"
+                            min="0.0"
+                            step="0.01"
+                            type="range"
+                            value="11.39"
+                            style="
+                              position: absolute;
+                              width: 1px;
+                              height: 1px;
+                              overflow: hidden;
+                              opacity: 0;
+                            "
+                          />
+                          <div
+                            class="rangeslider rangeslider--horizontal"
+                            id="js-rangeslider-2"
+                          >
+                            <div
+                              class="rangeslider__fill"
+                              style="width: 136.049px"
+                            ></div>
+                            <div
+                              class="rangeslider__handle"
+                              style="left: 128.049px"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calc-mortgage__bottom">
+                      <div class="calc-mortgage__result">
+                        <div class="calc-mortgage__sum">от 46 335 ₽</div>
+                        <div class="calc-mortgage__note">
+                          Приблизительный ежемесячный платеж
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calc-mortgage__bottom-btns-wrapper">
+                      <div class="calc-mortgage__bottom-btns">
+                        <button
+                          class="btn btn-styled-new2 btn-styled-new2_fz_18 js-calc-mortgage-more"
+                        >
+                          <i class="fas fa-search"></i
+                          ><span class="btn-styled-new2__bold">Подобрать</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-mortgage__mobile-btn">
+                <button
+                  class="btn btn-styled-new2 btn-styled-new2_fz_18 js-calc-mortgage-more"
+                >
+                  <i class="fas fa-sliders-h"></i>
+                  <span class="btn-styled-new2__bold"
+                    >Показать ипотечный фильтр</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <script>
+            //<![CDATA[
+            require(["application_module"], function () {
+              require(["mortgage_widget_module"]);
+            });
+            //]]>
+          </script>
+          <div class="col-xs-12 col-lg-12 mortgage-table-blok">
+            <div class="h4">Ипотечные программы</div>
+            <table class="table-mortgage" id="banki_ru-offers">
+              <tbody>
+                <tr class="table-mortgage-header">
+                  <th>Банк,<br />название ипотеки</th>
+                  <th>Мин.<br />ставка</th>
+                  <th>Мес.<br />платеж</th>
+                  <th class="table-mortgage__hide-mobile">Макс.<br />сумма</th>
+                  <th>Мин.<br />взнос</th>
+                  <th class="table-mortgage__hide-mobile">
+                    Срок<br />рассмотрения
+                  </th>
+                  <th>Подтверждающие<br />документы</th>
+                  <th></th>
+                </tr>
+                <tr class="table-mortgage__offer">
+                  <td>
+                    <div class="table-mortgage__item">
+                      <div class="table-mortgage__item-inner">
+                        <div class="table-mortgage__bank">
+                          <div class="table-mortgage__bank-img">
+                            <img src="./img/bank4.gif" />
+                          </div>
+                          <div class="table-mortgage__bank-text">
+                            <div class="table-mortgage__name">
+                              Промсвязьбанк
+                            </div>
+                            <span
+                              >Госпрограмма 2020 (Без подтверждения
+                              дохода)</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-mortgage__mobile-btn">
+                        <button
+                          class="btn table-mortgage-btn yaSend"
+                          data-url="/redirects/mortgage_offer?remote_offer_id=vbr-2835ca64-c1dc-45e0-9a74-3d2f1df48646"
+                          yaparam="show_page_vbr"
+                        >
+                          Отправить заявку
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Мин. ставка"
+                    >
+                      <div class="table-mortgage__item-inner">-</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Мес. платеж"
+                    >
+                      <div class="table-mortgage__item-inner">от 46 335 ₽</div>
+                    </div>
+                  </td>
+                  <td class="table-mortgage__hide-mobile">
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Макс. сумма"
+                    >
+                      <div class="table-mortgage__item-inner">до 12 млн. ₽</div>
+                    </div>
+                  </td>
+                  <td class="table-mortgage__hide-mobile">
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Мин. взнос"
+                    >
+                      <div class="table-mortgage__item-inner">20.0 %</div>
+                    </div>
+                  </td>
+                  <td class="table-mortgage__hide-mobile">
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Срок рассмотрения"
+                    >
+                      <div class="table-mortgage__item-inner">Менее 1 дня</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Подтверждающие документы"
+                    >
+                      <div class="table-mortgage__item-inner">-</div>
+                    </div>
+                  </td>
+                  <td>
+                    <button
+                      class="btn table-mortgage-btn yaSend"
+                      data-url="/redirects/mortgage_offer?remote_offer_id=vbr-2835ca64-c1dc-45e0-9a74-3d2f1df48646"
+                      yaparam="show_page_vbr"
+                    >
+                      Отправить заявку
+                    </button>
+                  </td>
+                </tr>
+                <td>
+                  <div class="table-mortgage__item">
+                    <div class="table-mortgage__item-inner">
+                      <div class="table-mortgage__bank">
+                        <div class="table-mortgage__bank-img">
+                          <img
+                            alt="Промсвязьбанк"
+                            src="/mortgage/psb.svg"
+                            title="Промсвязьбанк"
+                          />
+                        </div>
+                        <div class="table-mortgage__bank-text">
+                          <div class="table-mortgage__name">Промсвязьбанк</div>
+                          <span>Для IT-специалистов</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-mortgage__mobile-btn">
+                      <button
+                        class="btn table-mortgage-btn yaSend"
+                        data-url="/redirects/mortgage_offer?remote_offer_id=vbr-1a87d821-5ca0-4ce1-b419-7418060f95ee"
+                        yaparam="show_page_vbr"
+                      >
+                        Узнать больше
+                      </button>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Мин. ставка"
+                  >
+                    <div class="table-mortgage__item-inner">от 5.089 %</div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Мес. платеж"
+                  >
+                    <div class="table-mortgage__item-inner">от 18 344 ₽</div>
+                  </div>
+                </td>
+                <td class="table-mortgage__hide-mobile">
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Макс. сумма"
+                  >
+                    <div class="table-mortgage__item-inner">до 18 млн. ₽</div>
+                  </div>
+                </td>
+                <td class="table-mortgage__hide-mobile">
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Мин. взнос"
+                  >
+                    <div class="table-mortgage__item-inner">20.01 %</div>
+                  </div>
+                </td>
+                <td class="table-mortgage__hide-mobile">
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Срок рассмотрения"
+                  >
+                    <div class="table-mortgage__item-inner">Менее 1 дня</div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Подтверждающие документы"
+                  >
+                    <div class="table-mortgage__item-inner">
+                      <!-- <i
+                        class="fas fa-info-circle fa-lg table-mortgage__btn-popover"
+                        data-content="НДФЛ-2<br>Справка по форме банка"
+                        data-html="true"
+                        data-placement="bottom"
+                      ></i> -->
+                      <span class="table-mortgage__btn-popover">
+                        <svg class="icon-info">
+                          <use xlink:href="./img/new-icons.svg#info"></use>
+                        </svg>
+                      </span>
+                      Да
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <button
+                    class="btn table-mortgage-btn yaSend"
+                    data-url="/redirects/mortgage_offer?remote_offer_id=vbr-1a87d821-5ca0-4ce1-b419-7418060f95ee"
+                    yaparam="show_page_vbr"
+                  >
+                    Узнать больше
+                  </button>
+                </td>
+              </tbody>
+            </table>
+            <button
+              class="btn table-mortgage-btn table-mortgage-btn_w_210 table-mortgage-btn_mb_20 table-mortgage-show table-mortgage-btn_outline"
+            >
+              Показать все программы
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">
+                  Электронная база недвижимости
+                </div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Правила и условия
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer"
+                        >Оферта</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules"
+                        >Правила</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Пользователям
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml"
+                        >Пакетная загрузка</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs"
+                        >Тарифы</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment"
+                        >Способы оплаты</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Общая информация
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about"
+                        >О проекте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts"
+                        >Техподдержка сайта</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

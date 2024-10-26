@@ -753,8 +753,6 @@ header .navbar-default .navbar-right .navbar-nav {
   text-align: start;
 }
 
-.ds-tabs {
-}
 .ds-tabs .ds-item {
   margin: 10px 0;
   padding: 10px;
@@ -1043,6 +1041,7 @@ header .navbar-default .navbar-right .navbar-nav {
   border: 1px solid var(--color-blue);
   border-top: none;
   border-radius: 0 0 var(--border-radius-big) var(--border-radius-big);
+  margin-bottom: 15px;
 }
 .table-mortgage {
   font-size: 12px;

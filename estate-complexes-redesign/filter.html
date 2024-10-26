@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/redesing.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/new-icons.svg#icon-map"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-caret-default">
+                    <use xlink:href="./img/new-icons.svg#caret"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Выписки из ЕГРН"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#appartments"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <i class="fas fa-key icon-default"></i>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="sidenav loaded">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                        Москва
+                        <i class="fas fa-caret-down"></i>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#user"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="navbar-btn nav-font-color">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#appartments"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <i class="fas fa-key icon-default"></i>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                aria-label="Close"
+                class="navbar-toggle sidenav__close"
+                type="button"
+              >
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+        <h1>Search filter</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="searchFormPage well well-sm clearfix">
+        <form
+          class="form form-inline withoutBootstrapValidator search_form_action"
+          role="form"
+          itemprop="potentialAction"
+          itemscope="itemscope"
+          itemtype="http://schema.org/SearchAction"
+          data-root-section-class="Section"
+          action="/"
+          accept-charset="UTF-8"
+          data-remote="true"
+          method="get"
+        >
+          <input name="utf8" type="hidden" value="✓" /><input
+            type="hidden"
+            name="search_form_submit"
+            id="search_form_submit"
+          /><meta
+            content="https://olan.ru?advertisement[description]={q}"
+            itemprop="target"
+          />
+          <div
+            itemprop="query-input"
+            itemscope="itemscope"
+            itemtype="http://schema.org/PropertyValueSpecification"
+          >
+            <meta content="q" itemprop="valueName" />
+          </div>
+          <span id="js-offer-type-filter"
+            ><div class="form-group offerTypeButtons">
+              <label>Я хочу</label>
+              <div
+                class="btn-group"
+                data-toggle="buttons"
+                id="js-offer-type-filter-content"
+              >
+                <label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><input
+                    name="advertisement[offer_type][]"
+                    type="checkbox"
+                    value="0"
+                  />купить</label
+                ><label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><input
+                    name="advertisement[offer_type][]"
+                    type="checkbox"
+                    value="2"
+                  />снять</label
+                ><label
+                  class="btn btn-default click_additional_search_params_action active"
+                  ><input
+                    checked=""
+                    name="advertisement[offer_type][]"
+                    type="checkbox"
+                    value="3"
+                  />посуточно</label
+                >
+              </div>
+            </div>
+          </span>
+          <div class="form-group categoryButtons">
+            <div
+              class="btn-group"
+              data-toggle="buttons"
+              id="js-category-filter"
+            >
+              <label
+                class="btn btn-default click_additional_search_params_action"
+                ><span class="hidden-xs"><i class="fas fa-home"></i> </span
+                ><input
+                  name="advertisement[property_type][]"
+                  type="checkbox"
+                  value="1"
+                />жильё</label
+              ><label
+                class="btn btn-default click_additional_search_params_action active"
+                ><input
+                  checked=""
+                  name="advertisement[category][]"
+                  type="checkbox"
+                  value="1"
+                />
+                квартиру</label
+              ><label
+                class="btn btn-default click_additional_search_params_action"
+                ><input
+                  name="advertisement[category][]"
+                  type="checkbox"
+                  value="2"
+                />
+                дом</label
+              ><label
+                class="btn btn-default click_additional_search_params_action"
+                ><input
+                  name="advertisement[category][]"
+                  type="checkbox"
+                  value="4"
+                />
+                комнату</label
+              >
+            </div>
+            <div class="form-group propertyTypeButtons">
+              <div class="btn-group" data-toggle="buttons" id="js-land-filter">
+                <label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><span class="hidden-xs"><i class="fas fa-map"></i> </span
+                  ><input
+                    name="advertisement[property_type][]"
+                    type="checkbox"
+                    value="2"
+                  />участок</label
+                >
+              </div>
+              <div
+                class="btn-group"
+                data-toggle="buttons"
+                id="js-commerce-filter"
+              >
+                <label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><span class="hidden-xs"
+                    ><i class="fas fa-briefcase"></i> </span
+                  ><input
+                    name="advertisement[property_type][]"
+                    type="checkbox"
+                    value="0"
+                  />коммерческую</label
+                >
+              </div>
+              <div
+                class="btn-group"
+                data-toggle="buttons"
+                id="js-vehicle-filter"
+              >
+                <label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><span class="hidden-xs"><i class="fas fa-car"></i> </span
+                  ><input
+                    name="advertisement[property_type][]"
+                    type="checkbox"
+                    value="3"
+                  />гараж</label
+                >
+              </div>
+            </div>
+          </div>
+          <span id="js-search-locations-filter"
+            ><span class="search_control_action"
+              ><input
+                type="hidden"
+                name="advertisement[location_ids][]"
+                value="3236399"
+                uid="3236399"
+                parent_id="3233229"
+                utype="city" /><input
+                type="hidden"
+                name="advertisement[location_ids][]"
+                value="3233229"
+                uid="3233229"
+                utype="region"
+            /></span>
+            <div class="form-group">
+              <label>место</label>
+              <div class="btn-group">
+                <div
+                  class="btn btn-default get-search-locations-action dropdown-toggle active"
+                  data-toggle="dropdown"
+                  mode="single"
+                  style="min-width: 100px"
+                  uid="3236399"
+                  aria-expanded="false"
+                >
+                  <span class="hidden-xs">
+                    <svg class="icon-map-small">
+                      <use xlink:href="./img/new-icons.svg#icon-map"></use>
+                    </svg>
+                  </span>
+                  <span class="title-search-locations-action">
+                    г Уссурийск</span
+                  >
+                  <svg class="icon-caret-default">
+                    <use xlink:href="./img/new-icons.svg#caret"></use>
+                  </svg>
+                </div>
+              </div></div
+          ></span>
+          <div class="form-group">
+            <label>цена</label>
+            <div class="input-group">
+              <input
+                autocomplete="off"
+                class="form-control text-input-lg"
+                name="advertisement[price_from]"
+                placeholder="от"
+                style="margin-right: -1px"
+                type="text"
+              /><input
+                autocomplete="off"
+                class="form-control text-input-lg"
+                name="advertisement[price_to]"
+                placeholder="до"
+                type="text"
+              /><span class="input-group-addon input-sm"
+                ><i class="fas fa-ruble-sign"
+                  ><span class="hidden">₽</span></i
+                ></span
+              >
+            </div>
+          </div>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-xs btn-default" yaparam="from_owner"
+              ><i class="fas fa-check yaSend"></i>
+              <input name="advertisement[owner]" type="checkbox" value="1" />без
+              посредников</label
+            >
+          </div>
+          <span
+            class="additional_search_categories_container_action"
+            id="js-additional-search-categories-container"
+          ></span>
+          <span
+            class="additional_search_subcategories_container_action"
+            id="js-additional-search-subcategories-container"
+            ><div class="form-group">
+              <label>тип</label>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[subcategory][]"
+                    value="39"
+                  />
+                  новостройку </label
+                ><label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[subcategory][]"
+                    value="40"
+                  />
+                  вторичку </label
+                ><label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[subcategory][]"
+                    value="41"
+                  />
+                  гостинку
+                </label>
+              </div>
+            </div></span
+          >
+          <span
+            class="additional_search_params_container_action"
+            id="js-additional-search-params-container"
+            ><div class="form-group">
+              <label>комнат</label>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[room][0]"
+                    value="1"
+                  />
+                  студия
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[room][1]"
+                    value="1"
+                  />
+                  1
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[room][2]"
+                    value="1"
+                  />
+                  2
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[room][3]"
+                    value="1"
+                  />
+                  3
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[room][4]"
+                    value="1"
+                  />
+                  4+
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>площадь</label>
+              <div class="input-group input-group-sm">
+                <input
+                  class="form-control text-input"
+                  autocomplete="off"
+                  valid-type="integer"
+                  style="width: 57px"
+                  placeholder="от"
+                  type="text"
+                  name="advertisement[space_from]"
+                  value=""
+                />
+                <input
+                  class="form-control text-input"
+                  autocomplete="off"
+                  valid-type="integer"
+                  style="width: 57px; margin-left: -1px"
+                  placeholder="до"
+                  type="text"
+                  name="advertisement[space_to]"
+                  value=""
+                />
+                <span class="input-group-addon">м²</span>
+              </div>
+            </div>
+            <div class="form-group buildingTypeButtons">
+              <label>тип дома</label>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[building_type][]"
+                    value="0"
+                  />
+                  кирпичный
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[building_type][]"
+                    value="1"
+                  />
+                  панельный
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[building_type][]"
+                    value="2"
+                  />
+                  монолит
+                </label>
+              </div>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[building_type][]"
+                    value="3"
+                  />
+                  кирп-мон
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[building_type][]"
+                    value="4"
+                  />
+                  блочный
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[building_type][]"
+                    value="5"
+                  />
+                  деревянный
+                </label>
+              </div>
+              <button
+                type="button"
+                class="btn btn-default btn-xs buildingTypeSelect"
+              >
+                <span class="btnText">выбрать</span>
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </div>
+            <div class="form-group">
+              <label>этаж</label>
+              <div class="input-group input-group-sm">
+                <input
+                  class="form-control text-input"
+                  autocomplete="off"
+                  valid-type="integer"
+                  placeholder="от"
+                  type="text"
+                  name="advertisement[floor_from]"
+                  value=""
+                />
+                <input
+                  class="form-control text-input"
+                  autocomplete="off"
+                  valid-type="integer"
+                  style="margin-left: -1px"
+                  placeholder="до"
+                  type="text"
+                  name="advertisement[floor_to]"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>этажей</label>
+              <div class="input-group input-group-sm">
+                <input
+                  class="form-control text-input"
+                  autocomplete="off"
+                  valid-type="integer"
+                  placeholder="от"
+                  type="text"
+                  name="advertisement[floor_cnt_from]"
+                  value=""
+                />
+                <input
+                  class="form-control text-input"
+                  autocomplete="off"
+                  valid-type="integer"
+                  style="margin-left: -1px"
+                  placeholder="до"
+                  type="text"
+                  name="advertisement[floor_cnt_to]"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="form-group renovationButtons">
+              <label>ремонт</label>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[renovation][]"
+                    value="0"
+                  />
+                  дизайн
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[renovation][]"
+                    value="1"
+                  />
+                  евро
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[renovation][]"
+                    value="2"
+                  />
+                  с отделкой
+                </label>
+              </div>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[renovation][]"
+                    value="3"
+                  />
+                  хороший
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[renovation][]"
+                    value="4"
+                  />
+                  частичный
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[renovation][]"
+                    value="5"
+                  />
+                  черновой
+                </label>
+              </div>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-xs">
+                  <input
+                    type="checkbox"
+                    name="advertisement[renovation][]"
+                    value="6"
+                  />
+                  без ремонта
+                </label>
+              </div>
+              <button
+                type="button"
+                class="btn btn-default btn-xs renovationSelect"
+              >
+                <span class="btnText">выбрать</span>
+                <i class="fas fa-caret-down"></i>
+              </button></div
+          ></span>
+          <span
+            class="additional_category_search_params_container_action"
+            id="js-additional-category-search-params-container"
+          ></span>
+          <div class="form-group">
+            <div class="description-group">
+              <input
+                autocomplete="off"
+                class="form-control"
+                name="advertisement[description]"
+                placeholder="поиск по тексту или №"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="form-group pull-right hidden-xs search_buttons">
+            <span class="add_search_link_block_action"></span>
+            <a class="btn btn-default map_search_btn"
+              ><svg class="icon-map-small">
+                <use xlink:href="./img/new-icons.svg#icon-map"></use>
+              </svg>
+              На карте</a
+            >
+            <button
+              class="btn btn-primary yaSend"
+              type="submit"
+              yaparam="search"
+            >
+              <svg class="icon-default">
+                <use xlink:href="./img/new-icons.svg#search"></use>
+              </svg>
+              Найти
+            </button>
+          </div>
+          <div class="visible-xs">
+            <input class="hidden" id="submitSearchForm" type="submit" /><span
+              class="add_search_link_block_action"
+            ></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">
+                  Электронная база недвижимости
+                </div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Правила и условия
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer"
+                        >Оферта</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules"
+                        >Правила</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Пользователям
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml"
+                        >Пакетная загрузка</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs"
+                        >Тарифы</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment"
+                        >Способы оплаты</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Общая информация
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about"
+                        >О проекте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts"
+                        >Техподдержка сайта</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/redesing.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/new-icons.svg#icon-map"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-caret-default">
+                    <use xlink:href="./img/new-icons.svg#caret"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Выписки из ЕГРН"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#appartments"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <i class="fas fa-key icon-default"></i>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="sidenav loaded">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                        Москва
+                        <i class="fas fa-caret-down"></i>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#user"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="navbar-btn nav-font-color">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#appartments"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <i class="fas fa-key icon-default"></i>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                aria-label="Close"
+                class="navbar-toggle sidenav__close"
+                type="button"
+              >
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+        <h1>View more</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="search-hotel" style="display: none">
+        <div class="search-hotel__head">
+          <div class="search-hotel__title">
+            Не смогли найти подходящую квартиру? Попробуйте поискать отель!
+          </div>
+          <div class="search-hotel__support">
+            <div class="search-hotel__logo">
+              <img
+                alt=""
+                src="https://s.olan.ru/assets/sutochno-f7ef55dec74d35a7b02c2c2ebaa5c45a.svg"
+              />
+            </div>
+            <div class="search-hotel__note">При поддержке</div>
+          </div>
+        </div>
+        <div class="search-hotel__row">
+          <div class="search-hotel__column">
+            <div class="search-hotel__label">Населенный пункт</div>
+            <div
+              class="search-hotel__place"
+              onclick="return proceedWithSutochno(this);"
+            >
+              <div class="search-hotel__place__inner">
+                <div class="search-hotel__place__inner__wrapper">
+                  <div class="search-hotel__place__input">
+                    край Приморский, г Уссурийск
+                  </div>
+                  <div class="search-hotel__place__caret__wrapper">
+                    <b class="search-hotel__place__caret"></b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-hotel__column">
+            <div class="search-hotel__label">Дата заезда</div>
+            <div
+              class="search-hotel__date js-date-from"
+              onclick="return proceedWithSutochno(this);"
+            >
+              <input
+                class="search-hotel__date__input"
+                data-value="1729717200"
+                value="24 Окт"
+              />
+              <div class="search-hotel__date__icon_wrapper">
+                <i class="far fa-calendar search-hotel__date__icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="search-hotel__column">
+            <div class="search-hotel__label">Дата выезда</div>
+            <div
+              class="search-hotel__date js-date-to"
+              onclick="return proceedWithSutochno(this);"
+            >
+              <input
+                class="search-hotel__date__input"
+                data-value="1729803600"
+                value="25 Окт"
+              />
+              <div class="search-hotel__date__icon_wrapper">
+                <i class="far fa-calendar search-hotel__date__icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="search-hotel__column">
+            <button
+              class="search-hotel__btn"
+              onclick="return proceedWithSutochno(this);"
+            >
+              Найти
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row media clearfix object object_even media_after_travel">
+        <div class="col-lg-12"></div>
+      </div>
+      <div class="search-hotel-modal"></div>
+      <script>
+        //<![CDATA[
+        require(["application_module"], function () {
+          require(["breadcrumbs_module"]);
+        });
+        //]]>
+      </script>
+      <div class="h4">
+        Посмотрите также: <i class="fas fa-location-arrow icon-fa-fas-14"></i>
+      </div>
+      <ol class="breadcrumb">
+        <li class="small">
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_home"
+            href="https://olan.ru/"
+            ><i class="fas fa-home"></i> Недвижимость</a
+          >
+        </li>
+        <li class="small">
+          <a
+            class="js-show-breadcrumbs-modal"
+            data-uid="3233229"
+            rel="nofollow"
+            href="#"
+          >
+            <i class="fas fa-caret-down"></i>
+          </a>
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_link"
+            href="https://olan.ru/kray-primorskiy/day-flat"
+            >край Приморский</a
+          >
+        </li>
+        <li class="small">
+          <a
+            class="js-show-breadcrumbs-modal"
+            data-uid="3236399"
+            rel="nofollow"
+            href="#"
+          >
+            <i class="fas fa-caret-down"></i>
+          </a>
+          <a
+            class="js-show-breadcrumbs-modal"
+            data-uid="3236399"
+            rel="nofollow"
+            href="#"
+            >г Уссурийск</a
+          >
+        </li>
+        <li class="small js-predictions">
+          Выберите
+          <a
+            class="js-show-breadcrumbs-modal"
+            data-type="_street"
+            rel="nofollow"
+            href="#"
+            >улицу</a
+          >
+        </li>
+      </ol>
+      <div class="breadcrumb-filter">
+        <div class="breadcrumb-filter__inner">
+          <div class="breadcrumb-filter__list">
+            <a
+              class="breadcrumb-filter__item yaSend"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-residential"
+              >Посуточная аренда жилья</a
+            ><a
+              class="breadcrumb-filter__item yaSend"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat"
+              >квартиры</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/cheap"
+              >недорого</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/map"
+              >на карте</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/period-10-days"
+              >на 10 дней</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/period-2-weeks"
+              >на две недели</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/one-or-two-rooms"
+              >1 или 2к</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/period-3-weeks"
+              >на три недели</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/period-month"
+              >на месяц</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/one-room"
+              >1к</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/cheap"
+              >недорого</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/map"
+              >на карте</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/map"
+              >на карте</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/period-10-days"
+              >на 10 дней</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/period-2-weeks"
+              >на две недели</a
+            ><a
+              class="breadcrumb-filter__item yaSend"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat"
+              >квартиры</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/one-or-two-rooms"
+              >1 или 2к</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/period-3-weeks"
+              >на три недели</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/period-month"
+              >на месяц</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/one-room"
+              >1к</a
+            ><a
+              class="breadcrumb-filter__item yaSend"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-residential"
+              >Посуточная аренда жилья</a
+            ><a
+              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              yaparam="click_to_breadcrumbs_badge"
+              href="https://ussuriysk.olan.ru/day-flat/one-room"
+              >1к</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Modal not work -->
+      <div
+        aria-hidden="true"
+        class="modal"
+        id="js-breadcrumbs-modal"
+        role="dialog"
+        state='{"offer_types":3,"property_types":null,"categories":1,"subcategories":null,"search_params":null,"location_types":2,"id":3236399,"type":"city","agency_id":null,"developer_id":null,"for_breadcrumbs":true,"mode":null}'
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">
+                  Электронная база недвижимости
+                </div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Правила и условия
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer"
+                        >Оферта</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules"
+                        >Правила</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Пользователям
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml"
+                        >Пакетная загрузка</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs"
+                        >Тарифы</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment"
+                        >Способы оплаты</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Общая информация
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about"
+                        >О проекте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts"
+                        >Техподдержка сайта</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
