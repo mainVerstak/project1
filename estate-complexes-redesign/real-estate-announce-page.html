@@ -1,0 +1,2804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/mortgage.css" />
+    <link rel="stylesheet" href="css/redesing.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/new-icons.svg#icon-map"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-caret-default">
+                    <use xlink:href="./img/new-icons.svg#caret"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Выписки из ЕГРН"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#appartments"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <i class="fas fa-key icon-default"></i>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="sidenav loaded">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                        Москва
+                        <i class="fas fa-caret-down"></i>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#user"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="navbar-btn nav-font-color">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#appartments"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <i class="fas fa-key icon-default"></i>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                aria-label="Close"
+                class="navbar-toggle sidenav__close"
+                type="button"
+              >
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+        <h1>
+          Продам трехкомнатную квартиру в новостройке 73.0 м² этаж 8/14 район
+          Симферопольский село Мирное улица Крымской весны 1 микрорайон
+          «Жигулина роща» корп. 4
+        </h1>
+      </div>
+    </header>
+    <div class="container">
+      <meta
+        content="Продам трехкомнатную квартиру в новостройке 73.0 м² этаж 8/14 район Симферопольский село Мирное улица Крымской весны 1 микрорайон «Жигулина роща» корп. 4"
+        itemprop="name"
+      /><meta content="132654251" itemprop="productID" /><meta
+        content="Продажа квартир"
+        itemprop="model"
+      /><meta
+        content='Прocтоpнaя квapтира площадью 73,2 кв. мeтрa в 23 корпусе , кв. 29 ждeт свoeго cчacтливoгo владельца в жилом комплексе "Жигулина Poщa"Kвaртирa идеально пoдойдeт для мoлодыx и aктивных людей, цeнящиx cвободу и функциoнaльность, a тaк жe этo отличный ваpиaнт для инвестиций в будущеe!🎁 Даpим кaждому пoкупaтелю 3 дня нeзабывaемoго oтдыxа у моря!Жилой комплекс комфорт-класса в Симферопольском районе. В микрорайоне есть все необходимое для жизни и отдыха:• 3 остановки общественного транспорта в любое направление города• рядом 20 ресторанов, Кинотеатр, каток, боулинг, кофейня• в шаговой доступности более 1000 магазинов• офисный центр, отделение банка, медицинский сервис, салон красоты, мебельный магазин, магазины стройматериалов• 4 детских сада. Не упустите свой шанс обрести идеальное жилье в жилом комлексе "Жигулина Роща"🔸 Площадь благоустройства ЖК 150 000 кв.м, запланированы детские площадки для детей разного возраста, футбольное поле, баскетбольные площадки, теннисные столы, уличные тренажеры, роллердром, прогулочный бульвар, благоустроенная набережная, паркинг для 5500 автомобилей.🔸Благоустроенная набережная, проходящая вдоль р. Славянка – одно из самых красивых мест в Симферополе и любимое место прогулок на свежем воздухе жителей микрорайона.🔸 Проект берегоукрепления и благоустройства прилегающей к реке территории, протяженность 800 метров, 12 300 зеленых насаждений, современный эстетический стиль.📞Звоните ПРЯМО СЕЙЧАС - мы с радостью ответим на все ваши вопросы и поможем вам сделать правильный выбор!Условия приобретения:-Сопровождаем на всех этапах сделки оформления ипотеки-тем самым повышаем шанс одобрения в крупных банках до 90%.-Сотрудничаем с РНКБ , Банк Россия, все программы Сбербанка.1<номер-удален>1203504456714'
+        itemprop="description"
+      />
+      <p class="ds-annouce-info">
+        <span class="small text-muted">
+          № 132654251 | <span class="time-container-action">Размещено</span>
+          <strong
+            ><time
+              class="smart_time"
+              datetime="2024-10-22 14:04:05 +0300"
+              time_zone="3"
+              >22 окт в 14:04</time
+            ></strong
+          >
+          | Просмотров всего
+          <strong
+            ><span
+              data-tooltip="Просмотры объявления за все время"
+              data-original-title=""
+              title=""
+              >6</span
+            ></strong
+          >, сегодня
+          <strong
+            ><span
+              data-tooltip="Просмотры объявления за сегодня"
+              data-original-title=""
+              title=""
+              >0</span
+            ></strong
+          ></span
+        >
+      </p>
+      <div class="row" element_id="132654251">
+        <div class="col-xs-12 col-lg-12 ds-social">
+          <span class="panel-body-adv-block"
+            ><span class="notepad_action"
+              ><button
+                class="ShowAdvNotepadAction object__actions-item btn btn-default btn-favorite-icon"
+                data-id="132654251"
+                title="Добавить в избранное"
+                type="button"
+              >
+                <i class="far fa-star"></i></button></span
+          ></span>
+          <span class="panel-body-adv-block"
+            ><noindex
+              ><a
+                class="btn btn-primary btn-social-icon btn-vk yaSend btn-sx"
+                href="https://vk.com/share.php?url=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4&amp;title=Продам трехкомнатную квартиру в новостройке на улице Крымской весны 1 микрорайон «Жигулина роща» в селе Мирном в районе Симферопольском корп. 4 73.0 м² этаж 8/14 11303600 руб база Олан ру объявление 132654251&amp;image=https://i4.olan.ru/system/photos/entity/001/248/006/227/thumb/img.jpg?1729595132"
+                rel="nofollow"
+                target="_blank"
+                title="Поделиться в Vk"
+                yaparam="vk_share"
+              >
+                <i class="fab fa-vk fa-lg vk"></i
+              ></a>
+              <a
+                class="btn btn-warning btn-social-icon btn-odnoklassniki yaSend btn-sx"
+                href="https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&amp;st.shareUrl=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4"
+                rel="nofollow"
+                target="_blank"
+                title="Поделиться в Ok"
+                yaparam="ok_share"
+              >
+                <i class="fab fa-odnoklassniki fa-lg"></i></a></noindex
+          ></span>
+          <span class="panel-body-adv-block"
+            ><script>
+              //<![CDATA[
+              require(["application_module"], function () {
+                require(["validation_module"]);
+              });
+              //]]>
+            </script>
+            <a
+              class="open_remote_url_action abuse_popover_action yaSend btn btn-default btn-xs"
+              data-url="/abuses/132654251"
+              href="#"
+              rel="nofollow"
+              type="button"
+              yaparam="abuse_open"
+              ><i class="fas fa-ban"></i> Пожаловаться</a
+            >
+            <a
+              class="open_url_action btn btn-default btn-xs"
+              data-url="/call-access-new?advertisement_id=132654251"
+              href="#"
+              ><i class="fas fa-edit"></i> Редактировать</a
+            ></span
+          >
+        </div>
+      </div>
+      <div class="row yandex_content"><div class="col-lg-12"></div></div>
+      <div data-block-id="R-A-5010170-16" id="scrollLineForAside"></div>
+      <ol
+        class="breadcrumb"
+        itemscope="itemscope"
+        itemtype="http://schema.org/BreadcrumbList"
+      >
+        <li
+          class="small"
+          itemprop="itemListElement"
+          itemscope="itemscope"
+          itemtype="http://schema.org/ListItem"
+        >
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_in_fullview"
+            itemprop="item"
+            href="https://olan.ru/r-n-simferopolskiy"
+            ><span itemprop="name">р-н Симферопольский</span
+            ><meta content="1" itemprop="position"
+          /></a>
+        </li>
+        <li
+          class="small"
+          itemprop="itemListElement"
+          itemscope="itemscope"
+          itemtype="http://schema.org/ListItem"
+        >
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_in_fullview"
+            itemprop="item"
+            href="https://olan.ru/r-n-simferopolskiy/s-mirnoe"
+            ><span itemprop="name">Недвижимость с Мирное</span
+            ><meta content="2" itemprop="position"
+          /></a>
+        </li>
+        <li
+          class="small"
+          itemprop="itemListElement"
+          itemscope="itemscope"
+          itemtype="http://schema.org/ListItem"
+        >
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_in_fullview"
+            itemprop="item"
+            href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat"
+            ><span itemprop="name">продажа Квартир с Мирное</span
+            ><meta content="3" itemprop="position"
+          /></a>
+        </li>
+        <li
+          class="small"
+          itemprop="itemListElement"
+          itemscope="itemscope"
+          itemtype="http://schema.org/ListItem"
+        >
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_in_fullview"
+            itemprop="item"
+            href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild"
+            ><span itemprop="name">Квартир в новостройках</span
+            ><meta content="4" itemprop="position"
+          /></a>
+        </li>
+        <li
+          class="small"
+          itemprop="itemListElement"
+          itemscope="itemscope"
+          itemtype="http://schema.org/ListItem"
+        >
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_in_fullview"
+            itemprop="item"
+            href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms"
+            ><span itemprop="name">3к</span
+            ><meta content="5" itemprop="position"
+          /></a>
+        </li>
+        <li
+          class="small"
+          itemprop="itemListElement"
+          itemscope="itemscope"
+          itemtype="http://schema.org/ListItem"
+        >
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_in_fullview"
+            itemprop="item"
+            href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/mikrorayon-zhigulina-roscha-27898969/sale-flat"
+            ><span itemprop="name">микрорайон «Жигулина роща»</span
+            ><meta content="6" itemprop="position"
+          /></a>
+        </li>
+        <li
+          class="small"
+          itemprop="itemListElement"
+          itemscope="itemscope"
+          itemtype="http://schema.org/ListItem"
+        >
+          <a
+            class="yaSend"
+            yaparam="click_to_breadcrumbs_in_fullview"
+            itemprop="item"
+            href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/sale-flat"
+            ><span itemprop="name">ул Крымской весны</span
+            ><meta content="7" itemprop="position"
+          /></a>
+        </li>
+      </ol>
+      <div class="row">
+        <div class="apartment-top-container">
+          <div class="col-md-12 col-lg-7 apartment-gallery">
+            <div class="gallery-with-nav-thumbs">
+              <style>
+                .fotorama1729862083523
+                  .fotorama__nav--thumbs
+                  .fotorama__nav__frame {
+                  padding: 2px;
+                  height: 64px;
+                }
+                .fotorama1729862083523 .fotorama__thumb-border {
+                  height: 60px;
+                  border-width: 2px;
+                  margin-top: 2px;
+                }
+              </style>
+              <div class="fotorama--hidden"></div>
+              <div
+                class="extendedFotoramaAction fotorama extendedLoadedFotorama fotorama1729862083523"
+                style="padding-top: 5px; padding-bottom: 10px"
+                data-fotorama-active-index="0"
+              >
+                <div
+                  class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--toggle-arrows fotorama__wrap--no-controls"
+                  style="width: 100%; min-width: 0px; max-width: 100%"
+                >
+                  <div
+                    class="fotorama__stage fotorama__pointer"
+                    style="width: 653px; height: 490px"
+                  >
+                    <div
+                      class="fotorama__fullscreen-icon"
+                      tabindex="0"
+                      role="button"
+                    ></div>
+                    <div
+                      class="fotorama__stage__shaft"
+                      style="
+                        transition-duration: 0ms;
+                        transform: translate3d(0px, 0px, 0px);
+                        width: 653px;
+                        margin-left: 0px;
+                      "
+                    >
+                      <div
+                        class="fotorama__stage__frame fotorama__loaded fotorama__loaded--img fotorama__active"
+                        style="left: 0px"
+                      >
+                        <img
+                          src="https://i4.olan.ru/system/photos/entity/001/248/006/227/medium/img.jpg?1729595132"
+                          class="fotorama__img"
+                          style="
+                            width: 653px;
+                            height: 328.141px;
+                            left: 0px;
+                            top: 80.9297px;
+                          "
+                        />
+                        <div
+                          class="fotorama__background"
+                          style="
+                            background: url('https://i4.olan.ru/system/photos/entity/001/248/006/227/medium/img.jpg?1729595132')
+                              50% 50% / cover no-repeat;
+                          "
+                        >
+                          <div class="fotorama__background__wrap"></div>
+                        </div>
+                      </div>
+                      <div
+                        class="fotorama__stage__frame fotorama__loaded fotorama__loaded--img"
+                        style="left: -655px"
+                      >
+                        <img
+                          src="https://i.olan.ru/system/photos/entity/001/248/006/599/medium/img.jpg?1729595155"
+                          class="fotorama__img"
+                          style="
+                            width: 653px;
+                            height: 428.1px;
+                            left: 0px;
+                            top: 30.9502px;
+                          "
+                        />
+                        <div
+                          class="fotorama__background"
+                          style="
+                            background: url('https://i.olan.ru/system/photos/entity/001/248/006/599/medium/img.jpg?1729595155')
+                              50% 50% / cover no-repeat;
+                          "
+                        >
+                          <div class="fotorama__background__wrap"></div>
+                        </div>
+                      </div>
+                      <div
+                        class="fotorama__stage__frame fotorama__loaded fotorama__loaded--img"
+                        style="left: 655px"
+                      >
+                        <img
+                          src="https://i4.olan.ru/system/photos/entity/001/248/006/263/medium/img.jpg?1729595134"
+                          class="fotorama__img"
+                          style="
+                            width: 526.296px;
+                            height: 490px;
+                            left: 63.3519px;
+                            top: 0px;
+                          "
+                        />
+                        <div class="fotorama__background">
+                          <div class="fotorama__background__wrap">
+                            https://i4.olan.ru/system/photos/entity/001/248/006/263/medium/img.jpg?1729595134
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="fotorama__arr fotorama__arr--prev"
+                      tabindex="0"
+                      role="button"
+                    ></div>
+                    <div
+                      class="fotorama__arr fotorama__arr--next"
+                      tabindex="0"
+                      role="button"
+                    ></div>
+                    <div class="fotorama__video-close"></div>
+                  </div>
+                  <div class="fotorama__nav-wrap">
+                    <div
+                      class="fotorama__nav fotorama__nav--thumbs"
+                      style="width: 653px"
+                    >
+                      <div
+                        class="fotorama__nav__shaft"
+                        style="
+                          transition-duration: 0ms;
+                          transform: translate3d(0px, 0px, 0px);
+                        "
+                      >
+                        <div
+                          class="fotorama__thumb-border"
+                          style="
+                            transition-duration: 0ms;
+                            transform: translate3d(0px, 0px, 0px);
+                            width: 60px;
+                          "
+                        ></div>
+                        <div
+                          class="fotorama__nav__frame fotorama__nav__frame--thumb fotorama__active"
+                          tabindex="0"
+                          role="button"
+                          style="width: 64px"
+                        >
+                          <div
+                            class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                          >
+                            <img
+                              src="https://i4.olan.ru/system/photos/entity/001/248/006/227/thumb/img.jpg?1729595132"
+                              class="fotorama__img"
+                              style="
+                                width: 127.123px;
+                                height: 64px;
+                                left: -31.5616px;
+                                top: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                          tabindex="0"
+                          role="button"
+                          style="width: 64px"
+                        >
+                          <div
+                            class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                          >
+                            <img
+                              src="https://i4.olan.ru/system/photos/entity/001/248/006/263/thumb/img.jpg?1729595134"
+                              class="fotorama__img"
+                              style="
+                                width: 68.9778px;
+                                height: 64px;
+                                left: -2.48889px;
+                                top: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                          tabindex="0"
+                          role="button"
+                          style="width: 64px"
+                        >
+                          <div
+                            class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                          >
+                            <img
+                              src="https://i5.olan.ru/system/photos/entity/001/248/006/257/thumb/img.jpg?1729595132"
+                              class="fotorama__img"
+                              style="
+                                width: 105.455px;
+                                height: 64px;
+                                left: -20.7273px;
+                                top: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                          tabindex="0"
+                          role="button"
+                          style="width: 64px"
+                        >
+                          <div
+                            class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                          >
+                            <img
+                              src="https://i4.olan.ru/system/photos/entity/001/248/006/273/thumb/img.jpg?1729595135"
+                              class="fotorama__img"
+                              style="
+                                width: 128.889px;
+                                height: 64px;
+                                left: -32.4444px;
+                                top: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                          tabindex="0"
+                          role="button"
+                          style="width: 64px"
+                        >
+                          <div
+                            class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                          >
+                            <img
+                              src="https://i2.olan.ru/system/photos/entity/001/248/006/561/thumb/img.jpg?1729595151"
+                              class="fotorama__img"
+                              style="
+                                width: 105.455px;
+                                height: 64px;
+                                left: -20.7273px;
+                                top: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                          tabindex="0"
+                          role="button"
+                          style="width: 64px"
+                        >
+                          <div
+                            class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                          >
+                            <img
+                              src="https://i.olan.ru/system/photos/entity/001/248/006/525/thumb/img.jpg?1729595152"
+                              class="fotorama__img"
+                              style="
+                                width: 128.889px;
+                                height: 64px;
+                                left: -32.4444px;
+                                top: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                          tabindex="0"
+                          role="button"
+                          style="width: 64px"
+                        >
+                          <div
+                            class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                          >
+                            <img
+                              src="https://i2.olan.ru/system/photos/entity/001/248/006/593/thumb/img.jpg?1729595155"
+                              class="fotorama__img"
+                              style="
+                                width: 127.123px;
+                                height: 64px;
+                                left: -31.5616px;
+                                top: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                          tabindex="0"
+                          role="button"
+                          style="width: 64px"
+                        >
+                          <div
+                            class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                          >
+                            <img
+                              src="https://i.olan.ru/system/photos/entity/001/248/006/599/thumb/img.jpg?1729595155"
+                              class="fotorama__img"
+                              style="
+                                width: 97.4222px;
+                                height: 64px;
+                                left: -16.7111px;
+                                top: 0px;
+                              "
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-5">
+            <span
+              itemprop="offers"
+              itemscope=""
+              itemtype="http://schema.org/Offer"
+              ><div class="h3">
+                цена:
+                <span class="formatRub loaded-format-rub" itemprop="price"
+                  >11 303 600</span
+                >
+                <meta content="RUB" itemprop="priceCurrency" /><i
+                  class="fas fa-ruble-sign fa-sm"
+                  ><span class="hidden">₽</span></i
+                >
+              </div>
+              <div class="yandex_content"></div>
+              <div class="apartment-desc">
+                <div
+                  class="apartment-desc__head"
+                  itemscope=""
+                  itemtype="http://schema.org/RealEstateAgent"
+                >
+                  <span class="apartment-desc__owner"
+                    ><noindex
+                      ><i class="far fa-building"></i> застройщик</noindex
+                    > </span
+                  ><meta content="+791841468XX" itemprop="telephone" /><meta
+                    content="р-н Симферопольский, с Мирное, ул Крымской весны, 1, микрорайон «Жигулина роща», корп. 4"
+                    itemprop="address"
+                  /><meta
+                    content="https://olan.ru/back.jpg"
+                    itemprop="image"
+                  /><noindex
+                    ><script>
+                      //<![CDATA[
+                      require(["application_module"], function () {
+                        require(["adv_show_module"]);
+                      });
+                      //]]>
+                    </script>
+                    <button
+                      class="btn btn-info js-reservation-contact-action js-floating-mobile-phone-block-required"
+                      data-id="132654251"
+                      style="width: 100%"
+                    >
+                      <i class="fas fa-phone"></i> Забронировать
+                    </button></noindex
+                  >
+                </div>
+                <div class="apartment-desc__item">этаж: <span>8</span></div>
+                <div class="apartment-desc__item">этажей: <span>14</span></div>
+                <div class="apartment-desc__item">
+                  площадь: <span>73.0</span> м.кв.
+                </div>
+                <div class="apartment-desc__item">комнат: <span>3</span></div>
+                <div class="apartment-desc__item">
+                  адрес:
+                  <a
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/newbuild/three-rooms"
+                    >р-н Симферопольский</a
+                  >,
+                  <a
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms"
+                    >с Мирное</a
+                  >,
+                  <a
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/sale-flat/newbuild/three-rooms"
+                    >ул Крымской весны</a
+                  >,
+                  <a
+                    rel="nofollow"
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/1/sale-flat/newbuild/three-rooms"
+                    >1</a
+                  >
+                </div>
+                <div class="apartment-desc__item">
+                  ЖК:
+                  <a
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/mikrorayon-zhigulina-roscha-27898969/sale-flat/newbuild/three-rooms"
+                    >микрорайон «Жигулина роща»</a
+                  >
+                </div>
+              </div></span
+            >
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-12">
+          <p></p>
+          <div class="h4">Описание</div>
+          Прocтоpнaя квapтира площадью 73,2 кв. мeтрa в 23 корпусе , кв. 29 ждeт
+          свoeго cчacтливoгo владельца в жилом комплексе "Жигулина Poщa"Kвaртирa
+          идеально пoдойдeт для мoлодыx и aктивных людей, цeнящиx cвободу и
+          функциoнaльность, a тaк жe этo отличный ваpиaнт для инвестиций в
+          будущеe!🎁 Даpим кaждому пoкупaтелю 3 дня нeзабывaемoго oтдыxа у
+          моря!Жилой комплекс комфорт-класса в Симферопольском районе. В
+          микрорайоне есть все необходимое для жизни и отдыха:• 3 остановки
+          общественного транспорта в любое направление города• рядом 20
+          ресторанов, Кинотеатр, каток, боулинг, кофейня• в шаговой доступности
+          более 1000 магазинов• офисный центр, отделение банка, медицинский
+          сервис, салон красоты, мебельный магазин, магазины стройматериалов• 4
+          детских сада. Не упустите свой шанс обрести идеальное жилье в жилом
+          комлексе "Жигулина Роща"🔸 Площадь благоустройства ЖК 150 000 кв.м,
+          запланированы детские площадки для детей разного возраста, футбольное
+          поле, баскетбольные площадки, теннисные столы, уличные тренажеры,
+          роллердром, прогулочный бульвар, благоустроенная набережная, паркинг
+          для 5500 автомобилей.🔸Благоустроенная набережная, проходящая вдоль р.
+          Славянка – одно из самых красивых мест в Симферополе и любимое место
+          прогулок на свежем воздухе жителей микрорайона.🔸 Проект
+          берегоукрепления и благоустройства прилегающей к реке территории,
+          протяженность 800 метров, 12 300 зеленых насаждений, современный
+          эстетический стиль.📞Звоните ПРЯМО СЕЙЧАС - мы с радостью ответим на
+          все ваши вопросы и поможем вам сделать правильный выбор!Условия
+          приобретения:-Сопровождаем на всех этапах сделки оформления
+          ипотеки-тем самым повышаем шанс одобрения в крупных банках до
+          90%.-Сотрудничаем с РНКБ , Банк Россия, все программы
+          Сбербанка.1&lt;номер-удален&gt;1203504456714
+          <p></p>
+        </div>
+        <div
+          class="mortgage-container"
+          data-advertisement-id="132654251"
+          data-alfabank="{}"
+          data-button-text="Отправить заявку"
+          id="banki-ru-widget"
+        >
+          <div class="col-xs-12 col-lg-12 mortgage-calc-blok">
+            <div class="h4">Купить эту квартиру в ипотеку</div>
+            <p>Для пользователей olan.ru</p>
+            <div class="calc-mortgage" id="banki-ru-calculator">
+              <div class="calc-mortgage__popup">
+                <div class="calc-mortgage__popup-outer">
+                  <div class="calc-mortgage__popup-inner">
+                    <div
+                      class="calc-mortgage__close js-calc-mortgage-more"
+                    ></div>
+                    <div class="calc-mortgage__top">
+                      <div class="calc-mortgage__column calc-mortgage__price">
+                        <div class="calc-mortgage__label">
+                          Стоимость недвижимости
+                        </div>
+                        <div class="calc-mortgage__inputs">
+                          <div
+                            class="calc-mortgage__input calc-mortgage__input_disabled"
+                          >
+                            <input
+                              class="calc-mortgage-price"
+                              readonly=""
+                              type="text"
+                              value="11 303 600 "
+                            />
+                            <div class="calc-mortgage__input-c">₽</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc-mortgage__column">
+                        <div class="calc-mortgage__label">
+                          Первоначальный взнос
+                        </div>
+                        <div
+                          class="calc-mortgage__inputs calc-mortgage__inputs_disabled"
+                        >
+                          <div class="calc-mortgage__input">
+                            <input
+                              class="calc-mortgage-summ"
+                              type="text"
+                              value="6 782 160 "
+                            />
+                            <div class="calc-mortgage__input-c">₽</div>
+                          </div>
+                          <input
+                            id="mortgage-summ"
+                            max="11303600"
+                            min="2260720.0"
+                            step="1"
+                            type="range"
+                            value="6782160.0"
+                            style="
+                              position: absolute;
+                              width: 1px;
+                              height: 1px;
+                              overflow: hidden;
+                              opacity: 0;
+                            "
+                          />
+                          <div
+                            class="rangeslider rangeslider--horizontal"
+                            id="js-rangeslider-0"
+                          >
+                            <div
+                              class="rangeslider__fill"
+                              style="width: 130px"
+                            ></div>
+                            <div
+                              class="rangeslider__handle"
+                              style="left: 122px"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc-mortgage__column">
+                        <div class="calc-mortgage__label">
+                          Срок кредита в годах
+                        </div>
+                        <div
+                          class="calc-mortgage__inputs calc-mortgage__inputs_disabled"
+                        >
+                          <div class="calc-mortgage__input">
+                            <input
+                              class="calc-mortgage-term"
+                              type="text"
+                              value="30"
+                            />
+                          </div>
+                          <input
+                            id="mortgage-term"
+                            max="30"
+                            min="0"
+                            step="1"
+                            type="range"
+                            value="30"
+                            style="
+                              position: absolute;
+                              width: 1px;
+                              height: 1px;
+                              overflow: hidden;
+                              opacity: 0;
+                            "
+                          />
+                          <div
+                            class="rangeslider rangeslider--horizontal"
+                            id="js-rangeslider-1"
+                          >
+                            <div
+                              class="rangeslider__fill"
+                              style="width: 252px"
+                            ></div>
+                            <div
+                              class="rangeslider__handle"
+                              style="left: 244px"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc-mortgage__column">
+                        <div class="calc-mortgage__label">
+                          Процентная ставка
+                        </div>
+                        <div
+                          class="calc-mortgage__inputs calc-mortgage__inputs_disabled"
+                        >
+                          <div class="calc-mortgage__input">
+                            <input
+                              class="calc-mortgage-rate"
+                              type="text"
+                              value="11.39"
+                            />
+                            <div class="calc-mortgage__input-c">%</div>
+                          </div>
+                          <input
+                            id="mortgage-rate"
+                            max="22.771"
+                            min="0.0"
+                            step="0.01"
+                            type="range"
+                            value="11.39"
+                            style="
+                              position: absolute;
+                              width: 1px;
+                              height: 1px;
+                              overflow: hidden;
+                              opacity: 0;
+                            "
+                          />
+                          <div
+                            class="rangeslider rangeslider--horizontal"
+                            id="js-rangeslider-2"
+                          >
+                            <div
+                              class="rangeslider__fill"
+                              style="width: 136.049px"
+                            ></div>
+                            <div
+                              class="rangeslider__handle"
+                              style="left: 128.049px"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calc-mortgage__bottom">
+                      <div class="calc-mortgage__result">
+                        <div class="calc-mortgage__sum">от 46 335 ₽</div>
+                        <div class="calc-mortgage__note">
+                          Приблизительный ежемесячный платеж
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calc-mortgage__bottom-btns-wrapper">
+                      <div class="calc-mortgage__bottom-btns">
+                        <button
+                          class="btn btn-styled-new2 btn-styled-new2_fz_18 js-calc-mortgage-more"
+                        >
+                          <i class="fas fa-search"></i
+                          ><span class="btn-styled-new2__bold">Подобрать</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="calc-mortgage__mobile-btn">
+                <button
+                  class="btn btn-styled-new2 btn-styled-new2_fz_18 js-calc-mortgage-more"
+                >
+                  <i class="fas fa-sliders-h"></i>
+                  <span class="btn-styled-new2__bold"
+                    >Показать ипотечный фильтр</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <script>
+            //<![CDATA[
+            require(["application_module"], function () {
+              require(["mortgage_widget_module"]);
+            });
+            //]]>
+          </script>
+          <div class="col-xs-12 col-lg-12 mortgage-table-blok">
+            <div class="h4">Ипотечные программы</div>
+            <table class="table-mortgage" id="banki_ru-offers">
+              <tbody>
+                <tr class="table-mortgage-header">
+                  <th>Банк,<br />название ипотеки</th>
+                  <th>Мин.<br />ставка</th>
+                  <th>Мес.<br />платеж</th>
+                  <th class="table-mortgage__hide-mobile">Макс.<br />сумма</th>
+                  <th>Мин.<br />взнос</th>
+                  <th class="table-mortgage__hide-mobile">
+                    Срок<br />рассмотрения
+                  </th>
+                  <th>Подтверждающие<br />документы</th>
+                  <th></th>
+                </tr>
+                <tr class="table-mortgage__offer">
+                  <td>
+                    <div class="table-mortgage__item">
+                      <div class="table-mortgage__item-inner">
+                        <div class="table-mortgage__bank">
+                          <div class="table-mortgage__bank-img">
+                            <img src="./img/bank4.gif" />
+                          </div>
+                          <div class="table-mortgage__bank-text">
+                            <div class="table-mortgage__name">
+                              Промсвязьбанк
+                            </div>
+                            <span
+                              >Госпрограмма 2020 (Без подтверждения
+                              дохода)</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table-mortgage__mobile-btn">
+                        <button
+                          class="btn table-mortgage-btn yaSend"
+                          data-url="/redirects/mortgage_offer?remote_offer_id=vbr-2835ca64-c1dc-45e0-9a74-3d2f1df48646"
+                          yaparam="show_page_vbr"
+                        >
+                          Отправить заявку
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Мин. ставка"
+                    >
+                      <div class="table-mortgage__item-inner">-</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Мес. платеж"
+                    >
+                      <div class="table-mortgage__item-inner">от 46 335 ₽</div>
+                    </div>
+                  </td>
+                  <td class="table-mortgage__hide-mobile">
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Макс. сумма"
+                    >
+                      <div class="table-mortgage__item-inner">до 12 млн. ₽</div>
+                    </div>
+                  </td>
+                  <td class="table-mortgage__hide-mobile">
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Мин. взнос"
+                    >
+                      <div class="table-mortgage__item-inner">20.0 %</div>
+                    </div>
+                  </td>
+                  <td class="table-mortgage__hide-mobile">
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Срок рассмотрения"
+                    >
+                      <div class="table-mortgage__item-inner">Менее 1 дня</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="table-mortgage__item table-mortgage__item_label"
+                      data-label="Подтверждающие документы"
+                    >
+                      <div class="table-mortgage__item-inner">-</div>
+                    </div>
+                  </td>
+                  <td>
+                    <button
+                      class="btn table-mortgage-btn yaSend"
+                      data-url="/redirects/mortgage_offer?remote_offer_id=vbr-2835ca64-c1dc-45e0-9a74-3d2f1df48646"
+                      yaparam="show_page_vbr"
+                    >
+                      Отправить заявку
+                    </button>
+                  </td>
+                </tr>
+                <td>
+                  <div class="table-mortgage__item">
+                    <div class="table-mortgage__item-inner">
+                      <div class="table-mortgage__bank">
+                        <div class="table-mortgage__bank-img">
+                          <img
+                            alt="Промсвязьбанк"
+                            src="/mortgage/psb.svg"
+                            title="Промсвязьбанк"
+                          />
+                        </div>
+                        <div class="table-mortgage__bank-text">
+                          <div class="table-mortgage__name">Промсвязьбанк</div>
+                          <span>Для IT-специалистов</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-mortgage__mobile-btn">
+                      <button
+                        class="btn table-mortgage-btn yaSend"
+                        data-url="/redirects/mortgage_offer?remote_offer_id=vbr-1a87d821-5ca0-4ce1-b419-7418060f95ee"
+                        yaparam="show_page_vbr"
+                      >
+                        Узнать больше
+                      </button>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Мин. ставка"
+                  >
+                    <div class="table-mortgage__item-inner">от 5.089 %</div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Мес. платеж"
+                  >
+                    <div class="table-mortgage__item-inner">от 18 344 ₽</div>
+                  </div>
+                </td>
+                <td class="table-mortgage__hide-mobile">
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Макс. сумма"
+                  >
+                    <div class="table-mortgage__item-inner">до 18 млн. ₽</div>
+                  </div>
+                </td>
+                <td class="table-mortgage__hide-mobile">
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Мин. взнос"
+                  >
+                    <div class="table-mortgage__item-inner">20.01 %</div>
+                  </div>
+                </td>
+                <td class="table-mortgage__hide-mobile">
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Срок рассмотрения"
+                  >
+                    <div class="table-mortgage__item-inner">Менее 1 дня</div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="table-mortgage__item table-mortgage__item_label"
+                    data-label="Подтверждающие документы"
+                  >
+                    <div class="table-mortgage__item-inner">
+                      <!-- <i
+                        class="fas fa-info-circle fa-lg table-mortgage__btn-popover"
+                        data-content="НДФЛ-2<br>Справка по форме банка"
+                        data-html="true"
+                        data-placement="bottom"
+                      ></i> -->
+                      <span class="table-mortgage__btn-popover">
+                        <svg class="icon-info">
+                          <use xlink:href="./img/new-icons.svg#info"></use>
+                        </svg>
+                      </span>
+                      Да
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <button
+                    class="btn table-mortgage-btn yaSend"
+                    data-url="/redirects/mortgage_offer?remote_offer_id=vbr-1a87d821-5ca0-4ce1-b419-7418060f95ee"
+                    yaparam="show_page_vbr"
+                  >
+                    Узнать больше
+                  </button>
+                </td>
+              </tbody>
+            </table>
+            <button
+              class="btn table-mortgage-btn table-mortgage-btn_w_210 table-mortgage-btn_mb_20 table-mortgage-show table-mortgage-btn_outline"
+            >
+              Показать все программы
+            </button>
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-12">
+          <div class="h4">
+            <a
+              class="open_url_in_new_tab"
+              data-url="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/map?ll=44.97344,34.0756&amp;z=16"
+              href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/map"
+              >Объявление на карте</a
+            >
+          </div>
+          <!-- <div
+            class="map loaded-map"
+            data-agency_id="38703025"
+            data-category="flat"
+            data-editable="false"
+            data-id="132654251"
+            data-latitude="44.97344"
+            data-longitude="34.0756"
+            data-offer_type="sale"
+            data-zoom="12"
+            id="map"
+            style=""
+          >
+            <ymaps class="ymaps-2-1-79-map" style="width: 1140px; height: 425px"
+              ><ymaps
+                class="ymaps-2-1-79-map ymaps-2-1-79-i-ua_js_yes ymaps-2-1-79-map-bg ymaps-2-1-79-islets_map-lang-ru"
+                style="width: 1140px; height: 425px"
+                ><ymaps class="ymaps-2-1-79-inner-panes"
+                  ><ymaps
+                    class="ymaps-2-1-79-events-pane ymaps-2-1-79-user-selection-none"
+                    style="
+                      height: 100%;
+                      width: 100%;
+                      top: 0px;
+                      left: 0px;
+                      position: absolute;
+                      z-index: 2500;
+                      cursor: url('https://api-maps.yandex.ru/2.1.79/build/release/images/cursor/grab.cur')
+                          16 16,
+                        url('https://api-maps.yandex.ru/2.1.79/build/release/images/cursor/grab.cur'),
+                        move;
+                    "
+                    unselectable="on"
+                  ></ymaps
+                  ><ymaps
+                    style="
+                      top: 0px;
+                      left: 0px;
+                      position: absolute;
+                      z-index: 501;
+                    "
+                    class="ymaps-2-1-79-ground-pane"
+                    ><ymaps style="z-index: 150; position: absolute"
+                      ><ymaps style="position: absolute; left: 0px; top: 0px"
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(425px, 204px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2435&amp;y=1477&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(169px, 204px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2434&amp;y=1477&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(681px, 204px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2436&amp;y=1477&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(-87px, -52px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2433&amp;y=1476&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(-87px, 204px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2433&amp;y=1477&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(-87px, 460px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2433&amp;y=1478&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(169px, -52px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2434&amp;y=1476&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(169px, 460px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2434&amp;y=1478&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(425px, -52px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2435&amp;y=1476&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(425px, 460px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2435&amp;y=1478&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(681px, -52px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2436&amp;y=1476&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(681px, 460px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2436&amp;y=1478&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(937px, -52px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2437&amp;y=1476&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(937px, 204px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2437&amp;y=1477&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(937px, 460px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2437&amp;y=1478&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(-343px, -52px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2432&amp;y=1476&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(-343px, 204px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2432&amp;y=1477&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(-343px, 460px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2432&amp;y=1478&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(1193px, -52px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2438&amp;y=1476&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(1193px, 204px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2438&amp;y=1477&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(1193px, 460px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2438&amp;y=1478&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(-343px, -308px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2432&amp;y=1475&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(-87px, -308px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2433&amp;y=1475&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(169px, -308px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2434&amp;y=1475&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(425px, -308px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2435&amp;y=1475&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(681px, -308px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2436&amp;y=1475&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(937px, -308px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2437&amp;y=1475&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps
+                        ><ymaps
+                          style="
+                            opacity: 1;
+                            transform-origin: 0px 0px 0px;
+                            position: absolute;
+                            transform: translate3d(1193px, -308px, 0px) scale(1);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-image: url('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&amp;v=24.10.25-0-b241017164600&amp;x=2438&amp;y=1475&amp;z=12&amp;scale=1&amp;lang=ru_RU&amp;ads=enabled');
+                            width: 256px;
+                            height: 256px;
+                          "
+                          unselectable="on"
+                          class="ymaps-2-1-79-user-selection-none"
+                        ></ymaps></ymaps></ymaps></ymaps
+                  ><ymaps
+                    style="
+                      height: 0px;
+                      inset: auto 0px 0px;
+                      position: absolute;
+                      z-index: 5002;
+                    "
+                    class="ymaps-2-1-79-copyrights-pane"
+                    ><ymaps
+                      ><ymaps
+                        class="ymaps-2-1-79-copyright ymaps-2-1-79-copyright_logo_no"
+                        style="top: -25px"
+                        ><ymaps class="ymaps-2-1-79-copyright__fog">…</ymaps
+                        ><ymaps class="ymaps-2-1-79-copyright__wrap"
+                          ><ymaps class="ymaps-2-1-79-copyright__layout"
+                            ><ymaps class="ymaps-2-1-79-copyright__content-cell"
+                              ><ymaps class="ymaps-2-1-79-copyright__content"
+                                ><ymaps class="ymaps-2-1-79-copyright__text"
+                                  >© Яндекс</ymaps
+                                ><ymaps
+                                  class="ymaps-2-1-79-copyright__agreement"
+                                  >&nbsp;<a
+                                    class="ymaps-2-1-79-copyright__link"
+                                    target="_blank"
+                                    href=""
+                                    rel="noopener"
+                                    >Условия использования</a
+                                  ></ymaps
+                                ></ymaps
+                              ></ymaps
+                            ><ymaps class="ymaps-2-1-79-copyright__logo-cell"
+                              ><a
+                                class="ymaps-2-1-79-copyright__logo"
+                                href=""
+                                target="_blank"
+                              ></a></ymaps></ymaps></ymaps></ymaps></ymaps
+                    ><ymaps class="ymaps-2-1-79-map-copyrights-promo"
+                      ><ymaps
+                        ><ymaps
+                          class="ymaps-2-1-79-gotoymaps"
+                          title="Как добраться"
+                          ><ymaps class="ymaps-2-1-79-gotoymaps__container"
+                            ><ymaps class="ymaps-2-1-79-gotoymaps__pin"></ymaps
+                            ><ymaps
+                              class="ymaps-2-1-79-gotoymaps__text-container"
+                              ><ymaps class="ymaps-2-1-79-gotoymaps__text"
+                                >Как добраться</ymaps
+                              ></ymaps
+                            ></ymaps
+                          ></ymaps
+                        ><ymaps
+                          class="ymaps-2-1-79-gototaxi"
+                          style="display: none"
+                          title="Доехать на такси"
+                          ><ymaps class="ymaps-2-1-79-gototaxi__container"
+                            ><ymaps class="ymaps-2-1-79-gototaxi__pin"></ymaps
+                            ><ymaps
+                              class="ymaps-2-1-79-gototaxi__text-container"
+                              ><ymaps
+                                class="ymaps-2-1-79-gototaxi__text"
+                              ></ymaps></ymaps></ymaps></ymaps
+                        ><a
+                          class="ymaps-2-1-79-gototech"
+                          target="_blank"
+                          href="https://tech.yandex.ru/maps/mapsapi/?from=api-maps "
+                          >Создать свою карту</a
+                        ></ymaps
+                      ></ymaps
+                    ></ymaps
+                  ><ymaps
+                    style="
+                      width: 100%;
+                      top: 0px;
+                      left: 0px;
+                      position: absolute;
+                      z-index: 4503;
+                    "
+                    class="ymaps-2-1-79-controls-pane"
+                    ><ymaps
+                      class="ymaps-2-1-79-controls__toolbar"
+                      style="margin-top: 10px"
+                      ><ymaps
+                        class="ymaps-2-1-79-controls__toolbar_left"
+                      ></ymaps
+                      ><ymaps class="ymaps-2-1-79-controls__toolbar_right"
+                        ><ymaps
+                          style="
+                            margin-right: 10px;
+                            margin-left: 0px;
+                            position: inherit;
+                          "
+                          class="ymaps-2-1-79-controls__control_toolbar"
+                          ><ymaps
+                            ><ymaps
+                              class="ymaps-2-1-79-listbox ymaps-2-1-79-listbox_opened_no ymaps-2-1-79-listbox_align_right"
+                              style="width: 85px"
+                              ><ymaps
+                                class="ymaps-2-1-79-listbox__button ymaps-2-1-79-_visible-arrow ymaps-2-1-79-user-selection-none"
+                                unselectable="on"
+                                title=""
+                                ><ymaps
+                                  class="ymaps-2-1-79-listbox__button-icon ymaps-2-1-79-_icon_layers"
+                                ></ymaps
+                                ><ymaps
+                                  class="ymaps-2-1-79-listbox__button-text"
+                                  >Слои</ymaps
+                                ><ymaps
+                                  class="ymaps-2-1-79-listbox__button-arrow"
+                                ></ymaps></ymaps
+                              ><ymaps
+                                class="ymaps-2-1-79-listbox__panel ymaps-2-1-79-i-custom-scroll"
+                                style="
+                                  transform: translate3d(0px, 0px, 0px) scale(1);
+                                "
+                                ><ymaps
+                                  class="ymaps-2-1-79-listbox__list"
+                                  style="max-height: 999999px"
+                                  ><ymaps
+                                    ><ymaps
+                                      ><ymaps id="id_172985810602546923457"
+                                        ><ymaps
+                                          unselectable="on"
+                                          class="ymaps-2-1-79-user-selection-none"
+                                          ><ymaps
+                                            class="ymaps-2-1-79-listbox__list-item ymaps-2-1-79-listbox__list-item_selected_yes"
+                                            ><ymaps
+                                              class="ymaps-2-1-79-listbox__list-item-text"
+                                              >Схема</ymaps
+                                            ></ymaps
+                                          ></ymaps
+                                        ></ymaps
+                                      ></ymaps
+                                    ></ymaps
+                                  ><ymaps
+                                    ><ymaps
+                                      ><ymaps id="id_172985810602546923458"
+                                        ><ymaps
+                                          unselectable="on"
+                                          class="ymaps-2-1-79-user-selection-none"
+                                          ><ymaps
+                                            class="ymaps-2-1-79-listbox__list-item ymaps-2-1-79-listbox__list-item_selected_no"
+                                            ><ymaps
+                                              class="ymaps-2-1-79-listbox__list-item-text"
+                                              >Спутник</ymaps
+                                            ></ymaps
+                                          ></ymaps
+                                        ></ymaps
+                                      ></ymaps
+                                    ></ymaps
+                                  ><ymaps
+                                    ><ymaps
+                                      ><ymaps id="id_172985810602546923459"
+                                        ><ymaps
+                                          unselectable="on"
+                                          class="ymaps-2-1-79-user-selection-none"
+                                          ><ymaps
+                                            class="ymaps-2-1-79-listbox__list-item ymaps-2-1-79-listbox__list-item_selected_no"
+                                            ><ymaps
+                                              class="ymaps-2-1-79-listbox__list-item-text"
+                                              >Гибрид</ymaps
+                                            ></ymaps
+                                          ></ymaps
+                                        ></ymaps
+                                      ></ymaps
+                                    ></ymaps
+                                  ><ymaps
+                                    ><ymaps
+                                      ><ymaps id="id_172985810602546923455"
+                                        ><ymaps
+                                          ><ymaps
+                                            class="ymaps-2-1-79-listbox__list-separator"
+                                          ></ymaps></ymaps></ymaps></ymaps></ymaps
+                                  ><ymaps
+                                    ><ymaps
+                                      ><ymaps id="id_172985810602546923456"
+                                        ><ymaps
+                                          unselectable="on"
+                                          class="ymaps-2-1-79-user-selection-none"
+                                          ><ymaps
+                                            class="ymaps-2-1-79-listbox__list-item ymaps-2-1-79-listbox__list-item_selected_no"
+                                            ><ymaps
+                                              class="ymaps-2-1-79-listbox__list-item-text"
+                                              >Панорамы</ymaps
+                                            ></ymaps
+                                          ></ymaps
+                                        ></ymaps
+                                      ></ymaps
+                                    ></ymaps
+                                  ></ymaps
+                                ></ymaps
+                              ></ymaps
+                            ></ymaps
+                          ></ymaps
+                        ></ymaps
+                      ></ymaps
+                    ><ymaps
+                      class="ymaps-2-1-79-controls__bottom"
+                      style="top: 425px"
+                    ></ymaps
+                    ><ymaps
+                      style="
+                        margin-right: 0px;
+                        margin-left: 0px;
+                        position: inherit;
+                        inset: 108px auto auto 10px;
+                      "
+                      class="ymaps-2-1-79-controls__control"
+                      ><ymaps
+                        ><ymaps class="ymaps-2-1-79-zoom" style="height: 150px"
+                          ><ymaps
+                            class="ymaps-2-1-79-zoom__plus ymaps-2-1-79-zoom__button ymaps-2-1-79-float-button ymaps-2-1-79-user-selection-none"
+                            unselectable="on"
+                            ><ymaps
+                              class="ymaps-2-1-79-zoom__icon ymaps-2-1-79-float-button-icon"
+                            ></ymaps></ymaps
+                          ><ymaps
+                            class="ymaps-2-1-79-zoom__minus ymaps-2-1-79-zoom__button ymaps-2-1-79-float-button ymaps-2-1-79-user-selection-none"
+                            unselectable="on"
+                            ><ymaps
+                              class="ymaps-2-1-79-zoom__icon ymaps-2-1-79-float-button-icon"
+                            ></ymaps></ymaps
+                          ><ymaps class="ymaps-2-1-79-zoom__scale"
+                            ><ymaps
+                              class="ymaps-2-1-79-zoom__runner ymaps-2-1-79-zoom__button ymaps-2-1-79-float-button ymaps-2-1-79-zoom__runner__transition ymaps-2-1-79-touch-action-none ymaps-2-1-79-user-selection-none"
+                              unselectable="on"
+                              style="top: 58px"
+                              ><ymaps
+                                class="ymaps-2-1-79-zoom__icon ymaps-2-1-79-float-button-icon ymaps-2-1-79-float-button-icon_icon_runner"
+                              ></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps
+                  ><ymaps
+                    style="
+                      top: 0px;
+                      left: 0px;
+                      position: absolute;
+                      z-index: 2004;
+                    "
+                    class="ymaps-2-1-79-places-pane"
+                    ><ymaps
+                      class="ymaps-2-1-79-placemark-overlay ymaps-2-1-79-user-selection-none"
+                      style="
+                        z-index: 700;
+                        height: 0px;
+                        width: 0px;
+                        position: absolute;
+                        left: 605px;
+                        top: 190px;
+                      "
+                      unselectable="on"
+                      ><ymaps
+                        ><ymaps class="ymaps-2-1-79-islets_icon-with-caption"
+                          ><ymaps
+                            class="ymaps-2-1-79-islets_icon-with-caption__caption-block"
+                            ><ymaps
+                              class="ymaps-2-1-79-islets_icon-caption"
+                              style="padding: 0px; max-width: 0px"
+                            ></ymaps></ymaps
+                          ><ymaps id="id_172985810602546923460"
+                            ><ymaps
+                              class="ymaps-2-1-79-svg-icon ymaps_https___api_maps_yandex_ru_2_1_79_46194813987islands_icon___FF0000_34x41_1729858106152"
+                              style="
+                                position: absolute;
+                                width: 34px;
+                                height: 41px;
+                                left: -11px;
+                                top: -38px;
+                              "
+                              ><ymaps
+                                class="ymaps-2-1-79-svg-icon-content"
+                                style="
+                                  font: 13px Arial, sans-serif;
+                                  position: absolute;
+                                  text-align: center;
+                                  left: 5px;
+                                  top: 6px;
+                                  width: 16px;
+                                  height: 16px;
+                                "
+                                ><ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps
+                    ><ymaps
+                      class="ymaps-2-1-79-placemark-overlay ymaps-2-1-79-user-selection-none"
+                      style="
+                        z-index: 650;
+                        height: 0px;
+                        width: 0px;
+                        position: absolute;
+                        left: 656px;
+                        top: 132px;
+                      "
+                      unselectable="on"
+                      ><ymaps
+                        ><ymaps class="ymaps-2-1-79-islets_icon-with-caption"
+                          ><ymaps
+                            class="ymaps-2-1-79-islets_icon-with-caption__caption-block"
+                            ><ymaps
+                              class="ymaps-2-1-79-islets_icon-caption"
+                              style="padding: 0px; max-width: 0px"
+                            ></ymaps></ymaps
+                          ><ymaps id="id_172985810602546923688"
+                            ><ymaps
+                              class="ymaps-2-1-79-svg-icon ymaps_https___api_maps_yandex_ru_2_1_79_46194813987islands_icon___1E98FF_34x41_1729858106664"
+                              style="
+                                position: absolute;
+                                width: 34px;
+                                height: 41px;
+                                left: -11px;
+                                top: -38px;
+                              "
+                              ><ymaps
+                                class="ymaps-2-1-79-svg-icon-content"
+                                style="
+                                  font: 13px Arial, sans-serif;
+                                  position: absolute;
+                                  text-align: center;
+                                  left: 5px;
+                                  top: 6px;
+                                  width: 16px;
+                                  height: 16px;
+                                "
+                                ><ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps
+                    ><ymaps
+                      class="ymaps-2-1-79-placemark-overlay ymaps-2-1-79-user-selection-none"
+                      style="
+                        z-index: 650;
+                        height: 0px;
+                        width: 0px;
+                        position: absolute;
+                        left: 515px;
+                        top: 57px;
+                      "
+                      unselectable="on"
+                      ><ymaps
+                        ><ymaps class="ymaps-2-1-79-islets_icon-with-caption"
+                          ><ymaps
+                            class="ymaps-2-1-79-islets_icon-with-caption__caption-block"
+                            ><ymaps
+                              class="ymaps-2-1-79-islets_icon-caption"
+                              style="padding: 0px; max-width: 0px"
+                            ></ymaps></ymaps
+                          ><ymaps id="id_172985810602546923725"
+                            ><ymaps
+                              class="ymaps-2-1-79-svg-icon ymaps_https___api_maps_yandex_ru_2_1_79_46194813987islands_icon___1E98FF_34x41_1729858106664"
+                              style="
+                                position: absolute;
+                                width: 34px;
+                                height: 41px;
+                                left: -11px;
+                                top: -38px;
+                              "
+                              ><ymaps
+                                class="ymaps-2-1-79-svg-icon-content"
+                                style="
+                                  font: 13px Arial, sans-serif;
+                                  position: absolute;
+                                  text-align: center;
+                                  left: 5px;
+                                  top: 6px;
+                                  width: 16px;
+                                  height: 16px;
+                                "
+                                ><ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps
+                    ><ymaps
+                      class="ymaps-2-1-79-placemark-overlay ymaps-2-1-79-user-selection-none"
+                      style="
+                        height: 0px;
+                        width: 0px;
+                        position: absolute;
+                        left: 596px;
+                        top: 176px;
+                        z-index: 0;
+                      "
+                      unselectable="on"
+                      ><ymaps
+                        class="ymaps-2-1-79-svg-icon ymaps_https___api_maps_yandex_ru_2_1_79_46194813987islands_clusterSmallIcon___1E98FF_46x46_1729858106665"
+                        style="
+                          position: absolute;
+                          width: 46px;
+                          height: 46px;
+                          left: -23px;
+                          top: -23px;
+                        "
+                        ><ymaps
+                          class="ymaps-2-1-79-svg-icon-content"
+                          style="
+                            font: 13px Arial, sans-serif;
+                            position: absolute;
+                            text-align: center;
+                            left: 0px;
+                            top: 16px;
+                            width: 46px;
+                            height: 16px;
+                          "
+                          ><ymaps>10</ymaps></ymaps
+                        ></ymaps
+                      ></ymaps
+                    ><ymaps
+                      class="ymaps-2-1-79-placemark-overlay ymaps-2-1-79-user-selection-none"
+                      style="
+                        height: 0px;
+                        width: 0px;
+                        position: absolute;
+                        left: 627px;
+                        top: 368px;
+                      "
+                      unselectable="on"
+                      ><ymaps
+                        class="ymaps-2-1-79-svg-icon ymaps_https___api_maps_yandex_ru_2_1_79_46194813987islands_clusterSmallIcon___1E98FF_46x46_1729858106665"
+                        style="
+                          position: absolute;
+                          width: 46px;
+                          height: 46px;
+                          left: -23px;
+                          top: -23px;
+                        "
+                        ><ymaps
+                          class="ymaps-2-1-79-svg-icon-content"
+                          style="
+                            font: 13px Arial, sans-serif;
+                            position: absolute;
+                            text-align: center;
+                            left: 0px;
+                            top: 16px;
+                            width: 46px;
+                            height: 16px;
+                          "
+                          ><ymaps>2</ymaps></ymaps
+                        ></ymaps
+                      ></ymaps
+                    ><ymaps
+                      class="ymaps-2-1-79-placemark-overlay ymaps-2-1-79-user-selection-none"
+                      style="
+                        height: 0px;
+                        width: 0px;
+                        position: absolute;
+                        left: 765px;
+                        top: 129px;
+                      "
+                      unselectable="on"
+                      ><ymaps
+                        class="ymaps-2-1-79-svg-icon ymaps_https___api_maps_yandex_ru_2_1_79_46194813987islands_clusterSmallIcon___1E98FF_46x46_1729858106665"
+                        style="
+                          position: absolute;
+                          width: 46px;
+                          height: 46px;
+                          left: -23px;
+                          top: -23px;
+                        "
+                        ><ymaps
+                          class="ymaps-2-1-79-svg-icon-content"
+                          style="
+                            font: 13px Arial, sans-serif;
+                            position: absolute;
+                            text-align: center;
+                            left: 0px;
+                            top: 16px;
+                            width: 46px;
+                            height: 16px;
+                          "
+                          ><ymaps>3</ymaps></ymaps
+                        ></ymaps
+                      ></ymaps
+                    ></ymaps
+                  ></ymaps
+                ></ymaps
+              ></ymaps
+            >
+          </div> -->
+          <script>
+            //<![CDATA[
+            require(["application_module"], function () {
+              require(["map_module"]);
+            });
+            //]]>
+          </script>
+        </div>
+        <div class="col-xs-12 col-lg-12">
+          <div class="js-card-footer"></div>
+        </div>
+        <div class="col-xs-12 col-lg-12">
+          <div class="h4">
+            Вам могут подойти эти варианты <i class="fas fa-arrow-down"></i>
+          </div>
+          <ul class="list-unstyled js-search-results">
+            <li
+              class="media clearfix object object_even"
+              element_id="130827590"
+            >
+              <div class="col-lg-5 col-md-4 col-sm-4">
+                <div
+                  class="object__gallery fotoramaAction fotorama"
+                  data-data='[{"img":"https://i.olan.ru/system/photos/entity/001/227/528/480/small/img.jpg?1727427097","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"130827590\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
+                  data-fotorama-active-index="0"
+                ></div>
+              </div>
+              <div class="col-lg-6 col-md-5 col-sm-8 col-xs-12 object__data">
+                <a
+                  class="header_adv_short yaSend"
+                  href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/130827590-78-0-m-etazh-1-14-12010500-rub-ul-krymskoy-vesny-korp-4"
+                  id="fake_href_id130827590"
+                  target=""
+                  yaparam="click_to_simular"
+                  >3-комнатная квартира в новостройке 78.0 м² этаж 1/14</a
+                >
+                <div
+                  class="fake_href_action object__description"
+                  data-blank="false"
+                  data-fake_href_id="130827590"
+                >
+                  <div class="object__lead">
+                    <span class="formatRub loaded-format-rub">12 010 500</span>
+                    <i class="fas fa-ruble-sign fa-sm"
+                      ><span class="hidden">₽</span></i
+                    >
+                  </div>
+                  <div class="text-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/sale-flat/newbuild/three-rooms"
+                      >ул Крымской весны</a
+                    >,
+                    <a
+                      rel="nofollow"
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/1/sale-flat/newbuild/three-rooms"
+                      >1</a
+                    >,
+                    <a
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/mikrorayon-zhigulina-roscha-27898969/sale-flat/newbuild/three-rooms"
+                      >микрорайон «Жигулина роща»</a
+                    >, корп. 4
+                  </div>
+                  <div
+                    class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                  >
+                    Пpоcтopная квapтира площадью 78,5 кв. мeтрa в 24 корпуcе ,
+                    кв. 12 ждет своегo cчacтливoгo владельца в жилом комплeкce
+                    "Жигулина Poщa"Kвaртиpа идeально подойдет для мoлодыx и
+                    aктивныx людей, ценящиx свoбоду и функциoнальнocть, а так же
+                    это отличный ваpи...
+                  </div>
+                </div>
+                <div class="object__status">
+                  <time
+                    class="smart_time object__date"
+                    datetime="2024-09-27 11:50:04 +0300"
+                    time_zone="3"
+                    >27 сен в 11:50</time
+                  >
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 object__meta">
+                <div class="object__owner">
+                  <div class="object__owner-name">
+                    <i class="far fa-building"></i>
+                    <noindex>застройщик</noindex>
+                  </div>
+                  <noindex
+                    ><button
+                      class="btn btn-xs object__show-phone btn-info js-reservation-contact-action"
+                      data-id="130827590"
+                    >
+                      <i class="fas fa-phone"></i> Забронировать
+                    </button></noindex
+                  >
+                </div>
+              </div>
+              <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
+                <span class="notepad_action"
+                  ><button
+                    class="ShowAdvNotepadAction object__actions-item"
+                    data-id="130827590"
+                    title="Добавить в избранное"
+                    type="button"
+                  >
+                    <i class="far fa-star"></i></button
+                ></span>
+              </div>
+            </li>
+            <li class="media clearfix object" element_id="130882173">
+              <div class="col-lg-5 col-md-4 col-sm-4">
+                <div
+                  class="object__gallery fotoramaAction fotorama"
+                  data-data='[{"img":"https://i.olan.ru/system/photos/entity/001/228/193/663/small/img.jpg?1727513532","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"130882173\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
+                  data-fotorama-active-index="0"
+                ></div>
+              </div>
+              <div class="col-lg-6 col-md-5 col-sm-8 col-xs-12 object__data">
+                <a
+                  class="header_adv_short yaSend"
+                  href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/130882173-73-0-m-etazh-8-14-10980000-rub-ul-krymskoy-vesny-korp-4"
+                  id="fake_href_id130882173"
+                  target=""
+                  yaparam="click_to_simular"
+                  >3-комнатная квартира в новостройке 73.0 м² этаж 8/14</a
+                >
+                <div
+                  class="fake_href_action object__description"
+                  data-blank="false"
+                  data-fake_href_id="130882173"
+                >
+                  <div class="object__lead">
+                    <span class="formatRub loaded-format-rub">10 980 000</span>
+                    <i class="fas fa-ruble-sign fa-sm"
+                      ><span class="hidden">₽</span></i
+                    >
+                  </div>
+                  <div class="text-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/sale-flat/newbuild/three-rooms"
+                      >ул Крымской весны</a
+                    >,
+                    <a
+                      rel="nofollow"
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/1/sale-flat/newbuild/three-rooms"
+                      >1</a
+                    >,
+                    <a
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/mikrorayon-zhigulina-roscha-27898969/sale-flat/newbuild/three-rooms"
+                      >микрорайон «Жигулина роща»</a
+                    >, корп. 4
+                  </div>
+                  <div
+                    class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                  >
+                    Пpocтoрнaя квapтира площадью 73,2 кв. мeтрa в 23 коpпуce ,
+                    кв. 3 ждет своегo cчacтливoгo владельца в жилом кoмплeкcе
+                    "Жигулинa Pощa"Kвaртирa идеально пoдoйдет для молoдыx и
+                    aктивных людей, цeнящих свободу и функциoнальнocть, а так же
+                    это отличный ваpиa...
+                  </div>
+                </div>
+                <div class="object__status">
+                  <time
+                    class="smart_time object__date"
+                    datetime="2024-09-28 11:50:24 +0300"
+                    time_zone="3"
+                    >28 сен в 11:50</time
+                  >
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 object__meta">
+                <div class="object__owner">
+                  <div class="object__owner-name">
+                    <i class="far fa-building"></i>
+                    <noindex>застройщик</noindex>
+                  </div>
+                  <noindex
+                    ><button
+                      class="btn btn-xs object__show-phone btn-info js-reservation-contact-action"
+                      data-id="130882173"
+                    >
+                      <i class="fas fa-phone"></i> Забронировать
+                    </button></noindex
+                  >
+                </div>
+              </div>
+              <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
+                <span class="notepad_action"
+                  ><button
+                    class="ShowAdvNotepadAction object__actions-item"
+                    data-id="130882173"
+                    title="Добавить в избранное"
+                    type="button"
+                  >
+                    <i class="far fa-star"></i></button
+                ></span>
+              </div>
+            </li>
+            <li class="media clearfix yandex-object object_even">
+              <div class="row"><div class="col-lg-12"></div></div>
+            </li>
+            <li class="media clearfix object" element_id="130888307">
+              <div class="col-lg-5 col-md-4 col-sm-4">
+                <div
+                  class="object__gallery fotoramaAction fotorama"
+                  data-data='[{"img":"https://i2.olan.ru/system/photos/entity/001/228/249/183/small/img.jpg?1727518248","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"130888307\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
+                  data-fotorama-active-index="0"
+                ></div>
+              </div>
+              <div class="col-lg-6 col-md-5 col-sm-8 col-xs-12 object__data">
+                <a
+                  class="header_adv_short yaSend"
+                  href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/130888307-79-0-m-etazh-3-14-11940000-rub-ul-krymskoy-vesny-korp-4"
+                  id="fake_href_id130888307"
+                  target=""
+                  yaparam="click_to_simular"
+                  >3-комнатная квартира в новостройке 79.0 м² этаж 3/14</a
+                >
+                <div
+                  class="fake_href_action object__description"
+                  data-blank="false"
+                  data-fake_href_id="130888307"
+                >
+                  <div class="object__lead">
+                    <span class="formatRub loaded-format-rub">11 940 000</span>
+                    <i class="fas fa-ruble-sign fa-sm"
+                      ><span class="hidden">₽</span></i
+                    >
+                  </div>
+                  <div class="text-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/sale-flat/newbuild/three-rooms"
+                      >ул Крымской весны</a
+                    >,
+                    <a
+                      rel="nofollow"
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/1/sale-flat/newbuild/three-rooms"
+                      >1</a
+                    >,
+                    <a
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/mikrorayon-zhigulina-roscha-27898969/sale-flat/newbuild/three-rooms"
+                      >микрорайон «Жигулина роща»</a
+                    >, корп. 4
+                  </div>
+                  <div
+                    class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                  >
+                    Пpоcтopнaя квартира площадью 79,6 кв. мeтрa в 23 коpпусе ,
+                    кв.153 ждет cвoeго cчacтливoгo владельца в жилом кoмплекce
+                    "Жигулина Роща"Квартиpa идеaльнo подойдeт для молoдых и
+                    aктивных людей, ценящиx свoбoду и функциональнocть, a тaк же
+                    этo oтличный ваpи...
+                  </div>
+                </div>
+                <div class="object__status">
+                  <time
+                    class="smart_time object__date"
+                    datetime="2024-09-28 13:08:59 +0300"
+                    time_zone="3"
+                    >28 сен в 13:08</time
+                  >
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 object__meta">
+                <div class="object__owner">
+                  <div class="object__owner-name">
+                    <i class="far fa-building"></i>
+                    <noindex>застройщик</noindex>
+                  </div>
+                  <noindex
+                    ><button
+                      class="btn btn-xs object__show-phone btn-info js-reservation-contact-action"
+                      data-id="130888307"
+                    >
+                      <i class="fas fa-phone"></i> Забронировать
+                    </button></noindex
+                  >
+                </div>
+              </div>
+              <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
+                <span class="notepad_action"
+                  ><button
+                    class="ShowAdvNotepadAction object__actions-item"
+                    data-id="130888307"
+                    title="Добавить в избранное"
+                    type="button"
+                  >
+                    <i class="far fa-star"></i></button
+                ></span>
+              </div>
+            </li>
+            <li
+              class="media clearfix object object_even"
+              element_id="130967093"
+            >
+              <div class="col-lg-5 col-md-4 col-sm-4">
+                <div
+                  class="object__gallery fotoramaAction fotorama"
+                  data-data='[{"img":"https://i5.olan.ru/system/photos/entity/001/229/187/101/small/img.jpg?1727648443","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"130967093\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
+                  data-fotorama-active-index="0"
+                ></div>
+              </div>
+              <div class="col-lg-6 col-md-5 col-sm-8 col-xs-12 object__data">
+                <a
+                  class="header_adv_short yaSend"
+                  href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/130967093-73-0-m-etazh-3-14-11230200-rub-ul-krymskoy-vesny-korp-4"
+                  id="fake_href_id130967093"
+                  target=""
+                  yaparam="click_to_simular"
+                  >3-комнатная квартира в новостройке 73.0 м² этаж 3/14</a
+                >
+                <div
+                  class="fake_href_action object__description"
+                  data-blank="false"
+                  data-fake_href_id="130967093"
+                >
+                  <div class="object__lead">
+                    <span class="formatRub loaded-format-rub">11 230 200</span>
+                    <i class="fas fa-ruble-sign fa-sm"
+                      ><span class="hidden">₽</span></i
+                    >
+                  </div>
+                  <div class="text-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/sale-flat/newbuild/three-rooms"
+                      >ул Крымской весны</a
+                    >,
+                    <a
+                      rel="nofollow"
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/ul-krymskoy-vesny/1/sale-flat/newbuild/three-rooms"
+                      >1</a
+                    >,
+                    <a
+                      href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/mikrorayon-zhigulina-roscha-27898969/sale-flat/newbuild/three-rooms"
+                      >микрорайон «Жигулина роща»</a
+                    >, корп. 4
+                  </div>
+                  <div
+                    class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                  >
+                    Простoрнaя квартира площадью 73,4 кв. мeтрa в 23 корпуce ,
+                    кв. 5 ждeт своeго cчacтливoгo владельца в жилoм кoмплeкce
+                    "Жигулина Рoща"Квартиpа идеальнo пoдойдет для мoлoдыx и
+                    активных людей, ценящих свoбоду и функциональнocть, a так же
+                    этo отличный ваpиa...
+                  </div>
+                </div>
+                <div class="object__status">
+                  <time
+                    class="smart_time object__date"
+                    datetime="2024-09-30 01:18:38 +0300"
+                    time_zone="3"
+                    >30 сен в 01:18</time
+                  >
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 object__meta">
+                <div class="object__owner">
+                  <div class="object__owner-name">
+                    <i class="far fa-building"></i>
+                    <noindex>застройщик</noindex>
+                  </div>
+                  <noindex
+                    ><button
+                      class="btn btn-xs object__show-phone btn-info js-reservation-contact-action"
+                      data-id="130967093"
+                    >
+                      <i class="fas fa-phone"></i> Забронировать
+                    </button></noindex
+                  >
+                </div>
+              </div>
+              <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
+                <span class="notepad_action"
+                  ><button
+                    class="ShowAdvNotepadAction object__actions-item"
+                    data-id="130967093"
+                    title="Добавить в избранное"
+                    type="button"
+                  >
+                    <i class="far fa-star"></i></button
+                ></span>
+              </div>
+            </li>
+          </ul>
+          <div class="yandex_content row"><div class="col-lg-12"></div></div>
+          <div class="h4">
+            Посмотрите также <i class="fas fa-location-arrow"></i>
+          </div>
+          <ol class="breadcrumb">
+            <li class="small">
+              <a
+                class="yaSend"
+                yaparam="click_to_sections_in_fullview"
+                href="https://olan.ru/r-n-simferopolskiy/sale-flat/newbuild/three-rooms"
+                >р-н Симферопольский</a
+              >
+            </li>
+            <li class="small">
+              <a
+                class="yaSend"
+                yaparam="click_to_sections_in_fullview"
+                href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms"
+                >продажа 3к квартир в новостройках с Мирное</a
+              >
+            </li>
+          </ol>
+          <div class="breadcrumb-filter">
+            <div class="breadcrumb-filter__inner">
+              <div class="breadcrumb-filter__list">
+                <a
+                  class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                  yaparam="click_to_breadcrumbs_badge"
+                  href="https://olan.ru/r-n-simferopolskiy/sale-flat/cheap"
+                  >недорого </a
+                ><a
+                  class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                  yaparam="click_to_breadcrumbs_badge"
+                  href="https://olan.ru/r-n-simferopolskiy/sale-flat/map"
+                  >на карте </a
+                ><a
+                  class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                  yaparam="click_to_breadcrumbs_badge"
+                  href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/twenty-millions"
+                  >до 20 миллионов </a
+                ><a
+                  class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                  yaparam="click_to_breadcrumbs_badge"
+                  href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/thirty-millions"
+                  >до 30 миллионов </a
+                ><a
+                  class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                  yaparam="click_to_breadcrumbs_badge"
+                  href="https://olan.ru/r-n-simferopolskiy/sale-flat/fifteen-millions"
+                  >до 15 миллионов </a
+                ><a
+                  class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                  yaparam="click_to_breadcrumbs_badge"
+                  href="https://olan.ru/r-n-simferopolskiy/sale-flat/twenty-five-millions"
+                  >до 25 миллионов
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">
+                  Электронная база недвижимости
+                </div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Правила и условия
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer"
+                        >Оферта</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules"
+                        >Правила</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Пользователям
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml"
+                        >Пакетная загрузка</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs"
+                        >Тарифы</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment"
+                        >Способы оплаты</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Общая информация
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about"
+                        >О проекте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts"
+                        >Техподдержка сайта</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

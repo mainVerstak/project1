@@ -51,6 +51,11 @@ a:visited {
   height: 14px;
   fill: currentColor;
 }
+.icon-info {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
 
 /* Buttons */
 .btn {
@@ -678,6 +683,9 @@ header .navbar-default .navbar-right .navbar-nav {
 .breadcrumb .small {
   font-size: 14px;
 }
+.breadcrumb-filter {
+  margin-bottom: 20px;
+}
 
 .breadcrumb-filter .breadcrumb-filter__list {
   display: flex;
@@ -697,12 +705,13 @@ header .navbar-default .navbar-right .navbar-nav {
 .breadcrumb-filter .breadcrumb-filter__item:hover {
   background-image: none;
   filter: none;
-  background-color: var(--color-white);
   border-radius: var(--border-radius);
   padding: var(--padding-btn-small);
-  color: var(--color-grey-text);
-  border: 1px solid var(--color-border);
   font-weight: 400;
+  text-decoration: none;
+  background-color: var(--color-grey-superlight);
+  border: 1px solid var(--color-border);
+  color: var(--color-grey-dark);
 }
 
 /* Subscribe */
@@ -784,4 +793,345 @@ header .navbar-default .navbar-right .navbar-nav {
 .review-box .input-group .btn {
   margin: 0;
   border-radius: var(--border-radius);
+}
+
+/* Footer */
+/* Old styles for footer */
+.footer__inner {
+  display: flex;
+}
+.footer__left {
+  max-width: 236px;
+  width: 100%;
+  margin-right: 50px;
+}
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.footer__nav-column:first-child {
+  min-width: 250px;
+}
+.footer__nav-column {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.footer__nav-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.footer__nav-item {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer__copy {
+  margin-bottom: 16px;
+}
+.footer__nav-item-title {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+/* New styles for footer */
+.container {
+  border-radius: 0 0 var(--border-radius-big) var(--border-radius-big);
+}
+.footer {
+  background: var(--color-grey-superlight);
+  color: var(--color-grey-text);
+  padding: 25px 15px 35px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+.footer__nav-item-title {
+  color: var(--color-grey-dark);
+}
+.footer__nav-link {
+  color: var(--color-grey-text);
+}
+.footer__nav-link:hover {
+  color: var(--color-grey-dark);
+}
+.footer__nav-link:focus {
+  color: var(--color-grey-dark);
+}
+
+/* Announce info */
+.ds-annouce-info .small.text-muted {
+  color: var(--color-grey-dark);
+  font-size: 14px;
+}
+
+.panel-body-adv-block noindex {
+  display: flex;
+  gap: 3px;
+}
+.panel-body-adv-block a i {
+  font-size: 14px;
+}
+.panel-body-adv-block .notepad_action {
+  display: flex;
+  gap: 3px;
+}
+.panel-body-adv-block {
+  display: flex;
+  gap: 3px;
+}
+
+.ds-social {
+  display: flex;
+  gap: 5px;
+}
+.ds-social .btn-social-icon > :first-child {
+  font-size: 14px;
+}
+.btn-favorite-icon {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 34px;
+  width: 34px;
+  padding: 0;
+}
+
+/* Slider big */
+.fotorama__stage {
+  border-radius: var(--border-radius);
+}
+.apartment-desc {
+  background-color: var(--color-grey-superlight);
+  border-radius: var(--border-radius);
+}
+.apartment-desc__owner {
+  color: var(--color-grey-text);
+}
+.apartment-desc__item a {
+  font-weight: 500;
+}
+
+/* Mortgage */
+.mortgage-container {
+  margin: 0 15px;
+}
+.mortgage-calc-blok {
+  margin-top: 15px;
+  background-color: var(--color-grey-superlight);
+  border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
+  border: 1px solid var(--color-blue);
+}
+.mortgage-calc-blok p {
+  margin: 0;
+}
+.calc-mortgage {
+  color: var(--color-grey-dark);
+  background: none;
+  padding: 15px 0;
+  margin: 0;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.calc-mortgage__top {
+  padding: 0;
+}
+.calc-mortgage__bottom {
+  padding: 0;
+}
+.calc-mortgage__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-grey-dark);
+}
+.calc-mortgage__input.calc-mortgage__input_disabled input {
+  color: var(--color-white);
+  background: var(--color-blue);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px 40px 0 8px;
+}
+.calc-mortgage__input-c {
+  right: -17px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-grey-text);
+}
+.calc-mortgage__input input {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-grey-text);
+}
+.calc-mortgage-price,
+.calc-mortgage-summ {
+  width: 94% !important;
+}
+.calc-mortgage-rate {
+  width: 92% !important;
+}
+
+.calc-mortgage .rangeslider__fill {
+  background: var(--color-blue);
+  border-radius: 2px 0px 0px 2px;
+  height: 4px;
+}
+.calc-mortgage .rangeslider__fill::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+.calc-mortgage .rangeslider--horizontal {
+  height: 4px;
+  background: var(--color-white);
+  position: relative;
+  margin: 16px 0;
+}
+.calc-mortgage__result::after,
+.calc-mortgage__result::before {
+  content: none;
+}
+/* .calc-mortgage__result {
+  width: 100%;
+  justify-content: center;
+} */
+.calc-mortgage__result .calc-mortgage__sum {
+  font-size: 21px;
+  color: var(--color-blue);
+  margin-right: 10px;
+  margin-left: 150px;
+}
+.calc-mortgage__result .calc-mortgage__note {
+  font-size: 14px;
+  color: var(--color-grey-text);
+  max-width: unset;
+}
+
+.mortgage-table-blok {
+  border: 1px solid var(--color-blue);
+  border-top: none;
+  border-radius: 0 0 var(--border-radius-big) var(--border-radius-big);
+}
+.table-mortgage {
+  font-size: 12px;
+  color: var(--color-blue);
+  margin-bottom: 15px;
+}
+.table-mortgage th {
+  line-height: 18px;
+}
+.table-mortgage-header {
+  color: var(--color-grey-text);
+}
+.table-mortgage tr {
+  position: relative;
+  border: none;
+}
+
+.table-mortgage tr:first-child::after {
+  border-bottom: 1px solid var(--color-border);
+}
+.table-mortgage tr::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 30px);
+  left: -15px;
+  bottom: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.table-mortgage__name {
+  font-size: 14px;
+}
+.table-mortgage td:nth-child(5),
+.table-mortgage th:nth-child(5) {
+  width: 45px;
+}
+
+.table-mortgage-btn {
+  padding: var(--padding-btn-small);
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  height: 37px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.table-mortgage-btn:hover {
+  background-color: var(--color-blue-hover);
+}
+.table-mortgage-show {
+  padding: var(--padding-btn-small);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  color: var(--color-grey-text);
+  height: 37px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+.table-mortgage-show:hover {
+  background-color: var(--color-grey-superlight);
+  border: 1px solid var(--color-border);
+  color: var(--color-grey-dark);
+}
+.table-mortgage__btn-popover {
+  padding: var(--padding-btn-small);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  color: var(--color-grey-text);
+  margin-right: 5px;
+  display: inline-block;
+}
+.table-mortgage__btn-popover svg {
+  margin-top: 4px;
+}
+.table-mortgage__btn-popover:hover {
+  background-color: var(--color-grey-superlight);
+  border: 1px solid var(--color-border);
+  color: var(--color-grey-dark);
+}
+
+/* Map */
+.map {
+  width: auto;
+  height: 425px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
