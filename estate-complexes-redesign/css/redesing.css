@@ -366,6 +366,19 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   .checkbox:has(input[type="checkbox"]:checked).checkbox:hover {
   border: 1px solid var(--color-border);
 }
+@media screen and (max-width: 900px) {
+  #searchFormModal .modal-body .form-group + .btn-group label {
+    font-size: 14px;
+    padding: var(--padding-btn-small) !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #searchFormModal .modal-body .form-group + .btn-group label {
+    font-size: 14px;
+    padding: var(--padding-btn-small) !important;
+    width: 100%;
+  }
+}
 
 /*Header */
 .header-top-nav {
