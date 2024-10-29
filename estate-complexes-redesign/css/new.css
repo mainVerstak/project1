@@ -1,7 +1,7 @@
 .ds-slider {
   position: relative;
   margin-bottom: 20px;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .ds-slider .modal {
@@ -190,7 +190,7 @@ body:has(.ds-info) .ds-slider {
   padding: 16px 0;
   border: 1px solid #e5e5e5;
   border-top: 0;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 600px) {
   .ds-info {
@@ -273,7 +273,7 @@ body:has(.ds-info) .ds-slider {
 
 .characteristics {
   margin-bottom: 50px;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 600px) {
   .characteristics {
@@ -450,7 +450,7 @@ body:has(.ds-info) .ds-slider {
 
 .appartments {
   margin-bottom: 50px;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 600px) {
   .appartments {
@@ -693,7 +693,7 @@ body:has(.ds-info) .ds-slider {
 
 .ds-progress {
   margin-bottom: 50px;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 600px) {
   .ds-progress {
@@ -768,7 +768,7 @@ body:has(.ds-info) .ds-slider {
 
 .ds-docs {
   margin-bottom: 50px;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 600px) {
   .ds-docs {
@@ -827,12 +827,12 @@ body:has(.ds-info) .ds-slider {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .ds-chart {
   margin-bottom: 50px;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 600px) {
   .ds-chart {
@@ -1038,7 +1038,7 @@ body:has(.ds-info) .ds-slider {
 
 .ds-map {
   margin-bottom: 50px;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 600px) {
   .ds-map {

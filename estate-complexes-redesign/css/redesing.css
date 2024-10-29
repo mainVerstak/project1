@@ -65,6 +65,11 @@ a:visited {
   vertical-align: bottom;
   border-radius: var(--border-radius);
   padding: var(--padding-btn-small);
+  font-weight: 500;
+  line-height: 1.314;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .btn-default:active,
@@ -87,6 +92,8 @@ a:visited {
 .btn-xs {
   padding: var(--padding-btn-small);
   font-size: 14px;
+  /* height: 32px !important; */
+  line-height: 1.314;
 }
 
 .btn-default {
@@ -96,7 +103,10 @@ a:visited {
   border-radius: var(--border-radius);
   color: var(--color-grey-text);
   border: 1px solid var(--color-border);
-  font-weight: 400;
+  padding: var(--padding-btn-small);
+  font-weight: 500;
+  line-height: 1.314;
+  /* height: 32px !important; */
 }
 .btn-default:hover {
   background-color: var(--color-grey-superlight);
@@ -136,6 +146,7 @@ a:visited {
   font-size: 14px;
   font-weight: 500 !important;
   color: var(--color-grey-text) !important;
+  padding: var(--padding-btn-small);
   margin: 0 !important;
   border: none !important;
   border-radius: 0 !important;
@@ -143,8 +154,13 @@ a:visited {
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
-  border-bottom: 1px solid var(--color-border) !important;
+  border-bottom: 1px solid var(--color-grey-superlight) !important;
 }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 5px 10px;
+}
+
 .dropdown-menu li a:hover {
   background-color: var(--color-grey-superlight);
   background-image: none !important;
@@ -217,10 +233,13 @@ a:visited {
 input.form-control {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
+  padding: var(--padding-btn-small);
+  height: unset;
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 14px !important;
+  height: 32px !important;
 }
 input.form-control:focus {
   text-shadow: none;
@@ -270,10 +289,11 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   padding: 5px;
 }
 .input-group-sm input.form-control {
-  height: auto !important;
+  height: unset !important;
   font-size: 14px !important;
   width: 38px !important;
   padding: var(--padding-btn-small) !important;
+  line-height: 1.314;
 }
 
 /* Checkbox */
@@ -436,6 +456,7 @@ header .pull-left .navbar-brand {
 header .navbar-default .navbar-nav > li > a {
   background-image: none;
   filter: none;
+  height: 32px !important;
   background-color: var(--color-white);
   border-radius: var(--border-radius);
   color: var(--color-grey-text);
@@ -451,6 +472,10 @@ header .container-fluid {
 }
 header .navbar-default .navbar-right .navbar-nav {
   margin-left: 10px;
+}
+.navbar-link {
+  font-weight: 500 !important;
+  line-height: 1.2;
 }
 
 .sidenav__close {
@@ -488,6 +513,10 @@ header .navbar-default .navbar-right .navbar-nav {
   border-radius: var(--border-radius-big);
   box-shadow: none;
   background-image: none;
+}
+
+.well-sm {
+  padding: 9px 9px 4px 9px;
 }
 
 @media (max-width: 768px) {
@@ -561,6 +590,11 @@ header .navbar-default .navbar-right .navbar-nav {
   background-color: var(--color-grey-dark);
   border: 1px solid var(--color-grey-dark);
   color: var(--color-white);
+}
+.search_buttons {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
 }
 
 /* Search preview */
@@ -740,6 +774,16 @@ header .navbar-default .navbar-right .navbar-nav {
   .object__actions {
     right: -15px !important;
   }
+}
+@media (min-width: 768px) {
+  .container:not(.full-size) .object .object__lead,
+  .modal .object .object__lead {
+    font-size: 28px;
+  }
+}
+
+.fotorama__img {
+  object-fit: contain;
 }
 
 .object .header_adv_short {
@@ -1136,6 +1180,9 @@ header .navbar-default .navbar-right .navbar-nav {
 }
 .apartment-desc__owner {
   color: var(--color-grey-text);
+}
+.apartment-desc__item {
+  padding: 0px 10px 10px 10px;
 }
 .apartment-desc__item a {
   font-weight: 500;
