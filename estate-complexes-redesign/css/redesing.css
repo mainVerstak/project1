@@ -70,6 +70,7 @@ a:visited {
   display: flex;
   align-items: center;
   gap: 5px;
+  height: 32px !important;
 }
 
 .btn-default:active,
@@ -92,7 +93,7 @@ a:visited {
 .btn-xs {
   padding: var(--padding-btn-small);
   font-size: 14px;
-  /* height: 32px !important; */
+  height: 32px !important;
   line-height: 1.314;
 }
 
@@ -106,7 +107,6 @@ a:visited {
   padding: var(--padding-btn-small);
   font-weight: 500;
   line-height: 1.314;
-  /* height: 32px !important; */
 }
 .btn-default:hover {
   background-color: var(--color-grey-superlight);
@@ -514,12 +514,14 @@ header .navbar-default .navbar-right .navbar-nav {
   box-shadow: none;
   background-image: none;
 }
-
 .well-sm {
   padding: 9px 9px 4px 9px;
 }
 
 @media (max-width: 768px) {
+  .well-sm {
+    padding: var(--padding-btn-small);
+  }
   .searchFormPage.well {
     background-color: var(--color-blue);
   }
@@ -591,8 +593,8 @@ header .navbar-default .navbar-right .navbar-nav {
   border: 1px solid var(--color-grey-dark);
   color: var(--color-white);
 }
-.search_buttons {
-  display: flex !important;
+.searchFormPage .form-group.pull-right.search_buttons {
+  display: flex;
   align-items: center;
   gap: 5px;
 }
@@ -613,6 +615,7 @@ header .navbar-default .navbar-right .navbar-nav {
 }
 .search-result-preview .small {
   font-size: 14px;
+  color: var(--color-grey-dark);
 }
 .search-result-preview .row {
   display: flex;
@@ -627,6 +630,45 @@ header .navbar-default .navbar-right .navbar-nav {
   padding: 5px 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .search-result-preview {
+    margin-bottom: 58px;
+  }
+  .search-result-preview .row {
+    flex-direction: column;
+  }
+  .search-result-preview .col-xs-7 {
+    width: 100%;
+  }
+  .search-result-preview .col-xs-5 {
+    position: relative;
+    width: 100%;
+    margin-top: -25px;
+    padding: 0;
+    top: 52px;
+    color: var(--color-grey-text);
+  }
+  .search-result-preview .col-xs-5 .pull-right {
+    float: none !important;
+    display: flex;
+    justify-content: center;
+  }
+  .search-result-preview .col-xs-5 .btn-group {
+    width: 100%;
+  }
+  .search-result-preview .col-xs-5 .button-dropdown {
+    width: 100%;
+  }
+  .search-result-preview .col-xs-5 .dropdown-toggle {
+    color: var(--color-grey-text);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.314;
+  }
+}
+
 /* Cards */
 .object {
   background-color: var(--color-grey-superlight);
@@ -634,8 +676,9 @@ header .navbar-default .navbar-right .navbar-nav {
   padding: 5px 0;
   margin-top: 5px;
 }
-.object.hot {
+.object.object_marked {
   background-color: var(--color-yellow-bg);
+  box-shadow: none;
 }
 
 .object .object__gallery,
@@ -780,10 +823,6 @@ header .navbar-default .navbar-right .navbar-nav {
   .modal .object .object__lead {
     font-size: 28px;
   }
-}
-
-.fotorama__img {
-  object-fit: contain;
 }
 
 .object .header_adv_short {
@@ -1009,7 +1048,7 @@ header .navbar-default .navbar-right .navbar-nav {
 }
 
 .ds-tabs .ds-item {
-  margin: 10px 0;
+  margin: 5px 0;
   padding: 10px;
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
@@ -1046,6 +1085,13 @@ header .navbar-default .navbar-right .navbar-nav {
 .review-box .input-group .btn {
   margin: 0;
   border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+  .review-box .well .input-group {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 /* Footer */
@@ -1104,6 +1150,38 @@ header .navbar-default .navbar-right .navbar-nav {
   font-weight: 700;
 }
 
+@media only screen and (max-width: 991px) {
+  .footer {
+    padding: 12px 0 50px;
+  }
+  .footer__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .footer__left {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    max-width: 100%;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .footer__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .footer__nav-list {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0;
+    margin-bottom: 16px;
+  }
+}
+
 /* New styles for footer */
 .container {
   border-radius: 0 0 var(--border-radius-big) var(--border-radius-big);
@@ -1158,15 +1236,20 @@ header .navbar-default .navbar-right .navbar-nav {
 .ds-social .btn-social-icon > :first-child {
   font-size: 14px;
 }
+.ds-social .btn-social-icon {
+  height: 32px;
+  width: 32px;
+}
 .btn-favorite-icon {
   position: relative;
+  justify-content: center;
   padding-left: 44px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 34px;
-  width: 34px;
+  height: 32px;
+  width: 32px;
   padding: 0;
 }
 
@@ -1189,6 +1272,20 @@ header .navbar-default .navbar-right .navbar-nav {
 }
 
 /* Mortgage */
+.calc-mortgage__input input {
+  height: 32px;
+  letter-spacing: unset;
+}
+.calc-mortgage__sum {
+  letter-spacing: 0.075em;
+}
+.calc-mortgage__label {
+  margin-bottom: 12px;
+}
+.calc-mortgage .rangeslider--horizontal {
+  margin: 10px 0;
+}
+
 .mortgage-container {
   margin: 0 15px;
 }
@@ -1383,6 +1480,11 @@ header .navbar-default .navbar-right .navbar-nav {
   background-color: var(--color-grey-superlight);
   border: 1px solid var(--color-border);
   color: var(--color-grey-dark);
+}
+
+.calc-mortgage__mobile-btn button {
+  background-color: var(--color-blue);
+  font-size: 16px;
 }
 
 /* Map */
