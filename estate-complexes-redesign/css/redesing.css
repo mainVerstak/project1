@@ -165,7 +165,9 @@ a:visited {
   border-bottom: 1px solid var(--color-grey-superlight) !important;
 }
 .dropdown-menu > li > a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 5px 10px;
 }
 
@@ -485,6 +487,13 @@ header .container-fluid {
 header .sidenav__inner ul li {
   margin-left: 10px;
 }
+header .sidenav__inner .dropdown-menu.sub-menu {
+  margin-top: 5px;
+  border-radius: var(--border-radius);
+}
+header .sidenav__inner .dropdown-menu.sub-menu li {
+  margin-left: 0px;
+}
 .navbar-link {
   font-weight: 500 !important;
   line-height: 1.4;
@@ -499,7 +508,31 @@ header .sidenav__inner ul li {
   color: var(--color-grey-text);
 }
 
-@media (max-width: 768px) {
+header .dropdown.nav.open .dropdown-menu.sub-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav > li > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+button.navbar-toggle.sidenav-button {
+  padding: 6px 9px;
+  color: var(--color-grey-text);
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .active > a {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-grey-dark);
+}
+
+@media (max-width: 767px) {
   header .sidenav_open .header-city-btn {
     display: none;
   }
@@ -540,6 +573,7 @@ header .sidenav__inner ul li {
   }
   header .sidenav__inner ul li {
     padding: 0;
+    margin-left: 0;
   }
   header .navbar-default .navbar-nav > li > a {
     height: unset !important;
@@ -550,13 +584,6 @@ header .sidenav__inner ul li {
   header .navbar-default .navbar-btn {
     margin: 30px 20px;
   }
-  .navbar-default .navbar-nav > .open > a,
-  .navbar-default .navbar-nav > .active > a {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: none;
-  }
   header .dropdown.nav.open .dropdown-menu.sub-menu li a {
     border: none !important;
     border-radius: 0 !important;
@@ -566,6 +593,14 @@ header .sidenav__inner ul li {
   header .dropdown.nav.open .dropdown-menu.sub-menu {
     border: none !important;
     border-radius: 0 !important;
+  }
+  .sidenav .navbar-toggle {
+    width: 34px;
+    margin: 0;
+    position: relative;
+  }
+  header .navbar-btn .btn-warning {
+    width: fit-content;
   }
 }
 
