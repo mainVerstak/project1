@@ -482,7 +482,7 @@ header .navbar-default .navbar-btn {
 header .container-fluid {
   padding: 0;
 }
-header .navbar-default .navbar-right .navbar-nav {
+header .sidenav__inner ul li {
   margin-left: 10px;
 }
 .navbar-link {
@@ -500,31 +500,72 @@ header .navbar-default .navbar-right .navbar-nav {
 }
 
 @media (max-width: 768px) {
+  header .sidenav_open .header-city-btn {
+    display: none;
+  }
+  header .sidenav.loaded.sidenav_open .sidenav__hide-desktop:first-child {
+    border: none;
+  }
   header .sidenav__inner {
     padding-top: 70px;
   }
   header .sidenav__inner ul .nav.navbar-nav {
-    margin: 5px 15px;
+    padding: 0;
+    margin-left: 0;
+  }
+  header .sidenav__inner ul .nav.navbar-nav a {
     border: none;
   }
-  header .sidenav.loaded.sidenav_open .sidenav__hide-desktop {
-    margin: 5px 15px;
+  header .sidenav__inner ul .nav.navbar-nav a:focus {
     border: none;
-    padding-left: 0;
+    border-radius: 0;
+    outline: none;
+  }
+  header .sidenav__inner ul .nav.navbar-nav a:focus .navbar-link {
+    border: none;
+    border-radius: 0;
+    outline: none;
+    color: var(--color-grey-dark);
+  }
+  header .sidenav.loaded.sidenav_open .sidenav__hide-desktop {
+    padding: 0;
   }
   header .sidenav.loaded.sidenav_open .sidenav__hide-desktop a {
     border: none;
-    padding-left: 0;
+  }
+  header .sidenav.loaded.sidenav_open .sidenav__hide-desktop a:focus {
+    border: none;
+    border-radius: 0;
+    outline: none;
   }
   header .sidenav__inner ul li {
-    margin: 5px 15px;
-    border: none;
+    padding: 0;
   }
-  header .nav.navbar-nav.navbar-right .sidenav__hide-desktop:nth-child(4) {
-    margin-top: 30px;
-  }
-  .sidenav .navbar-nav > li {
+  header .navbar-default .navbar-nav > li > a {
+    height: unset !important;
+    padding: 12px 20px;
     border: none;
+    border-radius: 0;
+  }
+  header .navbar-default .navbar-btn {
+    margin: 30px 20px;
+  }
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .active > a {
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+  }
+  header .dropdown.nav.open .dropdown-menu.sub-menu li a {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 8px 20px;
+    color: var(--color-grey-text);
+  }
+  header .dropdown.nav.open .dropdown-menu.sub-menu {
+    border: none !important;
+    border-radius: 0 !important;
   }
 }
 
