@@ -603,6 +603,11 @@ button.navbar-toggle.sidenav-button {
     width: fit-content;
   }
 }
+header strong,
+.balance-currency {
+  color: var(--color-grey-dark);
+  font-weight: 700;
+}
 
 /* Form */
 .well {
@@ -670,6 +675,12 @@ button.navbar-toggle.sidenav-button {
   #searchFormModal .modal-footer .map_search_btn {
     margin: 0 12px 0 0 !important;
     width: 48.9% !important;
+  }
+  #searchFormModal .modal-footer .btn {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
   }
 }
 .searchFormPage.well .search_form_action .btn-group .dropdown-toggle {
