@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/redesing.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=f7a95177-e487-4090-8246-d9d8f3e046dc&lang=ru_RU"></script>
+    <script src="js/yamap.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                  Москва
+                  <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Выписки из ЕГРН"
+                yaparam="header_document_click"
+              >
+                <i class="fa fa-edit fa-lg"></i>
+                Выписки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <i class="fas fa-money-bill-wave"></i>
+                Тарифы и цены
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <i class="fas fa-file-code"></i>
+                Пакетная загрузка
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="sidenav loaded">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="fas fa-map-marker-alt"></i>
+                        Москва
+                        <span class="caret"></span>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <i class="fa fa-user-plus"></i>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="navbar-btn nav-font-color">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <i class="fa fa-plus fa-lg"></i>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <i class="fas fa-money-bill-wave"></i>
+                      Тарифы и цены
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <i class="fa fa-edit fa-lg"></i>
+                      Выписки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <i class="fas fa-file-code"></i>
+                      Пакетная загрузка
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                aria-label="Close"
+                class="navbar-toggle sidenav__close"
+                type="button"
+              >
+                <span></span>
+                <span></span>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="ds-slider">
+        <div class="ds-favorite">
+          <button class="ds-fav-btn js-share">
+            <i class="fas fa-ellipsis-h"></i>
+          </button>
+          <div class="ds-share">
+            <button class="close"><i class="fas fa-times"></i></button>
+            <h3 class="card-complex__name">Поделитесь объявлением</h3>
+            сюда код яндекса вставите чтобы поделиться в соц. сетях
+          </div>
+          <!-- <button class="ds-fav-btn js-fav fav-btn">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-heart"></i>
+          </button> -->
+          <form
+            class="button_to fv-form fv-form-bootstrap"
+            method="post"
+            action="#"
+            data-remote="true"
+            novalidate="novalidate"
+          >
+            <button
+              type="submit"
+              class="fv-hidden-submit"
+              style="display: none; width: 0px; height: 0px"
+            ></button
+            ><button
+              class="ds-fav-btn fav-btn js-fav"
+              title="Добавить в избранное"
+              type="submit"
+            >
+              <i class="far fa-heart"></i></button
+            ><input
+              type="hidden"
+              name="authenticity_token"
+              value="sAKqciAtvDj4ZzuKZ7ektbsxBYLE+PsKU7sAotX8MK4+vBxhKRbq1YlPkeu8ANxVjkHtyviCHk7NCQzJ2YU7xw=="
+            />
+          </form>
+        </div>
+
+        <div class="swiper ds-swiper-2 js-slider-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper js-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/img.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/img2.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="ds-slider__wrap"
+                style="background-image: url('img/slide.jpg')"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-slider__content">
+          <h1 class="ds-slider__title">ЖК «Поклонная 9»</h1>
+          <p class="ds-slider__price">от 59,23 млн до 387,13 млн ₽</p>
+          <p class="ds-slider__price-meter">от 1 170 680 до 1 666 865 ₽/м²</p>
+
+          <div class="ds-slider__btns">
+            <a href="#" class="ds-button">Забронировать</a>
+            <!-- <a href="#" class="btn btn-default">Перезвоните мне</a> -->
+          </div>
+        </div>
+
+        <div class="ds-slider__nav">
+          <div class="ds-slider__prev">
+            <svg class="icon-small">
+              <use href="./img/icons.svg#arrow_prev"></use>
+            </svg>
+          </div>
+          <div class="ds-slider__next">
+            <svg class="icon-small">
+              <use href="./img/icons.svg#arrow_next"></use>
+            </svg>
+          </div>
+        </div>
+
+        <script>
+          var swiperThumb = new Swiper(".js-slider-2", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+          });
+
+          var dsswiper = new Swiper(".js-slider", {
+            navigation: {
+              nextEl: ".ds-slider__next",
+              prevEl: ".ds-slider__prev",
+            },
+            thumbs: {
+              swiper: swiperThumb,
+              slideThumbActiveClass: "swiper-slide-thumb-active",
+            },
+          });
+        </script>
+      </div>
+
+      <!-- Удаление под вопросом, по этому оставляю этот блок кода в комментариях -->
+      <div class="ds-info">
+        <div class="ds-info__wrap">
+          <div class="ds-info__col">
+            <div class="ds-info__content">
+              Срок сдачи
+              <span>4 кв. 2024 – 4 кв. 2025</span>
+            </div>
+          </div>
+          <div class="ds-info__col">
+            <div class="ds-info__content">
+              Класс жилья
+              <span>бизнес</span>
+            </div>
+          </div>
+          <div class="ds-info__col">
+            <div class="ds-info__content">
+              Тип дома
+              <span>кирпично-монолитный</span>
+            </div>
+          </div>
+          <div class="ds-info__col">
+            <!-- <img class="ds-info__img" src="./img/slide.jpg" alt="" /> -->
+            <div class="ds-info__content">
+              Число корпусов
+              <a href="#">25</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="characteristics">
+        <div class="characteristics__head">
+          <div class="characteristics__left">
+            <div class="characteristics__subtitle">Расположение</div>
+            <div class="ds-title">
+              Москва, Западный административный округ, район Дорогомилово,
+              Поклонная улица, вл9
+            </div>
+            <ul class="characteristics__list">
+              <li>
+                <svg class="icon-small">
+                  <use href="./img/icons.svg#metro"></use>
+                </svg>
+                м. Парк Победы
+              </li>
+              <li>
+                <svg class="icon-small">
+                  <use href="./img/icons.svg#walking_man"></use>
+                </svg>
+                8 мин.
+              </li>
+            </ul>
+            <!-- <div class="characteristics__transport">
+            <div class="icon">
+
+            </div>
+            <div class="content">
+                <p>Оценка 7,5</p>
+                <a href="#ds-map">Транспортная доступность</a>
+            </div>
+        </div> -->
+          </div>
+          <div class="characteristics__right">
+            <div>
+              <a href="#ds-map">Смотреть на карте</a>
+            </div>
+
+            <div class="characteristics__map">
+              <svg class="icon-map">
+                <use href="./img/icons.svg#point_map_blue"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="ds-title">Характеристики</h3>
+
+        <div class="characteristics__wrap">
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#high_building"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Этажность</p>
+              <p>от 7 до 22</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#home_roller"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Отделка</p>
+              <p>под ключ, white box, без отделки</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#liner_height"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Высота потолков</p>
+              <p>2,95 — 3,4 м</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#parking_rectangle"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Паркинг, машиноместа</p>
+              <p>есть открытый, есть подземный</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#doc"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Тип договора</p>
+              <p>ДДУ, 214 ФЗ</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#quote_to_rigt"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Очереди</p>
+              <p>4</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#apartment"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Число квартир</p>
+              <p>5 861</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#doors"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Кладовые</p>
+              <p>есть</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#childrens_playground"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Детская площадка</p>
+              <p>есть</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#key_outlined"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Закрытая территория</p>
+              <p>есть</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#bus"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Транспортная доступность</p>
+              <p>есть</p>
+            </div>
+          </div>
+          <div class="characteristics__item">
+            <div class="icon">
+              <svg class="icon-large">
+                <use href="./img/icons.svg#wall"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <p>Материал стен</p>
+              <p>Кирпич</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <a class="btn btn-primary ds-button" href="#">Все характеристики комплекса</a> -->
+      </div>
+
+      <div class="new-form">
+        <h1>Все квартиры в этом ЖК</h1>
+        <div
+          class="searchFormPage well well-sm clearfix"
+          itemscope="itemscope"
+          itemtype="http://schema.org/WebSite"
+        >
+          <form
+            accept-charset="UTF-8"
+            action="/"
+            class="form form-inline withoutBootstrapValidator search_form_action"
+            data-remote="true"
+            data-root-section-class="Section"
+            itemprop="potentialAction"
+            itemscope="itemscope"
+            itemtype="http://schema.org/SearchAction"
+            method="get"
+            role="form"
+          >
+            <div style="display: none">
+              <input name="utf8" type="hidden" value="✓" />
+            </div>
+            <meta
+              content="https://vsn.ru?advertisement[description]={q}"
+              itemprop="target"
+            />
+            <div
+              itemprop="query-input"
+              itemscope="itemscope"
+              itemtype="http://schema.org/PropertyValueSpecification"
+            >
+              <meta content="q" itemprop="valueName" />
+            </div>
+            <div class="form-group offerTypeButtons">
+              <label>Я хочу</label>
+              <div class="btn-group" data-toggle="buttons">
+                <label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><input
+                    name="advertisement[offer_type][]"
+                    type="checkbox"
+                    value="0"
+                  />купить</label
+                ><label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><input
+                    name="advertisement[offer_type][]"
+                    type="checkbox"
+                    value="2"
+                  />снять</label
+                ><label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><input
+                    name="advertisement[offer_type][]"
+                    type="checkbox"
+                    value="3"
+                  />посуточно</label
+                >
+              </div>
+            </div>
+            <div class="form-group categoryButtons">
+              <div class="btn-group" data-toggle="buttons">
+                <label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><span class="hidden-xs"
+                    ><i class="fa fa-home fa-lg"></i> </span
+                  ><input
+                    name="advertisement[property_type][]"
+                    type="checkbox"
+                    value="1"
+                  />жильё</label
+                ><label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><input
+                    name="advertisement[category][]"
+                    type="checkbox"
+                    value="1"
+                  />
+                  квартиру</label
+                ><label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><input
+                    name="advertisement[category][]"
+                    type="checkbox"
+                    value="2"
+                  />
+                  дом</label
+                ><label
+                  class="btn btn-default click_additional_search_params_action"
+                  ><input
+                    name="advertisement[category][]"
+                    type="checkbox"
+                    value="4"
+                  />
+                  комнату</label
+                >
+              </div>
+              <div class="form-group propertyTypeButtons">
+                <div class="btn-group" data-toggle="buttons">
+                  <label
+                    class="btn btn-default click_additional_search_params_action"
+                    ><span class="hidden-xs"><i class="fa fa-map-o"></i> </span
+                    ><input
+                      name="advertisement[property_type][]"
+                      type="checkbox"
+                      value="2"
+                    />участок</label
+                  >
+                </div>
+                <div class="btn-group" data-toggle="buttons">
+                  <label
+                    class="btn btn-default click_additional_search_params_action"
+                    ><span class="hidden-xs"
+                      ><i class="fa fa-briefcase"></i> </span
+                    ><input
+                      name="advertisement[property_type][]"
+                      type="checkbox"
+                      value="0"
+                    />коммерческую</label
+                  >
+                </div>
+                <div class="btn-group" data-toggle="buttons">
+                  <label
+                    class="btn btn-default click_additional_search_params_action"
+                    ><span class="hidden-xs"><i class="fa fa-car"></i> </span
+                    ><input
+                      name="advertisement[property_type][]"
+                      type="checkbox"
+                      value="3"
+                    />гараж</label
+                  >
+                </div>
+              </div>
+            </div>
+            <br /><span class="search_control_action"></span>
+            <div class="form-group">
+              <label>место</label>
+              <div class="btn-group">
+                <div
+                  class="btn btn-default get-search-locations-action dropdown-toggle"
+                  data-toggle="dropdown"
+                  mode="single"
+                  style="min-width: 100px"
+                >
+                  <span class="hidden-xs"
+                    ><i class="fa fa-globe fa-lg"></i> </span
+                  ><span class="title-search-locations-action">выбрать</span>
+                  <i class="caret"></i>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>цена</label>
+              <div class="input-group">
+                <input
+                  autocomplete="off"
+                  class="form-control text-input-lg"
+                  name="advertisement[price_from]"
+                  placeholder="от"
+                  style="margin-right: -1px"
+                  type="text"
+                /><input
+                  autocomplete="off"
+                  class="form-control text-input-lg"
+                  name="advertisement[price_to]"
+                  placeholder="до"
+                  type="text"
+                /><span class="input-group-addon input-sm"
+                  ><i class="fa fa-rouble"></i
+                ></span>
+              </div>
+            </div>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-xs btn-default" yaparam="from_owner"
+                ><i class="fa fa-check yaSend"></i>
+                <input
+                  name="advertisement[owner]"
+                  type="checkbox"
+                  value="1"
+                />без посредников</label
+              >
+            </div>
+            <span class="additional_search_categories_container_action"></span>
+            <span
+              class="additional_search_subcategories_container_action"
+            ></span>
+            <span class="additional_search_params_container_action"></span>
+            <span
+              class="additional_category_search_params_container_action"
+            ></span>
+            <div class="form-group">
+              <label><i class="fa fa-tag"></i></label>
+              <div class="description-group">
+                <input
+                  autocomplete="off"
+                  class="form-control"
+                  name="advertisement[description]"
+                  placeholder=" поиск по тексту или №"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="form-group pull-right hidden-xs search_buttons">
+              <span class="add_search_link_block_action"></span>
+              <button class="btn btn-default map_search_btn">
+                <i class="fa fa-map-o fa-lg"></i> На карте
+              </button>
+              <button
+                class="btn btn-primary yaSend"
+                style="width: 140px"
+                type="submit"
+                yaparam="search"
+              >
+                <i class="fa fa-search fa-lg"></i>
+                Найти
+              </button>
+            </div>
+            <div class="visible-xs">
+              <input class="hidden" id="submitSearchForm" type="submit" /><span
+                class="add_search_link_block_action"
+              ></span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="appartments">
+        <h3 class="ds-title">
+          <a href="#">9 апартаментов от застройщика</a> в ЖК «Поклонная 9»
+        </h3>
+        <div class="appartments__info">
+          <svg class="icon-small">
+            <use href="./img/icons.svg#warning_fill"></use>
+          </svg>
+          Уточняйте информацию о ценах и наличии
+        </div>
+        <!-- <ul class="appartments__list">
+        <li>
+            <a href="#" class="appartments__heading">
+                2-комнатные
+                <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+            </a>
+            <div class="appartments__right">
+                <span class="appartments__m">от 50 м²</span>
+                <span class="appartments__price">59,2–60,5 млн ₽</span>
+                <a class="appartments__more" href="#">
+                    3 предложения
+                    <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m12.707 6.707-1.414-1.414L8 8.586 4.707 5.293 3.293 6.707 8 11.414l4.707-4.707Z" fill="currentColor"></path></svg>
+                </a>
+            </div>
+            <ul class="appartments__list">
+                <li>
+                    <a href="#" class="appartments__heading">
+                        2-комнатные
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                    </a>
+                    <div class="appartments__right">
+                        <span class="appartments__m year">2023</span>
+                        <span class="appartments__m">от 50 м²</span>
+                        <span class="appartments__price">59,2–60,5 млн ₽</span>
+                        <img class="appartments__img" src="./img/slide.jpg" alt="">
+                    </div>
+                </li>
+                <li><a href="#">Смотреть все предложения</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="appartments__heading">
+                2-комнатные
+                <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+            </a>
+            <div class="appartments__right">
+                <span class="appartments__m">от 50 м²</span>
+                <span class="appartments__price">59,2–60,5 млн ₽</span>
+                <a class="appartments__more" href="#">
+                    3 предложения
+                    <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m12.707 6.707-1.414-1.414L8 8.586 4.707 5.293 3.293 6.707 8 11.414l4.707-4.707Z" fill="currentColor"></path></svg>
+                </a>
+            </div>
+            <ul class="appartments__list">
+                <li>
+                    <a href="#" class="appartments__heading">
+                        2-комнатные
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                    </a>
+                    <div class="appartments__right">
+                        <span class="appartments__m year">2023</span>
+                        <span class="appartments__m">от 50 м²</span>
+                        <span class="appartments__price">59,2–60,5 млн ₽</span>
+                        <img class="appartments__img" src="./img/slide.jpg" alt="">
+                    </div>
+                </li>
+                <li><a href="#">Смотреть все предложения</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="appartments__heading">
+                2-комнатные
+                <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+            </a>
+            <div class="appartments__right">
+                <span class="appartments__m">от 50 м²</span>
+                <span class="appartments__price">59,2–60,5 млн ₽</span>
+                <a class="appartments__more" href="#">
+                    3 предложения
+                    <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m12.707 6.707-1.414-1.414L8 8.586 4.707 5.293 3.293 6.707 8 11.414l4.707-4.707Z" fill="currentColor"></path></svg>
+                </a>
+            </div>
+            <ul class="appartments__list">
+                <li>
+                    <a href="#" class="appartments__heading">
+                        2-комнатные
+                        <svg class="_7a3fb80146--container--xt4AF _7a3fb80146--display_inline-block--wFJ1O _7a3fb80146--color_primary_100--AuVro" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3.586L2 12.586 3.414 14 12 5.414V9h2V2H7v2Z" fill="currentColor"></path></svg>
+                    </a>
+                    <div class="appartments__right">
+                        <span class="appartments__m year">2023</span>
+                        <span class="appartments__m">от 50 м²</span>
+                        <span class="appartments__price">59,2–60,5 млн ₽</span>
+                        <img class="appartments__img" src="./img/slide.jpg" alt="">
+                    </div>
+                </li>
+                <li><a href="#">Смотреть все предложения</a></li>
+            </ul>
+        </li>
+    </ul> -->
+
+        <div class="appartments__table">
+          <a href="#" class="appartments__item">
+            <span class="ttl">студии</span>
+            <span class="price">от 5 854 832 ₽</span>
+            <span class="metter">от 20,3 м²</span>
+            <div class="more">
+              <span class="appartments__more" href="#">
+                423 квартир
+                <svg class="icon-link">
+                  <use href="img/icons.svg#link"></use>
+                </svg>
+              </span>
+            </div>
+            <svg class="arrow-right icon-link">
+              <use href="img/icons.svg#link"></use>
+            </svg>
+          </a>
+
+          <a href="#" class="appartments__item">
+            <span class="ttl">студии</span>
+            <span class="price">от 5 854 832 ₽</span>
+            <span class="metter">от 20,3 м²</span>
+            <div class="more">
+              <span class="appartments__more" href="#">
+                423 квартир
+                <svg class="icon-link">
+                  <use href="img/icons.svg#link"></use>
+                </svg>
+              </span>
+            </div>
+            <svg class="arrow-right icon-link">
+              <use href="img/icons.svg#link"></use>
+            </svg>
+          </a>
+          <a href="#" class="appartments__item">
+            <span class="ttl">1 комнатные</span>
+            <span class="price">от 5 85 832 ₽</span>
+            <span class="metter">от 20.0 м²</span>
+            <div class="more">
+              <span class="appartments__more" href="#">
+                423 квартир
+                <svg class="icon-link">
+                  <use href="img/icons.svg#link"></use>
+                </svg>
+              </span>
+            </div>
+            <svg class="arrow-right icon-link">
+              <use href="img/icons.svg#link"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="appartments__foot">
+          <span
+            ><a href="#">Посмотреть 79 кв. и апарт.</a> от агентов и
+            собственников</span
+          >
+          <span>Всего <a href="#">88 кв. и апарт.</a> в ЖК</span>
+        </div>
+      </div>
+
+      <div class="ds-chart">
+        <h3 class="ds-title">Цены и спрос</h3>
+        <ul class="ds-chart__tabs-list">
+          <li class="active">Динамика цен</li>
+          <li>Динамика продаж</li>
+        </ul>
+        <div class="ds-chart__chart-wrapper">
+          <div class="ds-chart__tab active">
+            <div class="ds-chart__wrap">
+              <div class="ds-chart__col">
+                <p class="ds-chart__heading">Количество комнат</p>
+                <div class="ds-chart__wrapper">
+                  <label>
+                    <input type="radio" name="rooms" checked />
+                    <span>1</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="rooms" />
+                    <span>2</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="rooms" />
+                    <span>3</span>
+                  </label>
+                </div>
+              </div>
+              <div class="ds-chart__col">
+                <p class="ds-chart__heading">Период</p>
+                <div class="ds-chart__wrapper">
+                  <label>
+                    <input type="radio" name="time" checked />
+                    <span>Полгода</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="time" />
+                    <span>Год</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="time" />
+                    <span>Всё время</span>
+                  </label>
+                </div>
+              </div>
+              <div class="ds-chart__col">
+                <p class="ds-chart__heading">Стоимость</p>
+                <div class="ds-chart__wrapper">
+                  <label>
+                    <input type="radio" name="price" checked />
+                    <span>За квартиру</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="price" />
+                    <span>За м²</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="ds-chart__prices">
+              <div class="ds-chart__price">
+                Средняя цена за квартиру
+                <span>52,7 млн ₽</span>
+              </div>
+              <div class="ds-chart__price">
+                Средняя цена м²
+                <span>1 044 007 ₽/м²</span>
+              </div>
+            </div>
+            <canvas
+              id="barChart"
+              style="width: 100%; height: 250px; margin: 0"
+            ></canvas>
+          </div>
+          <div class="ds-chart__tab active">
+            <!-- <h2>Динамика продаж</h2> -->
+            <div class="ds-chart__tab__line__decription">
+              Данные по продажам на май 2024 года. <br />
+              Интерактивные отчеты с детальной информацией о продажах в
+              различных срезах доступны в сервисе аналитики 
+            </div>
+            <div class="ds-chart__tab__line__wrapper">
+              <div class="ds-chart__tab__line__info_blok active">
+                <div class="ds-chart__tab__line__info">
+                  <h3>Квартиры</h3>
+                  <span class="ds-chart__tab__line__info__desc_sales active"
+                    >Распроданность</span
+                  >
+                  <span>Продано 56 из 169</span>
+                </div>
+                <div class="canvas-cirkl">
+                  <canvas
+                    id="appartCirklChart"
+                    style="width: 100px; height: 100px"
+                  ></canvas>
+                </div>
+              </div>
+              <div class="ds-chart__tab__line__info_blok">
+                <div class="ds-chart__tab__line__info">
+                  <h3>Квартиры</h3>
+                  <span class="ds-chart__tab__line__info__desc_sales"
+                    >Распроданность</span
+                  >
+                  <span>Продано 56 из 169</span>
+                </div>
+                <div class="canvas-cirkl">
+                  <canvas
+                    id="nonResidentCirklChart"
+                    style="width: 100px; height: 100px"
+                  ></canvas>
+                </div>
+              </div>
+              <div class="ds-chart__tab__line__info_blok">
+                <div class="ds-chart__tab__line__info">
+                  <h3>Квартиры</h3>
+                  <span class="ds-chart__tab__line__info__desc_sales"
+                    >Распроданность</span
+                  >
+                  <span>Продано 56 из 169</span>
+                </div>
+                <div class="canvas-cirkl">
+                  <canvas
+                    id="parkingCirklChart"
+                    style="width: 100px; height: 100px"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+            <canvas
+              id="lineChart"
+              style="width: 100%; height: 250px; max-height: 450px; margin: 0"
+            ></canvas>
+          </div>
+        </div>
+        <div class="ds-chart__text">
+          Данные собираются раз в месяц, последнее обновление: февраль 2024
+        </div>
+      </div>
+
+      <div class="ds-map" id="ds-map">
+        <h3 class="ds-title">Инфраструктура</h3>
+        <div class="ds-map__wrap">
+          <div class="ds-map__head">
+            <div class="ds-map__num">
+              <canvas id="circle-chart-map-num" width="65" height="65"></canvas>
+            </div>
+            <span
+              >Индекс доступности <br />
+              инфраструктуры</span
+            >
+          </div>
+          <div class="ds-map__wrapper">
+            <div class="ds-map__list">
+              <div class="swiper js-scroll-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="ds-map__item">
+                      <img src="./img/map-icon.png" alt="" />
+                      <div class="ds-map__heading">
+                        <h4>Продуктовый магазин</h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <img src="./img/map-icon.png" alt="" />
+                      <div class="ds-map__heading">
+                        <h4>Продуктовый магазин</h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <img src="./img/map-icon.png" alt="" />
+                      <div class="ds-map__heading">
+                        <h4>Продуктовый магазин</h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <img src="./img/map-icon.png" alt="" />
+                      <div class="ds-map__heading">
+                        <h4>Продуктовый магазин</h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                    <a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>
+                          Очееень длинное название Лицея или улицы или еще
+                          чего-то
+                        </h4>
+                        <span>103 м</span>
+                      </div>
+                      <span class="ds-map__address">Адрес</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+            <div class="ds-map__map">
+              <div id="map" style="width: 100%; height: 550px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var swiperScrollContainer = new Swiper(".js-scroll-container", {
+            direction: "vertical",
+            slidesPerView: "auto",
+            freeMode: true,
+            scrollbar: {
+              el: ".swiper-scrollbar",
+            },
+            mousewheel: true,
+          });
+        });
+      </script>
+
+      <div class="ds-progress">
+        <h3 class="ds-title">Ход строительства ЖК «Поклонная 9»</h3>
+        <div class="ds-progress__wrap">
+          <div class="swiper js-progress">
+            <div class="swiper-wrapper">
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery"
+                class="swiper-slide ds-swiper-link"
+              >
+                <div class="card-complex">
+                  <div class="card-complex__top">
+                    <img src="./img/slide.jpg" alt="" />
+                  </div>
+                  <div class="card-complex__content">
+                    <div class="card-complex__name">Май, 2023</div>
+                    <div class="card-complex__company">4 фото</div>
+                    <div class="card-complex__location">
+                      Последнее обновление: 03.05.2024
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Вот так добавлять остальные картинки для галереи. Для каждого нового слайда , gallery нужно менять на любое другое значение. Т.е. data-fancybox="gallery" - это одна группа изображений  -->
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery1"
+                class="swiper-slide ds-swiper-link"
+              >
+                <div class="card-complex">
+                  <div class="card-complex__top">
+                    <img src="./img/slide.jpg" alt="" />
+                  </div>
+                  <div class="card-complex__content">
+                    <div class="card-complex__name">Май, 2023</div>
+                    <div class="card-complex__company">4 фото</div>
+                    <div class="card-complex__location">
+                      Последнее обновление: 03.05.2024
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Вот так добавлять остальные картинки для галереи. Для каждого нового слайда , gallery нужно менять на любое другое значение. Т.е. data-fancybox="gallery" - это одна группа изображений  -->
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery1"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery1"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery1"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery2"
+                class="swiper-slide ds-swiper-link"
+              >
+                <div class="card-complex">
+                  <div class="card-complex__top">
+                    <img src="./img/slide.jpg" alt="" />
+                  </div>
+                  <div class="card-complex__content">
+                    <div class="card-complex__name">Май, 2023</div>
+                    <div class="card-complex__company">4 фото</div>
+                    <div class="card-complex__location">
+                      Последнее обновление: 03.05.2024
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Вот так добавлять остальные картинки для галереи. Для каждого нового слайда , gallery нужно менять на любое другое значение. Т.е. data-fancybox="gallery" - это одна группа изображений  -->
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery2"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery2"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery3"
+                class="swiper-slide ds-swiper-link"
+              >
+                <div class="card-complex">
+                  <div class="card-complex__top">
+                    <img src="./img/slide.jpg" alt="" />
+                  </div>
+                  <div class="card-complex__content">
+                    <div class="card-complex__name">Май, 2023</div>
+                    <div class="card-complex__company">4 фото</div>
+                    <div class="card-complex__location">
+                      Последнее обновление: 03.05.2024
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Вот так добавлять остальные картинки для галереи. Для каждого нового слайда , gallery нужно менять на любое другое значение. Т.е. data-fancybox="gallery" - это одна группа изображений  -->
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery3"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery3"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+              <a
+                href="./img/slide.jpg"
+                data-fancybox="gallery3"
+                style="display: none"
+              >
+                <img src="./img/slide.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="ds-progress__prev">
+            <svg class="icon-small">
+              <use href="./img/icons.svg#arrow_prev"></use>
+            </svg>
+          </div>
+          <div class="ds-progress__next">
+            <svg class="icon-small">
+              <use href="./img/icons.svg#arrow_next"></use>
+            </svg>
+          </div>
+          <script>
+            var swiperProgress = new Swiper(".js-progress", {
+              slidesPerView: 1,
+              spaceBetween: 20,
+              navigation: {
+                nextEl: ".ds-progress__next",
+                prevEl: ".ds-progress__prev",
+              },
+              breakpoints: {
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 25,
+                },
+              },
+            });
+          </script>
+        </div>
+      </div>
+
+      <div class="ds-docs">
+        <h3 class="ds-title">Проектная документация</h3>
+        <div class="ds-docs__wrap">
+          <a href="#"
+            >Застройщик ANT Development. Проектная декларация на сайте
+            наш.дом.рф</a
+          >
+          <a href="#">Проектная декларация</a>
+          <a href="#">Разрешение на строительство</a>
+          <a href="#">Проектная декларация от 07.07.2020</a>
+          <a href="#">Проектная декларация от 1.06.2023</a>
+          <a href="#">Проектная декларация от 7.09.2023</a>
+          <a href="#">Проектная декларация от 18.10.2023</a>
+          <a href="#">Проектная декларация от 11.11.2023</a>
+          <a href="#">Разрешение на ввод в эксплуатацию</a>
+        </div>
+
+        <a class="ds-docs__more" href="#">Другие документы</a>
+      </div>
+
+      <div class="ds-heading">
+        <h3 class="ds-title">Похожие ЖК</h3>
+        <a href="#">Смотреть все</a>
+      </div>
+
+      <div class="complex-list">
+        <div class="card-complex">
+          <div class="card-complex__top">
+            <div
+              class="fotorama card-complex__fotorama"
+              data-arrows="true"
+              data-click="false"
+              data-width="100%"
+              data-height="100%"
+            >
+              <img src="img/img1.png" />
+              <img src="img/img2.png" />
+              <img src="img/img3.png" />
+            </div>
+            <div class="card-complex__tag-list">
+              <div class="card-complex__tag">Строится</div>
+              <div class="card-complex__tag">комфорт</div>
+            </div>
+            <div class="card-complex__favorite">
+              <i
+                class="fa fa-star-o card-complex__favorite-icon card-complex__favorite-inactive"
+              ></i>
+              <i
+                class="fa fa-star card-complex__favorite-icon card-complex__favorite-active"
+              ></i>
+            </div>
+          </div>
+          <a href="#" class="card-complex__content">
+            <div class="card-complex__name">Акватория</div>
+            <div class="card-complex__company">
+              Застройщик Московская Строительная Компания
+            </div>
+            <div class="card-complex__location">
+              Ростов-на-Дону, пр. Космонавтов, 1В
+            </div>
+            <div class="card-complex__info">
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">Студии</div>
+                <div class="card-complex__info-column">от 24,48 м²</div>
+                <div class="card-complex__info-column">от 1 765 008 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">1-комн.</div>
+                <div class="card-complex__info-column">от 42,9 м²</div>
+                <div class="card-complex__info-column">от 3 654 150 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">2-комн.</div>
+                <div class="card-complex__info-column">от 43,2 м²</div>
+                <div class="card-complex__info-column">от 3 576 150 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">3-комн.</div>
+                <div class="card-complex__info-column">от 64,3 м²</div>
+                <div class="card-complex__info-column">от 5 078 120 ₽</div>
+              </div>
+            </div>
+            <div class="card-complex__btn" data-num="+ 7 961 270 29 08">
+              + 7 961 270 ×× ××
+            </div>
+          </a>
+        </div>
+        <div class="card-complex">
+          <div class="card-complex__top">
+            <div
+              class="fotorama card-complex__fotorama"
+              data-arrows="true"
+              data-click="false"
+              data-width="100%"
+              data-height="100%"
+            >
+              <img src="img/img1.png" />
+            </div>
+            <div class="card-complex__tag-list">
+              <div class="card-complex__tag">сдан</div>
+              <div class="card-complex__tag">бизнес</div>
+            </div>
+            <div class="card-complex__favorite">
+              <i
+                class="fa fa-star-o card-complex__favorite-icon card-complex__favorite-inactive"
+              ></i>
+              <i
+                class="fa fa-star card-complex__favorite-icon card-complex__favorite-active"
+              ></i>
+            </div>
+          </div>
+          <a href="#" class="card-complex__content">
+            <div class="card-complex__name">Самоцветы</div>
+            <div class="card-complex__company">Застройщик СУ-5 АКСАЙ</div>
+            <div class="card-complex__location">Аксай, ул. Строителей</div>
+            <div class="card-complex__info">
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">Студии</div>
+                <div class="card-complex__info-column">от 24,48 м²</div>
+                <div class="card-complex__info-column">от 1 765 008 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">1-комн.</div>
+                <div class="card-complex__info-column">от 42,9 м²</div>
+                <div class="card-complex__info-column">от 3 654 150 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">2-комн.</div>
+                <div class="card-complex__info-column">от 43,2 м²</div>
+                <div class="card-complex__info-column">от 3 576 150 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">3-комн.</div>
+                <div class="card-complex__info-column">от 64,3 м²</div>
+                <div class="card-complex__info-column">от 5 078 120 ₽</div>
+              </div>
+            </div>
+            <div class="card-complex__btn" data-num="+ 7 961 270 29 08">
+              + 7 961 270 ×× ××
+            </div>
+          </a>
+        </div>
+        <div class="card-complex">
+          <div class="card-complex__top">
+            <div
+              class="fotorama card-complex__fotorama"
+              data-arrows="true"
+              data-click="false"
+              data-width="100%"
+              data-height="100%"
+            >
+              <img src="img/img2.png" />
+              <img src="img/img3.png" />
+              <img src="img/img1.png" />
+            </div>
+            <div class="card-complex__tag-list">
+              <div class="card-complex__tag">Строится</div>
+              <div class="card-complex__tag">комфорт</div>
+            </div>
+            <div class="card-complex__favorite">
+              <i
+                class="fa fa-star-o card-complex__favorite-icon card-complex__favorite-inactive"
+              ></i>
+              <i
+                class="fa fa-star card-complex__favorite-icon card-complex__favorite-active"
+              ></i>
+            </div>
+          </div>
+          <a href="#" class="card-complex__content">
+            <div class="card-complex__name">Акватория</div>
+            <div class="card-complex__company">
+              Застройщик Московская Строительная Компания
+            </div>
+            <div class="card-complex__location">
+              Ростов-на-Дону, пр. Космонавтов, 1В
+            </div>
+            <div class="card-complex__info">
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">Студии</div>
+                <div class="card-complex__info-column">от 24,48 м²</div>
+                <div class="card-complex__info-column">от 1 765 008 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">1-комн.</div>
+                <div class="card-complex__info-column">от 42,9 м²</div>
+                <div class="card-complex__info-column">от 3 654 150 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">2-комн.</div>
+                <div class="card-complex__info-column">от 43,2 м²</div>
+                <div class="card-complex__info-column">от 3 576 150 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">3-комн.</div>
+                <div class="card-complex__info-column">от 64,3 м²</div>
+                <div class="card-complex__info-column">от 5 078 120 ₽</div>
+              </div>
+            </div>
+            <div class="card-complex__btn" data-num="+ 7 961 270 29 08">
+              + 7 961 270 ×× ××
+            </div>
+          </a>
+        </div>
+        <div class="media-content-box">
+          <img src="img/img4.png" class="media-content-box__img" />
+        </div>
+        <div class="card-complex">
+          <div class="card-complex__top">
+            <div
+              class="fotorama card-complex__fotorama"
+              data-arrows="true"
+              data-click="false"
+              data-width="100%"
+              data-height="100%"
+            >
+              <img src="img/img3.png" />
+              <img src="img/img2.png" />
+              <img src="img/img1.png" />
+            </div>
+            <div class="card-complex__tag-list">
+              <div class="card-complex__tag">Строится</div>
+              <div class="card-complex__tag">комфорт</div>
+            </div>
+            <div class="card-complex__favorite">
+              <i
+                class="fa fa-star-o card-complex__favorite-icon card-complex__favorite-inactive"
+              ></i>
+              <i
+                class="fa fa-star card-complex__favorite-icon card-complex__favorite-active"
+              ></i>
+            </div>
+          </div>
+          <a href="#" class="card-complex__content">
+            <div class="card-complex__name">Акватория</div>
+            <div class="card-complex__company">
+              Застройщик Московская Строительная Компания
+            </div>
+            <div class="card-complex__location">
+              Ростов-на-Дону, пр. Космонавтов, 1В
+            </div>
+            <div class="card-complex__info">
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">Студии</div>
+                <div class="card-complex__info-column">от 24,48 м²</div>
+                <div class="card-complex__info-column">от 1 765 008 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">1-комн.</div>
+                <div class="card-complex__info-column">от 42,9 м²</div>
+                <div class="card-complex__info-column">от 3 654 150 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">2-комн.</div>
+                <div class="card-complex__info-column">от 43,2 м²</div>
+                <div class="card-complex__info-column">от 3 576 150 ₽</div>
+              </div>
+              <div class="card-complex__info-row">
+                <div class="card-complex__info-column">3-комн.</div>
+                <div class="card-complex__info-column">от 64,3 м²</div>
+                <div class="card-complex__info-column">от 5 078 120 ₽</div>
+              </div>
+            </div>
+            <div class="card-complex__btn" data-num="+ 7 961 270 29 08">
+              + 7 961 270 ×× ××
+            </div>
+          </a>
+        </div>
+        <div class="card-complex btn-more">
+          <button class="card-complex__btn">
+            <i class="fas fa-arrow-down"></i>
+            Показать еще
+          </button>
+        </div>
+        <div class="card-complex btn-more">
+          <a href="#" class="card-complex__btn">
+            <i class="fas fa-arrow-down"></i>
+            Показать еще
+          </a>
+        </div>
+      </div>
+
+      <div class="ds-tabs">
+        <div class="ds-item">
+          <div class="ds-question">
+            <h2>
+              🏠 Как купить 1-комнатную квартиру вторичка в Кемерово на Циан?
+            </h2>
+            <svg class="icon-small">
+              <use href="./img/icons.svg#arrow_up"></use>
+            </svg>
+          </div>
+          <div class="ds-answer">
+            <ul>
+              <li>
+                ✓ Ищете объявления о продаже 1-комнатных квартир в Кемерово?
+              </li>
+              <li>✓ В базе Циан 818 1-комнатных квартир вторичка в Кемерово</li>
+              <li>
+                ✓ Чтобы купить недвижимость, используйте удобную форму поиска,
+                фильтры и быстрые ссылки
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ds-item">
+          <div class="ds-question">
+            <h2>💵 Сколько стоит 1-комнатная квартира вторичка в Кемерово?</h2>
+            <svg class="icon-small">
+              <use href="./img/icons.svg#arrow_up"></use>
+            </svg>
+          </div>
+          <div class="ds-answer">
+            <table>
+              <tbody>
+                <tr>
+                  <td>🔷 Средняя цена продажи:</td>
+                  <td>3,6&nbsp;млн руб.</td>
+                </tr>
+                <tr>
+                  <td>🔷 Средняя цена за м2:</td>
+                  <td>117,3&nbsp;тыс. руб./м²</td>
+                </tr>
+                <tr>
+                  <td>🔷 Минимальная стоимость:</td>
+                  <td>1,2&nbsp;млн руб.</td>
+                </tr>
+                <tr>
+                  <td>🔷 Самый дорогой объект:</td>
+                  <td>7&nbsp;млн руб.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="ds-item">
+          <div class="ds-question">
+            <h2>📏 Какая площадь 1-комнатных квартир вторичка в Кемерово?</h2>
+            <svg class="icon-small">
+              <use href="./img/icons.svg#arrow_up"></use>
+            </svg>
+          </div>
+          <div class="ds-answer">
+            <ul>
+              <li>✅ Минимальная площадь: 14 м²</li>
+              <li>✅ Объект наибольшей площади: 51,3 м²</li>
+            </ul>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const tabItems = document.querySelectorAll(".ds-item");
+
+            tabItems.forEach((item) => {
+              const question = item.querySelector(".ds-question");
+
+              question.addEventListener("click", () => {
+                item.classList.toggle("active");
+              });
+            });
+          });
+        </script>
+      </div>
+    </div>
+    <a href="#" class="btn ds-button fixed-btn btn-primary-blue">
+      <i class="fas fa-phone"></i> Забронировать
+    </a>
+  </body>
+</html>
