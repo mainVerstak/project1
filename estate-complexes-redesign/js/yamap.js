@@ -4,7 +4,8 @@ async function initMap() {
   // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
   await ymaps3.ready;
 
-  const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+  const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } =
+    ymaps3;
 
   // Иницилиазируем карту
   const map = new YMap(
@@ -18,7 +19,7 @@ async function initMap() {
         center: [37.588144, 55.733842],
 
         // Уровень масштабирования
-        zoom: 17,
+        zoom: 12,
       },
     }
   );
@@ -39,15 +40,8 @@ async function initMap() {
   // Добавляем маркеры на карту
   points.forEach((point) => {
     const markerElement = document.createElement("div");
-    markerElement.innerHTML = `
-    <div class="marker">
-        <div class="marker__icon">📍</div>
-        <div class="marker__popup">
-            <h3>Название места</h3>
-            <p>Описание места</p>
-        </div>
-    </div>
-`;
+    markerElement.className = "marker";
+    markerElement.innerHTML = point.text;
 
     const marker = new YMapMarker(
       {
