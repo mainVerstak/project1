@@ -1638,3 +1638,36 @@ header strong,
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
+/* Стили для кластера */
+.cluster-marker {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+.cluster-marker__inner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-blue);
+  border: 4px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для одиночного маркера */
+.single-marker {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+}

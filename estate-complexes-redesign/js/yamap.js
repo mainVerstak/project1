@@ -1,57 +1,87 @@
 const ymaps3 = window.ymaps3;
 
 async function initMap() {
-  // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
   await ymaps3.ready;
+
+  const { YMapClusterer, clusterByGrid } = await ymaps3.import(
+    "@yandex/ymaps3-clusterer@0.0.1"
+  );
 
   const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } =
     ymaps3;
 
-  // Иницилиазируем карту
-  const map = new YMap(
-    // Передаём ссылку на HTMLElement контейнера
-    document.getElementById("map"),
+  const map = new YMap(document.getElementById("map"), {
+    location: {
+      center: [37.588144, 55.733842],
+      zoom: 10,
+    },
+  });
 
-    // Передаём параметры инициализации карты
-    {
-      location: {
-        // Координаты центра карты
-        center: [37.588144, 55.733842],
-
-        // Уровень масштабирования
-        zoom: 12,
-      },
-    }
-  );
-
-  // Добавляем слой для отображения схематической карты
   map.addChild(new YMapDefaultSchemeLayer());
-
-  // Добавляем слой для маркеров
   map.addChild(new YMapDefaultFeaturesLayer());
 
-  // Массив с данными точек
-  const points = [
-    { coordinates: [37.588144, 55.733842], text: "Точка 1" },
-    { coordinates: [37.598144, 55.743842], text: "Точка 2" },
-    { coordinates: [37.578144, 55.723842], text: "Точка 3" },
-  ];
+  // Генерируем тестовые данные
+  const features = Array.from({ length: 100 }, (_, index) => ({
+    type: "Feature",
+    id: index,
+    geometry: {
+      type: "Point",
+      coordinates: [
+        37.588144 + (Math.random() - 0.5) * 0.2,
+        55.733842 + (Math.random() - 0.5) * 0.2,
+      ],
+    },
+    properties: {
+      balloonContent: `Объект ${index + 1}`,
+      clusterCaption: `Объект ${index + 1}`,
+      price: Math.floor(Math.random() * 50000 + 30000),
+    },
+  }));
 
-  // Добавляем маркеры на карту
-  points.forEach((point) => {
-    const markerElement = document.createElement("div");
-    markerElement.className = "marker";
-    markerElement.innerHTML = point.text;
+  // Функция создания DOM элемента для маркера
+  function createMarkerElement(content) {
+    const element = document.createElement("div");
+    element.innerHTML = `
+      <div class="single-marker"></div>
+    `;
+    return element.firstElementChild;
+  }
 
-    const marker = new YMapMarker(
-      {
-        coordinates: point.coordinates,
-      },
-      markerElement
-    );
+  // Функция создания DOM элемента для кластера
+  function createClusterElement(count) {
+    const element = document.createElement("div");
+    element.innerHTML = `
+      <div class="cluster-marker">
+        <div class="cluster-marker__inner">${count}</div>
+      </div>
+    `;
+    return element.firstElementChild;
+  }
 
-    map.addChild(marker);
+  // Создаем кластеризатор
+  const clusterer = new YMapClusterer({
+    method: clusterByGrid({ gridSize: 64 }),
+    features: features,
+    marker: (feature) => {
+      return new YMapMarker(
+        {
+          coordinates: feature.geometry.coordinates,
+        },
+        createMarkerElement()
+      );
+    },
+    cluster: (coordinates, features) => {
+      return new YMapMarker(
+        {
+          coordinates: coordinates,
+        },
+        createClusterElement(features.length)
+      );
+    },
   });
+
+  // Добавляем кластеризатор на карту
+  map.addChild(clusterer);
 }
 
 initMap();
