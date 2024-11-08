@@ -1664,10 +1664,40 @@ header strong,
 
 /* Стили для одиночного маркера */
 .single-marker {
-  width: 12px;
-  height: 12px;
+  width: 32px;
+  height: 32px;
   background-color: var(--color-blue);
   border-radius: 50%;
   position: relative;
   transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-icon {
+  width: 20px;
+  height: 20px;
+}
+.single-marker.default-building {
+  background-color: #112832;
+}
+.single-marker.new-building {
+  background-color: #0085ff;
+}
+.single-marker.market {
+  background-color: #887cee;
+}
+.single-marker.study {
+  background-color: #ffbb33;
+}
+.single-marker.medical {
+  background-color: #08a664;
+}
+.single-marker.sport {
+  background-color: #92d9ea;
+}
+.single-marker.entertainment {
+  background-color: #e98beb;
 }
