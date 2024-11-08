@@ -118,7 +118,6 @@ async function initMap() {
   // Функция создания DOM элемента для кластера
   function createClusterElement(count, data) {
     let className;
-    console.log(data);
     const element = document.createElement("div");
     switch (data[0].properties.tabName) {
       case "Развлечения":
@@ -162,7 +161,6 @@ async function initMap() {
   };
 
   points.forEach((point) => {
-    console.log(point.properties.tabName);
     let tabName;
 
     switch (point.properties.tabName) {
@@ -218,28 +216,6 @@ async function initMap() {
           );
         },
       });
-
-      // Создаем кластеризатор
-      // const clusterer = new YMapClusterer({
-      //   method: clusterByGrid({ gridSize: 64 }),
-      //   features: points,
-      //   marker: (feature) => {
-      //     return new YMapMarker(
-      //       {
-      //         coordinates: feature.geometry.coordinates,
-      //       },
-      //       createMarkerElement(feature.properties)
-      //     );
-      //   },
-      //   cluster: (coordinates, features) => {
-      //     return new YMapMarker(
-      //       {
-      //         coordinates: coordinates,
-      //       },
-      //       createClusterElement(features.length)
-      //     );
-      //   },
-      // });
 
       // Добавляем кластеризатор на карту
       map.addChild(clusterer);
