@@ -15,12 +15,26 @@ async function getMapData() {
 async function initMap() {
   await ymaps3.ready;
 
+  // Подключаем тему по умолчанию - не знаю почему без этого не работает
+  ymaps3.import.registerCdn(
+    "https://cdn.jsdelivr.net/npm/{package}",
+    "@yandex/ymaps3-default-ui-theme@latest"
+  );
+
   const { YMapClusterer, clusterByGrid } = await ymaps3.import(
     "@yandex/ymaps3-clusterer@0.0.1"
   );
+  const {
+    YMap,
+    YMapDefaultSchemeLayer,
+    YMapDefaultFeaturesLayer,
+    YMapMarker,
+    YMapControls,
+  } = ymaps3;
 
-  const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } =
-    ymaps3;
+  const { YMapZoomControl } = await ymaps3.import(
+    "@yandex/ymaps3-default-ui-theme"
+  );
 
   const map = new YMap(document.getElementById("map"), {
     location: {
@@ -29,13 +43,19 @@ async function initMap() {
     },
   });
 
+  map.addChild(
+    new YMapControls({ position: "right" }).addChild(new YMapZoomControl({}))
+  );
   map.addChild(new YMapDefaultSchemeLayer());
   map.addChild(new YMapDefaultFeaturesLayer());
 
   // Получаем тестовые данные и преобразуем в точки
   const data = await getMapData();
   const points = data.map(
-    ({ latitude, longitude, address, tabName, name }, index) => ({
+    (
+      { latitude, longitude, address, tabName, name, subtitle, objId, status },
+      index
+    ) => ({
       type: "Feature",
       id: index,
       geometry: {
@@ -48,6 +68,9 @@ async function initMap() {
         address: address,
         tabName: tabName,
         name: name,
+        subtitle: subtitle,
+        objId: objId,
+        status: status,
       },
     })
   );
@@ -109,9 +132,17 @@ async function initMap() {
     }
 
     const element = document.createElement("div");
-    element.innerHTML = `
-      <div class="single-marker ${className}">${content}</div>
-    `;
+    element.innerHTML = `<div class="single-marker ${className}">${content}</div>`;
+
+    element.firstElementChild.addEventListener("click", (e) => {
+      const markers = document.querySelectorAll(".single-marker");
+      markers.forEach((marker) => {
+        marker.classList.remove("active");
+      });
+      e.target.classList.toggle("active");
+      console.log(e.target);
+    });
+
     return element.firstElementChild;
   }
 
@@ -146,6 +177,15 @@ async function initMap() {
         <div class="cluster-marker__inner ${className}">${count}</div>
       </div>
     `;
+
+    element.firstElementChild.addEventListener("click", () => {
+      console.log(map._props.location.zoom);
+      map.setLocation({
+        center: data[0].geometry.coordinates,
+        zoom: 17, // TODO: исправить на динамический
+      });
+    });
+
     return element.firstElementChild;
   }
 
