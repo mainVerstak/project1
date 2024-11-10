@@ -96,6 +96,7 @@
   transform: rotate(-45deg);
 }
 .single-marker.active {
+  z-index: 1000;
   border-radius: 50% 50% 0 50%;
   transform: translate(-50%, -100%) rotate(45deg) scale(1.2);
 }
@@ -112,4 +113,55 @@
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Map list */
+/* .ds-map__list {
+  background-color: var(--color-grey-superlight);
+} */
+.ds-map__item-container {
+  padding: 5px;
+}
+.ds-map__item {
+  padding: 20px 24px 20px 24px;
+  border-radius: var(--border-radius);
+  margin-bottom: 5px;
+}
+.ds-map__item.active {
+  background-color: var(--color-grey-superlight);
+}
+.ds-map__item:not(:last-child) {
+  border: none;
+  position: relative;
+}
+.ds-map__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background-color: var(--color-grey-superlight);
+}
+.ds-map__item:hover {
+  background-color: var(--color-grey-superlight);
+}
+
+/* Стили для скроллбара */
+.swiper-scrollbar {
+  width: 4px !important;
+  right: 2px !important;
+  left: auto !important;
+  background-color: var(--color-border) !important;
+}
+
+.swiper-scrollbar-drag {
+  background-color: var(--color-grey) !important;
+  width: 4px !important;
+  cursor: grab;
+}
+
+.swiper-scrollbar-drag:active {
+  cursor: grabbing;
 }

@@ -12,6 +12,39 @@ async function getMapData() {
   }
 }
 
+async function initMapList() {
+  const container = document.querySelector(".ds-map__item-container");
+  const data = await getMapData();
+
+  const sortedData = data.sort((a, b) => a.dist - b.dist);
+
+  sortedData.forEach((item) => {
+    const element = document.createElement("div");
+    element.innerHTML = `<a href="#" class="ds-map__item">
+                      <div class="ds-map__heading">
+                        <h4>${item.name}</h4>
+                        <span>${item.dist} м</span>
+                      </div>
+                      <span class="ds-map__address">${item.address}</span>
+                    </a>`;
+    container.appendChild(element.firstElementChild);
+  });
+
+  let swiperScrollContainer = new Swiper(".js-scroll-container", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
+      dragSize: "auto",
+      snapOnRelease: true,
+      hide: false,
+    },
+    mousewheel: true,
+  });
+}
+
 async function initMap() {
   await ymaps3.ready;
 
@@ -264,3 +297,4 @@ async function initMap() {
 }
 
 initMap();
+initMapList();
