@@ -13,6 +13,9 @@ async function getMapData() {
   }
 }
 
+// Объявляем переменную для карты в глобальной области видимости
+let map;
+
 async function initMap() {
   await ymaps3.ready;
 
@@ -31,13 +34,27 @@ async function initMap() {
     YMapDefaultFeaturesLayer,
     YMapMarker,
     YMapControls,
+    YMapListener,
   } = ymaps3;
 
   const { YMapZoomControl } = await ymaps3.import(
     "@yandex/ymaps3-default-ui-theme"
   );
 
-  const map = new YMap(document.getElementById("map"), {
+  // Создаем переменную для хранения текущего зума
+  let currentZoom;
+
+  // Создаем слушатель событий карты
+  const mapListener = new YMapListener({
+    layer: "any",
+    onUpdate: ({ location }) => {
+      // Здесь мы получаем актуальный зум карты при любых его изменениях
+      currentZoom = location.zoom;
+    },
+  });
+
+  // Сохраняем ссылку на карту
+  map = new YMap(document.getElementById("map"), {
     location: {
       center: [39.710368, 47.222263],
       zoom: 15,
@@ -49,6 +66,7 @@ async function initMap() {
   );
   map.addChild(new YMapDefaultSchemeLayer());
   map.addChild(new YMapDefaultFeaturesLayer());
+  map.addChild(mapListener);
 
   // Получаем тестовые данные и преобразуем в точки
   const data = await getMapData();
@@ -249,10 +267,11 @@ async function initMap() {
     `;
 
     element.firstElementChild.addEventListener("click", () => {
-      console.log(map._props.location.zoom);
+      const nextZoom = Math.min(currentZoom + 1, 20);
       map.setLocation({
         center: data[0].geometry.coordinates,
-        zoom: 17, // TODO: исправить на динамический
+        zoom: nextZoom,
+        duration: 500,
       });
     });
 
@@ -307,12 +326,22 @@ async function initMap() {
   Object.keys(groupedPoints).forEach((category) => {
     if (groupedPoints[category].length > 0) {
       const clusterer = new YMapClusterer({
-        method: clusterByGrid({ gridSize: 64 }),
+        method: clusterByGrid({
+          gridSize: 128, // Увеличиваем размер сетки
+          minZoom: 12, // Минимальный зум, при котором начинается кластеризация
+          maxZoom: 16, // Максимальный зум, при котором работает кластеризация
+          minClusterSize: 3, // Минимальное количество точек для создания кластера
+        }),
         features: groupedPoints[category],
         marker: (feature) => {
           return new YMapMarker(
             {
               coordinates: feature.geometry.coordinates,
+              // Добавляем настройки для маркера
+              zIndex: 1, // Базовый z-index для маркеров
+              hover: {
+                zIndex: 2, // Повышаем z-index при наведении
+              },
             },
             createMarkerElement(feature.properties)
           );
@@ -321,6 +350,11 @@ async function initMap() {
           return new YMapMarker(
             {
               coordinates: coordinates,
+              // Добавляем настройки для кластера
+              zIndex: 1,
+              hover: {
+                zIndex: 2,
+              },
             },
             createClusterElement(features.length, features)
           );
@@ -339,7 +373,7 @@ async function initMap() {
     );
     const listItem = slide.querySelector(".ds-map__item");
 
-    listItem.addEventListener("click", (e) => {
+    listItem.addEventListener("click", async (e) => {
       e.preventDefault();
 
       const listLinks = document.querySelectorAll(".ds-map__item");
@@ -350,15 +384,31 @@ async function initMap() {
 
       listItem.classList.add("active");
 
-      // Ищем маркер по uniqueId
-      const marker = document.querySelector(
-        `.single-marker[data-id="${point.properties.uniqueId}"]`
-      );
-      if (marker) {
-        marker.classList.add("active");
-      }
+      // Сначала увеличиваем зум карты до значения, при котором кластеры точно раскроются
+      await map.setLocation({
+        center: point.geometry.coordinates,
+        zoom: 17, // Максимальный зум
+        duration: 500,
+      });
 
-      // Изменяем способ прокрутки к элементу
+      // Делаем небольшую задержку, чтобы кластер успел раскрыться
+      setTimeout(() => {
+        // Ищем маркер по uniqueId
+        const marker = document.querySelector(
+          `.single-marker[data-id="${point.properties.uniqueId}"]`
+        );
+        if (marker) {
+          marker.classList.add("active");
+
+          // Точно центрируем карту на координатах маркера
+          map.setLocation({
+            center: point.geometry.coordinates,
+            duration: 300,
+          });
+        }
+      }, 600);
+
+      // Прокручиваем список
       swiperScrollContainer.el.querySelector(
         ".swiper-wrapper"
       ).style.transition = "300ms";
@@ -379,13 +429,11 @@ function scrollToSlide(slide) {
   swiperScrollContainer.setTranslate(
     -Math.min(scrollPosition, wrapper.clientHeight - containerHeight)
   );
-}
-
-// Используем эту функцию в обработчиках кликов
-if (slide) {
-  const listItem = slide.firstElementChild;
-  listItem.classList.add("active");
-  scrollToSlide(slide);
+  if (slide) {
+    const listItem = slide.firstElementChild;
+    listItem.classList.add("active");
+    scrollToSlide(slide);
+  }
 }
 
 initMap();
