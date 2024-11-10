@@ -6,43 +6,11 @@ async function getMapData() {
       res.json()
     );
     console.log(response.data); // TODO: удалить
-    return response.data;
+    const sortedData = response.data.sort((a, b) => a.dist - b.dist);
+    return sortedData;
   } catch (e) {
     console.log(e);
   }
-}
-
-async function initMapList() {
-  const container = document.querySelector(".ds-map__item-container");
-  const data = await getMapData();
-
-  const sortedData = data.sort((a, b) => a.dist - b.dist);
-
-  sortedData.forEach((item) => {
-    const element = document.createElement("div");
-    element.innerHTML = `<a href="#" class="ds-map__item">
-                      <div class="ds-map__heading">
-                        <h4>${item.name}</h4>
-                        <span>${item.dist} м</span>
-                      </div>
-                      <span class="ds-map__address">${item.address}</span>
-                    </a>`;
-    container.appendChild(element.firstElementChild);
-  });
-
-  let swiperScrollContainer = new Swiper(".js-scroll-container", {
-    direction: "vertical",
-    slidesPerView: "auto",
-    freeMode: true,
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      draggable: true,
-      dragSize: "auto",
-      snapOnRelease: true,
-      hide: false,
-    },
-    mousewheel: true,
-  });
 }
 
 async function initMap() {
@@ -84,36 +52,87 @@ async function initMap() {
 
   // Получаем тестовые данные и преобразуем в точки
   const data = await getMapData();
-  const points = data.map(
-    (
-      { latitude, longitude, address, tabName, name, subtitle, objId, status },
-      index
-    ) => ({
+
+  // Функция для генерации уникального ID
+  function generateUniqueId() {
+    return "id_" + Math.random().toString(36).substr(2, 9);
+  }
+
+  // При создании точек добавим уникальный ID каждому объекту
+  const points = data.map((item, index) => {
+    const uniqueId = generateUniqueId();
+    return {
       type: "Feature",
       id: index,
       geometry: {
         type: "Point",
-        coordinates: [longitude, latitude],
+        coordinates: [item.longitude, item.latitude],
       },
       properties: {
-        balloonContent: `Объект ${index + 1}`,
+        balloonContent: `${index + 1}`,
         clusterCaption: `Объект ${index + 1}`,
-        address: address,
-        tabName: tabName,
-        name: name,
-        subtitle: subtitle,
-        objId: objId,
-        status: status,
+        address: item.address,
+        tabName: item.tabName,
+        name: item.name,
+        dist: item.dist,
+        subtitle: item.subtitle,
+        objId: item.objId,
+        status: item.status,
+        uniqueId: uniqueId, // Добавляем уникальный ID
       },
-    })
-  );
+    };
+  });
+
+  const listItems = [];
+
+  // Создаем список элементов для маркеров
+  const container = document.querySelector(".ds-map__item-container");
+
+  points.forEach((item) => {
+    const uniqueId = item.properties.uniqueId;
+    const element = document.createElement("div");
+    element.innerHTML = `<div class="swiper-slide" data-id="${uniqueId}">
+                      <a href="#" class="ds-map__item">
+                        <div class="ds-map__heading">
+                          <h4>${item.properties.name}</h4>
+                          <span>${item.properties.dist.toFixed()} м</span>
+                        </div>
+                        <span class="ds-map__address">${
+                          item.properties.address
+                        }</span>
+                      </a>
+                    </div>`;
+    container.appendChild(element.firstElementChild);
+    listItems.push(element.firstElementChild);
+  });
+
+  const sliderLinks = document.querySelectorAll(".ds-map__item");
+  sliderLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  });
+
+  let swiperScrollContainer = new Swiper(".js-scroll-container", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
+      dragSize: "auto",
+      snapOnRelease: true,
+      hide: false,
+    },
+    mousewheel: true,
+  });
 
   // Функция создания DOM элемента для маркера
-  function createMarkerElement(data) {
+  function createMarkerElement(properties) {
     let className;
     let content;
 
-    switch (data.tabName) {
+    switch (properties.tabName) {
       case "Развлечения":
         className = "entertainment";
         content = `
@@ -165,15 +184,33 @@ async function initMap() {
     }
 
     const element = document.createElement("div");
-    element.innerHTML = `<div class="single-marker ${className}">${content}</div>`;
+    element.innerHTML = `<div class="single-marker ${className}" data-id="${properties.uniqueId}">${content}</div>`;
 
     element.firstElementChild.addEventListener("click", (e) => {
       const markers = document.querySelectorAll(".single-marker");
-      markers.forEach((marker) => {
-        marker.classList.remove("active");
-      });
-      e.target.classList.toggle("active");
-      console.log(e.target);
+      markers.forEach((marker) => marker.classList.remove("active"));
+
+      const listLinks = document.querySelectorAll(".ds-map__item");
+      listLinks.forEach((link) => link.classList.remove("active"));
+
+      e.currentTarget.classList.add("active");
+
+      // Ищем слайд по uniqueId
+      const markerId = e.currentTarget.dataset.id;
+      const slide = document.querySelector(
+        `.swiper-slide[data-id="${markerId}"]`
+      );
+
+      if (slide) {
+        const listItem = slide.firstElementChild;
+        listItem.classList.add("active");
+
+        // Изменяем способ прокрутки к элементу
+        swiperScrollContainer.el.querySelector(
+          ".swiper-wrapper"
+        ).style.transition = "300ms";
+        swiperScrollContainer.setTranslate(-slide.offsetTop);
+      }
     });
 
     return element.firstElementChild;
@@ -294,7 +331,61 @@ async function initMap() {
       map.addChild(clusterer);
     }
   });
+
+  // После создания списка добавим обработчики кликов для элементов списка
+  points.forEach((point) => {
+    const slide = document.querySelector(
+      `.swiper-slide[data-id="${point.properties.uniqueId}"]`
+    );
+    const listItem = slide.querySelector(".ds-map__item");
+
+    listItem.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const listLinks = document.querySelectorAll(".ds-map__item");
+      listLinks.forEach((link) => link.classList.remove("active"));
+
+      const markers = document.querySelectorAll(".single-marker");
+      markers.forEach((marker) => marker.classList.remove("active"));
+
+      listItem.classList.add("active");
+
+      // Ищем маркер по uniqueId
+      const marker = document.querySelector(
+        `.single-marker[data-id="${point.properties.uniqueId}"]`
+      );
+      if (marker) {
+        marker.classList.add("active");
+      }
+
+      // Изменяем способ прокрутки к элементу
+      swiperScrollContainer.el.querySelector(
+        ".swiper-wrapper"
+      ).style.transition = "300ms";
+      swiperScrollContainer.setTranslate(-slide.offsetTop);
+    });
+  });
+}
+
+// Альтернативный вариант прокрутки
+function scrollToSlide(slide) {
+  const wrapper = swiperScrollContainer.el.querySelector(".swiper-wrapper");
+  const slideOffset = slide.offsetTop;
+  const containerHeight = swiperScrollContainer.el.clientHeight;
+  const scrollPosition =
+    slideOffset - containerHeight / 2 + slide.clientHeight / 2;
+
+  wrapper.style.transition = "300ms";
+  swiperScrollContainer.setTranslate(
+    -Math.min(scrollPosition, wrapper.clientHeight - containerHeight)
+  );
+}
+
+// Используем эту функцию в обработчиках кликов
+if (slide) {
+  const listItem = slide.firstElementChild;
+  listItem.classList.add("active");
+  scrollToSlide(slide);
 }
 
 initMap();
-initMapList();

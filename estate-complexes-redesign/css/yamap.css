@@ -116,11 +116,14 @@
 }
 
 /* Map list */
-/* .ds-map__list {
-  background-color: var(--color-grey-superlight);
-} */
+.ds-map__list .swiper {
+  padding: 5px;
+}
 .ds-map__item-container {
   padding: 5px;
+}
+.ds-map__item-container .swiper-slide {
+  width: 95%;
 }
 .ds-map__item {
   padding: 20px 24px 20px 24px;
@@ -128,7 +131,7 @@
   margin-bottom: 5px;
 }
 .ds-map__item.active {
-  background-color: var(--color-grey-superlight);
+  background-color: var(--color-border);
 }
 .ds-map__item:not(:last-child) {
   border: none;
@@ -142,10 +145,13 @@
   transform: translateX(-50%);
   width: 80%;
   height: 1px;
-  background-color: var(--color-grey-superlight);
+  background-color: var(--color-border);
 }
 .ds-map__item:hover {
   background-color: var(--color-grey-superlight);
+}
+.ds-map__item.active:hover {
+  background-color: #e0e0e0;
 }
 
 /* Стили для скроллбара */
