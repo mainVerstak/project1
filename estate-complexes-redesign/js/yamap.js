@@ -56,8 +56,8 @@ async function initMap() {
   // Сохраняем ссылку на карту
   map = new YMap(document.getElementById("map"), {
     location: {
-      center: [39.710368, 47.222263],
-      zoom: 15,
+      center: [39.724676, 47.221229],
+      zoom: 15.5,
     },
   });
 
@@ -70,6 +70,11 @@ async function initMap() {
 
   // Получаем тестовые данные и преобразуем в точки
   const data = await getMapData();
+
+  await map.setLocation({
+    zoom: 15, // Устанавливаем новый уровень зума
+    duration: 500, // Длительность анимации
+  });
 
   // Функция для генерации уникального ID
   function generateUniqueId() {
@@ -387,8 +392,8 @@ async function initMap() {
       // Сначала увеличиваем зум карты до значения, при котором кластеры точно раскроются
       await map.setLocation({
         center: point.geometry.coordinates,
-        zoom: 17, // Максимальный зум
-        duration: 500,
+        zoom: 20, // Максимальный зум
+        duration: 400,
       });
 
       // Делаем небольшую задержку, чтобы кластер успел раскрыться
@@ -403,7 +408,7 @@ async function initMap() {
           // Точно центрируем карту на координатах маркера
           map.setLocation({
             center: point.geometry.coordinates,
-            duration: 300,
+            duration: 500,
           });
         }
       }, 600);
