@@ -158,6 +158,16 @@ async function initMap() {
     const element = document.createElement("div");
     element.innerHTML = `<div class="swiper-slide" data-id="${uniqueId}">
                       <a href="#" class="ds-map__item">
+                        ${
+                          item.properties.status === 2
+                            ? '<div class="status-sticker default-building">Сдан</div>'
+                            : ""
+                        }
+                        ${
+                          item.properties.status === 0
+                            ? '<div class="status-sticker new-building">Строится</div>'
+                            : ""
+                        }
                         <div class="ds-map__heading">
                           <h4>${
                             item.properties.name
@@ -238,7 +248,8 @@ async function initMap() {
           </svg>`;
         break;
       case "Новостройки":
-        className = "new-building";
+        className =
+          properties.status === 2 ? "default-building" : "new-building";
         content = `
           <svg class="map-icon" >
             <use xlink:href="./map-icons/map-icons.svg#buildings-2"></use>

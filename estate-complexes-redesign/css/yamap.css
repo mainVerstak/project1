@@ -1,3 +1,13 @@
+:root {
+  --color-new-building: #0085ff;
+  --color-default-building: #112832;
+  --color-market: #887cee;
+  --color-study: #ffbb33;
+  --color-medical: #08a664;
+  --color-sport: #92d9ea;
+  --color-entertainment: #e98beb;
+}
+
 /* Map */
 .map {
   width: auto;
@@ -66,37 +76,37 @@
 .filter-icon.default-building,
 .single-marker.default-building,
 .cluster-marker__inner.default-building {
-  background-color: #112832;
+  background-color: var(--color-default-building);
 }
 .filter-icon.new-building,
 .single-marker.new-building,
 .cluster-marker__inner.new-building {
-  background-color: #0085ff;
+  background-color: var(--color-new-building);
 }
 .filter-icon.market,
 .single-marker.market,
 .cluster-marker__inner.market {
-  background-color: #887cee;
+  background-color: var(--color-market);
 }
 .filter-icon.study,
 .single-marker.study,
 .cluster-marker__inner.study {
-  background-color: #ffbb33;
+  background-color: var(--color-study);
 }
 .filter-icon.medical,
 .single-marker.medical,
 .cluster-marker__inner.medical {
-  background-color: #08a664;
+  background-color: var(--color-medical);
 }
 .filter-icon.sport,
 .single-marker.sport,
 .cluster-marker__inner.sport {
-  background-color: #92d9ea;
+  background-color: var(--color-sport);
 }
 .filter-icon.entertainment,
 .single-marker.entertainment,
 .cluster-marker__inner.entertainment {
-  background-color: #e98beb;
+  background-color: var(--color-entertainment);
 }
 
 .single-marker.active svg {
@@ -144,7 +154,7 @@
   border: none;
   position: relative;
 }
-.ds-map__item:not(:last-child)::after {
+.ds-map__item::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -194,7 +204,7 @@
   cursor: pointer;
   border-radius: 50% 50% 0 50%;
   transform: translate(-50%, -100%) rotate(45deg) scale(1.5);
-  background-color: #0085ff;
+  background-color: var(--color-new-building);
 }
 .main-marker svg {
   transform: rotate(-45deg);
@@ -220,7 +230,7 @@
   padding: 0 10px 0 3px;
   border: 1px solid var(--color-border);
   border-radius: 50px;
-  background: #ffffff;
+  background: var(--color-white);
   cursor: pointer;
   font-size: 12px;
   transition: all 0.2s;
@@ -244,9 +254,9 @@
 }
 
 .filter-btn.active {
-  background: #112832;
-  color: #ffffff;
-  border-color: #112832;
+  background: var(--color-default-building);
+  color: var(--color-white);
+  border-color: var(--color-default-building);
 }
 
 .filter-btn.active .map-icon {
@@ -266,4 +276,21 @@
   .ds-map__list {
     display: none;
   }
+}
+
+.status-sticker {
+  width: fit-content;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.status-sticker.default-building {
+  background-color: var(--color-default-building);
+  color: var(--color-white);
+}
+.status-sticker.new-building {
+  background-color: var(--color-new-building);
+  color: var(--color-white);
 }
