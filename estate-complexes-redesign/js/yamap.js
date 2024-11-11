@@ -13,8 +13,23 @@ async function getMapData() {
   }
 }
 
+async function getTargetMarkerData() {
+  try {
+    return {
+      objId: 44781,
+      latitude: 47.221766,
+      longitude: 39.723286,
+    };
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 // Объявляем переменную для карты в глобальной области видимости
 let map;
+
+// Объявляем points в глобальной области видимости
+let points = [];
 
 async function initMap() {
   await ymaps3.ready;
@@ -53,10 +68,12 @@ async function initMap() {
     },
   });
 
+  const targetMarkerData = await getTargetMarkerData();
+
   // Сохраняем ссылку на карту
   map = new YMap(document.getElementById("map"), {
     location: {
-      center: [39.724676, 47.221229],
+      center: [targetMarkerData.longitude, targetMarkerData.latitude],
       zoom: 15.5,
     },
   });
@@ -68,21 +85,36 @@ async function initMap() {
   map.addChild(new YMapDefaultFeaturesLayer());
   map.addChild(mapListener);
 
+  // Создаем главный маркер
+  const mainPoint = new YMapMarker(
+    {
+      coordinates: [targetMarkerData.longitude, targetMarkerData.latitude],
+      zIndex: 999, // Устанавливаем высокий z-index чтобы маркер был поверх остальных
+    },
+    createMainMarkerElement(targetMarkerData)
+  );
+
+  // Добавляем маркер на карту
+  map.addChild(mainPoint);
+
+  // Функция создания DOM элемента для главного маркера
+  function createMainMarkerElement(properties) {
+    const element = document.createElement("div");
+    element.innerHTML = `
+    <div class="new-building main-marker">
+      <svg class="map-icon new-building map-icon--main">
+        <use xlink:href="./map-icons/map-icons.svg#buildings"></use>
+      </svg>
+    </div>
+  `;
+    return element.firstElementChild;
+  }
+
   // Получаем тестовые данные и преобразуем в точки
   const data = await getMapData();
 
-  await map.setLocation({
-    zoom: 15, // Устанавливаем новый уровень зума
-    duration: 500, // Длительность анимации
-  });
-
-  // Функция для генерации уникального ID
-  function generateUniqueId() {
-    return "id_" + Math.random().toString(36).substr(2, 9);
-  }
-
-  // При создании точек добавим уникальный ID каждому объекту
-  const points = data.map((item, index) => {
+  // Сохраняем точки в глобальную переменную
+  points = data.map((item, index) => {
     const uniqueId = generateUniqueId();
     return {
       type: "Feature",
@@ -101,10 +133,20 @@ async function initMap() {
         subtitle: item.subtitle,
         objId: item.objId,
         status: item.status,
-        uniqueId: uniqueId, // Добавляем уникальный ID
+        uniqueId: uniqueId,
       },
     };
   });
+
+  await map.setLocation({
+    zoom: 15, // Устанавливаем новый уровень зума
+    duration: 500, // Длительность анимации
+  });
+
+  // Функция для генерации уникального ID
+  function generateUniqueId() {
+    return "id_" + Math.random().toString(36).substr(2, 9);
+  }
 
   const listItems = [];
 
@@ -117,7 +159,11 @@ async function initMap() {
     element.innerHTML = `<div class="swiper-slide" data-id="${uniqueId}">
                       <a href="#" class="ds-map__item">
                         <div class="ds-map__heading">
-                          <h4>${item.properties.name}</h4>
+                          <h4>${
+                            item.properties.name
+                              ? item.properties.name
+                              : item.properties.address
+                          }</h4>
                           <span>${item.properties.dist.toFixed()} м</span>
                         </div>
                         <span class="ds-map__address">${
@@ -195,14 +241,14 @@ async function initMap() {
         className = "new-building";
         content = `
           <svg class="map-icon" >
-            <use xlink:href="./map-icons/map-icons.svg#buildings"></use>
+            <use xlink:href="./map-icons/map-icons.svg#buildings-2"></use>
           </svg>`;
         break;
       default:
         className = "default-building";
         content = `
           <svg class="map-icon" >
-            <use xlink:href="./map-icons/map-icons.svg#buildings"></use>
+            <use xlink:href="./map-icons/map-icons.svg#buildings-2"></use>
           </svg>`;
     }
 
@@ -327,6 +373,9 @@ async function initMap() {
     }
   });
 
+  // Объявим переменную для хранения кластеризаторов в глобальной области
+  let clusterers = {};
+
   // Создаем кластеризатор для каждой группы
   Object.keys(groupedPoints).forEach((category) => {
     if (groupedPoints[category].length > 0) {
@@ -365,6 +414,9 @@ async function initMap() {
           );
         },
       });
+
+      // Сохраняем кластеризор
+      clusterers[category] = clusterer;
 
       // Добавляем кластеризатор на карту
       map.addChild(clusterer);
@@ -420,6 +472,147 @@ async function initMap() {
       swiperScrollContainer.setTranslate(-slide.offsetTop);
     });
   });
+
+  // Функция создания фильтров для карты
+  function createMapFilters(points) {
+    const filterContainer = document.querySelector(".ds-map-filters");
+
+    // Подсчитываем количество точек для каждой категории
+    const categoryCounts = {
+      all: points.length,
+      entertainment: points.filter(
+        (p) => p.properties.tabName === "Развлечения"
+      ).length,
+      education: points.filter((p) => p.properties.tabName === "Образование")
+        .length,
+      medical: points.filter((p) => p.properties.tabName === "Медицина").length,
+      sport: points.filter((p) => p.properties.tabName === "Спорт").length,
+      market: points.filter((p) => p.properties.tabName === "Продукты").length,
+      newBuilding: points.filter((p) => p.properties.tabName === "Новостройки")
+        .length,
+    };
+
+    // Создаем HTML для фильтров
+    filterContainer.innerHTML = `
+      <button class="filter-btn active" data-category="all">
+        <span class="filter-text-all">Все</span> <span class="filter-count">${categoryCounts.all}</span>
+      </button>
+      <button class="filter-btn" data-category="entertainment">
+        <div class="filter-icon entertainment">
+          <svg class="map-icon">
+            <use xlink:href="./map-icons/map-icons.svg#video"></use>
+          </svg>
+        </div>
+        <span class="filter-count">${categoryCounts.entertainment}</span>
+      </button>
+      <button class="filter-btn" data-category="study">
+        <div class="filter-icon study">
+          <svg class="map-icon">
+            <use xlink:href="./map-icons/map-icons.svg#teacher"></use>
+          </svg>
+        </div>
+        <span class="filter-count">${categoryCounts.education}</span>
+      </button>
+      <button class="filter-btn" data-category="medical">
+        <div class="filter-icon medical">
+          <svg class="map-icon">
+            <use xlink:href="./map-icons/map-icons.svg#plus"></use>
+          </svg>
+        </div>
+        <span class="filter-count">${categoryCounts.medical}</span>
+      </button>
+      <button class="filter-btn" data-category="sport">
+        <div class="filter-icon sport">
+          <svg class="map-icon">
+            <use xlink:href="./map-icons/map-icons.svg#cup"></use>
+          </svg>
+        </div>
+        <span class="filter-count">${categoryCounts.sport}</span>
+      </button>
+      <button class="filter-btn" data-category="market">
+        <div class="filter-icon market">
+          <svg class="map-icon">
+            <use xlink:href="./map-icons/map-icons.svg#shop"></use>
+          </svg>
+        </div>
+        <span class="filter-count">${categoryCounts.market}</span>
+      </button>
+      <button class="filter-btn" data-category="newBuilding">
+        <div class="filter-icon new-building">
+          <svg class="map-icon">
+            <use xlink:href="./map-icons/map-icons.svg#buildings-2"></use>
+          </svg>
+        </div>
+        <span class="filter-count">${categoryCounts.newBuilding}</span>
+      </button>
+    `;
+
+    // Добавляем обработчики событий для фильтров
+    const filterButtons = filterContainer.querySelectorAll(".filter-btn");
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+        filterMarkers(button.dataset.category);
+      });
+    });
+  }
+
+  // Изменим функцию фильтрации
+  function filterMarkers(category) {
+    // Сначала удалим все кластеризаторы с карты
+    Object.values(clusterers).forEach((clusterer) => {
+      map.removeChild(clusterer);
+    });
+
+    if (category === "all") {
+      // Для "all" возвращаем все кластеризаторы на карту
+      Object.keys(groupedPoints).forEach((category) => {
+        if (clusterers[category] && groupedPoints[category].length > 0) {
+          clusterers[category].features = groupedPoints[category];
+          map.addChild(clusterers[category]);
+        }
+      });
+    } else {
+      // Исправляем маппинг для study/education
+      const categoryKey = category === "education" ? "study" : category;
+
+      // Для конкретной категории показываем только её кластеризатор
+      if (clusterers[categoryKey]) {
+        clusterers[categoryKey].features = groupedPoints[categoryKey];
+        map.addChild(clusterers[categoryKey]);
+      }
+    }
+
+    // Обновляем список
+    const slides = document.querySelectorAll(".swiper-slide");
+    slides.forEach((slide) => {
+      const slideId = slide.dataset.id;
+      if (category === "all") {
+        slide.style.display = "";
+      } else {
+        const point = points.find((p) => p.properties.uniqueId === slideId);
+        const categoryMapping = {
+          entertainment: "Развлечения",
+          study: "Образование", // Оставляем как есть для проверки tabName
+          medical: "Медицина",
+          sport: "Спорт",
+          market: "Продукты",
+          newBuilding: "Новостройки",
+        };
+        slide.style.display =
+          point && point.properties.tabName === categoryMapping[category]
+            ? ""
+            : "none";
+      }
+    });
+
+    // Обновляем Swiper
+    swiperScrollContainer.update();
+  }
+
+  // Вызываем создание фильтров после создания точек
+  createMapFilters(points);
 }
 
 // Альтернативный вариант прокрутки

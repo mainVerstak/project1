@@ -63,30 +63,37 @@
   height: 16px;
   pointer-events: none;
 }
+.filter-icon.default-building,
 .single-marker.default-building,
 .cluster-marker__inner.default-building {
   background-color: #112832;
 }
+.filter-icon.new-building,
 .single-marker.new-building,
 .cluster-marker__inner.new-building {
   background-color: #0085ff;
 }
+.filter-icon.market,
 .single-marker.market,
 .cluster-marker__inner.market {
   background-color: #887cee;
 }
+.filter-icon.study,
 .single-marker.study,
 .cluster-marker__inner.study {
   background-color: #ffbb33;
 }
+.filter-icon.medical,
 .single-marker.medical,
 .cluster-marker__inner.medical {
   background-color: #08a664;
 }
+.filter-icon.sport,
 .single-marker.sport,
 .cluster-marker__inner.sport {
   background-color: #92d9ea;
 }
+.filter-icon.entertainment,
 .single-marker.entertainment,
 .cluster-marker__inner.entertainment {
   background-color: #e98beb;
@@ -170,4 +177,93 @@
 
 .swiper-scrollbar-drag:active {
   cursor: grabbing;
+}
+
+.main-marker {
+  z-index: 9999;
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50% 50% 0 50%;
+  transform: translate(-50%, -100%) rotate(45deg) scale(1.5);
+  background-color: #0085ff;
+}
+.main-marker svg {
+  transform: rotate(-45deg);
+}
+
+/* Стили для панели фильтров */
+.ds-map-filters {
+  position: relative;
+  bottom: 50px;
+  left: 35%;
+  border-radius: 8px;
+  display: flex;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 10px 0 3px;
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.filter-text-all {
+  padding-left: 5px;
+}
+
+.filter-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-btn:hover {
+  background: var(--color-grey-superlight);
+}
+
+.filter-btn.active {
+  background: #112832;
+  color: #ffffff;
+  border-color: #112832;
+}
+
+.filter-btn.active .map-icon {
+  fill: white;
+}
+
+.filter-count {
+  font-size: 12px;
+}
+
+@media (max-width: 767px) {
+  .ds-map-filters {
+    position: static;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .ds-map__list {
+    display: none;
+  }
 }
