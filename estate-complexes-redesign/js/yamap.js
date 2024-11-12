@@ -328,16 +328,146 @@ async function initMap() {
       </div>
     `;
 
-    element.firstElementChild.addEventListener("click", () => {
+    element.firstElementChild.addEventListener("click", (e) => {
       const nextZoom = Math.min(currentZoom + 1, 20);
-      map.setLocation({
-        center: data[0].geometry.coordinates,
-        zoom: nextZoom,
-        duration: 500,
-      });
+
+      if (currentZoom >= 19) {
+        // Передаем координаты клика в createClusterTooltip
+        createClusterTooltip(data, data[0].geometry.coordinates, {
+          x: e.clientX,
+          y: e.clientY,
+        });
+      } else {
+        map.setLocation({
+          center: data[0].geometry.coordinates,
+          zoom: nextZoom,
+          duration: 500,
+        });
+      }
     });
 
     return element.firstElementChild;
+  }
+
+  // Изменим функцию createClusterTooltip
+  function createClusterTooltip(features, coordinates, mousePosition) {
+    // Удаляем существующий тултип если есть
+    const existingTooltip = document.querySelector(".cluster-tooltip");
+    if (existingTooltip) {
+      existingTooltip.remove();
+      // Удаляем класс active у всех кластеров
+      document.querySelectorAll(".cluster-marker").forEach((marker) => {
+        marker.classList.remove("active");
+        marker
+          .querySelector(".cluster-marker__inner")
+          .classList.remove("active");
+      });
+    }
+
+    const tooltip = document.createElement("div");
+    tooltip.className = "cluster-tooltip";
+
+    // Добавляем элементы списка
+    features.forEach((feature) => {
+      const item = document.createElement("div");
+      item.className = "cluster-tooltip__item";
+      item.innerHTML = `
+          ${
+            feature.properties.status === 2
+              ? '<div class="status-sticker default-building">Сдан</div>'
+              : ""
+          }
+          ${
+            feature.properties.status === 0
+              ? '<div class="status-sticker new-building">Строится</div>'
+              : ""
+          }
+        <div class="cluster-tooltip__heading">${
+          feature.properties.name || "Без названия"
+        }</div>
+        <div class="cluster-tooltip__address">${
+          feature.properties.address
+        }</div>
+      `;
+
+      // Добавляем обработчик клика на элемент списка
+      item.addEventListener("click", () => {
+        // Центрируем карту на выбранной точке
+        map.setLocation({
+          center: feature.geometry.coordinates,
+          zoom: 20,
+          duration: 500,
+        });
+
+        // Активируем соответствующий элемент в основном списке
+        const listItem = document.querySelector(
+          `.swiper-slide[data-id="${feature.properties.uniqueId}"] .ds-map__item`
+        );
+        if (listItem) {
+          const allItems = document.querySelectorAll(".ds-map__item");
+          allItems.forEach((item) => item.classList.remove("active"));
+          listItem.classList.add("active");
+
+          // Прокручиваем список к выбранному элементу
+          const slide = listItem.closest(".swiper-slide");
+          if (slide) {
+            swiperScrollContainer.el.querySelector(
+              ".swiper-wrapper"
+            ).style.transition = "300ms";
+            swiperScrollContainer.setTranslate(-slide.offsetTop);
+          }
+        }
+
+        // Закрываем тултип
+        tooltip.remove();
+      });
+
+      tooltip.appendChild(item);
+    });
+
+    // Добавляем тултип в контейнер с кластером
+    const clusterElement = document.querySelector(".cluster-marker");
+    if (clusterElement) {
+      // Добавляем класс active кластеру
+      clusterElement.classList.add("active");
+      clusterElement
+        .querySelector(".cluster-marker__inner")
+        .classList.add("active");
+
+      clusterElement.appendChild(tooltip);
+
+      // Убираем лишние стили позиционирования
+      tooltip.style.position = "absolute";
+      tooltip.style.width = "200px";
+
+      // Проверяем, не выходит ли тултип за пределы карты
+      const mapElement = document.getElementById("map");
+      const mapRect = mapElement.getBoundingClientRect();
+      const tooltipRect = tooltip.getBoundingClientRect();
+
+      // Если тултип выходит за правый край карты
+      if (tooltipRect.right > mapRect.right) {
+        // Размещаем тултип слева от маркера
+        tooltip.style.left = "auto";
+        tooltip.style.right = "calc(100% + 15px)";
+        tooltip.classList.add("cluster-tooltip--left");
+      }
+    }
+
+    // Изменяем обработчик закрытия тултипа
+    document.addEventListener("click", function closeTooltip(e) {
+      if (!tooltip.contains(e.target) && !e.target.closest(".cluster-marker")) {
+        tooltip.remove();
+        // Удаляем класс active у кластера при закрытии тултипа
+        if (clusterElement) {
+          clusterElement.classList.remove("active");
+          clusterElement
+            .querySelector(".cluster-marker__inner")
+            .classList.remove("active");
+        }
+        document.removeEventListener("click", closeTooltip);
+      }
+    });
   }
 
   // Группируем точки по категориям
@@ -606,7 +736,7 @@ async function initMap() {
         const categoryMapping = {
           entertainment: "Развлечения",
           study: "Образование", // Оставляем как есть для проверки tabName
-          medical: "Медицина",
+          medical: "едицина",
           sport: "Спорт",
           market: "Продукты",
           newBuilding: "Новостройки",

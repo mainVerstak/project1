@@ -35,6 +35,9 @@
   transform: translate(-50%, -50%) scale(1.2);
   cursor: pointer;
 }
+.cluster-marker.active:hover {
+  transform: translate(-50%, -50%);
+}
 .cluster-marker__inner {
   width: 100%;
   height: 100%;
@@ -293,4 +296,93 @@
 .status-sticker.new-building {
   background-color: var(--color-new-building);
   color: var(--color-white);
+}
+
+/* Стили для тултипа кластера */
+.cluster-tooltip {
+  position: absolute;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1001;
+  left: calc(100% + 15px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cluster-tooltip::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid var(--color-white);
+}
+
+.cluster-tooltip__item {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cluster-tooltip__item:last-child {
+  border-bottom: none;
+}
+
+.cluster-tooltip__item:hover {
+  background-color: var(--color-grey-superlight);
+}
+
+.cluster-tooltip__heading {
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.cluster-tooltip__address {
+  font-size: 10px;
+  color: var(--color-grey);
+}
+
+/* Затемнение фона при открытом попапе */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Стили для тултипа слева от маркера */
+.cluster-tooltip--left::after {
+  left: auto;
+  right: -8px;
+  border-right: none;
+  border-left: 8px solid var(--color-white);
+}
+
+/* Добавляем стили для активного кластера */
+.cluster-marker.active {
+  transform: translate(-50%, -50%);
+  cursor: default;
+}
+
+.cluster-marker.active:hover {
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Отменяем эффект hover для активного кластера */
+}
+
+.cluster-marker__inner.active {
+  cursor: default;
 }
