@@ -319,7 +319,7 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
 }
 .radio:hover,
 .checkbox:hover {
-  background-color: var(--color-superlight);
+  background-color: var(--color-grey-superlight);
 }
 .checkbox label {
   padding: 6px 8px;
@@ -416,7 +416,7 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
 
 /*Header */
 .header-top-nav {
-  background-color: var(--color-superlight);
+  background-color: var(--color-grey-superlight);
   font-weight: 500;
 }
 .header-city-btn,
