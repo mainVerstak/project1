@@ -1,4 +1,14 @@
 :root {
+  --color-white: #ffffff;
+  --color-blue: #084c95;
+  --color-blue-hover: #07386c;
+  --color-grey-dark: #333333;
+  --color-grey: #7a7a7a;
+  --color-grey-superlight: #f5f5f5;
+  --color-border: #e6e6e6;
+  --border-radius: 5px;
+  --border-radius-big: 10px;
+
   --color-new-building: #0085ff;
   --color-default-building: #112832;
   --color-market: #887cee;
@@ -278,6 +288,9 @@
   }
   .ds-map__list {
     display: none;
+  }
+  .ds-map__wrap {
+    margin: 0 15px;
   }
 }
 
