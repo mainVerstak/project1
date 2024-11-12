@@ -329,7 +329,7 @@ async function initMap() {
     `;
 
     element.firstElementChild.addEventListener("click", (e) => {
-      const nextZoom = Math.min(currentZoom + 1, 20);
+      const nextZoom = Math.min(currentZoom + 2, 20);
 
       if (currentZoom >= 19) {
         // Передаем координаты клика в createClusterTooltip
