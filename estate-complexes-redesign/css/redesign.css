@@ -41,6 +41,30 @@ a:visited {
   fill: currentColor;
 }
 
+.icon-big {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.icon-breadcrumbs {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.center-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hidden-xs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Buttons */
 .btn {
   text-shadow: none;
@@ -246,6 +270,7 @@ a:visited {
   gap: 5px;
   align-items: center;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .btn-warning:hover {
@@ -443,6 +468,12 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   color: #333333 !important;
 }
 
+.header-city-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 header .container {
   border-radius: 10px 10px 0 0;
   padding-top: 15px;
@@ -536,6 +567,15 @@ button.navbar-toggle.sidenav-button {
   color: #777777;
 }
 
+@media only screen and (max-width: 767px) {
+  button.navbar-toggle.sidenav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+  }
+}
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .active > a {
   text-shadow: none;
@@ -1001,6 +1041,12 @@ header strong,
 .object .text-location {
   font-weight: 500;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.object .text-location svg {
+  margin-right: 5px;
 }
 
 .object .text-muted.object__text-trim.object__text-comment.tooltip_comment_action.tooltip_comment_loaded {
@@ -1017,12 +1063,23 @@ header strong,
 }
 
 .object__status-hot {
-  font-size: 12px;
+  font-size: 14px;
   color: #ffffff;
   background-color: #d9534f;
   padding: 5px 10px;
   border-radius: 5px;
   width: auto;
+  font-weight: 500;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.object__owner-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .pagination li span,
@@ -1230,6 +1287,12 @@ header strong,
 .ds-tabs .ds-item h2 {
   font-size: 18px;
   font-weight: 400;
+}
+
+.ds-tabs .ds-question svg {
+  display: flex;
+  transform: rotate(0deg);
+  margin-left: 10px;
 }
 
 /* Review-box */
@@ -1464,6 +1527,12 @@ header strong,
   height: 14px;
 }
 
+.apartment-desc__owner noindex {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
 /* Slider big */
 .fotorama__stage {
   border-radius: 5px;
@@ -1563,6 +1632,8 @@ header strong,
   font-size: 14px;
   font-weight: 500;
   color: #777777;
+  display: flex;
+  align-items: center;
 }
 
 .calc-mortgage__input input {

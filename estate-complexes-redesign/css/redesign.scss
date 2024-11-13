@@ -55,6 +55,28 @@ a:visited {
   height: 12px;
   fill: currentColor;
 }
+.icon-big {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+.icon-breadcrumbs {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.center-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hidden-xs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Buttons */
 .btn {
@@ -244,6 +266,7 @@ a:visited {
   gap: 5px;
   align-items: center;
   text-decoration: none;
+  font-weight: 500;
 }
 .btn-warning:hover {
   background-color: $color-yellow-hover;
@@ -453,6 +476,11 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
 .header-top-nav .nav > li > a:hover {
   color: $color-grey-dark !important;
 }
+.header-city-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 header .container {
   border-radius: $border-radius-big $border-radius-big 0 0;
   padding-top: 15px;
@@ -534,6 +562,17 @@ button.navbar-toggle.sidenav-button {
   padding: 6px 9px;
   color: $color-grey-text;
 }
+
+@media only screen and (max-width: 767px) {
+  button.navbar-toggle.sidenav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+  }
+}
+
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .active > a {
   text-shadow: none;
@@ -996,6 +1035,11 @@ header strong,
 .object .text-location {
   font-weight: 500;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+.object .text-location svg {
+  margin-right: 5px;
 }
 
 .object
@@ -1013,12 +1057,22 @@ header strong,
 }
 
 .object__status-hot {
-  font-size: 12px;
-  color: $color-white;
+  font-size: 14px;
+  color: #ffffff;
   background-color: $color-red;
   padding: 5px 10px;
-  border-radius: $border-radius;
+  border-radius: 5px;
   width: auto;
+  font-weight: 500;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.object__owner-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .pagination li span,
@@ -1209,6 +1263,11 @@ header strong,
 .ds-tabs .ds-item h2 {
   font-size: 18px;
   font-weight: 400;
+}
+.ds-tabs .ds-question svg {
+  display: flex;
+  transform: rotate(0deg);
+  margin-left: 10px;
 }
 
 /* Review-box */
@@ -1413,11 +1472,16 @@ header strong,
   width: 32px;
   padding: 0;
 }
-
 .btn-social-icon > :first-child {
   position: static;
   width: 14px;
   height: 14px;
+}
+
+.apartment-desc__owner noindex {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 /* Slider big */
@@ -1503,6 +1567,8 @@ header strong,
   font-size: 14px;
   font-weight: 500;
   color: $color-grey-text;
+  display: flex;
+  align-items: center;
 }
 .calc-mortgage__input input {
   background-color: $color-white;

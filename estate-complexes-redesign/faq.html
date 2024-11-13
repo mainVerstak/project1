@@ -55,11 +55,11 @@
                   aria-expanded="false"
                 >
                   <svg class="icon-map-small">
-                    <use xlink:href="./img/new-icons.svg#icon-map"></use>
+                    <use xlink:href="./img/new-icons.svg#placeholder"></use>
                   </svg>
                   Москва
-                  <svg class="icon-caret-default">
-                    <use xlink:href="./img/new-icons.svg#caret"></use>
+                  <svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#dd"></use>
                   </svg>
                 </div>
                 <ul class="dropdown-menu">
@@ -75,11 +75,11 @@
               <a
                 class="yaSend"
                 href="/documents"
-                title="Выписки из ЕГРН"
+                title="Новостройки"
                 yaparam="header_document_click"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#appartments"></use>
+                  <use xlink:href="./img/new-icons.svg#new"></use>
                 </svg>
                 Новостройки
               </a>
@@ -94,7 +94,9 @@
             </li>
             <li class="navbar-nav__hide-mobile" i>
               <a href="#">
-                <i class="fas fa-key icon-default"></i>
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#mortgage"></use>
+                </svg>
                 Ипотека
               </a>
             </li>
@@ -106,9 +108,9 @@
           <div class="container-fluid">
             <div class="navbar-header">
               <button class="navbar-toggle sidenav-button" type="button">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#sandwich"></use>
+                </svg>
               </button>
               <span class="pull-left">
                 <a class="navbar-brand" href="/">
@@ -128,9 +130,15 @@
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
-                        <i class="fas fa-map-marker-alt"></i>
+                        <svg class="icon-map-small">
+                          <use
+                            xlink:href="./img/new-icons.svg#placeholder"
+                          ></use>
+                        </svg>
                         Москва
-                        <i class="fas fa-caret-down"></i>
+                        <svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#dd"></use>
+                        </svg>
                       </div>
                       <ul class="dropdown-menu">
                         <li><a href="#">Москва</a></li>
@@ -139,23 +147,95 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="nav navbar-nav">
-                    <a href="/sign-in">
-                      <div class="navbar-link">
-                        <i class="fas fa-sign-in-alt"></i>
-                        Войти
-                      </div>
-                    </a>
+                  <li>
+                    <a
+                      title="Подписки о новых объявлениях"
+                      href="https://olan.ru/searches"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#search"></use>
+                      </svg>
+                      <span class="hidden-sm hidden-lg hidden-md">
+                        Подписки о новых объявлениях</span
+                      ></a
+                    >
                   </li>
-                  <li class="nav navbar-nav">
-                    <a href="/sign-up">
-                      <div class="navbar-link">
-                        <svg class="icon-default">
-                          <use xlink:href="./img/new-icons.svg#user"></use>
-                        </svg>
-                        Зарегистрироваться
-                      </div>
-                    </a>
+                  <li class="dropdown nav notepads_block_action">
+                    <a href="https://olan.ru/notepads" title="Избранные"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#favorite"></use>
+                      </svg>
+                      <span class="hidden-sm hidden-lg hidden-md">
+                        Избранные</span
+                      ></a
+                    >
+                  </li>
+                  <li class="dropdown nav">
+                    <a title="Мои объявления" href="/cabinet"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#list"></use>
+                      </svg>
+                      <span class="hidden-sm">Мои объявления</span
+                      ><span class="hidden-sm"></span
+                    ></a>
+                  </li>
+                  <li class="dropdown nav">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                      ><svg class="icon-default">
+                        <use
+                          xlink:href="./img/new-icons.svg#registration"
+                        ></use></svg
+                      ><span class="hidden-sm"> +77055512345</span
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#dd"></use></svg
+                    ></a>
+                    <ul class="dropdown-menu sub-menu">
+                      <li>
+                        <a href="https://olan.ru/balance"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#balance"></use>
+                          </svg>
+                          Баланс
+                          <strong>0,00 </strong>
+                          <span class="balance-currency">₽</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/payments"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#service"></use>
+                          </svg>
+                          Подключенные услуги</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/phone_calls"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#phone"></use>
+                          </svg>
+                          Звонки</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/users-edit"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#setting"></use>
+                          </svg>
+                          Настройки</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          data-no-turbolink="true"
+                          rel="nofollow"
+                          data-method="delete"
+                          href="/sign-out"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#logout"></use>
+                          </svg>
+                          Выход</a
+                        >
+                      </li>
+                    </ul>
                   </li>
                   <li class="nav navbar-nav">
                     <div class="navbar-btn nav-font-color">
@@ -170,31 +250,60 @@
                     </div>
                   </li>
                   <li class="sidenav__hide-desktop">
-                    <a href="#">
-                      <svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#appartments"></use>
+                    <a href="https://olan.ru/"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#estate"></use>
                       </svg>
-                      Новостройки
-                    </a>
+                      Недвижимость</a
+                    >
                   </li>
                   <li class="sidenav__hide-desktop">
-                    <a
-                      class="yaSend"
-                      href="/documents"
-                      title="Выписки из ЕГРН"
-                      yaparam="header_document_click"
+                    <a href="https://olan.ru/mortgage"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека</a
                     >
-                      <svg class="icon-default">
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/new-complex-total"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#new"></use>
+                      </svg>
+                      Новостройки</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/new-cottage-total"
+                      ><svg class="icon-default">
                         <use xlink:href="./img/new-icons.svg#house"></use>
                       </svg>
-                      Коттеджные поселки
-                    </a>
+                      Коттеджные поселки</a
+                    >
                   </li>
                   <li class="sidenav__hide-desktop">
-                    <a href="#">
-                      <i class="fas fa-key icon-default"></i>
-                      Ипотека
-                    </a>
+                    <a href="https://olan.ru/tariffs"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#tarif"></use>
+                      </svg>
+                      Тарифы</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/xml"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#pocket"></use>
+                      </svg>
+                      Пакетная загрузка</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/advertise"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#adv"></use>
+                      </svg>
+                      Реклама на сайте</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -203,8 +312,9 @@
                 class="navbar-toggle sidenav__close"
                 type="button"
               >
-                <span></span>
-                <span></span>
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#cross"></use>
+                </svg>
               </button>
             </nav>
             <div class="sidenav-overlay"></div>
