@@ -661,6 +661,17 @@ header strong,
   #searchFormModal .modal-dialog .modal-content .get-search-locations-action {
     display: flex;
     align-items: center;
+    background-color: $color-grey;
+    border: 1px solid $color-grey;
+    color: $color-white;
+  }
+  #searchFormModal
+    .modal-dialog
+    .modal-content
+    .get-search-locations-action:hover {
+    background-color: $color-grey-dark;
+    border: 1px solid $color-grey-dark;
+    color: $color-white;
   }
   #searchFormModal
     .modal-dialog
@@ -1379,6 +1390,10 @@ header strong,
 /* Slider big */
 .fotorama__stage {
   border-radius: $border-radius;
+  background-color: $color-white;
+}
+.fotorama__thumb-border {
+  border-color: $color-blue;
 }
 .apartment-desc {
   background-color: $color-grey-superlight;
