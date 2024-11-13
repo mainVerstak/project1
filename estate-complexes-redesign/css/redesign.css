@@ -57,6 +57,15 @@ a:visited {
   height: 32px !important;
 }
 
+.btn-danger {
+  background-color: #d9534f;
+  border-color: #d9534f;
+  background-image: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .btn-default:active,
 .btn-default.active,
 .btn-primary:active,
@@ -723,6 +732,23 @@ header strong,
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+#searchFormModal .offerTypeSelect,
+#searchFormModal .categorySelect {
+  margin-bottom: 10px;
+}
+
+#searchFormModal .modal-body .get-search-locations-action {
+  background-color: #7a7a7a;
+  border: 1px solid #7a7a7a;
+  color: #ffffff;
+}
+
+#searchFormModal .modal-body .get-search-locations-action:hover {
+  background-color: #333333;
+  border: 1px solid #333333;
+  color: #ffffff;
 }
 
 /* Search preview */
@@ -1409,6 +1435,10 @@ header strong,
 .ds-social .btn-social-icon {
   height: 32px;
   width: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ds-social .panel-body-adv-block {
@@ -1426,6 +1456,12 @@ header strong,
   height: 32px;
   width: 32px;
   padding: 0;
+}
+
+.btn-social-icon > :first-child {
+  position: static;
+  width: 14px;
+  height: 14px;
 }
 
 /* Slider big */
