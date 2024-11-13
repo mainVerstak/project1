@@ -1,6 +1,18 @@
 $(function () {
   "use strict";
 
+  // to mortgage popup
+  $(".js-calc-mortgage-more").on("click", function () {
+    var $container = $(".calc-mortgage");
+    if ($container.hasClass("active")) {
+      $container.removeClass("active");
+      $("body").removeClass("calc-mortgage-filter-popup-show");
+    } else {
+      $container.addClass("active");
+      $("body").addClass("calc-mortgage-filter-popup-show");
+    }
+  });
+
   $(".sidenav-button").on("click", function () {
     $(".sidenav").addClass("sidenav_open");
     $(".sidenav-overlay").addClass("sidenav-overlay_open");

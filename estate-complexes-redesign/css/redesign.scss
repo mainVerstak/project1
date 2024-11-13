@@ -1350,6 +1350,7 @@ header strong,
 
 .ds-social {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
 }
 .ds-social .btn-social-icon > :first-child {
@@ -1358,6 +1359,9 @@ header strong,
 .ds-social .btn-social-icon {
   height: 32px;
   width: 32px;
+}
+.ds-social .panel-body-adv-block {
+  flex-wrap: wrap;
 }
 .btn-favorite-icon {
   position: relative;
@@ -1602,6 +1606,9 @@ header strong,
 }
 
 @media only screen and (max-width: 991px) {
+  .calc-mortgage__popup {
+    background: rgba(43, 43, 43, 0.5);
+  }
   .calc-mortgage__popup-inner {
     background: #fff;
     width: 100%;
