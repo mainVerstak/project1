@@ -19,51 +19,54 @@ $border-radius-big: 10px;
 $padding-btn-small: 6px 10px;
 
 /* Icons */
-.icon-map-small {
+#selectCategoryModal .icon-map-small,
+#selectOfferTypeModal .icon-map-small,
+#searchFormModal .icon-map-small,
+.searchFormPage .icon-map-small {
   width: 12px;
   height: 14px;
   fill: currentColor;
 }
-.icon-caret-default {
+#selectCategoryModal .icon-caret-default,
+#selectOfferTypeModal .icon-caret-default,
+#searchFormModal .icon-caret-default,
+.searchFormPage .icon-caret-default {
   width: 10px;
   height: 6px;
   fill: currentColor;
 }
-.icon-default {
+#selectCategoryModal .icon-default,
+#selectOfferTypeModal .icon-default,
+#searchFormModal .icon-default,
+.searchFormPage .icon-default {
   width: 14px;
   height: 14px;
   fill: currentColor;
 }
-.icon-info {
-  width: 12px;
-  height: 12px;
-  fill: currentColor;
-}
-.icon-big {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-.icon-breadcrumbs {
-  width: 12px;
-  height: 12px;
-  fill: currentColor;
-}
-
-.center-icon {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.hidden-xs {
+#selectCategoryModal .hidden-xs,
+#selectOfferTypeModal .hidden-xs,
+#searchFormModal .hidden-xs,
+.searchFormPage .hidden-xs {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+// без этого появляются не нужные кнопки и ломается верстка.
+@media (min-width: 768px) {
+  .map_panel .buildingTypeSelect,
+  .map_panel .renovationSelect,
+  .searchFormPage .buildingTypeSelect,
+  .searchFormPage .renovationSelect {
+    display: none !important;
+  }
+}
+
 /* Buttons */
-.btn {
+#selectCategoryModal .btn,
+#selectOfferTypeModal .btn,
+#searchFormModal .btn,
+.searchFormPage .btn {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -77,44 +80,45 @@ $padding-btn-small: 6px 10px;
   gap: 5px;
   height: 32px !important;
 }
-
-.btn-danger {
-  background-color: $color-red;
-  border-color: $color-red;
-  background-image: none;
+#selectCategoryModal .btn-default:active,
+#selectCategoryModal .btn-default.active,
+#selectCategoryModal .btn-primary:active,
+#selectCategoryModal .btn-primary.active,
+#selectOfferTypeModal .btn-default:active,
+#selectOfferTypeModal .btn-default.active,
+#selectOfferTypeModal .btn-primary:active,
+#selectOfferTypeModal .btn-primary.active,
+#searchFormModal .btn-default:active,
+#searchFormModal .btn-default.active,
+#searchFormModal .btn-primary:active,
+#searchFormModal .btn-primary.active,
+.searchFormPage .btn-default:active,
+.searchFormPage .btn-default.active,
+.searchFormPage .btn-primary:active,
+.searchFormPage .btn-primary.active {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-
-.btn-default:active,
-.btn-default.active,
-.btn-primary:active,
-.btn-primary.active,
-.btn-success:active,
-.btn-success.active,
-.btn-info:active,
-.btn-info.active,
-.btn-warning:active,
-.btn-warning.active,
-.btn-danger:active,
-.btn-danger.active {
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn-xs {
+#selectCategoryModal .btn-xs,
+#selectOfferTypeModal .btn-xs,
+#searchFormModal .btn-xs,
+.searchFormPage .btn-xs {
   padding: $padding-btn-small;
   font-size: 14px;
   height: 32px !important;
   line-height: 1.42857143;
 }
-.btn-group-xs > .btn {
+#selectCategoryModal .btn-group-xs > .btn,
+#selectOfferTypeModal .btn-group-xs > .btn,
+#searchFormModal .btn-group-xs > .btn,
+.searchFormPage .btn-group-xs > .btn {
   line-height: 1.42857143;
 }
-
-.btn-default {
+#selectCategoryModal .btn-default,
+#selectOfferTypeModal .btn-default,
+#searchFormModal .btn-default,
+.searchFormPage .btn-default {
   background-image: none;
   filter: none;
   background-color: $color-white;
@@ -125,49 +129,73 @@ $padding-btn-small: 6px 10px;
   font-weight: 500;
   line-height: 1.42857143;
 }
-.btn-default:hover {
+#selectCategoryModal .btn-default:hover,
+#selectOfferTypeModal .btn-default:hover,
+#searchFormModal .btn-default:hover,
+.searchFormPage .btn-default:hover {
   background-color: $color-grey-superlight;
   border: 1px solid $color-border;
   color: $color-grey-dark;
 }
-.btn-default.active {
+#selectCategoryModal .btn-default.active,
+#selectOfferTypeModal .btn-default.active,
+#searchFormModal .btn-default.active,
+.searchFormPage .btn-default.active {
   background-color: $color-border;
   border: 1px solid $color-border;
   color: $color-grey-dark;
 }
-.btn-default.active:hover {
+#selectCategoryModal .btn-default.active:hover,
+#selectOfferTypeModal .btn-default.active:hover,
+#searchFormModal .btn-default.active:hover,
+.searchFormPage .btn-default.active:hover {
   border: 1px solid $color-border;
   color: $color-grey-dark;
 }
-.btn-default:focus {
+#selectCategoryModal .btn-default:focus,
+#selectOfferTypeModal .btn-default:focus,
+#searchFormModal .btn-default:focus,
+.searchFormPage .btn-default:focus {
   box-shadow: none;
   border: 1px solid $color-grey-dark;
 }
-
-.btn-styled-new2 {
+#selectCategoryModal .btn-styled-new2,
+#selectOfferTypeModal .btn-styled-new2,
+#searchFormModal .btn-styled-new2,
+.searchFormPage .btn-styled-new2 {
   background-color: $color-blue;
   color: $color-white;
 }
-.btn-styled-new2:hover {
+#selectCategoryModal .btn-styled-new2:hover,
+#selectOfferTypeModal .btn-styled-new2:hover,
+#searchFormModal .btn-styled-new2:hover,
+.searchFormPage .btn-styled-new2:hover {
   background-color: $color-blue-hover;
 }
-
-.dropdown-toggle {
+#selectCategoryModal .dropdown-toggle,
+#selectOfferTypeModal .dropdown-toggle,
+#searchFormModal .dropdown-toggle,
+.searchFormPage .dropdown-toggle {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 14px;
   font-weight: 500 !important;
 }
-
-.dropdown-menu {
+#selectCategoryModal .dropdown-menu,
+#selectOfferTypeModal .dropdown-menu,
+#searchFormModal .dropdown-menu,
+.searchFormPage .dropdown-menu {
   border-radius: $border-radius;
   background-color: $color-white;
   padding: 0 !important;
   border: 1px solid $color-border !important;
   box-shadow: none !important;
 }
-.dropdown-menu li a {
+#selectCategoryModal .dropdown-menu li a,
+#selectOfferTypeModal .dropdown-menu li a,
+#searchFormModal .dropdown-menu li a,
+.searchFormPage .dropdown-menu li a {
   font-size: 14px;
   font-weight: 500 !important;
   color: $color-grey-text !important;
@@ -181,88 +209,77 @@ $padding-btn-small: 6px 10px;
   border-right: none !important;
   border-bottom: 1px solid $color-grey-superlight !important;
 }
-.dropdown-menu > li > a {
+#selectCategoryModal .dropdown-menu > li > a,
+#selectOfferTypeModal .dropdown-menu > li > a,
+#searchFormModal .dropdown-menu > li > a,
+.searchFormPage .dropdown-menu > li > a {
   display: flex;
   align-items: center;
   gap: 5px;
   padding: 5px 10px;
 }
-
-.dropdown-menu li a:hover {
+#selectCategoryModal .dropdown-menu li a:hover,
+#selectOfferTypeModal .dropdown-menu li a:hover,
+#searchFormModal .dropdown-menu li a:hover,
+.searchFormPage .dropdown-menu li a:hover {
   background-color: $color-grey-superlight;
   background-image: none !important;
 }
-.dropdown-menu li:first-child a {
+#selectCategoryModal .dropdown-menu li:first-child a,
+#selectOfferTypeModal .dropdown-menu li:first-child a,
+#searchFormModal .dropdown-menu li:first-child a,
+.searchFormPage .dropdown-menu li:first-child a {
   border-radius: $border-radius $border-radius 0 0 !important;
 }
-.dropdown-menu li:last-child a {
+#selectCategoryModal .dropdown-menu li:last-child a,
+#selectOfferTypeModal .dropdown-menu li:last-child a,
+#searchFormModal .dropdown-menu li:last-child a,
+.searchFormPage .dropdown-menu li:last-child a {
   border-radius: 0 0 $border-radius $border-radius !important;
   border: none !important;
 }
-.dropdown-menu li.active a {
+#selectCategoryModal .dropdown-menu li.active a,
+#selectOfferTypeModal .dropdown-menu li.active a,
+#searchFormModal .dropdown-menu li.active a,
+.searchFormPage .dropdown-menu li.active a {
   background-color: $color-border !important;
   color: $color-grey-dark !important;
   background-image: none !important;
 }
-
-.btn-primary {
+#selectCategoryModal .btn-primary,
+#selectOfferTypeModal .btn-primary,
+#searchFormModal .btn-primary,
+.searchFormPage .btn-primary {
   background-color: $color-blue;
   border-radius: $border-radius;
   background-image: none;
   border: none;
 }
-.btn-primary:hover {
+#selectCategoryModal .btn-primary:hover,
+#selectOfferTypeModal .btn-primary:hover,
+#searchFormModal .btn-primary:hover,
+.searchFormPage .btn-primary:hover {
   background-color: $color-blue-hover;
 }
-.btn-primary:focus {
+#selectCategoryModal .btn-primary:focus,
+#selectOfferTypeModal .btn-primary:focus,
+#searchFormModal .btn-primary:focus,
+.searchFormPage .btn-primary:focus {
   background-color: $color-blue-hover;
   border: 1px solid $color-grey-dark;
 }
-
-.btn-info {
-  background-color: $color-blue;
-  border-radius: $border-radius;
-  background-image: none;
-  border: none;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.btn-info:hover {
-  background-color: $color-blue-hover;
-}
-.btn-info:focus {
-  background-color: $color-blue-hover;
-}
-.btn-info:active {
-  background-color: $color-blue-hover;
-}
-.btn-info:active:hover {
-  background-color: $color-blue-hover;
-}
-
-.btn-warning {
-  background-color: $color-yellow;
-  border-radius: $border-radius;
-  background-image: none;
-  border: none;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 500;
-}
-.btn-warning:hover {
-  background-color: $color-yellow-hover;
-  text-decoration: none;
-}
-
-.modal-dialog .btn {
+#selectCategoryModal .modal-dialog .btn,
+#selectOfferTypeModal .modal-dialog .btn,
+#searchFormModal .modal-dialog .btn,
+.searchFormPage .modal-dialog .btn {
   display: inline-block;
 }
 
 /* Inputs */
-input.form-control {
+#selectCategoryModal input.form-control,
+#selectOfferTypeModal input.form-control,
+#searchFormModal input.form-control,
+.searchFormPage input.form-control {
   border-radius: $border-radius;
   border: 1px solid $color-border;
   padding: $padding-btn-small;
@@ -273,54 +290,94 @@ input.form-control {
   font-size: 14px !important;
   height: 32px !important;
 }
-input.form-control:focus {
+#selectCategoryModal input.form-control:focus,
+#selectOfferTypeModal input.form-control:focus,
+#searchFormModal input.form-control:focus,
+.searchFormPage input.form-control:focus {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid $color-blue;
 }
-input.form-control:active {
+#selectCategoryModal input.form-control:active,
+#selectOfferTypeModal input.form-control:active,
+#searchFormModal input.form-control:active,
+.searchFormPage input.form-control:active {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid $color-blue;
 }
 /* Единственный элемент */
-input.form-control:only-child {
+#selectCategoryModal input.form-control:only-child,
+#selectOfferTypeModal input.form-control:only-child,
+#searchFormModal input.form-control:only-child,
+.searchFormPage input.form-control:only-child {
   border-radius: $border-radius !important;
 }
 
 /* Первый элемент */
-input.form-control:first-child:not(:only-child) {
+#selectCategoryModal input.form-control:first-child:not(:only-child),
+#selectOfferTypeModal input.form-control:first-child:not(:only-child),
+#searchFormModal input.form-control:first-child:not(:only-child),
+.searchFormPage input.form-control:first-child:not(:only-child) {
   border-radius: $border-radius 0 0 $border-radius !important;
 }
 
 /* Последний элемент */
-input.form-control:last-child:not(:only-child) {
+#selectCategoryModal input.form-control:last-child:not(:only-child),
+#selectOfferTypeModal input.form-control:last-child:not(:only-child),
+#searchFormModal input.form-control:last-child:not(:only-child),
+.searchFormPage input.form-control:last-child:not(:only-child) {
   border-radius: 0 $border-radius $border-radius 0 !important;
 }
 
 /* Предпоследний элемент (не первый и не последний) */
-input.form-control:nth-last-child(2):not(:first-child):not(:last-child) {
+#selectCategoryModal
+  input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
+#selectOfferTypeModal
+  input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
+#searchFormModal
+  input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
+.searchFormPage
+  input.form-control:nth-last-child(2):not(:first-child):not(:last-child) {
   border-radius: 0 $border-radius $border-radius 0 !important;
 }
 
 /* Элемент не первый, не последний и не предпоследний */
-input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
+#selectCategoryModal
+  input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
+#selectOfferTypeModal
+  input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
+#searchFormModal
+  input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
+.searchFormPage
+  input.form-control:not(:first-child):not(:last-child):not(
+    :nth-last-child(2)
+  ) {
   border-radius: 0 !important;
 }
-.input-group-addon {
+#selectCategoryModal .input-group-addon,
+#selectOfferTypeModal .input-group-addon,
+#searchFormModal .input-group-addon,
+.searchFormPage .input-group-addon {
   border-radius: 0;
   border: none;
   background: none;
   padding: 5px;
   color: $color-grey-text;
 }
-.input-group-addon.input-sm {
+#selectCategoryModal .input-group-addon.input-sm,
+#selectOfferTypeModal .input-group-addon.input-sm,
+#searchFormModal .input-group-addon.input-sm,
+.searchFormPage .input-group-addon.input-sm {
   color: $color-grey-text;
   padding: 5px;
 }
-.input-group-sm input.form-control {
+#selectCategoryModal .input-group-sm input.form-control,
+#selectOfferTypeModal .input-group-sm input.form-control,
+#searchFormModal .input-group-sm input.form-control,
+.searchFormPage .input-group-sm input.form-control {
   height: 32px !important;
   font-size: 14px !important;
   width: 38px !important;
@@ -329,37 +386,105 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
 }
 
 /* Checkbox */
-.radio,
-.checkbox {
+#selectCategoryModal .radio,
+#selectCategoryModal .checkbox,
+#selectOfferTypeModal .radio,
+#selectOfferTypeModal .checkbox,
+#searchFormModal .radio,
+#searchFormModal .checkbox,
+.searchFormPage .radio,
+.searchFormPage .checkbox {
   border: 1px solid $color-border;
   border-radius: $border-radius;
   background-color: $color-white;
 }
-.radio:hover,
-.checkbox:hover {
+#selectCategoryModal .radio:hover,
+#selectCategoryModal .checkbox:hover,
+#selectOfferTypeModal .radio:hover,
+#selectOfferTypeModal .checkbox:hover,
+#searchFormModal .radio:hover,
+#searchFormModal .checkbox:hover,
+.searchFormPage .radio:hover,
+.searchFormPage .checkbox:hover {
   background-color: $color-grey-superlight;
 }
-.checkbox label {
+#selectCategoryModal .checkbox label,
+#selectOfferTypeModal .checkbox label,
+#searchFormModal .checkbox label,
+.searchFormPage .checkbox label {
   padding: 6px 8px;
   display: flex;
   align-items: center;
 }
-.animated-radios-and-checkboxes .checkbox .cr,
-.animated-radios-and-checkboxes .radio .cr {
+#selectCategoryModal .animated-radios-and-checkboxes .checkbox .cr,
+#selectCategoryModal .animated-radios-and-checkboxes .radio .cr,
+#selectOfferTypeModal .animated-radios-and-checkboxes .checkbox .cr,
+#selectOfferTypeModal .animated-radios-and-checkboxes .radio .cr,
+#searchFormModal .animated-radios-and-checkboxes .checkbox .cr,
+#searchFormModal .animated-radios-and-checkboxes .radio .cr,
+.searchFormPage .animated-radios-and-checkboxes .checkbox .cr,
+.searchFormPage .animated-radios-and-checkboxes .radio .cr {
   border: 1px solid $color-border;
 }
-.animated-radios-and-checkboxes .checkbox label {
+#selectCategoryModal .animated-radios-and-checkboxes .checkbox label,
+#selectOfferTypeModal .animated-radios-and-checkboxes .checkbox label,
+#searchFormModal .animated-radios-and-checkboxes .checkbox label,
+.searchFormPage .animated-radios-and-checkboxes .checkbox label {
   font-size: 14px !important;
   font-weight: 500 !important;
   line-height: unset !important;
 }
-.animated-radios-and-checkboxes
+#selectCategoryModal
+  .animated-radios-and-checkboxes
   .checkbox
   label
   input[type="checkbox"]:checked
   + .cr
   > .cr-icon,
-.animated-radios-and-checkboxes
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .cr
+  > .cr-icon,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .cr
+  > .cr-icon,
+.searchFormPage
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .cr
+  > .cr-icon,
+#selectCategoryModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .cr
+  > .cr-icon,
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .cr
+  > .cr-icon,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .cr
+  > .cr-icon,
+.searchFormPage
+  .animated-radios-and-checkboxes
   .radio
   label
   input[type="radio"]:checked
@@ -369,14 +494,64 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   color: $color-white;
   font-size: 10px;
 }
-.animated-radios-and-checkboxes
+#selectCategoryModal
+  .animated-radios-and-checkboxes
   .checkbox
   label
   input[type="checkbox"]:checked
   + .animated-radios-and-checkboxes
   .checkbox
   .cr,
-.animated-radios-and-checkboxes
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .animated-radios-and-checkboxes
+  .checkbox
+  .cr,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .animated-radios-and-checkboxes
+  .checkbox
+  .cr,
+.searchFormPage
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .animated-radios-and-checkboxes
+  .checkbox
+  .cr,
+#selectCategoryModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .animated-radios-and-checkboxes
+  .radio
+  .cr,
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .animated-radios-and-checkboxes
+  .radio
+  .cr,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .animated-radios-and-checkboxes
+  .radio
+  .cr,
+.searchFormPage
+  .animated-radios-and-checkboxes
   .radio
   label
   input[type="radio"]:checked
@@ -385,7 +560,32 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   .cr {
   background-color: $color-blue;
 }
-.animated-radios-and-checkboxes
+#selectCategoryModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .animated-radios-and-checkboxes
+  .checkbox
+  label.bigger,
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .animated-radios-and-checkboxes
+  .checkbox
+  label.huge,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .animated-radios-and-checkboxes
+  .checkbox
+  label.huge,
+.searchFormPage
+  .animated-radios-and-checkboxes
   .checkbox
   label
   input[type="checkbox"]:checked
@@ -395,36 +595,115 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   color: $color-blue;
   line-height: unset;
 }
-.animated-radios-and-checkboxes
+#selectCategoryModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked)
+  label.bigger,
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked)
+  label.huge,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked)
+  label.huge,
+.searchFormPage
+  .animated-radios-and-checkboxes
   .checkbox:has(input[type="checkbox"]:checked)
   label.huge {
   color: $color-blue;
   line-height: unset;
 }
-.animated-radios-and-checkboxes
+#selectCategoryModal
+  .animated-radios-and-checkboxes
   .checkbox
   label
   input[type="checkbox"]:checked
   + .cr,
-.animated-radios-and-checkboxes .radio label input[type="radio"]:checked + .cr {
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .cr,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .cr,
+.searchFormPage
+  .animated-radios-and-checkboxes
+  .checkbox
+  label
+  input[type="checkbox"]:checked
+  + .cr,
+#selectCategoryModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .cr,
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .cr,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .cr,
+.searchFormPage
+  .animated-radios-and-checkboxes
+  .radio
+  label
+  input[type="radio"]:checked
+  + .cr {
   background-color: $color-blue;
   border-color: $color-blue;
 }
-.animated-radios-and-checkboxes
+#selectCategoryModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked).checkbox,
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked).checkbox,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked).checkbox,
+.searchFormPage
+  .animated-radios-and-checkboxes
   .checkbox:has(input[type="checkbox"]:checked).checkbox {
   border: 1px solid $color-white;
 }
-.animated-radios-and-checkboxes
+#selectCategoryModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
+#selectOfferTypeModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
+#searchFormModal
+  .animated-radios-and-checkboxes
+  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
+.searchFormPage
+  .animated-radios-and-checkboxes
   .checkbox:has(input[type="checkbox"]:checked).checkbox:hover {
   border: 1px solid $color-border;
 }
 @media screen and (max-width: 900px) {
+  #selectCategoryModal .modal-body .form-group + .btn-group label,
+  #selectOfferTypeModal .modal-body .form-group + .btn-group label,
   #searchFormModal .modal-body .form-group + .btn-group label {
     font-size: 14px;
     padding: $padding-btn-small !important;
   }
 }
 @media screen and (max-width: 768px) {
+  #selectCategoryModal .modal-body .form-group + .btn-group label,
+  #selectOfferTypeModal .modal-body .form-group + .btn-group label,
   #searchFormModal .modal-body .form-group + .btn-group label {
     font-size: 14px;
     padding: $padding-btn-small !important;
@@ -433,21 +712,29 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
 }
 
 /* Form */
-.well {
+#searchFormModal .well,
+#searchFormModal.well,
+.searchFormPage .well,
+.searchFormPage.well {
   background-color: $color-grey-superlight;
   border: none;
   border-radius: $border-radius-big;
   box-shadow: none;
   background-image: none;
 }
-.well-sm {
+#searchFormModal .well-sm,
+#searchFormModal.well-sm,
+.searchFormPage .well-sm,
+.searchFormPage.well-sm {
   padding: 9px 9px 4px 9px;
 }
 
 @media (max-width: 768px) {
-  .well-sm {
+  .searchFormPage .well-sm,
+  .searchFormPage.well-sm {
     padding: $padding-btn-small;
   }
+  .searchFormPage .well,
   .searchFormPage.well {
     background-color: $color-blue;
   }
@@ -472,10 +759,20 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
     display: none;
   }
 
-  .modal-dialog .modal-content {
+  #selectCategoryModal .modal-dialog .modal-content,
+  #selectOfferTypeModal .modal-dialog .modal-content,
+  #searchFormModal .modal-dialog .modal-content {
     background-color: $color-grey-superlight;
   }
-  #form_search_locations_modal .modal-dialog .modal-content {
+  #selectCategoryModal
+    #form_search_locations_modal
+    .modal-dialog
+    .modal-content,
+  #selectOfferTypeModal
+    #form_search_locations_modal
+    .modal-dialog
+    .modal-content,
+  #searchFormModal #form_search_locations_modal .modal-dialog .modal-content {
     background-color: $color-white;
   }
   #searchFormModal .modal-dialog .modal-content .get-search-locations-action {
@@ -485,6 +782,14 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
     border: 1px solid $color-grey;
     color: $color-white;
   }
+  #selectCategoryModal
+    .modal-dialog
+    .modal-content
+    .get-search-locations-action:hover,
+  #selectOfferTypeModal
+    .modal-dialog
+    .modal-content
+    .get-search-locations-action:hover,
   #searchFormModal
     .modal-dialog
     .modal-content
@@ -493,6 +798,7 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
     border: 1px solid $color-grey-dark;
     color: $color-white;
   }
+
   #searchFormModal
     .modal-dialog
     .modal-content
@@ -502,10 +808,6 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
     font-weight: 900;
     margin-right: 5px;
   }
-  .btn .caret {
-    margin-left: auto;
-  }
-
   #searchFormModal .modal-footer .map_search_btn {
     margin: 0 12px 0 0 !important;
     width: 48.9% !important;
@@ -517,7 +819,7 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
     font-weight: 500;
   }
 }
-.searchFormPage.well .search_form_action .btn-group .dropdown-toggle {
+.well .search_form_action .btn-group .dropdown-toggle {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -525,22 +827,25 @@ input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   border: 1px solid $color-grey;
   color: $color-white;
 }
-.search_form_action .btn-group .dropdown-toggle:hover {
+#searchFormModal .search_form_action .btn-group .dropdown-toggle:hover,
+.searchFormPage .search_form_action .btn-group .dropdown-toggle:hover {
   background-color: $color-grey-dark;
   border: 1px solid $color-grey-dark;
   color: $color-white;
 }
-
-.search_form_action .btn-group.open .dropdown-toggle {
+#searchFormModal .search_form_action .btn-group.open .dropdown-toggle,
+.searchFormPage .search_form_action .btn-group.open .dropdown-toggle {
   background-color: $color-grey-dark;
   border: 1px solid $color-grey-dark;
   color: $color-white;
 }
-.search_form_action .btn-group.open .dropdown-toggle:hover {
+#searchFormModal .search_form_action .btn-group.open .dropdown-toggle:hover,
+.searchFormPage .search_form_action .btn-group.open .dropdown-toggle:hover {
   background-color: $color-grey-dark;
   border: 1px solid $color-grey-dark;
   color: $color-white;
 }
+#searchFormModal .form-group.pull-right.search_buttons,
 .searchFormPage .form-group.pull-right.search_buttons {
   display: flex;
   align-items: center;
