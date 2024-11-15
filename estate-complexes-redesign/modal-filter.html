@@ -786,6 +786,260 @@
               <span
                 class="additional_search_params_container_action"
                 id="js-additional-search-params-container"
+                ><div class="form-group">
+                  <label>комнат</label>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[room][0]"
+                        value="1"
+                      />
+                      студия
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[room][1]"
+                        value="1"
+                      />
+                      1
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[room][2]"
+                        value="1"
+                      />
+                      2
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[room][3]"
+                        value="1"
+                      />
+                      3
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[room][4]"
+                        value="1"
+                      />
+                      4+
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>площадь</label>
+                  <div class="input-group input-group-sm">
+                    <input
+                      class="form-control text-input"
+                      autocomplete="off"
+                      valid-type="integer"
+                      style="width: 57px"
+                      placeholder="от"
+                      type="text"
+                      name="advertisement[space_from]"
+                      value=""
+                    />
+                    <input
+                      class="form-control text-input"
+                      autocomplete="off"
+                      valid-type="integer"
+                      style="width: 57px; margin-left: -1px"
+                      placeholder="до"
+                      type="text"
+                      name="advertisement[space_to]"
+                      value=""
+                    />
+                    <span class="input-group-addon">м²</span>
+                  </div>
+                </div>
+                <div class="form-group buildingTypeButtons">
+                  <label>тип дома</label>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[building_type][]"
+                        value="0"
+                      />
+                      кирпичный
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[building_type][]"
+                        value="1"
+                      />
+                      панельный
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[building_type][]"
+                        value="2"
+                      />
+                      монолит
+                    </label>
+                  </div>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[building_type][]"
+                        value="3"
+                      />
+                      кирп-мон
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[building_type][]"
+                        value="4"
+                      />
+                      блочный
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[building_type][]"
+                        value="5"
+                      />
+                      деревянный
+                    </label>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-default btn-xs buildingTypeSelect"
+                  >
+                    <span class="btnText">выбрать</span>
+                    <span class="caret"></span>
+                  </button>
+                </div>
+                <div class="form-group">
+                  <label>этаж</label>
+                  <div class="input-group input-group-sm">
+                    <input
+                      class="form-control text-input"
+                      autocomplete="off"
+                      valid-type="integer"
+                      style="width: 36px"
+                      placeholder="от"
+                      type="text"
+                      name="advertisement[floor_from]"
+                      value=""
+                    />
+                    <input
+                      class="form-control text-input"
+                      autocomplete="off"
+                      valid-type="integer"
+                      style="width: 36px; margin-left: -1px"
+                      placeholder="до"
+                      type="text"
+                      name="advertisement[floor_to]"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>этажей</label>
+                  <div class="input-group input-group-sm">
+                    <input
+                      class="form-control text-input"
+                      autocomplete="off"
+                      valid-type="integer"
+                      style="width: 36px"
+                      placeholder="от"
+                      type="text"
+                      name="advertisement[floor_cnt_from]"
+                      value=""
+                    />
+                    <input
+                      class="form-control text-input"
+                      autocomplete="off"
+                      valid-type="integer"
+                      style="width: 36px; margin-left: -1px"
+                      placeholder="до"
+                      type="text"
+                      name="advertisement[floor_cnt_to]"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="form-group renovationButtons">
+                  <label>ремонт</label>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[renovation][]"
+                        value="0"
+                      />
+                      дизайн
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[renovation][]"
+                        value="1"
+                      />
+                      евро
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[renovation][]"
+                        value="2"
+                      />
+                      с отделкой
+                    </label>
+                  </div>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[renovation][]"
+                        value="3"
+                      />
+                      хороший
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[renovation][]"
+                        value="4"
+                      />
+                      частичный
+                    </label>
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[renovation][]"
+                        value="5"
+                      />
+                      черновой
+                    </label>
+                  </div>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default btn-xs">
+                      <input
+                        type="checkbox"
+                        name="advertisement[renovation][]"
+                        value="6"
+                      />
+                      без ремонта
+                    </label>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-default btn-xs renovationSelect"
+                  >
+                    <span class="btnText">выбрать</span>
+                    <span class="caret"></span>
+                  </button></div
               ></span>
               <span
                 class="additional_category_search_params_container_action"

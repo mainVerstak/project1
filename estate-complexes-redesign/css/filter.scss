@@ -129,13 +129,25 @@ $padding-btn-small: 6px 10px;
   font-weight: 500;
   line-height: 1.42857143;
 }
-#selectCategoryModal .btn-default:hover,
-#selectOfferTypeModal .btn-default:hover,
-#searchFormModal .btn-default:hover,
-.searchFormPage .btn-default:hover {
-  background-color: $color-grey-superlight;
-  border: 1px solid $color-border;
-  color: $color-grey-dark;
+@media (hover: hover) {
+  #selectCategoryModal .btn-default:hover,
+  #selectOfferTypeModal .btn-default:hover,
+  #searchFormModal .btn-default:hover,
+  .searchFormPage .btn-default:hover {
+    background-color: $color-grey-superlight;
+    border: 1px solid $color-border;
+    color: $color-grey-dark;
+  }
+}
+@media (hover: none) {
+  #selectCategoryModal .btn-default.active,
+  #selectOfferTypeModal .btn-default.active,
+  #searchFormModal .btn-default.active,
+  .searchFormPage .btn-default.active {
+    background-color: $color-border;
+    border: 1px solid $color-border;
+    color: $color-grey-dark;
+  }
 }
 #selectCategoryModal .btn-default.active,
 #selectOfferTypeModal .btn-default.active,
@@ -836,6 +848,22 @@ $padding-btn-small: 6px 10px;
     font-size: 14px;
     font-weight: 500;
   }
+}
+#searchFormModal
+  .btn-group
+  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+#searchFormModal .btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+#searchFormModal
+  .btn-group
+  > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
 }
 .well .search_form_action .btn-group .dropdown-toggle {
   text-shadow: none;
