@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="css/tabs.css" />
     <link rel="stylesheet" href="css/new.css" />
     <!-- <link rel="stylesheet" href="css/redesign.css" /> -->
-    <link rel="stylesheet" href="css/filter.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -502,6 +501,7 @@
         vertical-align: middle;
       }
     </style>
+    <link rel="stylesheet" href="css/filter.css" />
   </head>
 
   <body>
@@ -590,7 +590,9 @@
                   </div>
                   <button type="button" class="btn btn-default offerTypeSelect">
                     <span class="btnText">выбрать</span>
-                    <span class="caret"></span>
+                    <svg class="icon-default">
+                      <use xlink:href="./img/new-icons.svg#dd"></use>
+                    </svg>
                   </button>
                 </div>
               </span>
@@ -711,7 +713,9 @@
                 </div>
                 <button type="button" class="btn btn-default categorySelect">
                   <span class="btnText">выбрать</span>
-                  <span class="caret"></span>
+                  <svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#dd"></use>
+                  </svg>
                 </button>
               </div>
               <br /><span id="js-search-locations-filter"
@@ -756,11 +760,7 @@
                     name="advertisement[price_to]"
                     placeholder="до"
                     type="text"
-                  /><span class="input-group-addon input-sm"
-                    ><i class="fas fa-ruble-sign"
-                      ><span class="hidden">₽</span></i
-                    ></span
-                  >
+                  /><span class="input-group-addon input-sm">₽</span>
                 </div>
               </div>
               <div class="btn-group" data-toggle="buttons">
@@ -912,10 +912,16 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">
-              <i class="fas fa-times"></i> Отменить
+              <svg class="icon-default">
+                <use xlink:href="./img/new-icons.svg#cross"></use>
+              </svg>
+              Отменить
             </button>
             <button type="button" class="btn btn-primary">
-              <i class="fas fa-check"></i> Сохранить
+              <svg class="icon-default">
+                <use xlink:href="./img/new-icons.svg#owner"></use>
+              </svg>
+              Сохранить
             </button>
           </div>
         </div>
@@ -1080,10 +1086,16 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">
-              <i class="fas fa-times"></i> Отменить
+              <svg class="icon-default">
+                <use xlink:href="./img/new-icons.svg#cross"></use>
+              </svg>
+              Отменить
             </button>
             <button type="button" class="btn btn-primary">
-              <i class="fas fa-check"></i> Сохранить
+              <svg class="icon-default">
+                <use xlink:href="./img/new-icons.svg#owner"></use>
+              </svg>
+              Сохранить
             </button>
           </div>
         </div>
