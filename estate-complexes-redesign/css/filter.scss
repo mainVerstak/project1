@@ -778,6 +778,7 @@ $padding-btn-small: 6px 10px;
   #searchFormModal .modal-dialog .modal-content .get-search-locations-action {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: $color-grey;
     border: 1px solid $color-grey;
     color: $color-white;
@@ -817,6 +818,15 @@ $padding-btn-small: 6px 10px;
     justify-content: center;
     font-size: 14px;
     font-weight: 500;
+  }
+  #selectCategoryModal .modal-footer,
+  #selectOfferTypeModal .modal-footer {
+    display: flex;
+    flex: 1 1;
+  }
+  #selectCategoryModal .modal-footer .btn,
+  #selectOfferTypeModal .modal-footer .btn {
+    width: 100% !important;
   }
 }
 .well .search_form_action .btn-group .dropdown-toggle {

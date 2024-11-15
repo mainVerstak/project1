@@ -485,6 +485,7 @@
               </div>
             </div>
           </div>
+          <br />
           <span id="js-search-locations-filter"
             ><span class="search_control_action"
               ><input
@@ -890,13 +891,15 @@
         </form>
       </div>
     </div>
-    <!-- <div
-      class="modal"
+    <div
+      class="modal js-opened-by-short-search-form in"
       tabindex="-1"
       role="dialog"
       id="searchFormModal"
       itemscope="itemscope"
       itemtype="http://schema.org/WebSite"
+      style="display: block"
+      aria-hidden="false"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -985,7 +988,10 @@
                 >
                   <label
                     class="btn btn-default click_additional_search_params_action"
-                    ><span class="hidden-xs"><i class="fas fa-home"></i> </span
+                    ><span class="hidden-xs"
+                      ><svg class="icon-default">
+                        <use xlink:href="#house"></use>
+                      </svg> </span
                     ><input
                       name="advertisement[property_type][]"
                       type="checkbox"
@@ -1021,11 +1027,30 @@
                   <div
                     class="btn-group"
                     data-toggle="buttons"
+                    id="js-hotel-filter"
+                  >
+                    <label
+                      class="btn btn-default click_additional_search_params_action"
+                      ><span class="hidden-xs"
+                        ><i class="fas fa-hotel"></i> </span
+                      ><input
+                        name="advertisement[property_type][]"
+                        type="checkbox"
+                        value="4"
+                      />отель</label
+                    >
+                  </div>
+                  <div
+                    class="btn-group"
+                    data-toggle="buttons"
                     id="js-land-filter"
                   >
                     <label
                       class="btn btn-default click_additional_search_params_action"
-                      ><span class="hidden-xs"><i class="far fa-map"></i> </span
+                      ><span class="hidden-xs"
+                        ><svg class="icon-default">
+                          <use xlink:href="#plot"></use>
+                        </svg> </span
                       ><input
                         name="advertisement[property_type][]"
                         type="checkbox"
@@ -1041,7 +1066,9 @@
                     <label
                       class="btn btn-default click_additional_search_params_action"
                       ><span class="hidden-xs"
-                        ><i class="fas fa-briefcase"></i> </span
+                        ><svg class="icon-default">
+                          <use xlink:href="#comm"></use>
+                        </svg> </span
                       ><input
                         name="advertisement[property_type][]"
                         type="checkbox"
@@ -1056,7 +1083,10 @@
                   >
                     <label
                       class="btn btn-default click_additional_search_params_action"
-                      ><span class="hidden-xs"><i class="fas fa-car"></i> </span
+                      ><span class="hidden-xs"
+                        ><svg class="icon-default">
+                          <use xlink:href="#garage"></use>
+                        </svg> </span
                       ><input
                         name="advertisement[property_type][]"
                         type="checkbox"
@@ -1082,11 +1112,15 @@
                       style="min-width: 100px"
                     >
                       <span class="hidden-xs"
-                        ><i class="fas fa-globe"></i> </span
+                        ><svg class="icon-map-small">
+                          <use xlink:href="#placeholder"></use>
+                        </svg> </span
                       ><span class="title-search-locations-action"
                         >выбрать</span
                       >
-                      <i class="caret"></i>
+                      <svg class="icon-default">
+                        <use xlink:href="#dd"></use>
+                      </svg>
                     </div>
                   </div></div
               ></span>
@@ -1115,7 +1149,9 @@
               </div>
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-xs btn-default" yaparam="from_owner"
-                  ><i class="fas fa-check yaSend"></i>
+                  ><svg class="icon-default yaSend">
+                    <use xlink:href="#owner"></use>
+                  </svg>
                   <input
                     name="advertisement[owner]"
                     type="checkbox"
@@ -1154,15 +1190,20 @@
               <div class="form-group pull-right hidden-xs search_buttons">
                 <span class="add_search_link_block_action"></span>
                 <a class="btn btn-default map_search_btn"
-                  ><i class="far fa-map fa-lg"></i> На карте</a
+                  ><svg class="icon-map-small">
+                    <use xlink:href="#placeholder"></use>
+                  </svg>
+                  На карте</a
                 >
                 <button
                   class="btn btn-primary yaSend"
-                  style="width: 140px"
                   type="submit"
                   yaparam="search"
                 >
-                  <i class="fas fa-search fa-lg"></i> Найти
+                  <svg class="icon-default">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                  Найти
                 </button>
               </div>
               <div class="visible-xs">
@@ -1188,7 +1229,7 @@
               yaparam="search-on-map"
             >
               <svg class="icon-map-small">
-                <use xlink:href="./img/new-icons.svg#placeholder"></use>
+                <use xlink:href="#placeholder"></use>
               </svg>
               На карте
             </a>
@@ -1198,14 +1239,237 @@
               class="btn btn-primary btn-lg btn-block yaSend"
               yaparam="search"
             >
-              <svg class="icon-default">
-                <use xlink:href="./img/new-icons.svg#search"></use>
-              </svg>
+              <svg class="icon-default"><use xlink:href="#search"></use></svg>
               Найти
             </label>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+    <div
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      id="selectOfferTypeModal"
+      style="display: none"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Я хочу</h4>
+          </div>
+          <div class="modal-body">
+            <form class="offerTypeForm animated-radios-and-checkboxes">
+              <div class="checkbox">
+                <label class="huge">
+                  <input type="checkbox" name="offerTypes" value="0" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  купить
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="huge">
+                  <input type="checkbox" name="offerTypes" value="2" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  снять
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="huge">
+                  <input type="checkbox" name="offerTypes" value="3" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  посуточно снять
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <i class="fas fa-times"></i> Отменить
+            </button>
+            <button type="button" class="btn btn-primary">
+              <i class="fas fa-check"></i> Сохранить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      id="selectCategoryModal"
+      style="display: none"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Я хочу</h4>
+          </div>
+          <div class="modal-body">
+            <form class="categoryForm animated-radios-and-checkboxes">
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="propertyTypes" value="1" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  жильё
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="bigger">
+                  <input type="checkbox" name="categories" value="1" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  квартиру
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="bigger">
+                  <input type="checkbox" name="categories" value="2" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  дом
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="bigger">
+                  <input type="checkbox" name="categories" value="4" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  комнату
+                </label>
+              </div>
+              <hr />
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="propertyTypes" value="4" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  отель
+                </label>
+              </div>
+              <hr />
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="propertyTypes" value="2" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  участок
+                </label>
+              </div>
+              <hr />
+              <div class="checkbox">
+                <label class="bigger">
+                  <input type="checkbox" name="propertyTypes" value="0" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  коммерческую недвижимость
+                </label>
+              </div>
+              <div class="commerceCheckboxes hidden">
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="6" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    офис
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="7" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    торговое помещение
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="8" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    произ. складские
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="9" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    общепит, отдых
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="11" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    свобод. назначения
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="13" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    услуги
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="14" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    авто
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="15" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    готовый бизнес
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="16" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    перевод в нежилое
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="17" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    спорт
+                  </label>
+                </div>
+              </div>
+              <hr />
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="propertyTypes" value="3" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  гараж
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <i class="fas fa-times"></i> Отменить
+            </button>
+            <button type="button" class="btn btn-primary">
+              <i class="fas fa-check"></i> Сохранить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

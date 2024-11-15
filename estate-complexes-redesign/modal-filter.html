@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <!-- <link rel="stylesheet" href="css/redesign.css" /> -->
+    <link rel="stylesheet" href="css/filter.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- <script src="js/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <!-- Эти стили взяты из файта напрямую. так как у меня их не хватает -->
+    <style>
+      @media (max-width: 767px) {
+        .map_panel > .search_form_action,
+        .searchFormPage > .search_form_action {
+          height: 20px;
+        }
+      }
+      @media (min-width: 768px) {
+        .map_panel .buildingTypeSelect,
+        .map_panel .renovationSelect,
+        .searchFormPage .buildingTypeSelect,
+        .searchFormPage .renovationSelect {
+          display: none;
+        }
+      }
+      #searchFormModal .offerTypeSelect,
+      #searchFormModal .categorySelect {
+        margin-bottom: 9px;
+      }
+      #searchFormModal .offerTypeButtons > .btn-group,
+      #searchFormModal .categoryButtons > .btn-group,
+      #searchFormModal .buildingTypeButtons > .btn-group,
+      #searchFormModal .renovationButtons > .btn-group,
+      #searchFormModal .propertyTypeButtons > .btn-group {
+        display: none;
+      }
+      #searchFormModal .modal-footer {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        display: flex;
+      }
+      #searchFormModal .modal-footer .ds-search-save {
+        min-width: 100%;
+        margin-left: 0;
+        background: transparent !important;
+        border: 0;
+        box-shadow: 0 0 0;
+        margin-bottom: 15px;
+        color: lightgrey;
+        text-shadow: none !important;
+        color: rgba(68, 68, 68, 0.8) !important;
+        text-shadow: none !important;
+        transition: opacity 0.3s ease;
+      }
+      #searchFormModal .modal-footer .ds-search-save.opacity-animate {
+        opacity: 0;
+      }
+      #searchFormModal .modal-footer label,
+      #searchFormModal .modal-footer .load_points_btn {
+        margin: 0 !important;
+        width: auto !important;
+        flex: 1;
+      }
+      @media screen and (max-width: 900px) {
+        #searchFormModal .form {
+          font-size: 0;
+        }
+        #searchFormModal .modal-body .form-group.offerTypeButtons {
+          width: 49%;
+          margin-right: 2%;
+          max-width: 49% !important;
+        }
+        #searchFormModal .modal-body .form-group.categoryButtons {
+          width: 49%;
+          height: 68.84px;
+          margin-right: 0 !important;
+          display: inline-flex !important;
+          justify-content: flex-end;
+          flex-direction: column;
+        }
+        #searchFormModal .modal-body .form-group.offerTypeButtons,
+        #searchFormModal .modal-body .form-group.categoryButtons {
+          text-align: left;
+        }
+        #searchFormModal .modal-body .form-group.offerTypeButtons button,
+        #searchFormModal .modal-body .form-group.categoryButtons button,
+        #searchFormModal .modal-body .form-group .btn-group,
+        #searchFormModal .modal-body .btn-group {
+          width: 100%;
+        }
+        #searchFormModal .additional_search_params_container_action {
+          font-size: 0;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group {
+          flex: 0 0 49%;
+          max-width: 49%;
+          margin-right: 0;
+        }
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group.renovationButtons,
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group.buildingTypeButtons,
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group:first-child,
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group:nth-child(2) {
+          order: -1;
+        }
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group:first-child,
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group:nth-child(2) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group.renovationButtons,
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group.buildingTypeButtons {
+          flex: 0 0 49%;
+          max-width: 49%;
+        }
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group.renovationButtons
+          .btn,
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group.buildingTypeButtons
+          .btn,
+        #searchFormModal .form-group.offerTypeButtons .btn,
+        #searchFormModal .form-group.categoryButtons .btn {
+          font-size: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+        #searchFormModal .btn-group {
+          max-width: 100%;
+          overflow-x: auto;
+          display: flex;
+        }
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group.renovationButtons
+          .btnText,
+        #searchFormModal
+          .additional_search_params_container_action
+          .form-group.buildingTypeButtons
+          .btnText,
+        #searchFormModal .form-group.offerTypeButtons .btnText,
+        #searchFormModal .form-group.categoryButtons .btnText {
+          margin-right: 10px;
+          overflow: hidden;
+          font-size: 16px;
+        }
+        #searchFormModal .modal-body .btnText {
+          overflow: hidden;
+          display: inline-block;
+        }
+        #searchFormModal .modal-body .form-group {
+          width: 100%;
+          margin-top: 8px;
+        }
+        #searchFormModal
+          .modal-body
+          .additional_category_search_params_container_action
+          + .form-group {
+          margin-top: 12px;
+        }
+        #searchFormModal .modal-body .form-group.offerTypeButtons label {
+          display: block;
+        }
+        #searchFormModal .modal-body .form-group .input-group {
+          font-size: 0;
+          display: flex;
+          width: 100%;
+        }
+        #searchFormModal .modal-body .form-group .input-group .form-control {
+          flex: 1 1 auto;
+        }
+        #searchFormModal .modal-body .input-group-addon {
+          height: auto;
+          flex: 0 0 34px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #searchFormModal .modal-body .btn-group .btn {
+          text-align: left;
+        }
+        #searchFormModal .modal-body .btn,
+        #searchFormModal .modal-body .input-group input {
+          font-size: 16px;
+          padding: 6px 12px;
+          height: 36px;
+        }
+        #searchFormModal .modal-body .form-group + .btn-group label {
+          font-size: 14px;
+          padding: 4px 8px;
+          height: auto;
+        }
+        #searchFormModal .modal-body .btn-group .btn.btn-xs,
+        #searchFormModal .modal-body .btn-group .btn-group-xs > .btn {
+          margin-bottom: 6px;
+        }
+        #searchFormModal .modal-body .btn-group .btn.btn-xs:last-child,
+        #searchFormModal
+          .modal-body
+          .btn-group
+          .btn-group-xs
+          > .btn:last-child {
+          margin-bottom: 0px;
+        }
+        #searchFormModal .modal-body .fas.fa-tag {
+          display: none;
+        }
+        #searchFormModal .modal-body .description-group {
+          display: block;
+          width: 100%;
+        }
+        #searchFormModal .modal-body .form-group > label {
+          display: block;
+          font-size: 16px;
+        }
+        #searchFormModal .modal-body .get-search-locations-action,
+        #searchFormModal .modal-body .description-group .form-control {
+          display: block;
+          width: 100%;
+          font-size: 16px;
+          padding: 6px 12px;
+          height: 36px;
+        }
+        #searchFormModal .modal-body .get-search-locations-action {
+          overflow: hidden;
+        }
+        #searchFormModal .offerTypeButtons > .btn-group,
+        #searchFormModal .categoryButtons > .btn-group,
+        #searchFormModal .buildingTypeButtons > .btn-group,
+        #searchFormModal .renovationButtons > .btn-group,
+        #searchFormModal .propertyTypeButtons > .btn-group {
+          display: none !important;
+        }
+        #searchFormModal .modal-body .btn {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+        #searchFormModal .modal-body label.btn {
+          display: flex;
+          align-items: center;
+        }
+        #searchFormModal .modal-body label.btn:only-child {
+          display: inline-block;
+        }
+        #searchFormModal .modal-body .btnText,
+        #searchFormModal .modal-body .title-search-locations-action {
+          line-height: 36px;
+        }
+      }
+      @media screen and (max-width: 540px) {
+        #searchFormModal
+          .additional_search_subcategories_container_action
+          .btn-group {
+          overflow: visible !important;
+          flex-wrap: wrap;
+        }
+        #searchFormModal
+          .additional_search_subcategories_container_action
+          .btn-group
+          .btn {
+          margin-right: 6px;
+          border-radius: 3px !important;
+        }
+      }
+      #form_search_locations_modal .buttons {
+        line-height: 34px;
+      }
+      #form_search_locations_modal .search-mod-changer-action {
+        position: relative;
+        z-index: 1;
+      }
+      #form-search-mortgage-locations-modal .hot-location {
+        margin-right: 5px;
+      }
+      #form-fast-search-mortgage-locations-modal
+        .selectize-control.multi
+        .selectize-input
+        > div {
+        background: #ffffff;
+      }
+      #form-fast-search-mortgage-locations-modal .cities-list {
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      #form-fast-search-mortgage-locations-modal .ds-clear {
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        right: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        display: none;
+      }
+      #form-fast-search-mortgage-locations-modal .ds-clear:hover {
+        opacity: 1;
+      }
+      #form-fast-search-mortgage-locations-modal .ds-clear svg {
+        width: 18px;
+        height: 18px;
+      }
+      #form-fast-search-mortgage-locations-modal .ds-clear.active {
+        z-index: 999;
+        display: flex;
+      }
+      #form-fast-search-mortgage-locations-modal .ds-btn {
+        background-image: none !important;
+      }
+      @media (min-width: 768px) {
+        #form-fast-search-mortgage-locations-modal .modal-dialog {
+          width: 600px;
+          margin: 30px auto;
+        }
+        #form-fast-search-mortgage-locations-modal .selectize-control {
+          height: 35px;
+        }
+        #form-fast-search-mortgage-locations-modal selectize-input {
+          height: 35px;
+          padding-right: 45px;
+          padding-top: 0px;
+        }
+        #form-fast-search-mortgage-locations-modal selectize-input input {
+          height: 35px;
+        }
+      }
+      @media (max-width: 768px) {
+        #form-fast-search-mortgage-locations-modal .ui-widget {
+          margin-bottom: 20px;
+        }
+        #form-fast-search-mortgage-locations-modal .selectize-control {
+          height: 60px;
+        }
+        #form-fast-search-mortgage-locations-modal .selectize-input {
+          height: 60px;
+          padding-right: 45px;
+          padding-top: 0px;
+        }
+        #form-fast-search-mortgage-locations-modal .selectize-input input {
+          height: 60px;
+        }
+        #form-fast-search-mortgage-locations-modal .ds-btn {
+          height: 60px;
+        }
+        #form-fast-search-mortgage-locations-modal .ds-clear svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .selectize-dropdown {
+        z-index: 99999 !important;
+      }
+      @media (min-width: 1024px) {
+        .container:not(.full-size) .object,
+        .modal .object {
+          display: flex;
+        }
+      }
+      @media (min-width: 768px) {
+        .container:not(.full-size) .object .object__lead,
+        .modal .object .object__lead {
+          font-size: 21px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container:not(.full-size) .object .object__owner,
+        .modal .object .object__owner {
+          margin-bottom: 15px;
+          margin-right: 0;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container:not(.full-size) .object .object__status,
+        .modal .object .object__status {
+          margin-bottom: 0;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container:not(.full-size) .object .object__actions,
+        .modal .object .object__actions {
+          position: relative;
+          right: auto;
+          bottom: auto;
+          margin-top: 0;
+          padding-left: 0;
+          display: flex;
+          flex-direction: column;
+          width: 64px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container:not(.full-size) .object .object__actions,
+        .modal .object .object__actions {
+          margin-top: 0px;
+          bottom: auto;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container:not(.full-size) .object .object__gallery,
+        .modal .object .object__gallery {
+          height: 270px;
+        }
+      }
+      @media (max-width: 1199px) {
+        .container:not(.full-size) .object .object__gallery,
+        .modal .object .object__gallery {
+          height: 197px;
+        }
+      }
+      @media (max-width: 1023px) {
+        .container:not(.full-size) .object .object__gallery,
+        .modal .object .object__gallery {
+          height: 212px;
+        }
+      }
+      @media (max-width: 991px) {
+        .container:not(.full-size) .object .object__gallery,
+        .modal .object .object__gallery {
+          height: 158px;
+        }
+      }
+      @media (max-width: 767px) {
+        .container:not(.full-size) .object .object__gallery,
+        .modal .object .object__gallery {
+          height: 100%;
+          height: calc((100vw - 60px) * 0.75);
+        }
+      }
+      label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .search_form_action.form-inline .form-group {
+        display: inline-block;
+        margin-bottom: 0px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="modal js-opened-by-short-search-form in"
+      tabindex="-1"
+      role="dialog"
+      id="searchFormModal"
+      itemscope="itemscope"
+      itemtype="http://schema.org/WebSite"
+      style="display: block"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <link itemprop="url" href="https://olan.ru" />
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Поиск</h4>
+          </div>
+          <div class="modal-body">
+            <form
+              class="form form-inline withoutBootstrapValidator search_form_action"
+              role="form"
+              itemprop="potentialAction"
+              itemscope="itemscope"
+              itemtype="http://schema.org/SearchAction"
+              data-root-section-class="Section"
+              action="/"
+              accept-charset="UTF-8"
+              data-remote="true"
+              method="get"
+            >
+              <input name="utf8" type="hidden" value="✓" /><input
+                type="hidden"
+                name="search_form_submit"
+                id="search_form_submit"
+              /><meta
+                content="https://olan.ru?advertisement[description]={q}"
+                itemprop="target"
+              />
+              <div
+                itemprop="query-input"
+                itemscope="itemscope"
+                itemtype="http://schema.org/PropertyValueSpecification"
+              >
+                <meta content="q" itemprop="valueName" />
+              </div>
+              <span id="js-offer-type-filter"
+                ><div class="form-group offerTypeButtons">
+                  <label>Я хочу</label>
+                  <div
+                    class="btn-group"
+                    data-toggle="buttons"
+                    id="js-offer-type-filter-content"
+                  >
+                    <label
+                      class="btn btn-default click_additional_search_params_action"
+                      ><input
+                        name="advertisement[offer_type][]"
+                        type="checkbox"
+                        value="0"
+                      />купить</label
+                    ><label
+                      class="btn btn-default click_additional_search_params_action"
+                      ><input
+                        name="advertisement[offer_type][]"
+                        type="checkbox"
+                        value="2"
+                      />снять</label
+                    ><label
+                      class="btn btn-default click_additional_search_params_action"
+                      ><input
+                        name="advertisement[offer_type][]"
+                        type="checkbox"
+                        value="3"
+                      />посуточно</label
+                    >
+                  </div>
+                  <button type="button" class="btn btn-default offerTypeSelect">
+                    <span class="btnText">выбрать</span>
+                    <span class="caret"></span>
+                  </button>
+                </div>
+              </span>
+              <div class="form-group categoryButtons">
+                <div
+                  class="btn-group"
+                  data-toggle="buttons"
+                  id="js-category-filter"
+                >
+                  <label
+                    class="btn btn-default click_additional_search_params_action"
+                    ><span class="hidden-xs"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#house"></use>
+                      </svg> </span
+                    ><input
+                      name="advertisement[property_type][]"
+                      type="checkbox"
+                      value="1"
+                    />жильё</label
+                  ><label
+                    class="btn btn-default click_additional_search_params_action"
+                    ><input
+                      name="advertisement[category][]"
+                      type="checkbox"
+                      value="1"
+                    />
+                    квартиру</label
+                  ><label
+                    class="btn btn-default click_additional_search_params_action"
+                    ><input
+                      name="advertisement[category][]"
+                      type="checkbox"
+                      value="2"
+                    />
+                    дом</label
+                  ><label
+                    class="btn btn-default click_additional_search_params_action"
+                    ><input
+                      name="advertisement[category][]"
+                      type="checkbox"
+                      value="4"
+                    />
+                    комнату</label
+                  >
+                </div>
+                <div class="form-group propertyTypeButtons">
+                  <div
+                    class="btn-group"
+                    data-toggle="buttons"
+                    id="js-hotel-filter"
+                  >
+                    <label
+                      class="btn btn-default click_additional_search_params_action"
+                      ><span class="hidden-xs"
+                        ><i class="fas fa-hotel"></i> </span
+                      ><input
+                        name="advertisement[property_type][]"
+                        type="checkbox"
+                        value="4"
+                      />отель</label
+                    >
+                  </div>
+                  <div
+                    class="btn-group"
+                    data-toggle="buttons"
+                    id="js-land-filter"
+                  >
+                    <label
+                      class="btn btn-default click_additional_search_params_action"
+                      ><span class="hidden-xs"
+                        ><svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#plot"></use>
+                        </svg> </span
+                      ><input
+                        name="advertisement[property_type][]"
+                        type="checkbox"
+                        value="2"
+                      />участок</label
+                    >
+                  </div>
+                  <div
+                    class="btn-group"
+                    data-toggle="buttons"
+                    id="js-commerce-filter"
+                  >
+                    <label
+                      class="btn btn-default click_additional_search_params_action"
+                      ><span class="hidden-xs"
+                        ><svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#comm"></use>
+                        </svg> </span
+                      ><input
+                        name="advertisement[property_type][]"
+                        type="checkbox"
+                        value="0"
+                      />коммерческую</label
+                    >
+                  </div>
+                  <div
+                    class="btn-group"
+                    data-toggle="buttons"
+                    id="js-vehicle-filter"
+                  >
+                    <label
+                      class="btn btn-default click_additional_search_params_action"
+                      ><span class="hidden-xs"
+                        ><svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#garage"></use>
+                        </svg> </span
+                      ><input
+                        name="advertisement[property_type][]"
+                        type="checkbox"
+                        value="3"
+                      />гараж</label
+                    >
+                  </div>
+                </div>
+                <button type="button" class="btn btn-default categorySelect">
+                  <span class="btnText">выбрать</span>
+                  <span class="caret"></span>
+                </button>
+              </div>
+              <br /><span id="js-search-locations-filter"
+                ><span class="search_control_action"></span>
+                <div class="form-group">
+                  <label>место</label>
+                  <div class="btn-group">
+                    <div
+                      class="btn btn-default get-search-locations-action dropdown-toggle"
+                      data-toggle="dropdown"
+                      mode="single"
+                      style="min-width: 100px"
+                    >
+                      <span class="hidden-xs"
+                        ><svg class="icon-map-small">
+                          <use
+                            xlink:href="./img/new-icons.svg#placeholder"
+                          ></use>
+                        </svg> </span
+                      ><span class="title-search-locations-action"
+                        >выбрать</span
+                      >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#dd"></use>
+                      </svg>
+                    </div>
+                  </div></div
+              ></span>
+              <div class="form-group">
+                <label>цена</label>
+                <div class="input-group">
+                  <input
+                    autocomplete="off"
+                    class="form-control text-input-lg"
+                    name="advertisement[price_from]"
+                    placeholder="от"
+                    style="margin-right: -1px"
+                    type="text"
+                  /><input
+                    autocomplete="off"
+                    class="form-control text-input-lg"
+                    name="advertisement[price_to]"
+                    placeholder="до"
+                    type="text"
+                  /><span class="input-group-addon input-sm"
+                    ><i class="fas fa-ruble-sign"
+                      ><span class="hidden">₽</span></i
+                    ></span
+                  >
+                </div>
+              </div>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-xs btn-default" yaparam="from_owner"
+                  ><svg class="icon-default yaSend">
+                    <use xlink:href="./img/new-icons.svg#owner"></use>
+                  </svg>
+                  <input
+                    name="advertisement[owner]"
+                    type="checkbox"
+                    value="1"
+                  />без посредников</label
+                >
+              </div>
+              <span
+                class="additional_search_categories_container_action"
+                id="js-additional-search-categories-container"
+              ></span>
+              <span
+                class="additional_search_subcategories_container_action"
+                id="js-additional-search-subcategories-container"
+              ></span>
+              <span
+                class="additional_search_params_container_action"
+                id="js-additional-search-params-container"
+              ></span>
+              <span
+                class="additional_category_search_params_container_action"
+                id="js-additional-category-search-params-container"
+              ></span>
+              <div class="form-group">
+                <label><i class="fas fa-tag"></i></label>
+                <div class="description-group">
+                  <input
+                    autocomplete="off"
+                    class="form-control"
+                    name="advertisement[description]"
+                    placeholder="поиск по тексту или №"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div class="form-group pull-right hidden-xs search_buttons">
+                <span class="add_search_link_block_action"></span>
+                <a class="btn btn-default map_search_btn"
+                  ><svg class="icon-map-small">
+                    <use xlink:href="./img/new-icons.svg#placeholder"></use>
+                  </svg>
+                  На карте</a
+                >
+                <button
+                  class="btn btn-primary yaSend"
+                  type="submit"
+                  yaparam="search"
+                >
+                  <svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#search"></use>
+                  </svg>
+                  Найти
+                </button>
+              </div>
+              <div class="visible-xs">
+                <input
+                  class="hidden"
+                  id="submitSearchForm"
+                  type="submit"
+                /><span class="add_search_link_block_action"></span>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a
+              class="btn btn-primary add_search_mobile_link_action hidden yaSend ds-search-save"
+              href="#"
+              rel="nofollow"
+              yaparam="save-search"
+            >
+              <i class="far fa-check-circle"></i> Сохранить поиск
+            </a>
+            <a
+              class="btn btn-default btn-lg yaSend map_search_btn"
+              yaparam="search-on-map"
+            >
+              <svg class="icon-map-small">
+                <use xlink:href="./img/new-icons.svg#placeholder"></use>
+              </svg>
+              На карте
+            </a>
+            <label
+              for="submitSearchForm"
+              tabindex="0"
+              class="btn btn-primary btn-lg btn-block yaSend"
+              yaparam="search"
+            >
+              <svg class="icon-default">
+                <use xlink:href="./img/new-icons.svg#search"></use>
+              </svg>
+              Найти
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      id="selectOfferTypeModal"
+      style="display: none"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Я хочу</h4>
+          </div>
+          <div class="modal-body">
+            <form class="offerTypeForm animated-radios-and-checkboxes">
+              <div class="checkbox">
+                <label class="huge">
+                  <input type="checkbox" name="offerTypes" value="0" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  купить
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="huge">
+                  <input type="checkbox" name="offerTypes" value="2" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  снять
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="huge">
+                  <input type="checkbox" name="offerTypes" value="3" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  посуточно снять
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <i class="fas fa-times"></i> Отменить
+            </button>
+            <button type="button" class="btn btn-primary">
+              <i class="fas fa-check"></i> Сохранить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      id="selectCategoryModal"
+      style="display: none"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Я хочу</h4>
+          </div>
+          <div class="modal-body">
+            <form class="categoryForm animated-radios-and-checkboxes">
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="propertyTypes" value="1" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  жильё
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="bigger">
+                  <input type="checkbox" name="categories" value="1" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  квартиру
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="bigger">
+                  <input type="checkbox" name="categories" value="2" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  дом
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="bigger">
+                  <input type="checkbox" name="categories" value="4" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  комнату
+                </label>
+              </div>
+              <hr />
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="propertyTypes" value="4" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  отель
+                </label>
+              </div>
+              <hr />
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="propertyTypes" value="2" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  участок
+                </label>
+              </div>
+              <hr />
+              <div class="checkbox">
+                <label class="bigger">
+                  <input type="checkbox" name="propertyTypes" value="0" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  коммерческую недвижимость
+                </label>
+              </div>
+              <div class="commerceCheckboxes hidden">
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="6" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    офис
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="7" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    торговое помещение
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="8" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    произ. складские
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="9" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    общепит, отдых
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="11" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    свобод. назначения
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="13" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    услуги
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="14" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    авто
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="15" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    готовый бизнес
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="16" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    перевод в нежилое
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="bigger">
+                    <input type="checkbox" name="categories" value="17" />
+                    <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                    спорт
+                  </label>
+                </div>
+              </div>
+              <hr />
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="propertyTypes" value="3" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  гараж
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <i class="fas fa-times"></i> Отменить
+            </button>
+            <button type="button" class="btn btn-primary">
+              <i class="fas fa-check"></i> Сохранить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".offerTypeSelect").click(function () {
+          $("#selectOfferTypeModal").css("display", "block");
+        });
+        $(".close").click(function () {
+          $("#selectOfferTypeModal").css("display", "none");
+          $("#selectCategoryModal").css("display", "none");
+        });
+        $(".categorySelect").click(function () {
+          $("#selectCategoryModal").css("display", "block");
+        });
+      });
+    </script>
+  </body>
+</html>
