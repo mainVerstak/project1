@@ -63,6 +63,7 @@ $padding-btn-small: 6px 10px;
 }
 
 /* Buttons */
+#form_search_locations_modal .btn,
 #selectCategoryModal .btn,
 #selectOfferTypeModal .btn,
 #searchFormModal .btn,
@@ -80,6 +81,10 @@ $padding-btn-small: 6px 10px;
   gap: 5px;
   height: 32px !important;
 }
+#form_search_locations_modal .btn-default:active,
+#form_search_locations_modal .btn-default.active,
+#form_search_locations_modal .btn-primary:active,
+#form_search_locations_modal .btn-primary.active,
 #selectCategoryModal .btn-default:active,
 #selectCategoryModal .btn-default.active,
 #selectCategoryModal .btn-primary:active,
@@ -100,6 +105,7 @@ $padding-btn-small: 6px 10px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+#form_search_locations_modal .btn-xs,
 #selectCategoryModal .btn-xs,
 #selectOfferTypeModal .btn-xs,
 #searchFormModal .btn-xs,
@@ -109,12 +115,14 @@ $padding-btn-small: 6px 10px;
   height: 32px !important;
   line-height: 1.42857143;
 }
+#form_search_locations_modal .btn-group-xs > .btn,
 #selectCategoryModal .btn-group-xs > .btn,
 #selectOfferTypeModal .btn-group-xs > .btn,
 #searchFormModal .btn-group-xs > .btn,
 .searchFormPage .btn-group-xs > .btn {
   line-height: 1.42857143;
 }
+#form_search_locations_modal .btn-default,
 #selectCategoryModal .btn-default,
 #selectOfferTypeModal .btn-default,
 #searchFormModal .btn-default,
@@ -130,6 +138,7 @@ $padding-btn-small: 6px 10px;
   line-height: 1.42857143;
 }
 @media (hover: hover) {
+  #form_search_locations_modal .btn-default:hover,
   #selectCategoryModal .btn-default:hover,
   #selectOfferTypeModal .btn-default:hover,
   #searchFormModal .btn-default:hover,
@@ -140,6 +149,7 @@ $padding-btn-small: 6px 10px;
   }
 }
 @media (hover: none) {
+  #form_search_locations_modal .btn-default.active,
   #selectCategoryModal .btn-default.active,
   #selectOfferTypeModal .btn-default.active,
   #searchFormModal .btn-default.active,
@@ -149,6 +159,7 @@ $padding-btn-small: 6px 10px;
     color: $color-grey-dark;
   }
 }
+#form_search_locations_modal .btn-default.active,
 #selectCategoryModal .btn-default.active,
 #selectOfferTypeModal .btn-default.active,
 #searchFormModal .btn-default.active,
@@ -157,6 +168,7 @@ $padding-btn-small: 6px 10px;
   border: 1px solid $color-border;
   color: $color-grey-dark;
 }
+#form_search_locations_modal .btn-default.active:hover,
 #selectCategoryModal .btn-default.active:hover,
 #selectOfferTypeModal .btn-default.active:hover,
 #searchFormModal .btn-default.active:hover,
@@ -164,6 +176,7 @@ $padding-btn-small: 6px 10px;
   border: 1px solid $color-border;
   color: $color-grey-dark;
 }
+#form_search_locations_modal .btn-default:focus,
 #selectCategoryModal .btn-default:focus,
 #selectOfferTypeModal .btn-default:focus,
 #searchFormModal .btn-default:focus,
@@ -171,6 +184,7 @@ $padding-btn-small: 6px 10px;
   box-shadow: none;
   border: 1px solid $color-grey-dark;
 }
+#form_search_locations_modal .btn-styled-new2,
 #selectCategoryModal .btn-styled-new2,
 #selectOfferTypeModal .btn-styled-new2,
 #searchFormModal .btn-styled-new2,
@@ -178,12 +192,14 @@ $padding-btn-small: 6px 10px;
   background-color: $color-blue;
   color: $color-white;
 }
+#form_search_locations_modal .btn-styled-new2:hover,
 #selectCategoryModal .btn-styled-new2:hover,
 #selectOfferTypeModal .btn-styled-new2:hover,
 #searchFormModal .btn-styled-new2:hover,
 .searchFormPage .btn-styled-new2:hover {
   background-color: $color-blue-hover;
 }
+#form_search_locations_modal .dropdown-toggle,
 #selectCategoryModal .dropdown-toggle,
 #selectOfferTypeModal .dropdown-toggle,
 #searchFormModal .dropdown-toggle,
@@ -194,6 +210,7 @@ $padding-btn-small: 6px 10px;
   font-size: 14px;
   font-weight: 500 !important;
 }
+#form_search_locations_modal .dropdown-menu,
 #selectCategoryModal .dropdown-menu,
 #selectOfferTypeModal .dropdown-menu,
 #searchFormModal .dropdown-menu,
@@ -204,6 +221,7 @@ $padding-btn-small: 6px 10px;
   border: 1px solid $color-border !important;
   box-shadow: none !important;
 }
+#form_search_locations_modal .dropdown-menu li a,
 #selectCategoryModal .dropdown-menu li a,
 #selectOfferTypeModal .dropdown-menu li a,
 #searchFormModal .dropdown-menu li a,
@@ -221,6 +239,7 @@ $padding-btn-small: 6px 10px;
   border-right: none !important;
   border-bottom: 1px solid $color-grey-superlight !important;
 }
+#form_search_locations_modal .dropdown-menu > li > a,
 #selectCategoryModal .dropdown-menu > li > a,
 #selectOfferTypeModal .dropdown-menu > li > a,
 #searchFormModal .dropdown-menu > li > a,
@@ -230,6 +249,7 @@ $padding-btn-small: 6px 10px;
   gap: 5px;
   padding: 5px 10px;
 }
+#form_search_locations_modal .dropdown-menu li a:hover,
 #selectCategoryModal .dropdown-menu li a:hover,
 #selectOfferTypeModal .dropdown-menu li a:hover,
 #searchFormModal .dropdown-menu li a:hover,
@@ -237,12 +257,14 @@ $padding-btn-small: 6px 10px;
   background-color: $color-grey-superlight;
   background-image: none !important;
 }
+#form_search_locations_modal .dropdown-menu li:first-child a,
 #selectCategoryModal .dropdown-menu li:first-child a,
 #selectOfferTypeModal .dropdown-menu li:first-child a,
 #searchFormModal .dropdown-menu li:first-child a,
 .searchFormPage .dropdown-menu li:first-child a {
   border-radius: $border-radius $border-radius 0 0 !important;
 }
+#form_search_locations_modal .dropdown-menu li:last-child a,
 #selectCategoryModal .dropdown-menu li:last-child a,
 #selectOfferTypeModal .dropdown-menu li:last-child a,
 #searchFormModal .dropdown-menu li:last-child a,
@@ -250,6 +272,7 @@ $padding-btn-small: 6px 10px;
   border-radius: 0 0 $border-radius $border-radius !important;
   border: none !important;
 }
+#form_search_locations_modal .dropdown-menu li.active a,
 #selectCategoryModal .dropdown-menu li.active a,
 #selectOfferTypeModal .dropdown-menu li.active a,
 #searchFormModal .dropdown-menu li.active a,
@@ -258,6 +281,7 @@ $padding-btn-small: 6px 10px;
   color: $color-grey-dark !important;
   background-image: none !important;
 }
+#form_search_locations_modal .btn-primary,
 #selectCategoryModal .btn-primary,
 #selectOfferTypeModal .btn-primary,
 #searchFormModal .btn-primary,
@@ -267,12 +291,14 @@ $padding-btn-small: 6px 10px;
   background-image: none;
   border: none;
 }
+#form_search_locations_modal .btn-primary:hover,
 #selectCategoryModal .btn-primary:hover,
 #selectOfferTypeModal .btn-primary:hover,
 #searchFormModal .btn-primary:hover,
 .searchFormPage .btn-primary:hover {
   background-color: $color-blue-hover;
 }
+#form_search_locations_modal .btn-primary:focus,
 #selectCategoryModal .btn-primary:focus,
 #selectOfferTypeModal .btn-primary:focus,
 #searchFormModal .btn-primary:focus,
@@ -280,6 +306,7 @@ $padding-btn-small: 6px 10px;
   background-color: $color-blue-hover;
   border: 1px solid $color-grey-dark;
 }
+#form_search_locations_modal .modal-dialog .btn,
 #selectCategoryModal .modal-dialog .btn,
 #selectOfferTypeModal .modal-dialog .btn,
 #searchFormModal .modal-dialog .btn,
@@ -288,6 +315,7 @@ $padding-btn-small: 6px 10px;
 }
 
 /* Inputs */
+#form_search_locations_modal input.form-control,
 #selectCategoryModal input.form-control,
 #selectOfferTypeModal input.form-control,
 #searchFormModal input.form-control,
@@ -302,6 +330,7 @@ $padding-btn-small: 6px 10px;
   font-size: 14px !important;
   height: 32px !important;
 }
+#form_search_locations_modal input.form-control:focus,
 #selectCategoryModal input.form-control:focus,
 #selectOfferTypeModal input.form-control:focus,
 #searchFormModal input.form-control:focus,
@@ -311,6 +340,7 @@ $padding-btn-small: 6px 10px;
   box-shadow: none;
   border: 1px solid $color-blue;
 }
+#form_search_locations_modal input.form-control:active,
 #selectCategoryModal input.form-control:active,
 #selectOfferTypeModal input.form-control:active,
 #searchFormModal input.form-control:active,
@@ -321,6 +351,7 @@ $padding-btn-small: 6px 10px;
   border: 1px solid $color-blue;
 }
 /* Единственный элемент */
+#form_search_locations_modal input.form-control:only-child,
 #selectCategoryModal input.form-control:only-child,
 #selectOfferTypeModal input.form-control:only-child,
 #searchFormModal input.form-control:only-child,
@@ -329,6 +360,7 @@ $padding-btn-small: 6px 10px;
 }
 
 /* Первый элемент */
+#form_search_locations_modal input.form-control:first-child:not(:only-child),
 #selectCategoryModal input.form-control:first-child:not(:only-child),
 #selectOfferTypeModal input.form-control:first-child:not(:only-child),
 #searchFormModal input.form-control:first-child:not(:only-child),
@@ -337,6 +369,7 @@ $padding-btn-small: 6px 10px;
 }
 
 /* Последний элемент */
+#form_search_locations_modal input.form-control:last-child:not(:only-child),
 #selectCategoryModal input.form-control:last-child:not(:only-child),
 #selectOfferTypeModal input.form-control:last-child:not(:only-child),
 #searchFormModal input.form-control:last-child:not(:only-child),
@@ -345,6 +378,8 @@ $padding-btn-small: 6px 10px;
 }
 
 /* Предпоследний элемент (не первый и не последний) */
+#form_search_locations_modal
+  input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #selectCategoryModal
   input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #selectOfferTypeModal
@@ -357,6 +392,8 @@ $padding-btn-small: 6px 10px;
 }
 
 /* Элемент не первый, не последний и не предпоследний */
+#form_search_locations_modal
+  input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #selectCategoryModal
   input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #selectOfferTypeModal
@@ -369,6 +406,7 @@ $padding-btn-small: 6px 10px;
   ) {
   border-radius: 0 !important;
 }
+#form_search_locations_modal .input-group-addon,
 #selectCategoryModal .input-group-addon,
 #selectOfferTypeModal .input-group-addon,
 #searchFormModal .input-group-addon,
@@ -379,6 +417,7 @@ $padding-btn-small: 6px 10px;
   padding: 5px;
   color: $color-grey-text;
 }
+#form_search_locations_modal .input-group-addon.input-sm,
 #selectCategoryModal .input-group-addon.input-sm,
 #selectOfferTypeModal .input-group-addon.input-sm,
 #searchFormModal .input-group-addon.input-sm,
@@ -386,6 +425,7 @@ $padding-btn-small: 6px 10px;
   color: $color-grey-text;
   padding: 5px;
 }
+#form_search_locations_modal .input-group-sm input.form-control,
 #selectCategoryModal .input-group-sm input.form-control,
 #selectOfferTypeModal .input-group-sm input.form-control,
 #searchFormModal .input-group-sm input.form-control,
@@ -764,11 +804,12 @@ $padding-btn-small: 6px 10px;
     position: relative;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    margin-left: auto;
     margin-right: 5px;
   }
   .shortSearchForm.text-center.link .badge {
-    display: none;
+    background-color: $color-white;
+    color: $color-blue;
+    margin-left: auto;
   }
 
   #selectCategoryModal .modal-dialog .modal-content,
@@ -849,6 +890,20 @@ $padding-btn-small: 6px 10px;
     font-weight: 500;
   }
 }
+
+#form_search_locations_modal .search-button-locations-action {
+  color: $color-blue;
+}
+#form_search_locations_modal .search-button-locations-action:hover {
+  color: $color-blue-hover;
+}
+.searchFormPage .add_search_link_action {
+  color: $color-blue;
+}
+.searchFormPage .add_search_link_action:hover {
+  color: $color-blue-hover;
+}
+
 #searchFormModal
   .btn-group
   > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
