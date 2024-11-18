@@ -295,9 +295,9 @@
           display: flex;
           align-items: center;
         }
-        #searchFormModal .modal-body label.btn:only-child {
+        /* #searchFormModal .modal-body label.btn:only-child {
           display: inline-block;
-        }
+        } */
         #searchFormModal .modal-body .btnText,
         #searchFormModal .modal-body .title-search-locations-action {
           line-height: 36px;
@@ -504,7 +504,7 @@
     <link rel="stylesheet" href="css/filter.css" />
   </head>
 
-  <body>
+  <body class="modal-open">
     <div
       class="modal js-opened-by-short-search-form in"
       tabindex="-1"
@@ -916,7 +916,9 @@
                     class="btn btn-default btn-xs buildingTypeSelect"
                   >
                     <span class="btnText">выбрать</span>
-                    <span class="caret"></span>
+                    <svg class="icon-default">
+                      <use xlink:href="./img/new-icons.svg#dd"></use>
+                    </svg>
                   </button>
                 </div>
                 <div class="form-group">
@@ -1038,7 +1040,9 @@
                     class="btn btn-default btn-xs renovationSelect"
                   >
                     <span class="btnText">выбрать</span>
-                    <span class="caret"></span>
+                    <svg class="icon-default">
+                      <use xlink:href="./img/new-icons.svg#dd"></use>
+                    </svg>
                   </button></div
               ></span>
               <span
@@ -1190,7 +1194,8 @@
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <!-- style="height: 95vh" - для того, чтобы появлялся скролл внутри модалки (у вас высота добавляется скриптом автоматически) -->
+        <div class="modal-content" style="height: 95vh">
           <div class="modal-header">
             <button
               type="button"
@@ -1250,13 +1255,14 @@
               </div>
               <hr />
               <div class="checkbox">
-                <label class="bigger">
+                <!-- <label class="bigger"> Нужно заменить на big чтобы не добавлялся отступ -->
+                <label class="big">
                   <input type="checkbox" name="propertyTypes" value="0" />
                   <span class="cr"><i class="cr-icon fas fa-check"></i></span>
                   коммерческую недвижимость
                 </label>
               </div>
-              <div class="commerceCheckboxes hidden">
+              <div class="commerceCheckboxes">
                 <div class="checkbox">
                   <label class="bigger">
                     <input type="checkbox" name="categories" value="6" />
@@ -1355,17 +1361,204 @@
         </div>
       </div>
     </div>
+    <div
+      class="modal in"
+      tabindex="-1"
+      role="dialog"
+      id="selectBuildingTypeModal"
+      style="display: none"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Тип дома</h4>
+          </div>
+          <div class="modal-body">
+            <form
+              class="buildingTypeForm animated-radios-and-checkboxes fv-form fv-form-bootstrap"
+              novalidate="novalidate"
+            >
+              <button
+                type="submit"
+                class="fv-hidden-submit"
+                style="display: none; width: 0px; height: 0px"
+              ></button>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="buildingTypes" value="0" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  кирпичный
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="buildingTypes" value="1" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  панельный
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="buildingTypes" value="2" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  монолит
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="buildingTypes" value="3" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  кирп-мон
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="buildingTypes" value="4" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  блочный
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="buildingTypes" value="5" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  деревянный
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <i class="fas fa-times"></i> Отменить
+            </button>
+            <button type="button" class="btn btn-primary">
+              <i class="fas fa-check"></i> Сохранить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal in"
+      tabindex="-1"
+      role="dialog"
+      id="selectRenovationModal"
+      style="display: none"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">Ремонт</h4>
+          </div>
+          <div class="modal-body">
+            <form
+              class="renovationForm animated-radios-and-checkboxes fv-form fv-form-bootstrap"
+              novalidate="novalidate"
+            >
+              <button
+                type="submit"
+                class="fv-hidden-submit"
+                style="display: none; width: 0px; height: 0px"
+              ></button>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="renovations" value="0" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  дизайн
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="renovations" value="1" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  евро
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="renovations" value="2" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  с отделкой
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="renovations" value="3" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  хороший
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="renovations" value="4" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  частичный
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="renovations" value="5" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  черновой
+                </label>
+              </div>
+              <div class="checkbox">
+                <label class="big">
+                  <input type="checkbox" name="renovations" value="6" />
+                  <span class="cr"><i class="cr-icon fas fa-check"></i></span>
+                  без ремонта
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <i class="fas fa-times"></i> Отменить
+            </button>
+            <button type="button" class="btn btn-primary">
+              <i class="fas fa-check"></i> Сохранить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
       $(document).ready(function () {
-        $(".offerTypeSelect").click(function () {
-          $("#selectOfferTypeModal").css("display", "block");
-        });
         $(".close").click(function () {
           $("#selectOfferTypeModal").css("display", "none");
           $("#selectCategoryModal").css("display", "none");
+          $("#selectBuildingTypeModal").css("display", "none");
+          $("#selectRenovationModal").css("display", "none");
+        });
+        $(".offerTypeSelect").click(function () {
+          $("#selectOfferTypeModal").css("display", "block");
         });
         $(".categorySelect").click(function () {
           $("#selectCategoryModal").css("display", "block");
+        });
+        $(".buildingTypeSelect").click(function () {
+          $("#selectBuildingTypeModal").css("display", "block");
+        });
+        $(".renovationSelect").click(function () {
+          $("#selectRenovationModal").css("display", "block");
         });
       });
     </script>
