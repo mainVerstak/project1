@@ -833,7 +833,7 @@
                   ><span class="hidden">₽</span></i
                 >
               </div>
-              <div class="yandex_content"></div>
+              <div class="yandex_content" style="background: #333"></div>
               <div class="apartment-desc">
                 <div
                   class="apartment-desc__head"
@@ -910,6 +910,32 @@
             >
           </div>
         </div>
+        <script>
+          // to sticky gallery on announce page
+          function heightForStickyGallery() {
+            const height = $(
+              ".apartment-top-container .col-md-12.col-lg-5"
+            ).height();
+            const galleryHeight = $(".gallery-with-nav-thumbs").height();
+            console.log(height, galleryHeight);
+            if (height >= galleryHeight) {
+              $(".apartment-gallery").css("height", `${height}px`);
+            }
+          }
+
+          async function addHeight() {
+            return new Promise((resolve) =>
+              setTimeout(() => {
+                $(
+                  ".apartment-top-container .col-md-12.col-lg-5 .yandex_content"
+                ).css("height", "700px");
+                resolve();
+              }, 1000)
+            );
+          }
+
+          addHeight().then(() => heightForStickyGallery());
+        </script>
         <div class="col-xs-12 col-lg-12">
           <p></p>
           <div class="h4">Описание</div>

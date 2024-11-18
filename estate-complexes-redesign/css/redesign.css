@@ -1560,6 +1560,11 @@ header strong,
   font-weight: 500;
 }
 
+.gallery-with-nav-thumbs {
+  position: sticky;
+  top: 0;
+}
+
 /* Mortgage */
 .calc-mortgage__input input {
   height: 32px;

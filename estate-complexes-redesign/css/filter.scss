@@ -543,19 +543,21 @@ $padding-btn-small: 6px 10px;
   border-radius: $border-radius;
   background-color: $color-white;
 }
-#selectBuildingTypeModal .radio:hover,
-#selectBuildingTypeModal .checkbox:hover,
-#selectRenovationModal .radio:hover,
-#selectRenovationModal .checkbox:hover,
-#selectCategoryModal .radio:hover,
-#selectCategoryModal .checkbox:hover,
-#selectOfferTypeModal .radio:hover,
-#selectOfferTypeModal .checkbox:hover,
-#searchFormModal .radio:hover,
-#searchFormModal .checkbox:hover,
-.searchFormPage .radio:hover,
-.searchFormPage .checkbox:hover {
-  background-color: $color-grey-superlight;
+@media (hover: hover) {
+  #selectBuildingTypeModal .radio:hover,
+  #selectBuildingTypeModal .checkbox:hover,
+  #selectRenovationModal .radio:hover,
+  #selectRenovationModal .checkbox:hover,
+  #selectCategoryModal .radio:hover,
+  #selectCategoryModal .checkbox:hover,
+  #selectOfferTypeModal .radio:hover,
+  #selectOfferTypeModal .checkbox:hover,
+  #searchFormModal .radio:hover,
+  #searchFormModal .checkbox:hover,
+  .searchFormPage .radio:hover,
+  .searchFormPage .checkbox:hover {
+    background-color: $color-grey-superlight;
+  }
 }
 #selectBuildingTypeModal .checkbox label,
 #selectRenovationModal .checkbox label,
@@ -964,25 +966,27 @@ $padding-btn-small: 6px 10px;
   .checkbox:has(input[type="checkbox"]:checked).checkbox {
   border: 1px solid $color-white;
 }
-#selectBuildingTypeModal
-  .animated-radios-and-checkboxes
-  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
-#selectRenovationModal
-  .animated-radios-and-checkboxes
-  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
-#selectCategoryModal
-  .animated-radios-and-checkboxes
-  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
-#selectOfferTypeModal
-  .animated-radios-and-checkboxes
-  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
-#searchFormModal
-  .animated-radios-and-checkboxes
-  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
-.searchFormPage
-  .animated-radios-and-checkboxes
-  .checkbox:has(input[type="checkbox"]:checked).checkbox:hover {
-  border: 1px solid $color-border;
+@media (hover: hover) {
+  #selectBuildingTypeModal
+    .animated-radios-and-checkboxes
+    .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
+  #selectRenovationModal
+    .animated-radios-and-checkboxes
+    .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
+  #selectCategoryModal
+    .animated-radios-and-checkboxes
+    .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
+  #selectOfferTypeModal
+    .animated-radios-and-checkboxes
+    .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
+  #searchFormModal
+    .animated-radios-and-checkboxes
+    .checkbox:has(input[type="checkbox"]:checked).checkbox:hover,
+  .searchFormPage
+    .animated-radios-and-checkboxes
+    .checkbox:has(input[type="checkbox"]:checked).checkbox:hover {
+    border: 1px solid $color-border;
+  }
 }
 
 #selectCategoryModal .commerceCheckboxes {
