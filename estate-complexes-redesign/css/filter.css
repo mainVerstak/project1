@@ -161,6 +161,13 @@
   .searchFormPage .btn-xs {
     height: 36px !important;
   }
+  #form_search_locations_modal .modal-footer {
+    text-align: center;
+  }
+  #form_search_locations_modal .modal-footer .btn {
+    padding-top: 8px !important;
+    width: 48% !important;
+  }
 }
 .map_panel .btn-group-xs > .btn,
 #form_search_locations_modal .btn-group-xs > .btn,
@@ -890,6 +897,9 @@
   #searchFormModal .input-group-addon.input-sm {
     font-size: 14px;
     font-weight: 500;
+  }
+  #searchFormModal .btn[yaparam=from_owner] {
+    display: flex !important;
   }
 }
 #form_search_locations_modal .search-button-locations-action {
