@@ -71,6 +71,18 @@
   height: 32px !important;
 }
 
+#form_search_locations_modal .modal-header .btn {
+  font-size: 14px !important;
+  height: 34px !important;
+  outline: none !important;
+}
+
+#form_search_locations_modal .modal-header .btn:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #e6e6e6 !important;
+}
+
 @media screen and (max-width: 767px) {
   .map_panel .btn,
   #selectBuildingTypeModal .btn,
@@ -83,6 +95,10 @@
     height: 36px !important;
   }
 }
+#form_search_locations_modal .modal-header .btn {
+  margin-bottom: 4px;
+}
+
 .map_panel .btn-default:active,
 .map_panel .btn-default.active,
 .map_panel .btn-primary:active,
@@ -899,6 +915,35 @@
   border-color: #084c95;
 }
 
+#form_search_locations_modal .modal-header .fas.fa-search-plus {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  /* Единственный элемент */
+  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:only-child {
+    border-radius: 5px !important;
+  }
+  /* Первый элемент */
+  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:first-child:not(:only-child) {
+    border-radius: 5px 0 0 5px !important;
+  }
+  /* Второй элемент */
+  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:nth-child(2):not(:first-child):not(:last-child) {
+    border-radius: 5px 0 0 5px !important;
+    margin-left: -5px !important;
+  }
+  /* Последний элемент */
+  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:last-child:not(:only-child) {
+    border-radius: 0 5px 5px 0 !important;
+    margin-left: -5px !important;
+  }
+  /* Элемент не первый, не последний и не предпоследний */
+  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:not(:first-child):not(:last-child):not(:nth-child(2)) {
+    border-radius: 0 !important;
+    margin-left: -5px !important;
+  }
+}
 .map_panel .add_search_link_action,
 .searchFormPage .add_search_link_action {
   color: #084c95;
