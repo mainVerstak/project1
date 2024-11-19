@@ -1207,12 +1207,16 @@ $padding-btn-small: 6px 10px;
     font-weight: 500;
   }
   #selectCategoryModal .modal-footer,
-  #selectOfferTypeModal .modal-footer {
+  #selectOfferTypeModal .modal-footer,
+  #selectBuildingTypeModal .modal-footer,
+  #selectRenovationModal .modal-footer {
     display: flex;
     flex: 1 1;
   }
   #selectCategoryModal .modal-footer .btn,
-  #selectOfferTypeModal .modal-footer .btn {
+  #selectOfferTypeModal .modal-footer .btn,
+  #selectBuildingTypeModal .modal-footer .btn,
+  #selectRenovationModal .modal-footer .btn {
     width: 100% !important;
     display: flex;
     align-items: center;
