@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Icons */
+.map_panel .icon-map-small,
 #selectCategoryModal .icon-map-small,
 #selectOfferTypeModal .icon-map-small,
 #searchFormModal .icon-map-small,
@@ -9,6 +10,7 @@
   fill: currentColor;
 }
 
+.map_panel .icon-caret-default,
 #selectCategoryModal .icon-caret-default,
 #selectOfferTypeModal .icon-caret-default,
 #searchFormModal .icon-caret-default,
@@ -18,6 +20,7 @@
   fill: currentColor;
 }
 
+.map_panel .icon-default,
 #selectCategoryModal .icon-default,
 #selectOfferTypeModal .icon-default,
 #searchFormModal .icon-default,
@@ -27,6 +30,7 @@
   fill: currentColor;
 }
 
+.map_panel .hidden-xs,
 #selectCategoryModal .hidden-xs,
 #selectOfferTypeModal .hidden-xs,
 #searchFormModal .hidden-xs,
@@ -45,6 +49,7 @@
   }
 }
 /* Buttons */
+.map_panel .btn,
 #selectBuildingTypeModal .btn,
 #selectRenovationModal .btn,
 #form_search_locations_modal .btn,
@@ -63,10 +68,11 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  height: 34px !important;
+  height: 32px !important;
 }
 
 @media screen and (max-width: 767px) {
+  .map_panel .btn,
   #selectBuildingTypeModal .btn,
   #selectRenovationModal .btn,
   #form_search_locations_modal .btn,
@@ -77,6 +83,10 @@
     height: 36px !important;
   }
 }
+.map_panel .btn-default:active,
+.map_panel .btn-default.active,
+.map_panel .btn-primary:active,
+.map_panel .btn-primary.active,
 #selectBuildingTypeModal .btn-default:active,
 #selectBuildingTypeModal .btn-default.active,
 #selectBuildingTypeModal .btn-primary:active,
@@ -110,6 +120,7 @@
   box-shadow: none;
 }
 
+.map_panel .btn-xs,
 #selectBuildingTypeModal .btn-xs,
 #selectRenovationModal .btn-xs,
 #form_search_locations_modal .btn-xs,
@@ -119,11 +130,12 @@
 .searchFormPage .btn-xs {
   padding: 6px 10px;
   font-size: 14px;
-  height: 34px !important;
+  height: 32px !important;
   line-height: 1.42857143;
 }
 
 @media screen and (max-width: 767px) {
+  .map_panel .btn-xs,
   #selectBuildingTypeModal .btn-xs,
   #selectRenovationModal .btn-xs,
   #form_search_locations_modal .btn-xs,
@@ -134,6 +146,7 @@
     height: 36px !important;
   }
 }
+.map_panel .btn-group-xs > .btn,
 #form_search_locations_modal .btn-group-xs > .btn,
 #selectCategoryModal .btn-group-xs > .btn,
 #selectOfferTypeModal .btn-group-xs > .btn,
@@ -142,6 +155,7 @@
   line-height: 1.42857143;
 }
 
+.map_panel .btn-default,
 #selectBuildingTypeModal .btn-default,
 #selectRenovationModal .btn-default,
 #form_search_locations_modal .btn-default,
@@ -161,6 +175,7 @@
 }
 
 @media (hover: hover) {
+  .map_panel .btn-default:hover,
   #selectBuildingTypeModal .btn-default:hover,
   #selectRenovationModal .btn-default:hover,
   #form_search_locations_modal .btn-default:hover,
@@ -174,6 +189,7 @@
   }
 }
 @media (hover: none) {
+  .map_panel .btn-default.active,
   #selectBuildingTypeModal .btn-default.active,
   #selectRenovationModal .btn-default.active,
   #form_search_locations_modal .btn-default.active,
@@ -186,6 +202,7 @@
     color: #333333;
   }
 }
+.map_panel .btn-default.active,
 #selectBuildingTypeModal .btn-default.active,
 #selectRenovationModal .btn-default.active,
 #form_search_locations_modal .btn-default.active,
@@ -198,6 +215,7 @@
   color: #333333;
 }
 
+.map_panel .btn-default.active:hover,
 #selectBuildingTypeModal .btn-default.active:hover,
 #selectRenovationModal .btn-default.active:hover,
 #form_search_locations_modal .btn-default.active:hover,
@@ -209,6 +227,7 @@
   color: #333333;
 }
 
+.map_panel .btn-default:focus,
 #selectBuildingTypeModal .btn-default:focus,
 #selectRenovationModal .btn-default:focus,
 #form_search_locations_modal .btn-default:focus,
@@ -220,6 +239,7 @@
   border: 1px solid #333333;
 }
 
+.map_panel .btn-styled-new2,
 #selectBuildingTypeModal .btn-styled-new2,
 #selectRenovationModal .btn-styled-new2,
 #form_search_locations_modal .btn-styled-new2,
@@ -231,16 +251,19 @@
   color: #ffffff;
 }
 
-#selectBuildingTypeModal .btn-styled-new2:hover,
-#selectRenovationModal .btn-styled-new2:hover,
-#form_search_locations_modal .btn-styled-new2:hover,
-#selectCategoryModal .btn-styled-new2:hover,
-#selectOfferTypeModal .btn-styled-new2:hover,
-#searchFormModal .btn-styled-new2:hover,
-.searchFormPage .btn-styled-new2:hover {
-  background-color: #07386c;
+@media (hover: hover) {
+  .map_panel .btn-styled-new2:hover,
+  #selectBuildingTypeModal .btn-styled-new2:hover,
+  #selectRenovationModal .btn-styled-new2:hover,
+  #form_search_locations_modal .btn-styled-new2:hover,
+  #selectCategoryModal .btn-styled-new2:hover,
+  #selectOfferTypeModal .btn-styled-new2:hover,
+  #searchFormModal .btn-styled-new2:hover,
+  .searchFormPage .btn-styled-new2:hover {
+    background-color: #07386c;
+  }
 }
-
+.map_panel .dropdown-toggle,
 #selectBuildingTypeModal .dropdown-toggle,
 #selectRenovationModal .dropdown-toggle,
 #form_search_locations_modal .dropdown-toggle,
@@ -255,6 +278,7 @@
   font-weight: 500 !important;
 }
 
+.map_panel .dropdown-menu,
 #selectBuildingTypeModal .dropdown-menu,
 #selectRenovationModal .dropdown-menu,
 #form_search_locations_modal .dropdown-menu,
@@ -269,6 +293,7 @@
   box-shadow: none !important;
 }
 
+.map_panel .dropdown-menu li a,
 #selectBuildingTypeModal .dropdown-menu li a,
 #selectRenovationModal .dropdown-menu li a,
 #form_search_locations_modal .dropdown-menu li a,
@@ -290,6 +315,7 @@
   border-bottom: 1px solid #f5f5f5 !important;
 }
 
+.map_panel .dropdown-menu > li > a,
 #selectBuildingTypeModal .dropdown-menu > li > a,
 #selectRenovationModal .dropdown-menu > li > a,
 #form_search_locations_modal .dropdown-menu > li > a,
@@ -303,17 +329,20 @@
   padding: 5px 10px;
 }
 
-#selectBuildingTypeModal .dropdown-menu li a:hover,
-#selectRenovationModal .dropdown-menu li a:hover,
-#form_search_locations_modal .dropdown-menu li a:hover,
-#selectCategoryModal .dropdown-menu li a:hover,
-#selectOfferTypeModal .dropdown-menu li a:hover,
-#searchFormModal .dropdown-menu li a:hover,
-.searchFormPage .dropdown-menu li a:hover {
-  background-color: #f5f5f5;
-  background-image: none !important;
+@media (hover: hover) {
+  .map_panel .dropdown-menu li a:hover,
+  #selectBuildingTypeModal .dropdown-menu li a:hover,
+  #selectRenovationModal .dropdown-menu li a:hover,
+  #form_search_locations_modal .dropdown-menu li a:hover,
+  #selectCategoryModal .dropdown-menu li a:hover,
+  #selectOfferTypeModal .dropdown-menu li a:hover,
+  #searchFormModal .dropdown-menu li a:hover,
+  .searchFormPage .dropdown-menu li a:hover {
+    background-color: #f5f5f5;
+    background-image: none !important;
+  }
 }
-
+.map_panel .dropdown-menu li:first-child a,
 #selectBuildingTypeModal .dropdown-menu li:first-child a,
 #selectRenovationModal .dropdown-menu li:first-child a,
 #form_search_locations_modal .dropdown-menu li:first-child a,
@@ -324,6 +353,7 @@
   border-radius: 5px 5px 0 0 !important;
 }
 
+.map_panel .dropdown-menu li:last-child a,
 #selectBuildingTypeModal .dropdown-menu li:last-child a,
 #selectRenovationModal .dropdown-menu li:last-child a,
 #form_search_locations_modal .dropdown-menu li:last-child a,
@@ -335,6 +365,7 @@
   border: none !important;
 }
 
+.map_panel .dropdown-menu li.active a,
 #selectBuildingTypeModal .dropdown-menu li.active a,
 #selectRenovationModal .dropdown-menu li.active a,
 #form_search_locations_modal .dropdown-menu li.active a,
@@ -347,6 +378,7 @@
   background-image: none !important;
 }
 
+.map_panel .btn-primary,
 #selectBuildingTypeModal .btn-primary,
 #selectRenovationModal .btn-primary,
 #form_search_locations_modal .btn-primary,
@@ -360,16 +392,19 @@
   border: none;
 }
 
-#selectBuildingTypeModal .btn-primary:hover,
-#selectRenovationModal .btn-primary:hover,
-#form_search_locations_modal .btn-primary:hover,
-#selectCategoryModal .btn-primary:hover,
-#selectOfferTypeModal .btn-primary:hover,
-#searchFormModal .btn-primary:hover,
-.searchFormPage .btn-primary:hover {
-  background-color: #07386c;
+@media (hover: hover) {
+  .map_panel .btn-primary:hover,
+  #selectBuildingTypeModal .btn-primary:hover,
+  #selectRenovationModal .btn-primary:hover,
+  #form_search_locations_modal .btn-primary:hover,
+  #selectCategoryModal .btn-primary:hover,
+  #selectOfferTypeModal .btn-primary:hover,
+  #searchFormModal .btn-primary:hover,
+  .searchFormPage .btn-primary:hover {
+    background-color: #07386c;
+  }
 }
-
+.map_panel .btn-primary:focus,
 #selectBuildingTypeModal .btn-primary:focus,
 #selectRenovationModal .btn-primary:focus,
 #form_search_locations_modal .btn-primary:focus,
@@ -381,6 +416,7 @@
   border: 1px solid #333333;
 }
 
+.map_panel .modal-dialog .btn,
 #selectBuildingTypeModal .modal-dialog .btn,
 #selectRenovationModal .modal-dialog .btn,
 #form_search_locations_modal .modal-dialog .btn,
@@ -391,7 +427,12 @@
   display: inline-block;
 }
 
+.search_buttons .btn {
+  height: 34px !important;
+}
+
 /* Inputs */
+.map_panel input.form-control,
 #form_search_locations_modal input.form-control,
 #selectCategoryModal input.form-control,
 #selectOfferTypeModal input.form-control,
@@ -405,10 +446,11 @@
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 14px !important;
-  height: 34px !important;
+  height: 32px !important;
 }
 
 @media screen and (max-width: 767px) {
+  .map_panel input.form-control,
   #form_search_locations_modal input.form-control,
   #selectCategoryModal input.form-control,
   #selectOfferTypeModal input.form-control,
@@ -417,6 +459,7 @@
     height: 36px !important;
   }
 }
+.map_panel input.form-control:focus,
 #form_search_locations_modal input.form-control:focus,
 #selectCategoryModal input.form-control:focus,
 #selectOfferTypeModal input.form-control:focus,
@@ -428,6 +471,7 @@
   border: 1px solid #084c95;
 }
 
+.map_panel input.form-control:active,
 #form_search_locations_modal input.form-control:active,
 #selectCategoryModal input.form-control:active,
 #selectOfferTypeModal input.form-control:active,
@@ -440,6 +484,7 @@
 }
 
 /* Единственный элемент */
+.map_panel input.form-control:only-child,
 #form_search_locations_modal input.form-control:only-child,
 #selectCategoryModal input.form-control:only-child,
 #selectOfferTypeModal input.form-control:only-child,
@@ -449,6 +494,7 @@
 }
 
 /* Первый элемент */
+.map_panel input.form-control:first-child:not(:only-child),
 #form_search_locations_modal input.form-control:first-child:not(:only-child),
 #selectCategoryModal input.form-control:first-child:not(:only-child),
 #selectOfferTypeModal input.form-control:first-child:not(:only-child),
@@ -458,6 +504,7 @@
 }
 
 /* Последний элемент */
+.map_panel input.form-control:last-child:not(:only-child),
 #form_search_locations_modal input.form-control:last-child:not(:only-child),
 #selectCategoryModal input.form-control:last-child:not(:only-child),
 #selectOfferTypeModal input.form-control:last-child:not(:only-child),
@@ -467,6 +514,7 @@
 }
 
 /* Предпоследний элемент (не первый и не последний) */
+.map_panel input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #form_search_locations_modal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #selectCategoryModal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #selectOfferTypeModal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
@@ -476,6 +524,7 @@
 }
 
 /* Элемент не первый, не последний и не предпоследний */
+.map_panel input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #form_search_locations_modal input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #selectCategoryModal input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #selectOfferTypeModal input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
@@ -484,6 +533,7 @@
   border-radius: 0 !important;
 }
 
+.map_panel .input-group-addon,
 #form_search_locations_modal .input-group-addon,
 #selectCategoryModal .input-group-addon,
 #selectOfferTypeModal .input-group-addon,
@@ -496,6 +546,7 @@
   color: #777777;
 }
 
+.map_panel .input-group-addon.input-sm,
 #form_search_locations_modal .input-group-addon.input-sm,
 #selectCategoryModal .input-group-addon.input-sm,
 #selectOfferTypeModal .input-group-addon.input-sm,
@@ -505,8 +556,9 @@
   padding: 5px;
 }
 
+.map_panel .input-group-sm input.form-control,
 .searchFormPage .input-group-sm input.form-control {
-  height: 34px !important;
+  height: 32px !important;
   font-size: 14px !important;
   width: 38px !important;
   padding: 6px 10px !important;
@@ -514,6 +566,7 @@
 }
 
 @media screen and (max-width: 767px) {
+  .map_panel .input-group-sm input.form-control,
   #selectBuildingTypeModal .input-group-sm input.form-control,
   #selectRenovationModal .input-group-sm input.form-control,
   #form_search_locations_modal .input-group-sm input.form-control,
@@ -712,6 +765,7 @@
   }
 }
 /* Form */
+.map_panel_body,
 #searchFormModal .well,
 #searchFormModal.well,
 .searchFormPage .well,
@@ -723,6 +777,7 @@
   background-image: none;
 }
 
+.map_panel_body,
 #searchFormModal .well-sm,
 #searchFormModal.well-sm,
 .searchFormPage .well-sm,
@@ -829,10 +884,27 @@
   color: #07386c;
 }
 
+#form_search_locations_modal .add-button-locations-action {
+  color: #084c95;
+}
+
+#form_search_locations_modal .add-button-locations-action:hover {
+  color: #07386c;
+}
+
+#form_search_locations_modal .selectize-input.focus.input-active {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #084c95;
+}
+
+.map_panel .add_search_link_action,
 .searchFormPage .add_search_link_action {
   color: #084c95;
 }
 
+.map_panel .add_search_link_action:hover,
 .searchFormPage .add_search_link_action:hover {
   color: #07386c;
 }
@@ -852,6 +924,7 @@
   border-radius: 0;
 }
 
+.map_panel .btn-group .get-search-locations-action,
 .well .search_form_action .btn-group .dropdown-toggle {
   text-shadow: none;
   -webkit-box-shadow: none;
@@ -861,6 +934,7 @@
   color: #ffffff;
 }
 
+.map_panel .btn-group .get-search-locations-action:hover,
 #searchFormModal .search_form_action .btn-group .dropdown-toggle:hover,
 .searchFormPage .search_form_action .btn-group .dropdown-toggle:hover {
   background-color: #333333;
@@ -868,6 +942,7 @@
   color: #ffffff;
 }
 
+.map_panel .btn-group.open .get-search-locations-action,
 #searchFormModal .search_form_action .btn-group.open .dropdown-toggle,
 .searchFormPage .search_form_action .btn-group.open .dropdown-toggle {
   background-color: #333333;
@@ -875,6 +950,7 @@
   color: #ffffff;
 }
 
+.map_panel .btn-group.open .get-search-locations-action:hover,
 #searchFormModal .search_form_action .btn-group.open .dropdown-toggle:hover,
 .searchFormPage .search_form_action .btn-group.open .dropdown-toggle:hover {
   background-color: #333333;
@@ -904,6 +980,10 @@
   background-color: #333333;
   border: 1px solid #333333;
   color: #ffffff;
+}
+
+.map_panel .main_search_buttons .btn-primary {
+  flex-grow: 0;
 }
 
 /*# sourceMappingURL=filter.css.map */
