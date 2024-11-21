@@ -18,6 +18,10 @@ $border-radius: 5px;
 $border-radius-big: 10px;
 $padding-btn-small: 6px 10px;
 
+.no-scroll-y {
+  overflow-y: auto;
+}
+
 /* Icons */
 .map_panel .icon-map-small,
 #selectCategoryModal .icon-map-small,
@@ -488,6 +492,7 @@ $padding-btn-small: 6px 10px;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid $color-blue;
+  z-index: 3;
 }
 .map_panel input.form-control:active,
 #form_search_locations_modal input.form-control:active,
@@ -1110,7 +1115,7 @@ $padding-btn-small: 6px 10px;
 #searchFormModal.well-sm,
 .searchFormPage .well-sm,
 .searchFormPage.well-sm {
-  padding: 9px 9px 4px 9px;
+  padding: 9px 9px 9px 9px;
 }
 
 @media (max-width: 767px) {
@@ -1249,6 +1254,9 @@ $padding-btn-small: 6px 10px;
 }
 #form_search_locations_modal .modal-header .fas.fa-search-plus {
   display: none;
+}
+.map_panel_body {
+  max-height: 80vh;
 }
 
 @media screen and (min-width: 768px) {
