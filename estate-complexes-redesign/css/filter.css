@@ -822,16 +822,14 @@
     text-align: start;
     padding-left: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 5px;
   }
-  .shortSearchForm.text-center.link::after {
-    content: "\f0d7";
-    position: relative;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 5px;
+  .shortSearchForm.text-center.link span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
   .shortSearchForm.text-center.link .badge {
     background-color: #ffffff;
@@ -1043,6 +1041,10 @@
 
 .map_panel .main_search_buttons .btn-primary {
   flex-grow: 0;
+}
+
+.map_panel_hider {
+  top: 10px;
 }
 
 /*# sourceMappingURL=filter.css.map */
