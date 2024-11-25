@@ -1263,6 +1263,16 @@ $padding-btn-small: 6px 10px;
   margin-right: 4px;
 }
 
+.map_panel
+  .additional_search_subcategories_container_action
+  .form-group
+  .btn-group
+  .btn {
+  margin-right: 4px;
+  border-radius: 5px;
+  margin-bottom: 4px;
+}
+
 @media screen and (min-width: 768px) {
   /* Единственный элемент */
   #form_search_locations_modal
