@@ -1072,6 +1072,26 @@ $padding-btn-small: 6px 10px;
   }
 }
 
+#selectBuildingTypeModal .checkbox .cr,
+#selectRenovationModal .checkbox .cr,
+#selectCategoryModal .checkbox .cr,
+#selectOfferTypeModal .checkbox .cr,
+#searchFormModal .checkbox .cr,
+.searchFormPage .checkbox .cr,
+.checkbox .cr {
+  transition-duration: 0.2s;
+}
+
+#selectBuildingTypeModal .checkbox .cr i,
+#selectRenovationModal .checkbox .cr i,
+#selectCategoryModal .checkbox .cr i,
+#selectOfferTypeModal .checkbox .cr i,
+#searchFormModal .checkbox .cr i,
+.searchFormPage .checkbox .cr i,
+.checkbox .cr i {
+  transition-duration: 0.5s;
+}
+
 #selectCategoryModal .commerceCheckboxes {
   margin-left: 15px;
 }
@@ -1400,4 +1420,24 @@ $padding-btn-small: 6px 10px;
 }
 .map_panel_hider {
   top: 10px;
+}
+
+#selectBuildingTypeModal .checkbox .cr,
+#selectRenovationModal .checkbox .cr,
+#selectCategoryModal .checkbox .cr,
+#selectOfferTypeModal .checkbox .cr,
+#searchFormModal .checkbox .cr,
+.searchFormPage .checkbox .cr,
+.checkbox .cr {
+  transition-duration: 0.2s;
+}
+
+#selectBuildingTypeModal .checkbox .cr i,
+#selectRenovationModal .checkbox .cr i,
+#selectCategoryModal .checkbox .cr i,
+#selectOfferTypeModal .checkbox .cr i,
+#searchFormModal .checkbox .cr i,
+.searchFormPage .checkbox .cr i,
+.checkbox .cr i {
+  transition-duration: 0.5s;
 }
