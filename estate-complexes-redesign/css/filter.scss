@@ -1259,6 +1259,10 @@ $padding-btn-small: 6px 10px;
   max-height: 80vh;
 }
 
+.additional_search_categories_container_action .form-group .btn-group {
+  margin-right: 4px;
+}
+
 @media screen and (min-width: 768px) {
   /* Единственный элемент */
   #form_search_locations_modal
