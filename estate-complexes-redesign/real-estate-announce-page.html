@@ -243,6 +243,14 @@
       />
       <p class="ds-annouce-info">
         <span class="small text-muted">
+          <span class="panel-body-adv-block"
+            ><span class="label label-danger label-md"
+              ><svg class="icon-default">
+                <use xlink:href="./img/new-icons.svg#hot"></use>
+              </svg>
+              Горячее</span
+            ></span
+          >
           № 132654251 | <span class="time-container-action">Размещено</span>
           <strong
             ><time
@@ -927,17 +935,31 @@
         </div>
         <script>
           // to sticky gallery on announce page
+          const infoContainer = $(
+            ".apartment-top-container .col-md-12.col-lg-5"
+          );
+
+          const apartmentGallery = $(".apartment-gallery");
+
           function heightForStickyGallery() {
-            const height = $(
-              ".apartment-top-container .col-md-12.col-lg-5"
-            ).height();
+            const adsHeight = infoContainer.height();
             const galleryHeight = $(".gallery-with-nav-thumbs").height();
-            console.log(height, galleryHeight);
-            if (height >= galleryHeight) {
-              $(".apartment-gallery").css("height", `${height}px`);
+
+            console.log(adsHeight, galleryHeight);
+            if (adsHeight >= galleryHeight && window.innerWidth >= 1200) {
+              apartmentGallery.css("height", `${adsHeight}px`);
             }
           }
+          window.addEventListener("resize", () => {
+            if (window.innerWidth < 1200) {
+              apartmentGallery.css("height", "");
+            }
+          });
 
+          const resizeObserver = new ResizeObserver(heightForStickyGallery);
+          resizeObserver.observe(infoContainer[0]);
+
+          // Imitation load yandex ads
           async function addHeight() {
             return new Promise((resolve) =>
               setTimeout(() => {
@@ -949,7 +971,7 @@
             );
           }
 
-          addHeight().then(() => heightForStickyGallery());
+          addHeight();
         </script>
         <div class="col-xs-12 col-lg-12">
           <p></p>
@@ -1167,8 +1189,10 @@
                         <button
                           class="btn btn-styled-new2 btn-styled-new2_fz_18 js-calc-mortgage-more"
                         >
-                          <i class="fas fa-search"></i
-                          ><span class="btn-styled-new2__bold">Подобрать</span>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/new-icons.svg#search"></use>
+                          </svg>
+                          <span class="btn-styled-new2__bold">Подобрать</span>
                         </button>
                       </div>
                     </div>
@@ -1179,7 +1203,9 @@
                 <button
                   class="btn btn-styled-new2 btn-styled-new2_fz_18 js-calc-mortgage-more"
                 >
-                  <i class="fas fa-sliders-h"></i>
+                  <svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#filter"></use>
+                  </svg>
                   <span class="btn-styled-new2__bold"
                     >Показать ипотечный фильтр</span
                   >

@@ -63,6 +63,7 @@
 }
 
 /* Buttons */
+.mortgage-container .btn,
 .apartment-top-container .btn,
 .ds-social .btn {
   text-shadow: none;
@@ -119,6 +120,7 @@
   line-height: 1.42857143;
 }
 
+.mortgage-container .btn-default,
 .apartment-top-container .btn-default,
 .ds-social .btn-default {
   background-image: none;
@@ -158,14 +160,12 @@
   border: 1px solid #333333;
 }
 
-.apartment-top-container .btn-styled-new2,
-.ds-social .btn-styled-new2 {
+.btn-styled-new2 {
   background-color: #084c95;
   color: #ffffff;
 }
 
-.apartment-top-container .btn-styled-new2:hover,
-.ds-social .btn-styled-new2:hover {
+.btn-styled-new2:hover {
   background-color: #07386c;
 }
 
@@ -238,10 +238,15 @@
   text-decoration: none;
 }
 
-.apartment-top-container .ds-annouce-info .small.text-muted,
-.ds-social .ds-annouce-info .small.text-muted {
+.ds-annouce-info .small.text-muted {
   color: #333333;
   font-size: 14px;
+}
+
+.ds-annouce-info .panel-body-adv-block .label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 .panel-body-adv-block noindex {
@@ -344,11 +349,12 @@
   font-weight: 500;
 }
 
-.gallery-with-nav-thumbs {
-  position: sticky;
-  top: 0;
+@media screen and (min-width: 1199px) {
+  .gallery-with-nav-thumbs {
+    position: sticky;
+    top: 0;
+  }
 }
-
 /* Mortgage */
 .calc-mortgage__input input {
   height: 32px;
