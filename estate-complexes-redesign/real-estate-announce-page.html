@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/mortgage.css" />
     <!-- <link rel="stylesheet" href="css/redesign.css" /> -->
     <link rel="stylesheet" href="css/announce-page.css" />
-    <!-- <link rel="stylesheet" href="css/filter.css" /> -->
+    <link rel="stylesheet" href="css/filter.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -285,17 +285,37 @@
           <!-- TODO: many changes, recommended to copy separate button, bloks and paste into your project -->
           <div class="col-xs-12 col-lg-12 ds-social">
             <span class="panel-body-adv-block"
-              ><span class="notepad_action"
-                ><button
-                  class="ShowAdvNotepadAction object__actions-item btn btn-default btn-favorite-icon"
-                  data-id="132654251"
-                  title="Добавить в избранное"
-                  type="button"
+              ><span class="notepad_action">
+                <form
+                  class="withoutBootstrapValidator"
+                  method="post"
+                  action="/notepads?id=135769970&amp;notepad=true"
+                  data-remote="true"
                 >
-                  <svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#favorite"></use>
-                  </svg>
-                </button>
+                  <!-- TODO: add new class .btn-favorite-icon and change icon to svg-->
+                  <button
+                    class="object__actions-item btn-favorite-icon"
+                    title="Добавить в избранное"
+                    type="submit"
+                  >
+                    <svg class="icon-default">
+                      <use xlink:href="./img/new-icons.svg#favorite"></use>
+                    </svg></button
+                  ><input
+                    type="hidden"
+                    name="authenticity_token"
+                    value="kC8cZLEObkyXvBjj6LWZmngkXmb09tJi99EM9y+q9sRmNIcH4COHJIQoN4z9UUqEpWGLdFGqFt2uFLlRhnPOaA=="
+                  />
+                </form>
+                <!-- TODO: add script to toggle active class -->
+                <script>
+                  const favoriteBtn =
+                    document.querySelector(".btn-favorite-icon");
+                  favoriteBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    favoriteBtn.classList.toggle("active");
+                  });
+                </script>
               </span>
             </span>
             <span class="panel-body-adv-block"

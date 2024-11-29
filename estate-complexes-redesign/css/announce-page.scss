@@ -1,37 +1,18 @@
-$color-blue: #084c95;
-$color-blue-hover: #07386c;
-$color-blue-light: #23527c;
-$color-blue-superlight: #337ab7;
-$color-cyan: #4db9db;
-$color-red: #d9534f;
-$color-yellow: #eda33b;
-$color-yellow-hover: #d39235;
-$color-yellow-bg: #fdfdda;
-$color-green: #53ae53;
-$color-grey-dark: #333333;
-$color-grey: #7a7a7a;
-$color-grey-text: #777777;
-$color-grey-superlight: #f5f5f5;
-$color-border: #e6e6e6;
-$color-white: #ffffff;
-$border-radius: 5px;
-$border-radius-big: 10px;
-$padding-btn-small: 6px 10px;
-
-.apartment-top-container a,
-.main-breadcrumbs.breadcrumb a {
-  color: $color-blue;
-}
-.apartment-top-container a:hover,
-.main-breadcrumbs.breadcrumb a:hover {
-  color: $color-blue-hover;
-}
-.apartment-top-container a:visited,
-.main-breadcrumbs.breadcrumb a:visited {
-  color: $color-blue-hover;
-}
+@import "./global.scss";
 
 .extendedEntity {
+  .apartment-top-container a,
+  .main-breadcrumbs.breadcrumb a {
+    color: $color-blue;
+  }
+  .apartment-top-container a:hover,
+  .main-breadcrumbs.breadcrumb a:hover {
+    color: $color-blue-hover;
+  }
+  .apartment-top-container a:visited,
+  .main-breadcrumbs.breadcrumb a:visited {
+    color: $color-blue-hover;
+  }
   /* Icons */
   .icon-map-small {
     width: 12px;
@@ -276,22 +257,31 @@ $padding-btn-small: 6px 10px;
   .ds-social .panel-body-adv-block {
     flex-wrap: wrap;
   }
-  .btn-favorite-icon {
-    position: relative;
+
+  .panel-body-adv-block .btn-favorite-icon {
+    display: flex;
     justify-content: center;
-    padding-left: 44px;
-    text-align: center;
+    align-items: center;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     height: 32px;
     width: 32px;
     padding: 0;
+    border: 1px solid $color-border;
+    border-radius: $border-radius;
+  }
+  .panel-body-adv-block .btn-favorite-icon:hover {
+    background-color: $color-grey-superlight;
+  }
+  .btn-favorite-icon svg {
+    fill: $color-grey-text;
+  }
+  .btn-favorite-icon.active svg {
+    fill: $color-grey-dark;
   }
   .btn-social-icon > :first-child {
     position: static;
-    width: 14px;
-    height: 14px;
+    width: 14px !important;
+    height: 14px !important;
   }
   .apartment-top-container .apartment-desc__owner noindex {
     display: flex;
