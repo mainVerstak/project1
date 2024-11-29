@@ -31,550 +31,552 @@ $padding-btn-small: 6px 10px;
   color: $color-blue-hover;
 }
 
-/* Icons */
-.icon-map-small {
-  width: 12px;
-  height: 14px;
-  fill: currentColor;
-}
-.icon-caret-default {
-  width: 10px;
-  height: 6px;
-  fill: currentColor;
-}
-.icon-default {
-  width: 14px;
-  height: 14px;
-  fill: currentColor;
-}
-.icon-info {
-  width: 12px;
-  height: 12px;
-  fill: currentColor;
-}
-.icon-big {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-.main-breadcrumbs .icon-breadcrumbs {
-  width: 12px;
-  height: 12px;
-  fill: currentColor;
-}
-
-.center-icon {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-/* Buttons */
-#banki-ru-widget.mortgage-container .btn,
-.apartment-top-container .btn,
-.ds-social .btn {
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  vertical-align: bottom;
-  border-radius: $border-radius;
-  padding: $padding-btn-small;
-  font-weight: 500;
-  line-height: 1.314;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  height: 32px !important;
-}
-
-.apartment-top-container .btn-danger,
-.ds-social .btn-danger {
-  background-color: $color-red;
-  border-color: $color-red;
-  background-image: none;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.btn-default:active,
-.btn-default.active,
-.btn-primary:active,
-.btn-primary.active,
-.btn-success:active,
-.btn-success.active,
-.btn-info:active,
-.btn-info.active,
-.btn-warning:active,
-.btn-warning.active,
-.btn-danger:active,
-.btn-danger.active {
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.apartment-top-container .btn-xs,
-.ds-social .btn-xs {
-  padding: $padding-btn-small;
-  font-size: 14px;
-  height: 32px !important;
-  line-height: 1.42857143;
-}
-.apartment-top-container .btn-group-xs > .btn,
-.ds-social .btn-group-xs > .btn {
-  line-height: 1.42857143;
-}
-#banki-ru-widget.mortgage-container .btn-default,
-.apartment-top-container .btn-default,
-.ds-social .btn-default {
-  background-image: none;
-  filter: none;
-  background-color: $color-white;
-  border-radius: $border-radius;
-  color: $color-grey-text;
-  border: 1px solid $color-border;
-  padding: $padding-btn-small;
-  font-weight: 500;
-  line-height: 1.42857143;
-}
-.apartment-top-container .btn-default:hover,
-.ds-social .btn-default:hover {
-  background-color: $color-grey-superlight;
-  border: 1px solid $color-border;
-  color: $color-grey-dark;
-}
-.apartment-top-container .btn-default.active,
-.ds-social .btn-default.active {
-  background-color: $color-border;
-  border: 1px solid $color-border;
-  color: $color-grey-dark;
-}
-.apartment-top-container .btn-default.active:hover,
-.ds-social .btn-default.active:hover {
-  border: 1px solid $color-border;
-  color: $color-grey-dark;
-}
-.apartment-top-container .btn-default:focus,
-.ds-social .btn-default:focus {
-  box-shadow: none;
-  border: 1px solid $color-grey-dark;
-}
-
-#banki-ru-widget .btn-styled-new2 {
-  background-color: $color-blue;
-  color: $color-white;
-}
-#banki-ru-widget .btn-styled-new2:hover {
-  background-color: $color-blue-hover;
-}
-.apartment-top-container .btn-primary,
-.ds-social .btn-primary {
-  background-color: $color-blue;
-  border-radius: $border-radius;
-  background-image: none;
-  border: none;
-}
-.apartment-top-container .btn-primary:hover,
-.ds-social .btn-primary:hover {
-  background-color: $color-blue-hover;
-}
-.apartment-top-container .btn-primary:focus,
-.ds-social .btn-primary:focus {
-  background-color: $color-blue-hover;
-  border: 1px solid $color-grey-dark;
-}
-
-.apartment-top-container .btn-info,
-.ds-social .btn-info {
-  background-color: $color-blue;
-  border-radius: $border-radius;
-  background-image: none;
-  border: none;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.apartment-top-container .btn-info:hover,
-.ds-social .btn-info:hover {
-  background-color: $color-blue-hover;
-}
-.apartment-top-container .btn-info:focus,
-.ds-social .btn-info:focus {
-  background-color: $color-blue-hover;
-}
-.apartment-top-container .btn-info:active,
-.ds-social .btn-info:active {
-  background-color: $color-blue-hover;
-}
-.apartment-top-container .btn-info:active:hover,
-.ds-social .btn-info:active:hover {
-  background-color: $color-blue-hover;
-}
-.apartment-top-container .btn-warning,
-.ds-social .btn-warning {
-  background-color: $color-yellow;
-  border-radius: $border-radius;
-  background-image: none;
-  border: none;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 500;
-}
-.apartment-top-container .btn-warning:hover,
-.ds-social .btn-warning:hover {
-  background-color: $color-yellow-hover;
-  text-decoration: none;
-}
-
-.ds-annouce-info .small.text-muted {
-  color: $color-grey-dark;
-  font-size: 14px;
-}
-.ds-annouce-info .panel-body-adv-block .label {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-
-.panel-body-adv-block noindex {
-  display: flex;
-  gap: 3px;
-}
-.apartment-top-container .panel-body-adv-block a i,
-.ds-social .panel-body-adv-block a i {
-  font-size: 14px;
-}
-.apartment-top-container .panel-body-adv-block .notepad_action,
-.ds-social .panel-body-adv-block .notepad_action {
-  display: flex;
-  gap: 3px;
-}
-.panel-body-adv-block {
-  display: flex;
-  gap: 3px;
-}
-
-.ds-social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.ds-social .btn-social-icon > :first-child {
-  font-size: 14px;
-}
-.ds-social .btn-social-icon {
-  height: 32px;
-  width: 32px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ds-social .panel-body-adv-block {
-  flex-wrap: wrap;
-}
-.btn-favorite-icon {
-  position: relative;
-  justify-content: center;
-  padding-left: 44px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 32px;
-  width: 32px;
-  padding: 0;
-}
-.btn-social-icon > :first-child {
-  position: static;
-  width: 14px;
-  height: 14px;
-}
-.apartment-top-container .apartment-desc__owner noindex {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-// Breadcrumbs
-.main-breadcrumbs.breadcrumb li.small {
-  font-size: 14px;
-}
-
-/* Slider big */
-.apartment-gallery .fotorama__stage {
-  border-radius: $border-radius;
-  background-color: $color-white;
-}
-.apartment-gallery .fotorama__thumb {
-  border-radius: $border-radius;
-}
-.apartment-gallery .fotorama__thumb-border {
-  border-color: $color-blue;
-  border-radius: $border-radius;
-  height: 62px !important;
-  width: 62px !important;
-}
-.apartment-desc {
-  background-color: $color-grey-superlight;
-  border-radius: $border-radius;
-}
-.apartment-desc__owner {
-  color: $color-grey-text;
-}
-.apartment-desc__item {
-  padding: 0px 10px 10px 10px;
-}
-.apartment-desc__item a {
-  font-weight: 500;
-}
-@media screen and (min-width: 1199px) {
-  .gallery-with-nav-thumbs {
-    position: sticky;
-    top: 0;
+.extendedEntity {
+  /* Icons */
+  .icon-map-small {
+    width: 12px;
+    height: 14px;
+    fill: currentColor;
   }
-}
-
-/* Mortgage */
-#banki-ru-widget .calc-mortgage__input input {
-  height: 32px;
-  letter-spacing: unset;
-}
-#banki-ru-widget .calc-mortgage__sum {
-  letter-spacing: 0.075em;
-}
-#banki-ru-widget .calc-mortgage__label {
-  margin-bottom: 12px;
-}
-#banki-ru-widget .calc-mortgage .rangeslider--horizontal {
-  margin: 10px 0;
-}
-
-#banki-ru-widget.mortgage-container {
-  margin: 0 15px;
-}
-#banki-ru-widget .mortgage-calc-blok {
-  margin-top: 15px;
-  background-color: $color-grey-superlight;
-  border-radius: $border-radius-big $border-radius-big 0 0;
-  border: 1px solid $color-blue;
-}
-#banki-ru-widget .mortgage-calc-blok p {
-  margin: 0;
-}
-#banki-ru-widget .calc-mortgage {
-  color: $color-grey-dark;
-  background: none;
-  padding: 15px 0;
-  margin: 0;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-#banki-ru-widget .calc-mortgage__top {
-  padding: 0;
-}
-#banki-ru-widget .calc-mortgage__bottom {
-  padding: 0;
-}
-#banki-ru-widget .calc-mortgage__label {
-  font-size: 14px;
-  font-weight: 700;
-  color: $color-grey-dark;
-}
-#banki-ru-widget .calc-mortgage__input.calc-mortgage__input_disabled input {
-  color: $color-white;
-  background: $color-blue;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0px 40px 0 8px;
-}
-#banki-ru-widget .calc-mortgage__input-c {
-  right: -17px;
-  font-size: 14px;
-  font-weight: 500;
-  color: $color-grey-text;
-  display: flex;
-  align-items: center;
-}
-#banki-ru-widget .calc-mortgage__input input {
-  background-color: $color-white;
-  border: 1px solid $color-border;
-  border-radius: $border-radius;
-  font-size: 14px;
-  font-weight: 500;
-  color: $color-grey-text;
-}
-#banki-ru-widget .calc-mortgage-price,
-#banki-ru-widget .calc-mortgage-summ {
-  width: 94% !important;
-}
-#banki-ru-widget .calc-mortgage-rate {
-  width: 92% !important;
-}
-
-#banki-ru-widget .calc-mortgage .rangeslider__fill {
-  background: $color-blue;
-  border-radius: 2px 0px 0px 2px;
-  height: 4px;
-}
-#banki-ru-widget .calc-mortgage .rangeslider__handle::after {
-  background: $color-blue;
-}
-
-#banki-ru-widget .calc-mortgage .rangeslider--horizontal {
-  height: 4px;
-  background: $color-white;
-  position: relative;
-  margin: 16px 0;
-}
-#banki-ru-widget .calc-mortgage__result::after,
-#banki-ru-widget .calc-mortgage__result::before {
-  content: none;
-}
-/* .calc-mortgage__result {
-  width: 100%;
-  justify-content: center;
-} */
-#banki-ru-widget .calc-mortgage__result .calc-mortgage__sum {
-  font-size: 21px;
-  color: $color-blue;
-  margin-right: 10px;
-  margin-left: 150px;
-}
-#banki-ru-widget .calc-mortgage__result .calc-mortgage__note {
-  font-size: 14px;
-  color: $color-grey-text;
-  max-width: unset;
-}
-
-#banki-ru-widget .mortgage-table-blok {
-  border: 1px solid $color-blue;
-  border-top: none;
-  border-radius: 0 0 $border-radius-big $border-radius-big;
-  margin-bottom: 15px;
-}
-#banki-ru-widget .table-mortgage {
-  font-size: 12px;
-  color: $color-blue;
-  margin-bottom: 15px;
-}
-#banki-ru-widget .table-mortgage th {
-  line-height: 18px;
-}
-#banki-ru-widget .table-mortgage-header {
-  color: $color-grey-text;
-}
-#banki-ru-widget .table-mortgage tr {
-  position: relative;
-  border: none;
-}
-
-#banki-ru-widget .table-mortgage tr:first-child::after {
-  border-bottom: 1px solid $color-border;
-}
-#banki-ru-widget .table-mortgage tr::after {
-  content: "";
-  position: absolute;
-  width: calc(100% + 30px);
-  left: -15px;
-  bottom: 0;
-  border-bottom: 1px solid $color-border;
-}
-#banki-ru-widget .table-mortgage__name {
-  font-size: 14px;
-}
-#banki-ru-widget .table-mortgage td:nth-child(5),
-#banki-ru-widget .table-mortgage th:nth-child(5) {
-  width: 45px;
-}
-
-#banki-ru-widget .table-mortgage-btn {
-  padding: $padding-btn-small;
-  border-radius: $border-radius;
-  border: none;
-  background-color: $color-blue;
-  color: $color-white;
-  height: 37px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-}
-#banki-ru-widget .table-mortgage-btn:hover {
-  background-color: $color-blue-hover;
-}
-#banki-ru-widget .table-mortgage-show {
-  padding: $padding-btn-small;
-  border-radius: $border-radius;
-  border: 1px solid $color-border;
-  background-color: $color-white;
-  color: $color-grey-text;
-  height: 37px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  margin-bottom: 15px;
-}
-#banki-ru-widget .table-mortgage-show:hover {
-  background-color: $color-grey-superlight;
-  border: 1px solid $color-border;
-  color: $color-grey-dark;
-}
-#banki-ru-widget .table-mortgage__btn-popover {
-  padding: $padding-btn-small;
-  border-radius: $border-radius;
-  border: 1px solid $color-border;
-  background-color: $color-white;
-  color: $color-grey-text;
-  margin-right: 5px;
-  display: inline-block;
-}
-#banki-ru-widget .table-mortgage__btn-popover svg {
-  margin-top: 4px;
-}
-#banki-ru-widget .table-mortgage__btn-popover:hover {
-  background-color: $color-grey-superlight;
-  border: 1px solid $color-border;
-  color: $color-grey-dark;
-}
-
-#banki-ru-widget .calc-mortgage__mobile-btn button {
-  background-color: $color-blue;
-  font-size: 16px;
-}
-#banki-ru-widget .calc-mortgage__mobile-btn button:hover {
-  background-color: $color-blue-hover;
-}
-
-@media only screen and (max-width: 991px) {
-  #banki-ru-widget .calc-mortgage__popup {
-    background: rgba(43, 43, 43, 0.5);
+  .icon-caret-default {
+    width: 10px;
+    height: 6px;
+    fill: currentColor;
   }
-  #banki-ru-widget .calc-mortgage__popup-inner {
-    background: #fff;
-    width: 100%;
-    padding: 30px 0;
+  .icon-default {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+  .icon-info {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+  }
+  .icon-big {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+  .main-breadcrumbs .icon-breadcrumbs {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+  }
+
+  .center-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* Buttons */
+  #banki-ru-widget.mortgage-container .btn,
+  .apartment-top-container .btn,
+  .ds-social .btn {
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    vertical-align: bottom;
+    border-radius: $border-radius;
+    padding: $padding-btn-small;
+    font-weight: 500;
+    line-height: 1.314;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 32px !important;
+  }
+
+  .apartment-top-container .btn-danger,
+  .ds-social .btn-danger {
+    background-color: $color-red;
+    border-color: $color-red;
+    background-image: none;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .btn-default:active,
+  .btn-default.active,
+  .btn-primary:active,
+  .btn-primary.active,
+  .btn-success:active,
+  .btn-success.active,
+  .btn-info:active,
+  .btn-info.active,
+  .btn-warning:active,
+  .btn-warning.active,
+  .btn-danger:active,
+  .btn-danger.active {
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .apartment-top-container .btn-xs,
+  .ds-social .btn-xs {
+    padding: $padding-btn-small;
+    font-size: 14px;
+    height: 32px !important;
+    line-height: 1.42857143;
+  }
+  .apartment-top-container .btn-group-xs > .btn,
+  .ds-social .btn-group-xs > .btn {
+    line-height: 1.42857143;
+  }
+  #banki-ru-widget.mortgage-container .btn-default,
+  .apartment-top-container .btn-default,
+  .ds-social .btn-default {
+    background-image: none;
+    filter: none;
+    background-color: $color-white;
+    border-radius: $border-radius;
+    color: $color-grey-text;
+    border: 1px solid $color-border;
+    padding: $padding-btn-small;
+    font-weight: 500;
+    line-height: 1.42857143;
+  }
+  .apartment-top-container .btn-default:hover,
+  .ds-social .btn-default:hover {
+    background-color: $color-grey-superlight;
+    border: 1px solid $color-border;
+    color: $color-grey-dark;
+  }
+  .apartment-top-container .btn-default.active,
+  .ds-social .btn-default.active {
+    background-color: $color-border;
+    border: 1px solid $color-border;
+    color: $color-grey-dark;
+  }
+  .apartment-top-container .btn-default.active:hover,
+  .ds-social .btn-default.active:hover {
+    border: 1px solid $color-border;
+    color: $color-grey-dark;
+  }
+  .apartment-top-container .btn-default:focus,
+  .ds-social .btn-default:focus {
+    box-shadow: none;
+    border: 1px solid $color-grey-dark;
+  }
+
+  #banki-ru-widget .btn-styled-new2 {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+  #banki-ru-widget .btn-styled-new2:hover {
+    background-color: $color-blue-hover;
+  }
+  .apartment-top-container .btn-primary,
+  .ds-social .btn-primary {
+    background-color: $color-blue;
+    border-radius: $border-radius;
+    background-image: none;
+    border: none;
+  }
+  .apartment-top-container .btn-primary:hover,
+  .ds-social .btn-primary:hover {
+    background-color: $color-blue-hover;
+  }
+  .apartment-top-container .btn-primary:focus,
+  .ds-social .btn-primary:focus {
+    background-color: $color-blue-hover;
+    border: 1px solid $color-grey-dark;
+  }
+
+  .apartment-top-container .btn-info,
+  .ds-social .btn-info {
+    background-color: $color-blue;
+    border-radius: $border-radius;
+    background-image: none;
+    border: none;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .apartment-top-container .btn-info:hover,
+  .ds-social .btn-info:hover {
+    background-color: $color-blue-hover;
+  }
+  .apartment-top-container .btn-info:focus,
+  .ds-social .btn-info:focus {
+    background-color: $color-blue-hover;
+  }
+  .apartment-top-container .btn-info:active,
+  .ds-social .btn-info:active {
+    background-color: $color-blue-hover;
+  }
+  .apartment-top-container .btn-info:active:hover,
+  .ds-social .btn-info:active:hover {
+    background-color: $color-blue-hover;
+  }
+  .apartment-top-container .btn-warning,
+  .ds-social .btn-warning {
+    background-color: $color-yellow;
+    border-radius: $border-radius;
+    background-image: none;
+    border: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .apartment-top-container .btn-warning:hover,
+  .ds-social .btn-warning:hover {
+    background-color: $color-yellow-hover;
+    text-decoration: none;
+  }
+
+  .ds-annouce-info .small.text-muted {
+    color: $color-grey-dark;
+    font-size: 14px;
+  }
+  .ds-annouce-info .panel-body-adv-block .label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .panel-body-adv-block noindex {
+    display: flex;
+    gap: 3px;
+  }
+  .apartment-top-container .panel-body-adv-block a i,
+  .ds-social .panel-body-adv-block a i {
+    font-size: 14px;
+  }
+  .apartment-top-container .panel-body-adv-block .notepad_action,
+  .ds-social .panel-body-adv-block .notepad_action {
+    display: flex;
+    gap: 3px;
+  }
+  .panel-body-adv-block {
+    display: flex;
+    gap: 3px;
+  }
+
+  .ds-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .ds-social .btn-social-icon > :first-child {
+    font-size: 14px;
+  }
+  .ds-social .btn-social-icon {
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ds-social .panel-body-adv-block {
+    flex-wrap: wrap;
+  }
+  .btn-favorite-icon {
     position: relative;
-    margin: auto;
-    border-radius: $border-radius-big;
+    justify-content: center;
+    padding-left: 44px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+  }
+  .btn-social-icon > :first-child {
+    position: static;
+    width: 14px;
+    height: 14px;
+  }
+  .apartment-top-container .apartment-desc__owner noindex {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  // Breadcrumbs
+  .main-breadcrumbs.breadcrumb li.small {
+    font-size: 14px;
+  }
+
+  /* Slider big */
+  .apartment-gallery .fotorama__stage {
+    border-radius: $border-radius;
+    background-color: $color-white;
+  }
+  .apartment-gallery .fotorama__thumb {
+    border-radius: $border-radius;
+  }
+  .apartment-gallery .fotorama__thumb-border {
+    border-color: $color-blue;
+    border-radius: $border-radius;
+    height: 62px !important;
+    width: 62px !important;
+  }
+  .apartment-desc {
+    background-color: $color-grey-superlight;
+    border-radius: $border-radius;
+  }
+  .apartment-desc__owner {
+    color: $color-grey-text;
+  }
+  .apartment-desc__item {
+    padding: 0px 10px 10px 10px;
+  }
+  .apartment-desc__item a {
+    font-weight: 500;
+  }
+  @media screen and (min-width: 1199px) {
+    .gallery-with-nav-thumbs {
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  /* Mortgage */
+  #banki-ru-widget .calc-mortgage__input input {
+    height: 32px;
+    letter-spacing: unset;
+  }
+  #banki-ru-widget .calc-mortgage__sum {
+    letter-spacing: 0.075em;
+  }
+  #banki-ru-widget .calc-mortgage__label {
+    margin-bottom: 12px;
+  }
+  #banki-ru-widget .calc-mortgage .rangeslider--horizontal {
+    margin: 10px 0;
+  }
+
+  #banki-ru-widget.mortgage-container {
+    margin: 0 15px;
+  }
+  #banki-ru-widget .mortgage-calc-blok {
+    margin-top: 15px;
+    background-color: $color-grey-superlight;
+    border-radius: $border-radius-big $border-radius-big 0 0;
+    border: 1px solid $color-blue;
+  }
+  #banki-ru-widget .mortgage-calc-blok p {
+    margin: 0;
+  }
+  #banki-ru-widget .calc-mortgage {
+    color: $color-grey-dark;
+    background: none;
+    padding: 15px 0;
+    margin: 0;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
   #banki-ru-widget .calc-mortgage__top {
-    padding: 0 20px;
+    padding: 0;
   }
-  #banki-ru-widget .calc-mortgage__sum::before {
-    display: none;
+  #banki-ru-widget .calc-mortgage__bottom {
+    padding: 0;
   }
-  #banki-ru-widget .calc-mortgage__sum::after {
-    display: none;
+  #banki-ru-widget .calc-mortgage__label {
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-grey-dark;
   }
+  #banki-ru-widget .calc-mortgage__input.calc-mortgage__input_disabled input {
+    color: $color-white;
+    background: $color-blue;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px 40px 0 8px;
+  }
+  #banki-ru-widget .calc-mortgage__input-c {
+    right: -17px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-grey-text;
+    display: flex;
+    align-items: center;
+  }
+  #banki-ru-widget .calc-mortgage__input input {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $border-radius;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-grey-text;
+  }
+  #banki-ru-widget .calc-mortgage-price,
+  #banki-ru-widget .calc-mortgage-summ {
+    width: 94% !important;
+  }
+  #banki-ru-widget .calc-mortgage-rate {
+    width: 92% !important;
+  }
+
+  #banki-ru-widget .calc-mortgage .rangeslider__fill {
+    background: $color-blue;
+    border-radius: 2px 0px 0px 2px;
+    height: 4px;
+  }
+  #banki-ru-widget .calc-mortgage .rangeslider__handle::after {
+    background: $color-blue;
+  }
+
+  #banki-ru-widget .calc-mortgage .rangeslider--horizontal {
+    height: 4px;
+    background: $color-white;
+    position: relative;
+    margin: 16px 0;
+  }
+  #banki-ru-widget .calc-mortgage__result::after,
+  #banki-ru-widget .calc-mortgage__result::before {
+    content: none;
+  }
+  /* .calc-mortgage__result {
+    width: 100%;
+    justify-content: center;
+  } */
   #banki-ru-widget .calc-mortgage__result .calc-mortgage__sum {
     font-size: 21px;
     color: $color-blue;
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 10px;
+    margin-left: 150px;
+  }
+  #banki-ru-widget .calc-mortgage__result .calc-mortgage__note {
+    font-size: 14px;
+    color: $color-grey-text;
+    max-width: unset;
+  }
+
+  #banki-ru-widget .mortgage-table-blok {
+    border: 1px solid $color-blue;
+    border-top: none;
+    border-radius: 0 0 $border-radius-big $border-radius-big;
+    margin-bottom: 15px;
+  }
+  #banki-ru-widget .table-mortgage {
+    font-size: 12px;
+    color: $color-blue;
+    margin-bottom: 15px;
+  }
+  #banki-ru-widget .table-mortgage th {
+    line-height: 18px;
+  }
+  #banki-ru-widget .table-mortgage-header {
+    color: $color-grey-text;
+  }
+  #banki-ru-widget .table-mortgage tr {
+    position: relative;
+    border: none;
+  }
+
+  #banki-ru-widget .table-mortgage tr:first-child::after {
+    border-bottom: 1px solid $color-border;
+  }
+  #banki-ru-widget .table-mortgage tr::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 30px);
+    left: -15px;
+    bottom: 0;
+    border-bottom: 1px solid $color-border;
+  }
+  #banki-ru-widget .table-mortgage__name {
+    font-size: 14px;
+  }
+  #banki-ru-widget .table-mortgage td:nth-child(5),
+  #banki-ru-widget .table-mortgage th:nth-child(5) {
+    width: 45px;
+  }
+
+  #banki-ru-widget .table-mortgage-btn {
+    padding: $padding-btn-small;
+    border-radius: $border-radius;
+    border: none;
+    background-color: $color-blue;
+    color: $color-white;
+    height: 37px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  #banki-ru-widget .table-mortgage-btn:hover {
+    background-color: $color-blue-hover;
+  }
+  #banki-ru-widget .table-mortgage-show {
+    padding: $padding-btn-small;
+    border-radius: $border-radius;
+    border: 1px solid $color-border;
+    background-color: $color-white;
+    color: $color-grey-text;
+    height: 37px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  #banki-ru-widget .table-mortgage-show:hover {
+    background-color: $color-grey-superlight;
+    border: 1px solid $color-border;
+    color: $color-grey-dark;
+  }
+  #banki-ru-widget .table-mortgage__btn-popover {
+    padding: $padding-btn-small;
+    border-radius: $border-radius;
+    border: 1px solid $color-border;
+    background-color: $color-white;
+    color: $color-grey-text;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  #banki-ru-widget .table-mortgage__btn-popover svg {
+    margin-top: 4px;
+  }
+  #banki-ru-widget .table-mortgage__btn-popover:hover {
+    background-color: $color-grey-superlight;
+    border: 1px solid $color-border;
+    color: $color-grey-dark;
+  }
+
+  #banki-ru-widget .calc-mortgage__mobile-btn button {
+    background-color: $color-blue;
+    font-size: 16px;
+  }
+  #banki-ru-widget .calc-mortgage__mobile-btn button:hover {
+    background-color: $color-blue-hover;
+  }
+
+  @media only screen and (max-width: 991px) {
+    #banki-ru-widget .calc-mortgage__popup {
+      background: rgba(43, 43, 43, 0.5);
+    }
+    #banki-ru-widget .calc-mortgage__popup-inner {
+      background: #fff;
+      width: 100%;
+      padding: 30px 0;
+      position: relative;
+      margin: auto;
+      border-radius: $border-radius-big;
+    }
+    #banki-ru-widget .calc-mortgage__top {
+      padding: 0 20px;
+    }
+    #banki-ru-widget .calc-mortgage__sum::before {
+      display: none;
+    }
+    #banki-ru-widget .calc-mortgage__sum::after {
+      display: none;
+    }
+    #banki-ru-widget .calc-mortgage__result .calc-mortgage__sum {
+      font-size: 21px;
+      color: $color-blue;
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 }
