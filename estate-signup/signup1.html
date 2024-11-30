@@ -1,135 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/application.css">
-    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/signup.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <header>
-            <div class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header"><button class="navbar-toggle sidenav-button" type="button"><span
-                                class="icon-bar"></span><span class="icon-bar"></span><span
-                                class="icon-bar"></span></button><span class="pull-left"><a class="navbar-brand"
-                                href="/" style="color:#337ab7;"><i class="fa fa-building-o fa-lg"></i>
-                                multilisting.su</a></span></div>
-                    <nav class="sidenav loaded">
-                        <div class="sidenav__inner">
-                            <ul class="nav navbar-nav navbar-left">
-                                <li><a class="yaSend" href="/documents" title="Выписки из ЕГРН"
-                                        yaparam="header_document_click"><i class="fa fa-edit fa-lg"></i><span
-                                            class="hidden-sm hidden-md"> Выписки</span></a></li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="nav navbar-nav"><a href="/sign-in">
-                                        <div class="navbar-link"><i class="fa fa-sign-in"></i> Войти</div>
-                                    </a></li>
-                                <li class="nav navbar-nav"><a href="/sign-up">
-                                        <div class="navbar-link"><i class="fa fa-user-plus"></i> Зарегистрироваться
-                                        </div>
-                                    </a></li>
-                                <li class="nav navbar-nav">
-                                    <div class="navbar-btn nav-font-color"><a data-no-turbolink="true"
-                                            href="/estate-new">
-                                            <div class="btn btn-warning"><i class="fa fa-plus fa-lg"></i> Подать
-                                                объявление</div>
-                                        </a></div>
-                                </li>
-                            </ul>
-                        </div><button aria-label="Close" class="sidenav__close" type="button"><i
-                                class="fa fa-close"></i></button>
-                    </nav>
-                    <div class="sidenav-overlay"></div>
-                </div>
+      <header>
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <span class="icon-bar"></span><span class="icon-bar"></span
+                ><span class="icon-bar"></span></button
+              ><span class="pull-left"
+                ><a class="navbar-brand" href="/" style="color: #337ab7"
+                  ><img
+                    src="img/logo.svg"
+                    class="navbar-brand__logo"
+                    height="20" /></a
+              ></span>
             </div>
-            <div class="notifications top-right"></div>
-        </header>
-        <h1>Регистрация</h1>
-        <div class="signup-box">
-            <div class="signup-box__item signup-box__item_border">
-                <div class="signup-steps">
-                    <div class="signup-steps__inner">
-                        <div class="signup-steps__item current" data-step="1">
-                            <div class="signup-steps__num">1</div>
-                            <div class="signup-steps__name">
-                                Подтверждение
-                                почты
-                            </div>
+            <nav class="sidenav loaded">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-left">
+                  <li>
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                      ><i class="fa fa-edit fa-lg"></i
+                      ><span class="hidden-sm hidden-md"> Выписки</span></a
+                    >
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <i class="fa fa-sign-in"></i> Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <i class="fa fa-user-plus"></i> Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="navbar-btn nav-font-color">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <i class="fa fa-plus fa-lg"></i> Подать объявление
                         </div>
-                        <div class="signup-steps__arrow">
-                            →
-                        </div>
-                        <div class="signup-steps__item" data-step="2">
-                            <div class="signup-steps__num">2</div>
-                            <div class="signup-steps__name">
-                                Подтверждение
-                                телефона
-                            </div>
-                        </div>
-                        <div class="signup-steps__arrow">
-                            →
-                        </div>
-                        <div class="signup-steps__item" data-step="3">
-                            <div class="signup-steps__num">3</div>
-                            <div class="signup-steps__name">
-                                Завершение
-                                регистрации
-                            </div>
-                        </div>
+                      </a>
                     </div>
-                </div>
-            </div>
-            <div class="signup-box__item signup-box__item_border">
-                <div class="signup-box__row">
-                    <label class="signup-box__label control-label"><i class="fa fa-envelope"></i> Почта</label>
-                    <div class="signup-box__input col-sm-12">
-                        <div class="signup-box__input-inner">
-                            <input autocomplete="off" class="form-control" placeholder="Почта"
-                                type="text">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="signup-box__item signup-box__item_border">
-                <div class="signup-box__recaptcha col-sm-12">
-                    <div class="f-recaptcha">
-                        <div style="width: 304px; height: 78px; background: #fff;"></div>
-                    </div>
-                </div>
-                <button class="btn btn-primary btn-lg signup-box__btn"
-                    data-loading-text="Регистрация..." name="button"><i class="fa fa-user-plus fa-lg"></i>
-                    Зарегистрироваться</button>
-                <p class="signup-box__help">Нажимая кнопку «Зарегистрироваться», я принимаю условия
-                    Предоставления
-                    услуг, Оферты и даю своё согласие на обработку моих персональных данных, в соответствии с
-                    Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для
-                    целей,
-                    определенных <a href="/privacy">Политикой конфиденциальности</a>.</p>
-            </div>
-            <div class="signup-box__item">
-                <div class="signup-box__bottom-link">
-                    <a href="/password-new"><i class="fa fa-refresh fa-lg"></i> Восстановить пароль</a>
-                </div>
-                <div class="signup-box__bottom-link">
-                    <a href="/sign-in"><i class="fa fa-sign-in fa-lg"></i> Войти</a>
-                </div>
-            </div>
+                  </li>
+                </ul>
+              </div>
+              <button aria-label="Close" class="sidenav__close" type="button">
+                <i class="fa fa-close"></i>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
         </div>
+        <div class="notifications top-right"></div>
+      </header>
+      <h1>Регистрация</h1>
+      <div class="signup-box">
+        <div class="signup-box__item signup-box__item_border">
+          <div class="signup-steps">
+            <div class="signup-steps__inner">
+              <div class="signup-steps__item current" data-step="1">
+                <div class="signup-steps__num">1</div>
+                <div class="signup-steps__name">Подтверждение почты</div>
+              </div>
+              <div class="signup-steps__arrow">→</div>
+              <div class="signup-steps__item" data-step="2">
+                <div class="signup-steps__num">2</div>
+                <div class="signup-steps__name">Подтверждение телефона</div>
+              </div>
+              <div class="signup-steps__arrow">→</div>
+              <div class="signup-steps__item" data-step="3">
+                <div class="signup-steps__num">3</div>
+                <div class="signup-steps__name">Завершение регистрации</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="signup-box__item signup-box__item_border">
+          <div class="signup-box__row">
+            <label class="signup-box__label control-label"
+              ><i class="fa fa-envelope"></i> Почта</label
+            >
+            <div class="signup-box__input col-sm-12">
+              <div class="signup-box__input-inner">
+                <input
+                  autocomplete="off"
+                  class="form-control"
+                  placeholder="Почта"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="signup-box__item signup-box__item_border">
+          <div class="signup-box__recaptcha col-sm-12">
+            <div class="f-recaptcha">
+              <div style="width: 304px; height: 78px; background: #fff"></div>
+            </div>
+          </div>
+          <button
+            class="btn btn-primary btn-lg signup-box__btn"
+            data-loading-text="Регистрация..."
+            name="button"
+          >
+            <i class="fa fa-user-plus fa-lg"></i> Зарегистрироваться
+          </button>
+          <p class="signup-box__help">
+            Нажимая кнопку «Зарегистрироваться», я принимаю условия
+            Предоставления услуг, Оферты и даю своё согласие на обработку моих
+            персональных данных, в соответствии с Федеральным законом от
+            27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для
+            целей, определенных
+            <a href="/privacy">Политикой конфиденциальности</a>.
+          </p>
+        </div>
+        <div class="signup-box__item">
+          <div class="signup-box__bottom-link">
+            <a href="/password-new"
+              ><i class="fa fa-refresh fa-lg"></i> Восстановить пароль</a
+            >
+          </div>
+          <div class="signup-box__bottom-link">
+            <a href="/sign-in"><i class="fa fa-sign-in fa-lg"></i> Войти</a>
+          </div>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
