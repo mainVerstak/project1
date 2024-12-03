@@ -1,3 +1,15 @@
+.btn-phone-floating .icon-default {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+.btn-phone-floating .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
 .extendedEntity {
   /* Icons */
   /* Buttons */
@@ -34,6 +46,10 @@
   width: 14px;
   height: 14px;
   fill: currentColor;
+}
+.extendedEntity .icon-stroke {
+  stroke: currentColor;
+  fill: none;
 }
 .extendedEntity .icon-info {
   width: 12px;
@@ -272,9 +288,11 @@
   background-color: #f5f5f5;
 }
 .extendedEntity .btn-favorite-icon svg {
-  fill: #777777;
+  stroke: #777777;
+  fill: none;
 }
 .extendedEntity .btn-favorite-icon.active svg {
+  stroke: none;
   fill: #333333;
 }
 .extendedEntity .btn-social-icon > :first-child {
@@ -286,6 +304,10 @@
   display: flex;
   gap: 5px;
   align-items: center;
+}
+.extendedEntity .label-default {
+  display: inline-block;
+  margin: 0 0 5px 0;
 }
 .extendedEntity .main-breadcrumbs.breadcrumb li.small {
   font-size: 14px;

@@ -298,7 +298,7 @@
                     title="Добавить в избранное"
                     type="submit"
                   >
-                    <svg class="icon-default">
+                    <svg class="icon-default icon-stroke">
                       <use xlink:href="./img/new-icons.svg#favorite"></use>
                     </svg></button
                   ><input
@@ -307,13 +307,20 @@
                     value="kC8cZLEObkyXvBjj6LWZmngkXmb09tJi99EM9y+q9sRmNIcH4COHJIQoN4z9UUqEpWGLdFGqFt2uFLlRhnPOaA=="
                   />
                 </form>
-                <!-- TODO: add script to toggle active class -->
+                <!-- TODO: add script to toggle active class and change icon -->
                 <script>
                   const favoriteBtn =
                     document.querySelector(".btn-favorite-icon");
                   favoriteBtn.addEventListener("click", (e) => {
                     e.preventDefault();
                     favoriteBtn.classList.toggle("active");
+                    if (favoriteBtn.classList.contains("active")) {
+                      favoriteBtn.innerHTML =
+                        '<svg class="icon-default"><use xlink:href="./img/new-icons.svg#favorite-fill"></use></svg>';
+                    } else {
+                      favoriteBtn.innerHTML =
+                        '<svg class="icon-default icon-stroke"><use xlink:href="./img/new-icons.svg#favorite"></use></svg>';
+                    }
                   });
                 </script>
               </span>
@@ -1437,17 +1444,23 @@
                       data-label="Подтверждающие документы"
                     >
                       <div class="table-mortgage__item-inner">
-                        <!-- <i
-                        class="fas fa-info-circle fa-lg table-mortgage__btn-popover"
-                        data-content="НДФЛ-2<br>Справка по форме банка"
-                        data-html="true"
-                        data-placement="bottom"
-                      ></i> -->
                         <span class="table-mortgage__btn-popover">
                           <svg class="icon-info">
                             <use xlink:href="./img/new-icons.svg#info"></use>
                           </svg>
                         </span>
+                        <div
+                          class="popover fade bottom in"
+                          role="tooltip"
+                          id="popover268041"
+                          style="top: 64.3px; left: 690.933px; display: block"
+                        >
+                          <div class="arrow" style="left: 50%"></div>
+                          <h3 class="popover-title" style="display: none"></h3>
+                          <div class="popover-content">
+                            НДФЛ-2<br />Справка по форме банка
+                          </div>
+                        </div>
                         Да
                       </div>
                     </div>

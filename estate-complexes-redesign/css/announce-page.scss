@@ -29,6 +29,10 @@
     height: 14px;
     fill: currentColor;
   }
+  .icon-stroke {
+    stroke: currentColor;
+    fill: none;
+  }
   .icon-info {
     width: 12px;
     height: 12px;
@@ -277,9 +281,11 @@
     background-color: $color-grey-superlight;
   }
   .btn-favorite-icon svg {
-    fill: $color-grey-text;
+    stroke: $color-grey-text;
+    fill: none;
   }
   .btn-favorite-icon.active svg {
+    stroke: none;
     fill: $color-grey-dark;
   }
   .btn-social-icon > :first-child {
@@ -291,6 +297,11 @@
     display: flex;
     gap: 5px;
     align-items: center;
+  }
+
+  .label-default {
+    display: inline-block;
+    margin: 0 0 5px 0;
   }
 
   // Breadcrumbs

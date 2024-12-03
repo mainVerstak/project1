@@ -17,3 +17,18 @@ $color-white: #ffffff;
 $border-radius: 5px;
 $border-radius-big: 10px;
 $padding-btn-small: 6px 10px;
+
+.btn-phone-floating {
+  .icon-default {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+}
