@@ -152,6 +152,7 @@
 .extendedEntity .apartment-top-container .btn-primary,
 .extendedEntity .ds-social .btn-primary {
   background-color: #084c95;
+  color: #ffffff;
   border-radius: 5px;
   background-image: none;
   border: none;
@@ -159,6 +160,7 @@
 .extendedEntity .apartment-top-container .btn-primary:hover,
 .extendedEntity .ds-social .btn-primary:hover {
   background-color: #07386c;
+  color: #ffffff;
 }
 .extendedEntity .apartment-top-container .btn-primary:focus,
 .extendedEntity .ds-social .btn-primary:focus {
@@ -169,6 +171,7 @@
 .extendedEntity .ds-social .btn-info {
   background-color: #084c95;
   border-radius: 5px;
+  color: #ffffff;
   background-image: none;
   border: none;
   text-shadow: none;
@@ -178,6 +181,7 @@
 .extendedEntity .apartment-top-container .btn-info:hover,
 .extendedEntity .ds-social .btn-info:hover {
   background-color: #07386c;
+  color: #ffffff;
 }
 .extendedEntity .apartment-top-container .btn-info:focus,
 .extendedEntity .ds-social .btn-info:focus {
