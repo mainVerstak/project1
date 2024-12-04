@@ -15,10 +15,6 @@
   /* Buttons */
   /* Slider big */
   /* Mortgage */
-  /* .calc-mortgage__result {
-    width: 100%;
-    justify-content: center;
-  } */
 }
 .extendedEntity .apartment-top-container a,
 .extendedEntity .main-breadcrumbs.breadcrumb a {
@@ -71,7 +67,7 @@
   align-items: center;
   gap: 5px;
 }
-.extendedEntity #banki-ru-widget.mortgage-container .btn,
+.extendedEntity #banki-ru-widget .btn,
 .extendedEntity .apartment-top-container .btn,
 .extendedEntity .ds-social .btn {
   text-shadow: none;
@@ -87,43 +83,7 @@
   gap: 5px;
   height: 32px !important;
 }
-.extendedEntity .apartment-top-container .btn-danger,
-.extendedEntity .ds-social .btn-danger {
-  background-color: #d9534f;
-  border-color: #d9534f;
-  background-image: none;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.extendedEntity .btn-default:active,
-.extendedEntity .btn-default.active,
-.extendedEntity .btn-primary:active,
-.extendedEntity .btn-primary.active,
-.extendedEntity .btn-success:active,
-.extendedEntity .btn-success.active,
-.extendedEntity .btn-info:active,
-.extendedEntity .btn-info.active,
-.extendedEntity .btn-warning:active,
-.extendedEntity .btn-warning.active,
-.extendedEntity .btn-danger:active,
-.extendedEntity .btn-danger.active {
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.extendedEntity .apartment-top-container .btn-xs,
-.extendedEntity .ds-social .btn-xs {
-  padding: 6px 10px;
-  font-size: 14px;
-  height: 32px !important;
-  line-height: 1.42857143;
-}
-.extendedEntity .apartment-top-container .btn-group-xs > .btn,
-.extendedEntity .ds-social .btn-group-xs > .btn {
-  line-height: 1.42857143;
-}
-.extendedEntity #banki-ru-widget.mortgage-container .btn-default,
+.extendedEntity #banki-ru-widget .btn-default,
 .extendedEntity .apartment-top-container .btn-default,
 .extendedEntity .ds-social .btn-default {
   background-image: none;
@@ -136,34 +96,42 @@
   font-weight: 500;
   line-height: 1.42857143;
 }
+.extendedEntity #banki-ru-widget .btn-default:hover,
 .extendedEntity .apartment-top-container .btn-default:hover,
 .extendedEntity .ds-social .btn-default:hover {
   background-color: #f5f5f5;
   border: 1px solid #e6e6e6;
   color: #333333;
 }
+.extendedEntity #banki-ru-widget .btn-default.active,
 .extendedEntity .apartment-top-container .btn-default.active,
 .extendedEntity .ds-social .btn-default.active {
   background-color: #e6e6e6;
   border: 1px solid #e6e6e6;
   color: #333333;
 }
+.extendedEntity #banki-ru-widget .btn-default.active:hover,
 .extendedEntity .apartment-top-container .btn-default.active:hover,
 .extendedEntity .ds-social .btn-default.active:hover {
   border: 1px solid #e6e6e6;
   color: #333333;
 }
+.extendedEntity #banki-ru-widget .btn-default:focus,
 .extendedEntity .apartment-top-container .btn-default:focus,
 .extendedEntity .ds-social .btn-default:focus {
   box-shadow: none;
   border: 1px solid #333333;
 }
-.extendedEntity #banki-ru-widget .btn-styled-new2 {
-  background-color: #084c95;
-  color: #ffffff;
+.extendedEntity .apartment-top-container .btn-xs,
+.extendedEntity .ds-social .btn-xs {
+  padding: 6px 10px;
+  font-size: 14px;
+  height: 32px !important;
+  line-height: 1.42857143;
 }
-.extendedEntity #banki-ru-widget .btn-styled-new2:hover {
-  background-color: #07386c;
+.extendedEntity .apartment-top-container .btn-group-xs > .btn,
+.extendedEntity .ds-social .btn-group-xs > .btn {
+  line-height: 1.42857143;
 }
 .extendedEntity .apartment-top-container .btn-primary,
 .extendedEntity .ds-social .btn-primary {
@@ -182,6 +150,15 @@
 .extendedEntity .ds-social .btn-primary:focus {
   background-color: #07386c;
   border: 1px solid #333333;
+}
+.extendedEntity .apartment-top-container .btn-danger,
+.extendedEntity .ds-social .btn-danger {
+  background-color: #d9534f;
+  border-color: #d9534f;
+  background-image: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .extendedEntity .apartment-top-container .btn-info,
 .extendedEntity .ds-social .btn-info {
@@ -228,6 +205,22 @@
   background-color: #d39235;
   text-decoration: none;
 }
+.extendedEntity .btn-default:active,
+.extendedEntity .btn-default.active,
+.extendedEntity .btn-primary:active,
+.extendedEntity .btn-primary.active,
+.extendedEntity .btn-success:active,
+.extendedEntity .btn-success.active,
+.extendedEntity .btn-info:active,
+.extendedEntity .btn-info.active,
+.extendedEntity .btn-warning:active,
+.extendedEntity .btn-warning.active,
+.extendedEntity .btn-danger:active,
+.extendedEntity .btn-danger.active {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .extendedEntity .ds-annouce-info .small.text-muted {
   color: #333333;
   font-size: 14px;
@@ -252,6 +245,7 @@
 }
 .extendedEntity .panel-body-adv-block {
   display: flex;
+  align-items: center;
   gap: 3px;
 }
 .extendedEntity .ds-social {
@@ -292,7 +286,7 @@
   fill: none;
 }
 .extendedEntity .btn-favorite-icon.active svg {
-  stroke: none;
+  stroke: #333333;
   fill: #333333;
 }
 .extendedEntity .btn-social-icon > :first-child {
@@ -344,6 +338,19 @@
     top: 0;
   }
 }
+.extendedEntity #banki-ru-widget {
+  /* .calc-mortgage__result {
+    width: 100%;
+    justify-content: center;
+  } */
+}
+.extendedEntity #banki-ru-widget .btn-styled-new2 {
+  background-color: #084c95;
+  color: #ffffff;
+}
+.extendedEntity #banki-ru-widget .btn-styled-new2:hover {
+  background-color: #07386c;
+}
 .extendedEntity #banki-ru-widget .calc-mortgage__input input {
   height: 32px;
   letter-spacing: unset;
@@ -357,7 +364,7 @@
 .extendedEntity #banki-ru-widget .calc-mortgage .rangeslider--horizontal {
   margin: 10px 0;
 }
-.extendedEntity #banki-ru-widget.mortgage-container {
+.extendedEntity #banki-ru-widget .mortgage-container {
   margin: 0 15px;
 }
 .extendedEntity #banki-ru-widget .mortgage-calc-blok {
