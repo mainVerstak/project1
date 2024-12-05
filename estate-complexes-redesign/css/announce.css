@@ -393,11 +393,11 @@
   color: #777777;
   gap: 10px;
 }
-.object .object__status-hot {
+.object .object__status .label.label-danger {
   font-size: 14px;
   color: #ffffff;
   background-color: #d9534f;
-  padding: 5px 10px;
+  padding: 6px 10px;
   border-radius: 5px;
   width: auto;
   font-weight: 500;
@@ -405,6 +405,7 @@
   gap: 5px;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 .object .object__owner-name {
   display: flex;

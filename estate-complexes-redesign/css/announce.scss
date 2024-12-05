@@ -351,11 +351,11 @@
     gap: 10px;
   }
 
-  .object__status-hot {
+  .object__status .label.label-danger {
     font-size: 14px;
     color: $color-white;
     background-color: $color-red;
-    padding: 5px 10px;
+    padding: 6px 10px;
     border-radius: 5px;
     width: auto;
     font-weight: 500;
@@ -363,6 +363,7 @@
     gap: 5px;
     align-items: center;
     justify-content: center;
+    margin: 0;
   }
 
   .object__owner-name {
