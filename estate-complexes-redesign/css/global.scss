@@ -18,6 +18,47 @@ $border-radius: 5px;
 $border-radius-big: 10px;
 $padding-btn-small: 6px 10px;
 
+/* Icons */
+.icon-map-small {
+  width: 12px;
+  height: 14px;
+  fill: currentColor;
+}
+.icon-caret-default {
+  width: 10px;
+  height: 6px;
+  fill: currentColor;
+}
+.icon-default {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+.icon-stroke {
+  stroke: currentColor;
+  fill: none;
+}
+.icon-info {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+.icon-big {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+.icon-breadcrumbs {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+.center-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .btn-phone-floating {
   .icon-default {
     width: 14px;

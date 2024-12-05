@@ -265,8 +265,7 @@
     fill: none;
   }
   .btn-favorite-icon.active svg {
-    stroke: $color-grey-dark;
-    fill: $color-grey-dark;
+    fill: $color-grey-text;
   }
   .btn-social-icon > :first-child {
     position: static;
@@ -300,8 +299,8 @@
   .apartment-gallery .fotorama__thumb-border {
     border-color: $color-blue;
     border-radius: $border-radius;
-    height: 62px !important;
-    width: 62px !important;
+    height: 62px;
+    width: 62px;
   }
   .apartment-desc {
     background-color: $color-grey-superlight;

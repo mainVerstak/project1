@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/tabs.css" />
     <link rel="stylesheet" href="css/new.css" />
-    <link rel="stylesheet" href="css/redesign.css" />
+    <!-- <link rel="stylesheet" href="css/redesign.css" /> -->
+    <link rel="stylesheet" href="css/announce.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -162,7 +163,9 @@
                   <li class="dropdown nav notepads_block_action">
                     <a href="https://olan.ru/notepads" title="Избранные"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#favorite"></use>
+                        <use
+                          xlink:href="./img/new-icons.svg#favorite-fill"
+                        ></use>
                       </svg>
                       <span class="hidden-sm hidden-lg hidden-md">
                         Избранные</span
@@ -325,6 +328,7 @@
       </div>
     </header>
     <div class="container">
+      <!-- TODO: Refactor into yuor project, this block for example -->
       <div class="search-result-preview">
         <div class="row js-search-result-counter">
           <div class="col-xs-7">
@@ -570,20 +574,17 @@
           <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
             <span class="notepad_action"
               ><button
-                class="ShowAdvNotepadAction object__actions-item"
+                class="ShowAdvNotepadAction object__actions-item active"
                 data-id="118952813"
                 title="Добавить в избранное"
                 type="button"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#favorite"></use>
+                  <use xlink:href="./img/new-icons.svg#favorite-fill"></use>
                 </svg>
               </button>
             </span>
           </div>
-        </li>
-        <li class="media clearfix object object_even">
-          <div class="row"><div class="col-lg-12"></div></div>
         </li>
         <li class="media clearfix object" element_id="115711054">
           <div class="col-lg-5 col-md-4 col-sm-4">
