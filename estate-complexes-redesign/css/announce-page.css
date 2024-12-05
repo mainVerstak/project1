@@ -232,7 +232,7 @@
 }
 .extendedEntity .panel-body-adv-block noindex {
   display: flex;
-  gap: 3px;
+  gap: 4px;
 }
 .extendedEntity .apartment-top-container .panel-body-adv-block a i,
 .extendedEntity .ds-social .panel-body-adv-block a i {
@@ -243,15 +243,10 @@
   display: flex;
   gap: 3px;
 }
-.extendedEntity .panel-body-adv-block {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
 .extendedEntity .ds-social {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 4px;
 }
 .extendedEntity .ds-social .btn-social-icon > :first-child {
   font-size: 14px;
@@ -265,7 +260,11 @@
   justify-content: center;
 }
 .extendedEntity .ds-social .panel-body-adv-block {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   flex-wrap: wrap;
+  margin-bottom: 0;
 }
 .extendedEntity .panel-body-adv-block .btn-favorite-icon {
   display: flex;

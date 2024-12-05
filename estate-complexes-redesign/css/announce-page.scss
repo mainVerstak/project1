@@ -210,7 +210,7 @@
 
   .panel-body-adv-block noindex {
     display: flex;
-    gap: 3px;
+    gap: 4px;
   }
   .apartment-top-container .panel-body-adv-block a i,
   .ds-social .panel-body-adv-block a i {
@@ -221,16 +221,11 @@
     display: flex;
     gap: 3px;
   }
-  .panel-body-adv-block {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-  }
 
   .ds-social {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 4px;
   }
   .ds-social .btn-social-icon > :first-child {
     font-size: 14px;
@@ -244,7 +239,11 @@
     justify-content: center;
   }
   .ds-social .panel-body-adv-block {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   .panel-body-adv-block .btn-favorite-icon {
