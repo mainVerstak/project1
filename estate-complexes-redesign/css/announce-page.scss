@@ -587,6 +587,14 @@
       border: 1px solid $color-border;
       color: $color-grey-dark;
     }
+
+    @media only screen and (max-width: 991px) {
+      .table-mortgage-show {
+        margin-right: unset;
+        margin-left: unset;
+      }
+    }
+
     .table-mortgage__btn-popover {
       padding: $padding-btn-small;
       border-radius: $border-radius;
