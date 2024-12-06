@@ -43,6 +43,28 @@
     <script src="js/script.js"></script>
     <script src="js/y-map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <style>
+      .btn-phone-floating {
+        display: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        .btn-phone-floating {
+          display: flex;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+          transition: 0.4s;
+          padding: 0 16px 20px;
+          width: 100%;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -285,86 +307,106 @@
         <div class="row" element_id="132654251">
           <!-- TODO: many changes, recommended to copy separate button, bloks and paste into your project -->
           <div class="col-xs-12 col-lg-12 ds-social">
-            <span class="panel-body-adv-block"
-              ><span class="notepad_action">
-                <form
-                  class="withoutBootstrapValidator"
-                  method="post"
-                  action="/notepads?id=135769970&amp;notepad=true"
-                  data-remote="true"
-                >
-                  <!-- TODO: add new class .btn-favorite-icon and change icon to svg-->
-                  <button
-                    class="object__actions-item btn-favorite-icon"
-                    title="Добавить в избранное"
-                    type="submit"
+            <span class="panel-body-adv-block__scroll-x">
+              <span class="panel-body-adv-block"
+                ><span class="notepad_action">
+                  <form
+                    class="withoutBootstrapValidator"
+                    method="post"
+                    action="/notepads?id=135769970&amp;notepad=true"
+                    data-remote="true"
                   >
-                    <svg class="icon-default icon-stroke">
-                      <use xlink:href="./img/new-icons.svg#favorite"></use>
-                    </svg></button
-                  ><input
-                    type="hidden"
-                    name="authenticity_token"
-                    value="kC8cZLEObkyXvBjj6LWZmngkXmb09tJi99EM9y+q9sRmNIcH4COHJIQoN4z9UUqEpWGLdFGqFt2uFLlRhnPOaA=="
-                  />
-                </form>
-                <!-- TODO: add script to toggle active class and change icon -->
-                <script>
-                  const favoriteBtn =
-                    document.querySelector(".btn-favorite-icon");
-                  favoriteBtn.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    favoriteBtn.classList.toggle("active");
-                    if (favoriteBtn.classList.contains("active")) {
-                      favoriteBtn.innerHTML =
-                        '<svg class="icon-default"><use xlink:href="./img/new-icons.svg#favorite-fill"></use></svg>';
-                    } else {
-                      favoriteBtn.innerHTML =
-                        '<svg class="icon-default icon-stroke"><use xlink:href="./img/new-icons.svg#favorite"></use></svg>';
-                    }
-                  });
-                </script>
+                    <!-- TODO: add new class .btn-favorite-icon and change icon to svg-->
+                    <button
+                      class="object__actions-item btn-favorite-icon"
+                      title="Добавить в избранное"
+                      type="submit"
+                    >
+                      <svg class="icon-default icon-stroke">
+                        <use xlink:href="./img/new-icons.svg#favorite"></use>
+                      </svg></button
+                    ><input
+                      type="hidden"
+                      name="authenticity_token"
+                      value="kC8cZLEObkyXvBjj6LWZmngkXmb09tJi99EM9y+q9sRmNIcH4COHJIQoN4z9UUqEpWGLdFGqFt2uFLlRhnPOaA=="
+                    />
+                  </form>
+                  <!-- TODO: add script to toggle active class and change icon -->
+                  <script>
+                    const favoriteBtn =
+                      document.querySelector(".btn-favorite-icon");
+                    favoriteBtn.addEventListener("click", (e) => {
+                      e.preventDefault();
+                      favoriteBtn.classList.toggle("active");
+                      if (favoriteBtn.classList.contains("active")) {
+                        favoriteBtn.innerHTML =
+                          '<svg class="icon-default"><use xlink:href="./img/new-icons.svg#favorite-fill"></use></svg>';
+                      } else {
+                        favoriteBtn.innerHTML =
+                          '<svg class="icon-default icon-stroke"><use xlink:href="./img/new-icons.svg#favorite"></use></svg>';
+                      }
+                    });
+                  </script>
+                </span>
               </span>
-            </span>
-            <span class="panel-body-adv-block"
-              ><noindex
-                ><a
-                  class="btn btn-primary btn-social-icon btn-vk yaSend btn-sx"
-                  href="https://vk.com/share.php?url=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4&amp;title=Продам трехкомнатную квартиру в новостройке на улице Крымской весны 1 микрорайон «Жигулина роща» в селе Мирном в районе Симферопольском корп. 4 73.0 м² этаж 8/14 11303600 руб база Олан ру объявление 132654251&amp;image=https://i4.olan.ru/system/photos/entity/001/248/006/227/thumb/img.jpg?1729595132"
-                  rel="nofollow"
-                  target="_blank"
-                  title="Поделиться в Vk"
-                  yaparam="vk_share"
-                >
-                  <svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#vk"></use>
-                  </svg>
-                </a>
+              <span class="panel-body-adv-block"
+                ><noindex
+                  ><a
+                    class="btn btn-primary btn-social-icon btn-vk yaSend btn-sx"
+                    href="https://vk.com/share.php?url=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4&amp;title=Продам трехкомнатную квартиру в новостройке на улице Крымской весны 1 микрорайон «Жигулина роща» в селе Мирном в районе Симферопольском корп. 4 73.0 м² этаж 8/14 11303600 руб база Олан ру объявление 132654251&amp;image=https://i4.olan.ru/system/photos/entity/001/248/006/227/thumb/img.jpg?1729595132"
+                    rel="nofollow"
+                    target="_blank"
+                    title="Поделиться в Vk"
+                    yaparam="vk_share"
+                  >
+                    <svg class="icon-default">
+                      <use xlink:href="./img/new-icons.svg#vk"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="btn btn-warning btn-social-icon btn-odnoklassniki yaSend btn-sx"
+                    href="https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&amp;st.shareUrl=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4"
+                    rel="nofollow"
+                    target="_blank"
+                    title="Поделиться в Ok"
+                    yaparam="ok_share"
+                  >
+                    <svg class="icon-default">
+                      <use xlink:href="./img/new-icons.svg#ok"></use>
+                    </svg>
+                  </a>
+                </noindex>
+              </span>
+              <span class="panel-body-adv-block"
+                ><script>
+                  //<![CDATA[
+                  require(["application_module"], function () {
+                    require(["validation_module"]);
+                  });
+                  //]]>
+                </script>
                 <a
-                  class="btn btn-warning btn-social-icon btn-odnoklassniki yaSend btn-sx"
-                  href="https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&amp;st.shareUrl=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4"
+                  class="open_remote_url_action abuse_popover_action yaSend btn btn-default btn-xs"
+                  data-url="/abuses/132654251"
+                  href="#"
                   rel="nofollow"
-                  target="_blank"
-                  title="Поделиться в Ok"
-                  yaparam="ok_share"
-                >
-                  <svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#ok"></use>
+                  type="button"
+                  yaparam="abuse_open"
+                  ><svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#cancel"></use>
                   </svg>
-                </a>
-              </noindex>
-              <a
-                class="open_remote_url_action abuse_popover_action yaSend btn btn-default btn-xs"
-                data-url="/abuses/132654251"
-                href="#"
-                rel="nofollow"
-                type="button"
-                yaparam="abuse_open"
-                ><svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#cancel"></use>
-                </svg>
-                Пожаловаться</a
-              >
+                  Пожаловаться</a
+                >
+                <a
+                  class="open_url_action btn btn-default btn-xs"
+                  data-url="/call-access-new?advertisement_id=132654251"
+                  href="#"
+                  ><svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#paint"></use>
+                  </svg>
+                  Редактировать</a
+                >
+              </span>
             </span>
             <span class="panel-body-adv-block"
               ><script>
@@ -374,15 +416,6 @@
                 });
                 //]]>
               </script>
-              <a
-                class="open_url_action btn btn-default btn-xs"
-                data-url="/call-access-new?advertisement_id=132654251"
-                href="#"
-                ><svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#paint"></use>
-                </svg>
-                Редактировать</a
-              >
               <a
                 class="open_url_action btn btn-default btn-xs"
                 data-url="/call-access-new?advertisement_id=132654251"
@@ -392,15 +425,6 @@
                 </svg>
                 Удалить</a
               >
-            </span>
-            <span class="panel-body-adv-block"
-              ><script>
-                //<![CDATA[
-                require(["application_module"], function () {
-                  require(["validation_module"]);
-                });
-                //]]>
-              </script>
               <a
                 class="open_url_action yaSend btn btn-danger btn-xs"
                 data-url="/abuses/132654251"
@@ -2120,6 +2144,23 @@
           </footer>
         </div>
       </footer>
+    </div>
+    <div class="btn-phone-floating">
+      <script>
+        //<![CDATA[
+        require(["application_module"], function () {
+          require(["adv_show_module"]);
+        });
+        //]]>
+      </script>
+      <button
+        class="btn btn-info js-floating-mobile-phone-block-required ShowAdvPhoneAction btn-phone-floating__btn"
+        data-id="132137639"
+        style="width: 100%"
+      >
+        <svg class="icon-default"><use xlink:href="#phone"></use></svg>
+        Показать телефон
+      </button>
     </div>
   </body>
 </html>

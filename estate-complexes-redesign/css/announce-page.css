@@ -57,6 +57,29 @@
   justify-content: center;
   gap: 5px;
 }
+.btn-phone-floating .btn-info {
+  background-color: #084c95;
+  border-radius: 5px;
+  color: #ffffff;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-phone-floating .btn-info:hover {
+  background-color: #07386c;
+  color: #ffffff;
+}
+.btn-phone-floating .btn-info:focus {
+  background-color: #07386c;
+}
+.btn-phone-floating .btn-info:active {
+  background-color: #07386c;
+}
+.btn-phone-floating .btn-info:active:hover {
+  background-color: #07386c;
+}
 
 .extendedEntity {
   /* Icons */
@@ -311,6 +334,26 @@
 }
 .extendedEntity .ds-social .btn-social-icon > :first-child {
   font-size: 14px;
+}
+.extendedEntity .panel-body-adv-block__scroll-x {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+@media screen and (max-width: 767px) {
+  .extendedEntity .panel-body-adv-block__scroll-x {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .extendedEntity .panel-body-adv-block__scroll-x .panel-body-adv-block {
+    flex-wrap: nowrap !important;
+  }
+  .extendedEntity .panel-body-adv-block__scroll-x::-webkit-scrollbar {
+    display: none;
+  }
 }
 .extendedEntity .ds-social .btn-social-icon {
   height: 32px;
@@ -582,16 +625,17 @@
 .extendedEntity #banki-ru-widget .table-mortgage-btn {
   padding: 6px 10px;
   border-radius: 5px;
-  border: none;
-  background-color: #084c95;
-  color: #ffffff;
+  border: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  color: #777777;
   height: 37px;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
 }
 .extendedEntity #banki-ru-widget .table-mortgage-btn:hover {
-  background-color: #07386c;
+  background-color: #f5f5f5;
+  color: #333333;
 }
 .extendedEntity #banki-ru-widget .table-mortgage-show {
   padding: 6px 10px;
@@ -628,11 +672,17 @@
   color: #333333;
 }
 .extendedEntity #banki-ru-widget .calc-mortgage__mobile-btn button {
-  background-color: #084c95;
+  background-color: #ffffff;
+  color: #777777;
+  border: 1px solid #e6e6e6;
   font-size: 16px;
 }
 .extendedEntity #banki-ru-widget .calc-mortgage__mobile-btn button:hover {
-  background-color: #07386c;
+  background-color: #f5f5f5;
+  color: #333333;
+}
+.extendedEntity #banki-ru-widget .calc-mortgage__mobile-btn .btn svg {
+  fill: currentColor;
 }
 @media only screen and (max-width: 991px) {
   .extendedEntity #banki-ru-widget .calc-mortgage__popup {

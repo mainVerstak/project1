@@ -72,4 +72,28 @@ $padding-btn-small: 6px 10px;
     justify-content: center;
     gap: 5px;
   }
+
+  .btn-info {
+    background-color: $color-blue;
+    border-radius: $border-radius;
+    color: $color-white;
+    background-image: none;
+    border: none;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .btn-info:hover {
+    background-color: $color-blue-hover;
+    color: $color-white;
+  }
+  .btn-info:focus {
+    background-color: $color-blue-hover;
+  }
+  .btn-info:active {
+    background-color: $color-blue-hover;
+  }
+  .btn-info:active:hover {
+    background-color: $color-blue-hover;
+  }
 }
