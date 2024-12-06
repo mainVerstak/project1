@@ -278,6 +278,11 @@
   color: #333333;
   font-size: 14px;
 }
+.extendedEntity .ds-annouce-info .panel-body-adv-block .label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
 .extendedEntity .ds-annouce-info .label {
   display: inline-block;
   align-items: center;

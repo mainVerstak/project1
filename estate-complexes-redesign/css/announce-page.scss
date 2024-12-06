@@ -209,6 +209,11 @@
       color: $color-grey-dark;
       font-size: 14px;
     }
+    .panel-body-adv-block .label {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
     .label {
       display: inline-block;
       align-items: center;
