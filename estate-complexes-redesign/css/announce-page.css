@@ -269,14 +269,22 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.extendedEntity .ds-annouce-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
 .extendedEntity .ds-annouce-info .small.text-muted {
   color: #333333;
   font-size: 14px;
 }
-.extendedEntity .ds-annouce-info .panel-body-adv-block .label {
-  display: flex;
+.extendedEntity .ds-annouce-info .label {
+  display: inline-block;
   align-items: center;
+  align-content: center;
   gap: 3px;
+  height: 20px;
+  padding: 0.3em 0.6em 0.3em;
 }
 .extendedEntity .panel-body-adv-block noindex {
   display: flex;
@@ -356,10 +364,10 @@
   border-radius: 5px;
   background-color: #ffffff;
 }
-.extendedEntity .apartment-gallery .apartment-gallery .fotorama__thumb {
+.extendedEntity .apartment-gallery .fotorama__thumb {
   border-radius: 5px;
 }
-.extendedEntity .apartment-gallery .apartment-gallery .fotorama__thumb-border {
+.extendedEntity .apartment-gallery .fotorama__thumb-border {
   border-color: #084c95;
   border-radius: 5px;
   height: 62px;

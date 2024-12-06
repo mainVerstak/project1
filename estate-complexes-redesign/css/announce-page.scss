@@ -198,14 +198,25 @@
     box-shadow: none;
   }
 
-  .ds-annouce-info .small.text-muted {
-    color: $color-grey-dark;
-    font-size: 14px;
-  }
-  .ds-annouce-info .panel-body-adv-block .label {
+  .ds-annouce-info {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 3px;
+  }
+
+  .ds-annouce-info {
+    .small.text-muted {
+      color: $color-grey-dark;
+      font-size: 14px;
+    }
+    .label {
+      display: inline-block;
+      align-items: center;
+      align-content: center;
+      gap: 3px;
+      height: 20px;
+      padding: 0.3em 0.6em 0.3em;
+    }
   }
 
   .panel-body-adv-block noindex {
@@ -294,10 +305,10 @@
       border-radius: $border-radius;
       background-color: $color-white;
     }
-    .apartment-gallery .fotorama__thumb {
+    .fotorama__thumb {
       border-radius: $border-radius;
     }
-    .apartment-gallery .fotorama__thumb-border {
+    .fotorama__thumb-border {
       border-color: $color-blue;
       border-radius: $border-radius;
       height: 62px;
