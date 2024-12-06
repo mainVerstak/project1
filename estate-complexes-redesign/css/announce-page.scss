@@ -289,22 +289,32 @@
   }
 
   /* Slider big */
-  .apartment-gallery .fotorama__stage {
-    border-radius: $border-radius;
-    background-color: $color-white;
-  }
-  .apartment-gallery .fotorama__thumb {
-    border-radius: $border-radius;
-  }
-  .apartment-gallery .fotorama__thumb-border {
-    border-color: $color-blue;
-    border-radius: $border-radius;
-    height: 62px;
-    width: 62px;
+  .apartment-gallery {
+    .fotorama__stage {
+      border-radius: $border-radius;
+      background-color: $color-white;
+    }
+    .apartment-gallery .fotorama__thumb {
+      border-radius: $border-radius;
+    }
+    .apartment-gallery .fotorama__thumb-border {
+      border-color: $color-blue;
+      border-radius: $border-radius;
+      height: 62px;
+      width: 62px;
+    }
+    @media screen and (min-width: 1199px) {
+      .gallery,
+      .gallery-with-nav-thumbs {
+        position: sticky;
+        top: 0;
+      }
+    }
   }
   .apartment-desc {
     background-color: $color-grey-superlight;
     border-radius: $border-radius;
+    margin-bottom: 10px;
   }
   .apartment-desc__owner {
     color: $color-grey-text;
@@ -315,14 +325,29 @@
   .apartment-desc__item a {
     font-weight: 500;
   }
-  @media screen and (min-width: 1199px) {
-    .gallery-with-nav-thumbs {
-      position: sticky;
-      top: 0;
+
+  /* Mortgage */
+  #banki-ru-widget {
+    padding: 0 15px;
+  }
+
+  #banki-ru-widget .col-xs-12.col-lg-12:first-child {
+    margin-top: 15px;
+    background-color: $color-grey-superlight;
+    border-radius: $border-radius-big $border-radius-big 0 0;
+    border: 1px solid $color-blue;
+    p {
+      margin: 0;
     }
   }
 
-  /* Mortgage */
+  #banki-ru-widget .col-xs-12.col-lg-12:last-child {
+    border: 1px solid $color-blue;
+    border-top: none;
+    border-radius: 0 0 $border-radius-big $border-radius-big;
+    margin-bottom: 15px;
+  }
+
   #banki-ru-widget {
     .btn-styled-new2 {
       background-color: $color-blue;
@@ -425,6 +450,9 @@
       background: $color-white;
       position: relative;
       margin: 16px 0;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
     }
     .calc-mortgage__result::after,
     .calc-mortgage__result::before {
@@ -459,6 +487,7 @@
     }
     .table-mortgage th {
       line-height: 18px;
+      color: $color-grey-text;
     }
     .table-mortgage-header {
       color: $color-grey-text;

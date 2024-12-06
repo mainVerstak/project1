@@ -356,18 +356,26 @@
   border-radius: 5px;
   background-color: #ffffff;
 }
-.extendedEntity .apartment-gallery .fotorama__thumb {
+.extendedEntity .apartment-gallery .apartment-gallery .fotorama__thumb {
   border-radius: 5px;
 }
-.extendedEntity .apartment-gallery .fotorama__thumb-border {
+.extendedEntity .apartment-gallery .apartment-gallery .fotorama__thumb-border {
   border-color: #084c95;
   border-radius: 5px;
   height: 62px;
   width: 62px;
 }
+@media screen and (min-width: 1199px) {
+  .extendedEntity .apartment-gallery .gallery,
+  .extendedEntity .apartment-gallery .gallery-with-nav-thumbs {
+    position: sticky;
+    top: 0;
+  }
+}
 .extendedEntity .apartment-desc {
   background-color: #f5f5f5;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 .extendedEntity .apartment-desc__owner {
   color: #777777;
@@ -378,11 +386,23 @@
 .extendedEntity .apartment-desc__item a {
   font-weight: 500;
 }
-@media screen and (min-width: 1199px) {
-  .extendedEntity .gallery-with-nav-thumbs {
-    position: sticky;
-    top: 0;
-  }
+.extendedEntity #banki-ru-widget {
+  padding: 0 15px;
+}
+.extendedEntity #banki-ru-widget .col-xs-12.col-lg-12:first-child {
+  margin-top: 15px;
+  background-color: #f5f5f5;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #084c95;
+}
+.extendedEntity #banki-ru-widget .col-xs-12.col-lg-12:first-child p {
+  margin: 0;
+}
+.extendedEntity #banki-ru-widget .col-xs-12.col-lg-12:last-child {
+  border: 1px solid #084c95;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 15px;
 }
 .extendedEntity #banki-ru-widget {
   /* .calc-mortgage__result {
@@ -487,6 +507,9 @@
   background: #ffffff;
   position: relative;
   margin: 16px 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 .extendedEntity #banki-ru-widget .calc-mortgage__result::after,
 .extendedEntity #banki-ru-widget .calc-mortgage__result::before {
@@ -516,6 +539,7 @@
 }
 .extendedEntity #banki-ru-widget .table-mortgage th {
   line-height: 18px;
+  color: #777777;
 }
 .extendedEntity #banki-ru-widget .table-mortgage-header {
   color: #777777;
