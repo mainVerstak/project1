@@ -1,0 +1,110 @@
+@import "global";
+
+.container {
+  border-radius: 0 0 $border-radius-big $border-radius-big;
+}
+.footer {
+  background: $color-grey-background;
+  color: $color-grey-text;
+  padding: 25px 15px 35px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+.footer__nav-item-title {
+  color: $color-grey-dark;
+}
+.footer__nav-link {
+  color: $color-grey-text;
+}
+.footer__nav-link:hover {
+  color: $color-grey-dark;
+}
+.footer__nav-link:focus {
+  color: $color-grey-dark;
+}
+
+.footer__inner {
+  display: flex;
+}
+.footer__left {
+  max-width: 236px;
+  width: 100%;
+  margin-right: 50px;
+}
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.footer__nav-column:first-child {
+  min-width: 250px;
+}
+.footer__nav-column {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.footer__nav-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.footer__nav-item {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer__copy {
+  margin-bottom: 16px;
+}
+.footer__nav-item-title {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer {
+    padding: 12px 15px 50px;
+  }
+  .footer__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .footer__left {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    max-width: 100%;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .footer__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .footer__nav-list {
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 16px;
+  }
+}

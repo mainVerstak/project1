@@ -22,12 +22,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
-    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/_header.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/tabs.css" />
     <link rel="stylesheet" href="css/new.css" />
     <link rel="stylesheet" href="css/mortgage.css" />
     <link rel="stylesheet" href="css/_icons.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/announce-page.css" />
     <link rel="stylesheet" href="css/announce.css" />
     <link rel="stylesheet" href="css/filter.css" />
@@ -67,69 +69,69 @@
     </style>
   </head>
 
-  <body>
-    <div class="container">
-      <header>
-        <div
-          class="header-top-nav header-top-nav_near header-top-mobile-hidden"
-        >
-          <div class="container">
-            <ul class="nav navbar-nav navbar-left">
-              <li>
-                <div class="dropdown header-city">
-                  <div
-                    class="dropdown-toggle header-city-btn"
-                    type="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <svg class="icon-map-small">
-                      <use xlink:href="./img/new-icons.svg#placeholder"></use>
-                    </svg>
-                    Москва
-                    <svg class="icon-default">
-                      <use xlink:href="./img/new-icons.svg#dd"></use>
-                    </svg>
-                  </div>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Москва</a></li>
-                    <li><a href="#">Москва2</a></li>
-                    <li><a href="#">Москва3</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a
-                  class="yaSend"
-                  href="/documents"
-                  yaparam="header_document_click"
+  <body style="background-color: #eeeeee">
+    <header>
+      <div class="header-top-nav header-top-nav_near header-top-mobile-hidden">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
-                  <svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#new"></use>
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/new-icons.svg#placeholder"></use>
                   </svg>
-                  Новостройки
-                </a>
-              </li>
-              <li class="navbar-nav__hide-mobile">
-                <a href="#">
+                  Москва
                   <svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#house"></use>
+                    <use xlink:href="./img/new-icons.svg#dd"></use>
                   </svg>
-                  Коттеджные поселки
-                </a>
-              </li>
-              <li class="navbar-nav__hide-mobile" i>
-                <a href="#">
-                  <i class="fas fa-key icon-default"></i>
-                  Ипотека
-                </a>
-              </li>
-            </ul>
-          </div>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#new"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#mortgage"></use>
+                </svg>
+                Ипотека
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="container">
         <div class="navbar navbar-default">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -228,7 +230,9 @@
                   </li>
                   <li class="sidenav__hide-desktop">
                     <a href="#">
-                      <i class="fas fa-key icon-default"></i>
+                      <svg class="icon-default">
+                        <use xlink:href="./img/new-icons.svg#mortgage"></use>
+                      </svg>
                       Ипотека
                     </a>
                   </li>
@@ -248,12 +252,14 @@
           </div>
         </div>
         <div class="notifications top-right"></div>
-      </header>
-      <h1>
-        Продам трехкомнатную квартиру в новостройке 73.0 м² этаж 8/14 район
-        Симферопольский село Мирное улица Крымской весны 1 микрорайон «Жигулина
-        роща» корп. 4
-      </h1>
+        <h1>
+          Продам трехкомнатную квартиру в новостройке 73.0 м² этаж 8/14 район
+          Симферопольский село Мирное улица Крымской весны 1 микрорайон
+          «Жигулина роща» корп. 4
+        </h1>
+      </div>
+    </header>
+    <div class="container">
       <div class="js-index-form extendedEntity">
         <meta
           content="Продам трехкомнатную квартиру в новостройке 73.0 м² этаж 8/14 район Симферопольский село Мирное улица Крымской весны 1 микрорайон «Жигулина роща» корп. 4"
