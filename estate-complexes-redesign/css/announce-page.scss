@@ -213,7 +213,7 @@
     .label {
       display: inline-block;
       align-content: center;
-      height: 20px;
+      height: 22px;
       padding: 0.3em 0.6em 0.3em;
     }
   }
@@ -314,6 +314,10 @@
   .label-default {
     display: inline-block;
     margin: 0 0 5px 0;
+  }
+
+  .label-info {
+    background-color: $color-blue;
   }
 
   // Breadcrumbs

@@ -306,7 +306,7 @@
 .extendedEntity .ds-annouce-info .label {
   display: inline-block;
   align-content: center;
-  height: 20px;
+  height: 22px;
   padding: 0.3em 0.6em 0.3em;
 }
 .extendedEntity .panel-body-adv-block noindex {
@@ -399,6 +399,9 @@
 .extendedEntity .label-default {
   display: inline-block;
   margin: 0 0 5px 0;
+}
+.extendedEntity .label-info {
+  background-color: #084c95;
 }
 .extendedEntity .main-breadcrumbs.breadcrumb li.small {
   font-size: 14px;
