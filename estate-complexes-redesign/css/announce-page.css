@@ -301,7 +301,10 @@
   align-content: center;
 }
 .extendedEntity .ds-annouce-info .panel-body-adv-block .label svg {
-  vertical-align: middle;
+  vertical-align: text-top;
+}
+.extendedEntity .ds-annouce-info .panel-body-adv-block svg {
+  vertical-align: text-top;
 }
 .extendedEntity .ds-annouce-info .label {
   display: inline-block;

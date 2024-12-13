@@ -208,7 +208,10 @@
       align-content: center;
     }
     .panel-body-adv-block .label svg {
-      vertical-align: middle;
+      vertical-align: text-top;
+    }
+    .panel-body-adv-block svg {
+      vertical-align: text-top;
     }
     .label {
       display: inline-block;
