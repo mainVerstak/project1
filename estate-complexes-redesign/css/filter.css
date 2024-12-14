@@ -1,4 +1,52 @@
 @charset "UTF-8";
+/* Icons */
+.icon-map-small {
+  width: 12px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.icon-caret-default {
+  width: 10px;
+  height: 6px;
+  fill: currentColor;
+}
+
+.icon-default {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.icon-stroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.icon-info {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.icon-big {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.icon-breadcrumbs {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.center-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .btn-phone-floating .icon-default {
   width: 14px;
   height: 14px;
@@ -9,6 +57,29 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+.btn-phone-floating .btn-info {
+  background-color: #084c95;
+  border-radius: 5px;
+  color: #ffffff;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-phone-floating .btn-info:hover {
+  background-color: #07386c;
+  color: #ffffff;
+}
+.btn-phone-floating .btn-info:focus {
+  background-color: #07386c;
+}
+.btn-phone-floating .btn-info:active {
+  background-color: #07386c;
+}
+.btn-phone-floating .btn-info:active:hover {
+  background-color: #07386c;
 }
 
 .searchFormPage,
@@ -460,6 +531,14 @@
   /* Последний элемент */
   /* Предпоследний элемент (не первый и не последний) */
   /* Элемент не первый, не последний и не предпоследний */
+}
+.map_panel label,
+#form_search_locations_modal label,
+#selectCategoryModal label,
+#selectOfferTypeModal label,
+#searchFormModal label,
+.searchFormPage label {
+  vertical-align: middle;
 }
 .map_panel input.form-control,
 #form_search_locations_modal input.form-control,

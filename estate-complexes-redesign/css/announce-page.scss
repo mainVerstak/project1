@@ -203,21 +203,27 @@
       color: $color-grey-dark;
       font-size: 14px;
     }
-    .panel-body-adv-block .label {
-      display: inline-block;
-      align-content: center;
-    }
-    .panel-body-adv-block .label svg {
-      vertical-align: text-top;
+    .panel-body-adv-block {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
     }
     .panel-body-adv-block svg {
-      vertical-align: text-top;
+      align-items: center;
+      height: 12px;
+      width: 12px;
+    }
+    .label.label-default {
+      position: relative;
+      bottom: 2px;
     }
     .label {
-      display: inline-block;
-      align-content: center;
-      height: 22px;
+      height: 20px;
       padding: 0.3em 0.6em 0.3em;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
   }
 

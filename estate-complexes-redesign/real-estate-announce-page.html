@@ -259,6 +259,26 @@
         </h1>
       </div>
     </header>
+
+    <div
+      class="options"
+      style="
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+      "
+    >
+      <div class="options__header">Панель настроек</div>
+      <div class="options__item">
+        <button class="btn">Админ</button>
+        <button class="btn">Пользователь</button>
+        <button class="btn">Гость</button>
+      </div>
+    </div>
+
     <div class="container">
       <div class="js-index-form extendedEntity">
         <meta
@@ -469,49 +489,44 @@
               <!-- закрывем блок со скролом -->
             </span>
             <!-- остальные кнопки не оборачиваем в блок со скролом-->
-            <span class="panel-body-adv-block"
-              ><script>
-                //<![CDATA[
-                require(["application_module"], function () {
-                  require(["validation_module"]);
-                });
-                //]]>
-              </script>
-              <a
-                class="open_url_action btn btn-default btn-xs"
-                data-url="/call-access-new?advertisement_id=132654251"
-                href="#"
-                ><svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#del"></use>
-                </svg>
-                Удалить</a
-              ></span
-            >
-            <span class="panel-body-adv-block">
-              <a
-                class="open_url_action yaSend btn btn-danger btn-xs"
-                data-url="/abuses/132654251"
-                href="#"
-                rel="nofollow"
-                type="button"
-                yaparam="abuse_open"
-                ><svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#hot"></use>
-                </svg>
-                Сделать "Горячим"</a
-              ></span
-            >
-            <span class="panel-body-adv-block">
-              <a
-                class="open_url_action btn btn-primary btn-xs"
-                data-url="/call-access-new?advertisement_id=132654251"
-                href="#"
-                ><svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#top"></use>
-                </svg>
-                Поднять</a
-              ></span
-            >
+            <span class="panel-body-adv-block__scroll-x">
+              <span class="panel-body-adv-block">
+                <a
+                  class="open_url_action yaSend btn btn-danger btn-xs"
+                  data-url="/abuses/132654251"
+                  href="#"
+                  rel="nofollow"
+                  type="button"
+                  yaparam="abuse_open"
+                  ><svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#hot"></use>
+                  </svg>
+                  Сделать "Горячим"</a
+                ></span
+              >
+              <span class="panel-body-adv-block">
+                <a
+                  class="open_url_action btn btn-primary btn-xs"
+                  data-url="/call-access-new?advertisement_id=132654251"
+                  href="#"
+                  ><svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#top"></use>
+                  </svg>
+                  Поднять</a
+                ></span
+              >
+              <span class="panel-body-adv-block">
+                <a
+                  class="open_url_action btn btn-default btn-xs"
+                  data-url="/call-access-new?advertisement_id=132654251"
+                  href="#"
+                  ><svg class="icon-default">
+                    <use xlink:href="./img/new-icons.svg#del"></use>
+                  </svg>
+                  Удалить</a
+                ></span
+              >
+            </span>
             <span class="panel-body-adv-block">
               <a
                 class="btn btn-default btn-xs"
@@ -521,8 +536,7 @@
                 </svg>
                 Заблокировать по фото</a
               >
-            </span>
-            <span class="panel-body-adv-block">
+
               <div class="btn-group">
                 <button
                   aria-expanded="false"
@@ -582,8 +596,6 @@
                   </li>
                 </ul>
               </div>
-            </span>
-            <span class="panel-body-adv-block">
               <a
                 class="open_modal_action btn btn-default btn-xs"
                 href="#"
@@ -592,8 +604,8 @@
                   <use xlink:href="./img/new-icons.svg#cancel"></use>
                 </svg>
                 Заблокировать объявление</a
-              >
-            </span>
+              ></span
+            >
           </div>
         </div>
         <div class="row yandex_content"><div class="col-lg-12"></div></div>

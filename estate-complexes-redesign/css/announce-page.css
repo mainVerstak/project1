@@ -296,21 +296,27 @@
   color: #333333;
   font-size: 14px;
 }
-.extendedEntity .ds-annouce-info .panel-body-adv-block .label {
-  display: inline-block;
-  align-content: center;
-}
-.extendedEntity .ds-annouce-info .panel-body-adv-block .label svg {
-  vertical-align: text-top;
+.extendedEntity .ds-annouce-info .panel-body-adv-block {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
 }
 .extendedEntity .ds-annouce-info .panel-body-adv-block svg {
-  vertical-align: text-top;
+  align-items: center;
+  height: 12px;
+  width: 12px;
+}
+.extendedEntity .ds-annouce-info .label.label-default {
+  position: relative;
+  bottom: 2px;
 }
 .extendedEntity .ds-annouce-info .label {
-  display: inline-block;
-  align-content: center;
-  height: 22px;
+  height: 20px;
   padding: 0.3em 0.6em 0.3em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 .extendedEntity .panel-body-adv-block noindex {
   display: flex;

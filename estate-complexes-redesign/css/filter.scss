@@ -251,6 +251,10 @@
 #selectOfferTypeModal,
 #searchFormModal,
 .searchFormPage {
+  label {
+    vertical-align: middle;
+  }
+
   input.form-control {
     border-radius: $border-radius;
     border: 1px solid $color-border;
