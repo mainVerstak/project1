@@ -66,10 +66,211 @@
           width: 100%;
         }
       }
+
+      .options-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 100%;
+      }
+      .options {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+        z-index: 11;
+      }
+      .options__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .option__close-btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+      .options__active {
+        position: fixed;
+        top: 0;
+        right: 10px;
+        z-index: 10;
+      }
+      .options__active-btn {
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        padding: 0 5px;
+        margin: 0;
+        border-radius: 5px;
+      }
+
+      ._admin {
+        display: none !important;
+      }
+      ._user {
+        display: none !important;
+      }
+      ._guest {
+        display: none !important;
+      }
+      ._admin._on {
+        display: inline-flex !important;
+      }
+      ._user._on {
+        display: inline-flex !important;
+      }
+      ._guest._on {
+        display: inline-flex !important;
+      }
+      ._adm-old._off {
+        display: none !important;
+      }
+      ._adm-blocked._off {
+        display: none !important;
+      }
+      ._adm-notpay._off {
+        display: none !important;
+      }
+      ._adm-draft._off {
+        display: none !important;
+      }
+      ._adm-deleted._off {
+        display: none !important;
+      }
     </style>
   </head>
 
   <body style="background-color: #eeeeee">
+    <div class="options-container">
+      <div class="options__active" style="display: none">
+        <button class="options__active-btn">
+          <svg class="icon-default">
+            <use xlink:href="./img/new-icons.svg#dd"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="options">
+        <div class="options__header">
+          Панель настроек
+          <button class="option__close-btn">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="options__item">
+          <button class="btn _admin-btn">Админ</button>
+          <button class="btn _user-btn">Пользователь</button>
+          <button class="btn _guest-btn">Гость</button>
+        </div>
+        <div class="options__footer" style="margin-top: 10px">
+          <button class="btn" id="_adm-old" title="Устаревшее объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#pause"></use>
+            </svg>
+          </button>
+          <button
+            class="btn"
+            id="_adm-blocked"
+            title="Заблокированное объявление"
+          >
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#cancel"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-notpay" title="Неоплаченное объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#balance"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-draft" title="Черновое объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#paint"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-deleted" title="Удаленное объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+        <script>
+          const options = document.querySelector(".options");
+
+          const optionsActive = document.querySelector(".options__active");
+
+          const adminBtn = document.querySelector("._admin-btn");
+          const userBtn = document.querySelector("._user-btn");
+          const guestBtn = document.querySelector("._guest-btn");
+
+          const optionCloseBtn = document.querySelector(".option__close-btn");
+          const optionActiveBtn = document.querySelector(
+            ".options__active-btn"
+          );
+
+          function toggleOn(className) {
+            const adminEl = document.querySelectorAll("._admin");
+            const userEl = document.querySelectorAll("._user");
+            const guestEl = document.querySelectorAll("._guest");
+
+            adminEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+            userEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+            guestEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+
+            document.querySelectorAll(className).forEach((el) => {
+              el.classList.add("_on");
+            });
+            if (className === "._admin") {
+              document.querySelectorAll("._user").forEach((el) => {
+                el.classList.add("_on");
+              });
+            }
+          }
+
+          adminBtn.addEventListener("click", () => toggleOn("._admin"));
+          userBtn.addEventListener("click", () => toggleOn("._user"));
+          guestBtn.addEventListener("click", () => toggleOn("._guest"));
+
+          optionCloseBtn.addEventListener("click", () => {
+            options.style.display = "none";
+            optionsActive.style.display = "block";
+          });
+
+          optionActiveBtn.addEventListener("click", () => {
+            options.style.display = "block";
+            optionsActive.style.display = "none";
+          });
+
+          $("#_adm-old").click(() => {
+            $("._adm-old").toggleClass("_off");
+          });
+          $("#_adm-blocked").click(() => {
+            $("._adm-blocked").toggleClass("_off");
+          });
+          $("#_adm-notpay").click(() => {
+            $("._adm-notpay").toggleClass("_off");
+          });
+          $("#_adm-draft").click(() => {
+            $("._adm-draft").toggleClass("_off");
+          });
+          $("#_adm-deleted").click(() => {
+            $("._adm-deleted").toggleClass("_off");
+          });
+        </script>
+      </div>
+    </div>
     <header>
       <div class="header-top-nav header-top-nav_near header-top-mobile-hidden">
         <div class="container">
@@ -259,26 +460,6 @@
         </h1>
       </div>
     </header>
-
-    <div
-      class="options"
-      style="
-        position: absolute;
-        top: 100px;
-        right: 0;
-        background-color: #fff;
-        padding: 16px;
-        border-radius: 8px;
-      "
-    >
-      <div class="options__header">Панель настроек</div>
-      <div class="options__item">
-        <button class="btn">Админ</button>
-        <button class="btn">Пользователь</button>
-        <button class="btn">Гость</button>
-      </div>
-    </div>
-
     <div class="container">
       <div class="js-index-form extendedEntity">
         <meta
@@ -293,11 +474,11 @@
         />
         <!-- TODO: add new class .ds-annouce-info -->
         <p class="ds-annouce-info">
-          <span class="label label-default">unknown</span>
+          <span class="label label-default _admin">unknown</span>
 
           <span class="small text-muted">
             <span class="panel-body-adv-block"
-              ><span class="label label-info label-md"
+              ><span class="label label-info label-md _user"
                 ><svg class="icon-default">
                   <use xlink:href="./img/new-icons.svg#top"></use>
                 </svg>
@@ -311,7 +492,7 @@
                 Горячее</span
               >
             </span>
-            <span class="panel-body-adv-block">
+            <span class="panel-body-adv-block _admin _adm-old">
               <svg class="icon-default">
                 <use xlink:href="./img/new-icons.svg#pause"></use>
               </svg>
@@ -319,7 +500,7 @@
               Устаревшее объявление
             </span>
 
-            <span class="panel-body-adv-block">
+            <span class="panel-body-adv-block _admin _adm-blocked">
               <svg class="icon-default">
                 <use xlink:href="./img/new-icons.svg#cancel"></use>
               </svg>
@@ -327,7 +508,7 @@
               Заблокированное объявление
             </span>
 
-            <span class="panel-body-adv-block">
+            <span class="panel-body-adv-block _admin _adm-notpay">
               <svg class="icon-default">
                 <use xlink:href="./img/new-icons.svg#balance"></use>
               </svg>
@@ -335,7 +516,7 @@
               Неоплаченное объявление
             </span>
 
-            <span class="panel-body-adv-block">
+            <span class="panel-body-adv-block _admin _adm-draft">
               <svg class="icon-default">
                 <use xlink:href="./img/new-icons.svg#paint"></use>
               </svg>
@@ -343,7 +524,7 @@
               Черновое объявление
             </span>
 
-            <span class="panel-body-adv-block">
+            <span class="panel-body-adv-block _admin _adm-deleted">
               <svg class="icon-default">
                 <use xlink:href="./img/new-icons.svg#cross"></use>
               </svg>
@@ -477,7 +658,7 @@
                   Пожаловаться</a
                 >
                 <a
-                  class="open_url_action btn btn-default btn-xs"
+                  class="open_url_action btn btn-default btn-xs _guest _on"
                   data-url="/call-access-new?advertisement_id=132654251"
                   href="#"
                   ><svg class="icon-default">
@@ -489,7 +670,7 @@
               <!-- закрывем блок со скролом -->
             </span>
             <!-- остальные кнопки не оборачиваем в блок со скролом-->
-            <span class="panel-body-adv-block__scroll-x">
+            <span class="panel-body-adv-block__scroll-x _user">
               <span class="panel-body-adv-block">
                 <a
                   class="open_url_action yaSend btn btn-danger btn-xs"
@@ -527,7 +708,7 @@
                 ></span
               >
             </span>
-            <span class="panel-body-adv-block">
+            <span class="panel-body-adv-block _admin">
               <a
                 class="btn btn-default btn-xs"
                 href="https://dev.olan.ru/admin/photos?advertisement_id=121387351"
