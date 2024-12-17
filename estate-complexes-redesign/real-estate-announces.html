@@ -43,9 +43,212 @@
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <style>
+      .options-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 100%;
+      }
+      .options {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+        z-index: 11;
+      }
+      .options__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .option__close-btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+      .options__active {
+        position: fixed;
+        top: 0;
+        right: 10px;
+        z-index: 10;
+      }
+      .options__active-btn {
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        padding: 0 5px;
+        margin: 0;
+        border-radius: 5px;
+      }
+
+      ._admin {
+        display: none !important;
+      }
+      ._user {
+        display: none !important;
+      }
+      ._guest {
+        display: none !important;
+      }
+      ._admin._on {
+        display: inline-flex !important;
+      }
+      ._user._on {
+        display: inline-flex !important;
+      }
+      ._guest._on {
+        display: inline-flex !important;
+      }
+      ._adm-old._off {
+        display: none !important;
+      }
+      ._adm-blocked._off {
+        display: none !important;
+      }
+      ._adm-notpay._off {
+        display: none !important;
+      }
+      ._adm-draft._off {
+        display: none !important;
+      }
+      ._adm-deleted._off {
+        display: none !important;
+      }
+    </style>
   </head>
 
   <body style="background-color: #eeeeee">
+    <div class="options-container">
+      <div class="options__active" style="display: none">
+        <button class="options__active-btn">
+          <svg class="icon-default">
+            <use xlink:href="./img/new-icons.svg#dd"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="options">
+        <div class="options__header">
+          Панель настроек
+          <button class="option__close-btn">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="options__item">
+          <button class="btn _admin-btn">Админ</button>
+          <button class="btn _user-btn">Пользователь</button>
+          <button class="btn _guest-btn">Гость</button>
+        </div>
+        <div class="options__footer" style="margin-top: 10px">
+          <button class="btn" id="_adm-old" title="Устаревшее объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#pause"></use>
+            </svg>
+          </button>
+          <button
+            class="btn"
+            id="_adm-blocked"
+            title="Заблокированное объявление"
+          >
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#cancel"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-notpay" title="Неоплаченное объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#balance"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-draft" title="Черновое объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#paint"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-deleted" title="Удаленное объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/new-icons.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+        <script>
+          const options = document.querySelector(".options");
+
+          const optionsActive = document.querySelector(".options__active");
+
+          const adminBtn = document.querySelector("._admin-btn");
+          const userBtn = document.querySelector("._user-btn");
+          const guestBtn = document.querySelector("._guest-btn");
+
+          const optionCloseBtn = document.querySelector(".option__close-btn");
+          const optionActiveBtn = document.querySelector(
+            ".options__active-btn"
+          );
+
+          function toggleOn(className) {
+            const adminEl = document.querySelectorAll("._admin");
+            const userEl = document.querySelectorAll("._user");
+            const guestEl = document.querySelectorAll("._guest");
+
+            adminEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+            userEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+            guestEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+
+            document.querySelectorAll(className).forEach((el) => {
+              el.classList.add("_on");
+            });
+            if (className === "._admin") {
+              document.querySelectorAll("._user").forEach((el) => {
+                el.classList.add("_on");
+              });
+            }
+          }
+
+          adminBtn.addEventListener("click", () => toggleOn("._admin"));
+          userBtn.addEventListener("click", () => toggleOn("._user"));
+          guestBtn.addEventListener("click", () => toggleOn("._guest"));
+
+          optionCloseBtn.addEventListener("click", () => {
+            options.style.display = "none";
+            optionsActive.style.display = "block";
+          });
+
+          optionActiveBtn.addEventListener("click", () => {
+            options.style.display = "block";
+            optionsActive.style.display = "none";
+          });
+
+          $("#_adm-old").click(() => {
+            $("._adm-old").toggleClass("_off");
+          });
+          $("#_adm-blocked").click(() => {
+            $("._adm-blocked").toggleClass("_off");
+          });
+          $("#_adm-notpay").click(() => {
+            $("._adm-notpay").toggleClass("_off");
+          });
+          $("#_adm-draft").click(() => {
+            $("._adm-draft").toggleClass("_off");
+          });
+          $("#_adm-deleted").click(() => {
+            $("._adm-deleted").toggleClass("_off");
+          });
+        </script>
+      </div>
+    </div>
+
     <header>
       <div class="header-top-nav">
         <div class="container">
@@ -827,6 +1030,18 @@
                   ><meta content="1" itemprop="position"
                 /></a>
               </li>
+              <li class="small" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"></li>
+                <a class="yaSend" yaparam="click_to_breadcrumbs_in_fullview" itemprop="item" href="https://ussuriysk.olan.ru"><span itemprop="name">Недвижимость г Уссурийск</span><meta content="1" itemprop="position"></a>
+              </li>
+              <li class="small" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"></li>
+                <a class="yaSend" yaparam="click_to_breadcrumbs_in_fullview" itemprop="item" href="https://ussuriysk.olan.ru"><span itemprop="name">Недвижимость г Уссурийск</span><meta content="1" itemprop="position"></a>
+              </li>
+              <li class="small" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"></li>
+                <a class="yaSend" yaparam="click_to_breadcrumbs_in_fullview" itemprop="item" href="https://ussuriysk.olan.ru"><span itemprop="name">Недвижимость г Уссурийск</span><meta content="1" itemprop="position"></a>
+              </li>
+              <li class="small" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"></li>
+                <a class="yaSend" yaparam="click_to_breadcrumbs_in_fullview" itemprop="item" href="https://ussuriysk.olan.ru"><span itemprop="name">Недвижимость г Уссурийск</span><meta content="1" itemprop="position"></a>
+              </li>
             </ol>
           </div>
           <div class="col-xs-5">
@@ -1003,6 +1218,7 @@
               </div>
             </div>
             <div class="object__status">
+              <span class="label label-default _admin">unknown</span>
               <span class="label label-danger"
                 ><svg class="icon-default">
                   <use xlink:href="./img/new-icons.svg#hot"></use>
@@ -1054,6 +1270,59 @@
                 </svg>
               </button>
             </span>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="get"
+              action="/estate/129137431/top?from_full_card=true"
+              data-remote="true"
+            >
+              <button
+                class="object__actions-item hidden-xs yaSend"
+                yaparam="entity_top"
+                title="Поднять объявление"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#top"></use>
+                </svg>
+              </button>
+            </form>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="get"
+              action="https://dev.olan.ru/estate/129137431/edit"
+            >
+              <button
+                class="object__actions-item hidden-xs"
+                title="Редактировать объявление"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#paint"></use>
+                </svg>
+              </button>
+            </form>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="post"
+              action="/estate/129137431"
+              data-remote="true"
+            >
+              <input type="hidden" name="_method" value="delete" /><button
+                class="object__actions-item hidden-xs"
+                title="Удалить объявление"
+                data-confirm="Удалить это объявление?"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#del"></use>
+                </svg></button
+              ><input
+                type="hidden"
+                name="authenticity_token"
+                value="qrhZpulWdY8VEF9S5/yHX0R06FGyFe4oGXHQFYQ3JaFjArdF8qrUbVSCcjuAAf2iuEqRUsUQT/lorO3j6yUGUA=="
+              />
+            </form>
           </div>
         </li>
         <li class="media clearfix object object_even">
@@ -1110,6 +1379,7 @@
               </div>
             </div>
             <div class="object__status">
+              <span class="label label-default _admin">unknown</span>
               <time
                 class="smart_time object__date"
                 datetime="2024-10-23 05:26:25 +0300"
@@ -1155,6 +1425,59 @@
                 </svg>
               </button>
             </span>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="get"
+              action="/estate/129137431/top?from_full_card=true"
+              data-remote="true"
+            >
+              <button
+                class="object__actions-item hidden-xs yaSend"
+                yaparam="entity_top"
+                title="Поднять объявление"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#top"></use>
+                </svg>
+              </button>
+            </form>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="get"
+              action="https://dev.olan.ru/estate/129137431/edit"
+            >
+              <button
+                class="object__actions-item hidden-xs"
+                title="Редактировать объявление"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#paint"></use>
+                </svg>
+              </button>
+            </form>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="post"
+              action="/estate/129137431"
+              data-remote="true"
+            >
+              <input type="hidden" name="_method" value="delete" /><button
+                class="object__actions-item hidden-xs"
+                title="Удалить объявление"
+                data-confirm="Удалить это объявление?"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#del"></use>
+                </svg></button
+              ><input
+                type="hidden"
+                name="authenticity_token"
+                value="qrhZpulWdY8VEF9S5/yHX0R06FGyFe4oGXHQFYQ3JaFjArdF8qrUbVSCcjuAAf2iuEqRUsUQT/lorO3j6yUGUA=="
+              />
+            </form>
           </div>
         </li>
         <li class="media clearfix object object_even" element_id="115855240">
@@ -1253,6 +1576,59 @@
                 </svg>
               </button>
             </span>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="get"
+              action="/estate/129137431/top?from_full_card=true"
+              data-remote="true"
+            >
+              <button
+                class="object__actions-item hidden-xs yaSend"
+                yaparam="entity_top"
+                title="Поднять объявление"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#top"></use>
+                </svg>
+              </button>
+            </form>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="get"
+              action="https://dev.olan.ru/estate/129137431/edit"
+            >
+              <button
+                class="object__actions-item hidden-xs"
+                title="Редактировать объявление"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#paint"></use>
+                </svg>
+              </button>
+            </form>
+            <form
+              class="withoutBootstrapValidator _admin"
+              method="post"
+              action="/estate/129137431"
+              data-remote="true"
+            >
+              <input type="hidden" name="_method" value="delete" /><button
+                class="object__actions-item hidden-xs"
+                title="Удалить объявление"
+                data-confirm="Удалить это объявление?"
+                type="submit"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/new-icons.svg#del"></use>
+                </svg></button
+              ><input
+                type="hidden"
+                name="authenticity_token"
+                value="qrhZpulWdY8VEF9S5/yHX0R06FGyFe4oGXHQFYQ3JaFjArdF8qrUbVSCcjuAAf2iuEqRUsUQT/lorO3j6yUGUA=="
+              />
+            </form>
           </div>
         </li>
       </ul>
