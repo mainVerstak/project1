@@ -98,3 +98,7 @@ $padding-btn-small: 6px 10px;
     background-color: $color-blue-hover;
   }
 }
+
+#blockModal .modal-footer {
+  display: flex;
+}

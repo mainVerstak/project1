@@ -81,6 +81,10 @@
   background-color: #07386c;
 }
 
+#blockModal .modal-footer {
+  display: flex;
+}
+
 /* Cards */
 .object {
   background-color: #f5f5f5;
@@ -416,6 +420,7 @@
   align-items: center;
   color: #777777;
   gap: 10px;
+  margin: 0;
 }
 .object .object__status .label.label-danger {
   font-size: 14px;
@@ -590,6 +595,7 @@
 @media (max-width: 768px) {
   .object .object__actions {
     top: unset;
+    bottom: 15px;
   }
   .object .object__data {
     width: unset;
@@ -598,6 +604,39 @@
 @media (min-width: 1024px) {
   .object .object__actions {
     right: -15px !important;
+  }
+}
+
+.map_panel .object .object__owner {
+  margin-right: 30px;
+}
+.map_panel .object .object__data {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.map_panel .object .object__meta {
+  padding-bottom: 10px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.map_panel .object .object__actions {
+  margin-top: 10px;
+  position: absolute;
+  right: 0px;
+  bottom: 15px;
+  width: auto;
+}
+@media (max-width: 768px) {
+  .map_panel .object .object__actions {
+    top: unset;
+  }
+  .map_panel .object .object__data {
+    width: unset;
+  }
+}
+@media (min-width: 1024px) {
+  .map_panel .object .object__actions {
+    right: 2px !important;
   }
 }
 

@@ -352,6 +352,7 @@
     align-items: center;
     color: $color-grey-text;
     gap: 10px;
+    margin: 0;
   }
 
   .object__status .label.label-danger {
@@ -533,6 +534,7 @@
   @media (max-width: 768px) {
     .object__actions {
       top: unset;
+      bottom: 15px;
     }
     .object__data {
       width: unset;
@@ -541,6 +543,44 @@
   @media (min-width: 1024px) {
     .object__actions {
       right: -15px !important;
+    }
+  }
+}
+
+.map_panel {
+  .object {
+    .object__owner {
+      margin-right: 30px;
+    }
+    .object__data {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+    .object__meta {
+      padding-bottom: 10px;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+    .object__actions {
+      margin-top: 10px;
+      position: absolute;
+      right: 0px;
+      bottom: 15px;
+      width: auto;
+    }
+    @media (max-width: 768px) {
+      .object__actions {
+        top: unset;
+      }
+      .object__data {
+        width: unset;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .object__actions {
+        right: 2px !important;
+      }
     }
   }
 }
