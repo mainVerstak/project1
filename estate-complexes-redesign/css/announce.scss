@@ -287,6 +287,10 @@
 
   .object__show-phone {
     color: $color-white !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 34px !important;
   }
   .object__show-phone:visited {
     color: $color-white !important;
@@ -539,6 +543,9 @@
     .object__data {
       width: unset;
     }
+    .object__show-phone {
+      height: 36px !important;
+    }
   }
   @media (min-width: 1024px) {
     .object__actions {
@@ -548,7 +555,18 @@
 }
 
 .map_panel {
+  .map_panel_head .to_filters_btn {
+    color: $color-blue;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
   .object {
+    .col-md-12:first-child {
+      padding-top: 10px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
     .object__owner {
       margin-right: 30px;
     }
@@ -565,8 +583,11 @@
       margin-top: 10px;
       position: absolute;
       right: 0px;
-      bottom: 15px;
+      bottom: 16px;
       width: auto;
+    }
+    .object__show-phone {
+      height: 36px !important;
     }
     @media (max-width: 768px) {
       .object__actions {

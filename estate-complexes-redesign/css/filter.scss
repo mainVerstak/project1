@@ -522,6 +522,8 @@
   .searchFormPage .well,
   .searchFormPage.well {
     background-color: $color-blue;
+    height: 36px;
+    padding: 7.5px 10px;
   }
   .shortSearchForm.text-center.link {
     color: $color-white;
