@@ -328,6 +328,10 @@
     color: $color-grey-dark;
   }
 
+  .header_adv_short:visited {
+    color: $color-grey-dark;
+  }
+
   .object__lead {
     font-size: 28px;
     font-weight: 700;
@@ -556,6 +560,11 @@
       right: -15px !important;
     }
   }
+  @media (min-width: 768px) {
+    .header_adv_short {
+      margin-top: 5px;
+    }
+  }
 }
 
 .map_panel {
@@ -592,6 +601,9 @@
     }
     .object__show-phone {
       height: 36px !important;
+    }
+    .header_adv_short {
+      margin-top: 0;
     }
     @media (max-width: 768px) {
       .object__actions {

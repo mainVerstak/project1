@@ -400,6 +400,9 @@
 .object .header_adv_short:hover {
   color: #333333;
 }
+.object .header_adv_short:visited {
+  color: #333333;
+}
 .object .object__lead {
   font-size: 28px;
   font-weight: 700;
@@ -616,6 +619,11 @@
     right: -15px !important;
   }
 }
+@media (min-width: 768px) {
+  .object .header_adv_short {
+    margin-top: 5px;
+  }
+}
 
 .map_panel .map_panel_head .to_filters_btn {
   color: #084c95;
@@ -649,6 +657,9 @@
 }
 .map_panel .object .object__show-phone {
   height: 36px !important;
+}
+.map_panel .object .header_adv_short {
+  margin-top: 0;
 }
 @media (max-width: 768px) {
   .map_panel .object .object__actions {
