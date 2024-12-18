@@ -576,6 +576,9 @@
 .object .object__actions-item {
   color: #777777;
 }
+.object .object__owner {
+  margin-bottom: 0 !important;
+}
 @media (max-width: 1024px) {
   .object .object__actions {
     position: absolute;

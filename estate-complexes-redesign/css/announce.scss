@@ -515,6 +515,10 @@
     color: $color-grey-text;
   }
 
+  .object__owner {
+    margin-bottom: 0 !important;
+  }
+
   @media (max-width: 1024px) {
     .object__actions {
       position: absolute;
