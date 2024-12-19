@@ -564,6 +564,9 @@
     .header_adv_short {
       margin-top: 5px;
     }
+    .object__owner-name {
+      margin-top: 5px;
+    }
   }
 }
 
@@ -603,6 +606,9 @@
       height: 36px !important;
     }
     .header_adv_short {
+      margin-top: 0;
+    }
+    .object__owner-name {
       margin-top: 0;
     }
     @media (max-width: 768px) {

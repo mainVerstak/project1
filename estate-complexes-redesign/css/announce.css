@@ -623,6 +623,9 @@
   .object .header_adv_short {
     margin-top: 5px;
   }
+  .object .object__owner-name {
+    margin-top: 5px;
+  }
 }
 
 .map_panel .map_panel_head .to_filters_btn {
@@ -659,6 +662,9 @@
   height: 36px !important;
 }
 .map_panel .object .header_adv_short {
+  margin-top: 0;
+}
+.map_panel .object .object__owner-name {
   margin-top: 0;
 }
 @media (max-width: 768px) {
