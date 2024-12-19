@@ -570,14 +570,21 @@
   }
 }
 .object .notepad_action .object__actions-item svg {
-  stroke: #777777;
+  stroke: currentColor;
   fill: none;
 }
 .object .object__actions-item.active svg {
-  fill: #777777;
+  fill: currentColor;
 }
 .object .object__actions-item {
   color: #777777;
+}
+.object .object__actions-item svg {
+  width: 17px;
+  height: 17px;
+}
+.object .object__actions-item:hover svg {
+  color: #333333;
 }
 .object .object__owner {
   margin-bottom: 0 !important;
