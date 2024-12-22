@@ -370,6 +370,7 @@
   align-items: center;
   justify-content: center;
   height: 34px !important;
+  width: fit-content;
 }
 .object .object__show-phone:visited {
   color: #ffffff !important;
