@@ -80,29 +80,22 @@ function createClusterTooltip(geoObjects, cluster) {
     const props = geoObject.properties;
     const item = document.createElement("div");
     item.className = "cluster-tooltip__item";
-    // item.innerHTML = `
-    //   <div class="cluster-tooltip__heading">${
-    //     props.get("name") || "Без названия"
-    //   }</div>
-    //   <div class="cluster-tooltip__address">${props.get("address")}</div>
-    // `;
-
     item.innerHTML = `
-          ${
-            props.get("status") === 2
-              ? '<div class="status-sticker default-building">Сдан</div>'
-              : ""
-          }
-          ${
-            props.get("status") === 0
-              ? '<div class="status-sticker new-building">Строится</div>'
-              : ""
-          }
-        <div class="cluster-tooltip__heading">${
-          props.get("name") || "Без названия"
-        }</div>
-        <div class="cluster-tooltip__address">${props.get("address")}</div>
-      `;
+      ${
+        props.get("status") === 2
+          ? '<div class="status-sticker default-building">Сдан</div>'
+          : ""
+      }
+      ${
+        props.get("status") === 0
+          ? '<div class="status-sticker new-building">Строится</div>'
+          : ""
+      }
+      <div class="cluster-tooltip__heading">${
+        props.get("name") || "Без названия"
+      }</div>
+      <div class="cluster-tooltip__address">${props.get("address")}</div>
+    `;
 
     item.addEventListener("click", () => {
       activateMarkerAndListItem(
@@ -423,17 +416,26 @@ ymaps.ready(async () => {
 
       // Добавляем обработчик клика на кластер
       clusterer.events.add("click", function (e) {
-        const cluster = e.get("target");
+        const target = e.get("target");
         const zoom = map.getZoom();
 
-        // Если мы уже на максимальном зуме или близко к нему, показываем тултип
-        if (zoom >= 17) {
-          createClusterTooltip(cluster.getGeoObjects(), cluster);
+        // Проверяем, является ли объект кластером
+        if (target.getGeoObjects && target.getGeoObjects()) {
+          // Если мы уже на максимальном зуме или близко к нему, показываем тултип
+          if (zoom >= 17) {
+            createClusterTooltip(target.getGeoObjects(), target);
+          } else {
+            // Иначе приближаем карту
+            map.setCenter(target.geometry.getCoordinates(), zoom + 2, {
+              duration: 300,
+            });
+          }
         } else {
-          // Иначе приближаем карту
-          map.setCenter(cluster.geometry.getCoordinates(), zoom + 2, {
-            duration: 300,
-          });
+          // Если это одиночная метка, активируем её
+          activateMarkerAndListItem(
+            target.properties.get("uniqueId"),
+            target.geometry.getCoordinates()
+          );
         }
       });
 
