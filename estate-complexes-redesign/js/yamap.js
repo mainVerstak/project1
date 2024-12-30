@@ -4,6 +4,42 @@ let points = [];
 let clusterers = {};
 let swiperScrollContainer;
 
+// Функция активации маркера и элемента списка
+function activateMarkerAndListItem(uniqueId, coordinates) {
+  // Центрируем карту
+  map.setCenter(coordinates, 20);
+  setTimeout(() => {
+    // Очищаем все активные состояния
+    const markers = document.querySelectorAll(".single-marker");
+    markers.forEach((marker) => marker.classList.remove("active"));
+    const listLinks = document.querySelectorAll(".ds-map__item");
+    listLinks.forEach((link) => link.classList.remove("active"));
+
+    // Активируем маркер
+    const marker = document.querySelector(
+      `.single-marker[data-id="${uniqueId}"]`
+    );
+    if (marker) {
+      marker.classList.add("active");
+    }
+
+    // Активируем элемент списка
+    const listItem = document.querySelector(
+      `.swiper-slide[data-id="${uniqueId}"] .ds-map__item`
+    );
+    if (listItem) {
+      listItem.classList.add("active");
+      const slide = listItem.closest(".swiper-slide");
+      if (slide && swiperScrollContainer) {
+        swiperScrollContainer.el.querySelector(
+          ".swiper-wrapper"
+        ).style.transition = "300ms";
+        swiperScrollContainer.setTranslate(-slide.offsetTop);
+      }
+    }
+  }, 300);
+}
+
 async function getMapData() {
   try {
     const response = await fetch("./js/map-data.json");
@@ -52,26 +88,10 @@ function createClusterTooltip(geoObjects, cluster) {
     `;
 
     item.addEventListener("click", () => {
-      map.setCenter(geoObject.geometry.getCoordinates(), 20);
-
-      // Активируем соответствующий элемент в списке
-      const listItem = document.querySelector(
-        `.swiper-slide[data-id="${props.get("uniqueId")}"] .ds-map__item`
+      activateMarkerAndListItem(
+        props.get("uniqueId"),
+        geoObject.geometry.getCoordinates()
       );
-      if (listItem) {
-        const allItems = document.querySelectorAll(".ds-map__item");
-        allItems.forEach((item) => item.classList.remove("active"));
-        listItem.classList.add("active");
-
-        const slide = listItem.closest(".swiper-slide");
-        if (slide) {
-          swiperScrollContainer.el.querySelector(
-            ".swiper-wrapper"
-          ).style.transition = "300ms";
-          swiperScrollContainer.setTranslate(-slide.offsetTop);
-        }
-      }
-
       tooltip.remove();
     });
 
@@ -331,7 +351,7 @@ ymaps.ready(async () => {
 
         element.addEventListener("click", (e) => {
           const zoom = map.getZoom();
-          if (zoom >= 17) {
+          if (zoom >= 21) {
             createClusterTooltip(cluster.getGeoObjects(), cluster);
           } else {
             map.setCenter(cluster.geometry.getCoordinates(), zoom + 2, {
@@ -423,43 +443,10 @@ ymaps.ready(async () => {
 
         // Добавляем обработчик клика на метку
         placemark.events.add("click", function (e) {
-          // Убираем активные классы у всех маркеров
-          const markers = document.querySelectorAll(".single-marker");
-          markers.forEach((marker) => marker.classList.remove("active"));
-
-          // Убираем активные классы у всех элементов списка
-          const listLinks = document.querySelectorAll(".ds-map__item");
-          listLinks.forEach((link) => link.classList.remove("active"));
-
-          // Находим и активируем маркер
-          const currentMarker = document.querySelector(
-            `.single-marker[data-id="${point.properties.uniqueId}"]`
+          activateMarkerAndListItem(
+            point.properties.uniqueId,
+            point.geometry.coordinates
           );
-          if (currentMarker) {
-            currentMarker.classList.add("active");
-          }
-
-          // Находим и активируем соответствующий элемент в списке
-          const listItem = document.querySelector(
-            `.swiper-slide[data-id="${point.properties.uniqueId}"] .ds-map__item`
-          );
-
-          if (listItem) {
-            listItem.classList.add("active");
-            const slide = listItem.closest(".swiper-slide");
-
-            if (slide && swiperScrollContainer) {
-              swiperScrollContainer.el.querySelector(
-                ".swiper-wrapper"
-              ).style.transition = "300ms";
-              swiperScrollContainer.setTranslate(-slide.offsetTop);
-            }
-          }
-
-          // Центрируем карту на метке
-          map.setCenter(point.geometry.coordinates, map.getZoom(), {
-            duration: 300,
-          });
         });
 
         return placemark;
@@ -522,52 +509,26 @@ ymaps.ready(async () => {
 
     // Добавляем обработчик клика на элемент списка
     const listItem = element.querySelector(".ds-map__item");
-    listItem.addEventListener("click", async (e) => {
+    listItem.addEventListener("click", (e) => {
       e.preventDefault();
+      e.stopPropagation();
 
-      // Убираем активные классы
-      const listLinks = document.querySelectorAll(".ds-map__item");
-      listLinks.forEach((link) => link.classList.remove("active"));
+      // Находим соответствующий маркер в кластерах
+      let targetPlacemark = null;
+      Object.values(clusterers).forEach((clusterer) => {
+        clusterer.getGeoObjects().forEach((placemark) => {
+          if (placemark.properties.get("uniqueId") === uniqueId) {
+            targetPlacemark = placemark;
+          }
+        });
+      });
 
-      const markers = document.querySelectorAll(".single-marker");
-      markers.forEach((marker) => marker.classList.remove("active"));
-
-      // Активируем текущий элемент списка
-      listItem.classList.add("active");
-
-      // Центрируем карту с максимальным зумом
-      map.setCenter(
-        [point.properties.latitude, point.properties.longitude],
-        20,
-        {
-          duration: 400,
-          callback: function () {
-            // После центрирования ищем и активируем маркер
-            setTimeout(() => {
-              const marker = document.querySelector(
-                `.single-marker[data-id="${point.properties.uniqueId}"]`
-              );
-              if (marker) {
-                marker.classList.add("active");
-
-                // Дополнительное центрирование для точности
-                map.setCenter(
-                  [point.properties.latitude, point.properties.longitude],
-                  {
-                    duration: 500,
-                  }
-                );
-              }
-            }, 600);
-          },
-        }
-      );
-
-      // Прокручиваем список к выбранному элементу
-      swiperScrollContainer.el.querySelector(
-        ".swiper-wrapper"
-      ).style.transition = "300ms";
-      swiperScrollContainer.setTranslate(-listItem.offsetTop);
+      if (targetPlacemark) {
+        activateMarkerAndListItem(
+          uniqueId,
+          targetPlacemark.geometry.getCoordinates()
+        );
+      }
     });
 
     container.appendChild(element);
@@ -586,14 +547,6 @@ ymaps.ready(async () => {
       hide: false,
     },
     mousewheel: true,
-  });
-
-  // Предотвращаем действие по умолчанию для всех ссылок в списке
-  const sliderLinks = document.querySelectorAll(".ds-map__item");
-  sliderLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-    });
   });
 
   // Создаем список и фильтры
