@@ -80,12 +80,29 @@ function createClusterTooltip(geoObjects, cluster) {
     const props = geoObject.properties;
     const item = document.createElement("div");
     item.className = "cluster-tooltip__item";
+    // item.innerHTML = `
+    //   <div class="cluster-tooltip__heading">${
+    //     props.get("name") || "Без названия"
+    //   }</div>
+    //   <div class="cluster-tooltip__address">${props.get("address")}</div>
+    // `;
+
     item.innerHTML = `
-      <div class="cluster-tooltip__heading">${
-        props.get("name") || "Без названия"
-      }</div>
-      <div class="cluster-tooltip__address">${props.get("address")}</div>
-    `;
+          ${
+            props.get("status") === 2
+              ? '<div class="status-sticker default-building">Сдан</div>'
+              : ""
+          }
+          ${
+            props.get("status") === 0
+              ? '<div class="status-sticker new-building">Строится</div>'
+              : ""
+          }
+        <div class="cluster-tooltip__heading">${
+          props.get("name") || "Без названия"
+        }</div>
+        <div class="cluster-tooltip__address">${props.get("address")}</div>
+      `;
 
     item.addEventListener("click", () => {
       activateMarkerAndListItem(
@@ -108,7 +125,7 @@ function createClusterTooltip(geoObjects, cluster) {
 
   if (tooltipRect.right > mapRect.right) {
     tooltip.style.left = "auto";
-    tooltip.style.right = "calc(100% + 15px)";
+    tooltip.style.right = "calc(100% + 20px)";
     tooltip.classList.add("cluster-tooltip--left");
   }
 }
@@ -346,19 +363,9 @@ ymaps.ready(async () => {
     {
       build: function () {
         customClusterLayout.superclass.build.call(this);
-        const element = this.getElement();
-        const cluster = this.getData().properties.get("cluster");
-
-        element.addEventListener("click", (e) => {
-          const zoom = map.getZoom();
-          if (zoom >= 21) {
-            createClusterTooltip(cluster.getGeoObjects(), cluster);
-          } else {
-            map.setCenter(cluster.geometry.getCoordinates(), zoom + 2, {
-              duration: 300,
-            });
-          }
-        });
+      },
+      clear: function () {
+        customClusterLayout.superclass.clear.call(this);
       },
     }
   );
@@ -412,6 +419,22 @@ ymaps.ready(async () => {
           coordinates: [14, 14],
           radius: 14,
         },
+      });
+
+      // Добавляем обработчик клика на кластер
+      clusterer.events.add("click", function (e) {
+        const cluster = e.get("target");
+        const zoom = map.getZoom();
+
+        // Если мы уже на максимальном зуме или близко к нему, показываем тултип
+        if (zoom >= 17) {
+          createClusterTooltip(cluster.getGeoObjects(), cluster);
+        } else {
+          // Иначе приближаем карту
+          map.setCenter(cluster.geometry.getCoordinates(), zoom + 2, {
+            duration: 300,
+          });
+        }
       });
 
       // Создаем метки для точек этой категории
@@ -551,5 +574,4 @@ ymaps.ready(async () => {
 
   // Создаем список и фильтры
   createMapFilters(points);
-  // ... продолжение следует
 });

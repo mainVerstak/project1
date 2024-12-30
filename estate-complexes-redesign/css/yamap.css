@@ -367,11 +367,12 @@
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 30vw;
   max-width: 300px;
   max-height: 300px;
   overflow-y: auto;
   z-index: 1001;
-  left: calc(100% + 15px);
+  left: calc(100% + 20px);
   top: 50%;
   transform: translateY(-50%);
 }
