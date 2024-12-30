@@ -298,61 +298,18 @@ ymaps.ready(async () => {
   // Создаем собственный макет для меток
   const customMarkerLayout = ymaps.templateLayoutFactory.createClass(
     '<div class="single-marker $[properties.className]" data-id="$[properties.uniqueId]">' +
+      '<div class="marker-icon-wrapper">' +
       '<svg class="map-icon">' +
       "$[properties.iconContent]" +
       "</svg>" +
+      "</div>" +
       "</div>",
     {
       build: function () {
         customMarkerLayout.superclass.build.call(this);
-        const element = this.getElement();
-
-        // Добавляем обработчик клика
-        element.addEventListener("click", (e) => {
-          e.stopPropagation(); // Предотвращаем всплытие события
-
-          // Убираем активные классы у всех маркеров
-          const markers = document.querySelectorAll(".single-marker");
-          markers.forEach((marker) => marker.classList.remove("active"));
-
-          // Убираем активные классы у всех элементов списка
-          const listLinks = document.querySelectorAll(".ds-map__item");
-          listLinks.forEach((link) => link.classList.remove("active"));
-
-          // Активируем текущий маркер
-          element.classList.add("active");
-
-          // Получаем данные метки
-          const properties = this.getData().properties;
-
-          // Находим и активируем соответствующий элемент в списке
-          const listItem = document.querySelector(
-            `.swiper-slide[data-id="${properties.get(
-              "uniqueId"
-            )}"] .ds-map__item`
-          );
-
-          if (listItem) {
-            listItem.classList.add("active");
-            const slide = listItem.closest(".swiper-slide");
-
-            if (slide && swiperScrollContainer) {
-              swiperScrollContainer.el.querySelector(
-                ".swiper-wrapper"
-              ).style.transition = "300ms";
-              swiperScrollContainer.setTranslate(-slide.offsetTop);
-            }
-          }
-
-          // Центрируем карту на метке
-          map.setCenter(
-            this.getData().geometry.getCoordinates(),
-            map.getZoom(),
-            {
-              duration: 300,
-            }
-          );
-        });
+      },
+      clear: function () {
+        customMarkerLayout.superclass.clear.call(this);
       },
     }
   );
@@ -360,7 +317,11 @@ ymaps.ready(async () => {
   // Создаем собственный макет для кластеров
   const customClusterLayout = ymaps.templateLayoutFactory.createClass(
     '<div class="cluster-marker">' +
-      '<div class="cluster-marker__inner $[properties.className]">$[properties.geoObjects.length]</div>' +
+      '<div class="cluster-marker__inner $[properties.className]">' +
+      '<div class="cluster-icon-wrapper">' +
+      '<span class="cluster-count">$[properties.geoObjects.length]</span>' +
+      "</div>" +
+      "</div>" +
       "</div>",
     {
       build: function () {
@@ -443,7 +404,7 @@ ymaps.ready(async () => {
             point.properties.status === 2 ? "default-building" : "new-building";
         }
 
-        return new ymaps.Placemark(
+        const placemark = new ymaps.Placemark(
           point.geometry.coordinates,
           {
             ...point.properties,
@@ -459,6 +420,49 @@ ymaps.ready(async () => {
             },
           }
         );
+
+        // Добавляем обработчик клика на метку
+        placemark.events.add("click", function (e) {
+          // Убираем активные классы у всех маркеров
+          const markers = document.querySelectorAll(".single-marker");
+          markers.forEach((marker) => marker.classList.remove("active"));
+
+          // Убираем активные классы у всех элементов списка
+          const listLinks = document.querySelectorAll(".ds-map__item");
+          listLinks.forEach((link) => link.classList.remove("active"));
+
+          // Находим и активируем маркер
+          const currentMarker = document.querySelector(
+            `.single-marker[data-id="${point.properties.uniqueId}"]`
+          );
+          if (currentMarker) {
+            currentMarker.classList.add("active");
+          }
+
+          // Находим и активируем соответствующий элемент в списке
+          const listItem = document.querySelector(
+            `.swiper-slide[data-id="${point.properties.uniqueId}"] .ds-map__item`
+          );
+
+          if (listItem) {
+            listItem.classList.add("active");
+            const slide = listItem.closest(".swiper-slide");
+
+            if (slide && swiperScrollContainer) {
+              swiperScrollContainer.el.querySelector(
+                ".swiper-wrapper"
+              ).style.transition = "300ms";
+              swiperScrollContainer.setTranslate(-slide.offsetTop);
+            }
+          }
+
+          // Центрируем карту на метке
+          map.setCenter(point.geometry.coordinates, map.getZoom(), {
+            duration: 300,
+          });
+        });
+
+        return placemark;
       });
 
       // Добавляем метки в кластеризатор
@@ -483,9 +487,7 @@ ymaps.ready(async () => {
       Новостройки:
         '<use xlink:href="./map-icons/map-icons.svg#buildings-2"></use>',
     };
-    return `<svg class="map-icon">${
-      iconMap[tabName] || iconMap["Новостройки"]
-    }</svg>`;
+    return `${iconMap[tabName] || iconMap["Новостройки"]}`;
   }
 
   // Создаем список элементов

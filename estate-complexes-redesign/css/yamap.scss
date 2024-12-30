@@ -73,6 +73,27 @@ $color-entertainment: #e98beb;
   align-items: center;
   cursor: pointer;
 }
+
+.marker-icon-wrapper {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cluster-icon-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
 .single-marker:hover {
   transform: translate(-50%, -50%) scale(1.2);
   cursor: pointer;
@@ -83,6 +104,35 @@ $color-entertainment: #e98beb;
   height: 16px;
   pointer-events: none;
 }
+
+.single-marker.active {
+  z-index: 1000;
+  border-radius: 50% 50% 0 50%;
+  transform: translate(-50%, -100%) rotate(45deg) scale(1.2);
+}
+
+.single-marker.active .marker-icon-wrapper {
+  transform: rotate(-45deg);
+}
+
+.cluster-marker__inner {
+  width: 100%;
+  height: 100%;
+  background-color: $color-blue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cluster-marker__inner .cluster-icon-wrapper {
+  transform: none;
+}
+
 .filter-icon.default-building,
 .single-marker.default-building,
 .cluster-marker__inner.default-building {
@@ -119,9 +169,10 @@ $color-entertainment: #e98beb;
   background-color: $color-entertainment;
 }
 
-.single-marker.active svg {
+.single-marker.active .marker-icon {
   transform: rotate(-45deg);
 }
+
 .single-marker.active {
   z-index: 1000;
   border-radius: 50% 50% 0 50%;
@@ -399,4 +450,10 @@ $color-entertainment: #e98beb;
 
 .ymaps-2-1-79-map-copyrights-promo {
   display: none;
+}
+
+.cluster-count {
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-white;
 }
