@@ -231,6 +231,7 @@
                   <button
                     class="btn btn-xs object-announce__show-phone ShowAdvPhoneAction"
                     data-id="44833678"
+                    disabled="true"
                   >
                     <svg class="icon-default">
                       <use xlink:href="./img/new-icons.svg#phone"></use>
@@ -374,6 +375,10 @@
           announceCard.classList.add("object-announce_urgent");
           labelContainer.innerHTML =
             '<span class="label label-default">yandex_feed</span> <span class="label label-danger"><i class="fas fa-bolt"></i> горячее</span>  <time class="smart_time object-announce__date" datetime="2025-01-22 11:42:34 +0300" time_zone="3">вчера в 11:42</time>';
+        } else if (announceCard.classList.contains("object-announce_urgent")) {
+          announceCard.classList.remove("object-announce_urgent");
+          labelContainer.innerHTML =
+            '<time class="object-announce__date"> Только что </time>';
         } else {
           announceCard.classList.remove("object-announce_urgent");
           announceCard.classList.add("object-announce_rise");

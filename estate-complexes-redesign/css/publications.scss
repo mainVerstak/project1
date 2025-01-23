@@ -72,26 +72,35 @@
     }
 
     .object-announce__show-phone {
-      color: $color-white;
-      background-color: $color-blue;
+      background-color: $color-white;
       border-radius: $border-radius;
+      color: $color-grey-text;
+      border: 1px solid $color-border;
+      padding: $padding-btn-small;
       background-image: none;
-      border: none;
       text-shadow: none;
       -webkit-box-shadow: none;
       box-shadow: none;
     }
     .object-announce__show-phone:hover {
-      background-color: $color-blue-hover;
+      text-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: $color-grey-superlight;
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
     }
     .object-announce__show-phone:focus {
-      background-color: $color-blue-hover;
+      box-shadow: none;
+      border: 1px solid $color-grey-dark;
     }
     .object-announce__show-phone:active {
-      background-color: $color-blue-hover;
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
     }
     .object-announce__show-phone:active:hover {
-      background-color: $color-blue-hover;
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
     }
 
     .btn-xs {
