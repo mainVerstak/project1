@@ -1,0 +1,231 @@
+@import "./global.scss";
+
+.publications {
+  .publications__announcing {
+    .object-announce {
+      background-color: $color-grey-superlight;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 5px;
+
+      .object-announce__title {
+        color: $color-grey-dark;
+      }
+    }
+
+    a {
+      color: $color-blue;
+    }
+    a:hover {
+      color: $color-blue-hover;
+    }
+    a:visited {
+      color: $color-blue-hover;
+    }
+    // Buttons
+    .btn {
+      text-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      vertical-align: bottom;
+      border-radius: $border-radius;
+      padding: $padding-btn-small;
+      font-weight: 500;
+      line-height: 1.314;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      height: 32px !important;
+    }
+
+    .btn-default {
+      background-image: none;
+      filter: none;
+      background-color: $color-white;
+      border-radius: $border-radius;
+      color: $color-grey-text;
+      border: 1px solid $color-border;
+      padding: $padding-btn-small;
+      font-weight: 500;
+      line-height: 1.42857143;
+    }
+    .btn-default:hover {
+      text-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: $color-grey-superlight;
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
+    }
+    .btn-default.active {
+      background-color: $color-border;
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
+    }
+    .btn-default.active:hover {
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
+    }
+    .btn-default:focus {
+      box-shadow: none;
+      border: 1px solid $color-grey-dark;
+    }
+
+    .object-announce__show-phone {
+      background-color: $color-white;
+      border-radius: $border-radius;
+      color: $color-grey-text;
+      border: 1px solid $color-border;
+      padding: $padding-btn-small;
+      background-image: none;
+      text-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+    .object-announce__show-phone:hover {
+      text-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: $color-grey-superlight;
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
+    }
+    .object-announce__show-phone:focus {
+      box-shadow: none;
+      border: 1px solid $color-grey-dark;
+    }
+    .object-announce__show-phone:active {
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
+    }
+    .object-announce__show-phone:active:hover {
+      border: 1px solid $color-border;
+      color: $color-grey-dark;
+    }
+
+    .btn-xs {
+      padding: $padding-btn-small;
+      font-size: 14px;
+      height: 32px !important;
+      line-height: 1.42857143;
+    }
+    .btn-group-xs > .btn {
+      line-height: 1.42857143;
+    }
+
+    .btn-default:active,
+    .btn-default.active {
+      text-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .object-announce__fotorama {
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .object-announce__price {
+      font-size: 28px;
+      font-weight: 700;
+      color: $color-grey-dark;
+      margin-bottom: 5px;
+    }
+
+    .object-announce__location {
+      color: $color-blue;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .object-announce__text {
+      font-size: 14px;
+      color: $color-grey-text;
+      font-weight: 400;
+    }
+
+    .object-announce__location svg {
+      position: relative;
+      top: 2px;
+    }
+
+    .object-announce__action {
+      color: $color-grey-text;
+      svg {
+        width: 17px;
+        height: 17px;
+        fill: currentColor;
+      }
+    }
+    .object-announce__actions-item:hover {
+      color: $color-grey-dark;
+    }
+
+    .object-announce__status {
+      display: flex;
+      align-items: center;
+      color: $color-grey-text;
+      gap: 10px;
+      margin: 0;
+      text-shadow: none;
+
+      .label {
+        text-shadow: none;
+        font-size: 14px;
+        color: $color-white;
+        padding: 6px 10px;
+        border-radius: 5px;
+        width: auto;
+        font-weight: 500;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+      .label.label-danger {
+        background-color: $color-red;
+      }
+      .label.label-default {
+        background-color: $color-grey;
+      }
+      .label-info {
+        background-color: $color-blue;
+      }
+    }
+
+    .object-announce_rise {
+      background: $color-cyan-bg;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+
+    .object-announce_urgent {
+      background: $color-yellow-bg;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      .object-announce__text {
+        font-size: 14px;
+        margin-bottom: 5px;
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+        order: 4;
+        -webkit-line-clamp: 6;
+      }
+      .object-announce__status {
+        order: 5;
+        margin-bottom: 15px;
+      }
+      .object-announce__content {
+        margin-bottom: 15px;
+      }
+
+      .object-announce__show-phone {
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,295 @@
+/* Icons */
+.icon-map-small {
+  width: 12px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.icon-caret-default {
+  width: 10px;
+  height: 6px;
+  fill: currentColor;
+}
+
+.icon-default {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.icon-stroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.icon-info {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.icon-big {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.icon-breadcrumbs {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.center-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-phone-floating .icon-default {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+.btn-phone-floating .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.btn-phone-floating .btn-info {
+  background-color: #084c95;
+  border-radius: 5px;
+  color: #ffffff;
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-phone-floating .btn-info:hover {
+  background-color: #07386c;
+  color: #ffffff;
+}
+.btn-phone-floating .btn-info:focus {
+  background-color: #07386c;
+}
+.btn-phone-floating .btn-info:active {
+  background-color: #07386c;
+}
+.btn-phone-floating .btn-info:active:hover {
+  background-color: #07386c;
+}
+
+#blockModal .modal-footer {
+  display: flex;
+}
+
+.publications .publications__announcing .object-announce {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 5px;
+}
+.publications .publications__announcing .object-announce .object-announce__title {
+  color: #333333;
+}
+.publications .publications__announcing a {
+  color: #084c95;
+}
+.publications .publications__announcing a:hover {
+  color: #07386c;
+}
+.publications .publications__announcing a:visited {
+  color: #07386c;
+}
+.publications .publications__announcing .btn {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  vertical-align: bottom;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-weight: 500;
+  line-height: 1.314;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 32px !important;
+}
+.publications .publications__announcing .btn-default {
+  background-image: none;
+  filter: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #777777;
+  border: 1px solid #e6e6e6;
+  padding: 6px 10px;
+  font-weight: 500;
+  line-height: 1.42857143;
+}
+.publications .publications__announcing .btn-default:hover {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #f5f5f5;
+  border: 1px solid #e6e6e6;
+  color: #333333;
+}
+.publications .publications__announcing .btn-default.active {
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  color: #333333;
+}
+.publications .publications__announcing .btn-default.active:hover {
+  border: 1px solid #e6e6e6;
+  color: #333333;
+}
+.publications .publications__announcing .btn-default:focus {
+  box-shadow: none;
+  border: 1px solid #333333;
+}
+.publications .publications__announcing .object-announce__show-phone {
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #777777;
+  border: 1px solid #e6e6e6;
+  padding: 6px 10px;
+  background-image: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.publications .publications__announcing .object-announce__show-phone:hover {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #f5f5f5;
+  border: 1px solid #e6e6e6;
+  color: #333333;
+}
+.publications .publications__announcing .object-announce__show-phone:focus {
+  box-shadow: none;
+  border: 1px solid #333333;
+}
+.publications .publications__announcing .object-announce__show-phone:active {
+  border: 1px solid #e6e6e6;
+  color: #333333;
+}
+.publications .publications__announcing .object-announce__show-phone:active:hover {
+  border: 1px solid #e6e6e6;
+  color: #333333;
+}
+.publications .publications__announcing .btn-xs {
+  padding: 6px 10px;
+  font-size: 14px;
+  height: 32px !important;
+  line-height: 1.42857143;
+}
+.publications .publications__announcing .btn-group-xs > .btn {
+  line-height: 1.42857143;
+}
+.publications .publications__announcing .btn-default:active,
+.publications .publications__announcing .btn-default.active {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.publications .publications__announcing .object-announce__fotorama {
+  border-radius: 5px;
+  background-color: #fff;
+}
+.publications .publications__announcing .object-announce__price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 5px;
+}
+.publications .publications__announcing .object-announce__location {
+  color: #084c95;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.publications .publications__announcing .object-announce__text {
+  font-size: 14px;
+  color: #777777;
+  font-weight: 400;
+}
+.publications .publications__announcing .object-announce__location svg {
+  position: relative;
+  top: 2px;
+}
+.publications .publications__announcing .object-announce__action {
+  color: #777777;
+}
+.publications .publications__announcing .object-announce__action svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+.publications .publications__announcing .object-announce__actions-item:hover {
+  color: #333333;
+}
+.publications .publications__announcing .object-announce__status {
+  display: flex;
+  align-items: center;
+  color: #777777;
+  gap: 10px;
+  margin: 0;
+  text-shadow: none;
+}
+.publications .publications__announcing .object-announce__status .label {
+  text-shadow: none;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  width: auto;
+  font-weight: 500;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.publications .publications__announcing .object-announce__status .label.label-danger {
+  background-color: #d9534f;
+}
+.publications .publications__announcing .object-announce__status .label.label-default {
+  background-color: #7a7a7a;
+}
+.publications .publications__announcing .object-announce__status .label-info {
+  background-color: #084c95;
+}
+.publications .publications__announcing .object-announce_rise {
+  background: #e3f1fb;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.publications .publications__announcing .object-announce_urgent {
+  background: #fdfdda;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+@media screen and (max-width: 767px) {
+  .publications .publications__announcing .object-announce__text {
+    font-size: 14px;
+    margin-bottom: 5px;
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 4;
+    -webkit-line-clamp: 6;
+  }
+  .publications .publications__announcing .object-announce__status {
+    order: 5;
+    margin-bottom: 15px;
+  }
+  .publications .publications__announcing .object-announce__content {
+    margin-bottom: 15px;
+  }
+  .publications .publications__announcing .object-announce__show-phone {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=publications.css.map */
