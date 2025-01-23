@@ -216,10 +216,7 @@
 .publications .publications__announcing .object-announce__action svg {
   width: 17px;
   height: 17px;
-}
-.publications .publications__announcing .object-announce__action .notepad_action svg {
-  stroke: currentColor;
-  fill: none;
+  fill: currentColor;
 }
 .publications .publications__announcing .object-announce__actions-item:hover {
   color: #333333;

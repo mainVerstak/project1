@@ -242,25 +242,19 @@
               <div class="object-announce__action">
                 <span class="notepad_action">
                   <form
-                    action="/notepads?id=44833678&amp;notepad=true"
                     class="withoutBootstrapValidator"
-                    data-remote="true"
-                    method="post"
+                    method="get"
+                    action="/estate/124890408/edit"
                   >
                     <button
-                      class="object-announce__actions-item"
-                      title="Добавить в избранное"
+                      class="object-announce__actions-item hidden-xs"
+                      title="Редактировать объявление"
                       type="submit"
                     >
-                      <svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#favorite"></use>
+                      <svg icon-default>
+                        <use xlink:href="./img/new-icons.svg#paint"></use>
                       </svg>
                     </button>
-                    <input
-                      name="authenticity_token"
-                      type="hidden"
-                      value="cEQjZCqlkyCPWf/EABB38PkzU+PrxihV56u/xh/OehM="
-                    />
                   </form>
                 </span>
               </div>
@@ -364,5 +358,29 @@
         </div>
       </div>
     </div>
+    <script>
+      const editButton = document.querySelector(
+        ".object-announce__actions-item"
+      );
+
+      const announceCard = document.querySelector(".object-announce");
+
+      const labelContainer = document.querySelector(".object-announce__status");
+
+      editButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (announceCard.classList.contains("object-announce_rise")) {
+          announceCard.classList.remove("object-announce_rise");
+          announceCard.classList.add("object-announce_urgent");
+          labelContainer.innerHTML =
+            '<span class="label label-default">yandex_feed</span> <span class="label label-danger"><i class="fas fa-bolt"></i> горячее</span>  <time class="smart_time object-announce__date" datetime="2025-01-22 11:42:34 +0300" time_zone="3">вчера в 11:42</time>';
+        } else {
+          announceCard.classList.remove("object-announce_urgent");
+          announceCard.classList.add("object-announce_rise");
+          labelContainer.innerHTML =
+            '<span class="label label-info"><svg class="icon-default"><use xlink:href="./img/new-icons.svg#top"></use></svg>Поднято</span><time class="object-announce__date"> Только что </time>';
+        }
+      });
+    </script>
   </body>
 </html>

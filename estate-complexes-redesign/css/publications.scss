@@ -145,12 +145,7 @@
       svg {
         width: 17px;
         height: 17px;
-      }
-      .notepad_action {
-        svg {
-          stroke: currentColor;
-          fill: none;
-        }
+        fill: currentColor;
       }
     }
     .object-announce__actions-item:hover {
