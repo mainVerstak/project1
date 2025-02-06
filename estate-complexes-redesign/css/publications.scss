@@ -394,17 +394,6 @@
   z-index: 1;
 }
 
-.publications::before {
-  content: "";
-  top: -94px;
-  left: -15px;
-  right: -15px;
-  height: 266px;
-  background: #f0f2f7;
-  position: absolute;
-  z-index: -1;
-}
-
 .publications__title1 {
   font-weight: 700;
   font-size: 32px;
@@ -887,9 +876,6 @@
   .publications {
     padding-top: 12px;
   }
-  .publications::before {
-    height: 225px;
-  }
   .publications__title1 {
     font-size: 28px;
   }
@@ -963,9 +949,6 @@
 @media screen and (max-width: 600px) {
   .publications {
     padding-top: 8px;
-  }
-  .publications::before {
-    height: 260px;
   }
   .publications__title1 {
     font-size: 24px;
