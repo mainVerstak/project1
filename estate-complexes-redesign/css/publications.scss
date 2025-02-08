@@ -162,6 +162,12 @@
       color: $color-grey-text;
       gap: 10px;
       margin: 0;
+      flex-wrap: wrap;
+      padding: 5px 0;
+    }
+
+    .object__date {
+      margin: 0;
     }
 
     .object__status {

@@ -228,6 +228,11 @@
   color: #777777;
   gap: 10px;
   margin: 0;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+.publications__announcing .object .object__date {
+  margin: 0;
 }
 .publications__announcing .object .object__status .label {
   font-size: 14px;
