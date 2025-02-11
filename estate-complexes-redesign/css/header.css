@@ -81,6 +81,10 @@
   background-color: #07386c;
 }
 
+#blockModal .modal-footer {
+  display: flex;
+}
+
 .header-top {
   position: relative;
 }
@@ -205,8 +209,8 @@
     padding: 15px 10px;
   }
   .navbar-toggle {
-    margin-top: 13px;
-    margin-bottom: 13px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .sidenav {
     width: 310px;
@@ -511,7 +515,7 @@ header .navbar-default .navbar-nav > .active > a {
 }
 @media (max-width: 767px) {
   header .pull-left .navbar-brand {
-    margin-top: 14px;
+    margin-top: 0;
   }
   header .sidenav_open .header-city-btn {
     display: none;
