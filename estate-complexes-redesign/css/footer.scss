@@ -23,6 +23,12 @@
 .footer__nav-link:focus {
   color: $color-grey-dark;
 }
+.footer__nav-link:visited {
+  color: $color-grey-text;
+}
+.footer__nav-link:visited:hover {
+  color: $color-grey-dark;
+}
 
 .footer__inner {
   display: flex;

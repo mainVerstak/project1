@@ -81,6 +81,10 @@
   background-color: #07386c;
 }
 
+#blockModal .modal-footer {
+  display: flex;
+}
+
 .container {
   border-radius: 0 0 10px 10px;
 }
@@ -107,6 +111,14 @@
 }
 
 .footer__nav-link:focus {
+  color: #333333;
+}
+
+.footer__nav-link:visited {
+  color: #777777;
+}
+
+.footer__nav-link:visited:hover {
   color: #333333;
 }
 
