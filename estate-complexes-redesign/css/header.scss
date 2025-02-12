@@ -583,3 +583,8 @@ header {
   top: 10px;
   height: calc(100% - 10px + 92px);
 }
+
+.mortgage-main::before {
+  top: 10px;
+  height: calc(100% + 10px + 100px);
+}
