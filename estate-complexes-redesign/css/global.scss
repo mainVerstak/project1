@@ -103,3 +103,25 @@ $padding-btn-small: 6px 10px;
 #blockModal .modal-footer {
   display: flex;
 }
+
+.form-fast-search-locations-modal {
+  .selectize-input {
+    display: flex !important;
+    align-items: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  .selectize-control.multi .selectize-input > div {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 768px) {
+    .selectize-control.multi .selectize-input > div {
+      margin: 0 3px 3px 0;
+      padding-right: 27px;
+    }
+  }
+}
