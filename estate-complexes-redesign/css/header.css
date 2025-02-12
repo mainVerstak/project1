@@ -617,18 +617,18 @@ header .balance-currency {
 }
 
 .js-about-styled .about-hero::before {
-  top: 20px;
-  height: calc(100% - 10px);
+  top: 20px !important;
+  height: calc(100% - 10px) !important;
 }
 
 .tariff-main::before {
-  top: 10px;
-  height: calc(100% - 10px + 92px);
+  top: 10px !important;
+  height: calc(100% - 10px + 92px) !important;
 }
 
 .mortgage-main::before {
-  top: 10px;
-  height: calc(100% + 10px + 100px);
+  top: 10px !important;
+  height: calc(100% + 10px + 100px) !important;
 }
 
 /*# sourceMappingURL=header.css.map */
