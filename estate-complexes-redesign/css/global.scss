@@ -143,5 +143,9 @@ $padding-btn-small: 6px 10px;
 }
 
 .header_adv_long {
-  display: flex;
+  display: block;
+}
+
+.container.full-size {
+  height: unset;
 }

@@ -118,7 +118,11 @@
 }
 
 .header_adv_long {
-  display: flex;
+  display: block;
+}
+
+.container.full-size {
+  height: unset;
 }
 
 .header-top {
@@ -650,6 +654,11 @@ header .balance-currency {
 
 .tariff2-main::before {
   display: none;
+}
+
+.tariff2-main__balance {
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .js-about-styled .about-hero::before {

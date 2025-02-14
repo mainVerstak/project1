@@ -574,6 +574,11 @@ header {
   display: none;
 }
 
+.tariff2-main__balance {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
 .js-about-styled .about-hero::before {
   top: 20px !important;
   height: calc(100% - 10px) !important;
