@@ -125,3 +125,23 @@ $padding-btn-small: 6px 10px;
     }
   }
 }
+
+.search_nav_bar {
+  gap: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+
+  .search_nav_bar_item {
+    border-radius: 5px;
+    border: 1px solid $color-border;
+  }
+
+  .search_nav_bar_item:first-child::after {
+    display: none;
+  }
+}
+
+.header_adv_long {
+  display: flex;
+}
