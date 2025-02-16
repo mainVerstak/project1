@@ -685,6 +685,14 @@
   }
 }
 
+.map_container {
+  height: calc(100vh - 96px);
+
+  @media (max-width: 767px) {
+    height: calc(100vh - 138px);
+  }
+}
+
 .map_panel_body {
   max-height: 80vh;
 }
@@ -732,6 +740,10 @@
     border: 1px solid $color-grey-dark;
     color: $color-white;
   }
+  .main_search_buttons {
+    margin-bottom: 16px;
+  }
+
   .main_search_buttons .btn-primary {
     flex-grow: 0;
   }
