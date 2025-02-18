@@ -133,6 +133,20 @@
   height: unset;
 }
 
+.container.container-height-full {
+  min-height: calc(100vh - 346px);
+}
+@media (max-width: 991px) {
+  .container.container-height-full {
+    min-height: unset;
+  }
+}
+@media (max-width: 767px) {
+  .container.container-height-full {
+    min-height: unset;
+  }
+}
+
 .header-top {
   position: relative;
 }
@@ -674,6 +688,11 @@ header .balance-currency {
   height: calc(100% - 10px) !important;
 }
 
+.js-about-styled .about-hero {
+  position: relative;
+  margin-top: -15px !important;
+}
+
 .tariff-main::before {
   top: 10px !important;
   height: calc(100% - 10px + 92px) !important;
@@ -682,6 +701,21 @@ header .balance-currency {
 .mortgage-main::before {
   top: 10px !important;
   height: calc(100% + 10px + 100px) !important;
+}
+
+.xml-main {
+  margin-top: 0 !important;
+}
+
+.xml-main::before {
+  top: 0 !important;
+  height: calc(100% + 92px) !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .xml-main__content {
+    padding-top: 10px !important;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */
