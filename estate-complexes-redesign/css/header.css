@@ -357,6 +357,13 @@
   gap: 5px;
 }
 
+.header-city-btn span {
+  max-width: calc(100vw - 200px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .header-top-nav .nav > li > a:focus {
   color: #333333;
 }
