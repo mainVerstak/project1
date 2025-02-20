@@ -98,14 +98,20 @@
   align-items: center !important;
   padding-bottom: 0 !important;
 }
-.form-fast-search-locations-modal .selectize-control.multi .selectize-input > div {
+.form-fast-search-locations-modal
+  .selectize-control.multi
+  .selectize-input
+  > div {
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 @media (max-width: 768px) {
-  .form-fast-search-locations-modal .selectize-control.multi .selectize-input > div {
+  .form-fast-search-locations-modal
+    .selectize-control.multi
+    .selectize-input
+    > div {
     margin: 0 3px 3px 0;
     padding-right: 27px;
   }
@@ -690,12 +696,12 @@ header .balance-currency {
   margin-bottom: 12px;
 }
 
-.js-about-styled .about-hero::before {
+.about-styled .about-hero::before {
   top: 20px !important;
   height: calc(100% - 10px) !important;
 }
 
-.js-about-styled .about-hero {
+.about-styled .about-hero {
   position: relative;
   margin-top: -15px !important;
 }
