@@ -227,10 +227,16 @@
 }
 
 .header-city-btn span {
-  max-width: calc(100vw - 200px);
+  max-width: calc(100vw - 230px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@media (min-width: 767px) {
+  .header-city-btn span {
+    max-width: calc(100vw - 580px);
+  }
 }
 
 .header-top-nav .nav > li > a:focus {
