@@ -1254,58 +1254,6 @@ header strong,
   text-align: start;
 }
 
-.ds-tabs .ds-item {
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: $border-radius;
-  border: 1px solid $color-border;
-}
-.ds-tabs .ds-item h2 {
-  font-size: 18px;
-  font-weight: 400;
-}
-.ds-tabs .ds-question svg {
-  display: flex;
-  transform: rotate(0deg);
-  margin-left: 10px;
-}
-
-/* Review-box */
-.review-box .well {
-  background-color: $color-white;
-  padding: 0;
-  margin: 0 15px;
-  margin-bottom: 20px;
-}
-.review-box .input-group {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
-.review-box .input-group .form-control {
-  width: 100%;
-  border-radius: $border-radius;
-  border: 1px solid $color-border;
-}
-.review-box .input-group input.form-control:first-child:not(:only-child) {
-  border-radius: $border-radius !important;
-  border: 1px solid $color-border;
-}
-.review-box .input-group .input-group-btn {
-  width: fit-content;
-}
-.review-box .input-group .btn {
-  margin: 0;
-  border-radius: $border-radius;
-}
-
-@media (max-width: 768px) {
-  .review-box .well .input-group {
-    flex-direction: column;
-    gap: 5px;
-  }
-}
-
 /* Footer */
 /* Old styles for footer */
 .footer__inner {

@@ -1,3 +1,5 @@
+@import "global";
+
 .ds-tabs {
   margin-bottom: 10px;
   .ds-question {
@@ -9,6 +11,8 @@
       display: flex;
       transform: rotate(-180deg);
       margin-left: 10px;
+      min-width: 16px;
+      min-height: 16px;
     }
     h2 {
       margin: 0;
@@ -46,7 +50,7 @@
 }
 
 .ds-item {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
   padding-bottom: 20px;
   margin-bottom: 20px;
   &.active {
@@ -56,5 +60,23 @@
     .ds-answer {
       display: block;
     }
+  }
+}
+
+.ds-tabs {
+  .ds-item {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: $border-radius;
+    border: 1px solid $color-border;
+  }
+  .ds-item h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .ds-question svg {
+    display: flex;
+    transform: rotate(0deg);
+    margin-left: 10px;
   }
 }
