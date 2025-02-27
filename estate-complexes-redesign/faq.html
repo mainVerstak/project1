@@ -451,46 +451,103 @@
             <div class="row" id="post-review-box" style="display: none">
               <div class="col-md-12">
                 <form
-                  class="form_ld_comment withoutBootstrapValidator no-default-submit"
+                  class="form_ld_comment withoutBootstrapValidator no-default-submit fv-form fv-form-bootstrap"
                   data-not-disable-submit="true"
+                  novalidate="novalidate"
                 >
-                  <input
+                  <button
+                    type="submit"
+                    class="fv-hidden-submit"
+                    style="display: none; width: 0px; height: 0px"
+                  ></button
+                  ><input
                     type="hidden"
                     name="section_id"
                     id="section_id"
-                    value="7015170"
+                    value="164"
                   /><input type="hidden" name="rating" id="rating" value="5" />
-                  <div class="form-group">
+                  <div class="form-group has-feedback">
                     <textarea
                       name="comment"
                       id="comment"
                       rows="5"
                       cols="50"
                       placeholder="Введите свой отзыв здесь..."
-                      class="form-control"
-                    ></textarea>
+                      class="form-control textarea_loaded"
+                      data-fv-field="comment"
+                      style="
+                        overflow: hidden;
+                        overflow-wrap: break-word;
+                        resize: horizontal;
+                        height: 114px;
+                        line-height: 20px;
+                      "
+                    ></textarea
+                    ><i
+                      style="display: none"
+                      class="form-control-feedback fv-icon-no-label"
+                      data-fv-icon-for="comment"
+                    ></i
+                    ><small
+                      style="display: none"
+                      class="help-block"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="comment"
+                      data-fv-result="NOT_VALIDATED"
+                      >Пожалуйста, напишите свой отзыв</small
+                    >
                   </div>
                   <div class="text-right">
                     <div class="stars">
                       <span class="text-muted small">Рейтинг</span>
-                      <div class="starrr" data-rating="5"></div>
+                      <div class="starrr" data-rating="5">
+                        <a href="#" class="fas fa-star"></a
+                        ><a href="#" class="fas fa-star"></a
+                        ><a href="#" class="fas fa-star"></a
+                        ><a href="#" class="fas fa-star"></a
+                        ><a href="#" class="fas fa-star"></a>
+                      </div>
                     </div>
-                    <button
-                      class="btn btn-danger btn-sm"
-                      id="close-review-box"
-                      type="button"
-                    >
-                      <span class="glyphicon glyphicon-remove"></span>Отмена
-                    </button>
-                    <button class="btn btn-success btn-lg" type="submit">
-                      Сохранить
-                    </button>
+                    <div class="post-buttons">
+                      <button
+                        class="btn btn-danger"
+                        id="close-review-box"
+                        type="button"
+                      >
+                        <svg class="icon-default">
+                          <use xlink:href="./img/new-icons.svg#cross"></use>
+                        </svg>
+                        Отмена
+                      </button>
+                      <button class="btn btn-primary" type="submit">
+                        Сохранить
+                      </button>
+                    </div>
                   </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const openReviewBox = document.getElementById("open-review-box");
+            const postReviewBox = document.getElementById("post-review-box");
+            const closeReviewBox = document.getElementById("close-review-box");
+
+            openReviewBox
+              .querySelector("input")
+              .addEventListener("click", function () {
+                postReviewBox.style.display = "block";
+                openReviewBox.style.display = "none";
+              });
+
+            closeReviewBox.addEventListener("click", function () {
+              postReviewBox.style.display = "none";
+              openReviewBox.style.display = "flex";
+            });
+          });
+        </script>
       </div>
     </div>
     <div class="container">
