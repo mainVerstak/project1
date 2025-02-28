@@ -147,3 +147,17 @@
     }
   }
 }
+
+.rating {
+  svg.icon-rating {
+    width: 16px;
+    height: 16px;
+    fill: $color-blue;
+  }
+  svg.icon-rating-not-fill {
+    width: 16px;
+    height: 16px;
+    stroke: $color-blue;
+    fill: none;
+  }
+}

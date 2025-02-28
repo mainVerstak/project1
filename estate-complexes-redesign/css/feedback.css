@@ -281,4 +281,16 @@
   height: 20px;
 }
 
+.rating svg.icon-rating {
+  width: 16px;
+  height: 16px;
+  fill: #084c95;
+}
+.rating svg.icon-rating-not-fill {
+  width: 16px;
+  height: 16px;
+  stroke: #084c95;
+  fill: none;
+}
+
 /*# sourceMappingURL=feedback.css.map */
