@@ -190,6 +190,9 @@
   border-right: 6px solid transparent;
   border-top: 6px solid #fff;
 }
+.placemark-label.hidden {
+  display: none;
+}
 
 /* Стили для точек меток */
 .placemark-point {
@@ -237,6 +240,12 @@
   position: relative;
   top: -25px;
 }
+.cluster-content.viewed {
+  background-color: transparent;
+}
+.cluster-content.label-hidden {
+  top: unset !important;
+}
 
 .cluster-label {
   display: flex;
@@ -270,6 +279,9 @@
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid #fff;
+}
+.cluster-label.hidden {
+  display: none;
 }
 
 /* Стили для просмотренных меток */

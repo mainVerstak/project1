@@ -770,22 +770,97 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Создание кастомного макета для меток
     const MarkLayout = ymaps.templateLayoutFactory.createClass(
-      `<div class="placemark-label {% if properties.viewed %}viewed{% endif %}">{{ properties.formattedPrice }}</div>
+      `<div class="placemark-label {% if properties.viewed %}viewed{% endif %} {% if properties.isZoomHidden %}hidden{% endif %}">{{ properties.formattedPrice }}</div>
        <div class="placemark-point {% if properties.viewed %}viewed{% endif %}"></div>`, // Здесь подставится стандартная иконка
       {
         build: function () {
           MarkLayout.superclass.build.call(this);
+
+          // Получаем карту
+          this.map = this.getData().geoObject.getMap();
+
+          // Если карта существует, добавляем обработчик изменения зума
+          if (this.map) {
+            this.mapZoomEndListener = this.map.events
+              .group()
+              .add("boundschange", this.onMapZoomChange, this);
+
+            // Проверяем текущий зум при инициализации
+            this.onMapZoomChange();
+          }
+        },
+
+        clear: function () {
+          // Удаляем обработчик при удалении макета
+          if (this.mapZoomEndListener) {
+            this.mapZoomEndListener.removeAll();
+          }
+          MarkLayout.superclass.clear.call(this);
+        },
+
+        onMapZoomChange: function () {
+          // Получаем текущий зум карты
+          const currentZoom = this.map.getZoom();
+
+          console.log("currentZoom", currentZoom);
+
+          // Устанавливаем флаг скрытия в зависимости от зума
+          const isHidden = currentZoom <= 14;
+
+          // Проверяем, изменилось ли значение, чтобы избежать рекурсии
+          const currentHiddenState =
+            this.getData().properties.get("isZoomHidden");
+          if (currentHiddenState !== isHidden) {
+            this.getData().properties.set("isZoomHidden", isHidden);
+          }
         },
       }
     );
 
     // Создание кастомного макета для кластеров
     const ClusterLayout = ymaps.templateLayoutFactory.createClass(
-      `<div class="cluster-label">{{ properties.minPrice }}</div>
-       <div class="cluster-content">{{ properties.geoObjects.length }}</div>`,
+      `<div class="cluster-label {% if properties.isZoomHidden %}hidden{% endif %} {% if properties.viewed %}viewed{% endif %}">{{ properties.minPrice }}</div>
+       <div class="cluster-content {% if properties.isZoomHidden %}label-hidden{% endif %} {% if properties.viewed %}viewed{% endif %}">{{ properties.geoObjects.length }}</div>`,
       {
         build: function () {
           ClusterLayout.superclass.build.call(this);
+          // Получаем карту
+          this.map = this.getData().geoObject.getMap();
+
+          // Если карта существует, добавляем обработчик изменения зума
+          if (this.map) {
+            this.mapZoomEndListener = this.map.events
+              .group()
+              .add("boundschange", this.onMapZoomChange, this);
+
+            // Проверяем текущий зум при инициализации
+            this.onMapZoomChange();
+          }
+        },
+
+        clear: function () {
+          // Удаляем обработчик при удалении макета
+          if (this.mapZoomEndListener) {
+            this.mapZoomEndListener.removeAll();
+          }
+          MarkLayout.superclass.clear.call(this);
+        },
+
+        onMapZoomChange: function () {
+          // Получаем текущий зум карты
+          const currentZoom = this.map.getZoom();
+
+          console.log("currentZoomCluster", currentZoom);
+
+          // Устанавливаем флаг скрытия в зависимости от зума
+          const isHidden = currentZoom <= 14;
+
+          // Проверяем, изменилось ли значение, чтобы избежать рекурсии
+          const currentHiddenState =
+            this.getData().properties.get("isZoomHidden");
+          if (currentHiddenState !== isHidden) {
+            this.getData().properties.set("isZoomHidden", isHidden);
+          }
         },
       }
     );
@@ -794,6 +869,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const clusterer = new ymaps.Clusterer({
       preset: "islands#greenClusterIcons",
       clusterIconContentLayout: ClusterLayout,
+      clusterDisableClickZoom: true,
       hasBalloon: false,
       hasHint: false,
       clusterIconShape: {
@@ -814,20 +890,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Вычисляем минимальную цену среди объектов кластера
       let minPrice = Infinity;
-      let hasViewed = false;
+
+      // Проверяем, все ли объекты в кластере просмотрены
+      let allViewed = true;
 
       geoObjects.forEach((geoObject) => {
         const price = geoObject.properties.get("price");
         const viewed = geoObject.properties.get("viewed");
-        if (viewed) hasViewed = true;
+
+        // Если хотя бы один объект не просмотрен, кластер считается непросмотренным
+        if (!viewed) allViewed = false;
+
         if (price < minPrice) minPrice = price;
       });
 
       // Устанавливаем свойства кластера
       cluster.properties.set({
         minPrice: "от " + formatPrice(minPrice),
-        viewed: hasViewed,
+        viewed: allViewed, // Кластер просмотрен только если все объекты просмотрены
       });
+
+      // Устанавливаем пресет в зависимости от статуса просмотра
+      cluster.options.set(
+        "preset",
+        allViewed ? "islands#grayClusterIcons" : "islands#greenClusterIcons"
+      );
+      cluster.options.set("clusterIconContentLayout", ClusterLayout);
 
       return cluster;
     };
@@ -859,17 +947,30 @@ document.addEventListener("DOMContentLoaded", function () {
       );
 
       // Добавляем обработчик клика
-      placemark.events.add("click", function () {
-        const currentViewed = placemark.properties.get("viewed");
-        placemark.properties.set("viewed", !currentViewed);
+      placemark.events.add("click", function (e) {
+        try {
+          // Предотвращаем всплытие события, чтобы не срабатывал клик по карте
+          e.stopPropagation();
 
-        // Здесь можно добавить отправку статуса на сервер
-        console.log(
-          "Точка " +
-            point.id +
-            " отмечена как " +
-            (!currentViewed ? "просмотренная" : "непросмотренная")
-        );
+          // Получаем текущий статус просмотра
+          const currentViewed = placemark.properties.get("viewed");
+
+          // Инвертируем статус
+          const newViewedStatus = !currentViewed;
+
+          // Устанавливаем новый статус
+          placemark.properties.set("viewed", newViewedStatus);
+
+          // Логируем изменение
+          console.log(
+            "Точка " +
+              placemark.properties.get("id") +
+              " отмечена как " +
+              (newViewedStatus ? "просмотренная" : "непросмотренная")
+          );
+        } catch (error) {
+          console.error("Ошибка при обработке клика на метку:", error);
+        }
       });
 
       placemarks.push(placemark);
@@ -880,6 +981,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Добавление кластеризатора на карту
     map.geoObjects.add(clusterer);
+
+    // Добавляем обработчик клика по кластеру
+    clusterer.events.add("click", function (e) {
+      const cluster = e.get("target");
+
+      // Проверяем, что это действительно кластер
+      if (!cluster.getGeoObjects && cluster.properties) {
+        console.log("Это не кластер или у кластера нет метода getGeoObjects");
+        return;
+      }
+
+      try {
+        // Получаем геообъекты кластера
+        const geoObjects = cluster.getGeoObjects();
+
+        // Получаем текущий статус кластера
+        const isViewed = cluster.properties.get("viewed");
+
+        // Меняем статус всех точек в кластере
+        geoObjects.forEach((geoObject) => {
+          geoObject.properties.set("viewed", !isViewed);
+        });
+
+        // Обновляем статус кластера
+        cluster.properties.set("viewed", !isViewed);
+
+        // Меняем пресет кластера в зависимости от нового статуса
+        cluster.options.set(
+          "preset",
+          !isViewed ? "islands#grayClusterIcons" : "islands#greenClusterIcons"
+        );
+
+        // Предотвращаем стандартное поведение (раскрытие кластера)
+        e.preventDefault();
+
+        console.log(
+          "Статус кластера изменен на: " +
+            (!isViewed ? "просмотренный" : "непросмотренный")
+        );
+      } catch (error) {
+        console.error("Ошибка при обработке клика на кластер:", error);
+
+        // Альтернативный способ получения геообъектов
+        if (cluster.properties && cluster.properties.get("geoObjects")) {
+          const geoObjects = cluster.properties.get("geoObjects");
+          console.log(
+            "Получены геообъекты через properties:",
+            geoObjects.length
+          );
+
+          // Дальнейшая обработка...
+        }
+      }
+    });
 
     // Установка границ карты по меткам
     map.setBounds(clusterer.getBounds(), {

@@ -45,6 +45,10 @@ $map-point-gray-color: #b3b3b3;
     border-right: 6px solid transparent;
     border-top: 6px solid #fff;
   }
+
+  &.hidden {
+    display: none;
+  }
 }
 
 /* Стили для точек меток */
@@ -94,6 +98,14 @@ $map-point-gray-color: #b3b3b3;
 .cluster-content {
   position: relative;
   top: -25px;
+
+  &.viewed {
+    background-color: transparent;
+  }
+
+  &.label-hidden {
+    top: unset !important;
+  }
 }
 
 .cluster-label {
@@ -128,6 +140,10 @@ $map-point-gray-color: #b3b3b3;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid #fff;
+  }
+
+  &.hidden {
+    display: none;
   }
 }
 
