@@ -867,16 +867,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Создание кластеризатора
     const clusterer = new ymaps.Clusterer({
-      preset: "islands#greenClusterIcons",
-      clusterIconContentLayout: ClusterLayout,
-      clusterDisableClickZoom: true,
+      // Макет метки кластера pieChart
+      clusterIconLayout: "default#pieChart",
+      // Радиус диаграммы в пикселях
+      clusterIconPieChartRadius: 20,
+      // Радиус центральной части макета
+      clusterIconPieChartCoreRadius: 13,
+      // Ширина линий-разделителей секторов и внешней обводки диаграммы
+      clusterIconPieChartStrokeWidth: 3,
+      // Определяет наличие поля balloon
       hasBalloon: false,
-      hasHint: false,
-      clusterIconShape: {
-        type: "Circle",
-        coordinates: [0, 0],
-        radius: 20,
-      },
+      // Цвет центральной части диаграммы
+      clusterIconPieChartCoreColor: "#ffffff",
+      // Отключаем зум при клике на кластер
+      clusterDisableClickZoom: true,
     });
 
     // Кастомизация кластеров
@@ -891,31 +895,121 @@ document.addEventListener("DOMContentLoaded", function () {
       // Вычисляем минимальную цену среди объектов кластера
       let minPrice = Infinity;
 
-      // Проверяем, все ли объекты в кластере просмотрены
-      let allViewed = true;
+      // Подсчитываем количество просмотренных и непросмотренных объектов
+      let viewedCount = 0;
+      let notViewedCount = 0;
 
       geoObjects.forEach((geoObject) => {
         const price = geoObject.properties.get("price");
         const viewed = geoObject.properties.get("viewed");
 
-        // Если хотя бы один объект не просмотрен, кластер считается непросмотренным
-        if (!viewed) allViewed = false;
+        // Подсчитываем количество просмотренных и непросмотренных
+        if (viewed) {
+          viewedCount++;
+        } else {
+          notViewedCount++;
+        }
 
         if (price < minPrice) minPrice = price;
       });
 
+      // Определяем, все ли объекты просмотрены или нет
+      const allViewed = viewedCount === geoObjects.length;
+      const allNotViewed = notViewedCount === geoObjects.length;
+
       // Устанавливаем свойства кластера
       cluster.properties.set({
         minPrice: "от " + formatPrice(minPrice),
-        viewed: allViewed, // Кластер просмотрен только если все объекты просмотрены
+        viewed: allViewed,
+        geoObjectsLength: geoObjects.length,
+        isZoomHidden: false, // Начальное значение
       });
 
-      // Устанавливаем пресет в зависимости от статуса просмотра
-      cluster.options.set(
-        "preset",
-        allViewed ? "islands#grayClusterIcons" : "islands#greenClusterIcons"
+      // Создаем данные для диаграммы
+      const data = [];
+
+      // Добавляем сектор для непросмотренных объектов, если они есть
+      if (notViewedCount > 0) {
+        data.push({
+          weight: notViewedCount,
+          color: "#56db40", // Зеленый для непросмотренных
+        });
+      }
+
+      // Добавляем сектор для просмотренных объектов, если они есть
+      if (viewedCount > 0) {
+        data.push({
+          weight: viewedCount,
+          color: "#b3b3b3", // Серый для просмотренных
+        });
+      }
+
+      // Устанавливаем данные для диаграммы
+      cluster.properties.set("data", data);
+
+      // Создаем кастомный макет для отображения цены и количества объектов
+      const PieChartWithLabelLayout = ymaps.templateLayoutFactory.createClass(
+        `<div class="cluster-label {% if properties.isZoomHidden %}hidden{% endif %}">{{ properties.minPrice }}</div>
+         <div class="cluster-content {% if properties.isZoomHidden %}label-hidden{% endif %}">{{ properties.geoObjectsLength }}</div>
+         <div class="pie-chart-content"></div>`,
+        {
+          build: function () {
+            PieChartWithLabelLayout.superclass.build.call(this);
+
+            // Получаем карту
+            this.map = this.getData().geoObject.getMap();
+
+            // Если карта существует, добавляем обработчик изменения зума
+            if (this.map) {
+              this.mapZoomEndListener = this.map.events
+                .group()
+                .add("boundschange", this.onMapZoomChange, this);
+
+              // Проверяем текущий зум при инициализации
+              this.onMapZoomChange();
+            }
+          },
+
+          clear: function () {
+            // Удаляем обработчик при удалении макета
+            if (this.mapZoomEndListener) {
+              this.mapZoomEndListener.removeAll();
+            }
+            PieChartWithLabelLayout.superclass.clear.call(this);
+          },
+
+          onMapZoomChange: function () {
+            // Получаем текущий зум карты
+            const currentZoom = this.map.getZoom();
+
+            // Устанавливаем флаг скрытия в зависимости от зума
+            const isHidden = currentZoom <= 14;
+
+            // Проверяем, изменилось ли значение, чтобы избежать рекурсии
+            const currentHiddenState =
+              this.getData().properties.get("isZoomHidden");
+            if (currentHiddenState !== isHidden) {
+              this.getData().properties.set("isZoomHidden", isHidden);
+            }
+          },
+        }
       );
-      cluster.options.set("clusterIconContentLayout", ClusterLayout);
+
+      // Если в кластере есть как просмотренные, так и непросмотренные объекты,
+      // используем кастомный макет с диаграммой
+      if (!allViewed && !allNotViewed) {
+        cluster.options.set(
+          "clusterIconContentLayout",
+          PieChartWithLabelLayout
+        );
+      } else {
+        // Если все объекты просмотрены или все непросмотрены, используем стандартный макет
+        cluster.options.set("clusterIconContentLayout", ClusterLayout);
+        cluster.options.set(
+          "preset",
+          allViewed ? "islands#grayClusterIcons" : "islands#greenClusterIcons"
+        );
+      }
 
       return cluster;
     };
