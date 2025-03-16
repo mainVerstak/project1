@@ -118,6 +118,18 @@ body {
 
 .btn-default {
   color: $color-dark;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+  &:focus {
+    border: 2px solid $color-dark;
+  }
+  &:disabled {
+    background-color: $color-surface;
+    color: $color-disabled;
+  }
 }
 
 .btn-primary {
@@ -126,6 +138,13 @@ body {
 
   &:hover {
     background-color: $color-primary-hover;
+  }
+  &:focus {
+    border: 2px solid $color-dark;
+  }
+  &:disabled {
+    background-color: $color-surface;
+    color: $color-disabled;
   }
 }
 
