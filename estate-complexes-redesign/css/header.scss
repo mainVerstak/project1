@@ -81,14 +81,6 @@
   color: rgba(255, 255, 255, 0.65);
 }
 
-.header-city-btn .fa-map-marker-alt {
-  color: #fff;
-}
-
-.header-city-btn:hover {
-  color: #fff;
-}
-
 .header-city-btn .caret {
   width: 8px;
   height: 8px;
@@ -212,12 +204,12 @@
 
 /*Header */
 .header-top-nav {
-  background-color: $color-grey-background;
+  background-color: $color-surface;
   font-weight: 500;
 }
 .header-city-btn,
 .header-top-nav a {
-  color: $color-grey-text;
+  color: $color-grey;
 }
 
 .header-city-btn {
@@ -248,12 +240,12 @@
 .header-city-btn:focus,
 .header-top-nav .nav > li:focus,
 .header-top-nav .nav > li > a:focus {
-  color: $color-grey-dark !important;
+  color: $color-dark !important;
 }
 
 @media (hover: hover) {
   .header-top-nav .nav > li > a:hover {
-    color: $color-grey-dark;
+    color: $color-dark;
   }
   .navbar-btn a:hover {
     text-decoration: none !important;
@@ -261,7 +253,7 @@
   .header-city-btn:hover,
   .header-top-nav .nav > li:hover,
   .header-top-nav .nav > li > a:hover {
-    color: $color-grey-dark !important;
+    color: $color-dark !important;
   }
 }
 
