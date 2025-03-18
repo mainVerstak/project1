@@ -2,14 +2,14 @@
 
 /* Cards */
 .object {
-  background-color: $color-grey-superlight;
-  border-radius: 10px;
-  padding: 5px 0;
+  background-color: $color-surface;
+  border-radius: 8px;
+  padding: 3px 0;
   margin-top: 5px;
 }
 
 .object.object_marked {
-  background-color: $color-yellow-bg;
+  background-color: $color-attention-surface;
   box-shadow: none;
 }
 
@@ -290,8 +290,9 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-    height: 34px !important;
+    height: 44px !important;
     width: fit-content;
+    font-weight: 700;
   }
   .object__show-phone:visited {
     color: $color-white !important;
@@ -308,6 +309,9 @@
 
   .object__meta {
     padding: 10px 0;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    border-left: 1px solid $color-white;
   }
 
   .object__actions {
@@ -316,6 +320,16 @@
     right: -10px;
     bottom: 18px;
     width: auto;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+    }
   }
 
   .header_adv_short {
@@ -364,37 +378,59 @@
     margin: 0;
   }
 
-  .object__status .label.label-danger {
-    font-size: 14px;
-    color: $color-white;
-    background-color: $color-red;
-    padding: 6px 10px;
-    border-radius: 5px;
-    width: auto;
-    font-weight: 500;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-  }
-  .object__status .label.label-default {
-    padding: 6px 10px;
-    border-radius: 5px;
-    width: auto;
-    font-weight: 500;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    font-size: 14px;
+  .object__status .label {
+    &.label-danger {
+      font-size: 14px;
+      color: $color-white;
+      background-color: $color-invalid;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 13px;
+      width: auto;
+      font-weight: 700;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    &.label-default {
+      padding: 6px 10px;
+      border-radius: 13px;
+      color: $color-grey;
+      background-color: $color-white;
+      width: auto;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      font-size: 14px;
+    }
+    &.label-primary {
+      padding: 6px 10px;
+      border-radius: 13px;
+      color: $color-white;
+      text-transform: uppercase;
+      background-color: $color-primary;
+      width: auto;
+      font-weight: 700;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      font-size: 14px;
+    }
   }
 
   .object__owner-name {
     display: flex;
     align-items: center;
     gap: 5px;
+    // flex-direction: column;
   }
 
   .col-xs-1,
@@ -447,8 +483,8 @@
   .col-lg-12 {
     position: relative;
     min-height: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
   }
   @media (max-width: 1200px) {
     .col-xs-1,
@@ -507,28 +543,70 @@
     }
   }
 
-  .notepad_action .object__actions-item svg {
-    stroke: currentColor;
-    fill: none;
-  }
+  .notepad_action {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3px;
 
-  .object__actions-item.active svg {
-    fill: currentColor;
+    .object__actions-item svg {
+      stroke: currentColor;
+      fill: none;
+    }
   }
 
   .object__actions-item {
-    color: $color-grey-text;
-  }
-  .object__actions-item svg {
-    width: 17px;
-    height: 17px;
-  }
-  .object__actions-item:hover svg {
-    color: $color-grey-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: $border-radius;
+    background-color: $color-white;
+    color: $color-dark;
+
+    svg {
+      width: 14px;
+      height: 14px;
+
+      &.hot {
+        color: $color-invalid;
+      }
+      &.top {
+        color: $color-primary;
+      }
+    }
+    &.active svg {
+      &.hot {
+        color: $color-invalid;
+      }
+      &.top {
+        color: $color-primary;
+      }
+    }
+
+    &.active .object__actions-item {
+      color: $color-dark;
+    }
+    &:hover {
+      border: 1px solid $color-secondary;
+      background-color: $color-secondary;
+
+      svg {
+        color: $color-primary;
+        &.hot {
+          color: $color-invalid;
+        }
+      }
+    }
   }
 
   .object__owner {
     margin-bottom: 0 !important;
+    display: flex;
+    flex-direction: column-reverse; //TODO: use flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
   }
 
   @media (max-width: 1024px) {
@@ -560,13 +638,12 @@
       width: unset;
     }
     .object__show-phone {
-      height: 36px !important;
+      height: 44px !important;
     }
   }
   @media (min-width: 1024px) {
     .object__actions {
-      right: -15px !important;
-      padding-top: 5px;
+      padding-top: 3px;
     }
   }
   @media (min-width: 768px) {
@@ -648,73 +725,48 @@
 .pagination {
   li span,
   li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 5px;
-    border: 1px solid $color-border;
+    border: 1px solid $color-secondary;
     padding: 5px 10px;
     margin: 0 2.5px;
     font-size: 14px;
+    font-weight: 700;
     background-color: $color-white;
-    color: $color-grey-dark;
-    min-width: 32px;
-    min-height: 32px;
+    color: $color-dark;
+    min-width: 44px;
+    min-height: 44px;
     text-align: center;
     vertical-align: middle;
     background-image: none;
-  }
 
-  li span:hover,
-  li a:hover {
-    background-color: $color-grey-superlight;
-    color: $color-grey-dark;
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-primary;
+      border: 1px solid $color-secondary;
+    }
+
+    &.disabled,
+    &:disabled,
+    &.disabled:hover {
+      background-color: $color-white;
+      color: $color-dark;
+      border: 1px solid $color-secondary;
+    }
   }
 
   li.active span,
   li.active a {
-    background-color: $color-border;
-    color: $color-grey-dark;
-    border: 1px solid $color-border;
-  }
+    background-color: $color-secondary;
+    color: $color-primary;
+    border: 1px solid $color-secondary;
 
-  li.active span:hover,
-  li.active a:hover {
-    background-color: $color-border;
-    color: $color-grey-dark;
-    border: 1px solid $color-border;
-  }
-
-  li span,
-  li a {
-    border-radius: 5px;
-    border: 1px solid $color-border;
-    padding: 5px 10px;
-    margin: 0 2.5px;
-    font-size: 14px;
-    background-color: $color-white;
-    color: $color-grey-dark;
-    min-width: 32px;
-    min-height: 32px;
-    text-align: center;
-    vertical-align: middle;
-    background-image: none;
-  }
-
-  li span:hover,
-  li a:hover {
-    background-color: $color-grey-superlight;
-    color: $color-grey-dark;
-  }
-
-  li.active span,
-  li.active a {
-    background-color: $color-border;
-    color: $color-grey-dark;
-    border: 1px solid $color-border;
-  }
-
-  li.active span:hover,
-  li.active a:hover {
-    background-color: $color-border;
-    color: $color-grey-dark;
-    border: 1px solid $color-border;
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-primary;
+      border: 1px solid $color-secondary;
+    }
   }
 }

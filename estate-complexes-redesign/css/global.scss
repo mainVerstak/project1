@@ -21,6 +21,7 @@ $color-border: #e6e6e6;
 $border-radius: 5px;
 $border-radius-big: 10px;
 $padding-btn-small: 6px 10px;
+$padding-btn-big: 15px;
 
 // New colors
 $color-primary: #084c95;
@@ -90,6 +91,7 @@ p {
 body {
   color: $color-dark;
   line-height: 1.5;
+  background-color: $color-surface;
 }
 
 // Buttons
@@ -114,6 +116,10 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+
+  &:focus {
+    outline: 2px solid $color-dark;
+  }
 }
 
 .btn-default {
