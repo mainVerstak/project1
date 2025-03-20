@@ -2143,6 +2143,7 @@ a.ds-button:hover {
   .header-top-nav .nav > li:hover,
   .header-top-nav .nav > li > a:hover {
     color: #242a3e !important;
+    background-color: transparent !important;
   }
 }
 @media (hover: none) {

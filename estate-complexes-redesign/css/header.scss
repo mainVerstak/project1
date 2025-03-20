@@ -239,6 +239,7 @@
   .header-top-nav .nav > li:hover,
   .header-top-nav .nav > li > a:hover {
     color: $color-dark !important;
+    background-color: transparent !important;
   }
 }
 
