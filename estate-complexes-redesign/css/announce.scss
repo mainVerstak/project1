@@ -1,4 +1,4 @@
-@import "./global.scss";
+// @import "./global.scss";
 
 /* Cards */
 .object {
@@ -13,97 +13,97 @@
   box-shadow: none;
 }
 
-.search-result-preview,
-.pagination {
-  .dropdown-toggle {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    vertical-align: bottom;
-    border-radius: $border-radius;
-    padding: $padding-btn-small;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    height: 32px !important;
-    background-image: none;
-    filter: none;
-    background-color: $color-white;
-    color: $color-grey-text;
-    border: 1px solid $color-border;
-    line-height: 1.42857143;
-    text-decoration: none;
-  }
+// .search-result-preview,
+// .pagination {
+// .dropdown-toggle {
+//   text-shadow: none;
+//   -webkit-box-shadow: none;
+//   box-shadow: none;
+//   vertical-align: bottom;
+//   border-radius: $border-radius;
+//   padding: $padding-btn-small;
+//   font-weight: 500;
+//   display: flex;
+//   align-items: center;
+//   gap: 5px;
+//   height: 32px !important;
+//   background-image: none;
+//   filter: none;
+//   background-color: $color-white;
+//   color: $color-grey-text;
+//   border: 1px solid $color-border;
+//   line-height: 1.42857143;
+//   text-decoration: none;
+// }
 
-  a.dropdown-toggle:visited {
-    color: $color-grey-text;
-  }
+// a.dropdown-toggle:visited {
+//   color: $color-grey-dark;
+// }
 
-  .dropdown-toggle:hover {
-    background-color: $color-grey-superlight;
-    border: 1px solid $color-border;
-    color: $color-grey-dark;
-  }
-  .dropdown-toggle.active {
-    background-color: $color-border;
-    border: 1px solid $color-border;
-    color: $color-grey-dark;
-  }
-  .dropdown-toggle.active:hover {
-    border: 1px solid $color-border;
-    color: $color-grey-dark;
-  }
-  .dropdown-toggle:focus {
-    box-shadow: none;
-    border: 1px solid $color-grey-dark;
-  }
+// .dropdown-toggle:hover {
+//   background-color: $color-grey-superlight;
+//   border: 1px solid $color-border;
+//   color: $color-grey-dark;
+// }
+// .dropdown-toggle.active {
+//   background-color: $color-border;
+//   border: 1px solid $color-border;
+//   color: $color-grey-dark;
+// }
+// .dropdown-toggle.active:hover {
+//   border: 1px solid $color-border;
+//   color: $color-grey-dark;
+// }
+// .dropdown-toggle:focus {
+//   box-shadow: none;
+//   border: 1px solid $color-grey-dark;
+// }
 
-  .dropdown-menu {
-    border-radius: $border-radius;
-    background-color: $color-white;
-    padding: 0 !important;
-    border: 1px solid $color-border !important;
-    box-shadow: none !important;
-  }
-  .dropdown-menu li a {
-    font-size: 14px;
-    font-weight: 500 !important;
-    color: $color-grey-text !important;
-    padding: $padding-btn-small;
-    margin: 0 !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-bottom: 1px solid $color-grey-superlight !important;
-  }
-  .dropdown-menu > li > a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-  }
+// .dropdown-menu {
+//   border-radius: $border-radius;
+//   background-color: $color-white;
+//   padding: 0 !important;
+//   border: 1px solid $color-border !important;
+//   box-shadow: none !important;
+// }
+// .dropdown-menu li a {
+//   font-size: 14px;
+//   font-weight: 500 !important;
+//   color: $color-grey-text !important;
+//   padding: $padding-btn-small;
+//   margin: 0 !important;
+//   border: none !important;
+//   border-radius: 0 !important;
+//   box-shadow: none !important;
+//   border-top: none !important;
+//   border-left: none !important;
+//   border-right: none !important;
+//   border-bottom: 1px solid $color-grey-superlight !important;
+// }
+// .dropdown-menu > li > a {
+//   display: flex;
+//   align-items: center;
+//   gap: 5px;
+//   padding: 5px 10px;
+// }
 
-  .dropdown-menu li a:hover {
-    background-color: $color-grey-superlight;
-    background-image: none !important;
-  }
-  .dropdown-menu li:first-child a {
-    border-radius: $border-radius $border-radius 0 0 !important;
-  }
-  .dropdown-menu li:last-child a {
-    border-radius: 0 0 $border-radius $border-radius !important;
-    border: none !important;
-  }
-  .dropdown-menu li.active a {
-    background-color: $color-border !important;
-    color: $color-grey-dark !important;
-    background-image: none !important;
-  }
-}
+// .dropdown-menu li a:hover {
+//   background-color: $color-grey-superlight;
+//   background-image: none !important;
+// }
+// .dropdown-menu li:first-child a {
+//   border-radius: $border-radius $border-radius 0 0 !important;
+// }
+// .dropdown-menu li:last-child a {
+//   border-radius: 0 0 $border-radius $border-radius !important;
+//   border: none !important;
+// }
+// .dropdown-menu li.active a {
+//   background-color: $color-border !important;
+//   color: $color-grey-dark !important;
+//   background-image: none !important;
+// }
+// }
 
 /* Search preview */
 .search-result-preview {
@@ -201,89 +201,89 @@
     color: $color-blue-hover;
   }
   // Buttons
-  .btn {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    vertical-align: bottom;
-    border-radius: $border-radius;
-    padding: $padding-btn-small;
-    font-weight: 500;
-    line-height: 1.314;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    height: 32px !important;
-  }
+  // .btn {
+  //   text-shadow: none;
+  //   -webkit-box-shadow: none;
+  //   box-shadow: none;
+  //   vertical-align: bottom;
+  //   border-radius: $border-radius;
+  //   padding: $padding-btn-small;
+  //   font-weight: 500;
+  //   line-height: 1.314;
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 5px;
+  //   height: 32px !important;
+  // }
 
-  .btn-default {
-    background-image: none;
-    filter: none;
-    background-color: $color-white;
-    border-radius: $border-radius;
-    color: $color-grey-text;
-    border: 1px solid $color-border;
-    padding: $padding-btn-small;
-    font-weight: 500;
-    line-height: 1.42857143;
-  }
-  .btn-default:hover {
-    background-color: $color-grey-superlight;
-    border: 1px solid $color-border;
-    color: $color-grey-dark;
-  }
-  .btn-default.active {
-    background-color: $color-border;
-    border: 1px solid $color-border;
-    color: $color-grey-dark;
-  }
-  .btn-default.active:hover {
-    border: 1px solid $color-border;
-    color: $color-grey-dark;
-  }
-  .btn-default:focus {
-    box-shadow: none;
-    border: 1px solid $color-grey-dark;
-  }
+  // .btn-default {
+  //   background-image: none;
+  //   filter: none;
+  //   background-color: $color-white;
+  //   border-radius: $border-radius;
+  //   color: $color-grey-text;
+  //   border: 1px solid $color-border;
+  //   padding: $padding-btn-small;
+  //   font-weight: 500;
+  //   line-height: 1.42857143;
+  // }
+  // .btn-default:hover {
+  //   background-color: $color-grey-superlight;
+  //   border: 1px solid $color-border;
+  //   color: $color-grey-dark;
+  // }
+  // .btn-default.active {
+  //   background-color: $color-border;
+  //   border: 1px solid $color-border;
+  //   color: $color-grey-dark;
+  // }
+  // .btn-default.active:hover {
+  //   border: 1px solid $color-border;
+  //   color: $color-grey-dark;
+  // }
+  // .btn-default:focus {
+  //   box-shadow: none;
+  //   border: 1px solid $color-grey-dark;
+  // }
 
-  .btn-info {
-    background-color: $color-blue;
-    border-radius: $border-radius;
-    background-image: none;
-    border: none;
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  .btn-info:hover {
-    background-color: $color-blue-hover;
-  }
-  .btn-info:focus {
-    background-color: $color-blue-hover;
-  }
-  .btn-info:active {
-    background-color: $color-blue-hover;
-  }
-  .btn-info:active:hover {
-    background-color: $color-blue-hover;
-  }
+  // .btn-info {
+  //   background-color: $color-blue;
+  //   border-radius: $border-radius;
+  //   background-image: none;
+  //   border: none;
+  //   text-shadow: none;
+  //   -webkit-box-shadow: none;
+  //   box-shadow: none;
+  // }
+  // .btn-info:hover {
+  //   background-color: $color-blue-hover;
+  // }
+  // .btn-info:focus {
+  //   background-color: $color-blue-hover;
+  // }
+  // .btn-info:active {
+  //   background-color: $color-blue-hover;
+  // }
+  // .btn-info:active:hover {
+  //   background-color: $color-blue-hover;
+  // }
 
-  .btn-xs {
-    padding: $padding-btn-small;
-    font-size: 14px;
-    height: 32px !important;
-    line-height: 1.42857143;
-  }
-  .btn-group-xs > .btn {
-    line-height: 1.42857143;
-  }
+  // .btn-xs {
+  //   padding: $padding-btn-small;
+  //   font-size: 14px;
+  //   height: 32px !important;
+  //   line-height: 1.42857143;
+  // }
+  // .btn-group-xs > .btn {
+  //   line-height: 1.42857143;
+  // }
 
-  .btn-default:active,
-  .btn-default.active {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
+  // .btn-default:active,
+  // .btn-default.active {
+  //   text-shadow: none;
+  //   -webkit-box-shadow: none;
+  //   box-shadow: none;
+  // }
 
   .object__show-phone {
     color: $color-white !important;

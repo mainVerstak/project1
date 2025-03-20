@@ -1,4 +1,4 @@
-@import "./global.scss";
+// @import "./global.scss";
 
 .searchFormPage,
 #searchFormModal,
@@ -47,36 +47,6 @@
 #selectOfferTypeModal,
 #searchFormModal,
 .searchFormPage {
-  .btn {
-    display: flex;
-    height: 44px;
-    min-width: 44px;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: $border-radius;
-    border: 1px solid transparent;
-    background: white;
-    background-image: none;
-    font-weight: 700;
-    font-size: 1em;
-    line-height: 1;
-    margin-bottom: 0;
-    white-space: nowrap;
-    touch-action: manipulation;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    text-transform: capitalize; // TODO: if not needed, remove
-
-    &:focus {
-      outline: 2px solid $color-dark;
-    }
-  }
-
   .btn-xs {
     padding: $padding-btn-small;
     font-size: 14px;
@@ -89,72 +59,9 @@
     box-shadow: none;
   }
 
-  .btn-default {
-    color: $color-dark;
-    border: 1px solid $color-secondary;
-    box-shadow: none;
-
-    &:focus {
-      box-shadow: none;
-      border: 2px solid $color-dark;
-    }
-    &.active {
-      background-color: $color-secondary;
-      border: 1px solid $color-secondary;
-      color: $color-primary;
-    }
-    &:disabled {
-      background-color: $color-secondary;
-      color: $color-disabled;
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: $color-secondary;
-        color: $color-primary;
-      }
-      &.active:hover {
-        border: 1px solid $color-secondary;
-        background-color: $color-secondary;
-        color: $color-primary;
-      }
-    }
-
-    @media (hover: none) {
-      &.active {
-        background-color: $color-secondary;
-        border: 1px solid $color-secondary;
-        color: $color-primary;
-      }
-    }
-  }
-
   .btn-styled-new2 {
     background-color: $color-primary;
     color: $color-white;
-
-    &:focus {
-      outline: 2px solid $color-dark;
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: $color-primary-hover;
-      }
-    }
-
-    @media (hover: none) {
-      &:active {
-        background-color: $color-primary-hover;
-      }
-    }
-  }
-
-  .btn-primary {
-    background-color: $color-primary;
-    border-radius: $border-radius;
-    background-image: none;
-    border: none;
 
     &:focus {
       outline: 2px solid $color-dark;
@@ -294,30 +201,6 @@
     vertical-align: middle;
   }
 
-  input.form-control {
-    border-radius: $border-radius;
-    border: 1px solid $color-border;
-    padding: $padding-btn-small;
-    height: unset;
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    font-size: 14px !important;
-    height: 44px !important;
-  }
-  input.form-control:focus {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid $color-blue;
-    z-index: 3;
-  }
-  input.form-control:active {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid $color-blue;
-  }
   /* Единственный элемент */
   input.form-control:only-child {
     border-radius: $border-radius !important;

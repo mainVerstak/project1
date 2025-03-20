@@ -86,37 +86,147 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
 }
-.btn:focus {
+.btn:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
   outline: 2px solid #242a3e;
+  z-index: 3;
 }
 
 .btn-default {
   color: #242a3e;
+  background-color: #ffffff;
+  border: 1px solid #e6eff9;
 }
-.btn-default:hover {
-  background-color: #e6eff9;
-  color: #084c95;
+@media (hover: hover) {
+  .btn-default:hover {
+    border: 1px solid #e6eff9;
+    background-color: #e6eff9;
+    color: #084c95;
+  }
 }
-.btn-default:focus {
-  border: 2px solid #242a3e;
+@media (hover: none) {
+  .btn-default:active, .btn-default.active {
+    border: 1px solid #e6eff9;
+    background-color: #e6eff9;
+    color: #084c95;
+  }
+}
+.btn-default:focus, .btn-default.focus {
+  outline: 2px solid #242a3e;
+  background-color: #ffffff;
 }
 .btn-default:disabled {
   background-color: #f6f7f9;
   color: #c4cdd9;
 }
+.btn-default:active, .btn-default.active {
+  border: 1px solid #e6eff9;
+  background-color: #e6eff9;
+  color: #084c95;
+}
+@media (hover: hover) {
+  .btn-default:active:hover, .btn-default.active:hover {
+    border: 1px solid #e6eff9;
+    background-color: #e6eff9;
+    color: #084c95;
+  }
+}
+@media (hover: none) {
+  .btn-default:active:active, .btn-default:active.active, .btn-default.active:active, .btn-default.active.active {
+    border: 1px solid #e6eff9;
+    background-color: #e6eff9;
+    color: #084c95;
+  }
+}
+.btn-default:active:focus, .btn-default:active.focus, .btn-default.active:focus, .btn-default.active.focus {
+  outline: 2px solid #242a3e;
+  background-color: #e6eff9;
+  color: #084c95;
+}
 
-.btn-primary {
+.btn-primary,
+.btn-warning,
+.btn-success {
   color: #ffffff;
   background-color: #084c95;
+  border: 1px solid #084c95;
 }
-.btn-primary:hover {
+@media (hover: hover) {
+  .btn-primary:hover,
+  .btn-warning:hover,
+  .btn-success:hover {
+    background-color: #2167b4;
+    border: 1px solid #2167b4;
+  }
+}
+@media (hover: none) {
+  .btn-primary:active, .btn-primary.active,
+  .btn-warning:active,
+  .btn-warning.active,
+  .btn-success:active,
+  .btn-success.active {
+    background-color: #2167b4;
+    border: 1px solid #2167b4;
+  }
+}
+.btn-primary:focus, .btn-primary.focus,
+.btn-warning:focus,
+.btn-warning.focus,
+.btn-success:focus,
+.btn-success.focus {
+  border: 1px solid #242a3e;
+  background-color: #084c95;
+}
+@media (hover: hover) {
+  .btn-primary:focus:hover, .btn-primary.focus:hover,
+  .btn-warning:focus:hover,
+  .btn-warning.focus:hover,
+  .btn-success:focus:hover,
+  .btn-success.focus:hover {
+    background-color: #2167b4;
+    border: 1px solid #2167b4;
+  }
+}
+@media (hover: none) {
+  .btn-primary:focus:active, .btn-primary:focus.active, .btn-primary.focus:active, .btn-primary.focus.active,
+  .btn-warning:focus:active,
+  .btn-warning:focus.active,
+  .btn-warning.focus:active,
+  .btn-warning.focus.active,
+  .btn-success:focus:active,
+  .btn-success:focus.active,
+  .btn-success.focus:active,
+  .btn-success.focus.active {
+    background-color: #2167b4;
+  }
+}
+.btn-primary:focus:active, .btn-primary:focus.active, .btn-primary.focus:active, .btn-primary.focus.active,
+.btn-warning:focus:active,
+.btn-warning:focus.active,
+.btn-warning.focus:active,
+.btn-warning.focus.active,
+.btn-success:focus:active,
+.btn-success:focus.active,
+.btn-success.focus:active,
+.btn-success.focus.active {
   background-color: #2167b4;
+  border: 1px solid #2167b4;
+  outline: 2px solid #242a3e;
 }
-.btn-primary:focus {
-  border: 2px solid #242a3e;
+.btn-primary:active, .btn-primary.active,
+.btn-warning:active,
+.btn-warning.active,
+.btn-success:active,
+.btn-success.active {
+  background-color: #2167b4;
+  border: 1px solid #2167b4;
 }
-.btn-primary:disabled {
+.btn-primary:disabled,
+.btn-warning:disabled,
+.btn-success:disabled {
   background-color: #f6f7f9;
   color: #c4cdd9;
 }
@@ -129,6 +239,55 @@ body {
   border-radius: 5px;
   border: 1px solid #e6eff9;
   background: #ffffff;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+}
+.form-control:hover {
+  border: 1px solid #084c95;
+  z-index: 3;
+}
+.form-control:focus {
+  border: 2px solid #084c95;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+  z-index: 3;
+}
+.form-control:disabled {
+  background-color: #f6f7f9;
+  color: #c4cdd9;
+}
+.form-control:active {
+  border: 2px solid #084c95;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+  z-index: 3;
+}
+.form-control.invalid {
+  border: 1px solid #f55c3d;
+}
+.form-control.invalid:hover {
+  border: 2px solid #f55c3d;
+}
+.form-control.invalid:focus {
+  border: 2px solid #084c95;
+}
+.form-control.invalid:active {
+  border: 2px solid #084c95;
+}
+.form-control.valid {
+  border: 1px solid #acf256;
+}
+.form-control.valid:hover {
+  border: 2px solid #acf256;
+}
+.form-control.valid:focus {
+  border: 2px solid #084c95;
+}
+.form-control.valid:active {
+  border: 2px solid #084c95;
 }
 
 .mt-3 {
@@ -353,48 +512,6 @@ body {
   }
 }
 /* Buttons */
-.map_panel .btn,
-#selectBuildingTypeModal .btn,
-#selectRenovationModal .btn,
-#form_search_locations_modal .btn,
-#selectCategoryModal .btn,
-#selectOfferTypeModal .btn,
-#searchFormModal .btn,
-.searchFormPage .btn {
-  display: flex;
-  height: 44px;
-  min-width: 44px;
-  padding: 15px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  background: white;
-  background-image: none;
-  font-weight: 700;
-  font-size: 1em;
-  line-height: 1;
-  margin-bottom: 0;
-  white-space: nowrap;
-  touch-action: manipulation;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  text-transform: capitalize;
-}
-.map_panel .btn:focus,
-#selectBuildingTypeModal .btn:focus,
-#selectRenovationModal .btn:focus,
-#form_search_locations_modal .btn:focus,
-#selectCategoryModal .btn:focus,
-#selectOfferTypeModal .btn:focus,
-#searchFormModal .btn:focus,
-.searchFormPage .btn:focus {
-  outline: 2px solid #242a3e;
-}
 .map_panel .btn-xs,
 #selectBuildingTypeModal .btn-xs,
 #selectRenovationModal .btn-xs,
@@ -419,91 +536,6 @@ body {
 .searchFormPage .btn-group-xs > .btn {
   line-height: 1;
   box-shadow: none;
-}
-.map_panel .btn-default,
-#selectBuildingTypeModal .btn-default,
-#selectRenovationModal .btn-default,
-#form_search_locations_modal .btn-default,
-#selectCategoryModal .btn-default,
-#selectOfferTypeModal .btn-default,
-#searchFormModal .btn-default,
-.searchFormPage .btn-default {
-  color: #242a3e;
-  border: 1px solid #e6eff9;
-  box-shadow: none;
-}
-.map_panel .btn-default:focus,
-#selectBuildingTypeModal .btn-default:focus,
-#selectRenovationModal .btn-default:focus,
-#form_search_locations_modal .btn-default:focus,
-#selectCategoryModal .btn-default:focus,
-#selectOfferTypeModal .btn-default:focus,
-#searchFormModal .btn-default:focus,
-.searchFormPage .btn-default:focus {
-  box-shadow: none;
-  border: 2px solid #242a3e;
-}
-.map_panel .btn-default.active,
-#selectBuildingTypeModal .btn-default.active,
-#selectRenovationModal .btn-default.active,
-#form_search_locations_modal .btn-default.active,
-#selectCategoryModal .btn-default.active,
-#selectOfferTypeModal .btn-default.active,
-#searchFormModal .btn-default.active,
-.searchFormPage .btn-default.active {
-  background-color: #e6eff9;
-  border: 1px solid #e6eff9;
-  color: #084c95;
-}
-.map_panel .btn-default:disabled,
-#selectBuildingTypeModal .btn-default:disabled,
-#selectRenovationModal .btn-default:disabled,
-#form_search_locations_modal .btn-default:disabled,
-#selectCategoryModal .btn-default:disabled,
-#selectOfferTypeModal .btn-default:disabled,
-#searchFormModal .btn-default:disabled,
-.searchFormPage .btn-default:disabled {
-  background-color: #e6eff9;
-  color: #c4cdd9;
-}
-@media (hover: hover) {
-  .map_panel .btn-default:hover,
-  #selectBuildingTypeModal .btn-default:hover,
-  #selectRenovationModal .btn-default:hover,
-  #form_search_locations_modal .btn-default:hover,
-  #selectCategoryModal .btn-default:hover,
-  #selectOfferTypeModal .btn-default:hover,
-  #searchFormModal .btn-default:hover,
-  .searchFormPage .btn-default:hover {
-    background-color: #e6eff9;
-    color: #084c95;
-  }
-  .map_panel .btn-default.active:hover,
-  #selectBuildingTypeModal .btn-default.active:hover,
-  #selectRenovationModal .btn-default.active:hover,
-  #form_search_locations_modal .btn-default.active:hover,
-  #selectCategoryModal .btn-default.active:hover,
-  #selectOfferTypeModal .btn-default.active:hover,
-  #searchFormModal .btn-default.active:hover,
-  .searchFormPage .btn-default.active:hover {
-    border: 1px solid #e6eff9;
-    background-color: #e6eff9;
-    color: #084c95;
-  }
-}
-@media (hover: none) {
-  .map_panel .btn-default.active,
-  #selectBuildingTypeModal .btn-default.active,
-  #selectRenovationModal .btn-default.active,
-  #form_search_locations_modal .btn-default.active,
-  #selectCategoryModal .btn-default.active,
-  #selectOfferTypeModal .btn-default.active,
-  #searchFormModal .btn-default.active,
-  .searchFormPage .btn-default.active {
-    background-color: #e6eff9;
-    border: 1px solid #e6eff9;
-    color: #084c95;
-  }
 }
 .map_panel .btn-styled-new2,
 #selectBuildingTypeModal .btn-styled-new2,
@@ -547,53 +579,6 @@ body {
   #selectOfferTypeModal .btn-styled-new2:active,
   #searchFormModal .btn-styled-new2:active,
   .searchFormPage .btn-styled-new2:active {
-    background-color: #2167b4;
-  }
-}
-.map_panel .btn-primary,
-#selectBuildingTypeModal .btn-primary,
-#selectRenovationModal .btn-primary,
-#form_search_locations_modal .btn-primary,
-#selectCategoryModal .btn-primary,
-#selectOfferTypeModal .btn-primary,
-#searchFormModal .btn-primary,
-.searchFormPage .btn-primary {
-  background-color: #084c95;
-  border-radius: 5px;
-  background-image: none;
-  border: none;
-}
-.map_panel .btn-primary:focus,
-#selectBuildingTypeModal .btn-primary:focus,
-#selectRenovationModal .btn-primary:focus,
-#form_search_locations_modal .btn-primary:focus,
-#selectCategoryModal .btn-primary:focus,
-#selectOfferTypeModal .btn-primary:focus,
-#searchFormModal .btn-primary:focus,
-.searchFormPage .btn-primary:focus {
-  outline: 2px solid #242a3e;
-}
-@media (hover: hover) {
-  .map_panel .btn-primary:hover,
-  #selectBuildingTypeModal .btn-primary:hover,
-  #selectRenovationModal .btn-primary:hover,
-  #form_search_locations_modal .btn-primary:hover,
-  #selectCategoryModal .btn-primary:hover,
-  #selectOfferTypeModal .btn-primary:hover,
-  #searchFormModal .btn-primary:hover,
-  .searchFormPage .btn-primary:hover {
-    background-color: #2167b4;
-  }
-}
-@media (hover: none) {
-  .map_panel .btn-primary:active,
-  #selectBuildingTypeModal .btn-primary:active,
-  #selectRenovationModal .btn-primary:active,
-  #form_search_locations_modal .btn-primary:active,
-  #selectCategoryModal .btn-primary:active,
-  #selectOfferTypeModal .btn-primary:active,
-  #searchFormModal .btn-primary:active,
-  .searchFormPage .btn-primary:active {
     background-color: #2167b4;
   }
 }
@@ -822,45 +807,6 @@ body {
 #searchFormModal label,
 .searchFormPage label {
   vertical-align: middle;
-}
-.map_panel input.form-control,
-#form_search_locations_modal input.form-control,
-#selectCategoryModal input.form-control,
-#selectOfferTypeModal input.form-control,
-#searchFormModal input.form-control,
-.searchFormPage input.form-control {
-  border-radius: 5px;
-  border: 1px solid #e6e6e6;
-  padding: 6px 10px;
-  height: unset;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-size: 14px !important;
-  height: 44px !important;
-}
-.map_panel input.form-control:focus,
-#form_search_locations_modal input.form-control:focus,
-#selectCategoryModal input.form-control:focus,
-#selectOfferTypeModal input.form-control:focus,
-#searchFormModal input.form-control:focus,
-.searchFormPage input.form-control:focus {
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid #084c95;
-  z-index: 3;
-}
-.map_panel input.form-control:active,
-#form_search_locations_modal input.form-control:active,
-#selectCategoryModal input.form-control:active,
-#selectOfferTypeModal input.form-control:active,
-#searchFormModal input.form-control:active,
-.searchFormPage input.form-control:active {
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid #084c95;
 }
 .map_panel input.form-control:only-child,
 #form_search_locations_modal input.form-control:only-child,
