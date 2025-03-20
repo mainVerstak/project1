@@ -109,6 +109,16 @@ body {
   width: 14px;
   height: 14px;
   fill: currentColor;
+
+  &.primary {
+    color: $color-primary;
+  }
+  &.invalid {
+    color: $color-invalid;
+  }
+  &.valid {
+    color: $color-valid;
+  }
 }
 .icon-stroke {
   stroke: currentColor;
@@ -525,7 +535,7 @@ a.dropdown-toggle:visited {
 .dropdown-menu {
   width: inherit;
   padding: 3px;
-  border-radius: $border-radius;
+  border-radius: 8px;
   border: 1px solid $color-secondary;
   margin: 0;
   margin-top: 3px;
