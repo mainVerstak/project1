@@ -174,6 +174,7 @@ body {
   box-shadow: none;
   -webkit-box-shadow: none;
   text-shadow: none;
+  transition-duration: 0.1s;
 
   &:focus,
   &.focus,
@@ -188,6 +189,10 @@ body {
   color: $color-dark;
   background-color: $color-white;
   border: 1px solid $color-secondary;
+
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
 
   @media (hover: hover) {
     &:hover {
@@ -219,6 +224,10 @@ body {
     border: 1px solid $color-secondary;
     background-color: $color-secondary;
     color: $color-primary;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
 
     @media (hover: hover) {
       &:hover {
@@ -461,7 +470,11 @@ a.dropdown-toggle:visited {
 .open > .btn-default.dropdown-toggle {
   color: $color-primary;
   background-color: $color-secondary;
-  border-color: $color-secondary;
+  border: 1px solid $color-secondary;
+
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
 
   @media (hover: hover) {
     &:hover {
@@ -477,6 +490,36 @@ a.dropdown-toggle:visited {
       border-color: $color-secondary;
     }
   }
+
+  &:focus {
+    color: $color-primary;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
+  }
+
+  &:active {
+    color: $color-primary;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
+
+    &:focus {
+      color: $color-primary;
+      background-color: $color-secondary;
+      border-color: $color-secondary;
+
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      text-shadow: none;
+    }
+  }
 }
 
 .dropdown-menu {
@@ -484,7 +527,10 @@ a.dropdown-toggle:visited {
   padding: 3px;
   border-radius: $border-radius;
   border: 1px solid $color-secondary;
+  margin: 0;
+  margin-top: 3px;
 
+  background-image: none;
   box-shadow: none;
   -webkit-box-shadow: none;
   text-shadow: none;
@@ -500,6 +546,12 @@ a.dropdown-toggle:visited {
     border-radius: $border-radius;
     height: 44px;
     font-weight: 700;
+    margin: 0;
+    margin-bottom: 1px;
+
+    &:visited {
+      color: $color-dark;
+    }
 
     &:disabled {
       color: $color-disabled;
@@ -525,13 +577,24 @@ a.dropdown-toggle:visited {
       }
     }
   }
-}
+  & > .active > a {
+    color: $color-primary;
+    background-color: $color-secondary;
+    background-image: none;
+    margin: 0;
 
-.active a {
-  color: $color-primary;
-  background-color: $color-secondary;
-  background-image: none;
-  margin: 0;
+    &:hover {
+      color: $color-primary;
+      background-color: $color-secondary;
+      background-image: none;
+    }
+
+    &:focus {
+      color: $color-primary;
+      background-color: $color-secondary;
+      background-image: none;
+    }
+  }
 }
 
 @media (min-width: 768px) {

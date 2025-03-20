@@ -755,6 +755,12 @@
       color: $color-dark;
       border: 1px solid $color-secondary;
     }
+
+    &:focus {
+      background-color: $color-white;
+      color: $color-dark;
+      outline: 2px solid $color-dark;
+    }
   }
 
   li.active span,
@@ -767,6 +773,33 @@
       background-color: $color-secondary;
       color: $color-primary;
       border: 1px solid $color-secondary;
+    }
+
+    &:focus {
+      background-color: $color-secondary;
+      color: $color-primary;
+      border-color: $color-secondary;
+      outline: 2px solid $color-dark;
+    }
+  }
+
+  li.disabled span,
+  li.disabled a {
+    border-color: $color-secondary;
+    color: $color-dark;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-dark;
+      border: 1px solid $color-secondary;
+    }
+  }
+
+  .dropdown-menu {
+    li a {
+      margin: 0;
+      margin-bottom: 1px;
+      border-color: transparent;
     }
   }
 }
