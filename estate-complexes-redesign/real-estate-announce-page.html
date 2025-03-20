@@ -33,7 +33,7 @@
     <!-- <link rel="stylesheet" href="css/announce-page.css" /> -->
     <!-- <link rel="stylesheet" href="css/announce.css" /> -->
     <!-- <link rel="stylesheet" href="css/filter.css" /> -->
-    <link rel="stylesheet" href="css/_app.css" />
+    <link rel="stylesheet" href="css/app.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -273,9 +273,9 @@
       </div>
     </div>
     <header>
-      <div class="header-top-nav header-top-nav_near header-top-mobile-hidden">
+      <div class="header-top-mobile-hidden header-top-nav header-top-nav_near">
         <div class="container">
-          <ul class="nav navbar-nav navbar-left">
+          <ul class="nav navbar-left navbar-nav">
             <li>
               <div class="dropdown header-city">
                 <div
@@ -348,7 +348,7 @@
                 </a>
               </span>
             </div>
-            <nav class="sidenav loaded">
+            <nav class="loaded sidenav">
               <div class="sidenav__inner">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="sidenav__hide-desktop">
@@ -364,7 +364,7 @@
                           <use xlink:href="./img/icons.svg#placeholder"></use>
                         </svg>
                         Москва
-                        <i class="fas fa-caret-down"></i>
+                        <i class="fa-caret-down fas"></i>
                       </div>
                       <ul class="dropdown-menu">
                         <li><a href="#">Москва</a></li>
@@ -394,7 +394,7 @@
                     </a>
                   </li>
                   <li class="nav navbar-nav">
-                    <div class="navbar-btn nav-font-color">
+                    <div class="nav-font-color navbar-btn">
                       <a data-no-turbolink="true" href="/estate-new">
                         <div class="btn btn-warning">
                           <svg class="icon-default">
@@ -458,7 +458,7 @@
         Симферопольский село Мирное улица Крымской весны 1 микрорайон «Жигулина
         роща» корп. 4
       </h1>
-      <div class="js-index-form extendedEntity">
+      <div class="extendedEntity js-index-form">
         <meta
           content="Продам трехкомнатную квартиру в новостройке 73.0 м² этаж 8/14 район Симферопольский село Мирное улица Крымской весны 1 микрорайон «Жигулина роща» корп. 4"
           itemprop="name"
@@ -471,11 +471,11 @@
         />
         <!-- TODO: add new class .ds-annouce-info -->
         <p class="ds-annouce-info">
-          <span class="label label-default _admin">unknown</span>
+          <span class="_admin label label-default">unknown</span>
 
-          <span class="small text-muted">
+          <span class="text-muted small">
             <span class="panel-body-adv-block"
-              ><span class="label label-info label-md _user"
+              ><span class="_user label label-info label-md"
                 ><svg class="icon-default">
                   <use xlink:href="./img/icons.svg#top"></use>
                 </svg>
@@ -489,7 +489,7 @@
                 Горячее</span
               >
             </span>
-            <span class="panel-body-adv-block _admin _adm-old">
+            <span class="_adm-old _admin panel-body-adv-block">
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#pause"></use>
               </svg>
@@ -497,7 +497,7 @@
               Устаревшее объявление
             </span>
 
-            <span class="panel-body-adv-block _admin _adm-blocked">
+            <span class="_adm-blocked _admin panel-body-adv-block">
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#cancel"></use>
               </svg>
@@ -505,7 +505,7 @@
               Заблокированное объявление
             </span>
 
-            <span class="panel-body-adv-block _admin _adm-notpay">
+            <span class="_adm-notpay _admin panel-body-adv-block">
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#balance"></use>
               </svg>
@@ -513,7 +513,7 @@
               Неоплаченное объявление
             </span>
 
-            <span class="panel-body-adv-block _admin _adm-draft">
+            <span class="_adm-draft _admin panel-body-adv-block">
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#paint"></use>
               </svg>
@@ -521,7 +521,7 @@
               Черновое объявление
             </span>
 
-            <span class="panel-body-adv-block _admin _adm-deleted">
+            <span class="_adm-deleted _admin panel-body-adv-block">
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#cross"></use>
               </svg>
@@ -559,7 +559,7 @@
         </p>
         <div class="row" element_id="132654251">
           <!-- TODO: many changes, recommended to copy separate button, bloks and paste into your project -->
-          <div class="col-xs-12 col-lg-12 ds-social">
+          <div class="col-lg-12 col-xs-12 ds-social">
             <!-- оборачиваем первые 5 кнопок в блок со скролом -->
             <span class="panel-body-adv-block__scroll-x">
               <!-- Первая кнопка "добавить в избранное" он обернут в .panel-body-adv-block-->
@@ -573,7 +573,7 @@
                   >
                     <!-- TODO: add new class .btn-favorite-icon and change icon to svg-->
                     <button
-                      class="object__actions-item btn-favorite-icon"
+                      class="btn-favorite-icon object__actions-item"
                       title="Добавить в избранное"
                       type="submit"
                     >
@@ -608,7 +608,7 @@
               <span class="panel-body-adv-block"
                 ><noindex
                   ><a
-                    class="btn btn-primary btn-social-icon btn-vk yaSend btn-sx"
+                    class="btn btn-primary btn-social-icon btn-sx btn-vk yaSend"
                     href="https://vk.com/share.php?url=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4&amp;title=Продам трехкомнатную квартиру в новостройке на улице Крымской весны 1 микрорайон «Жигулина роща» в селе Мирном в районе Симферопольском корп. 4 73.0 м² этаж 8/14 11303600 руб база Олан ру объявление 132654251&amp;image=https://i4.olan.ru/system/photos/entity/001/248/006/227/thumb/img.jpg?1729595132"
                     rel="nofollow"
                     target="_blank"
@@ -620,7 +620,7 @@
                     </svg>
                   </a>
                   <a
-                    class="btn btn-warning btn-social-icon btn-odnoklassniki yaSend btn-sx"
+                    class="btn btn-odnoklassniki btn-social-icon btn-sx btn-warning yaSend"
                     href="https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&amp;st.shareUrl=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4"
                     rel="nofollow"
                     target="_blank"
@@ -643,7 +643,7 @@
                   //]]>
                 </script>
                 <a
-                  class="open_remote_url_action abuse_popover_action yaSend btn btn-default btn-xs"
+                  class="btn btn-default btn-xs abuse_popover_action open_remote_url_action yaSend"
                   data-url="/abuses/132654251"
                   href="#"
                   rel="nofollow"
@@ -655,7 +655,7 @@
                   Пожаловаться</a
                 >
                 <a
-                  class="open_url_action btn btn-default btn-xs _guest _on"
+                  class="btn btn-default btn-xs _guest _on open_url_action"
                   data-url="/call-access-new?advertisement_id=132654251"
                   href="#"
                   ><svg class="icon-default">
@@ -667,10 +667,10 @@
               <!-- закрывем блок со скролом -->
             </span>
             <!-- остальные кнопки не оборачиваем в блок со скролом-->
-            <span class="panel-body-adv-block__scroll-x _user">
+            <span class="_user panel-body-adv-block__scroll-x">
               <span class="panel-body-adv-block">
                 <a
-                  class="open_url_action yaSend btn btn-danger btn-xs"
+                  class="btn btn-danger btn-xs open_url_action yaSend"
                   data-url="/abuses/132654251"
                   href="#"
                   rel="nofollow"
@@ -684,7 +684,7 @@
               >
               <span class="panel-body-adv-block">
                 <a
-                  class="open_url_action btn btn-primary btn-xs"
+                  class="btn btn-primary btn-xs open_url_action"
                   data-url="/call-access-new?advertisement_id=132654251"
                   href="#"
                   ><svg class="icon-default">
@@ -695,7 +695,7 @@
               >
               <span class="panel-body-adv-block">
                 <a
-                  class="open_url_action btn btn-default btn-xs"
+                  class="btn btn-default btn-xs open_url_action"
                   data-url="/call-access-new?advertisement_id=132654251"
                   href="#"
                   ><svg class="icon-default">
@@ -705,7 +705,7 @@
                 ></span
               >
             </span>
-            <span class="panel-body-adv-block _admin">
+            <span class="_admin panel-body-adv-block">
               <a
                 class="btn btn-default btn-xs"
                 href="https://dev.olan.ru/admin/photos?advertisement_id=121387351"
@@ -719,7 +719,7 @@
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="btn btn-default dropdown-toggle btn-xs"
+                  class="btn btn-default btn-xs dropdown-toggle"
                   data-toggle="dropdown"
                   type="button"
                 >
@@ -775,7 +775,7 @@
                 </ul>
               </div>
               <a
-                class="open_modal_action btn btn-default btn-xs"
+                class="btn btn-default btn-xs open_modal_action"
                 href="#"
                 rel="nofollow"
                 ><svg class="icon-default">
@@ -902,7 +902,7 @@
         </ol>
         <div class="row">
           <div class="apartment-top-container">
-            <div class="col-md-12 col-lg-7 apartment-gallery">
+            <div class="col-lg-7 col-md-12 apartment-gallery">
               <div class="gallery-with-nav-thumbs">
                 <style>
                   .fotorama1729862083523
@@ -919,16 +919,16 @@
                 </style>
                 <div class="fotorama--hidden"></div>
                 <div
-                  class="extendedFotoramaAction fotorama extendedLoadedFotorama fotorama1729862083523"
+                  class="extendedFotoramaAction extendedLoadedFotorama fotorama fotorama1729862083523"
                   style="padding-top: 5px; padding-bottom: 10px"
                   data-fotorama-active-index="0"
                 >
                   <div
-                    class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--toggle-arrows fotorama__wrap--no-controls"
+                    class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--no-controls fotorama__wrap--slide fotorama__wrap--toggle-arrows"
                     style="width: 100%; min-width: 0px; max-width: 100%"
                   >
                     <div
-                      class="fotorama__stage fotorama__pointer"
+                      class="fotorama__pointer fotorama__stage"
                       style="width: 653px; height: 490px"
                     >
                       <div
@@ -946,7 +946,7 @@
                         "
                       >
                         <div
-                          class="fotorama__stage__frame fotorama__loaded fotorama__loaded--img fotorama__active"
+                          class="fotorama__active fotorama__loaded fotorama__loaded--img fotorama__stage__frame"
                           style="left: 0px"
                         >
                           <img
@@ -970,7 +970,7 @@
                           </div>
                         </div>
                         <div
-                          class="fotorama__stage__frame fotorama__loaded fotorama__loaded--img"
+                          class="fotorama__loaded fotorama__loaded--img fotorama__stage__frame"
                           style="left: -655px"
                         >
                           <img
@@ -994,7 +994,7 @@
                           </div>
                         </div>
                         <div
-                          class="fotorama__stage__frame fotorama__loaded fotorama__loaded--img"
+                          class="fotorama__loaded fotorama__loaded--img fotorama__stage__frame"
                           style="left: 655px"
                         >
                           <img
@@ -1047,13 +1047,13 @@
                             "
                           ></div>
                           <div
-                            class="fotorama__nav__frame fotorama__nav__frame--thumb fotorama__active"
+                            class="fotorama__active fotorama__nav__frame fotorama__nav__frame--thumb"
                             tabindex="0"
                             role="button"
                             style="width: 64px"
                           >
                             <div
-                              class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                              class="fotorama__loaded fotorama__loaded--img fotorama__thumb"
                             >
                               <img
                                 src="https://i4.olan.ru/system/photos/entity/001/248/006/227/thumb/img.jpg?1729595132"
@@ -1074,7 +1074,7 @@
                             style="width: 64px"
                           >
                             <div
-                              class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                              class="fotorama__loaded fotorama__loaded--img fotorama__thumb"
                             >
                               <img
                                 src="https://i4.olan.ru/system/photos/entity/001/248/006/263/thumb/img.jpg?1729595134"
@@ -1095,7 +1095,7 @@
                             style="width: 64px"
                           >
                             <div
-                              class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                              class="fotorama__loaded fotorama__loaded--img fotorama__thumb"
                             >
                               <img
                                 src="https://i5.olan.ru/system/photos/entity/001/248/006/257/thumb/img.jpg?1729595132"
@@ -1116,7 +1116,7 @@
                             style="width: 64px"
                           >
                             <div
-                              class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                              class="fotorama__loaded fotorama__loaded--img fotorama__thumb"
                             >
                               <img
                                 src="https://i4.olan.ru/system/photos/entity/001/248/006/273/thumb/img.jpg?1729595135"
@@ -1137,7 +1137,7 @@
                             style="width: 64px"
                           >
                             <div
-                              class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                              class="fotorama__loaded fotorama__loaded--img fotorama__thumb"
                             >
                               <img
                                 src="https://i2.olan.ru/system/photos/entity/001/248/006/561/thumb/img.jpg?1729595151"
@@ -1158,7 +1158,7 @@
                             style="width: 64px"
                           >
                             <div
-                              class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                              class="fotorama__loaded fotorama__loaded--img fotorama__thumb"
                             >
                               <img
                                 src="https://i.olan.ru/system/photos/entity/001/248/006/525/thumb/img.jpg?1729595152"
@@ -1179,7 +1179,7 @@
                             style="width: 64px"
                           >
                             <div
-                              class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                              class="fotorama__loaded fotorama__loaded--img fotorama__thumb"
                             >
                               <img
                                 src="https://i2.olan.ru/system/photos/entity/001/248/006/593/thumb/img.jpg?1729595155"
@@ -1200,7 +1200,7 @@
                             style="width: 64px"
                           >
                             <div
-                              class="fotorama__thumb fotorama__loaded fotorama__loaded--img"
+                              class="fotorama__loaded fotorama__loaded--img fotorama__thumb"
                             >
                               <img
                                 src="https://i.olan.ru/system/photos/entity/001/248/006/599/thumb/img.jpg?1729595155"
@@ -1221,7 +1221,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12 col-lg-5">
+            <div class="col-lg-5 col-md-12">
               <span
                 itemprop="offers"
                 itemscope=""
@@ -1232,7 +1232,7 @@
                     >11 303 600</span
                   >
                   <meta content="RUB" itemprop="priceCurrency" /><i
-                    class="fas fa-ruble-sign fa-sm"
+                    class="fa-ruble-sign fa-sm fas"
                     ><span class="hidden">₽</span></i
                   >
                 </div>
@@ -1278,7 +1278,7 @@
                         //]]>
                       </script>
                       <button
-                        class="btn btn-info js-reservation-contact-action js-floating-mobile-phone-block-required"
+                        class="btn btn-info js-floating-mobile-phone-block-required js-reservation-contact-action"
                         data-id="132654251"
                         style="width: 100%"
                       >
@@ -1368,7 +1368,7 @@
 
             addHeight();
           </script>
-          <div class="col-xs-12 col-lg-12">
+          <div class="col-lg-12 col-xs-12">
             <p></p>
             <div class="h4">Описание</div>
             Прocтоpнaя квapтира площадью 73,2 кв. мeтрa в 23 корпусе , кв. 29
@@ -1408,7 +1408,7 @@
             data-button-text="Отправить заявку"
             id="banki-ru-widget"
           >
-            <div class="col-xs-12 col-lg-12 mortgage-calc-blok">
+            <div class="col-lg-12 col-xs-12 mortgage-calc-blok">
               <div class="h4">Купить эту квартиру в ипотеку</div>
               <p>Для пользователей olan.ru</p>
               <div class="calc-mortgage" id="banki-ru-calculator">
@@ -1616,7 +1616,7 @@
               });
               //]]>
             </script>
-            <div class="col-xs-12 col-lg-12 mortgage-table-blok">
+            <div class="col-lg-12 col-xs-12 mortgage-table-blok">
               <div class="h4">Ипотечные программы</div>
               <table class="table-mortgage" id="banki_ru-offers">
                 <tbody>
@@ -1818,7 +1818,7 @@
                           </svg>
                         </span>
                         <!-- <div
-                          class="popover fade bottom in"
+                          class="bottom fade in popover"
                           role="tooltip"
                           id="popover268041"
                           style="top: 64.3px; left: 690.933px; display: block"
@@ -1845,13 +1845,13 @@
                 </tbody>
               </table>
               <button
-                class="btn table-mortgage-btn table-mortgage-btn_w_210 table-mortgage-btn_mb_20 table-mortgage-show table-mortgage-btn_outline"
+                class="btn table-mortgage-btn table-mortgage-btn_mb_20 table-mortgage-btn_outline table-mortgage-btn_w_210 table-mortgage-show"
               >
                 Показать все программы
               </button>
             </div>
           </div>
-          <div class="col-xs-12 col-lg-12">
+          <div class="col-lg-12 col-xs-12">
             <div class="h4">
               <a
                 class="open_url_in_new_tab"
@@ -1861,7 +1861,7 @@
               >
             </div>
             <div
-              class="map loaded-map"
+              class="loaded-map map"
               data-agency_id="38703025"
               data-category="flat"
               data-editable="false"
@@ -1880,19 +1880,19 @@
               //]]>
             </script>
           </div>
-          <div class="col-xs-12 col-lg-12">
+          <div class="col-lg-12 col-xs-12">
             <div class="js-card-footer"></div>
           </div>
-          <div class="col-xs-12 col-lg-12">
+          <div class="col-lg-12 col-xs-12">
             <div class="h4">Вам могут подойти эти варианты</div>
             <ul class="list-unstyled js-search-results">
               <li
-                class="media clearfix object object_even"
+                class="clearfix media object object_even"
                 element_id="130827590"
               >
                 <div class="col-lg-5 col-md-4 col-sm-4">
                   <div
-                    class="object__gallery fotoramaAction fotorama"
+                    class="fotorama fotoramaAction object__gallery"
                     data-data='[{"img":"https://i.olan.ru/system/photos/entity/001/227/528/480/small/img.jpg?1727427097","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"130827590\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
                     data-fotorama-active-index="0"
                   ></div>
@@ -1936,7 +1936,7 @@
                       >, корп. 4
                     </div>
                     <div
-                      class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                      class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
                     >
                       Пpоcтopная квapтира площадью 78,5 кв. мeтрa в 24 корпуcе ,
                       кв. 12 ждет своегo cчacтливoгo владельца в жилом комплeкce
@@ -1947,7 +1947,7 @@
                   </div>
                   <div class="object__status">
                     <time
-                      class="smart_time object__date"
+                      class="object__date smart_time"
                       datetime="2024-09-27 11:50:04 +0300"
                       time_zone="3"
                       >27 сен в 11:50</time
@@ -1964,7 +1964,7 @@
                     </div>
                     <noindex
                       ><button
-                        class="btn btn-xs object__show-phone btn-info js-reservation-contact-action"
+                        class="btn btn-info btn-xs js-reservation-contact-action object__show-phone"
                         data-id="130827590"
                       >
                         <svg class="icon-default">
@@ -1978,7 +1978,7 @@
                 <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
                   <span class="notepad_action"
                     ><button
-                      class="ShowAdvNotepadAction object__actions-item"
+                      class="object__actions-item ShowAdvNotepadAction"
                       data-id="130827590"
                       title="Добавить в избранное"
                       type="button"
@@ -1990,10 +1990,10 @@
                   </span>
                 </div>
               </li>
-              <li class="media clearfix object" element_id="130882173">
+              <li class="clearfix media object" element_id="130882173">
                 <div class="col-lg-5 col-md-4 col-sm-4">
                   <div
-                    class="object__gallery fotoramaAction fotorama"
+                    class="fotorama fotoramaAction object__gallery"
                     data-data='[{"img":"https://i.olan.ru/system/photos/entity/001/228/193/663/small/img.jpg?1727513532","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"130882173\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
                     data-fotorama-active-index="0"
                   ></div>
@@ -2037,7 +2037,7 @@
                       >, корп. 4
                     </div>
                     <div
-                      class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                      class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
                     >
                       Пpocтoрнaя квapтира площадью 73,2 кв. мeтрa в 23 коpпуce ,
                       кв. 3 ждет своегo cчacтливoгo владельца в жилом кoмплeкcе
@@ -2048,7 +2048,7 @@
                   </div>
                   <div class="object__status">
                     <time
-                      class="smart_time object__date"
+                      class="object__date smart_time"
                       datetime="2024-09-28 11:50:24 +0300"
                       time_zone="3"
                       >28 сен в 11:50</time
@@ -2065,7 +2065,7 @@
                     </div>
                     <noindex
                       ><button
-                        class="btn btn-xs object__show-phone btn-info js-reservation-contact-action"
+                        class="btn btn-info btn-xs js-reservation-contact-action object__show-phone"
                         data-id="130882173"
                       >
                         <svg class="icon-default">
@@ -2079,7 +2079,7 @@
                 <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
                   <span class="notepad_action"
                     ><button
-                      class="ShowAdvNotepadAction object__actions-item active"
+                      class="active object__actions-item ShowAdvNotepadAction"
                       data-id="130882173"
                       title="Добавить в избранное"
                       type="button"
@@ -2090,13 +2090,13 @@
                   ></span>
                 </div>
               </li>
-              <li class="media clearfix yandex-object object_even">
+              <li class="clearfix media object_even yandex-object">
                 <div class="row"><div class="col-lg-12"></div></div>
               </li>
-              <li class="media clearfix object" element_id="130888307">
+              <li class="clearfix media object" element_id="130888307">
                 <div class="col-lg-5 col-md-4 col-sm-4">
                   <div
-                    class="object__gallery fotoramaAction fotorama"
+                    class="fotorama fotoramaAction object__gallery"
                     data-data='[{"img":"https://i2.olan.ru/system/photos/entity/001/228/249/183/small/img.jpg?1727518248","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"130888307\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
                     data-fotorama-active-index="0"
                   ></div>
@@ -2140,7 +2140,7 @@
                       >, корп. 4
                     </div>
                     <div
-                      class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                      class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
                     >
                       Пpоcтopнaя квартира площадью 79,6 кв. мeтрa в 23 коpпусе ,
                       кв.153 ждет cвoeго cчacтливoгo владельца в жилом кoмплекce
@@ -2151,7 +2151,7 @@
                   </div>
                   <div class="object__status">
                     <time
-                      class="smart_time object__date"
+                      class="object__date smart_time"
                       datetime="2024-09-28 13:08:59 +0300"
                       time_zone="3"
                       >28 сен в 13:08</time
@@ -2168,7 +2168,7 @@
                     </div>
                     <noindex
                       ><button
-                        class="btn btn-xs object__show-phone btn-info js-reservation-contact-action"
+                        class="btn btn-info btn-xs js-reservation-contact-action object__show-phone"
                         data-id="130888307"
                       >
                         <svg class="icon-default">
@@ -2182,7 +2182,7 @@
                 <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
                   <span class="notepad_action"
                     ><button
-                      class="ShowAdvNotepadAction object__actions-item"
+                      class="object__actions-item ShowAdvNotepadAction"
                       data-id="130888307"
                       title="Добавить в избранное"
                       type="button"
@@ -2194,12 +2194,12 @@
                 </div>
               </li>
               <li
-                class="media clearfix object object_even"
+                class="clearfix media object object_even"
                 element_id="130967093"
               >
                 <div class="col-lg-5 col-md-4 col-sm-4">
                   <div
-                    class="object__gallery fotoramaAction fotorama"
+                    class="fotorama fotoramaAction object__gallery"
                     data-data='[{"img":"https://i5.olan.ru/system/photos/entity/001/229/187/101/small/img.jpg?1727648443","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"130967093\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
                     data-fotorama-active-index="0"
                   ></div>
@@ -2243,7 +2243,7 @@
                       >, корп. 4
                     </div>
                     <div
-                      class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                      class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
                     >
                       Простoрнaя квартира площадью 73,4 кв. мeтрa в 23 корпуce ,
                       кв. 5 ждeт своeго cчacтливoгo владельца в жилoм кoмплeкce
@@ -2254,7 +2254,7 @@
                   </div>
                   <div class="object__status">
                     <time
-                      class="smart_time object__date"
+                      class="object__date smart_time"
                       datetime="2024-09-30 01:18:38 +0300"
                       time_zone="3"
                       >30 сен в 01:18</time
@@ -2271,7 +2271,7 @@
                     </div>
                     <noindex
                       ><button
-                        class="btn btn-xs object__show-phone btn-info js-reservation-contact-action"
+                        class="btn btn-info btn-xs js-reservation-contact-action object__show-phone"
                         data-id="130967093"
                       >
                         <svg class="icon-default">
@@ -2285,7 +2285,7 @@
                 <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
                   <span class="notepad_action"
                     ><button
-                      class="ShowAdvNotepadAction object__actions-item"
+                      class="object__actions-item ShowAdvNotepadAction"
                       data-id="130967093"
                       title="Добавить в избранное"
                       type="button"
@@ -2297,8 +2297,8 @@
                 </div>
               </li>
             </ul>
-            <div class="yandex_content row"><div class="col-lg-12"></div></div>
-            <div class="h4 center-icon">
+            <div class="row yandex_content"><div class="col-lg-12"></div></div>
+            <div class="center-icon h4">
               Посмотрите также
               <svg class="icon-big">
                 <use xlink:href="./img/icons.svg#navigator"></use>
@@ -2326,32 +2326,32 @@
               <div class="breadcrumb-filter__inner">
                 <div class="breadcrumb-filter__list">
                   <a
-                    class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
                     yaparam="click_to_breadcrumbs_badge"
                     href="https://olan.ru/r-n-simferopolskiy/sale-flat/cheap"
                     >недорого </a
                   ><a
-                    class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
                     yaparam="click_to_breadcrumbs_badge"
                     href="https://olan.ru/r-n-simferopolskiy/sale-flat/map"
                     >на карте </a
                   ><a
-                    class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
                     yaparam="click_to_breadcrumbs_badge"
                     href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/twenty-millions"
                     >до 20 миллионов </a
                   ><a
-                    class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
                     yaparam="click_to_breadcrumbs_badge"
                     href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/thirty-millions"
                     >до 30 миллионов </a
                   ><a
-                    class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
                     yaparam="click_to_breadcrumbs_badge"
                     href="https://olan.ru/r-n-simferopolskiy/sale-flat/fifteen-millions"
                     >до 15 миллионов </a
                   ><a
-                    class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
                     yaparam="click_to_breadcrumbs_badge"
                     href="https://olan.ru/r-n-simferopolskiy/sale-flat/twenty-five-millions"
                     >до 25 миллионов
@@ -2487,7 +2487,7 @@
         //]]>
       </script>
       <button
-        class="btn btn-info js-floating-mobile-phone-block-required ShowAdvPhoneAction btn-phone-floating__btn"
+        class="btn btn-info btn-phone-floating__btn js-floating-mobile-phone-block-required ShowAdvPhoneAction"
         data-id="132137639"
         style="width: 100%"
       >

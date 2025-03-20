@@ -32,7 +32,7 @@
     <!-- <link rel="stylesheet" href="css/announce.css" /> -->
     <!-- <link rel="stylesheet" href="css/announce-page.css" /> -->
     <!-- <link rel="stylesheet" href="css/filter.css" /> -->
-    <link rel="stylesheet" href="css/_app.css" />
+    <link rel="stylesheet" href="css/app.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -259,7 +259,7 @@
     <header>
       <div class="header-top-nav">
         <div class="container">
-          <ul class="nav navbar-nav navbar-left">
+          <ul class="nav navbar-left navbar-nav">
             <li>
               <div class="dropdown header-city">
                 <div
@@ -333,7 +333,7 @@
                 </a>
               </span>
             </div>
-            <nav class="sidenav loaded">
+            <nav class="loaded sidenav">
               <div class="sidenav__inner">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="sidenav__hide-desktop">
@@ -381,7 +381,7 @@
                     </a>
                   </li>
                   <li class="nav navbar-nav">
-                    <div class="navbar-btn nav-font-color">
+                    <div class="nav-font-color navbar-btn">
                       <a data-no-turbolink="true" href="/estate-new">
                         <div class="btn btn-warning">
                           <svg class="icon-default">
@@ -441,9 +441,9 @@
     </header>
     <div class="container">
       <h1>Посуточная аренда квартир в Уссурийске</h1>
-      <div class="searchFormPage well well-sm clearfix">
+      <div class="clearfix searchFormPage well well-sm">
         <form
-          class="form form-inline withoutBootstrapValidator search_form_action"
+          class="form form-inline search_form_action withoutBootstrapValidator"
           role="form"
           itemprop="potentialAction"
           itemscope="itemscope"
@@ -492,7 +492,7 @@
                     value="2"
                   />снять</label
                 ><label
-                  class="btn btn-default click_additional_search_params_action active"
+                  class="btn btn-default active click_additional_search_params_action"
                   ><input
                     checked=""
                     name="advertisement[offer_type][]"
@@ -521,7 +521,7 @@
                   value="1"
                 />жильё</label
               ><label
-                class="btn btn-default click_additional_search_params_action active"
+                class="btn btn-default active click_additional_search_params_action"
                 ><input
                   checked=""
                   name="advertisement[category][]"
@@ -619,7 +619,7 @@
               <label>место</label>
               <div class="btn-group">
                 <div
-                  class="btn btn-default get-search-locations-action dropdown-toggle active"
+                  class="btn btn-default dropdown-toggle active get-search-locations-action"
                   data-toggle="dropdown"
                   mode="single"
                   style="min-width: 100px"
@@ -660,7 +660,7 @@
             </div>
           </div>
           <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-xs btn-default" yaparam="from_owner"
+            <label class="btn btn-default btn-xs" yaparam="from_owner"
               ><svg class="icon-default yaSend">
                 <use xlink:href="./img/icons.svg#owner"></use>
               </svg>
@@ -978,7 +978,7 @@
               />
             </div>
           </div>
-          <div class="form-group pull-right hidden-xs search_buttons">
+          <div class="form-group hidden-xs pull-right search_buttons">
             <span class="add_search_link_block_action"></span>
             <a class="btn btn-default map_search_btn"
               ><svg class="icon-map-small">
@@ -1149,19 +1149,19 @@
       </div>
       <ul class="list-unstyled js-search-results">
         <li
-          class="media clearfix object object_even object_marked"
+          class="clearfix media object object_even object_marked"
           element_id="118952813"
         >
           <div class="col-lg-5 col-md-4 col-sm-4">
             <style></style>
             <div class="fotorama--hidden"></div>
             <div
-              class="object__gallery fotoramaAction fotorama loadedFotorama fotorama1729693791389"
+              class="fotorama fotorama1729693791389 fotoramaAction loadedFotorama object__gallery"
               data-data='[{"img":"https://i4.olan.ru/system/photos/entity/001/098/925/861/small/img?1714221994","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"118952813\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
               data-fotorama-active-index="0"
             >
               <div
-                class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--toggle-arrows fotorama__wrap--no-controls"
+                class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--no-controls fotorama__wrap--slide fotorama__wrap--toggle-arrows"
                 style="width: 100%; min-width: 0px; max-width: 100%"
               >
                 <div
@@ -1178,7 +1178,7 @@
                     "
                   >
                     <div
-                      class="fotorama__stage__frame fotorama__loaded fotorama__loaded--img fotorama__active"
+                      class="fotorama__active fotorama__loaded fotorama__loaded--img fotorama__stage__frame"
                       style="left: 0px"
                     >
                       <img
@@ -1193,7 +1193,7 @@
                       />
                       <div class="fotorama__html">
                         <a
-                          class="object__gallery-link fake_href_action"
+                          class="fake_href_action object__gallery-link"
                           data-fake_href_id="118952813"
                           href="#"
                           >&nbsp;</a
@@ -1208,14 +1208,14 @@
                     </div>
                   </div>
                   <div
-                    class="fotorama__arr fotorama__arr--prev fotorama__arr--disabled"
+                    class="fotorama__arr fotorama__arr--disabled fotorama__arr--prev"
                     tabindex="-1"
                     role="button"
                     style="display: none"
                     disabled="disabled"
                   ></div>
                   <div
-                    class="fotorama__arr fotorama__arr--next fotorama__arr--disabled"
+                    class="fotorama__arr fotorama__arr--disabled fotorama__arr--next"
                     tabindex="-1"
                     role="button"
                     style="display: none"
@@ -1259,7 +1259,7 @@
                 >
               </div>
               <div
-                class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
               >
                 Не для шумных вечеринок!!! Семейным парам, командировочным и
                 гостям города. Лицам моложе 21 года квартиру не сдаём! Цена
@@ -1269,7 +1269,7 @@
               </div>
             </div>
             <div class="object__status">
-              <span class="label label-default _admin">unknown</span>
+              <span class="_admin label label-default">unknown</span>
               <span class="label label-danger"
                 ><svg class="icon-default">
                   <use xlink:href="./img/icons.svg#hot"></use>
@@ -1277,7 +1277,7 @@
                 Горячее</span
               >
               <time
-                class="smart_time object__date"
+                class="object__date smart_time"
                 datetime="2024-10-23 05:27:43 +0300"
                 time_zone="3"
                 >сегодня в 05:27</time
@@ -1294,7 +1294,7 @@
               </div>
               <noindex
                 ><a
-                  class="btn btn-info btn-xs object__show-phone yaSend open_url_in_new_tab"
+                  class="btn btn-info btn-xs object__show-phone open_url_in_new_tab yaSend"
                   data-modal-url="/redirects/118952813/phone_modal"
                   data-url="/redirects?advertisement_id=118952813"
                   href="#"
@@ -1311,7 +1311,7 @@
           <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
             <span class="notepad_action"
               ><button
-                class="ShowAdvNotepadAction object__actions-item"
+                class="object__actions-item ShowAdvNotepadAction"
                 data-id="118952813"
                 title="Добавить в избранное"
                 type="button"
@@ -1322,13 +1322,13 @@
               </button>
             </span>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="post"
               action="/estate/129137431"
               data-remote="true"
             >
               <input type="hidden" name="_method" value="delete" /><button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Сделать горячим"
                 data-confirm="Сделать горячим?"
                 type="submit"
@@ -1343,13 +1343,13 @@
               />
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="get"
               action="/estate/129137431/top?from_full_card=true"
               data-remote="true"
             >
               <button
-                class="object__actions-item hidden-xs yaSend"
+                class="hidden-xs object__actions-item yaSend"
                 yaparam="entity_top"
                 title="Поднять объявление"
                 type="submit"
@@ -1360,12 +1360,12 @@
               </button>
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="get"
               action="https://dev.olan.ru/estate/129137431/edit"
             >
               <button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Редактировать объявление"
                 type="submit"
               >
@@ -1375,13 +1375,13 @@
               </button>
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="get"
               action="/estate/129137431/top?from_full_card=true"
               data-remote="true"
             >
               <button
-                class="object__actions-item hidden-xs yaSend"
+                class="hidden-xs object__actions-item yaSend"
                 yaparam="entity_top"
                 title="Поднять объявление"
                 type="submit"
@@ -1392,13 +1392,13 @@
               </button>
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="post"
               action="/estate/129137431"
               data-remote="true"
             >
               <input type="hidden" name="_method" value="delete" /><button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Удалить объявление"
                 data-confirm="Удалить это объявление?"
                 type="submit"
@@ -1414,13 +1414,13 @@
             </form>
           </div>
         </li>
-        <li class="media clearfix object object_even">
+        <li class="clearfix media object object_even">
           <div class="row"><div class="col-lg-12"></div></div>
         </li>
-        <li class="media clearfix object" element_id="115711054">
+        <li class="clearfix media object" element_id="115711054">
           <div class="col-lg-5 col-md-4 col-sm-4">
             <div
-              class="object__gallery fotoramaAction fotorama"
+              class="fotorama fotoramaAction object__gallery"
               data-data='[{"img":"https://i3.olan.ru/system/photos/entity/001/232/178/553/small/img?1727931175","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"115711054\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
               data-fotorama-active-index="0"
             ></div>
@@ -1458,7 +1458,7 @@
                 >
               </div>
               <div
-                class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
               >
                 Постельное белье, полотенца, туалетные принадлежности,
                 стиральная машина, беспроводной интернет Wi-Fi, проводной
@@ -1468,9 +1468,9 @@
               </div>
             </div>
             <div class="object__status">
-              <span class="label label-default _admin">unknown</span>
+              <span class="_admin label label-default">unknown</span>
               <time
-                class="smart_time object__date"
+                class="object__date smart_time"
                 datetime="2024-10-23 05:26:25 +0300"
                 time_zone="3"
                 >сегодня в 05:26</time
@@ -1487,7 +1487,7 @@
               </div>
               <noindex
                 ><a
-                  class="btn btn-info btn-xs object__show-phone yaSend open_url_in_new_tab"
+                  class="btn btn-info btn-xs object__show-phone open_url_in_new_tab yaSend"
                   data-modal-url="/redirects/115711054/phone_modal"
                   data-url="/redirects?advertisement_id=115711054"
                   href="#"
@@ -1504,7 +1504,7 @@
           <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
             <span class="notepad_action"
               ><button
-                class="ShowAdvNotepadAction object__actions-item"
+                class="object__actions-item ShowAdvNotepadAction"
                 data-id="115711054"
                 title="Добавить в избранное"
                 type="button"
@@ -1515,13 +1515,13 @@
               </button>
             </span>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="post"
               action="/estate/129137431"
               data-remote="true"
             >
               <input type="hidden" name="_method" value="delete" /><button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Сделать горячим"
                 data-confirm="Сделать горячим?"
                 type="submit"
@@ -1536,13 +1536,13 @@
               />
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="get"
               action="/estate/129137431/top?from_full_card=true"
               data-remote="true"
             >
               <button
-                class="object__actions-item hidden-xs yaSend"
+                class="hidden-xs object__actions-item yaSend"
                 yaparam="entity_top"
                 title="Поднять объявление"
                 type="submit"
@@ -1553,12 +1553,12 @@
               </button>
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="get"
               action="https://dev.olan.ru/estate/129137431/edit"
             >
               <button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Редактировать объявление"
                 type="submit"
               >
@@ -1568,13 +1568,13 @@
               </button>
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="post"
               action="/estate/129137431"
               data-remote="true"
             >
               <input type="hidden" name="_method" value="delete" /><button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Удалить объявление"
                 data-confirm="Удалить это объявление?"
                 type="submit"
@@ -1590,10 +1590,10 @@
             </form>
           </div>
         </li>
-        <li class="media clearfix object object_even" element_id="115855240">
+        <li class="clearfix media object object_even" element_id="115855240">
           <div class="col-lg-5 col-md-4 col-sm-4">
             <div
-              class="object__gallery fotoramaAction fotorama"
+              class="fotorama fotoramaAction object__gallery"
               data-data='[{"img":"https://i2.olan.ru/system/photos/entity/001/068/697/474/small/img?1711294713","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"115855240\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
               data-fotorama-active-index="0"
             ></div>
@@ -1631,7 +1631,7 @@
                 >
               </div>
               <div
-                class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
+                class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
               >
                 Уютная светлая квартира ждёт своих гостей. Квартира
                 укомплектована всем необходимым для комфортного пребывания до
@@ -1642,7 +1642,7 @@
             </div>
             <div class="object__status">
               <time
-                class="smart_time object__date"
+                class="object__date smart_time"
                 datetime="2024-10-23 05:26:08 +0300"
                 time_zone="3"
                 >сегодня в 05:26</time
@@ -1659,7 +1659,7 @@
               </div>
               <noindex
                 ><a
-                  class="btn btn-info btn-xs object__show-phone yaSend open_url_in_new_tab"
+                  class="btn btn-info btn-xs object__show-phone open_url_in_new_tab yaSend"
                   data-modal-url="/redirects/115855240/phone_modal"
                   data-url="/redirects?advertisement_id=115855240"
                   href="#"
@@ -1676,7 +1676,7 @@
           <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
             <span class="notepad_action"
               ><button
-                class="ShowAdvNotepadAction object__actions-item"
+                class="object__actions-item ShowAdvNotepadAction"
                 data-id="115855240"
                 title="Добавить в избранное"
                 type="button"
@@ -1687,13 +1687,13 @@
               </button>
             </span>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="post"
               action="/estate/129137431"
               data-remote="true"
             >
               <input type="hidden" name="_method" value="delete" /><button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Сделать горячим"
                 data-confirm="Сделать горячим?"
                 type="submit"
@@ -1708,13 +1708,13 @@
               />
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="get"
               action="/estate/129137431/top?from_full_card=true"
               data-remote="true"
             >
               <button
-                class="object__actions-item hidden-xs yaSend"
+                class="hidden-xs object__actions-item yaSend"
                 yaparam="entity_top"
                 title="Поднять объявление"
                 type="submit"
@@ -1725,12 +1725,12 @@
               </button>
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="get"
               action="https://dev.olan.ru/estate/129137431/edit"
             >
               <button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Редактировать объявление"
                 type="submit"
               >
@@ -1740,13 +1740,13 @@
               </button>
             </form>
             <form
-              class="withoutBootstrapValidator _admin"
+              class="_admin withoutBootstrapValidator"
               method="post"
               action="/estate/129137431"
               data-remote="true"
             >
               <input type="hidden" name="_method" value="delete" /><button
-                class="object__actions-item hidden-xs"
+                class="hidden-xs object__actions-item"
                 title="Удалить объявление"
                 data-confirm="Удалить это объявление?"
                 type="submit"
@@ -1774,7 +1774,7 @@
             <li class="disabled"><span>...</span></li>
             <li><a data-remote="" href="/day-flat?page=2">»</a></li>
           </ul>
-          <div class="btn-group pagination pull-right hidden-xs">
+          <div class="btn-group hidden-xs pagination pull-right">
             <div class="button-dropdown">
               <a
                 class="btn btn-default dropdown-toggle"
@@ -1841,7 +1841,7 @@
         }
         //]]>
       </script>
-      <div class="row media clearfix object object_even media_after_travel">
+      <div class="row clearfix media media_after_travel object object_even">
         <div class="col-lg-12"></div>
       </div>
       <div class="search-hotel-modal"></div>
@@ -1852,7 +1852,7 @@
         });
         //]]>
       </script>
-      <div class="h4 center-icon">
+      <div class="center-icon h4">
         Посмотрите также:
         <svg class="icon-big">
           <use xlink:href="./img/icons.svg#navigator"></use>
@@ -1861,7 +1861,7 @@
       <ol class="breadcrumb">
         <li class="small">
           <a
-            class="yaSend center-icon"
+            class="center-icon yaSend"
             yaparam="click_to_breadcrumbs_home"
             href="https://olan.ru/"
             ><svg class="icon-default">
@@ -1907,7 +1907,7 @@
             >г Уссурийск</a
           >
         </li>
-        <li class="small js-predictions">
+        <li class="js-predictions small">
           Выберите
           <a
             class="js-show-breadcrumbs-modal"
@@ -1932,67 +1932,67 @@
               href="https://ussuriysk.olan.ru/day-flat"
               >квартиры</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/cheap"
               >недорого</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/map"
               >на карте</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-10-days"
               >на 10 дней</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-2-weeks"
               >на две недели</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-or-two-rooms"
               >1 или 2к</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-3-weeks"
               >на три недели</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-month"
               >на месяц</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-room"
               >1к</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/cheap"
               >недорого</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/map"
               >на карте</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/map"
               >на карте</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-10-days"
               >на 10 дней</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-2-weeks"
               >на две недели</a
@@ -2002,22 +2002,22 @@
               href="https://ussuriysk.olan.ru/day-flat"
               >квартиры</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-or-two-rooms"
               >1 или 2к</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-3-weeks"
               >на три недели</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-month"
               >на месяц</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-room"
               >1к</a
@@ -2027,7 +2027,7 @@
               href="https://ussuriysk.olan.ru/day-residential"
               >Посуточная аренда жилья</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-room"
               >1к</a
@@ -2105,7 +2105,7 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                 </div>
               </div>
               <div class="form-group">
-                <div class="help-block muted small text-right">
+                <div class="text-right help-block muted small">
                   Нажимая кнопку «Подписаться», я принимаю условия
                   <a href="https://olan.ru/offer">Оферты</a> и даю своё согласие
                   на обработку моих персональных данных на условиях и для целей,
@@ -2187,7 +2187,7 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
         </div>
       </div>
       <div class="row">
-        <div class="ld-comments col-lg-8 col-md-8">
+        <div class="col-lg-8 col-md-8 ld-comments">
           <h4 class="ld-comments-count" data-count="0">Отзывы</h4>
         </div>
       </div>
@@ -2208,7 +2208,7 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
             <div class="row" id="post-review-box" style="display: none">
               <div class="col-md-12">
                 <form
-                  class="form_ld_comment withoutBootstrapValidator no-default-submit"
+                  class="form_ld_comment no-default-submit withoutBootstrapValidator"
                   data-not-disable-submit="true"
                 >
                   <input
@@ -2239,7 +2239,7 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                     >
                       <span class="glyphicon glyphicon-remove"></span>Отмена
                     </button>
-                    <button class="btn btn-success btn-lg" type="submit">
+                    <button class="btn btn-lg btn-success" type="submit">
                       Сохранить
                     </button>
                   </div>

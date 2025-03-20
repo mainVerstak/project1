@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/tabs.css" />
     <link rel="stylesheet" href="css/new.css" />
     <link rel="stylesheet" href="css/redesign.css" />
-    <link rel="stylesheet" href="css/_app.css" />
+    <link rel="stylesheet" href="css/app.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -45,7 +45,7 @@
     <header>
       <div class="header-top-nav">
         <div class="container">
-          <ul class="nav navbar-nav navbar-left">
+          <ul class="nav navbar-left navbar-nav">
             <li>
               <div class="dropdown header-city">
                 <div
@@ -95,7 +95,7 @@
             </li>
             <li class="navbar-nav__hide-mobile" i>
               <a href="#">
-                <i class="fas fa-key icon-default"></i>
+                <i class="fa-key fas icon-default"></i>
                 Ипотека
               </a>
             </li>
@@ -117,7 +117,7 @@
                 </a>
               </span>
             </div>
-            <nav class="sidenav loaded">
+            <nav class="loaded sidenav">
               <div class="sidenav__inner">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="sidenav__hide-desktop">
@@ -129,9 +129,9 @@
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fa-map-marker-alt fas"></i>
                         Москва
-                        <i class="fas fa-caret-down"></i>
+                        <i class="fa-caret-down fas"></i>
                       </div>
                       <ul class="dropdown-menu">
                         <li><a href="#">Москва</a></li>
@@ -143,7 +143,7 @@
                   <li class="nav navbar-nav">
                     <a href="/sign-in">
                       <div class="navbar-link">
-                        <i class="fas fa-sign-in-alt"></i>
+                        <i class="fa-sign-in-alt fas"></i>
                         Войти
                       </div>
                     </a>
@@ -161,7 +161,7 @@
                     </a>
                   </li>
                   <li class="nav navbar-nav">
-                    <div class="navbar-btn nav-font-color">
+                    <div class="nav-font-color navbar-btn">
                       <a data-no-turbolink="true" href="/estate-new">
                         <div class="btn btn-warning">
                           <svg class="icon-default">
@@ -195,7 +195,7 @@
                   </li>
                   <li class="sidenav__hide-desktop">
                     <a href="#">
-                      <i class="fas fa-key icon-default"></i>
+                      <i class="fa-key fas icon-default"></i>
                       Ипотека
                     </a>
                   </li>
@@ -256,7 +256,7 @@
           <div class="search-hotel__column">
             <div class="search-hotel__label">Дата заезда</div>
             <div
-              class="search-hotel__date js-date-from"
+              class="js-date-from search-hotel__date"
               onclick="return proceedWithSutochno(this);"
             >
               <input
@@ -265,14 +265,14 @@
                 value="24 Окт"
               />
               <div class="search-hotel__date__icon_wrapper">
-                <i class="far fa-calendar search-hotel__date__icon"></i>
+                <i class="fa-calendar far search-hotel__date__icon"></i>
               </div>
             </div>
           </div>
           <div class="search-hotel__column">
             <div class="search-hotel__label">Дата выезда</div>
             <div
-              class="search-hotel__date js-date-to"
+              class="js-date-to search-hotel__date"
               onclick="return proceedWithSutochno(this);"
             >
               <input
@@ -281,7 +281,7 @@
                 value="25 Окт"
               />
               <div class="search-hotel__date__icon_wrapper">
-                <i class="far fa-calendar search-hotel__date__icon"></i>
+                <i class="fa-calendar far search-hotel__date__icon"></i>
               </div>
             </div>
           </div>
@@ -295,7 +295,7 @@
           </div>
         </div>
       </div>
-      <div class="row media clearfix object object_even media_after_travel">
+      <div class="row clearfix media media_after_travel object object_even">
         <div class="col-lg-12"></div>
       </div>
       <div class="search-hotel-modal"></div>
@@ -307,7 +307,7 @@
         //]]>
       </script>
       <div class="h4">
-        Посмотрите также: <i class="fas fa-location-arrow icon-fa-fas-14"></i>
+        Посмотрите также: <i class="fa-location-arrow fas icon-fa-fas-14"></i>
       </div>
       <ol class="breadcrumb">
         <li class="small">
@@ -315,7 +315,7 @@
             class="yaSend"
             yaparam="click_to_breadcrumbs_home"
             href="https://olan.ru/"
-            ><i class="fas fa-home"></i> Недвижимость</a
+            ><i class="fa-home fas"></i> Недвижимость</a
           >
         </li>
         <li class="small">
@@ -325,7 +325,7 @@
             rel="nofollow"
             href="#"
           >
-            <i class="fas fa-caret-down"></i>
+            <i class="fa-caret-down fas"></i>
           </a>
           <a
             class="yaSend"
@@ -341,7 +341,7 @@
             rel="nofollow"
             href="#"
           >
-            <i class="fas fa-caret-down"></i>
+            <i class="fa-caret-down fas"></i>
           </a>
           <a
             class="js-show-breadcrumbs-modal"
@@ -351,7 +351,7 @@
             >г Уссурийск</a
           >
         </li>
-        <li class="small js-predictions">
+        <li class="js-predictions small">
           Выберите
           <a
             class="js-show-breadcrumbs-modal"
@@ -376,67 +376,67 @@
               href="https://ussuriysk.olan.ru/day-flat"
               >квартиры</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/cheap"
               >недорого</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/map"
               >на карте</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-10-days"
               >на 10 дней</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-2-weeks"
               >на две недели</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-or-two-rooms"
               >1 или 2к</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-3-weeks"
               >на три недели</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-month"
               >на месяц</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-room"
               >1к</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/cheap"
               >недорого</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/map"
               >на карте</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/map"
               >на карте</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-10-days"
               >на 10 дней</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-2-weeks"
               >на две недели</a
@@ -446,22 +446,22 @@
               href="https://ussuriysk.olan.ru/day-flat"
               >квартиры</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-or-two-rooms"
               >1 или 2к</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-3-weeks"
               >на три недели</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/period-month"
               >на месяц</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-room"
               >1к</a
@@ -471,7 +471,7 @@
               href="https://ussuriysk.olan.ru/day-residential"
               >Посуточная аренда жилья</a
             ><a
-              class="breadcrumb-filter__item yaSend breadcrumb-filter__item_small"
+              class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
               yaparam="click_to_breadcrumbs_badge"
               href="https://ussuriysk.olan.ru/day-flat/one-room"
               >1к</a
