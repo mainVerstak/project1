@@ -18,9 +18,11 @@ $color-grey-background: #eeeeee;
 $color-border: #e6e6e6;
 
 // Border radius
+$border-radius-sm: 3px;
 $border-radius: 5px;
 $border-radius-big: 10px;
 $padding-btn-small: 6px 10px;
+$padding-btn-small-sm: 3px 5px;
 $padding-btn-big: 15px;
 
 // New colors
@@ -146,7 +148,7 @@ body {
 }
 
 .well {
-  background-color: $color-grey-background;
+  background-color: $color-white;
   box-shadow: none;
   -webkit-box-shadow: none;
   background-image: none;
@@ -157,6 +159,26 @@ body {
 
 .well-sm {
   border-radius: $border-radius;
+}
+
+// Links
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition-duration: 0.1s;
+
+  &:hover {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+  &:focus {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $color-visited;
+    text-decoration: underline;
+  }
 }
 
 // Buttons
@@ -686,5 +708,98 @@ a.dropdown-toggle:visited {
 
   @media (max-width: 767px) {
     min-height: unset;
+  }
+}
+// Breadcrumbs
+.breadcrumb {
+  font-weight: 700;
+  background-color: transparent;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+  padding: 10px;
+  margin-bottom: 0;
+
+  & > li + li::before {
+    content: "/\00a0";
+    padding: 0 0px;
+    color: $color-disabled;
+  }
+
+  .small {
+    font-size: 14px;
+  }
+
+  li {
+    padding: $padding-btn-small-sm;
+
+    a {
+      height: 24px;
+      line-height: 1;
+      color: $color-grey;
+      padding: $padding-btn-small-sm;
+      border-radius: $border-radius-sm;
+      text-decoration: none;
+      transition-duration: 0.1s;
+
+      &:hover {
+        color: $color-primary;
+        background-color: $color-secondary;
+      }
+      &:focus {
+        color: $color-grey;
+        outline: 2px solid $color-grey;
+
+        &:hover {
+          color: $color-primary;
+          background-color: $color-secondary;
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb-filter {
+  margin-bottom: 20px;
+
+  .breadcrumb-filter__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .breadcrumb-filter__item {
+    height: 24px;
+    line-height: 1;
+    background-image: none;
+    filter: none;
+    background-color: $color-white;
+    border-radius: $border-radius-sm;
+    padding: $padding-btn-small-sm;
+    color: $color-grey;
+    border: 1px solid $color-secondary;
+    font-weight: 700;
+    transition-duration: 0.1s;
+
+    &:hover {
+      background-image: none;
+      filter: none;
+      text-decoration: none;
+      background-color: $color-secondary;
+      color: $color-primary;
+    }
+    &:active {
+      background-image: none;
+      filter: none;
+      text-decoration: none;
+      background-color: $color-secondary;
+    }
+    &:focus {
+      background-image: none;
+      filter: none;
+      text-decoration: none;
+      background-color: $color-white;
+      outline: 2px solid $color-grey;
+    }
   }
 }
