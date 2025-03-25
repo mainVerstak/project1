@@ -1,4 +1,43 @@
-// @import "global";
+/* Subscribe */
+.subscribe-block {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .well {
+    padding: 0;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .form-group.pull-right {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+  .form-group.pull-right .input-group {
+    width: 100%;
+  }
+  .form-group.pull-right .input-group .input-group-btn {
+    width: 1%;
+  }
+  .input-group-btn:last-child > .btn,
+  .input-group-btn:last-child > .btn-group {
+    margin-left: 10px;
+    padding: $padding-btn-small;
+    border-radius: $border-radius;
+  }
+  input.form-control:first-child:not(:only-child) {
+    border-radius: $border-radius !important;
+  }
+  .help-block.muted.small.text-right {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: start;
+    color: $color-grey;
+  }
+}
 
 /* Review-box */
 .review-box {
@@ -6,7 +45,7 @@
     background-color: $color-white;
     padding: 0;
     margin: 0 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border: none;
     border-radius: 10px;
     box-shadow: none;
@@ -20,11 +59,9 @@
   .input-group .form-control {
     width: 100%;
     border-radius: $border-radius;
-    border: 1px solid $color-border;
   }
   .input-group input.form-control:first-child:not(:only-child) {
     border-radius: $border-radius !important;
-    border: 1px solid $color-border;
   }
   .input-group .input-group-btn {
     width: fit-content;
@@ -48,67 +85,6 @@
     gap: 10px;
   }
 
-  input.form-control {
-    border-radius: 5px;
-    border: 1px solid #e6e6e6;
-    padding: 6px 10px;
-    height: unset;
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    font-size: 14px !important;
-    height: 32px !important;
-  }
-
-  textarea.form-control {
-    border-radius: 5px;
-    border: 1px solid #e6e6e6;
-    padding: 6px 10px;
-    height: unset;
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .btn {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    vertical-align: bottom;
-    border-radius: 5px;
-    padding: 6px 10px;
-    font-weight: 500;
-    line-height: 1.314;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    height: 32px !important;
-  }
-
-  .btn-primary {
-    background-color: $color-blue;
-    border-radius: 5px;
-    background-image: none;
-    border: none;
-  }
-  .btn-primary:hover {
-    background-color: $color-blue-hover;
-  }
-
-  .btn-danger {
-    background-color: #d9534f;
-    border-color: #d9534f;
-    background-image: none;
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .btn-danger:hover {
-    background-color: #c12e2a;
-    border-color: #c12e2a;
-  }
-
   .stars {
     display: flex;
     flex-direction: row;
@@ -120,12 +96,12 @@
       font-size: 24px;
       padding: 0 1px;
       cursor: pointer;
-      color: $color-blue;
+      color: $color-primary;
       text-decoration: none;
     }
 
     .start-full {
-      color: $color-blue;
+      color: $color-primary;
     }
     .start-empty {
       color: $color-grey;
@@ -134,7 +110,7 @@
     .start-full::before {
       content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.95608 0.713542C7.66564 -0.237847 6.33436 -0.237847 6.04392 0.713542L4.88631 4.5065H1.00236C0.0455467 4.5065 -0.365321 5.73518 0.394857 6.32314L3.57993 8.78633L2.39008 12.6843C2.10257 13.6262 3.17957 14.3859 3.95367 13.7873L7 11.4313L10.0463 13.7873C10.8204 14.3859 11.8974 13.6262 11.6099 12.6843L10.4201 8.78633L13.6051 6.32314C14.3653 5.73518 13.9545 4.5065 12.9976 4.5065H9.1137L7.95608 0.713542Z" fill="rgba(8, 76, 149, 1)"/></svg>');
       display: inline-block;
-      color: $color-blue;
+      color: $color-primary;
       width: 20px;
       height: 20px;
     }
@@ -152,12 +128,12 @@
   svg.icon-rating {
     width: 16px;
     height: 16px;
-    fill: $color-blue;
+    fill: $color-primary;
   }
   svg.icon-rating-not-fill {
     width: 16px;
     height: 16px;
-    stroke: $color-blue;
+    stroke: $color-primary;
     fill: none;
   }
 }

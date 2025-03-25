@@ -1,5 +1,3 @@
-// @import "global";
-
 // Old styles
 .header-top {
   position: relative;
@@ -23,6 +21,8 @@
 }
 
 .header-top-nav {
+  background-color: $color-surface;
+
   .container {
     background: transparent;
     padding: 0;

@@ -93,7 +93,7 @@ p {
 body {
   color: $color-dark;
   line-height: 1.5;
-  background-color: $color-surface;
+  background-color: $color-white;
 }
 
 /* Icons */
@@ -145,6 +145,11 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.icon-owner {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
 }
 
 .well {
@@ -293,6 +298,7 @@ a {
   color: $color-white;
   background-color: $color-primary;
   border: 1px solid $color-primary;
+  font-size: 14px;
 
   @media (hover: hover) {
     &:hover {
@@ -341,14 +347,42 @@ a {
     border: 1px solid $color-primary-hover;
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     background-color: $color-surface;
     color: $color-disabled;
+    border: 1px solid transparent;
+  }
+}
+
+.btn-danger {
+  color: $color-white;
+  background-color: $color-invalid;
+  border: 1px solid $color-invalid;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-invalid;
+      // border: 1px solid $color-invalid;
+    }
+  }
+
+  @media (hover: none) {
+    &:active,
+    &.active {
+      background-color: $color-invalid;
+      // border: 1px solid $color-invalid;
+    }
+  }
+
+  &:focus,
+  &.focus {
+    border: 1px solid $color-dark;
+    background-color: $color-invalid;
   }
 }
 
 // Inputs
-// textarea.form-control,
 .form-control {
   display: flex;
   gap: 10px;
@@ -357,10 +391,17 @@ a {
   border-radius: $border-radius;
   border: 1px solid $color-secondary;
   background: $color-white;
+  color: $color-dark;
+  // font-size: 16px;
+  font-weight: 400;
 
   box-shadow: none;
   -webkit-box-shadow: none;
   text-shadow: none;
+
+  &::placeholder {
+    color: $color-grey;
+  }
 
   &:hover {
     border: 1px solid $color-primary;
@@ -425,6 +466,10 @@ a {
       border: 2px solid $color-primary;
     }
   }
+}
+
+textarea.form-control {
+  padding: 13px 15px;
 }
 
 .btn-phone-floating {
