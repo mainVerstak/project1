@@ -760,16 +760,25 @@ a.dropdown-toggle:visited {
   font-weight: 700;
   background-color: transparent;
   display: inline-flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 3px;
-  padding: 10px;
+  padding: 10px 0;
   margin-bottom: 0;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   & > li + li::before {
     content: "/\00a0";
     padding: 0 0px;
     color: $color-disabled;
+    margin-right: -5px;
   }
 
   .small {
@@ -777,7 +786,8 @@ a.dropdown-toggle:visited {
   }
 
   li {
-    padding: $padding-btn-small-sm;
+    padding: 0;
+    white-space: nowrap;
 
     a {
       height: 24px;
@@ -787,6 +797,7 @@ a.dropdown-toggle:visited {
       border-radius: $border-radius-sm;
       text-decoration: none;
       transition-duration: 0.1s;
+      white-space: nowrap;
 
       &:hover {
         color: $color-primary;

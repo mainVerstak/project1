@@ -36,6 +36,10 @@
     padding-bottom: 10px;
     text-shadow: none;
     font-weight: 700;
+
+    &:visited {
+      color: $color-grey;
+    }
   }
 }
 
@@ -285,7 +289,7 @@ header {
     color: $color-grey-dark;
   }
 
-  .dropdown.nav.notepads_block_action a {
+  .dropdown.nav a {
     .badge {
       background-color: transparent;
       color: currentColor;

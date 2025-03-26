@@ -703,22 +703,31 @@ a.dropdown-toggle:visited {
   font-weight: 700;
   background-color: transparent;
   display: inline-flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 3px;
-  padding: 10px;
+  padding: 10px 0;
   margin-bottom: 0;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.breadcrumb::-webkit-scrollbar {
+  display: none;
 }
 .breadcrumb > li + li::before {
   content: "/ ";
   padding: 0 0px;
   color: #c4cdd9;
+  margin-right: -5px;
 }
 .breadcrumb .small {
   font-size: 14px;
 }
 .breadcrumb li {
-  padding: 3px 5px;
+  padding: 0;
+  white-space: nowrap;
 }
 .breadcrumb li a {
   height: 24px;
@@ -728,6 +737,7 @@ a.dropdown-toggle:visited {
   border-radius: 3px;
   text-decoration: none;
   transition-duration: 0.1s;
+  white-space: nowrap;
 }
 .breadcrumb li a:hover {
   color: #084c95;
@@ -2096,6 +2106,9 @@ a.ds-button:hover {
   text-shadow: none;
   font-weight: 700;
 }
+.header-top-nav .navbar-nav > li > a:visited {
+  color: #8c91a6;
+}
 
 .header-top-nav .dropdown:hover .dropdown-menu {
   display: none;
@@ -2322,7 +2335,7 @@ header a:hover {
 header .header-city-btn:hover {
   color: #333333;
 }
-header .dropdown.nav.notepads_block_action a .badge {
+header .dropdown.nav a .badge {
   background-color: transparent;
   color: currentColor;
   position: absolute;
@@ -2331,7 +2344,7 @@ header .dropdown.nav.notepads_block_action a .badge {
   padding: 4px;
   font-weight: 700;
 }
-header .dropdown.nav.notepads_block_action a:focus .badge, header .dropdown.nav.notepads_block_action a:hover .badge {
+header .dropdown.nav a:focus .badge, header .dropdown.nav a:hover .badge {
   background-color: transparent;
 }
 header .container {

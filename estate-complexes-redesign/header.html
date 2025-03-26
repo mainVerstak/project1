@@ -24,11 +24,6 @@
     />
     <link rel="stylesheet" href="css/_header.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/tabs.css" /> -->
-    <!-- <link rel="stylesheet" href="css/new.css" /> -->
-    <link rel="stylesheet" href="css/mortgage.css" />
-    <!-- <link rel="stylesheet" href="css/redesign.css" /> -->
-    <!-- <link rel="stylesheet" href="css/header.css" /> -->
     <link rel="stylesheet" href="css/app.css" />
 
     <script src="js/jquery.js"></script>
@@ -43,7 +38,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
   </head>
 
-  <body style="background-color: #eeeeee">
+  <body style="background-color: #fff">
     <header>
       <div class="header-top-nav">
         <div class="container">
@@ -58,11 +53,11 @@
                   aria-expanded="false"
                 >
                   <svg class="icon-map-small">
-                    <use xlink:href="./img/new-icons.svg#placeholder"></use>
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
                   </svg>
                   Москва
                   <svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#dd"></use>
+                    <use xlink:href="./img/icons.svg#chevron-d"></use>
                   </svg>
                 </div>
                 <ul class="dropdown-menu">
@@ -82,7 +77,7 @@
                 yaparam="header_document_click"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#new"></use>
+                  <use xlink:href="./img/icons.svg#new"></use>
                 </svg>
                 Новостройки
               </a>
@@ -90,7 +85,7 @@
             <li class="navbar-nav__hide-mobile">
               <a href="#">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#house"></use>
+                  <use xlink:href="./img/icons.svg#house"></use>
                 </svg>
                 Коттеджные поселки
               </a>
@@ -98,7 +93,7 @@
             <li class="navbar-nav__hide-mobile" i>
               <a href="#">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#mortgage"></use>
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
                 </svg>
                 Ипотека
               </a>
@@ -112,7 +107,7 @@
             <div class="navbar-header">
               <button class="navbar-toggle sidenav-button" type="button">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#sandwich"></use>
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
                 </svg>
               </button>
               <span class="pull-left">
@@ -134,13 +129,11 @@
                         aria-expanded="false"
                       >
                         <svg class="icon-map-small">
-                          <use
-                            xlink:href="./img/new-icons.svg#placeholder"
-                          ></use>
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
                         </svg>
                         Москва
                         <svg class="icon-default">
-                          <use xlink:href="./img/new-icons.svg#dd"></use>
+                          <use xlink:href="./img/icons.svg#chevron-d"></use>
                         </svg>
                       </div>
                       <ul class="dropdown-menu">
@@ -150,36 +143,54 @@
                       </ul>
                     </div>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a
                       title="Подписки о новых объявлениях"
                       href="https://olan.ru/searches"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#search"></use>
+                        <use xlink:href="./img/icons.svg#search"></use>
                       </svg>
                       <span class="hidden-lg hidden-md hidden-sm">
                         Подписки о новых объявлениях</span
                       ></a
                     >
+                  </li> -->
+                  <li class="dropdown nav notepads_block_action">
+                    <a href="https://olan.ru/notepads" title="Избранные"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                      </svg>
+                      <span class="hidden-lg hidden-md hidden-sm">
+                        Избранные</span
+                      ><span class="badge">6</span></a
+                    >
                   </li>
                   <li class="dropdown nav notepads_block_action">
                     <a href="https://olan.ru/notepads" title="Избранные"
                       ><svg class="icon-default">
-                        <use
-                          xlink:href="./img/new-icons.svg#favorite-fill"
-                        ></use>
+                        <use xlink:href="./img/icons.svg#message"></use>
                       </svg>
                       <span class="hidden-lg hidden-md hidden-sm">
-                        Избранные</span
-                      ><span class="badge">3</span></a
+                        Сообщения</span
+                      ><span class="badge">1</span></a
                     >
                   </li>
                   <li class="dropdown nav">
                     <a title="Мои объявления" href="/cabinet"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#list"></use>
+                        <use xlink:href="./img/icons.svg#list"></use>
                       </svg>
                       <span class="hidden-sm">Мои объявления</span
+                      ><span class="hidden-sm"></span
+                      ><span class="badge">4</span></a
+                    >
+                  </li>
+                  <li class="dropdown nav">
+                    <a title="Мои объявления" href="/cabinet"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#comm"></use>
+                      </svg>
+                      <span class="hidden-sm">Бронирования</span
                       ><span class="hidden-sm"></span
                     ></a>
                   </li>
@@ -187,17 +198,17 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"
                       ><svg class="icon-default">
                         <use
-                          xlink:href="./img/new-icons.svg#registration"
+                          xlink:href="./img/icons.svg#registration"
                         ></use></svg
-                      ><span class="hidden-sm"> +77055512345</span
+                      ><span class="hidden-sm"> Степан Бушуев</span
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#dd"></use></svg
+                        <use xlink:href="./img/icons.svg#chevron-d"></use></svg
                     ></a>
                     <ul class="dropdown-menu sub-menu">
                       <li>
                         <a href="https://olan.ru/balance"
                           ><svg class="icon-default">
-                            <use xlink:href="./img/new-icons.svg#balance"></use>
+                            <use xlink:href="./img/icons.svg#balance"></use>
                           </svg>
                           Баланс
                           <strong>0,00 </strong>
@@ -207,7 +218,7 @@
                       <li>
                         <a href="https://olan.ru/payments"
                           ><svg class="icon-default">
-                            <use xlink:href="./img/new-icons.svg#service"></use>
+                            <use xlink:href="./img/icons.svg#service"></use>
                           </svg>
                           Подключенные услуги</a
                         >
@@ -215,7 +226,7 @@
                       <li>
                         <a href="https://olan.ru/phone_calls"
                           ><svg class="icon-default">
-                            <use xlink:href="./img/new-icons.svg#phone"></use>
+                            <use xlink:href="./img/icons.svg#phone"></use>
                           </svg>
                           Звонки</a
                         >
@@ -223,7 +234,7 @@
                       <li>
                         <a href="https://olan.ru/users-edit"
                           ><svg class="icon-default">
-                            <use xlink:href="./img/new-icons.svg#setting"></use>
+                            <use xlink:href="./img/icons.svg#setting"></use>
                           </svg>
                           Настройки</a
                         >
@@ -235,7 +246,7 @@
                           data-method="delete"
                           href="/sign-out"
                           ><svg class="icon-default">
-                            <use xlink:href="./img/new-icons.svg#logout"></use>
+                            <use xlink:href="./img/icons.svg#logout"></use>
                           </svg>
                           Выход</a
                         >
@@ -247,9 +258,7 @@
                       <a data-no-turbolink="true" href="/estate-new">
                         <div class="btn btn-warning">
                           <svg class="icon-default">
-                            <use
-                              xlink:href="./img/new-new-icons.svg#plus"
-                            ></use>
+                            <use xlink:href="./img/icons.svg#plus"></use>
                           </svg>
                           Подать объявление
                         </div>
@@ -259,7 +268,7 @@
                   <li class="sidenav__hide-desktop">
                     <a href="https://olan.ru/"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#estate"></use>
+                        <use xlink:href="./img/icons.svg#estate"></use>
                       </svg>
                       Недвижимость</a
                     >
@@ -267,7 +276,7 @@
                   <li class="sidenav__hide-desktop">
                     <a href="https://olan.ru/mortgage"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#mortgage"></use>
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
                       </svg>
                       Ипотека</a
                     >
@@ -275,7 +284,7 @@
                   <li class="sidenav__hide-desktop">
                     <a href="https://olan.ru/new-complex-total"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#new"></use>
+                        <use xlink:href="./img/icons.svg#new"></use>
                       </svg>
                       Новостройки</a
                     >
@@ -283,7 +292,7 @@
                   <li class="sidenav__hide-desktop">
                     <a href="https://olan.ru/new-cottage-total"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#house"></use>
+                        <use xlink:href="./img/icons.svg#house"></use>
                       </svg>
                       Коттеджные поселки</a
                     >
@@ -291,7 +300,7 @@
                   <li class="sidenav__hide-desktop">
                     <a href="https://olan.ru/tariffs"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#tarif"></use>
+                        <use xlink:href="./img/icons.svg#tarif"></use>
                       </svg>
                       Тарифы</a
                     >
@@ -299,7 +308,7 @@
                   <li class="sidenav__hide-desktop">
                     <a href="https://olan.ru/xml"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#pocket"></use>
+                        <use xlink:href="./img/icons.svg#pocket"></use>
                       </svg>
                       Пакетная загрузка</a
                     >
@@ -307,7 +316,7 @@
                   <li class="sidenav__hide-desktop">
                     <a href="https://olan.ru/advertise"
                       ><svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#adv"></use>
+                        <use xlink:href="./img/icons.svg#adv"></use>
                       </svg>
                       Реклама на сайте</a
                     >
@@ -320,7 +329,7 @@
                 type="button"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#cross"></use>
+                  <use xlink:href="./img/icons.svg#cross"></use>
                 </svg>
               </button>
             </nav>
