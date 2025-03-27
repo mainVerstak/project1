@@ -40,7 +40,6 @@
 .map_panel,
 #selectBuildingTypeModal,
 #selectRenovationModal,
-#form_search_locations_modal,
 #selectCategoryModal,
 #selectOfferTypeModal,
 #searchFormModal,
@@ -97,32 +96,10 @@
   }
 }
 
-#form_search_locations_modal .modal-header .btn {
-  font-size: 14px !important;
-  height: 34px !important;
-  outline: none !important;
-  margin-bottom: 4px;
-}
-#form_search_locations_modal .modal-header .btn:focus {
-  box-shadow: none !important;
-  outline: none !important;
-  border-color: $color-border !important;
-}
-@media screen and (max-width: 767px) {
-  #form_search_locations_modal .modal-footer {
-    text-align: center;
-  }
-  #form_search_locations_modal .modal-footer .btn {
-    padding-top: 8px !important;
-    width: 48% !important;
-  }
-}
-
 /* Dropdowns */
 .map_panel,
 #selectBuildingTypeModal,
 #selectRenovationModal,
-#form_search_locations_modal,
 #selectCategoryModal,
 #selectOfferTypeModal,
 #searchFormModal,
@@ -190,7 +167,6 @@
 
 /* Inputs */
 .map_panel,
-#form_search_locations_modal,
 #selectCategoryModal,
 #selectOfferTypeModal,
 #searchFormModal,
@@ -477,9 +453,9 @@
       background-color: $color-grey-superlight;
     }
   }
-  #selectCategoryModal #form_search_locations_modal,
-  #selectOfferTypeModal #form_search_locations_modal,
-  #searchFormModal #form_search_locations_modal {
+  #selectCategoryModal,
+  #selectOfferTypeModal,
+  #searchFormModal {
     .modal-dialog .modal-content {
       background-color: $color-white;
     }
@@ -543,68 +519,6 @@
   }
   #searchFormModal .btn[yaparam="from_owner"] {
     display: flex !important;
-  }
-}
-
-#form_search_locations_modal {
-  .search-button-locations-action {
-    color: $color-blue;
-  }
-  .search-button-locations-action:hover {
-    color: $color-blue-hover;
-  }
-  .add-button-locations-action {
-    color: $color-blue;
-  }
-  .add-button-locations-action:hover {
-    color: $color-blue-hover;
-  }
-  .selectize-input.focus.input-active {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-color: $color-blue;
-  }
-  .modal-header .fas.fa-search-plus {
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    /* Единственный элемент */
-    .modal-header .breadcrumb.no_bottom .active.buttons .btn:only-child {
-      border-radius: $border-radius !important;
-    }
-    /* Первый элемент */
-    .modal-header
-      .breadcrumb.no_bottom
-      .active.buttons
-      .btn:first-child:not(:only-child) {
-      border-radius: $border-radius 0 0 $border-radius !important;
-    }
-    /* Второй элемент */
-    .modal-header
-      .breadcrumb.no_bottom
-      .active.buttons
-      .btn:nth-child(2):not(:first-child):not(:last-child) {
-      border-radius: $border-radius 0 0 $border-radius !important;
-      margin-left: -5px !important;
-    }
-    /* Последний элемент */
-    .modal-header
-      .breadcrumb.no_bottom
-      .active.buttons
-      .btn:last-child:not(:only-child) {
-      border-radius: 0 $border-radius $border-radius 0 !important;
-      margin-left: -5px !important;
-    }
-    /* Элемент не первый, не последний и не предпоследний */
-    .modal-header
-      .breadcrumb.no_bottom
-      .active.buttons
-      .btn:not(:first-child):not(:last-child):not(:nth-child(2)) {
-      border-radius: 0 !important;
-      margin-left: -5px !important;
-    }
   }
 }
 

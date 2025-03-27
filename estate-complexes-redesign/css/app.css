@@ -160,6 +160,10 @@ a:visited {
   text-decoration: underline;
 }
 
+.text-muted {
+  color: #8c91a6;
+}
+
 .btn {
   display: flex;
   height: 44px;
@@ -558,6 +562,7 @@ a.dropdown-toggle:visited {
   text-shadow: none;
 }
 
+.selectize-dropdown,
 .dropdown-menu {
   width: inherit;
   padding: 3px;
@@ -570,7 +575,13 @@ a.dropdown-toggle:visited {
   -webkit-box-shadow: none;
   text-shadow: none;
 }
-.dropdown-menu li a, .dropdown-menu.open li a, .dropdown-menu.sub-menu li a, .dropdown-menu.sub-menu li a {
+.selectize-dropdown .selectize-dropdown-content .option,
+.selectize-dropdown li a, .selectize-dropdown.open li a, .selectize-dropdown.sub-menu li a, .selectize-dropdown.sub-menu li a,
+.dropdown-menu .selectize-dropdown-content .option,
+.dropdown-menu li a,
+.dropdown-menu.open li a,
+.dropdown-menu.sub-menu li a,
+.dropdown-menu.sub-menu li a {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -581,43 +592,76 @@ a.dropdown-toggle:visited {
   margin: 0;
   margin-bottom: 1px;
 }
-.dropdown-menu li a:visited, .dropdown-menu.open li a:visited, .dropdown-menu.sub-menu li a:visited, .dropdown-menu.sub-menu li a:visited {
+.selectize-dropdown .selectize-dropdown-content .option:visited,
+.selectize-dropdown li a:visited, .selectize-dropdown.open li a:visited, .selectize-dropdown.sub-menu li a:visited, .selectize-dropdown.sub-menu li a:visited,
+.dropdown-menu .selectize-dropdown-content .option:visited,
+.dropdown-menu li a:visited,
+.dropdown-menu.open li a:visited,
+.dropdown-menu.sub-menu li a:visited,
+.dropdown-menu.sub-menu li a:visited {
   color: #242a3e;
 }
-.dropdown-menu li a:disabled, .dropdown-menu.open li a:disabled, .dropdown-menu.sub-menu li a:disabled, .dropdown-menu.sub-menu li a:disabled {
+.selectize-dropdown .selectize-dropdown-content .option:disabled,
+.selectize-dropdown li a:disabled, .selectize-dropdown.open li a:disabled, .selectize-dropdown.sub-menu li a:disabled, .selectize-dropdown.sub-menu li a:disabled,
+.dropdown-menu .selectize-dropdown-content .option:disabled,
+.dropdown-menu li a:disabled,
+.dropdown-menu.open li a:disabled,
+.dropdown-menu.sub-menu li a:disabled,
+.dropdown-menu.sub-menu li a:disabled {
   color: #c4cdd9;
   background-color: #f6f7f9;
 }
-.dropdown-menu li a:focus, .dropdown-menu.open li a:focus, .dropdown-menu.sub-menu li a:focus, .dropdown-menu.sub-menu li a:focus {
+.selectize-dropdown .selectize-dropdown-content .option:focus,
+.selectize-dropdown li a:focus, .selectize-dropdown.open li a:focus, .selectize-dropdown.sub-menu li a:focus, .selectize-dropdown.sub-menu li a:focus,
+.dropdown-menu .selectize-dropdown-content .option:focus,
+.dropdown-menu li a:focus,
+.dropdown-menu.open li a:focus,
+.dropdown-menu.sub-menu li a:focus,
+.dropdown-menu.sub-menu li a:focus {
   color: #084c95;
   background-color: #e6eff9;
   background-image: none;
   outline: 2px solid #242a3e;
 }
 @media (hover: hover) {
-  .dropdown-menu li a:hover, .dropdown-menu.open li a:hover, .dropdown-menu.sub-menu li a:hover, .dropdown-menu.sub-menu li a:hover {
+  .selectize-dropdown .selectize-dropdown-content .option:hover,
+  .selectize-dropdown li a:hover, .selectize-dropdown.open li a:hover, .selectize-dropdown.sub-menu li a:hover, .selectize-dropdown.sub-menu li a:hover,
+  .dropdown-menu .selectize-dropdown-content .option:hover,
+  .dropdown-menu li a:hover,
+  .dropdown-menu.open li a:hover,
+  .dropdown-menu.sub-menu li a:hover,
+  .dropdown-menu.sub-menu li a:hover {
     color: #084c95;
     background-color: #e6eff9;
     background-image: none;
   }
 }
 @media (hover: none) {
-  .dropdown-menu li a:active, .dropdown-menu.open li a:active, .dropdown-menu.sub-menu li a:active, .dropdown-menu.sub-menu li a:active {
+  .selectize-dropdown .selectize-dropdown-content .option:active,
+  .selectize-dropdown li a:active, .selectize-dropdown.open li a:active, .selectize-dropdown.sub-menu li a:active, .selectize-dropdown.sub-menu li a:active,
+  .dropdown-menu .selectize-dropdown-content .option:active,
+  .dropdown-menu li a:active,
+  .dropdown-menu.open li a:active,
+  .dropdown-menu.sub-menu li a:active,
+  .dropdown-menu.sub-menu li a:active {
     color: #084c95;
     background-color: #e6eff9;
   }
 }
+.selectize-dropdown > .active > a,
 .dropdown-menu > .active > a {
   color: #084c95;
   background-color: #e6eff9;
   background-image: none;
   margin: 0;
 }
+.selectize-dropdown > .active > a:hover,
 .dropdown-menu > .active > a:hover {
   color: #084c95;
   background-color: #e6eff9;
   background-image: none;
 }
+.selectize-dropdown > .active > a:focus,
 .dropdown-menu > .active > a:focus {
   color: #084c95;
   background-color: #e6eff9;
@@ -792,6 +836,78 @@ a.dropdown-toggle:visited {
   text-decoration: none;
   background-color: #ffffff;
   outline: 2px solid #8c91a6;
+}
+
+.selectize-control .selectize-input {
+  padding: 13px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #e6eff9;
+  color: #242a3e;
+}
+.selectize-control .selectize-input::placeholder,
+.selectize-control .selectize-input input::placeholder {
+  color: #8c91a6;
+}
+.selectize-control .selectize-input:hover {
+  border: 1px solid #084c95;
+}
+.selectize-control .selectize-input:focus,
+.selectize-control .selectize-input input:focus {
+  border: 1px solid #084c95;
+  outline: 1px solid #084c95;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+}
+.selectize-control .selectize-dropdown {
+  top: 48px;
+}
+.selectize-control .selectize-dropdown .selectize-dropdown-content {
+  padding: 0;
+}
+
+#form_search_locations_modal .modal-dialog .btn {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active {
+  color: #8c91a6;
+}
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height: 24px;
+  padding: 3px 5px;
+}
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:only-child {
+  border-radius: 5px !important;
+}
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:first-child:not(:only-child) {
+  border-radius: 5px 0 0 5px !important;
+}
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:nth-child(2):not(:first-child):not(:last-child) {
+  border-radius: 5px 0 0 5px !important;
+}
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:last-child:not(:only-child) {
+  border-radius: 0 5px 5px 0 !important;
+  margin-left: -5px !important;
+}
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:not(:first-child):not(:last-child):not(:nth-child(2)) {
+  border-radius: 0 !important;
+  margin-left: -5px !important;
 }
 
 .ds-slider {
@@ -2712,7 +2828,6 @@ header .balance-currency {
 .map_panel .btn-xs,
 #selectBuildingTypeModal .btn-xs,
 #selectRenovationModal .btn-xs,
-#form_search_locations_modal .btn-xs,
 #selectCategoryModal .btn-xs,
 #selectOfferTypeModal .btn-xs,
 #searchFormModal .btn-xs,
@@ -2726,7 +2841,6 @@ header .balance-currency {
 .map_panel .btn-group-xs > .btn,
 #selectBuildingTypeModal .btn-group-xs > .btn,
 #selectRenovationModal .btn-group-xs > .btn,
-#form_search_locations_modal .btn-group-xs > .btn,
 #selectCategoryModal .btn-group-xs > .btn,
 #selectOfferTypeModal .btn-group-xs > .btn,
 #searchFormModal .btn-group-xs > .btn,
@@ -2737,7 +2851,6 @@ header .balance-currency {
 .map_panel .btn-styled-new2,
 #selectBuildingTypeModal .btn-styled-new2,
 #selectRenovationModal .btn-styled-new2,
-#form_search_locations_modal .btn-styled-new2,
 #selectCategoryModal .btn-styled-new2,
 #selectOfferTypeModal .btn-styled-new2,
 #searchFormModal .btn-styled-new2,
@@ -2748,7 +2861,6 @@ header .balance-currency {
 .map_panel .btn-styled-new2:focus,
 #selectBuildingTypeModal .btn-styled-new2:focus,
 #selectRenovationModal .btn-styled-new2:focus,
-#form_search_locations_modal .btn-styled-new2:focus,
 #selectCategoryModal .btn-styled-new2:focus,
 #selectOfferTypeModal .btn-styled-new2:focus,
 #searchFormModal .btn-styled-new2:focus,
@@ -2759,7 +2871,6 @@ header .balance-currency {
   .map_panel .btn-styled-new2:hover,
   #selectBuildingTypeModal .btn-styled-new2:hover,
   #selectRenovationModal .btn-styled-new2:hover,
-  #form_search_locations_modal .btn-styled-new2:hover,
   #selectCategoryModal .btn-styled-new2:hover,
   #selectOfferTypeModal .btn-styled-new2:hover,
   #searchFormModal .btn-styled-new2:hover,
@@ -2771,7 +2882,6 @@ header .balance-currency {
   .map_panel .btn-styled-new2:active,
   #selectBuildingTypeModal .btn-styled-new2:active,
   #selectRenovationModal .btn-styled-new2:active,
-  #form_search_locations_modal .btn-styled-new2:active,
   #selectCategoryModal .btn-styled-new2:active,
   #selectOfferTypeModal .btn-styled-new2:active,
   #searchFormModal .btn-styled-new2:active,
@@ -2783,7 +2893,6 @@ header .balance-currency {
   .map_panel .btn,
   #selectBuildingTypeModal .btn,
   #selectRenovationModal .btn,
-  #form_search_locations_modal .btn,
   #selectCategoryModal .btn,
   #selectOfferTypeModal .btn,
   #searchFormModal .btn,
@@ -2793,7 +2902,6 @@ header .balance-currency {
   .map_panel .btn-xs,
   #selectBuildingTypeModal .btn-xs,
   #selectRenovationModal .btn-xs,
-  #form_search_locations_modal .btn-xs,
   #selectCategoryModal .btn-xs,
   #selectOfferTypeModal .btn-xs,
   #searchFormModal .btn-xs,
@@ -2813,10 +2921,6 @@ header .balance-currency {
 #selectRenovationModal .btn-default.active,
 #selectRenovationModal .btn-primary:active,
 #selectRenovationModal .btn-primary.active,
-#form_search_locations_modal .btn-default:active,
-#form_search_locations_modal .btn-default.active,
-#form_search_locations_modal .btn-primary:active,
-#form_search_locations_modal .btn-primary.active,
 #selectCategoryModal .btn-default:active,
 #selectCategoryModal .btn-default.active,
 #selectCategoryModal .btn-primary:active,
@@ -2838,33 +2942,10 @@ header .balance-currency {
   box-shadow: none;
 }
 
-#form_search_locations_modal .modal-header .btn {
-  font-size: 14px !important;
-  height: 34px !important;
-  outline: none !important;
-  margin-bottom: 4px;
-}
-
-#form_search_locations_modal .modal-header .btn:focus {
-  box-shadow: none !important;
-  outline: none !important;
-  border-color: #e6e6e6 !important;
-}
-
-@media screen and (max-width: 767px) {
-  #form_search_locations_modal .modal-footer {
-    text-align: center;
-  }
-  #form_search_locations_modal .modal-footer .btn {
-    padding-top: 8px !important;
-    width: 48% !important;
-  }
-}
 /* Dropdowns */
 .map_panel .dropdown-toggle,
 #selectBuildingTypeModal .dropdown-toggle,
 #selectRenovationModal .dropdown-toggle,
-#form_search_locations_modal .dropdown-toggle,
 #selectCategoryModal .dropdown-toggle,
 #selectOfferTypeModal .dropdown-toggle,
 #searchFormModal .dropdown-toggle,
@@ -2878,7 +2959,6 @@ header .balance-currency {
 .map_panel .dropdown-menu,
 #selectBuildingTypeModal .dropdown-menu,
 #selectRenovationModal .dropdown-menu,
-#form_search_locations_modal .dropdown-menu,
 #selectCategoryModal .dropdown-menu,
 #selectOfferTypeModal .dropdown-menu,
 #searchFormModal .dropdown-menu,
@@ -2892,7 +2972,6 @@ header .balance-currency {
 .map_panel .dropdown-menu li a,
 #selectBuildingTypeModal .dropdown-menu li a,
 #selectRenovationModal .dropdown-menu li a,
-#form_search_locations_modal .dropdown-menu li a,
 #selectCategoryModal .dropdown-menu li a,
 #selectOfferTypeModal .dropdown-menu li a,
 #searchFormModal .dropdown-menu li a,
@@ -2913,7 +2992,6 @@ header .balance-currency {
 .map_panel .dropdown-menu > li > a,
 #selectBuildingTypeModal .dropdown-menu > li > a,
 #selectRenovationModal .dropdown-menu > li > a,
-#form_search_locations_modal .dropdown-menu > li > a,
 #selectCategoryModal .dropdown-menu > li > a,
 #selectOfferTypeModal .dropdown-menu > li > a,
 #searchFormModal .dropdown-menu > li > a,
@@ -2927,7 +3005,6 @@ header .balance-currency {
   .map_panel .dropdown-menu li a:hover,
   #selectBuildingTypeModal .dropdown-menu li a:hover,
   #selectRenovationModal .dropdown-menu li a:hover,
-  #form_search_locations_modal .dropdown-menu li a:hover,
   #selectCategoryModal .dropdown-menu li a:hover,
   #selectOfferTypeModal .dropdown-menu li a:hover,
   #searchFormModal .dropdown-menu li a:hover,
@@ -2939,7 +3016,6 @@ header .balance-currency {
 .map_panel .dropdown-menu li:first-child a,
 #selectBuildingTypeModal .dropdown-menu li:first-child a,
 #selectRenovationModal .dropdown-menu li:first-child a,
-#form_search_locations_modal .dropdown-menu li:first-child a,
 #selectCategoryModal .dropdown-menu li:first-child a,
 #selectOfferTypeModal .dropdown-menu li:first-child a,
 #searchFormModal .dropdown-menu li:first-child a,
@@ -2949,7 +3025,6 @@ header .balance-currency {
 .map_panel .dropdown-menu li:last-child a,
 #selectBuildingTypeModal .dropdown-menu li:last-child a,
 #selectRenovationModal .dropdown-menu li:last-child a,
-#form_search_locations_modal .dropdown-menu li:last-child a,
 #selectCategoryModal .dropdown-menu li:last-child a,
 #selectOfferTypeModal .dropdown-menu li:last-child a,
 #searchFormModal .dropdown-menu li:last-child a,
@@ -2960,7 +3035,6 @@ header .balance-currency {
 .map_panel .dropdown-menu li.active a,
 #selectBuildingTypeModal .dropdown-menu li.active a,
 #selectRenovationModal .dropdown-menu li.active a,
-#form_search_locations_modal .dropdown-menu li.active a,
 #selectCategoryModal .dropdown-menu li.active a,
 #selectOfferTypeModal .dropdown-menu li.active a,
 #searchFormModal .dropdown-menu li.active a,
@@ -2972,7 +3046,6 @@ header .balance-currency {
 .map_panel .modal-dialog .btn,
 #selectBuildingTypeModal .modal-dialog .btn,
 #selectRenovationModal .modal-dialog .btn,
-#form_search_locations_modal .modal-dialog .btn,
 #selectCategoryModal .modal-dialog .btn,
 #selectOfferTypeModal .modal-dialog .btn,
 #searchFormModal .modal-dialog .btn,
@@ -2986,7 +3059,6 @@ header .balance-currency {
 
 /* Inputs */
 .map_panel,
-#form_search_locations_modal,
 #selectCategoryModal,
 #selectOfferTypeModal,
 #searchFormModal,
@@ -2998,7 +3070,6 @@ header .balance-currency {
   /* Элемент не первый, не последний и не предпоследний */
 }
 .map_panel label,
-#form_search_locations_modal label,
 #selectCategoryModal label,
 #selectOfferTypeModal label,
 #searchFormModal label,
@@ -3006,7 +3077,6 @@ header .balance-currency {
   vertical-align: middle;
 }
 .map_panel input.form-control:only-child,
-#form_search_locations_modal input.form-control:only-child,
 #selectCategoryModal input.form-control:only-child,
 #selectOfferTypeModal input.form-control:only-child,
 #searchFormModal input.form-control:only-child,
@@ -3014,7 +3084,6 @@ header .balance-currency {
   border-radius: 5px !important;
 }
 .map_panel input.form-control:first-child:not(:only-child),
-#form_search_locations_modal input.form-control:first-child:not(:only-child),
 #selectCategoryModal input.form-control:first-child:not(:only-child),
 #selectOfferTypeModal input.form-control:first-child:not(:only-child),
 #searchFormModal input.form-control:first-child:not(:only-child),
@@ -3022,7 +3091,6 @@ header .balance-currency {
   border-radius: 5px 0 0 5px !important;
 }
 .map_panel input.form-control:last-child:not(:only-child),
-#form_search_locations_modal input.form-control:last-child:not(:only-child),
 #selectCategoryModal input.form-control:last-child:not(:only-child),
 #selectOfferTypeModal input.form-control:last-child:not(:only-child),
 #searchFormModal input.form-control:last-child:not(:only-child),
@@ -3030,7 +3098,6 @@ header .balance-currency {
   border-radius: 0 5px 5px 0 !important;
 }
 .map_panel input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
-#form_search_locations_modal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #selectCategoryModal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #selectOfferTypeModal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #searchFormModal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
@@ -3038,7 +3105,6 @@ header .balance-currency {
   border-radius: 0 5px 5px 0 !important;
 }
 .map_panel input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
-#form_search_locations_modal input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #selectCategoryModal input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #selectOfferTypeModal input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #searchFormModal input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
@@ -3046,7 +3112,6 @@ header .balance-currency {
   border-radius: 0 !important;
 }
 .map_panel .input-group-addon,
-#form_search_locations_modal .input-group-addon,
 #selectCategoryModal .input-group-addon,
 #selectOfferTypeModal .input-group-addon,
 #searchFormModal .input-group-addon,
@@ -3058,7 +3123,6 @@ header .balance-currency {
   color: #777777;
 }
 .map_panel .input-group-addon.input-sm,
-#form_search_locations_modal .input-group-addon.input-sm,
 #selectCategoryModal .input-group-addon.input-sm,
 #selectOfferTypeModal .input-group-addon.input-sm,
 #searchFormModal .input-group-addon.input-sm,
@@ -3067,7 +3131,6 @@ header .balance-currency {
   padding: 5px;
 }
 .map_panel .input-group-sm input.form-control,
-#form_search_locations_modal .input-group-sm input.form-control,
 #selectCategoryModal .input-group-sm input.form-control,
 #selectOfferTypeModal .input-group-sm input.form-control,
 #searchFormModal .input-group-sm input.form-control,
@@ -3080,7 +3143,6 @@ header .balance-currency {
 }
 @media screen and (max-width: 767px) {
   .map_panel .input-group-sm input.form-control,
-  #form_search_locations_modal .input-group-sm input.form-control,
   #selectCategoryModal .input-group-sm input.form-control,
   #selectOfferTypeModal .input-group-sm input.form-control,
   #searchFormModal .input-group-sm input.form-control,
@@ -3088,7 +3150,6 @@ header .balance-currency {
     height: 44px !important;
   }
   .map_panel input.form-control,
-  #form_search_locations_modal input.form-control,
   #selectCategoryModal input.form-control,
   #selectOfferTypeModal input.form-control,
   #searchFormModal input.form-control,
@@ -3375,9 +3436,9 @@ header .balance-currency {
   #searchFormModal .modal-dialog .modal-content {
     background-color: #f5f5f5;
   }
-  #selectCategoryModal #form_search_locations_modal .modal-dialog .modal-content,
-  #selectOfferTypeModal #form_search_locations_modal .modal-dialog .modal-content,
-  #searchFormModal #form_search_locations_modal .modal-dialog .modal-content {
+  #selectCategoryModal .modal-dialog .modal-content,
+  #selectOfferTypeModal .modal-dialog .modal-content,
+  #searchFormModal .modal-dialog .modal-content {
     background-color: #ffffff;
   }
   #searchFormModal .modal-dialog .modal-content .get-search-locations-action {
@@ -3436,55 +3497,6 @@ header .balance-currency {
     display: flex !important;
   }
 }
-#form_search_locations_modal .search-button-locations-action {
-  color: #084c95;
-}
-#form_search_locations_modal .search-button-locations-action:hover {
-  color: #07386c;
-}
-#form_search_locations_modal .add-button-locations-action {
-  color: #084c95;
-}
-#form_search_locations_modal .add-button-locations-action:hover {
-  color: #07386c;
-}
-#form_search_locations_modal .selectize-input.focus.input-active {
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-color: #084c95;
-}
-#form_search_locations_modal .modal-header .fas.fa-search-plus {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  #form_search_locations_modal {
-    /* Единственный элемент */
-    /* Первый элемент */
-    /* Второй элемент */
-    /* Последний элемент */
-    /* Элемент не первый, не последний и не предпоследний */
-  }
-  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:only-child {
-    border-radius: 5px !important;
-  }
-  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:first-child:not(:only-child) {
-    border-radius: 5px 0 0 5px !important;
-  }
-  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:nth-child(2):not(:first-child):not(:last-child) {
-    border-radius: 5px 0 0 5px !important;
-    margin-left: -5px !important;
-  }
-  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:last-child:not(:only-child) {
-    border-radius: 0 5px 5px 0 !important;
-    margin-left: -5px !important;
-  }
-  #form_search_locations_modal .modal-header .breadcrumb.no_bottom .active.buttons .btn:not(:first-child):not(:last-child):not(:nth-child(2)) {
-    border-radius: 0 !important;
-    margin-left: -5px !important;
-  }
-}
-
 .map_container {
   height: calc(100vh - 96px);
 }
@@ -3633,15 +3645,6 @@ header .balance-currency {
   padding: 8px 15px;
   margin-bottom: 0;
 }
-.search-result-preview a {
-  color: #084c95;
-}
-.search-result-preview a:hover {
-  color: #07386c;
-}
-.search-result-preview a:visited {
-  color: #07386c;
-}
 .search-result-preview .col-xs-7,
 .search-result-preview .col-xs-5 {
   padding: 0;
@@ -3662,50 +3665,45 @@ header .balance-currency {
   background-color: #ffffff;
   padding: 5px 15px;
 }
-.search-result-preview .open > .btn-default.dropdown-toggle,
-.search-result-preview .btn-default {
+.search-result-preview .dropdown-toggle {
+  font-weight: 700;
+}
+.search-result-preview .open > .dropdown-toggle {
+  font-weight: 700;
   color: #8c91a6;
   border: none;
   background: transparent;
   padding: 0;
   height: unset;
 }
-.search-result-preview .open > .btn-default.dropdown-toggle:hover,
-.search-result-preview .btn-default:hover {
+.search-result-preview .open > .dropdown-toggle:hover {
   color: #242a3e;
   background: transparent;
 }
-.search-result-preview .open > .btn-default.dropdown-toggle:focus, .search-result-preview .open > .btn-default.dropdown-toggle.focus,
-.search-result-preview .btn-default:focus,
-.search-result-preview .btn-default.focus {
+.search-result-preview .open > .dropdown-toggle:focus, .search-result-preview .open > .dropdown-toggle.focus {
   color: #242a3e;
   border: none;
   outline: none;
   background: transparent;
   text-decoration: underline;
 }
-.search-result-preview .open > .btn-default.dropdown-toggle:active, .search-result-preview .open > .btn-default.dropdown-toggle.active,
-.search-result-preview .btn-default:active,
-.search-result-preview .btn-default.active {
+.search-result-preview .open > .dropdown-toggle:active, .search-result-preview .open > .dropdown-toggle.active {
   color: #8c91a6;
   background: transparent;
 }
-.search-result-preview .open > .btn-default.dropdown-toggle:visited,
-.search-result-preview .btn-default:visited {
+.search-result-preview .open > .dropdown-toggle:visited {
   color: #8c91a6;
   background: transparent;
 }
-.search-result-preview .open > .btn-default.dropdown-toggle:visited:hover,
-.search-result-preview .btn-default:visited:hover {
+.search-result-preview .open > .dropdown-toggle:visited:hover {
   color: #242a3e;
   background: transparent;
 }
-.search-result-preview .open > .btn-default.dropdown-toggle:disabled,
-.search-result-preview .btn-default:disabled {
+.search-result-preview .open > .dropdown-toggle:disabled {
   color: #8c91a6;
   background: transparent;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .search-result-preview {
     margin-bottom: 58px;
   }
@@ -3720,7 +3718,7 @@ header .balance-currency {
     margin-top: 10px;
     margin-bottom: 5px;
     padding: 0;
-    color: #777777;
+    color: #8c91a6;
   }
   .search-result-preview .col-xs-5 .pull-right {
     float: none !important;
@@ -3744,15 +3742,6 @@ header .balance-currency {
   }
 }
 
-.object a {
-  color: #084c95;
-}
-.object a:hover {
-  color: #07386c;
-}
-.object a:visited {
-  color: #07386c;
-}
 .object .object__show-phone {
   color: #ffffff !important;
   display: flex !important;
@@ -3796,19 +3785,33 @@ header .balance-currency {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
-  color: #333333;
+  color: #242a3e;
 }
 .object .header_adv_short:hover {
-  color: #333333;
+  color: #242a3e;
 }
 .object .header_adv_short:visited {
-  color: #333333;
+  color: #242a3e;
 }
 .object .object__lead {
   font-size: 28px;
   font-weight: 700;
-  color: #333333;
-  margin-bottom: 5px;
+  color: #242a3e;
+  margin-bottom: 10px;
+}
+.object .object__lead .text-muted {
+  font-size: 14px;
+  color: #8c91a6;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.object .object__date {
+  font-size: 14px;
+  color: #8c91a6;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  white-space: nowrap;
 }
 .object .text-location {
   font-weight: 500;
@@ -3820,13 +3823,13 @@ header .balance-currency {
 }
 .object .text-muted.object__text-trim.object__text-comment.tooltip_comment_action.tooltip_comment_loaded {
   font-size: 14px;
-  color: #777777;
+  color: #8c91a6;
   font-weight: 400;
 }
 .object .object__status {
   display: flex;
   align-items: center;
-  color: #777777;
+  color: #8c91a6;
   gap: 10px;
   margin: 0;
 }
@@ -4069,7 +4072,7 @@ header .balance-currency {
     width: unset;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .object .object__meta {
     width: 100%;
     border-left: none;
@@ -4146,7 +4149,7 @@ header .balance-currency {
 .map_panel .object .object__owner-name {
   margin-top: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .map_panel .object .object__actions {
     top: unset;
   }
@@ -4163,7 +4166,7 @@ header .balance-currency {
 @media (min-width: 768px) {
   .container:not(.full-size) .object .object__lead,
   .modal .object .object__lead {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 /* Pagination */

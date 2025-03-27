@@ -186,6 +186,10 @@ a {
   }
 }
 
+.text-muted {
+  color: $color-grey;
+}
+
 // Buttons
 .btn {
   display: flex;
@@ -599,6 +603,7 @@ a.dropdown-toggle:visited {
   }
 }
 
+.selectize-dropdown,
 .dropdown-menu {
   width: inherit;
   padding: 3px;
@@ -612,6 +617,7 @@ a.dropdown-toggle:visited {
   -webkit-box-shadow: none;
   text-shadow: none;
 
+  .selectize-dropdown-content .option,
   li a,
   &.open li a,
   &.sub-menu li a,
@@ -856,6 +862,101 @@ a.dropdown-toggle:visited {
       text-decoration: none;
       background-color: $color-white;
       outline: 2px solid $color-grey;
+    }
+  }
+}
+
+// Selectize
+.selectize-control {
+  .selectize-input {
+    padding: 13px 15px;
+    font-size: 14px;
+    border-radius: $border-radius;
+    border: 1px solid $color-secondary;
+    color: $color-dark;
+
+    &::placeholder,
+    input::placeholder {
+      color: $color-grey;
+    }
+
+    &:hover {
+      border: 1px solid $color-primary;
+    }
+    &:focus,
+    input:focus {
+      border: 1px solid $color-primary;
+      outline: 1px solid $color-primary;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      text-shadow: none;
+    }
+  }
+  .selectize-dropdown {
+    top: 48px;
+    .selectize-dropdown-content {
+      padding: 0;
+    }
+  }
+}
+
+// Form search locations modal
+#form_search_locations_modal {
+  .modal-dialog {
+    .btn {
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      text-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .modal-header {
+      .breadcrumb {
+        .active {
+          color: $color-grey;
+          &.buttons {
+            .btn {
+              font-size: 14px;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: 5px;
+              text-shadow: none;
+              -webkit-box-shadow: none;
+              box-shadow: none;
+              height: 24px;
+              padding: 3px 5px;
+
+              // Единственный элемент
+              &:only-child {
+                border-radius: $border-radius !important;
+              }
+              // Первый элемент
+              &:first-child:not(:only-child) {
+                border-radius: $border-radius 0 0 $border-radius !important;
+              }
+              // Второй элемент
+              &:nth-child(2):not(:first-child):not(:last-child) {
+                border-radius: $border-radius 0 0 $border-radius !important;
+              }
+              // Последний элемент
+              &:last-child:not(:only-child) {
+                border-radius: 0 $border-radius $border-radius 0 !important;
+                margin-left: -5px !important;
+              }
+              // Элемент не первый, не последний и не предпоследний
+              &:not(:first-child):not(:last-child):not(:nth-child(2)) {
+                border-radius: 0 !important;
+                margin-left: -5px !important;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
