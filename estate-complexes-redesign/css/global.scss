@@ -472,6 +472,72 @@ a {
   }
 }
 
+.has-error {
+  .form-control {
+    border: 1px solid $color-invalid;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
+
+    &:hover {
+      border: 2px solid $color-invalid;
+    }
+    &:focus {
+      border: 2px solid $color-primary;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      text-shadow: none;
+    }
+    // &:focus-within {
+    //   border: 1px solid $color-secondary;
+    // }
+    &:active {
+      border: 2px solid $color-primary;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      text-shadow: none;
+    }
+  }
+
+  .help-block {
+    color: $color-invalid;
+  }
+}
+
+.has-success {
+  .form-control {
+    border: 1px solid $color-valid;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
+
+    &:hover {
+      border: 2px solid $color-valid;
+    }
+    &:focus {
+      border: 2px solid $color-primary;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      text-shadow: none;
+    }
+    // &:focus-within {
+    //   border: 1px solid $color-secondary;
+    // }
+    &:active {
+      border: 2px solid $color-primary;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      text-shadow: none;
+    }
+  }
+
+  .help-block {
+    color: $color-valid;
+  }
+}
+
 textarea.form-control {
   padding: 13px 15px;
 }

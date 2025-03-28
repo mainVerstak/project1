@@ -12,9 +12,10 @@
   }
   .form-group.pull-right {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 0;
     width: 100%;
+    margin-bottom: 4px;
   }
   .form-group.pull-right .input-group {
     width: 100%;

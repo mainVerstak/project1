@@ -445,6 +445,56 @@ a:visited {
   border: 2px solid #084c95;
 }
 
+.has-error .form-control {
+  border: 1px solid #f55c3d;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+}
+.has-error .form-control:hover {
+  border: 2px solid #f55c3d;
+}
+.has-error .form-control:focus {
+  border: 2px solid #084c95;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+}
+.has-error .form-control:active {
+  border: 2px solid #084c95;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+}
+.has-error .help-block {
+  color: #f55c3d;
+}
+
+.has-success .form-control {
+  border: 1px solid #acf256;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+}
+.has-success .form-control:hover {
+  border: 2px solid #acf256;
+}
+.has-success .form-control:focus {
+  border: 2px solid #084c95;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+}
+.has-success .form-control:active {
+  border: 2px solid #084c95;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow: none;
+}
+.has-success .help-block {
+  color: #acf256;
+}
+
 textarea.form-control {
   padding: 13px 15px;
 }
@@ -4974,9 +5024,10 @@ header .balance-currency {
 }
 .subscribe-block .form-group.pull-right {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 0;
   width: 100%;
+  margin-bottom: 4px;
 }
 .subscribe-block .form-group.pull-right .input-group {
   width: 100%;
