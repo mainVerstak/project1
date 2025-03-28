@@ -1,0 +1,18 @@
+* {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.btn {
+  background-image: none !important;
+}
+
+.well {
+  background-color: #fff !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  background-image: none !important;
+  background-repeat: unset !important;
+  border: none !important;
+}
