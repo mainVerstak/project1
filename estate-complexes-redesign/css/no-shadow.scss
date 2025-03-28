@@ -8,8 +8,10 @@
   background-image: none !important;
 }
 
-.well {
-  background-color: #fff !important;
+.well,
+.alert .alert-danger,
+.alert,
+.alert-danger {
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   background-image: none !important;

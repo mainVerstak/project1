@@ -5050,6 +5050,15 @@ header .balance-currency {
   text-align: start;
   color: #8c91a6;
 }
+.subscribe-block .subscribed .input-group-btn .btn {
+  border-radius: 5px !important;
+  font-size: 14px;
+}
+.subscribe-block .subscribed .input-group-text {
+  border: none;
+  padding: 10px;
+  text-align: right;
+}
 
 /* Review-box */
 .review-box .well {

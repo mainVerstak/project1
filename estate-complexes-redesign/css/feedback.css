@@ -111,6 +111,14 @@
   }
 }
 
+.subscribe-block .subscribed .input-group-btn .btn {
+  border-radius: 5px !important;
+}
+.subscribe-block .subscribed .input-group-text {
+  border: none;
+  padding: 10px;
+}
+
 .search_nav_bar {
   gap: 4px;
   padding-left: 15px;

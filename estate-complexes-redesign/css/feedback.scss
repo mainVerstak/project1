@@ -38,6 +38,19 @@
     text-align: start;
     color: $color-grey;
   }
+
+  .subscribed {
+    .input-group-btn .btn {
+      border-radius: $border-radius !important;
+      font-size: 14px;
+    }
+
+    .input-group-text {
+      border: none;
+      padding: 10px;
+      text-align: right;
+    }
+  }
 }
 
 /* Review-box */
