@@ -88,8 +88,6 @@
   }
 
   @media screen and (max-width: 767px) {
-    margin-bottom: 58px;
-
     .row {
       flex-direction: column;
     }
@@ -231,6 +229,7 @@
   .object__status {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     color: $color-grey;
     gap: 10px;
     margin: 0;
@@ -479,10 +478,20 @@
   }
   @media (max-width: 992px) {
     .object__data {
-      width: 35%;
+      width: 60%;
     }
     .object__meta {
-      width: 30%;
+      width: 94%;
+      border-left: none;
+    }
+    .object__owner {
+      flex-direction: row;
+      align-items: center;
+    }
+    .object__owner-name {
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
     }
     .object__actions {
       margin: 0;
@@ -498,6 +507,13 @@
       noindex {
         width: calc(100% - 17px);
       }
+    }
+    .object__owner {
+      flex-direction: column;
+      align-items: start;
+    }
+    .object__owner-name {
+      margin-bottom: 15px;
     }
     .object__actions {
       top: unset;
@@ -527,6 +543,52 @@
     .object__owner-name {
       margin-top: 0;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    height: 280px;
+    width: 384px;
+  }
+}
+@media (min-width: 992px) {
+  .container:not(.full-size) .object,
+  .modal .object {
+    display: flex;
+  }
+}
+@media (max-width: 1199px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    height: 228px;
+    width: 307px;
+  }
+}
+@media (max-width: 991px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    // height: 158px;
+    width: 100%;
+  }
+  .container:not(.full-size) .object .object__show-phone,
+  .modal .object .object__show-phone {
+    padding: 5px 15px;
+    width: 100%;
+    font-size: 16px;
+  }
+  .container:not(.full-size) .object .object__actions,
+  .modal .object .object__actions {
+    margin-top: 0px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    height: calc((100vw - 60px) * 0.75);
   }
 }
 

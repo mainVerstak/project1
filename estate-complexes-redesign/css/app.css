@@ -3754,9 +3754,6 @@ header .balance-currency {
   background: transparent;
 }
 @media screen and (max-width: 767px) {
-  .search-result-preview {
-    margin-bottom: 58px;
-  }
   .search-result-preview .row {
     flex-direction: column;
   }
@@ -3879,6 +3876,7 @@ header .balance-currency {
 .object .object__status {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   color: #8c91a6;
   gap: 10px;
   margin: 0;
@@ -4111,10 +4109,20 @@ header .balance-currency {
 }
 @media (max-width: 992px) {
   .object .object__data {
-    width: 35%;
+    width: 60%;
   }
   .object .object__meta {
-    width: 30%;
+    width: 94%;
+    border-left: none;
+  }
+  .object .object__owner {
+    flex-direction: row;
+    align-items: center;
+  }
+  .object .object__owner-name {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
   }
   .object .object__actions {
     margin: 0;
@@ -4129,6 +4137,13 @@ header .balance-currency {
   }
   .object .object__meta noindex {
     width: calc(100% - 17px);
+  }
+  .object .object__owner {
+    flex-direction: column;
+    align-items: start;
+  }
+  .object .object__owner-name {
+    margin-bottom: 15px;
   }
   .object .object__actions {
     top: unset;
@@ -4160,6 +4175,50 @@ header .balance-currency {
   }
 }
 
+@media (min-width: 1200px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    height: 280px;
+    width: 384px;
+  }
+}
+@media (min-width: 992px) {
+  .container:not(.full-size) .object,
+  .modal .object {
+    display: flex;
+  }
+}
+@media (max-width: 1199px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    height: 228px;
+    width: 307px;
+  }
+}
+@media (max-width: 991px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    width: 100%;
+  }
+  .container:not(.full-size) .object .object__show-phone,
+  .modal .object .object__show-phone {
+    padding: 5px 15px;
+    width: 100%;
+    font-size: 16px;
+  }
+  .container:not(.full-size) .object .object__actions,
+  .modal .object .object__actions {
+    margin-top: 0px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    height: calc((100vw - 60px) * 0.75);
+  }
+}
 .map_panel .map_panel_head .to_filters_btn {
   color: #084c95;
   display: flex;

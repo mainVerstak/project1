@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -116,7 +113,15 @@
 
       @media (max-width: 1024px) {
         ._admin._on {
+          /* display: none !important; */
+        }
+        ._admin._on.withoutBootstrapValidator {
           display: none !important;
+        }
+      }
+      @media (max-width: 767px) {
+        .search_form_action {
+          display: none;
         }
       }
     </style>
@@ -151,11 +156,7 @@
               <use xlink:href="./img/icons.svg#pause"></use>
             </svg>
           </button>
-          <button
-            class="btn"
-            id="_adm-blocked"
-            title="Заблокированное объявление"
-          >
+          <button class="btn" id="_adm-blocked" title="Заблокированное объявление">
             <svg class="icon-default">
               <use xlink:href="./img/icons.svg#cancel"></use>
             </svg>
@@ -186,9 +187,7 @@
           const guestBtn = document.querySelector("._guest-btn");
 
           const optionCloseBtn = document.querySelector(".option__close-btn");
-          const optionActiveBtn = document.querySelector(
-            ".options__active-btn"
-          );
+          const optionActiveBtn = document.querySelector(".options__active-btn");
 
           function toggleOn(className) {
             const adminEl = document.querySelectorAll("._admin");
@@ -415,11 +414,7 @@
                   </li>
                 </ul>
               </div>
-              <button
-                aria-label="Close"
-                class="navbar-toggle sidenav__close"
-                type="button"
-              >
+              <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
                 <svg class="icon-default">
                   <use xlink:href="./img/icons.svg#cross"></use>
                 </svg>
@@ -432,11 +427,7 @@
       </div>
     </header>
     <div class="container">
-      <ol
-        class="breadcrumb"
-        itemscope="itemscope"
-        itemtype="http://schema.org/BreadcrumbList"
-      >
+      <ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
         <li
           class="small"
           itemprop="itemListElement"
@@ -448,8 +439,7 @@
             yaparam="click_to_breadcrumbs_in_fullview"
             itemprop="item"
             href="https://ussuriysk.olan.ru"
-            ><span itemprop="name">обл. Кировская</span
-            ><meta content="1" itemprop="position"
+            ><span itemprop="name">обл. Кировская</span><meta content="1" itemprop="position"
           /></a>
         </li>
 
@@ -480,8 +470,7 @@
             yaparam="click_to_breadcrumbs_in_fullview"
             itemprop="item"
             href="https://ussuriysk.olan.ru"
-            ><span itemprop="name">р-н Октябрьский</span
-            ><meta content="1" itemprop="position"
+            ><span itemprop="name">р-н Октябрьский</span><meta content="1" itemprop="position"
           /></a>
         </li>
 
@@ -496,8 +485,7 @@
             yaparam="click_to_breadcrumbs_in_fullview"
             itemprop="item"
             href="https://ussuriysk.olan.ru"
-            ><span itemprop="name">Улица Первомайская</span
-            ><meta content="1" itemprop="position"
+            ><span itemprop="name">Улица Первомайская</span><meta content="1" itemprop="position"
           /></a>
         </li>
 
@@ -512,8 +500,7 @@
             yaparam="click_to_breadcrumbs_in_fullview"
             itemprop="item"
             href="https://ussuriysk.olan.ru"
-            ><span itemprop="name">ЖК "Солнечный"</span
-            ><meta content="1" itemprop="position"
+            ><span itemprop="name">ЖК "Солнечный"</span><meta content="1" itemprop="position"
           /></a>
         </li>
       </ol>
@@ -531,14 +518,9 @@
           data-remote="true"
           method="get"
         >
-          <input name="utf8" type="hidden" value="✓" /><input
-            type="hidden"
-            name="search_form_submit"
-            id="search_form_submit"
-          /><meta
-            content="https://olan.ru?advertisement[description]={q}"
-            itemprop="target"
-          />
+          <input name="utf8" type="hidden" value="✓" />
+          <input type="hidden" name="search_form_submit" id="search_form_submit" />
+          <meta content="https://olan.ru?advertisement[description]={q}" itemprop="target" />
           <div
             itemprop="query-input"
             itemscope="itemscope"
@@ -549,27 +531,20 @@
           <span id="js-offer-type-filter"
             ><div class="form-group offerTypeButtons">
               <label>Я хочу</label>
-              <div
-                class="btn-group"
-                data-toggle="buttons"
-                id="js-offer-type-filter-content"
-              >
-                <label
-                  class="btn btn-default click_additional_search_params_action"
+              <div class="btn-group" data-toggle="buttons" id="js-offer-type-filter-content">
+                <label class="btn btn-default click_additional_search_params_action"
                   ><input
                     name="advertisement[offer_type][]"
                     type="checkbox"
                     value="0"
                   />купить</label
-                ><label
-                  class="btn btn-default click_additional_search_params_action"
+                ><label class="btn btn-default click_additional_search_params_action"
                   ><input
                     name="advertisement[offer_type][]"
                     type="checkbox"
                     value="2"
                   />снять</label
-                ><label
-                  class="btn btn-default active click_additional_search_params_action"
+                ><label class="btn btn-default active click_additional_search_params_action"
                   ><input
                     checked=""
                     name="advertisement[offer_type][]"
@@ -581,13 +556,8 @@
             </div>
           </span>
           <div class="form-group categoryButtons">
-            <div
-              class="btn-group"
-              data-toggle="buttons"
-              id="js-category-filter"
-            >
-              <label
-                class="btn btn-default click_additional_search_params_action"
+            <div class="btn-group" data-toggle="buttons" id="js-category-filter">
+              <label class="btn btn-default click_additional_search_params_action"
                 ><span class="hidden-xs"
                   ><svg class="icon-default">
                     <use xlink:href="./img/icons.svg#house"></use>
@@ -597,37 +567,18 @@
                   type="checkbox"
                   value="1"
                 />жильё</label
-              ><label
-                class="btn btn-default active click_additional_search_params_action"
-                ><input
-                  checked=""
-                  name="advertisement[category][]"
-                  type="checkbox"
-                  value="1"
-                />
+              ><label class="btn btn-default active click_additional_search_params_action"
+                ><input checked="" name="advertisement[category][]" type="checkbox" value="1" />
                 квартиру</label
-              ><label
-                class="btn btn-default click_additional_search_params_action"
-                ><input
-                  name="advertisement[category][]"
-                  type="checkbox"
-                  value="2"
-                />
-                дом</label
-              ><label
-                class="btn btn-default click_additional_search_params_action"
-                ><input
-                  name="advertisement[category][]"
-                  type="checkbox"
-                  value="4"
-                />
-                комнату</label
+              ><label class="btn btn-default click_additional_search_params_action"
+                ><input name="advertisement[category][]" type="checkbox" value="2" /> дом</label
+              ><label class="btn btn-default click_additional_search_params_action"
+                ><input name="advertisement[category][]" type="checkbox" value="4" /> комнату</label
               >
             </div>
             <div class="form-group propertyTypeButtons">
               <div class="btn-group" data-toggle="buttons" id="js-land-filter">
-                <label
-                  class="btn btn-default click_additional_search_params_action"
+                <label class="btn btn-default click_additional_search_params_action"
                   ><span class="hidden-xs"
                     ><svg class="icon-default">
                       <use xlink:href="./img/icons.svg#plot"></use>
@@ -639,13 +590,8 @@
                   />участок</label
                 >
               </div>
-              <div
-                class="btn-group"
-                data-toggle="buttons"
-                id="js-commerce-filter"
-              >
-                <label
-                  class="btn btn-default click_additional_search_params_action"
+              <div class="btn-group" data-toggle="buttons" id="js-commerce-filter">
+                <label class="btn btn-default click_additional_search_params_action"
                   ><span class="hidden-xs"
                     ><svg class="icon-default">
                       <use xlink:href="./img/icons.svg#comm"></use>
@@ -657,13 +603,8 @@
                   />коммерческую</label
                 >
               </div>
-              <div
-                class="btn-group"
-                data-toggle="buttons"
-                id="js-vehicle-filter"
-              >
-                <label
-                  class="btn btn-default click_additional_search_params_action"
+              <div class="btn-group" data-toggle="buttons" id="js-vehicle-filter">
+                <label class="btn btn-default click_additional_search_params_action"
                   ><span class="hidden-xs"
                     ><svg class="icon-default">
                       <use xlink:href="./img/icons.svg#garage"></use>
@@ -708,9 +649,7 @@
                       <use xlink:href="./img/icons.svg#placeholder"></use>
                     </svg>
                   </span>
-                  <span class="title-search-locations-action">
-                    г Уссурийск</span
-                  >
+                  <span class="title-search-locations-action"> г Уссурийск</span>
                   <svg class="icon-default">
                     <use xlink:href="./img/icons.svg#chevron-d"></use>
                   </svg>
@@ -741,8 +680,7 @@
               ><svg class="icon-default yaSend">
                 <use xlink:href="./img/icons.svg#check"></use>
               </svg>
-              <input name="advertisement[owner]" type="checkbox" value="1" />без
-              посредников</label
+              <input name="advertisement[owner]" type="checkbox" value="1" />без посредников</label
             >
           </div>
           <span
@@ -756,25 +694,13 @@
               <label>тип</label>
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[subcategory][]"
-                    value="39"
-                  />
+                  <input type="checkbox" name="advertisement[subcategory][]" value="39" />
                   новостройку </label
                 ><label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[subcategory][]"
-                    value="40"
-                  />
+                  <input type="checkbox" name="advertisement[subcategory][]" value="40" />
                   вторичку </label
                 ><label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[subcategory][]"
-                    value="41"
-                  />
+                  <input type="checkbox" name="advertisement[subcategory][]" value="41" />
                   гостинку
                 </label>
               </div>
@@ -787,43 +713,23 @@
               <label>комнат</label>
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[room][0]"
-                    value="1"
-                  />
+                  <input type="checkbox" name="advertisement[room][0]" value="1" />
                   студия
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[room][1]"
-                    value="1"
-                  />
+                  <input type="checkbox" name="advertisement[room][1]" value="1" />
                   1
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[room][2]"
-                    value="1"
-                  />
+                  <input type="checkbox" name="advertisement[room][2]" value="1" />
                   2
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[room][3]"
-                    value="1"
-                  />
+                  <input type="checkbox" name="advertisement[room][3]" value="1" />
                   3
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[room][4]"
-                    value="1"
-                  />
+                  <input type="checkbox" name="advertisement[room][4]" value="1" />
                   4+
                 </label>
               </div>
@@ -858,60 +764,33 @@
               <label>тип дома</label>
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[building_type][]"
-                    value="0"
-                  />
+                  <input type="checkbox" name="advertisement[building_type][]" value="0" />
                   кирпичный
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[building_type][]"
-                    value="1"
-                  />
+                  <input type="checkbox" name="advertisement[building_type][]" value="1" />
                   панельный
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[building_type][]"
-                    value="2"
-                  />
+                  <input type="checkbox" name="advertisement[building_type][]" value="2" />
                   монолит
                 </label>
               </div>
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[building_type][]"
-                    value="3"
-                  />
+                  <input type="checkbox" name="advertisement[building_type][]" value="3" />
                   кирп-мон
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[building_type][]"
-                    value="4"
-                  />
+                  <input type="checkbox" name="advertisement[building_type][]" value="4" />
                   блочный
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[building_type][]"
-                    value="5"
-                  />
+                  <input type="checkbox" name="advertisement[building_type][]" value="5" />
                   деревянный
                 </label>
               </div>
-              <button
-                type="button"
-                class="btn btn-default btn-xs buildingTypeSelect"
-              >
+              <button type="button" class="btn btn-default btn-xs buildingTypeSelect">
                 <span class="btnText">выбрать</span>
                 <svg class="icon-default">
                   <use xlink:href="./img/icons.svg#chevron-d"></use>
@@ -970,70 +849,39 @@
               <label>ремонт</label>
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[renovation][]"
-                    value="0"
-                  />
+                  <input type="checkbox" name="advertisement[renovation][]" value="0" />
                   дизайн
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[renovation][]"
-                    value="1"
-                  />
+                  <input type="checkbox" name="advertisement[renovation][]" value="1" />
                   евро
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[renovation][]"
-                    value="2"
-                  />
+                  <input type="checkbox" name="advertisement[renovation][]" value="2" />
                   с отделкой
                 </label>
               </div>
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[renovation][]"
-                    value="3"
-                  />
+                  <input type="checkbox" name="advertisement[renovation][]" value="3" />
                   хороший
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[renovation][]"
-                    value="4"
-                  />
+                  <input type="checkbox" name="advertisement[renovation][]" value="4" />
                   частичный
                 </label>
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[renovation][]"
-                    value="5"
-                  />
+                  <input type="checkbox" name="advertisement[renovation][]" value="5" />
                   черновой
                 </label>
               </div>
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
-                  <input
-                    type="checkbox"
-                    name="advertisement[renovation][]"
-                    value="6"
-                  />
+                  <input type="checkbox" name="advertisement[renovation][]" value="6" />
                   без ремонта
                 </label>
               </div>
-              <button
-                type="button"
-                class="btn btn-default btn-xs renovationSelect"
-              >
+              <button type="button" class="btn btn-default btn-xs renovationSelect">
                 <span class="btnText">выбрать</span>
                 <svg class="icon-default">
                   <use xlink:href="./img/icons.svg#chevron-d"></use>
@@ -1068,13 +916,7 @@
               </svg>
               На карте</a
             >
-            <button
-              class="btn btn-primary yaSend"
-              type="submit"
-              yaparam="search"
-            >
-              Найти
-            </button>
+            <button class="btn btn-primary yaSend" type="submit" yaparam="search">Найти</button>
           </div>
           <div class="visible-xs">
             <input class="hidden" id="submitSearchForm" type="submit" /><span
@@ -1088,8 +930,8 @@
         <div class="row js-search-result-counter">
           <div class="col-xs-7">
             <div class="text-muted small">
-              Найдено <b>529</b> объявлений. Показаны
-              <span>201-225</span> (страница №<span>9</span>).
+              Найдено <b>529</b> объявлений. Показаны <span>201-225</span> (страница
+              №<span>9</span>).
             </div>
           </div>
           <div class="col-xs-5">
@@ -1103,36 +945,18 @@
                   ></a>
                   <ul class="dropdown-menu dropdown-menu-right">
                     <li>
-                      <a class="order_action" href="#" rel="nofollow"
-                        >рекомендованные</a
-                      >
+                      <a class="order_action" href="#" rel="nofollow">рекомендованные</a>
                     </li>
                     <li>
-                      <a
-                        class="order_action"
-                        data-order="cheap"
-                        href="#"
-                        rel="nofollow"
-                        >дешевые</a
-                      >
+                      <a class="order_action" data-order="cheap" href="#" rel="nofollow">дешевые</a>
                     </li>
                     <li>
-                      <a
-                        class="order_action"
-                        data-order="expensive"
-                        href="#"
-                        rel="nofollow"
+                      <a class="order_action" data-order="expensive" href="#" rel="nofollow"
                         >дорогие</a
                       >
                     </li>
                     <li>
-                      <a
-                        class="order_action"
-                        data-order="new"
-                        href="#"
-                        rel="nofollow"
-                        >новые</a
-                      >
+                      <a class="order_action" data-order="new" href="#" rel="nofollow">новые</a>
                     </li>
                   </ul>
                 </div>
@@ -1143,10 +967,7 @@
       </div>
       <div data-block-id="R-A-5010170-16" id="scrollLineForAside"></div>
       <ul class="list-unstyled js-search-results">
-        <li
-          class="clearfix media object object_even object_marked"
-          element_id="118952813"
-        >
+        <li class="clearfix media object object_even object_marked" element_id="118952813">
           <div class="col-lg-5 col-md-4 col-sm-4">
             <style></style>
             <div class="fotorama--hidden"></div>
@@ -1159,10 +980,7 @@
                 class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--no-controls fotorama__wrap--slide fotorama__wrap--toggle-arrows"
                 style="width: 100%; min-width: 0px; max-width: 100%"
               >
-                <div
-                  class="fotorama__stage"
-                  style="width: 357px; height: 268px"
-                >
+                <div class="fotorama__stage" style="width: 357px; height: 268px">
                   <div
                     class="fotorama__stage__shaft"
                     style="
@@ -1179,12 +997,7 @@
                       <img
                         src="https://i4.olan.ru/system/photos/entity/001/098/925/861/small/img?1714221994"
                         class="fotorama__img"
-                        style="
-                          width: 201px;
-                          height: 268px;
-                          left: 78px;
-                          top: 0px;
-                        "
+                        style="width: 201px; height: 268px; left: 78px; top: 0px"
                       />
                       <div class="fotorama__html">
                         <a
@@ -1239,8 +1052,7 @@
                 <svg class="icon-default">
                   <use xlink:href="./img/icons.svg#placeholder"></use>
                 </svg>
-                <a
-                  href="https://ussuriysk.olan.ru/ul-komsomolskaya/day-flat/two-rooms"
+                <a href="https://ussuriysk.olan.ru/ul-komsomolskaya/day-flat/two-rooms"
                   >ул Комсомольская</a
                 >,
                 <a
@@ -1252,10 +1064,9 @@
               <div
                 class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
               >
-                Не для шумных вечеринок!!! Семейным парам, командировочным и
-                гостям города. Лицам моложе 21 года квартиру не сдаём! Цена
-                указана за один комплект постельного белья, дополнительный 500
-                рублей. Заезд в 14:00, выезд в 12:00. Расчётный час в 14:00.
+                Не для шумных вечеринок!!! Семейным парам, командировочным и гостям города. Лицам
+                моложе 21 года квартиру не сдаём! Цена указана за один комплект постельного белья,
+                дополнительный 500 рублей. Заезд в 14:00, выезд в 12:00. Расчётный час в 14:00.
                 После 2...
               </div>
             </div>
@@ -1443,9 +1254,7 @@
                 <svg class="icon-default">
                   <use xlink:href="./img/icons.svg#placeholder"></use>
                 </svg>
-                <a
-                  href="https://ussuriysk.olan.ru/ul-polushkina/day-flat/one-room"
-                  >ул Полушкина</a
+                <a href="https://ussuriysk.olan.ru/ul-polushkina/day-flat/one-room">ул Полушкина</a
                 >,
                 <a
                   rel="nofollow"
@@ -1456,10 +1265,9 @@
               <div
                 class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
               >
-                Постельное белье, полотенца, туалетные принадлежности,
-                стиральная машина, беспроводной интернет Wi-Fi, проводной
-                интернет, телевизор, кондиционер, электроплита, духовка,
-                микроволновка, фильтр для воды, посуда и принадлежности,
+                Постельное белье, полотенца, туалетные принадлежности, стиральная машина,
+                беспроводной интернет Wi-Fi, проводной интернет, телевизор, кондиционер,
+                электроплита, духовка, микроволновка, фильтр для воды, посуда и принадлежности,
                 столовые приборы, электри...
               </div>
             </div>
@@ -1616,9 +1424,7 @@
                 <svg class="icon-default">
                   <use xlink:href="./img/icons.svg#placeholder"></use>
                 </svg>
-                <a
-                  href="https://ussuriysk.olan.ru/ul-razdolnaya/day-flat/one-room"
-                  >ул Раздольная</a
+                <a href="https://ussuriysk.olan.ru/ul-razdolnaya/day-flat/one-room">ул Раздольная</a
                 >,
                 <a
                   rel="nofollow"
@@ -1629,11 +1435,10 @@
               <div
                 class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
               >
-                Уютная светлая квартира ждёт своих гостей. Квартира
-                укомплектована всем необходимым для комфортного пребывания до
-                3-х человек: Удобная двухспальная кровать, постельное бельё,
-                ди&lt;текст-удален&gt;олнительное спальное место) Оборудованная
-                кухня для приема и ...
+                Уютная светлая квартира ждёт своих гостей. Квартира укомплектована всем необходимым
+                для комфортного пребывания до 3-х человек: Удобная двухспальная кровать, постельное
+                бельё, ди&lt;текст-удален&gt;олнительное спальное место) Оборудованная кухня для
+                приема и ...
               </div>
             </div>
             <div class="object__lead">
@@ -1796,11 +1601,7 @@
           </ul>
           <div class="btn-group hidden-xs pagination pull-right">
             <div class="button-dropdown">
-              <a
-                class="btn btn-default dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-              >
+              <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
                 25 объявлений на страницу
                 <svg class="icon-default">
                   <use xlink:href="./img/icons.svg#chevron-d"></use>
@@ -1867,10 +1668,7 @@
       <div class="search-hotel-modal"></div>
       <ol class="breadcrumb">
         <li class="small">
-          <a
-            class="center-icon yaSend"
-            yaparam="click_to_breadcrumbs_home"
-            href="https://olan.ru/"
+          <a class="center-icon yaSend" yaparam="click_to_breadcrumbs_home" href="https://olan.ru/"
             ><svg class="icon-default">
               <use xlink:href="./img/icons.svg#house"></use>
             </svg>
@@ -1884,31 +1682,17 @@
             href="https://olan.ru/kray-primorskiy/day-flat"
             >край Приморский</a
           >
-          <a
-            class="js-show-breadcrumbs-modal"
-            data-uid="3233229"
-            rel="nofollow"
-            href="#"
-          >
+          <a class="js-show-breadcrumbs-modal" data-uid="3233229" rel="nofollow" href="#">
             <svg class="icon-breadcrumbs">
               <use xlink:href="./img/icons.svg#chevron-d"></use>
             </svg>
           </a>
         </li>
         <li class="small">
-          <a
-            class="js-show-breadcrumbs-modal"
-            data-uid="3236399"
-            rel="nofollow"
-            href="#"
+          <a class="js-show-breadcrumbs-modal" data-uid="3236399" rel="nofollow" href="#"
             >г Уссурийск</a
           >
-          <a
-            class="js-show-breadcrumbs-modal"
-            data-uid="3236399"
-            rel="nofollow"
-            href="#"
-          >
+          <a class="js-show-breadcrumbs-modal" data-uid="3236399" rel="nofollow" href="#">
             <svg class="icon-breadcrumbs">
               <use xlink:href="./img/icons.svg#chevron-d"></use>
             </svg>
@@ -1916,13 +1700,7 @@
         </li>
         <li class="js-predictions small">
           Выберите
-          <a
-            class="js-show-breadcrumbs-modal"
-            data-type="_street"
-            rel="nofollow"
-            href="#"
-            >улицу</a
-          >
+          <a class="js-show-breadcrumbs-modal" data-type="_street" rel="nofollow" href="#">улицу</a>
         </li>
       </ol>
       <div class="breadcrumb-filter">
@@ -2068,12 +1846,7 @@
                 type="hidden"
                 name="authenticity_token"
                 value="bxVnV6xH7+Eq5Gv211XIyMcDqmKntZTWxCWNu0ypstx4VMnNeR2I2KVJoV4tCG39Kmyo2TlH+2mDS1+srJMfSw=="
-              /><input
-                type="hidden"
-                name="search[data]"
-                id="search_data"
-                value=""
-              />
+              /><input type="hidden" name="search[data]" id="search_data" value="" />
               <div class="form-group">
                 <h2>
                   Получать на почту новые объявления по запросу
@@ -2104,12 +1877,9 @@
               <div class="form-group">
                 <div class="text-right help-block muted small">
                   Нажимая кнопку «Подписаться», я принимаю условия
-                  <a href="https://olan.ru/offer">Оферты</a> и даю своё согласие
-                  на обработку моих персональных данных на условиях и для целей,
-                  определенных
-                  <a href="https://olan.ru/privacy"
-                    >Политикой конфиденциальности</a
-                  >.
+                  <a href="https://olan.ru/offer">Оферты</a> и даю своё согласие на обработку моих
+                  персональных данных на условиях и для целей, определенных
+                  <a href="https://olan.ru/privacy">Политикой конфиденциальности</a>.
                 </div>
               </div>
             </form>
@@ -2120,24 +1890,18 @@
       <div class="ds-tabs">
         <div class="ds-item">
           <div class="ds-question">
-            <h2>
-              🏢 Как посуточно снять квартиру в Уссурийске на сайте Олан ру?
-            </h2>
+            <h2>🏢 Как посуточно снять квартиру в Уссурийске на сайте Олан ру?</h2>
             <svg class="icon-default">
               <use xlink:href="./img/icons.svg#plus"></use>
             </svg>
           </div>
           <div class="ds-answer">
             <ul>
+              <li>✓ Ищете объявления посуточная аренда квартир в Уссурийске?</li>
+              <li>✓ В базе Олан ру размещено 529 объявлений квартир в Уссурийске.</li>
               <li>
-                ✓ Ищете объявления посуточная аренда квартир в Уссурийске?
-              </li>
-              <li>
-                ✓ В базе Олан ру размещено 529 объявлений квартир в Уссурийске.
-              </li>
-              <li>
-                ✓ Чтобы посуточная аренда недвижимость, используйте удобную
-                форму поиска, фильтры и быстрые ссылки.
+                ✓ Чтобы посуточная аренда недвижимость, используйте удобную форму поиска, фильтры и
+                быстрые ссылки.
               </li>
             </ul>
           </div>
@@ -2209,12 +1973,12 @@
                   class="form_ld_comment no-default-submit withoutBootstrapValidator"
                   data-not-disable-submit="true"
                 >
-                  <input
+                  <input type="hidden" name="section_id" id="section_id" value="7015170" /><input
                     type="hidden"
-                    name="section_id"
-                    id="section_id"
-                    value="7015170"
-                  /><input type="hidden" name="rating" id="rating" value="5" />
+                    name="rating"
+                    id="rating"
+                    value="5"
+                  />
                   <div class="form-group">
                     <textarea
                       name="comment"
@@ -2230,16 +1994,10 @@
                       <span class="text-muted small">Рейтинг</span>
                       <div class="starrr" data-rating="5"></div>
                     </div>
-                    <button
-                      class="btn btn-danger btn-sm"
-                      id="close-review-box"
-                      type="button"
-                    >
+                    <button class="btn btn-danger btn-sm" id="close-review-box" type="button">
                       <span class="glyphicon glyphicon-remove"></span>Отмена
                     </button>
-                    <button class="btn btn-lg btn-success" type="submit">
-                      Сохранить
-                    </button>
+                    <button class="btn btn-lg btn-success" type="submit">Сохранить</button>
                   </div>
                 </form>
               </div>
@@ -2255,25 +2013,19 @@
             <div class="footer__inner">
               <div class="footer__left">
                 <div class="footer__copy">© 2007–2024</div>
-                <div class="footer__left-text">
-                  Электронная база недвижимости
-                </div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
               </div>
               <nav class="footer__nav">
                 <div class="footer__nav-column">
                   <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item-title">
-                      Правила и условия
-                    </li>
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
                     <li class="footer__nav-item">
                       <a class="footer__nav-link" href="https://olan.ru/terms"
                         >Условия предоставления услуг</a
                       >
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/offer"
-                        >Оферта</a
-                      >
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
                     </li>
                     <li class="footer__nav-item">
                       <a class="footer__nav-link" href="https://olan.ru/privacy"
@@ -2281,14 +2033,10 @@
                       >
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/rules"
-                        >Правила</a
-                      >
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
                     </li>
                     <li class="footer__nav-item">
-                      <a
-                        class="footer__nav-link"
-                        href="https://olan.ru/recommendation-technologies"
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
                         >Рекомендательные технологии</a
                       >
                     </li>
@@ -2296,23 +2044,15 @@
                 </div>
                 <div class="footer__nav-column">
                   <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item-title">
-                      Пользователям
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/xml"
-                        >Пакетная загрузка</a
-                      >
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/tariffs"
-                        >Тарифы</a
-                      >
-                    </li>
-                    <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/payment"
-                        >Способы оплаты</a
-                      >
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
                     </li>
                     <li class="footer__nav-item">
                       <a
@@ -2322,16 +2062,12 @@
                       >
                     </li>
                     <li class="footer__nav-item">
-                      <a
-                        class="footer__nav-link"
-                        href="https://olan.ru/advertise"
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
                         >Реклама на сайте</a
                       >
                     </li>
                     <li class="footer__nav-item">
-                      <a
-                        class="footer__nav-link"
-                        href="https://olan.ru/deletion"
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
                         >Удаление объявлений</a
                       >
                     </li>
@@ -2339,18 +2075,12 @@
                 </div>
                 <div class="footer__nav-column">
                   <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item-title">
-                      Общая информация
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/about"
-                        >О проекте</a
-                      >
-                    </li>
-                    <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="/contacts"
-                        >Техподдержка сайта</a
-                      >
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
                     </li>
                   </ul>
                   <div class="footer__social hidden">
