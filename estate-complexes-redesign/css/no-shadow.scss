@@ -18,3 +18,20 @@
   background-repeat: unset !important;
   border: none !important;
 }
+
+.btn-vk {
+  color: #fff;
+  background-color: #587ea3;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.btn-odnoklassniki {
+  color: #fff;
+  background-color: #f4731c;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal .modal-dialog .modal-content .modal-body .text-right {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+}
