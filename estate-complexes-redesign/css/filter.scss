@@ -48,6 +48,8 @@
     padding: $padding-btn-small;
     font-size: 14px;
     height: 44px !important;
+    min-width: 44px;
+    justify-content: center;
     line-height: 1;
     box-shadow: none;
   }
@@ -192,9 +194,7 @@
     border-radius: 0 $border-radius $border-radius 0 !important;
   }
   /* Элемент не первый, не последний и не предпоследний */
-  input.form-control:not(:first-child):not(:last-child):not(
-      :nth-last-child(2)
-    ) {
+  input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
     border-radius: 0 !important;
   }
 
@@ -255,18 +255,8 @@
     line-height: unset !important;
   }
 
-  .animated-radios-and-checkboxes
-    .checkbox
-    label
-    input[type="checkbox"]:checked
-    + .cr
-    > .cr-icon,
-  .animated-radios-and-checkboxes
-    .radio
-    label
-    input[type="radio"]:checked
-    + .cr
-    > .cr-icon {
+  .animated-radios-and-checkboxes .checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+  .animated-radios-and-checkboxes .radio label input[type="radio"]:checked + .cr > .cr-icon {
     opacity: 1;
     color: $color-white;
     font-size: 10px;
@@ -305,33 +295,18 @@
     color: $color-blue;
     line-height: unset;
   }
-  .animated-radios-and-checkboxes
-    .checkbox:has(input[type="checkbox"]:checked)
-    label.big,
-  .animated-radios-and-checkboxes
-    .checkbox:has(input[type="checkbox"]:checked)
-    label.bigger,
-  .animated-radios-and-checkboxes
-    .checkbox:has(input[type="checkbox"]:checked)
-    label.huge {
+  .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked) label.big,
+  .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked) label.bigger,
+  .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked) label.huge {
     color: $color-blue;
     line-height: unset;
   }
-  .animated-radios-and-checkboxes
-    .checkbox
-    label
-    input[type="checkbox"]:checked
-    + .cr,
-  .animated-radios-and-checkboxes
-    .radio
-    label
-    input[type="radio"]:checked
-    + .cr {
+  .animated-radios-and-checkboxes .checkbox label input[type="checkbox"]:checked + .cr,
+  .animated-radios-and-checkboxes .radio label input[type="radio"]:checked + .cr {
     background-color: $color-blue;
     border-color: $color-blue;
   }
-  .animated-radios-and-checkboxes
-    .checkbox:has(input[type="checkbox"]:checked).checkbox {
+  .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked).checkbox {
     border: 1px solid $color-white;
   }
 
@@ -348,8 +323,7 @@
     .checkbox:hover {
       background-color: $color-grey-superlight;
     }
-    .animated-radios-and-checkboxes
-      .checkbox:has(input[type="checkbox"]:checked).checkbox:hover {
+    .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked).checkbox:hover {
       border: 1px solid $color-border;
     }
   }
@@ -478,10 +452,7 @@
     }
   }
 
-  #searchFormModal
-    .modal-dialog
-    .modal-content
-    .title-search-locations-action::before {
+  #searchFormModal .modal-dialog .modal-content .title-search-locations-action::before {
     content: "\f3c5";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -538,10 +509,7 @@
 }
 
 .map_panel {
-  .additional_search_subcategories_container_action
-    .form-group
-    .btn-group
-    .btn {
+  .additional_search_subcategories_container_action .form-group .btn-group .btn {
     margin-right: 4px;
     border-radius: 5px;
     margin-bottom: 4px;

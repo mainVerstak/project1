@@ -1888,11 +1888,11 @@
       </div>
       <div class="h4">Остались вопросы?</div>
       <div class="ds-tabs">
-        <div class="ds-item">
+        <div class="ds-item active">
           <div class="ds-question">
             <h2>🏢 Как посуточно снять квартиру в Уссурийске на сайте Олан ру?</h2>
             <svg class="icon-default">
-              <use xlink:href="./img/icons.svg#plus"></use>
+              <use xlink:href="./img/icons.svg#minus"></use>
             </svg>
           </div>
           <div class="ds-answer">
@@ -1947,6 +1947,21 @@
           </div>
         </div>
       </div>
+      <script>
+        const dsItems = document.querySelectorAll(".ds-item");
+        dsItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            item.classList.toggle("active");
+            if (item.classList.contains("active")) {
+              const icon = item.querySelector(".icon-default");
+              icon.innerHTML = '<use xlink:href="./img/icons.svg#minus"></use>';
+            } else {
+              const icon = item.querySelector(".icon-default");
+              icon.innerHTML = '<use xlink:href="./img/icons.svg#plus"></use>';
+            }
+          });
+        });
+      </script>
       <div class="row">
         <div class="col-lg-8 col-md-8 ld-comments">
           <h4 class="ld-comments-count" data-count="0">Отзывы</h4>

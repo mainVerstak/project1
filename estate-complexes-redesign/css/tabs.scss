@@ -52,7 +52,11 @@
   background-color: $color-surface;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  &:hover {
+    background-color: $color-secondary;
+  }
   &.active {
+    background-color: $color-secondary;
     .ds-question svg {
       transform: rotate(0);
     }
