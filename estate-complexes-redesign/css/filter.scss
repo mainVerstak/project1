@@ -82,9 +82,15 @@
   @media screen and (max-width: 767px) {
     .btn {
       height: 44px !important;
+      font-size: 14px;
     }
     .btn-xs {
       height: 44px !important;
+      font-size: 14px;
+    }
+    .form-group.offerTypeButtons .btnText,
+    .form-group.categoryButtons .btnText {
+      font-size: 14px;
     }
   }
 
@@ -99,69 +105,69 @@
 }
 
 /* Dropdowns */
-.map_panel,
-#selectBuildingTypeModal,
-#selectRenovationModal,
-#selectCategoryModal,
-#selectOfferTypeModal,
-#searchFormModal,
-.searchFormPage {
-  .dropdown-toggle {
-    text-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    font-size: 14px;
-    font-weight: 500 !important;
-  }
-  .dropdown-menu {
-    border-radius: $border-radius;
-    background-color: $color-white;
-    padding: 0 !important;
-    border: 1px solid $color-border !important;
-    box-shadow: none !important;
-  }
-  .dropdown-menu li a {
-    font-size: 14px;
-    font-weight: 500 !important;
-    color: $color-grey-text !important;
-    padding: $padding-btn-small;
-    margin: 0 !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-bottom: 1px solid $color-grey-superlight !important;
-  }
-  .dropdown-menu > li > a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-  }
-  @media (hover: hover) {
-    .dropdown-menu li a:hover {
-      background-color: $color-grey-superlight;
-      background-image: none !important;
-    }
-  }
-  .dropdown-menu li:first-child a {
-    border-radius: $border-radius $border-radius 0 0 !important;
-  }
-  .dropdown-menu li:last-child a {
-    border-radius: 0 0 $border-radius $border-radius !important;
-    border: none !important;
-  }
-  .dropdown-menu li.active a {
-    background-color: $color-border !important;
-    color: $color-dark !important;
-    background-image: none !important;
-  }
-  .modal-dialog .btn {
-    display: inline-block;
-  }
-}
+// .map_panel,
+// #selectBuildingTypeModal,
+// #selectRenovationModal,
+// #selectCategoryModal,
+// #selectOfferTypeModal,
+// #searchFormModal,
+// .searchFormPage {
+//   .dropdown-toggle {
+//     text-shadow: none;
+//     -webkit-box-shadow: none;
+//     box-shadow: none;
+//     font-size: 14px;
+//     font-weight: 500;
+//   }
+//   .dropdown-menu {
+//     border-radius: $border-radius;
+//     background-color: $color-white;
+//     padding: 0 !important;
+//     border: 1px solid $color-border !important;
+//     box-shadow: none !important;
+//   }
+//   .dropdown-menu li a {
+//     font-size: 14px;
+//     font-weight: 500 !important;
+//     color: $color-grey-text !important;
+//     padding: $padding-btn-small;
+//     margin: 0 !important;
+//     border: none !important;
+//     border-radius: 0 !important;
+//     box-shadow: none !important;
+//     border-top: none !important;
+//     border-left: none !important;
+//     border-right: none !important;
+//     border-bottom: 1px solid $color-grey-superlight !important;
+//   }
+//   .dropdown-menu > li > a {
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+//     padding: 5px 10px;
+//   }
+//   @media (hover: hover) {
+//     .dropdown-menu li a:hover {
+//       background-color: $color-grey-superlight;
+//       background-image: none !important;
+//     }
+//   }
+//   .dropdown-menu li:first-child a {
+//     border-radius: $border-radius $border-radius 0 0 !important;
+//   }
+//   .dropdown-menu li:last-child a {
+//     border-radius: 0 0 $border-radius $border-radius !important;
+//     border: none !important;
+//   }
+//   .dropdown-menu li.active a {
+//     background-color: $color-border !important;
+//     color: $color-dark !important;
+//     background-image: none !important;
+//   }
+//   .modal-dialog .btn {
+//     display: inline-block;
+//   }
+// }
 
 .search_buttons .btn {
   height: 44px !important;
@@ -226,109 +232,6 @@
   }
 }
 
-/* Checkbox */
-#selectBuildingTypeModal,
-#selectRenovationModal,
-#selectCategoryModal,
-#selectOfferTypeModal,
-#searchFormModal,
-.searchFormPage {
-  .radio,
-  .checkbox {
-    border: 1px solid $color-border;
-    border-radius: $border-radius;
-    background-color: $color-white;
-  }
-  .checkbox label {
-    height: 36px !important;
-    padding: 6px 8px;
-    display: flex;
-    align-items: center;
-  }
-  .checkbox .cr,
-  .radio .cr {
-    border: 1px solid $color-border;
-  }
-  .checkbox label {
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    line-height: unset !important;
-  }
-
-  .animated-radios-and-checkboxes .checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
-  .animated-radios-and-checkboxes .radio label input[type="radio"]:checked + .cr > .cr-icon {
-    opacity: 1;
-    color: $color-white;
-    font-size: 10px;
-  }
-  .animated-radios-and-checkboxes
-    .checkbox
-    label
-    input[type="checkbox"]:checked
-    + .animated-radios-and-checkboxes
-    .checkbox
-    .cr,
-  .animated-radios-and-checkboxes
-    .radio
-    label
-    input[type="radio"]:checked
-    + .animated-radios-and-checkboxes
-    .radio
-    .cr {
-    background-color: $color-blue;
-  }
-
-  .animated-radios-and-checkboxes
-    .checkbox
-    label
-    input[type="checkbox"]:checked
-    + .animated-radios-and-checkboxes
-    .checkbox
-    label.bigger,
-  .animated-radios-and-checkboxes
-    .checkbox
-    label
-    input[type="checkbox"]:checked
-    + .animated-radios-and-checkboxes
-    .checkbox
-    label.huge {
-    color: $color-blue;
-    line-height: unset;
-  }
-  .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked) label.big,
-  .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked) label.bigger,
-  .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked) label.huge {
-    color: $color-blue;
-    line-height: unset;
-  }
-  .animated-radios-and-checkboxes .checkbox label input[type="checkbox"]:checked + .cr,
-  .animated-radios-and-checkboxes .radio label input[type="radio"]:checked + .cr {
-    background-color: $color-blue;
-    border-color: $color-blue;
-  }
-  .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked).checkbox {
-    border: 1px solid $color-white;
-  }
-
-  .checkbox .cr {
-    transition-duration: 0.2s;
-  }
-
-  .checkbox .cr i {
-    transition-duration: 0.5s;
-  }
-
-  @media (hover: hover) {
-    .radio:hover,
-    .checkbox:hover {
-      background-color: $color-grey-superlight;
-    }
-    .animated-radios-and-checkboxes .checkbox:has(input[type="checkbox"]:checked).checkbox:hover {
-      border: 1px solid $color-border;
-    }
-  }
-}
-
 #selectCategoryModal .commerceCheckboxes {
   margin-left: 15px;
 }
@@ -349,7 +252,6 @@
     .modal-body .form-group + .btn-group label {
       font-size: 14px;
       padding: $padding-btn-small !important;
-      width: 100%;
     }
   }
 }
@@ -424,7 +326,7 @@
   #selectOfferTypeModal,
   #searchFormModal {
     .modal-dialog .modal-content {
-      background-color: $color-grey-superlight;
+      background-color: $color-white;
     }
   }
   #selectCategoryModal,
@@ -432,42 +334,37 @@
   #searchFormModal {
     .modal-dialog .modal-content {
       background-color: $color-white;
-    }
-  }
-  #searchFormModal .modal-dialog .modal-content .get-search-locations-action {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $color-grey;
-    border: 1px solid $color-grey;
-    color: $color-white;
-  }
-  #selectCategoryModal,
-  #selectOfferTypeModal,
-  #searchFormModal {
-    .modal-dialog .modal-content .get-search-locations-action:hover {
-      background-color: $color-dark;
-      border: 1px solid $color-dark;
-      color: $color-white;
-    }
-  }
 
-  #searchFormModal .modal-dialog .modal-content .title-search-locations-action::before {
-    content: "\f3c5";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 5px;
-  }
-  #searchFormModal .modal-footer .map_search_btn {
-    margin: 0 12px 0 0 !important;
-    width: 48.9% !important;
-  }
-  #searchFormModal .modal-footer .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 500;
+      .get-search-locations-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+      }
+
+      .title-search-locations-action::before {
+        content: "\f3c5";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 5px;
+      }
+    }
+    .modal-footer {
+      .map_search_btn {
+        margin: 0;
+        width: 48.9%;
+        @media (max-width: 335px) {
+          width: 80%;
+        }
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
   }
   #selectCategoryModal,
   #selectOfferTypeModal,
@@ -595,15 +492,67 @@
   .categorySelect {
     margin-bottom: 5px;
   }
-  .modal-body .get-search-locations-action {
-    background-color: $color-grey;
-    border: 1px solid $color-grey;
-    color: $color-white;
+  .categorySelect {
+    font-weight: 400;
   }
-  .modal-body .get-search-locations-action:hover {
-    background-color: $color-dark;
-    border: 1px solid $color-dark;
-    color: $color-white;
+  .modal-body {
+    .form-group.categoryButtons {
+      height: unset;
+      .propertyTypeButtons {
+        display: none;
+      }
+    }
+    .get-search-locations-action {
+      background-color: $color-white;
+      border: 1px solid $color-secondary;
+      color: $color-dark;
+      &:hover {
+        background-color: $color-secondary;
+        border: 1px solid $color-secondary;
+        color: $color-primary;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .btn {
+        font-size: 14px;
+      }
+      .form-group > label {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-grey;
+      }
+      .description-group .form-control {
+        font-size: 14px;
+      }
+    }
+  }
+  .modal-footer {
+    .ds-search-save {
+      min-width: 44px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $border-radius;
+      border: 1px solid $color-secondary;
+      background-color: $color-white;
+      color: $color-dark;
+      &:hover {
+        background-color: $color-secondary;
+        border: 1px solid $color-secondary;
+        color: $color-primary;
+      }
+      margin-bottom: 0;
+    }
+    &::before {
+      content: none;
+    }
+    &::after {
+      content: none;
+    }
   }
   .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
@@ -617,5 +566,16 @@
 
   .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
     border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #searchFormModal {
+    .additional_search_params_container_action .form-group.renovationButtons .btnText,
+    .additional_search_params_container_action .form-group.buildingTypeButtons .btnText,
+    .form-group.offerTypeButtons .btnText,
+    .form-group.categoryButtons .btnText {
+      font-size: 14px;
+    }
   }
 }

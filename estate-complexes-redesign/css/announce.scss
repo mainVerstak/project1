@@ -546,30 +546,15 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .container:not(.full-size) .object .object__gallery,
-  .modal .object .object__gallery {
-    height: 280px;
-    width: 384px;
-  }
-}
 @media (min-width: 992px) {
   .container:not(.full-size) .object,
   .modal .object {
     display: flex;
   }
 }
-@media (max-width: 1199px) {
-  .container:not(.full-size) .object .object__gallery,
-  .modal .object .object__gallery {
-    height: 228px;
-    width: 307px;
-  }
-}
 @media (max-width: 991px) {
   .container:not(.full-size) .object .object__gallery,
   .modal .object .object__gallery {
-    // height: 158px;
     width: 100%;
   }
   .container:not(.full-size) .object .object__show-phone,
@@ -583,12 +568,6 @@
     margin-top: 0px;
     bottom: 20px;
     right: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .container:not(.full-size) .object .object__gallery,
-  .modal .object .object__gallery {
-    height: calc((100vw - 60px) * 0.75);
   }
 }
 
