@@ -469,45 +469,6 @@
       }
     </style>
     <link rel="stylesheet" href="css/app.css" />
-    <!-- <style>
-      * {
-        box-shadow: none !important;
-        -webkit-box-shadow: none !important;
-        text-shadow: none !important;
-      }
-
-      .btn {
-        background-image: none !important;
-      }
-
-      .well,
-      .alert .alert-danger,
-      .alert,
-      .alert-danger {
-        box-shadow: none !important;
-        -webkit-box-shadow: none !important;
-        background-image: none !important;
-        background-repeat: unset !important;
-        border: none !important;
-      }
-
-      .btn-vk {
-        color: #fff;
-        background-color: #587ea3;
-        border-color: rgba(0, 0, 0, 0.2);
-      }
-      .btn-odnoklassniki {
-        color: #fff;
-        background-color: #f4731c;
-        border-color: rgba(0, 0, 0, 0.2);
-      }
-
-      .modal .modal-dialog .modal-content .modal-body .text-right {
-        display: flex;
-        justify-content: right;
-        gap: 10px;
-      }
-    </style> -->
   </head>
 
   <body class="modal-open">
@@ -561,7 +522,7 @@
               </div>
               <span id="js-offer-type-filter">
                 <div class="form-group offerTypeButtons">
-                  <!-- <label>Я хочу</label> -->
+                  <label>Я хочу</label>
                   <div class="btn-group" data-toggle="buttons" id="js-offer-type-filter-content">
                     <label class="btn btn-default click_additional_search_params_action">
                       <input name="advertisement[offer_type][]" type="checkbox" value="0" />
@@ -671,8 +632,8 @@
               </div>
               <br /><span id="js-search-locations-filter"
                 ><span class="search_control_action"></span>
-                <div class="form-group">
-                  <!-- <label>место</label> -->
+                <div class="form-group locationButton">
+                  <label>место</label>
                   <div class="btn-group">
                     <div
                       class="btn btn-default get-search-locations-action dropdown-toggle"
@@ -691,8 +652,8 @@
                     </div>
                   </div></div
               ></span>
-              <div class="form-group">
-                <label>Цена ₽</label>
+              <div class="form-group priceInput">
+                <label>Цена</label>
                 <div class="input-group">
                   <input
                     autocomplete="off"
@@ -709,7 +670,7 @@
                     placeholder="до"
                     type="text"
                   />
-                  <!-- <span class="input-group-addon input-sm">₽</span> -->
+                  <span class="input-group-addon input-sm">₽</span>
                 </div>
               </div>
               <div class="btn-group" data-toggle="buttons">
@@ -751,8 +712,9 @@
               <span
                 class="additional_search_params_container_action"
                 id="js-additional-search-params-container"
-                ><div class="form-group">
-                  <!-- <label>комнат</label> -->
+              >
+                <div class="form-group roomButtons">
+                  <label>комнат</label>
                   <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-default btn-xs">
                       <input type="checkbox" name="advertisement[room][0]" value="1" />
@@ -776,8 +738,8 @@
                     </label>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label>Площадь, м²</label>
+                <div class="form-group spaceInput">
+                  <label>Площадь</label>
                   <div class="input-group input-group-sm">
                     <input
                       class="form-control text-input"
@@ -799,11 +761,11 @@
                       name="advertisement[space_to]"
                       value=""
                     />
-                    <!-- <span class="input-group-addon">м²</span> -->
+                    <span class="input-group-addon">м²</span>
                   </div>
                 </div>
                 <div class="form-group buildingTypeButtons">
-                  <!-- <label>Тип дома</label> -->
+                  <label>Тип дома</label>
                   <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-default btn-xs">
                       <input type="checkbox" name="advertisement[building_type][]" value="0" />
@@ -890,7 +852,7 @@
                   </div>
                 </div>
                 <div class="form-group renovationButtons">
-                  <!-- <label>ремонт</label> -->
+                  <label>ремонт</label>
                   <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-default btn-xs">
                       <input type="checkbox" name="advertisement[renovation][]" value="0" />
@@ -1014,7 +976,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
             </button>
             <h4 class="modal-title">Я хочу</h4>
           </div>
@@ -1083,7 +1049,11 @@
         <div class="modal-content" style="height: 95vh">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
             </button>
             <h4 class="modal-title">Я хочу</h4>
           </div>
@@ -1308,7 +1278,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
             </button>
             <h4 class="modal-title">Тип дома</h4>
           </div>
@@ -1407,7 +1381,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
             </button>
             <h4 class="modal-title">Ремонт</h4>
           </div>

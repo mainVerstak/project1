@@ -997,12 +997,6 @@ a.dropdown-toggle:visited {
 .animated-radios-and-checkboxes .radio {
   border-radius: 10px;
 }
-.animated-radios-and-checkboxes .checkbox:focus-within, .animated-radios-and-checkboxes .checkbox:focus, .animated-radios-and-checkboxes .checkbox:focus-visible,
-.animated-radios-and-checkboxes .radio:focus-within,
-.animated-radios-and-checkboxes .radio:focus,
-.animated-radios-and-checkboxes .radio:focus-visible {
-  outline: 2px solid #242a3e;
-}
 .animated-radios-and-checkboxes .checkbox label,
 .animated-radios-and-checkboxes .checkbox label.huge,
 .animated-radios-and-checkboxes .checkbox label.big,
@@ -1019,6 +1013,30 @@ a.dropdown-toggle:visited {
   font-weight: 700;
   line-height: unset;
   border-radius: 10px;
+}
+.animated-radios-and-checkboxes .checkbox label:focus-within, .animated-radios-and-checkboxes .checkbox label:focus, .animated-radios-and-checkboxes .checkbox label:focus-visible,
+.animated-radios-and-checkboxes .checkbox label.huge:focus-within,
+.animated-radios-and-checkboxes .checkbox label.huge:focus,
+.animated-radios-and-checkboxes .checkbox label.huge:focus-visible,
+.animated-radios-and-checkboxes .checkbox label.big:focus-within,
+.animated-radios-and-checkboxes .checkbox label.big:focus,
+.animated-radios-and-checkboxes .checkbox label.big:focus-visible,
+.animated-radios-and-checkboxes .checkbox label.bigger:focus-within,
+.animated-radios-and-checkboxes .checkbox label.bigger:focus,
+.animated-radios-and-checkboxes .checkbox label.bigger:focus-visible,
+.animated-radios-and-checkboxes .radio label:focus-within,
+.animated-radios-and-checkboxes .radio label:focus,
+.animated-radios-and-checkboxes .radio label:focus-visible,
+.animated-radios-and-checkboxes .radio label.huge:focus-within,
+.animated-radios-and-checkboxes .radio label.huge:focus,
+.animated-radios-and-checkboxes .radio label.huge:focus-visible,
+.animated-radios-and-checkboxes .radio label.big:focus-within,
+.animated-radios-and-checkboxes .radio label.big:focus,
+.animated-radios-and-checkboxes .radio label.big:focus-visible,
+.animated-radios-and-checkboxes .radio label.bigger:focus-within,
+.animated-radios-and-checkboxes .radio label.bigger:focus,
+.animated-radios-and-checkboxes .radio label.bigger:focus-visible {
+  color: #084c95;
 }
 .animated-radios-and-checkboxes .checkbox label:focus-within .cr, .animated-radios-and-checkboxes .checkbox label:focus .cr, .animated-radios-and-checkboxes .checkbox label:focus-visible .cr,
 .animated-radios-and-checkboxes .checkbox label.huge:focus-within .cr,
@@ -1042,7 +1060,7 @@ a.dropdown-toggle:visited {
 .animated-radios-and-checkboxes .radio label.bigger:focus-within .cr,
 .animated-radios-and-checkboxes .radio label.bigger:focus .cr,
 .animated-radios-and-checkboxes .radio label.bigger:focus-visible .cr {
-  outline: 2px solid #242a3e;
+  outline: 1px solid #242a3e;
   border-color: #242a3e;
   border-width: 2px;
 }
@@ -1065,6 +1083,26 @@ a.dropdown-toggle:visited {
 .animated-radios-and-checkboxes .radio label.big:hover .cr,
 .animated-radios-and-checkboxes .radio label.bigger:hover .cr {
   border-color: #242a3e;
+}
+.animated-radios-and-checkboxes .checkbox label input[type=radio],
+.animated-radios-and-checkboxes .checkbox label input[type=checkbox],
+.animated-radios-and-checkboxes .checkbox label.huge input[type=radio],
+.animated-radios-and-checkboxes .checkbox label.huge input[type=checkbox],
+.animated-radios-and-checkboxes .checkbox label.big input[type=radio],
+.animated-radios-and-checkboxes .checkbox label.big input[type=checkbox],
+.animated-radios-and-checkboxes .checkbox label.bigger input[type=radio],
+.animated-radios-and-checkboxes .checkbox label.bigger input[type=checkbox],
+.animated-radios-and-checkboxes .radio label input[type=radio],
+.animated-radios-and-checkboxes .radio label input[type=checkbox],
+.animated-radios-and-checkboxes .radio label.huge input[type=radio],
+.animated-radios-and-checkboxes .radio label.huge input[type=checkbox],
+.animated-radios-and-checkboxes .radio label.big input[type=radio],
+.animated-radios-and-checkboxes .radio label.big input[type=checkbox],
+.animated-radios-and-checkboxes .radio label.bigger input[type=radio],
+.animated-radios-and-checkboxes .radio label.bigger input[type=checkbox] {
+  opacity: 0;
+  display: block;
+  position: absolute;
 }
 .animated-radios-and-checkboxes .checkbox label input[type=radio]:checked + .cr > .cr-icon,
 .animated-radios-and-checkboxes .checkbox label input[type=checkbox]:checked + .cr > .cr-icon,
@@ -3305,6 +3343,37 @@ header .balance-currency {
   }
 }
 
+#searchFormModal .modal-body .form-group.priceInput label::after {
+  content: "";
+}
+#searchFormModal .modal-body .form-group.spaceInput label::after {
+  content: "";
+}
+@media screen and (max-width: 768px) {
+  #searchFormModal .modal-body .form-group.offerTypeButtons label {
+    display: none;
+  }
+  #searchFormModal .modal-body .form-group.locationButton label {
+    display: none;
+  }
+  #searchFormModal .modal-body .form-group.buildingTypeButtons label:not(.btn-group label), #searchFormModal .modal-body .form-group.roomButtons label:not(.btn-group label), #searchFormModal .modal-body .form-group.renovationButtons label:not(.btn-group label) {
+    display: none;
+  }
+  #searchFormModal .modal-body .form-group.priceInput label::after {
+    content: ", ₽";
+  }
+  #searchFormModal .modal-body .form-group.spaceInput label::after {
+    content: ", м²";
+  }
+  #searchFormModal .modal-body .form-group .input-group-addon {
+    display: none;
+  }
+}
+
+.form-group.buildingTypeButtons .btn-group:not(:last-child), .form-group.renovationButtons .btn-group:not(:last-child) {
+  margin-right: 3px;
+}
+
 /* Form */
 .map_panel_body .well,
 #searchFormModal .well,
@@ -3863,7 +3932,7 @@ header .balance-currency {
   margin: 0;
   font-size: 14px;
 }
-.object .object__status .label.label-primary {
+.object .object__status .label.label-info {
   padding: 6px 10px;
   border-radius: 13px;
   color: #ffffff;

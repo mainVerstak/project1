@@ -1069,12 +1069,6 @@ a.dropdown-toggle:visited {
   .radio {
     border-radius: $border-radius-big;
 
-    &:focus-within,
-    &:focus,
-    &:focus-visible {
-      outline: 2px solid $color-dark;
-    }
-
     label,
     label.huge,
     label.big,
@@ -1091,8 +1085,9 @@ a.dropdown-toggle:visited {
       &:focus-within,
       &:focus,
       &:focus-visible {
+        color: $color-primary;
         .cr {
-          outline: 2px solid $color-dark;
+          outline: 1px solid $color-dark;
           border-color: $color-dark;
           border-width: 2px;
         }
@@ -1100,21 +1095,25 @@ a.dropdown-toggle:visited {
 
       &:hover {
         color: $color-primary;
-
         .cr {
           border-color: $color-dark;
         }
       }
 
-      input[type="radio"]:checked,
-      input[type="checkbox"]:checked {
-        + .cr > .cr-icon {
-          opacity: 1;
-          color: $color-white;
-          font-size: 10px;
-        }
-        + .cr {
-          background-color: $color-primary;
+      input[type="radio"],
+      input[type="checkbox"] {
+        opacity: 0;
+        display: block;
+        position: absolute;
+        &:checked {
+          + .cr > .cr-icon {
+            opacity: 1;
+            color: $color-white;
+            font-size: 10px;
+          }
+          + .cr {
+            background-color: $color-primary;
+          }
         }
       }
     }

@@ -256,6 +256,46 @@
   }
 }
 
+#searchFormModal .modal-body .form-group {
+  &.priceInput label::after {
+    content: "";
+  }
+  &.spaceInput label::after {
+    content: "";
+  }
+  @media screen and (max-width: 768px) {
+    &.offerTypeButtons label {
+      display: none;
+    }
+    &.locationButton label {
+      display: none;
+    }
+    &.buildingTypeButtons label:not(.btn-group label),
+    &.roomButtons label:not(.btn-group label),
+    &.renovationButtons label:not(.btn-group label) {
+      display: none;
+    }
+    &.priceInput label::after {
+      content: ", ₽";
+    }
+    &.spaceInput label::after {
+      content: ", м²";
+    }
+    .input-group-addon {
+      display: none;
+    }
+  }
+}
+
+.form-group {
+  &.buildingTypeButtons,
+  &.renovationButtons {
+    .btn-group:not(:last-child) {
+      margin-right: 3px;
+    }
+  }
+}
+
 /* Form */
 .map_panel_body,
 #searchFormModal,
