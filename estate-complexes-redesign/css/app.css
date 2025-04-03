@@ -813,7 +813,7 @@ a.dropdown-toggle:visited {
   content: "/ ";
   padding: 0 0px;
   color: #c4cdd9;
-  margin-right: -5px;
+  margin-right: 0;
 }
 .breadcrumb .small {
   font-size: 14px;
@@ -1158,6 +1158,32 @@ a.dropdown-toggle:visited {
 .animated-radios-and-checkboxes .radio .cr .cr-icon {
   top: 12%;
   left: 12%;
+}
+
+.phone_modal_action .modal-header .modal-title {
+  width: 90%;
+}
+.phone_modal_action .modal-body .social_btn_actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.phone_modal_action .modal-body .social_btn_actions noindex {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.phone_modal_action .modal-body .social_btn_actions .btn-social-icon {
+  width: 44px;
+}
+.phone_modal_action .modal-body .social_btn_actions .btn-social-icon > :first-child {
+  position: relative;
+}
+
+#abuse_form_action .modal-footer {
+  display: flex;
+  justify-content: end;
 }
 
 .ds-slider {
@@ -5124,6 +5150,7 @@ header .balance-currency {
   border: none;
   padding: 10px;
   text-align: right;
+  margin-top: 2px;
 }
 
 /* Review-box */

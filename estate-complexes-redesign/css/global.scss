@@ -849,7 +849,7 @@ a.dropdown-toggle:visited {
     content: "/\00a0";
     padding: 0 0px;
     color: $color-disabled;
-    margin-right: -5px;
+    margin-right: 0;
   }
 
   .small {
@@ -1134,5 +1134,40 @@ a.dropdown-toggle:visited {
         left: 12%;
       }
     }
+  }
+}
+
+.phone_modal_action {
+  .modal-header {
+    .modal-title {
+      width: 90%;
+    }
+  }
+  .modal-body {
+    .social_btn_actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      noindex {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
+      .btn-social-icon {
+        width: 44px;
+
+        & > :first-child {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+#abuse_form_action {
+  .modal-footer {
+    display: flex;
+    justify-content: end;
   }
 }
