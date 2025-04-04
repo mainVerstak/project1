@@ -1,0 +1,126 @@
+.form-horizontal {
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+
+    .control-label {
+      text-align: left;
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-grey;
+      margin-bottom: 8px;
+      padding: 0;
+
+      label {
+        font-weight: 400;
+      }
+    }
+
+    > div {
+      width: 100%;
+      padding: 0;
+    }
+
+    &.has-error {
+      .control-label {
+        color: $color-grey;
+      }
+      .help-block {
+        color: $color-invalid;
+      }
+      .form-control-feedback {
+        color: $color-invalid;
+        top: 4px;
+        opacity: 0;
+      }
+    }
+    &.has-success {
+      .control-label {
+        color: $color-grey;
+      }
+      .form-control-feedback {
+        color: $color-valid;
+        top: 4px;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.bootstrap-select > .dropdown-toggle {
+  padding-right: 15px;
+}
+
+.location-attributes,
+.adv-comment-block,
+.adv-price-block,
+.adv-attributes-block {
+  .controls {
+    > div {
+      width: 100%;
+      padding: 0;
+    }
+    .built_quarter {
+      margin-top: 16px;
+    }
+  }
+}
+
+.fileupload_context {
+  .btn {
+    width: fit-content;
+  }
+}
+
+.form-control-static {
+  width: fit-content;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: $border-radius;
+  border: 1px solid $color-secondary;
+
+  &:hover {
+    background-color: $color-secondary;
+
+    a {
+      color: $color-primary;
+    }
+  }
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-dark;
+    &:hover {
+      text-decoration: none;
+      color: $color-primary;
+    }
+  }
+}
+#new_advertisement {
+  i {
+    display: none;
+  }
+  .fields {
+    .col-lg-offset-2 {
+      margin-left: 0;
+    }
+
+    .btn {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .save-button-advertisement {
+      .help-block {
+        margin-top: 16px;
+      }
+    }
+  }
+}
