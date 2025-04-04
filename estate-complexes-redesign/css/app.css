@@ -1186,6 +1186,18 @@ a.dropdown-toggle:visited {
   justify-content: end;
 }
 
+.modal-application-list {
+  background-color: #ffffff !important;
+}
+
+.modal-application__text {
+  color: #8c91a6;
+}
+.modal-application__text p {
+  font-size: 10px;
+  font-weight: 500;
+}
+
 .ds-slider {
   position: relative;
 }
@@ -3866,7 +3878,7 @@ header .balance-currency {
   bottom: 18px;
   width: auto;
   display: flex;
-  align-items: end;
+  align-items: start;
   gap: 3px;
 }
 .object .object__actions form {
@@ -3978,6 +3990,7 @@ header .balance-currency {
   align-items: start;
   gap: 5px;
   flex-direction: column;
+  margin-bottom: 0;
 }
 .object .col-xs-1,
 .object .col-sm-1,
@@ -4140,17 +4153,18 @@ header .balance-currency {
 .object .object__owner {
   margin-bottom: 0 !important;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: start;
   justify-content: space-between;
 }
 @media (max-width: 1024px) {
   .object .object__actions {
-    position: absolute;
-    top: 3px;
-    right: 3px;
+    position: relative;
+    top: 0;
+    right: 0;
     margin: 0;
-    padding: 0;
+    padding: 16px;
+    padding-left: 0;
     width: unset;
   }
 }
@@ -4206,10 +4220,7 @@ header .balance-currency {
 }
 @media (min-width: 1024px) {
   .object .object__actions {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 3px;
-    padding-right: 0px;
+    padding: 16px;
     width: unset !important;
   }
 }
@@ -4244,6 +4255,8 @@ header .balance-currency {
     margin-top: 0px;
     bottom: 20px;
     right: 20px;
+    position: absolute;
+    top: auto;
   }
 }
 .map_panel .map_panel_head .to_filters_btn {

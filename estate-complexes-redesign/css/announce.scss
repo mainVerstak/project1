@@ -161,7 +161,7 @@
     bottom: 18px;
     width: auto;
     display: flex;
-    align-items: end;
+    align-items: start;
     gap: 3px;
 
     form {
@@ -288,6 +288,7 @@
     align-items: start;
     gap: 5px;
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   .col-xs-1,
@@ -461,18 +462,19 @@
   .object__owner {
     margin-bottom: 0 !important;
     display: flex;
-    flex-direction: column; //TODO: use flex-direction: column;
+    flex-direction: column-reverse; //TODO: use flex-direction: column;
     align-items: start;
     justify-content: space-between;
   }
 
   @media (max-width: 1024px) {
     .object__actions {
-      position: absolute;
-      top: 3px;
-      right: 3px;
+      position: relative;
+      top: 0;
+      right: 0;
       margin: 0;
-      padding: 0;
+      padding: 16px;
+      padding-left: 0;
       width: unset;
     }
   }
@@ -529,10 +531,7 @@
   }
   @media (min-width: 1024px) {
     .object__actions {
-      padding-top: 0;
-      padding-bottom: 0;
-      padding-left: 3px;
-      padding-right: 0px;
+      padding: 16px;
       width: unset !important;
     }
   }
@@ -568,6 +567,8 @@
     margin-top: 0px;
     bottom: 20px;
     right: 20px;
+    position: absolute;
+    top: auto;
   }
 }
 

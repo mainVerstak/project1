@@ -1171,3 +1171,13 @@ a.dropdown-toggle:visited {
     justify-content: end;
   }
 }
+.modal-application-list {
+  background-color: $color-white !important;
+}
+.modal-application__text {
+  color: $color-grey;
+  p {
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
