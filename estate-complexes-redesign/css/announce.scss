@@ -586,7 +586,7 @@
       padding-right: 15px !important;
     }
     .object__owner {
-      margin-right: 30px;
+      margin-right: 47px;
     }
     .object__data {
       padding-left: 15px !important;
@@ -596,16 +596,33 @@
       padding-bottom: 10px;
       padding-left: 15px !important;
       padding-right: 15px !important;
+      border-left: none;
+
+      .object__owner {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+
+        .phone-container {
+          width: 100%;
+        }
+      }
+      .object__owner-name {
+        margin-bottom: 5px;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+      }
     }
     .object__actions {
       margin-top: 10px;
       position: absolute;
       right: 0px;
-      bottom: 16px;
+      bottom: 4px;
       width: auto;
     }
     .object__show-phone {
-      height: 36px !important;
+      height: 34px !important;
     }
     .header_adv_short {
       margin-top: 0;

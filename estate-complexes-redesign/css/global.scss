@@ -165,6 +165,9 @@ body {
 .well-sm {
   border-radius: $border-radius;
 }
+.well-xs {
+  padding: 0 !important;
+}
 
 // Links
 a {

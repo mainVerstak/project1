@@ -142,6 +142,10 @@ body {
   border-radius: 5px;
 }
 
+.well-xs {
+  padding: 0 !important;
+}
+
 a {
   color: #084c95;
   text-decoration: none;
@@ -4303,7 +4307,7 @@ header .balance-currency {
   padding-right: 15px !important;
 }
 .map_panel .object .object__owner {
-  margin-right: 30px;
+  margin-right: 47px;
 }
 .map_panel .object .object__data {
   padding-left: 15px !important;
@@ -4313,16 +4317,31 @@ header .balance-currency {
   padding-bottom: 10px;
   padding-left: 15px !important;
   padding-right: 15px !important;
+  border-left: none;
+}
+.map_panel .object .object__meta .object__owner {
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.map_panel .object .object__meta .object__owner .phone-container {
+  width: 100%;
+}
+.map_panel .object .object__meta .object__owner-name {
+  margin-bottom: 5px;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
 }
 .map_panel .object .object__actions {
   margin-top: 10px;
   position: absolute;
   right: 0px;
-  bottom: 16px;
+  bottom: 4px;
   width: auto;
 }
 .map_panel .object .object__show-phone {
-  height: 36px !important;
+  height: 34px !important;
 }
 .map_panel .object .header_adv_short {
   margin-top: 0;
@@ -5465,6 +5484,10 @@ footer {
 .bootstrap-select > .dropdown-toggle {
   padding-right: 15px;
 }
+.bootstrap-select > .dropdown-toggle:focus {
+  box-shadow: none;
+  outline: 2px solid #242a3e !important;
+}
 
 .location-attributes .controls > div,
 .adv-comment-block .controls > div,
@@ -5524,6 +5547,10 @@ footer {
 }
 #new_advertisement .fields .save-button-advertisement .help-block {
   margin-top: 16px;
+}
+
+.user-params .btn-group {
+  display: inline-flex;
 }
 
 /*# sourceMappingURL=app.css.map */

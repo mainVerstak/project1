@@ -52,6 +52,10 @@
 
 .bootstrap-select > .dropdown-toggle {
   padding-right: 15px;
+  &:focus {
+    box-shadow: none;
+    outline: 2px solid $color-dark !important;
+  }
 }
 
 .location-attributes,
@@ -122,5 +126,10 @@
         margin-top: 16px;
       }
     }
+  }
+}
+.user-params {
+  .btn-group {
+    display: inline-flex;
   }
 }

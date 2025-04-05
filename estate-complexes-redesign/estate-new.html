@@ -214,7 +214,7 @@
     </header>
     <div class="container container-height-full js-body-container">
       <h1>Новое объявление</h1>
-      <div class="well well-sm">
+      <div class="well well-sm well-xs">
         <script>
           //<![CDATA[
           require(["application_module"], function () {
@@ -270,12 +270,91 @@
                 });
                 //]]>
               </script>
-              <input
-                type="hidden"
-                value="96029784"
-                name="advertisement[user_attributes][id]"
-                id="advertisement_user_attributes_id"
-              />
+              <div class="form-group has-feedback has-success">
+                <label class="control-label col-sm-2" for="radios">
+                  <i class="fas fa-male"></i> тип пользователя
+                </label>
+                <div class="col-sm-4">
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default" for="advertisement_user_attributes_role_owner"
+                      ><input
+                        required="required"
+                        id="advertisement_user_attributes_role_owner"
+                        class="user_name_changer_action"
+                        type="radio"
+                        value="owner"
+                        name="advertisement[user_attributes][role]"
+                        data-fv-field="advertisement[user_attributes][role]"
+                      /><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#owner"></use>
+                      </svg>
+                      собственник</label
+                    >
+                    <label class="btn btn-default" for="advertisement_user_attributes_role_agent">
+                      <input
+                        required="required"
+                        id="advertisement_user_attributes_role_agent"
+                        class="user_name_changer_action"
+                        type="radio"
+                        value="agent"
+                        name="advertisement[user_attributes][role]"
+                        data-fv-field="advertisement[user_attributes][role]"
+                      />
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#agent"></use>
+                      </svg>
+                      агент
+                    </label>
+                    <label class="btn btn-default" for="advertisement_user_attributes_role_agency">
+                      <input
+                        required="required"
+                        id="advertisement_user_attributes_role_agency"
+                        class="user_name_changer_action"
+                        type="radio"
+                        value="agency"
+                        name="advertisement[user_attributes][role]"
+                        data-fv-field="advertisement[user_attributes][role]"
+                      />
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#users"></use>
+                      </svg>
+                      агентство
+                    </label>
+                    <label
+                      class="btn btn-default"
+                      for="advertisement_user_attributes_role_developer"
+                    >
+                      <input
+                        required="required"
+                        id="advertisement_user_attributes_role_developer"
+                        class="user_name_changer_action"
+                        type="radio"
+                        value="developer"
+                        name="advertisement[user_attributes][role]"
+                        data-fv-field="advertisement[user_attributes][role]"
+                      />
+                      <i
+                        style="display: inline"
+                        class="form-control-feedback fas fa-check"
+                        data-fv-icon-for="advertisement[user_attributes][role]"
+                      >
+                      </i>
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#estate"></use>
+                      </svg>
+                      застройщик
+                    </label>
+                  </div>
+                  <small
+                    style="display: none"
+                    class="help-block"
+                    data-fv-validator="notEmpty"
+                    data-fv-for="advertisement[user_attributes][role]"
+                    data-fv-result="VALID"
+                    >Пожалуйста, введите значение</small
+                  >
+                </div>
+              </div>
             </div>
           </div>
           <div class="first-step-advertisement">
@@ -1535,6 +1614,106 @@
                     </script>
                   </div>
                   <div class="form-group"></div>
+                </div>
+                <div class="user-data-advertisement">
+                  <div class="fields">
+                    <div class="form-group has-feedback has-error">
+                      <label class="control-label col-sm-2" for="reg-phones"
+                        ><i class="fas fa-mobile-alt"></i> телефон</label
+                      >
+                      <div class="col-sm-4" id="reg-phones">
+                        <div class="fields help-block has-feedback has-error">
+                          <div>
+                            <input
+                              class="form-control mask-phone"
+                              placeholder="+7 ___ ___ __ __"
+                              data-is_auth="false"
+                              autocomplete="off"
+                              type="text"
+                              name="advertisement[user_attributes][phones_attributes][0][original]"
+                              id="advertisement_user_attributes_phones_attributes_0_original"
+                              data-fv-field="advertisement[user_attributes][phones_attributes][0][original]"
+                            /><i
+                              style="display: block"
+                              class="form-control-feedback fv-icon-no-label fas fa-times"
+                              data-fv-icon-for="advertisement[user_attributes][phones_attributes][0][original]"
+                            ></i
+                            ><span class="input-group-btn"
+                              ><input
+                                type="hidden"
+                                value="false"
+                                name="advertisement[user_attributes][phones_attributes][0][_destroy]"
+                                id="advertisement_user_attributes_phones_attributes_0__destroy" /><a
+                                class="btn btn-default dell-phone-number hidden remove_nested_fields"
+                                data-association="phones"
+                                href="javascript:void(0)"
+                                ><i class="fas fa-minus"></i></a
+                              ><a
+                                data-target="#reg-phones"
+                                class="btn btn-default add-phone-number hidden add_nested_fields"
+                                data-association="phones"
+                                data-blueprint-id="user_phones_fields_blueprint"
+                                href="javascript:void(0)"
+                                ><i class="fas fa-plus"></i></a
+                            ></span>
+                          </div>
+                          <small
+                            style="display: none"
+                            class="help-block"
+                            data-fv-validator="phone"
+                            data-fv-for="advertisement[user_attributes][phones_attributes][0][original]"
+                            data-fv-result="VALID"
+                            >Пожалуйста, введите телефон с кодом города/сети</small
+                          ><small
+                            style="display: block"
+                            class="help-block"
+                            data-fv-validator="notEmpty"
+                            data-fv-for="advertisement[user_attributes][phones_attributes][0][original]"
+                            data-fv-result="INVALID"
+                            >Пожалуйста, введите телефон</small
+                          ><small
+                            style="display: none"
+                            class="help-block"
+                            data-fv-validator="remote"
+                            data-fv-for="advertisement[user_attributes][phones_attributes][0][original]"
+                            data-fv-result="NOT_VALIDATED"
+                            >Такой телефон уже зарегистрирован на нашем сайте. <br /><a
+                              href="/sign-in"
+                              >Выполните вход</a
+                            >.</small
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="phone-target-field"
+                    value="advertisement[user_attributes][phones_attributes]"
+                  ></div>
+                  <div class="hide-yandex-adv">
+                    <style type="text/css">
+                      .grecaptcha-badge {
+                        display: none;
+                      }</style
+                    ><input
+                      type="hidden"
+                      name="recaptcha_token"
+                      id="recaptcha_token"
+                      data-type="auto"
+                    />
+                    <script>
+                      //<![CDATA[
+                      require(["application_module"], function () {
+                        require(["auto_recaptcha_module"]);
+                      });
+                      //]]>
+                    </script>
+                    <div
+                      class="auto-recaptcha"
+                      data-action="advertisement_submit"
+                      data-sitekey-v3="6Ld376IUAAAAALQnlRvj9EG45z-o2oYA2BUdRr_l"
+                    ></div>
+                  </div>
                 </div>
                 <div class="user-data-advertisement">
                   <div class="fields">
