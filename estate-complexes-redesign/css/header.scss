@@ -298,18 +298,19 @@ header {
       right: 0px;
       padding: 4px;
       font-weight: 700;
-    }
-    &:focus .badge,
-    &:hover .badge {
-      background-color: transparent;
+
+      &:focus,
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
 
   // main to header
   .container {
-    border-radius: $border-radius-big $border-radius-big 0 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    border-radius: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .navbar.navbar-default {
     background-color: $color-white;
@@ -322,7 +323,8 @@ header {
   .pull-left,
   .pull-left .navbar-brand,
   .pull-left .navbar-brand .navbar-brand__logo {
-    height: 32px;
+    height: 30px;
+    margin-top: 2px;
   }
   .pull-left .navbar-brand {
     padding: 0 0 0 20px;

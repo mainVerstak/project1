@@ -384,6 +384,19 @@ a:visited {
   background-color: #f55c3d;
 }
 
+.badge {
+  background-color: transparent;
+  color: currentColor;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 4px;
+  font-weight: 700;
+}
+.badge:focus, .badge:hover {
+  background-color: transparent;
+}
+
 .form-control {
   display: flex;
   gap: 10px;
@@ -738,7 +751,7 @@ a.dropdown-toggle:visited {
     top: -7px;
   }
 }
-#blockModal .modal-footer {
+.modal-footer {
   display: flex;
 }
 
@@ -803,7 +816,7 @@ a.dropdown-toggle:visited {
   flex-wrap: nowrap;
   align-items: center;
   gap: 3px;
-  padding: 10px 0;
+  padding: 5px 0;
   margin-bottom: 0;
   width: 100%;
   overflow-x: auto;
@@ -850,14 +863,16 @@ a.dropdown-toggle:visited {
 }
 
 .breadcrumb-filter {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .breadcrumb-filter .breadcrumb-filter__list {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  margin-top: 8px;
 }
-.breadcrumb-filter .breadcrumb-filter__item {
+.breadcrumb-filter .breadcrumb-filter__item,
+.breadcrumb-filter .breadcrumb-filter__item_small {
   height: 24px;
   line-height: 1;
   background-image: none;
@@ -869,21 +884,31 @@ a.dropdown-toggle:visited {
   border: 1px solid #e6eff9;
   font-weight: 700;
   transition-duration: 0.1s;
+  margin: 0;
 }
-.breadcrumb-filter .breadcrumb-filter__item:hover {
+@media (max-width: 991px) {
+  .breadcrumb-filter .breadcrumb-filter__item,
+  .breadcrumb-filter .breadcrumb-filter__item_small {
+    margin: 0;
+  }
+}
+.breadcrumb-filter .breadcrumb-filter__item:hover,
+.breadcrumb-filter .breadcrumb-filter__item_small:hover {
   background-image: none;
   filter: none;
   text-decoration: none;
   background-color: #e6eff9;
   color: #084c95;
 }
-.breadcrumb-filter .breadcrumb-filter__item:active {
+.breadcrumb-filter .breadcrumb-filter__item:active,
+.breadcrumb-filter .breadcrumb-filter__item_small:active {
   background-image: none;
   filter: none;
   text-decoration: none;
   background-color: #e6eff9;
 }
-.breadcrumb-filter .breadcrumb-filter__item:focus {
+.breadcrumb-filter .breadcrumb-filter__item:focus,
+.breadcrumb-filter .breadcrumb-filter__item_small:focus {
   background-image: none;
   filter: none;
   text-decoration: none;
@@ -1196,6 +1221,13 @@ a.dropdown-toggle:visited {
   left: 12%;
 }
 
+.modal-body {
+  padding-top: 0;
+}
+.modal-body:first-child {
+  padding-top: 15px;
+}
+
 .phone_modal_action .modal-header .modal-title {
   width: 90%;
 }
@@ -1222,6 +1254,11 @@ a.dropdown-toggle:visited {
   justify-content: end;
 }
 
+.notepad_modal_action .modal-footer {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal-application-list {
   background-color: #ffffff !important;
 }
@@ -1232,6 +1269,10 @@ a.dropdown-toggle:visited {
 .modal-application__text p {
   font-size: 10px;
   font-weight: 500;
+}
+
+.alert {
+  margin-top: 20px;
 }
 
 .ds-slider {
@@ -2784,13 +2825,13 @@ header .dropdown.nav a .badge {
   padding: 4px;
   font-weight: 700;
 }
-header .dropdown.nav a:focus .badge, header .dropdown.nav a:hover .badge {
+header .dropdown.nav a .badge:focus, header .dropdown.nav a .badge:hover {
   background-color: transparent;
 }
 header .container {
-  border-radius: 10px 10px 0 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 header .navbar.navbar-default {
   background-color: #ffffff;
@@ -2803,7 +2844,8 @@ header .navbar.navbar-default {
 header .pull-left,
 header .pull-left .navbar-brand,
 header .pull-left .navbar-brand .navbar-brand__logo {
-  height: 32px;
+  height: 30px;
+  margin-top: 2px;
 }
 header .pull-left .navbar-brand {
   padding: 0 0 0 20px;
@@ -3139,6 +3181,13 @@ header .balance-currency {
   align-items: center;
   justify-content: center;
 }
+.searchFormPage .fas.fa-tag,
+#searchFormModal .fas.fa-tag,
+#selectCategoryModal .fas.fa-tag,
+#selectOfferTypeModal .fas.fa-tag,
+.map_panel .fas.fa-tag {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .map_panel .buildingTypeSelect,
@@ -3286,7 +3335,6 @@ header .balance-currency {
   box-shadow: none;
 }
 
-/* Dropdowns */
 .search_buttons .btn {
   height: 44px !important;
 }
@@ -3371,7 +3419,7 @@ header .balance-currency {
 .searchFormPage .input-group-sm input.form-control {
   height: 44px !important;
   font-size: 14px !important;
-  width: 44px !important;
+  min-width: 44px;
   padding: 6px 10px !important;
   line-height: 1;
 }
@@ -3390,6 +3438,70 @@ header .balance-currency {
   .searchFormPage input.form-control {
     height: 44px !important;
   }
+}
+.map_panel .form-group.priceInput label::after,
+#selectCategoryModal .form-group.priceInput label::after,
+#selectOfferTypeModal .form-group.priceInput label::after,
+#searchFormModal .form-group.priceInput label::after,
+.searchFormPage .form-group.priceInput label::after {
+  content: "";
+}
+.map_panel .form-group.spaceInput label::after,
+#selectCategoryModal .form-group.spaceInput label::after,
+#selectOfferTypeModal .form-group.spaceInput label::after,
+#searchFormModal .form-group.spaceInput label::after,
+.searchFormPage .form-group.spaceInput label::after {
+  content: "";
+}
+.map_panel .form-group.offerTypeButtons label:not(.btn-group label),
+#selectCategoryModal .form-group.offerTypeButtons label:not(.btn-group label),
+#selectOfferTypeModal .form-group.offerTypeButtons label:not(.btn-group label),
+#searchFormModal .form-group.offerTypeButtons label:not(.btn-group label),
+.searchFormPage .form-group.offerTypeButtons label:not(.btn-group label) {
+  display: none;
+}
+.map_panel .form-group.locationButton label:not(.btn-group label),
+#selectCategoryModal .form-group.locationButton label:not(.btn-group label),
+#selectOfferTypeModal .form-group.locationButton label:not(.btn-group label),
+#searchFormModal .form-group.locationButton label:not(.btn-group label),
+.searchFormPage .form-group.locationButton label:not(.btn-group label) {
+  display: none;
+}
+.map_panel .form-group.buildingTypeButtons label:not(.btn-group label), .map_panel .form-group.roomButtons label:not(.btn-group label), .map_panel .form-group.renovationButtons label:not(.btn-group label),
+#selectCategoryModal .form-group.buildingTypeButtons label:not(.btn-group label),
+#selectCategoryModal .form-group.roomButtons label:not(.btn-group label),
+#selectCategoryModal .form-group.renovationButtons label:not(.btn-group label),
+#selectOfferTypeModal .form-group.buildingTypeButtons label:not(.btn-group label),
+#selectOfferTypeModal .form-group.roomButtons label:not(.btn-group label),
+#selectOfferTypeModal .form-group.renovationButtons label:not(.btn-group label),
+#searchFormModal .form-group.buildingTypeButtons label:not(.btn-group label),
+#searchFormModal .form-group.roomButtons label:not(.btn-group label),
+#searchFormModal .form-group.renovationButtons label:not(.btn-group label),
+.searchFormPage .form-group.buildingTypeButtons label:not(.btn-group label),
+.searchFormPage .form-group.roomButtons label:not(.btn-group label),
+.searchFormPage .form-group.renovationButtons label:not(.btn-group label) {
+  display: none;
+}
+.map_panel .form-group.priceInput label::after,
+#selectCategoryModal .form-group.priceInput label::after,
+#selectOfferTypeModal .form-group.priceInput label::after,
+#searchFormModal .form-group.priceInput label::after,
+.searchFormPage .form-group.priceInput label::after {
+  content: ", ₽";
+}
+.map_panel .form-group.spaceInput label::after,
+#selectCategoryModal .form-group.spaceInput label::after,
+#selectOfferTypeModal .form-group.spaceInput label::after,
+#searchFormModal .form-group.spaceInput label::after,
+.searchFormPage .form-group.spaceInput label::after {
+  content: ", м²";
+}
+.map_panel .form-group .input-group-addon,
+#selectCategoryModal .form-group .input-group-addon,
+#selectOfferTypeModal .form-group .input-group-addon,
+#searchFormModal .form-group .input-group-addon,
+.searchFormPage .form-group .input-group-addon {
+  display: none;
 }
 
 #selectCategoryModal .commerceCheckboxes {
@@ -3461,7 +3573,7 @@ header .balance-currency {
 .map_panel_body .well-sm,
 #searchFormModal .well-sm,
 .searchFormPage .well-sm {
-  padding: 9px 9px 9px 9px;
+  padding: 5px 0;
 }
 
 #searchFormModal.well,
@@ -3472,10 +3584,15 @@ header .balance-currency {
   box-shadow: none;
   background-image: none;
 }
-
 #searchFormModal.well-sm,
 .searchFormPage.well-sm {
-  padding: 9px 9px 9px 9px;
+  padding: 5px 0;
+}
+#searchFormModal .form-group > label,
+.searchFormPage .form-group > label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #8c91a6;
 }
 
 @media (max-width: 767px) {

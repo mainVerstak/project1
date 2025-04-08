@@ -24,6 +24,10 @@
     align-items: center;
     justify-content: center;
   }
+
+  .fas.fa-tag {
+    display: none;
+  }
 }
 
 // без этого появляются не нужные кнопки и ломается верстка.
@@ -104,71 +108,6 @@
   }
 }
 
-/* Dropdowns */
-// .map_panel,
-// #selectBuildingTypeModal,
-// #selectRenovationModal,
-// #selectCategoryModal,
-// #selectOfferTypeModal,
-// #searchFormModal,
-// .searchFormPage {
-//   .dropdown-toggle {
-//     text-shadow: none;
-//     -webkit-box-shadow: none;
-//     box-shadow: none;
-//     font-size: 14px;
-//     font-weight: 500;
-//   }
-//   .dropdown-menu {
-//     border-radius: $border-radius;
-//     background-color: $color-white;
-//     padding: 0 !important;
-//     border: 1px solid $color-border !important;
-//     box-shadow: none !important;
-//   }
-//   .dropdown-menu li a {
-//     font-size: 14px;
-//     font-weight: 500 !important;
-//     color: $color-grey-text !important;
-//     padding: $padding-btn-small;
-//     margin: 0 !important;
-//     border: none !important;
-//     border-radius: 0 !important;
-//     box-shadow: none !important;
-//     border-top: none !important;
-//     border-left: none !important;
-//     border-right: none !important;
-//     border-bottom: 1px solid $color-grey-superlight !important;
-//   }
-//   .dropdown-menu > li > a {
-//     display: flex;
-//     align-items: center;
-//     gap: 5px;
-//     padding: 5px 10px;
-//   }
-//   @media (hover: hover) {
-//     .dropdown-menu li a:hover {
-//       background-color: $color-grey-superlight;
-//       background-image: none !important;
-//     }
-//   }
-//   .dropdown-menu li:first-child a {
-//     border-radius: $border-radius $border-radius 0 0 !important;
-//   }
-//   .dropdown-menu li:last-child a {
-//     border-radius: 0 0 $border-radius $border-radius !important;
-//     border: none !important;
-//   }
-//   .dropdown-menu li.active a {
-//     background-color: $color-border !important;
-//     color: $color-dark !important;
-//     background-image: none !important;
-//   }
-//   .modal-dialog .btn {
-//     display: inline-block;
-//   }
-// }
-
 .search_buttons .btn {
   height: 44px !important;
 }
@@ -218,7 +157,7 @@
   .input-group-sm input.form-control {
     height: 44px !important;
     font-size: 14px !important;
-    width: 44px !important;
+    min-width: 44px;
     padding: $padding-btn-small !important;
     line-height: 1;
   }
@@ -228,6 +167,35 @@
     }
     input.form-control {
       height: 44px !important;
+    }
+  }
+
+  .form-group {
+    &.priceInput label::after {
+      content: "";
+    }
+    &.spaceInput label::after {
+      content: "";
+    }
+    &.offerTypeButtons label:not(.btn-group label) {
+      display: none;
+    }
+    &.locationButton label:not(.btn-group label) {
+      display: none;
+    }
+    &.buildingTypeButtons label:not(.btn-group label),
+    &.roomButtons label:not(.btn-group label),
+    &.renovationButtons label:not(.btn-group label) {
+      display: none;
+    }
+    &.priceInput label::after {
+      content: ", ₽";
+    }
+    &.spaceInput label::after {
+      content: ", м²";
+    }
+    .input-group-addon {
+      display: none;
     }
   }
 }
@@ -308,22 +276,29 @@
     background-image: none;
   }
   .well-sm {
-    padding: 9px 9px 9px 9px;
+    padding: 5px 0;
   }
 }
 
-#searchFormModal.well,
-.searchFormPage.well {
-  background-color: $color-white;
-  border: none;
-  border-radius: $border-radius-big;
-  box-shadow: none;
-  background-image: none;
-}
+#searchFormModal,
+.searchFormPage {
+  &.well {
+    background-color: $color-white;
+    border: none;
+    border-radius: $border-radius-big;
+    box-shadow: none;
+    background-image: none;
+  }
 
-#searchFormModal.well-sm,
-.searchFormPage.well-sm {
-  padding: 9px 9px 9px 9px;
+  &.well-sm {
+    padding: 5px 0;
+  }
+
+  .form-group > label {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-grey;
+  }
 }
 
 @media (max-width: 767px) {
