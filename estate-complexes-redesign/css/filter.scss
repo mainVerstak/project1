@@ -177,16 +177,15 @@
     &.spaceInput label::after {
       content: "";
     }
-    &.offerTypeButtons label:not(.btn-group label) {
-      display: none;
-    }
-    &.locationButton label:not(.btn-group label) {
-      display: none;
-    }
-    &.buildingTypeButtons label:not(.btn-group label),
-    &.roomButtons label:not(.btn-group label),
-    &.renovationButtons label:not(.btn-group label) {
-      display: none;
+    &.estateTypeButtons,
+    &.offerTypeButtons,
+    &.locationButton,
+    &.buildingTypeButtons,
+    &.roomButtons,
+    &.renovationButtons {
+      label:not(.btn-group label) {
+        display: none;
+      }
     }
     &.priceInput label::after {
       content: ", ₽";
@@ -196,6 +195,18 @@
     }
     .input-group-addon {
       display: none;
+    }
+  }
+  .dropdown-toggle {
+    font-weight: 400;
+    @media (min-width: 768px) {
+      min-width: 200px;
+      justify-content: space-between;
+    }
+  }
+  .dropdown-menu {
+    @media (min-width: 768px) {
+      min-width: 200px;
     }
   }
 }

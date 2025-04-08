@@ -3453,30 +3453,28 @@ header .balance-currency {
 .searchFormPage .form-group.spaceInput label::after {
   content: "";
 }
-.map_panel .form-group.offerTypeButtons label:not(.btn-group label),
+.map_panel .form-group.estateTypeButtons label:not(.btn-group label), .map_panel .form-group.offerTypeButtons label:not(.btn-group label), .map_panel .form-group.locationButton label:not(.btn-group label), .map_panel .form-group.buildingTypeButtons label:not(.btn-group label), .map_panel .form-group.roomButtons label:not(.btn-group label), .map_panel .form-group.renovationButtons label:not(.btn-group label),
+#selectCategoryModal .form-group.estateTypeButtons label:not(.btn-group label),
 #selectCategoryModal .form-group.offerTypeButtons label:not(.btn-group label),
-#selectOfferTypeModal .form-group.offerTypeButtons label:not(.btn-group label),
-#searchFormModal .form-group.offerTypeButtons label:not(.btn-group label),
-.searchFormPage .form-group.offerTypeButtons label:not(.btn-group label) {
-  display: none;
-}
-.map_panel .form-group.locationButton label:not(.btn-group label),
 #selectCategoryModal .form-group.locationButton label:not(.btn-group label),
-#selectOfferTypeModal .form-group.locationButton label:not(.btn-group label),
-#searchFormModal .form-group.locationButton label:not(.btn-group label),
-.searchFormPage .form-group.locationButton label:not(.btn-group label) {
-  display: none;
-}
-.map_panel .form-group.buildingTypeButtons label:not(.btn-group label), .map_panel .form-group.roomButtons label:not(.btn-group label), .map_panel .form-group.renovationButtons label:not(.btn-group label),
 #selectCategoryModal .form-group.buildingTypeButtons label:not(.btn-group label),
 #selectCategoryModal .form-group.roomButtons label:not(.btn-group label),
 #selectCategoryModal .form-group.renovationButtons label:not(.btn-group label),
+#selectOfferTypeModal .form-group.estateTypeButtons label:not(.btn-group label),
+#selectOfferTypeModal .form-group.offerTypeButtons label:not(.btn-group label),
+#selectOfferTypeModal .form-group.locationButton label:not(.btn-group label),
 #selectOfferTypeModal .form-group.buildingTypeButtons label:not(.btn-group label),
 #selectOfferTypeModal .form-group.roomButtons label:not(.btn-group label),
 #selectOfferTypeModal .form-group.renovationButtons label:not(.btn-group label),
+#searchFormModal .form-group.estateTypeButtons label:not(.btn-group label),
+#searchFormModal .form-group.offerTypeButtons label:not(.btn-group label),
+#searchFormModal .form-group.locationButton label:not(.btn-group label),
 #searchFormModal .form-group.buildingTypeButtons label:not(.btn-group label),
 #searchFormModal .form-group.roomButtons label:not(.btn-group label),
 #searchFormModal .form-group.renovationButtons label:not(.btn-group label),
+.searchFormPage .form-group.estateTypeButtons label:not(.btn-group label),
+.searchFormPage .form-group.offerTypeButtons label:not(.btn-group label),
+.searchFormPage .form-group.locationButton label:not(.btn-group label),
 .searchFormPage .form-group.buildingTypeButtons label:not(.btn-group label),
 .searchFormPage .form-group.roomButtons label:not(.btn-group label),
 .searchFormPage .form-group.renovationButtons label:not(.btn-group label) {
@@ -3502,6 +3500,32 @@ header .balance-currency {
 #searchFormModal .form-group .input-group-addon,
 .searchFormPage .form-group .input-group-addon {
   display: none;
+}
+.map_panel .dropdown-toggle,
+#selectCategoryModal .dropdown-toggle,
+#selectOfferTypeModal .dropdown-toggle,
+#searchFormModal .dropdown-toggle,
+.searchFormPage .dropdown-toggle {
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .map_panel .dropdown-toggle,
+  #selectCategoryModal .dropdown-toggle,
+  #selectOfferTypeModal .dropdown-toggle,
+  #searchFormModal .dropdown-toggle,
+  .searchFormPage .dropdown-toggle {
+    min-width: 200px;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .map_panel .dropdown-menu,
+  #selectCategoryModal .dropdown-menu,
+  #selectOfferTypeModal .dropdown-menu,
+  #searchFormModal .dropdown-menu,
+  .searchFormPage .dropdown-menu {
+    min-width: 200px;
+  }
 }
 
 #selectCategoryModal .commerceCheckboxes {
