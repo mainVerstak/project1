@@ -35,7 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
   </head>
 
@@ -809,27 +809,49 @@
             <div class="form-group estateTypeButtons">
               <label>тип</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
+                <div class="dropdown-select" name="advertisement[category]">
                   <button
-                    class="btn btn-default dropdown-toggle"
+                    class="btn btn-default dropdown-select-toggle"
                     type="button"
                     data-toggle="dropdown"
                   >
-                    Выберите тип
+                    <span>Выберите тип</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">гараж</a>
+                  <div class="dropdown-menu">
+                    <li class="dropdown-menu-item">
+                      <a href="#" data-value="5">гараж</a>
                     </li>
-                    <li>
-                      <a href="#">машиноместо</a>
+                    <li class="dropdown-menu-item">
+                      <a href="#" data-value="18">машиноместо</a>
                     </li>
-                  </ul>
+                  </div>
                 </div>
               </div>
+
+              <!-- <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default btn-xs">
+                  <input
+                    class="additional_category click_additional_category_search_params_action"
+                    type="checkbox"
+                    name="advertisement[category][]"
+                    value="5"
+                  />
+                  гараж
+                </label>
+                <label class="btn btn-default btn-xs">
+                  <input
+                    class="additional_category click_additional_category_search_params_action"
+                    type="checkbox"
+                    name="advertisement[category][]"
+                    value="18"
+                  />
+                  машиноместо
+                </label>
+              </div> -->
+
               <!-- <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
                   <input
@@ -1165,47 +1187,47 @@
             <div class="form-group estateTypeButtons">
               <label>тип</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
+                <div class="dropdown-select">
                   <button
-                    class="btn btn-default dropdown-toggle"
+                    class="btn btn-default dropdown-select-toggle"
                     type="button"
                     data-toggle="dropdown"
                   >
-                    Выберите тип
+                    <span>Выберите тип</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="#">офис</a>
+                      <a href="#" data-value="6">офис</a>
                     </li>
                     <li>
-                      <a href="#">торговое помещение</a>
+                      <a href="#" data-value="7">торговое помещение</a>
                     </li>
                     <li>
-                      <a href="#">произ. складские</a>
+                      <a href="#" data-value="8">произ. складские</a>
                     </li>
                     <li>
-                      <a href="#">общепит, отдых</a>
+                      <a href="#" data-value="9">общепит, отдых</a>
                     </li>
                     <li>
-                      <a href="#">свобод. назначения</a>
+                      <a href="#" data-value="11">свобод. назначения</a>
                     </li>
                     <li>
-                      <a href="#">услуги</a>
+                      <a href="#" data-value="13">услуги</a>
                     </li>
                     <li>
-                      <a href="#">авто</a>
+                      <a href="#" data-value="14">авто</a>
                     </li>
                     <li>
-                      <a href="#">готовый бизнес</a>
+                      <a href="#" data-value="15">готовый бизнес</a>
                     </li>
                     <li>
-                      <a href="#">перевод в нежилое</a>
+                      <a href="#" data-value="16">перевод в нежилое</a>
                     </li>
                     <li>
-                      <a href="#">спорт</a>
+                      <a href="#" data-value="17">спорт</a>
                     </li>
                   </ul>
                 </div>
@@ -4500,5 +4522,6 @@
         </div>
       </div>
     </div>
+    <script src="js/dropdown-select.js"></script>
   </body>
 </html>

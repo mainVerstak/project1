@@ -196,8 +196,15 @@
     .input-group-addon {
       display: none;
     }
+
+    .dropdown-select-menu {
+      max-height: 200px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      min-width: 200px;
+    }
   }
-  .dropdown-toggle {
+  .dropdown-select-toggle {
     font-weight: 400;
     @media (min-width: 768px) {
       min-width: 200px;
@@ -207,6 +214,11 @@
   .dropdown-menu {
     @media (min-width: 768px) {
       min-width: 200px;
+    }
+
+    .selected {
+      background-color: $color-secondary;
+      color: $color-primary;
     }
   }
 }

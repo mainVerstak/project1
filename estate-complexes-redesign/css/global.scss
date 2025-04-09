@@ -688,13 +688,17 @@ a.dropdown-toggle:visited {
 }
 
 .selectize-dropdown,
-.dropdown-menu {
+.dropdown-menu,
+.dropdown-select-menu {
   width: inherit;
   padding: 3px;
   border-radius: 8px;
   border: 1px solid $color-secondary;
   margin: 0;
   margin-top: 3px;
+  position: absolute;
+  z-index: 1000;
+  background-color: $color-white;
 
   background-image: none;
   box-shadow: none;
