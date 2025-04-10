@@ -809,69 +809,39 @@
             <div class="form-group estateTypeButtons">
               <label>тип</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown-select" name="advertisement[category]">
-                  <button
-                    class="btn btn-default dropdown-select-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
                     <span>Выберите тип</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <div class="dropdown-menu">
-                    <li class="dropdown-menu-item">
-                      <a href="#" data-value="5">гараж</a>
+                  <ul class="dropdown-multiselect-menu">
+                    <li>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="5"
+                        />
+                        гараж
+                      </label>
                     </li>
-                    <li class="dropdown-menu-item">
-                      <a href="#" data-value="18">машиноместо</a>
+                    <li>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="18"
+                        />
+                        машиноместо
+                      </label>
                     </li>
-                  </div>
+                  </ul>
                 </div>
               </div>
-
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="5"
-                  />
-                  гараж
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="18"
-                  />
-                  машиноместо
-                </label>
-              </div> -->
-
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="5"
-                  />
-                  гараж
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="18"
-                  />
-                  машиноместо
-                </label>
-              </div> -->
             </div>
           </span>
           <span
@@ -1187,152 +1157,127 @@
             <div class="form-group estateTypeButtons">
               <label>тип</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown-select">
-                  <button
-                    class="btn btn-default dropdown-select-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
                     <span>Выберите тип</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#" data-value="6">офис</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="6"
+                        />
+                        офис
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="7">торговое помещение</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="7"
+                        />
+                        торговое помещение
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="8">произ. складские</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="8"
+                        />
+                        произ. складские
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="9">общепит, отдых</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="9"
+                        />
+                        общепит, отдых
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="11">свобод. назначения</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="11"
+                        />
+                        свобод. назначения
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="13">услуги</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="13"
+                        />
+                        услуги
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="14">авто</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="14"
+                        />
+                        авто
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="15">готовый бизнес</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="15"
+                        />
+                        готовый бизнес
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="16">перевод в нежилое</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="16"
+                        />
+                        перевод в нежилое
+                      </label>
                     </li>
                     <li>
-                      <a href="#" data-value="17">спорт</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input
+                          class="additional_category click_additional_category_search_params_action"
+                          type="checkbox"
+                          name="advertisement[category][]"
+                          value="17"
+                        />
+                        спорт
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="6"
-                  />
-                  офис
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="7"
-                  />
-                  торговое помещение
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="8"
-                  />
-                  произ. складские
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="9"
-                  />
-                  общепит, отдых
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="11"
-                  />
-                  свобод. назначения
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="13"
-                  />
-                  услуги
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="14"
-                  />
-                  авто
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="15"
-                  />
-                  готовый бизнес
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="16"
-                  />
-                  перевод в нежилое
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input
-                    class="additional_category click_additional_category_search_params_action"
-                    type="checkbox"
-                    name="advertisement[category][]"
-                    value="17"
-                  />
-                  спорт
-                </label>
-              </div> -->
             </div>
           </span>
           <br />
@@ -1670,54 +1615,47 @@
             ><div class="form-group estateTypeButtons">
               <label>тип</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">ижс</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="0" />
+                        ижс
+                      </label>
                     </li>
                     <li>
-                      <a href="#">с/х</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="1" />
+                        с/х
+                      </label>
                     </li>
                     <li>
-                      <a href="#">cнт</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="2" />
+                        cнт
+                      </label>
                     </li>
                     <li>
-                      <a href="#">пром</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="3" />
+                        пром
+                      </label>
                     </li>
                     <li>
-                      <a href="#">п/комм</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="4" />
+                        п/комм
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="0" />
-                  ижс </label
-                ><label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="1" />
-                  с/х </label
-                ><label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="2" />
-                  cнт </label
-                ><label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="3" />
-                  пром </label
-                ><label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="4" />
-                  п/комм
-                </label>
-              </div> -->
             </div>
           </span>
           <br />
@@ -2025,31 +1963,6 @@
             ><div class="form-group estateTypeButtons">
               <label>тип</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип
-                    <svg class="icon-default">
-                      <use xlink:href="./img/icons.svg#chevron-d"></use>
-                    </svg>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">новостройку</a>
-                    </li>
-                    <li>
-                      <a href="#">вторичку</a>
-                    </li>
-                    <li>
-                      <a href="#">гостинку</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default btn-xs">
                   <input type="checkbox" name="advertisement[subcategory][]" value="39" />
                   новостройку </label
@@ -2060,7 +1973,7 @@
                   <input type="checkbox" name="advertisement[subcategory][]" value="41" />
                   гостинку
                 </label>
-              </div> -->
+              </div>
             </div>
           </span>
           <br />
@@ -2121,73 +2034,53 @@
             <div class="form-group buildingTypeButtons">
               <label>тип дома</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип дома
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип дома</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">кирпичный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="0" />
+                        кирпичный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">панельный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="1" />
+                        панельный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">монолит</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="2" />
+                        монолит
+                      </label>
                     </li>
                     <li>
-                      <a href="#">кирп-мон</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="3" />
+                        кирп-мон
+                      </label>
                     </li>
                     <li>
-                      <a href="#">блочный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="4" />
+                        блочный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">деревянный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="5" />
+                        деревянный
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="0" />
-                  кирпичный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="1" />
-                  панельный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="2" />
-                  монолит
-                </label>
-              </div> -->
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="3" />
-                  кирп-мон
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="4" />
-                  блочный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="5" />
-                  деревянный
-                </label>
-              </div> -->
-              <!-- <button type="button" class="btn btn-default btn-xs buildingTypeSelect">
-                <span class="btnText">тип дома</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button> -->
             </div>
             <div class="form-group">
               <label>этаж</label>
@@ -2243,82 +2136,59 @@
             <div class="form-group renovationButtons">
               <label>ремонт</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип ремонта
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип ремонта</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">дизайн</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="0" />
+                        дизайн
+                      </label>
                     </li>
                     <li>
-                      <a href="#">евро</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="1" />
+                        евро
+                      </label>
                     </li>
                     <li>
-                      <a href="#"> с отделкой </a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="2" />
+                        с отделкой
+                      </label>
                     </li>
                     <li>
-                      <a href="#">хороший</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="3" />
+                        хороший
+                      </label>
                     </li>
                     <li>
-                      <a href="#">частичный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="4" />
+                        частичный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">черновой</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="5" />
+                        черновой
+                      </label>
                     </li>
                     <li>
-                      <a href="#">без ремонта</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="6" />
+                        без ремонта
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="0" />
-                  дизайн
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="1" />
-                  евро
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="2" />
-                  с отделкой
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="3" />
-                  хороший
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="4" />
-                  частичный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="5" />
-                  черновой
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="6" />
-                  без ремонта
-                </label>
-              </div>
-              <button type="button" class="btn btn-default btn-xs renovationSelect">
-                <span class="btnText">ремонт</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button> -->
             </div>
           </span>
           <span
@@ -2595,48 +2465,41 @@
             ><div class="form-group estateTypeButtons">
               <label>тип</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">таунхаус</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="5" />
+                        таунхаус
+                      </label>
                     </li>
                     <li>
-                      <a href="#">часть дома</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="6" />
+                        часть дома
+                      </label>
                     </li>
                     <li>
-                      <a href="#">дачу</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="7" />
+                        дачу
+                      </label>
                     </li>
                     <li>
-                      <a href="#">коттедж</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[subcategory][]" value="8" />
+                        коттедж
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="5" />
-                  таунхаус </label
-                ><label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="6" />
-                  часть дома </label
-                ><label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="7" />
-                  дачу </label
-                ><label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[subcategory][]" value="8" />
-                  коттедж
-                </label>
-              </div> -->
             </div>
           </span>
           <br />
@@ -2698,73 +2561,53 @@
             <div class="form-group buildingTypeButtons">
               <label>тип дома</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип дома
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип дома</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">кирпичный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="0" />
+                        кирпичный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">панельный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="1" />
+                        панельный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">монолит</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="2" />
+                        монолит
+                      </label>
                     </li>
                     <li>
-                      <a href="#">кирп-мон</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="3" />
+                        кирп-мон
+                      </label>
                     </li>
                     <li>
-                      <a href="#">блочный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="4" />
+                        блочный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">деревянный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="5" />
+                        деревянный
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="0" />
-                  кирпичный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="1" />
-                  панельный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="2" />
-                  монолит
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="3" />
-                  кирп-мон
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="4" />
-                  блочный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="5" />
-                  деревянный
-                </label>
-              </div>
-              <button type="button" class="btn btn-default btn-xs buildingTypeSelect">
-                <span class="btnText">тип дома</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button> -->
             </div>
             <div class="form-group">
               <label>этажей</label>
@@ -2795,82 +2638,59 @@
             <div class="form-group renovationButtons">
               <label>ремонт</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип ремонта
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип ремонта</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">дизайн</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="0" />
+                        дизайн
+                      </label>
                     </li>
                     <li>
-                      <a href="#">евро</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="1" />
+                        евро
+                      </label>
                     </li>
                     <li>
-                      <a href="#"> с отделкой </a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="2" />
+                        с отделкой
+                      </label>
                     </li>
                     <li>
-                      <a href="#">хороший</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="3" />
+                        хороший
+                      </label>
                     </li>
                     <li>
-                      <a href="#">частичный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="4" />
+                        частичный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">черновой</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="5" />
+                        черновой
+                      </label>
                     </li>
                     <li>
-                      <a href="#">без ремонта</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="6" />
+                        без ремонта
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="0" />
-                  дизайн
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="1" />
-                  евро
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="2" />
-                  с отделкой
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="3" />
-                  хороший
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="4" />
-                  частичный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="5" />
-                  черновой
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="6" />
-                  без ремонта
-                </label>
-              </div>
-              <button type="button" class="btn btn-default btn-xs renovationSelect">
-                <span class="btnText">ремонт</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button> -->
             </div>
           </span>
           <span
@@ -3179,73 +2999,53 @@
             <div class="form-group buildingTypeButtons">
               <label>тип дома</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип дома
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип дома</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">кирпичный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="0" />
+                        кирпичный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">панельный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="1" />
+                        панельный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">монолит</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="2" />
+                        монолит
+                      </label>
                     </li>
                     <li>
-                      <a href="#">кирп-мон</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="3" />
+                        кирп-мон
+                      </label>
                     </li>
                     <li>
-                      <a href="#">блочный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="4" />
+                        блочный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">деревянный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="5" />
+                        деревянный
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="0" />
-                  кирпичный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="1" />
-                  панельный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="2" />
-                  монолит
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="3" />
-                  кирп-мон
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="4" />
-                  блочный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="5" />
-                  деревянный
-                </label>
-              </div>
-              <button type="button" class="btn btn-default btn-xs buildingTypeSelect">
-                <span class="btnText">тип дома</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button> -->
             </div>
             <div class="form-group">
               <label>этаж</label>
@@ -3300,82 +3100,59 @@
             <div class="form-group renovationButtons">
               <label>ремонт</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип ремонта
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип ремонта</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">дизайн</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="0" />
+                        дизайн
+                      </label>
                     </li>
                     <li>
-                      <a href="#">евро</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="1" />
+                        евро
+                      </label>
                     </li>
                     <li>
-                      <a href="#"> с отделкой </a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="2" />
+                        с отделкой
+                      </label>
                     </li>
                     <li>
-                      <a href="#">хороший</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="3" />
+                        хороший
+                      </label>
                     </li>
                     <li>
-                      <a href="#">частичный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="4" />
+                        частичный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">черновой</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="5" />
+                        черновой
+                      </label>
                     </li>
                     <li>
-                      <a href="#">без ремонта</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="6" />
+                        без ремонта
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="0" />
-                  дизайн
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="1" />
-                  евро
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="2" />
-                  с отделкой
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="3" />
-                  хороший
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="4" />
-                  частичный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="5" />
-                  черновой
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="6" />
-                  без ремонта
-                </label>
-              </div>
-              <button type="button" class="btn btn-default btn-xs renovationSelect">
-                <span class="btnText">ремонт</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button> -->
             </div>
           </span>
           <span
@@ -3683,74 +3460,53 @@
             <div class="form-group buildingTypeButtons">
               <label>тип дома</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип дома
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип дома</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">кирпичный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="0" />
+                        кирпичный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">панельный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="1" />
+                        панельный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">монолит</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="2" />
+                        монолит
+                      </label>
                     </li>
                     <li>
-                      <a href="#">кирп-мон</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="3" />
+                        кирп-мон
+                      </label>
                     </li>
                     <li>
-                      <a href="#">блочный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="4" />
+                        блочный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">деревянный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[building_type][]" value="5" />
+                        деревянный
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="0" />
-                  кирпичный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="1" />
-                  панельный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="2" />
-                  монолит
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="3" />
-                  кирп-мон
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="4" />
-                  блочный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[building_type][]" value="5" />
-                  деревянный
-                </label>
-              </div>
-              <button type="button" class="btn btn-default btn-xs buildingTypeSelect">
-                <span class="btnText">тип дома</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button> -->
             </div>
             <div class="form-group">
               <label>этажей</label>
@@ -3780,82 +3536,59 @@
             <div class="form-group renovationButtons">
               <label>ремонт</label>
               <div class="btn-group" data-toggle="buttons">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-default dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                  >
-                    Выберите тип ремонта
+                <div class="dropdown-multiselect">
+                  <button class="btn btn-default dropdown-multiselect-toggle">
+                    <span>Выберите тип ремонта</span>
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-d"></use>
                     </svg>
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-multiselect-menu">
                     <li>
-                      <a href="#">дизайн</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="0" />
+                        дизайн
+                      </label>
                     </li>
                     <li>
-                      <a href="#">евро</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="1" />
+                        евро
+                      </label>
                     </li>
                     <li>
-                      <a href="#"> с отделкой </a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="2" />
+                        с отделкой
+                      </label>
                     </li>
                     <li>
-                      <a href="#">хороший</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="3" />
+                        хороший
+                      </label>
                     </li>
                     <li>
-                      <a href="#">частичный</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="4" />
+                        частичный
+                      </label>
                     </li>
                     <li>
-                      <a href="#">черновой</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="5" />
+                        черновой
+                      </label>
                     </li>
                     <li>
-                      <a href="#">без ремонта</a>
+                      <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                        <input type="checkbox" name="advertisement[renovation][]" value="6" />
+                        без ремонта
+                      </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="0" />
-                  дизайн
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="1" />
-                  евро
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="2" />
-                  с отделкой
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="3" />
-                  хороший
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="4" />
-                  частичный
-                </label>
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="5" />
-                  черновой
-                </label>
-              </div>
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default btn-xs">
-                  <input type="checkbox" name="advertisement[renovation][]" value="6" />
-                  без ремонта
-                </label>
-              </div>
-              <button type="button" class="btn btn-default btn-xs renovationSelect">
-                <span class="btnText">ремонт</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button> -->
             </div>
           </span>
           <span
@@ -4398,8 +4131,9 @@
                   <span class="caret"></span>
                 </button>
               </div>
-              <br /><span id="js-search-locations-filter"
-                ><span class="search_control_action"></span>
+              <br />
+              <span id="js-search-locations-filter">
+                <span class="search_control_action"></span>
                 <div class="form-group">
                   <label>место</label>
                   <div class="btn-group">

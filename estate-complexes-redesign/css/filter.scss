@@ -197,14 +197,16 @@
       display: none;
     }
 
-    .dropdown-select-menu {
+    .dropdown-select-menu,
+    .dropdown-multiselect-menu {
       max-height: 200px;
       overflow-y: auto;
       overflow-x: hidden;
       min-width: 200px;
     }
   }
-  .dropdown-select-toggle {
+  .dropdown-select-toggle,
+  .dropdown-multiselect-toggle {
     font-weight: 400;
     @media (min-width: 768px) {
       min-width: 200px;

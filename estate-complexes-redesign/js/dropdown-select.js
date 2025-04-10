@@ -1,33 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const dropdownSelect = document.querySelectorAll(".dropdown-select");
+  const dropdownSelect = document.querySelectorAll(".dropdown-multiselect");
   dropdownSelect.forEach((dropdown) => {
     let selectValue = [];
     let selectName = [];
-    const dropdownSelectButton = dropdown.querySelector(".dropdown-select-toggle");
-    const dropdownSelectButtonText = dropdown.querySelector(".dropdown-select-toggle span");
-    const dropdownSelectMenuBtns = dropdown.querySelectorAll(".dropdown-menu a");
+    const dropdownSelectButton = dropdown.querySelector(".dropdown-multiselect-toggle");
+    const dropdownSelectButtonText = dropdown.querySelector(".dropdown-multiselect-toggle span");
+    const dropdownSelectMenuBtns = dropdown.querySelectorAll(".dropdown-multiselect-menu-item");
+
+    const btnText = dropdownSelectButtonText.textContent;
+
+    dropdown.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        dropdown.classList.remove("open");
+        dropdownSelectButton.classList.remove("active");
+      }
+    });
+
+    dropdownSelectButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle("open");
+    });
+
+    dropdown.setAttribute("tabindex", "-1");
+    dropdown.addEventListener("focusout", (e) => {
+      if (!dropdown.contains(e.relatedTarget)) {
+        dropdown.classList.remove("open");
+        dropdownSelectButton.classList.remove("active");
+      }
+    });
+
     dropdownSelectMenuBtns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
-        selectValue.push(e.target.dataset.value);
+        const input = btn.querySelector("input");
         selectName.push(e.target.textContent);
 
-        if (e.target.classList.contains("selected")) {
-          e.target.classList.remove("selected");
-          selectValue = selectValue.filter((value) => value !== e.target.dataset.value);
-          selectName = selectName.filter((name) => name !== e.target.textContent);
-        } else {
-          e.target.classList.add("selected");
+        if (input) {
+          selectValue.push(input.value);
         }
 
-        dropdownSelectButton.dataset.value = selectValue;
+        if (e.target.classList.contains("active")) {
+          selectValue = selectValue.filter((value) => value !== input.value);
+          selectName = selectName.filter((name) => name !== e.target.textContent);
+        }
+
+        dropdown.dataset.value = selectValue;
 
         if (selectName.length > 1) {
           dropdownSelectButtonText.textContent = `${selectName[0]} +${selectName.length - 1}`;
+          dropdownSelectButtonText.classList.add("bold");
         } else if (selectName.length === 0) {
-          dropdownSelectButtonText.textContent = "Выберите тип";
+          dropdownSelectButtonText.textContent = btnText;
+          dropdownSelectButtonText.classList.remove("bold");
         } else {
           dropdownSelectButtonText.textContent = selectName[0];
+          dropdownSelectButtonText.classList.add("bold");
         }
       });
     });

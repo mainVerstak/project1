@@ -564,7 +564,8 @@ textarea.form-control {
   margin-bottom: 1rem !important;
 }
 
-.dropdown-toggle {
+.dropdown-toggle,
+.dropdown-multiselect-toggle {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -576,12 +577,17 @@ textarea.form-control {
   -webkit-box-shadow: none;
   text-shadow: none;
 }
+.dropdown-toggle span.bold,
+.dropdown-multiselect-toggle span.bold {
+  font-weight: 700;
+}
 
 a.dropdown-toggle:visited {
   color: currentColor;
 }
 
-.open > .btn-default.dropdown-toggle {
+.open > .btn-default.dropdown-toggle,
+.open > .btn-default.dropdown-multiselect-toggle {
   color: #084c95;
   background-color: #e6eff9;
   border: 1px solid #e6eff9;
@@ -590,20 +596,23 @@ a.dropdown-toggle:visited {
   text-shadow: none;
 }
 @media (hover: hover) {
-  .open > .btn-default.dropdown-toggle:hover {
+  .open > .btn-default.dropdown-toggle:hover,
+  .open > .btn-default.dropdown-multiselect-toggle:hover {
     color: #084c95;
     background-color: #e6eff9;
     border-color: #e6eff9;
   }
 }
 @media (hover: none) {
-  .open > .btn-default.dropdown-toggle:active {
+  .open > .btn-default.dropdown-toggle:active,
+  .open > .btn-default.dropdown-multiselect-toggle:active {
     color: #084c95;
     background-color: #e6eff9;
     border-color: #e6eff9;
   }
 }
-.open > .btn-default.dropdown-toggle:focus {
+.open > .btn-default.dropdown-toggle:focus,
+.open > .btn-default.dropdown-multiselect-toggle:focus {
   color: #084c95;
   background-color: #e6eff9;
   border-color: #e6eff9;
@@ -611,7 +620,8 @@ a.dropdown-toggle:visited {
   -webkit-box-shadow: none;
   text-shadow: none;
 }
-.open > .btn-default.dropdown-toggle:active {
+.open > .btn-default.dropdown-toggle:active,
+.open > .btn-default.dropdown-multiselect-toggle:active {
   color: #084c95;
   background-color: #e6eff9;
   border-color: #e6eff9;
@@ -619,7 +629,8 @@ a.dropdown-toggle:visited {
   -webkit-box-shadow: none;
   text-shadow: none;
 }
-.open > .btn-default.dropdown-toggle:active:focus {
+.open > .btn-default.dropdown-toggle:active:focus,
+.open > .btn-default.dropdown-multiselect-toggle:active:focus {
   color: #084c95;
   background-color: #e6eff9;
   border-color: #e6eff9;
@@ -630,7 +641,7 @@ a.dropdown-toggle:visited {
 
 .selectize-dropdown,
 .dropdown-menu,
-.dropdown-select-menu {
+.dropdown-multiselect-menu {
   width: inherit;
   padding: 3px;
   border-radius: 8px;
@@ -640,23 +651,33 @@ a.dropdown-toggle:visited {
   position: absolute;
   z-index: 1000;
   background-color: #ffffff;
+  display: none;
   background-image: none;
   box-shadow: none;
   -webkit-box-shadow: none;
   text-shadow: none;
 }
+.selectize-dropdown li,
+.dropdown-menu li,
+.dropdown-multiselect-menu li {
+  list-style: none;
+  width: 100%;
+}
 .selectize-dropdown .selectize-dropdown-content .option,
 .selectize-dropdown li a, .selectize-dropdown.open li a, .selectize-dropdown.sub-menu li a, .selectize-dropdown.sub-menu li a,
+.selectize-dropdown li label,
 .dropdown-menu .selectize-dropdown-content .option,
 .dropdown-menu li a,
 .dropdown-menu.open li a,
 .dropdown-menu.sub-menu li a,
 .dropdown-menu.sub-menu li a,
-.dropdown-select-menu .selectize-dropdown-content .option,
-.dropdown-select-menu li a,
-.dropdown-select-menu.open li a,
-.dropdown-select-menu.sub-menu li a,
-.dropdown-select-menu.sub-menu li a {
+.dropdown-menu li label,
+.dropdown-multiselect-menu .selectize-dropdown-content .option,
+.dropdown-multiselect-menu li a,
+.dropdown-multiselect-menu.open li a,
+.dropdown-multiselect-menu.sub-menu li a,
+.dropdown-multiselect-menu.sub-menu li a,
+.dropdown-multiselect-menu li label {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -669,45 +690,54 @@ a.dropdown-toggle:visited {
 }
 .selectize-dropdown .selectize-dropdown-content .option:visited,
 .selectize-dropdown li a:visited, .selectize-dropdown.open li a:visited, .selectize-dropdown.sub-menu li a:visited, .selectize-dropdown.sub-menu li a:visited,
+.selectize-dropdown li label:visited,
 .dropdown-menu .selectize-dropdown-content .option:visited,
 .dropdown-menu li a:visited,
 .dropdown-menu.open li a:visited,
 .dropdown-menu.sub-menu li a:visited,
 .dropdown-menu.sub-menu li a:visited,
-.dropdown-select-menu .selectize-dropdown-content .option:visited,
-.dropdown-select-menu li a:visited,
-.dropdown-select-menu.open li a:visited,
-.dropdown-select-menu.sub-menu li a:visited,
-.dropdown-select-menu.sub-menu li a:visited {
+.dropdown-menu li label:visited,
+.dropdown-multiselect-menu .selectize-dropdown-content .option:visited,
+.dropdown-multiselect-menu li a:visited,
+.dropdown-multiselect-menu.open li a:visited,
+.dropdown-multiselect-menu.sub-menu li a:visited,
+.dropdown-multiselect-menu.sub-menu li a:visited,
+.dropdown-multiselect-menu li label:visited {
   color: #242a3e;
 }
 .selectize-dropdown .selectize-dropdown-content .option:disabled,
 .selectize-dropdown li a:disabled, .selectize-dropdown.open li a:disabled, .selectize-dropdown.sub-menu li a:disabled, .selectize-dropdown.sub-menu li a:disabled,
+.selectize-dropdown li label:disabled,
 .dropdown-menu .selectize-dropdown-content .option:disabled,
 .dropdown-menu li a:disabled,
 .dropdown-menu.open li a:disabled,
 .dropdown-menu.sub-menu li a:disabled,
 .dropdown-menu.sub-menu li a:disabled,
-.dropdown-select-menu .selectize-dropdown-content .option:disabled,
-.dropdown-select-menu li a:disabled,
-.dropdown-select-menu.open li a:disabled,
-.dropdown-select-menu.sub-menu li a:disabled,
-.dropdown-select-menu.sub-menu li a:disabled {
+.dropdown-menu li label:disabled,
+.dropdown-multiselect-menu .selectize-dropdown-content .option:disabled,
+.dropdown-multiselect-menu li a:disabled,
+.dropdown-multiselect-menu.open li a:disabled,
+.dropdown-multiselect-menu.sub-menu li a:disabled,
+.dropdown-multiselect-menu.sub-menu li a:disabled,
+.dropdown-multiselect-menu li label:disabled {
   color: #c4cdd9;
   background-color: #f6f7f9;
 }
 .selectize-dropdown .selectize-dropdown-content .option:focus,
 .selectize-dropdown li a:focus, .selectize-dropdown.open li a:focus, .selectize-dropdown.sub-menu li a:focus, .selectize-dropdown.sub-menu li a:focus,
+.selectize-dropdown li label:focus,
 .dropdown-menu .selectize-dropdown-content .option:focus,
 .dropdown-menu li a:focus,
 .dropdown-menu.open li a:focus,
 .dropdown-menu.sub-menu li a:focus,
 .dropdown-menu.sub-menu li a:focus,
-.dropdown-select-menu .selectize-dropdown-content .option:focus,
-.dropdown-select-menu li a:focus,
-.dropdown-select-menu.open li a:focus,
-.dropdown-select-menu.sub-menu li a:focus,
-.dropdown-select-menu.sub-menu li a:focus {
+.dropdown-menu li label:focus,
+.dropdown-multiselect-menu .selectize-dropdown-content .option:focus,
+.dropdown-multiselect-menu li a:focus,
+.dropdown-multiselect-menu.open li a:focus,
+.dropdown-multiselect-menu.sub-menu li a:focus,
+.dropdown-multiselect-menu.sub-menu li a:focus,
+.dropdown-multiselect-menu li label:focus {
   color: #084c95;
   background-color: #e6eff9;
   background-image: none;
@@ -716,16 +746,19 @@ a.dropdown-toggle:visited {
 @media (hover: hover) {
   .selectize-dropdown .selectize-dropdown-content .option:hover,
   .selectize-dropdown li a:hover, .selectize-dropdown.open li a:hover, .selectize-dropdown.sub-menu li a:hover, .selectize-dropdown.sub-menu li a:hover,
+  .selectize-dropdown li label:hover,
   .dropdown-menu .selectize-dropdown-content .option:hover,
   .dropdown-menu li a:hover,
   .dropdown-menu.open li a:hover,
   .dropdown-menu.sub-menu li a:hover,
   .dropdown-menu.sub-menu li a:hover,
-  .dropdown-select-menu .selectize-dropdown-content .option:hover,
-  .dropdown-select-menu li a:hover,
-  .dropdown-select-menu.open li a:hover,
-  .dropdown-select-menu.sub-menu li a:hover,
-  .dropdown-select-menu.sub-menu li a:hover {
+  .dropdown-menu li label:hover,
+  .dropdown-multiselect-menu .selectize-dropdown-content .option:hover,
+  .dropdown-multiselect-menu li a:hover,
+  .dropdown-multiselect-menu.open li a:hover,
+  .dropdown-multiselect-menu.sub-menu li a:hover,
+  .dropdown-multiselect-menu.sub-menu li a:hover,
+  .dropdown-multiselect-menu li label:hover {
     color: #084c95;
     background-color: #e6eff9;
     background-image: none;
@@ -734,23 +767,26 @@ a.dropdown-toggle:visited {
 @media (hover: none) {
   .selectize-dropdown .selectize-dropdown-content .option:active,
   .selectize-dropdown li a:active, .selectize-dropdown.open li a:active, .selectize-dropdown.sub-menu li a:active, .selectize-dropdown.sub-menu li a:active,
+  .selectize-dropdown li label:active,
   .dropdown-menu .selectize-dropdown-content .option:active,
   .dropdown-menu li a:active,
   .dropdown-menu.open li a:active,
   .dropdown-menu.sub-menu li a:active,
   .dropdown-menu.sub-menu li a:active,
-  .dropdown-select-menu .selectize-dropdown-content .option:active,
-  .dropdown-select-menu li a:active,
-  .dropdown-select-menu.open li a:active,
-  .dropdown-select-menu.sub-menu li a:active,
-  .dropdown-select-menu.sub-menu li a:active {
+  .dropdown-menu li label:active,
+  .dropdown-multiselect-menu .selectize-dropdown-content .option:active,
+  .dropdown-multiselect-menu li a:active,
+  .dropdown-multiselect-menu.open li a:active,
+  .dropdown-multiselect-menu.sub-menu li a:active,
+  .dropdown-multiselect-menu.sub-menu li a:active,
+  .dropdown-multiselect-menu li label:active {
     color: #084c95;
     background-color: #e6eff9;
   }
 }
 .selectize-dropdown > .active > a,
 .dropdown-menu > .active > a,
-.dropdown-select-menu > .active > a {
+.dropdown-multiselect-menu > .active > a {
   color: #084c95;
   background-color: #e6eff9;
   background-image: none;
@@ -758,17 +794,32 @@ a.dropdown-toggle:visited {
 }
 .selectize-dropdown > .active > a:hover,
 .dropdown-menu > .active > a:hover,
-.dropdown-select-menu > .active > a:hover {
+.dropdown-multiselect-menu > .active > a:hover {
   color: #084c95;
   background-color: #e6eff9;
   background-image: none;
 }
 .selectize-dropdown > .active > a:focus,
 .dropdown-menu > .active > a:focus,
-.dropdown-select-menu > .active > a:focus {
+.dropdown-multiselect-menu > .active > a:focus {
   color: #084c95;
   background-color: #e6eff9;
   background-image: none;
+}
+
+.open > .dropdown-multiselect-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.open > .dropdown-multiselect-menu .dropdown-multiselect-menu-item {
+  border: 1px solid transparent !important;
+  width: 100%;
+  justify-content: flex-start;
+}
+.open > .dropdown-multiselect-menu .dropdown-multiselect-menu-item input {
+  opacity: 0;
+  width: 0;
 }
 
 @media (min-width: 768px) {
@@ -3539,28 +3590,43 @@ header .balance-currency {
   display: none;
 }
 .map_panel .form-group .dropdown-select-menu,
+.map_panel .form-group .dropdown-multiselect-menu,
 #selectCategoryModal .form-group .dropdown-select-menu,
+#selectCategoryModal .form-group .dropdown-multiselect-menu,
 #selectOfferTypeModal .form-group .dropdown-select-menu,
+#selectOfferTypeModal .form-group .dropdown-multiselect-menu,
 #searchFormModal .form-group .dropdown-select-menu,
-.searchFormPage .form-group .dropdown-select-menu {
+#searchFormModal .form-group .dropdown-multiselect-menu,
+.searchFormPage .form-group .dropdown-select-menu,
+.searchFormPage .form-group .dropdown-multiselect-menu {
   max-height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
   min-width: 200px;
 }
 .map_panel .dropdown-select-toggle,
+.map_panel .dropdown-multiselect-toggle,
 #selectCategoryModal .dropdown-select-toggle,
+#selectCategoryModal .dropdown-multiselect-toggle,
 #selectOfferTypeModal .dropdown-select-toggle,
+#selectOfferTypeModal .dropdown-multiselect-toggle,
 #searchFormModal .dropdown-select-toggle,
-.searchFormPage .dropdown-select-toggle {
+#searchFormModal .dropdown-multiselect-toggle,
+.searchFormPage .dropdown-select-toggle,
+.searchFormPage .dropdown-multiselect-toggle {
   font-weight: 400;
 }
 @media (min-width: 768px) {
   .map_panel .dropdown-select-toggle,
+  .map_panel .dropdown-multiselect-toggle,
   #selectCategoryModal .dropdown-select-toggle,
+  #selectCategoryModal .dropdown-multiselect-toggle,
   #selectOfferTypeModal .dropdown-select-toggle,
+  #selectOfferTypeModal .dropdown-multiselect-toggle,
   #searchFormModal .dropdown-select-toggle,
-  .searchFormPage .dropdown-select-toggle {
+  #searchFormModal .dropdown-multiselect-toggle,
+  .searchFormPage .dropdown-select-toggle,
+  .searchFormPage .dropdown-multiselect-toggle {
     min-width: 200px;
     justify-content: space-between;
   }
