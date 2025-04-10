@@ -24,7 +24,7 @@
     <!-- <link rel="stylesheet" href="css/tabs.css" /> -->
     <!-- <link rel="stylesheet" href="css/new.css" /> -->
     <!-- <link rel="stylesheet" href="css/redesign.css" /> -->
-    <!-- <link rel="stylesheet" href="css/app.css" /> -->
+    <link rel="stylesheet" href="css/app.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -767,32 +767,76 @@
                 <div class="form-group buildingTypeButtons">
                   <label>Тип дома</label>
                   <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-default btn-xs">
-                      <input type="checkbox" name="advertisement[building_type][]" value="0" />
-                      кирпичный
-                    </label>
-                    <label class="btn btn-default btn-xs">
-                      <input type="checkbox" name="advertisement[building_type][]" value="1" />
-                      панельный
-                    </label>
-                    <label class="btn btn-default btn-xs">
-                      <input type="checkbox" name="advertisement[building_type][]" value="2" />
-                      монолит
-                    </label>
-                  </div>
-                  <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-default btn-xs">
-                      <input type="checkbox" name="advertisement[building_type][]" value="3" />
-                      кирп-мон
-                    </label>
-                    <label class="btn btn-default btn-xs">
-                      <input type="checkbox" name="advertisement[building_type][]" value="4" />
-                      блочный
-                    </label>
-                    <label class="btn btn-default btn-xs">
-                      <input type="checkbox" name="advertisement[building_type][]" value="5" />
-                      деревянный
-                    </label>
+                    <div class="dropdown-multiselect">
+                      <button class="btn btn-default dropdown-multiselect-toggle">
+                        <span>Выберите тип дома</span>
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#chevron-d"></use>
+                        </svg>
+                      </button>
+                      <ul class="dropdown-multiselect-menu">
+                        <li>
+                          <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                            <input
+                              type="checkbox"
+                              name="advertisement[building_type][]"
+                              value="0"
+                            />
+                            кирпичный
+                          </label>
+                        </li>
+                        <li>
+                          <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                            <input
+                              type="checkbox"
+                              name="advertisement[building_type][]"
+                              value="1"
+                            />
+                            панельный
+                          </label>
+                        </li>
+                        <li>
+                          <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                            <input
+                              type="checkbox"
+                              name="advertisement[building_type][]"
+                              value="2"
+                            />
+                            монолит
+                          </label>
+                        </li>
+                        <li>
+                          <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                            <input
+                              type="checkbox"
+                              name="advertisement[building_type][]"
+                              value="3"
+                            />
+                            кирп-мон
+                          </label>
+                        </li>
+                        <li>
+                          <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                            <input
+                              type="checkbox"
+                              name="advertisement[building_type][]"
+                              value="4"
+                            />
+                            блочный
+                          </label>
+                        </li>
+                        <li>
+                          <label class="btn btn-default btn-xs dropdown-multiselect-menu-item">
+                            <input
+                              type="checkbox"
+                              name="advertisement[building_type][]"
+                              value="5"
+                            />
+                            деревянный
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <button type="button" class="btn btn-default btn-xs buildingTypeSelect">
                     <span class="btnText">Тип дома</span>
@@ -1504,5 +1548,6 @@
         });
       });
     </script>
+    <script src="js/dropdown-select.js"></script>
   </body>
 </html>
