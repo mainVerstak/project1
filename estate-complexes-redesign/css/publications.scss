@@ -409,7 +409,7 @@
 
 .publications::before {
   content: "";
-  top: -94px;
+  top: -0;
   left: -15px;
   right: -15px;
   height: 266px;
@@ -492,13 +492,7 @@
   max-width: 350px;
   width: 100%;
   height: 48px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#75bcd8),
-    to(#58a9cc)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#75bcd8), to(#58a9cc));
   background: linear-gradient(180deg, #75bcd8 0%, #58a9cc 100%);
   border: 1px solid #2fa3c7;
   border-radius: 6px;
@@ -527,24 +521,12 @@
 }
 
 .publications__btn:hover {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#31aacf),
-    to(#31aacf)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#31aacf), to(#31aacf));
   background: linear-gradient(180deg, #31aacf 0%, #31aacf 100%);
 }
 
 .publications__btn:active {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#29a2c7),
-    to(#29a2c7)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#29a2c7), to(#29a2c7));
   background: linear-gradient(180deg, #29a2c7 0%, #29a2c7 100%);
 }
 
