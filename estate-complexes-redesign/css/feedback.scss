@@ -4,7 +4,9 @@
   margin-bottom: 30px;
 
   .well {
-    padding: 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: $color-surface;
   }
   h2 {
     font-size: 18px;
@@ -19,9 +21,29 @@
   }
   .form-group.pull-right .input-group {
     width: 100%;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
   }
   .form-group.pull-right .input-group .input-group-btn {
     width: 1%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+
+      button {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+
+        svg {
+          display: none;
+        }
+      }
+    }
   }
   .input-group-btn:last-child > .btn,
   .input-group-btn:last-child > .btn-group {
@@ -48,7 +70,8 @@
     .input-group-text {
       border: none;
       padding: 10px;
-      text-align: right;
+      padding-left: 0;
+      text-align: left;
       margin-top: 2px;
     }
   }

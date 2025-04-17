@@ -96,6 +96,12 @@ body {
   background-color: $color-surface;
 }
 
+// change Botstarp styles
+.col-sm-offset-2,
+.col-sm-offset-3 {
+  margin-left: 0;
+}
+
 /* Icons */
 .icon-map-small {
   width: 12px;

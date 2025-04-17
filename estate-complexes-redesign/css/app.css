@@ -65,6 +65,11 @@ body {
   background-color: #f6f7f9;
 }
 
+.col-sm-offset-2,
+.col-sm-offset-3 {
+  margin-left: 0;
+}
+
 /* Icons */
 .icon-map-small {
   width: 12px;
@@ -2941,7 +2946,7 @@ header .dropdown.nav a:hover .badge, header .dropdown.nav a:focus .badge {
   color: #ffffff;
 }
 header .container {
-  border-radius: 0;
+  border-radius: 10px 10px 0 0;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -5491,7 +5496,9 @@ header .balance-currency {
   margin-bottom: 30px;
 }
 .subscribe-block .well {
-  padding: 0;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f6f7f9;
 }
 .subscribe-block h2 {
   font-size: 18px;
@@ -5507,8 +5514,28 @@ header .balance-currency {
 .subscribe-block .form-group.pull-right .input-group {
   width: 100%;
 }
+@media (max-width: 768px) {
+  .subscribe-block .form-group.pull-right .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
 .subscribe-block .form-group.pull-right .input-group .input-group-btn {
   width: 1%;
+}
+@media (max-width: 768px) {
+  .subscribe-block .form-group.pull-right .input-group .input-group-btn {
+    width: 100%;
+  }
+  .subscribe-block .form-group.pull-right .input-group .input-group-btn button {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+  .subscribe-block .form-group.pull-right .input-group .input-group-btn button svg {
+    display: none;
+  }
 }
 .subscribe-block .input-group-btn:last-child > .btn,
 .subscribe-block .input-group-btn:last-child > .btn-group {
@@ -5532,7 +5559,8 @@ header .balance-currency {
 .subscribe-block .subscribed .input-group-text {
   border: none;
   padding: 10px;
-  text-align: right;
+  padding-left: 0;
+  text-align: left;
   margin-top: 2px;
 }
 
