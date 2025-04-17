@@ -820,6 +820,10 @@ a.dropdown-toggle:visited {
 .open > .dropdown-multiselect-menu .dropdown-multiselect-menu-item input {
   opacity: 0;
   width: 0;
+  pointer-events: all;
+}
+.open > .dropdown-multiselect-menu .dropdown-multiselect-menu-item input[type=checkbox] {
+  display: block;
 }
 
 @media (min-width: 768px) {
