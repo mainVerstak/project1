@@ -334,7 +334,6 @@
   .searchFormPage .well,
   .searchFormPage.well {
     background-color: $color-blue;
-    height: 36px;
     padding: 7.5px 10px;
   }
   .shortSearchForm.text-center.link {
@@ -342,22 +341,33 @@
     text-align: start;
     padding-left: 5px;
     display: flex;
+    height: 29px;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
-  }
-  .shortSearchForm.text-center.link span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .shortSearchForm.text-center.link .badge {
-    background-color: $color-white;
-    color: $color-blue;
-    margin-left: auto;
+    position: relative;
+    font-weight: 700;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .badge {
+      background-color: $color-white;
+      color: $color-grey;
+      margin-left: auto;
+      font-weight: 700;
+      font-size: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      padding: 6px 8px;
+      border-radius: 13px;
+    }
   }
 
   #selectBuildingTypeModal,

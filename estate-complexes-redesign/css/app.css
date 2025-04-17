@@ -61,8 +61,8 @@ p {
 
 body {
   color: #242a3e;
-  line-height: 1.5;
-  background-color: #ffffff;
+  line-height: 1.3;
+  background-color: #f6f7f9;
 }
 
 /* Icons */
@@ -166,6 +166,7 @@ a:visited {
 
 .text-muted {
   color: #8c91a6;
+  margin-top: 5px;
 }
 
 .btn {
@@ -385,16 +386,19 @@ a:visited {
 }
 
 .badge {
-  background-color: transparent;
-  color: currentColor;
+  background-color: #084c95;
+  color: #ffffff;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 4px;
+  top: 2px;
+  right: 2px;
+  padding: 1px 2px;
   font-weight: 700;
+  border-radius: 3px;
+  font-size: 12px;
 }
 .badge:focus, .badge:hover {
-  background-color: transparent;
+  background-color: #084c95;
+  color: #ffffff;
 }
 
 .form-control {
@@ -1365,6 +1369,18 @@ a.dropdown-toggle:visited {
 
 .alert {
   margin-top: 20px;
+}
+
+.edit_user .col-sm-offset-2 {
+  margin-left: 0;
+}
+.edit_user .role-selector-validation label:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.tariff2-main__balance-btn {
+  max-width: unset;
+  width: unset;
 }
 
 .ds-slider {
@@ -2909,16 +2925,20 @@ header .header-city-btn:hover {
   color: #333333;
 }
 header .dropdown.nav a .badge {
-  background-color: transparent;
-  color: currentColor;
+  background-color: #084c95;
+  color: #ffffff;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 4px;
+  top: 2px;
+  right: 2px;
+  padding: 1px 2px;
   font-weight: 700;
 }
 header .dropdown.nav a .badge:focus, header .dropdown.nav a .badge:hover {
-  background-color: transparent;
+  background-color: #084c95;
+}
+header .dropdown.nav a:hover .badge, header .dropdown.nav a:focus .badge {
+  background-color: #084c95;
+  color: #ffffff;
 }
 header .container {
   border-radius: 0;
@@ -2969,6 +2989,16 @@ header .navbar-default .navbar-nav > li > a:focus {
     background-color: #e6eff9;
   }
 }
+@media (min-width: 768px) {
+  header .navbar-default .navbar-nav > li > a.dropdown-toggle::after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    display: block;
+    bottom: -8px;
+  }
+}
 header .navbar-default .navbar-btn {
   margin: 0;
 }
@@ -2983,6 +3013,9 @@ header .sidenav__inner .dropdown-menu.sub-menu {
   border-radius: 8px;
   padding: 3px;
   border-color: #e6eff9;
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 header .sidenav__inner .dropdown-menu.sub-menu li {
   margin-left: 0px;
@@ -3230,6 +3263,10 @@ header .balance-currency {
     padding-top: 10px !important;
   }
 }
+.form-fast-search-locations-modal .ds-btn {
+  height: 44px !important;
+}
+
 .searchFormPage,
 #searchFormModal,
 #selectCategoryModal,
@@ -3752,7 +3789,6 @@ header .balance-currency {
   .searchFormPage .well,
   .searchFormPage.well {
     background-color: #084c95;
-    height: 36px;
     padding: 7.5px 10px;
   }
   .shortSearchForm.text-center.link {
@@ -3760,9 +3796,12 @@ header .balance-currency {
     text-align: start;
     padding-left: 5px;
     display: flex;
+    height: 29px;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
+    position: relative;
+    font-weight: 700;
   }
   .shortSearchForm.text-center.link span {
     display: flex;
@@ -3774,8 +3813,15 @@ header .balance-currency {
   }
   .shortSearchForm.text-center.link .badge {
     background-color: #ffffff;
-    color: #084c95;
+    color: #8c91a6;
     margin-left: auto;
+    font-weight: 700;
+    font-size: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    padding: 6px 8px;
+    border-radius: 13px;
   }
   #selectBuildingTypeModal .modal-dialog .modal-content,
   #selectRenovationModal .modal-dialog .modal-content,
@@ -4191,9 +4237,13 @@ header .balance-currency {
 }
 .object .header_adv_short {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
+  line-height: 1.2;
   margin: 0;
   color: #242a3e;
+}
+.object .header_adv_long {
+  line-height: 1.2;
 }
 .object .header_adv_short:hover {
   color: #242a3e;
@@ -4202,7 +4252,7 @@ header .balance-currency {
   color: #242a3e;
 }
 .object .object__lead {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
   color: #242a3e;
   margin-bottom: 10px;
@@ -4465,7 +4515,7 @@ header .balance-currency {
     top: 0;
     right: 0;
     margin: 0;
-    padding: 16px;
+    padding: 17px;
     padding-left: 0;
     width: unset;
   }
@@ -4505,6 +4555,9 @@ header .balance-currency {
     flex-direction: column;
     align-items: start;
   }
+  .object .object__owner .phone-container {
+    width: calc(100% - 17px);
+  }
   .object .object__owner-name {
     margin-bottom: 15px;
   }
@@ -4522,7 +4575,7 @@ header .balance-currency {
 }
 @media (min-width: 1024px) {
   .object .object__actions {
-    padding: 16px;
+    padding: 17px;
     width: unset !important;
   }
 }

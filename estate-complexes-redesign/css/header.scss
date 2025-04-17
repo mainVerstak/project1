@@ -291,17 +291,24 @@ header {
 
   .dropdown.nav a {
     .badge {
-      background-color: transparent;
-      color: currentColor;
+      background-color: $color-primary;
+      color: $color-white;
       position: absolute;
-      top: 0px;
-      right: 0px;
-      padding: 4px;
+      top: 2px;
+      right: 2px;
+      padding: 1px 2px;
       font-weight: 700;
 
       &:focus,
       &:hover {
-        background-color: transparent;
+        background-color: $color-primary;
+      }
+    }
+    &:hover,
+    &:focus {
+      .badge {
+        background-color: $color-primary;
+        color: $color-white;
       }
     }
   }
@@ -357,6 +364,19 @@ header {
         background-color: $color-secondary;
       }
     }
+
+    &.dropdown-toggle {
+      @media (min-width: 768px) {
+        &::after {
+          content: "";
+          width: 100%;
+          height: 8px;
+          position: absolute;
+          display: block;
+          bottom: -8px;
+        }
+      }
+    }
   }
 
   .navbar-default .navbar-btn {
@@ -373,6 +393,9 @@ header {
     border-radius: 8px;
     padding: 3px;
     border-color: $color-secondary;
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   .sidenav__inner .dropdown-menu.sub-menu li {
     margin-left: 0px;
@@ -632,4 +655,8 @@ header {
   .xml-main__content {
     padding-top: 10px !important;
   }
+}
+
+.form-fast-search-locations-modal .ds-btn {
+  height: 44px !important;
 }

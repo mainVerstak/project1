@@ -92,8 +92,8 @@ p {
 
 body {
   color: $color-dark;
-  line-height: 1.5;
-  background-color: $color-white;
+  line-height: 1.3;
+  background-color: $color-surface;
 }
 
 /* Icons */
@@ -191,6 +191,7 @@ a {
 
 .text-muted {
   color: $color-grey;
+  margin-top: 5px;
 }
 
 // Buttons
@@ -390,17 +391,20 @@ a {
 
 // Badge
 .badge {
-  background-color: transparent;
-  color: currentColor;
+  background-color: $color-primary;
+  color: $color-white;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 4px;
+  top: 2px;
+  right: 2px;
+  padding: 1px 2px;
   font-weight: 700;
+  border-radius: 3px;
+  font-size: 12px;
 
   &:focus,
   &:hover {
-    background-color: transparent;
+    background-color: $color-primary;
+    color: $color-white;
   }
 }
 
@@ -1285,4 +1289,21 @@ a.dropdown-toggle:visited {
 // alert
 .alert {
   margin-top: 20px;
+}
+
+// User-edit
+.edit_user {
+  .col-sm-offset-2 {
+    margin-left: 0;
+  }
+  .role-selector-validation label:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+// Tariff2
+
+.tariff2-main__balance-btn {
+  max-width: unset;
+  width: unset;
 }

@@ -1,64 +1,57 @@
-handleKeydownDropdown = (e) ->
-  if e.key == 'Escape'
-    $this = $(@)
-    $this.removeClass 'open'
-    $this.find('.dropdown-multiselect-toggle').removeClass 'active'
+window.selectedValues = {}
 
-handleFocusoutDropdown = (e) ->
-  $this = $(@)
-  $this.attr('tabindex', -1)
-  $this.find('.dropdown-multiselect-menu').attr('tabindex', 0)
-  $this.find('.dropdown-multiselect-menu-item').attr('tabindex', 0)
+updateSelectedText = ($target, values) ->
+  $selectedText = $target.closest('.dropdown-multiselect').find('.dropdown-multiselect-title')
 
-  if !$this.has(e.relatedTarget).length
-    $this.removeClass 'open'
-    $this.find('.dropdown-multiselect-toggle').removeClass 'active'
+  if values.length > 0
+    firstSelected = values[0]
+    otherSelectedCount = values.length - 1
 
-handleClickDropdownSelectButton = (e) ->
+    if otherSelectedCount > 0
+      $selectedText.text("#{firstSelected} +#{otherSelectedCount}")
+      $selectedText.addClass 'bold'
+    else
+      $selectedText.text(firstSelected)
+      $selectedText.addClass 'bold'
+  else
+    $selectedText.text($selectedText.data('title'))
+    $selectedText.removeClass 'bold'
+
+handleClickDropdownMultiselectToggle = (e) ->
   e.preventDefault()
   e.stopPropagation()
 
-  $(@).closest('.dropdown-multiselect').find('.dropdown-multiselect-menu').attr('tabindex', 0)
-  $(@).closest('.dropdown-multiselect').find('.dropdown-multiselect-menu-item').attr('tabindex', 0)
+  $(e.target).closest('.dropdown-multiselect').toggleClass 'open'
 
-  $(@).closest('.dropdown-multiselect').toggleClass 'open'
-  $(@).toggleClass 'active'
+handleClickDropdownMultiselectMenu = (e) ->
+  $label = $(e.target)
 
-# TODO: Переделать этот функицонал, по тому что он работает только в области видимости одной кнопки в меню и не видет других полей
-handleClickDropdownSelectMenuBtn = (e) ->
-  e.preventDefault()
-  e.stopPropagation()
+  if $label
+    $checkbox = $label.find('input[type="checkbox"]')
+    $checkbox.prop 'checked', !$checkbox.is(':checked')
+    $checkbox.trigger 'change'
 
-  $target = $(e.currentTarget)
-  $input = $target.find('input')
-  $dropdownSelectButtonText = $target.closest('.dropdown-multiselect').find('.dropdown-multiselect-toggle span')
+handleChangeDropdownMultiselectMenu = (e) ->
+  $target = $(e.target)
+  window.selectedValues[$target.data('group-id')] = [] unless window.selectedValues[$target.data('group-id')]
 
-  itemName = $target.text().trim()
-  itemValue = $input.val()
-  btnText = $dropdownSelectButtonText.text()
-  selectValue = []
-  selectName = []
+  if $target && $target.attr('type') == 'checkbox'
+    value = $target.data('name')
 
-  if $target.hasClass('active')
-    selectValue = selectValue.filter((v) -> v != itemValue)
-    selectName = selectName.filter((n) -> n != itemName)
-    $target.removeClass('active')
-  else
-    selectValue.push itemValue
-    selectName.push itemName
-    $target.addClass('active')
+    if $target.is(':checked')
+      window.selectedValues[$target.data('group-id')].push value
+    else
+      window.selectedValues[$target.data('group-id')] = window.selectedValues[$target.data('group-id')].filter((v) ->
+        v != value
+      )
 
-  if selectName.length > 1
-    $dropdownSelectButtonText.text "#{selectName[0]} +#{selectName.length - 1}"
-    $dropdownSelectButtonText.addClass 'bold'
-  else if selectName.length == 0
-    $dropdownSelectButtonText.text btnText
-    $dropdownSelectButtonText.removeClass 'bold'
-  else
-    $dropdownSelectButtonText.text selectName[0]
-    $dropdownSelectButtonText.addClass 'bold'
+    updateSelectedText($target, window.selectedValues[$target.data('group-id')])
 
-$(document).on('keydown', '.dropdown-multiselect', handleKeydownDropdown)
-$(document).on('focusout', '.dropdown-multiselect', handleFocusoutDropdown)
-$(document).on('click', '.dropdown-multiselect-toggle', handleClickDropdownSelectButton)
-$(document).on('click', '.dropdown-multiselect-menu-item', handleClickDropdownSelectMenuBtn)
+handleClickDocument = (e) ->
+  if $(e.target).closest('.dropdown-multiselect').length == 0
+    $(document).find('.dropdown-multiselect').removeClass 'open'
+
+$(document).on('click', '.dropdown-multiselect-toggle', handleClickDropdownMultiselectToggle)
+$(document).on('click', '.dropdown-multiselect-menu-item', handleClickDropdownMultiselectMenu)
+$(document).on('change', '.dropdown-multiselect-menu-item', handleChangeDropdownMultiselectMenu)
+$(document).on('click', handleClickDocument)

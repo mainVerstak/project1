@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const dropdown = document.querySelectorAll(".dropdown-multiselect");
+  const dropdown = document.querySelector(".dropdown-multiselect");
   const dropdownSelectButton = dropdown.querySelector(".dropdown-multiselect-toggle");
   const dropdownSelectButtonText = dropdown.querySelector(".dropdown-multiselect-toggle span");
   const dropdownSelectMenuBtns = dropdown.querySelectorAll(".dropdown-multiselect-menu-item");

@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -23,15 +20,16 @@
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
     <link rel="stylesheet" href="css/_header.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/tabs.css" />
-    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/new.css" /> -->
     <!-- <link rel="stylesheet" href="css/redesign.css" /> -->
-    <link rel="stylesheet" href="css/header.css" />
+    <!-- <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/announce.css" />
     <link rel="stylesheet" href="css/announce-page.css" />
-    <link rel="stylesheet" href="css/filter.css" />
+    <link rel="stylesheet" href="css/filter.css" /> -->
+    <link rel="stylesheet" href="css/app.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -134,7 +132,7 @@
       <div class="options__active" style="display: none">
         <button class="options__active-btn">
           <svg class="icon-default">
-            <use xlink:href="./img/new-icons.svg#dd"></use>
+            <use xlink:href="./img/icons.svg#chevron-d"></use>
           </svg>
         </button>
       </div>
@@ -143,7 +141,7 @@
           Панель настроек
           <button class="option__close-btn">
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#cross"></use>
+              <use xlink:href="./img/icons.svg#cross"></use>
             </svg>
           </button>
         </div>
@@ -155,31 +153,27 @@
         <div class="options__footer" style="margin-top: 10px">
           <button class="btn" id="_adm-old" title="Устаревшее объявление">
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#pause"></use>
+              <use xlink:href="./img/icons.svg#pause"></use>
             </svg>
           </button>
-          <button
-            class="btn"
-            id="_adm-blocked"
-            title="Заблокированное объявление"
-          >
+          <button class="btn" id="_adm-blocked" title="Заблокированное объявление">
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#cancel"></use>
+              <use xlink:href="./img/icons.svg#cancel"></use>
             </svg>
           </button>
           <button class="btn" id="_adm-notpay" title="Неоплаченное объявление">
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#balance"></use>
+              <use xlink:href="./img/icons.svg#balance"></use>
             </svg>
           </button>
           <button class="btn" id="_adm-draft" title="Черновое объявление">
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#paint"></use>
+              <use xlink:href="./img/icons.svg#paint"></use>
             </svg>
           </button>
           <button class="btn" id="_adm-deleted" title="Удаленное объявление">
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#cross"></use>
+              <use xlink:href="./img/icons.svg#cross"></use>
             </svg>
           </button>
         </div>
@@ -193,9 +187,7 @@
           const guestBtn = document.querySelector("._guest-btn");
 
           const optionCloseBtn = document.querySelector(".option__close-btn");
-          const optionActiveBtn = document.querySelector(
-            ".options__active-btn"
-          );
+          const optionActiveBtn = document.querySelector(".options__active-btn");
 
           function toggleOn(className) {
             const adminEl = document.querySelectorAll("._admin");
@@ -269,11 +261,11 @@
                   aria-expanded="false"
                 >
                   <svg class="icon-map-small">
-                    <use xlink:href="./img/new-icons.svg#placeholder"></use>
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
                   </svg>
                   <span> г Ростов-на-Дону, Новое поселение </span>
                   <svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#dd"></use>
+                    <use xlink:href="./img/icons.svg#chevron-d"></use>
                   </svg>
                 </div>
                 <ul class="dropdown-menu">
@@ -293,7 +285,7 @@
                 yaparam="header_document_click"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#new"></use>
+                  <use xlink:href="./img/icons.svg#new"></use>
                 </svg>
                 Новостройки
               </a>
@@ -301,7 +293,7 @@
             <li class="navbar-nav__hide-mobile">
               <a href="#">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#house"></use>
+                  <use xlink:href="./img/icons.svg#house"></use>
                 </svg>
                 Коттеджные поселки
               </a>
@@ -309,7 +301,7 @@
             <li class="navbar-nav__hide-mobile" i>
               <a href="#">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#mortgage"></use>
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
                 </svg>
                 Ипотека
               </a>
@@ -323,7 +315,7 @@
             <div class="navbar-header">
               <button class="navbar-toggle sidenav-button" type="button">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#sandwich"></use>
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
                 </svg>
               </button>
               <span class="pull-left">
@@ -345,13 +337,11 @@
                         aria-expanded="false"
                       >
                         <svg class="icon-map-small">
-                          <use
-                            xlink:href="./img/new-icons.svg#placeholder"
-                          ></use>
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
                         </svg>
                         Москва
                         <svg class="icon-default">
-                          <use xlink:href="./img/new-icons.svg#dd"></use>
+                          <use xlink:href="./img/icons.svg#chevron-d"></use>
                         </svg>
                       </div>
                       <ul class="dropdown-menu">
@@ -365,7 +355,7 @@
                     <a href="/sign-in">
                       <div class="navbar-link">
                         <svg class="icon-default">
-                          <use xlink:href="./img/new-icons.svg#login"></use>
+                          <use xlink:href="./img/icons.svg#login"></use>
                         </svg>
                         Войти
                       </div>
@@ -375,9 +365,7 @@
                     <a href="/sign-up">
                       <div class="navbar-link">
                         <svg class="icon-default">
-                          <use
-                            xlink:href="./img/new-icons.svg#registration"
-                          ></use>
+                          <use xlink:href="./img/icons.svg#registration"></use>
                         </svg>
                         Зарегистрироваться
                       </div>
@@ -388,7 +376,7 @@
                       <a data-no-turbolink="true" href="/estate-new">
                         <div class="btn btn-warning">
                           <svg class="icon-default">
-                            <use xlink:href="./img/new-icons.svg#plus"></use>
+                            <use xlink:href="./img/icons.svg#plus"></use>
                           </svg>
                           Подать объявление
                         </div>
@@ -398,7 +386,7 @@
                   <li class="sidenav__hide-desktop">
                     <a href="#">
                       <svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#new"></use>
+                        <use xlink:href="./img/icons.svg#new"></use>
                       </svg>
                       Новостройки
                     </a>
@@ -411,7 +399,7 @@
                       yaparam="header_document_click"
                     >
                       <svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#house"></use>
+                        <use xlink:href="./img/icons.svg#house"></use>
                       </svg>
                       Коттеджные поселки
                     </a>
@@ -419,20 +407,16 @@
                   <li class="sidenav__hide-desktop">
                     <a href="#">
                       <svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#mortgage"></use>
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
                       </svg>
                       Ипотека
                     </a>
                   </li>
                 </ul>
               </div>
-              <button
-                aria-label="Close"
-                class="navbar-toggle sidenav__close"
-                type="button"
-              >
+              <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#cross"></use>
+                  <use xlink:href="./img/icons.svg#cross"></use>
                 </svg>
               </button>
             </nav>
@@ -448,14 +432,14 @@
         <div class="shortSearchForm text-center link">
           <span>
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#search"></use>
+              <use xlink:href="./img/icons.svg#search"></use>
             </svg>
             <span> Развернуть параметры поиска </span>
           </span>
           <span>
             <span style="" class="badge">+4</span>
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#dd"></use>
+              <use xlink:href="./img/icons.svg#chevron-d"></use>
             </svg>
           </span>
         </div>
@@ -465,8 +449,8 @@
         <div class="row js-search-result-counter">
           <div class="col-xs-7">
             <div class="text-muted small">
-              Найдено <b>529</b> объявлений. Показаны
-              <span>201-225</span> (страница №<span>9</span>).
+              Найдено <b>529</b> объявлений. Показаны <span>201-225</span> (страница
+              №<span>9</span>).
             </div>
             <div data-block-id="R-A-5010170-16" id="scrollLineForAside"></div>
             <ol
@@ -555,46 +539,25 @@
             <div class="pull-right">
               <div class="btn-group small">
                 <div class="button-dropdown">
-                  <a
-                    class="btn btn-default dropdown-toggle"
-                    data-toggle="dropdown"
-                    href="#"
+                  <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#"
                     >рекомендованные
                     <svg class="icon-default">
-                      <use xlink:href="./img/new-icons.svg#dd"></use></svg
+                      <use xlink:href="./img/icons.svg#chevron-d"></use></svg
                   ></a>
                   <ul class="dropdown-menu dropdown-menu-right">
                     <li>
-                      <a class="order_action" href="#" rel="nofollow"
-                        >рекомендованные</a
-                      >
+                      <a class="order_action" href="#" rel="nofollow">рекомендованные</a>
                     </li>
                     <li>
-                      <a
-                        class="order_action"
-                        data-order="cheap"
-                        href="#"
-                        rel="nofollow"
-                        >дешевые</a
-                      >
+                      <a class="order_action" data-order="cheap" href="#" rel="nofollow">дешевые</a>
                     </li>
                     <li>
-                      <a
-                        class="order_action"
-                        data-order="expensive"
-                        href="#"
-                        rel="nofollow"
+                      <a class="order_action" data-order="expensive" href="#" rel="nofollow"
                         >дорогие</a
                       >
                     </li>
                     <li>
-                      <a
-                        class="order_action"
-                        data-order="new"
-                        href="#"
-                        rel="nofollow"
-                        >новые</a
-                      >
+                      <a class="order_action" data-order="new" href="#" rel="nofollow">новые</a>
                     </li>
                   </ul>
                 </div>
@@ -604,10 +567,7 @@
         </div>
       </div>
       <ul class="list-unstyled js-search-results">
-        <li
-          class="media clearfix object object_even object_marked"
-          element_id="118952813"
-        >
+        <li class="media clearfix object object_even object_marked" element_id="118952813">
           <div class="col-lg-5 col-md-4 col-sm-4">
             <style></style>
             <div class="fotorama--hidden"></div>
@@ -620,10 +580,7 @@
                 class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--toggle-arrows fotorama__wrap--no-controls"
                 style="width: 100%; min-width: 0px; max-width: 100%"
               >
-                <div
-                  class="fotorama__stage"
-                  style="width: 357px; height: 268px"
-                >
+                <div class="fotorama__stage" style="width: 357px; height: 268px">
                   <div
                     class="fotorama__stage__shaft"
                     style="
@@ -640,12 +597,7 @@
                       <img
                         src="https://i4.olan.ru/system/photos/entity/001/098/925/861/small/img?1714221994"
                         class="fotorama__img"
-                        style="
-                          width: 201px;
-                          height: 268px;
-                          left: 78px;
-                          top: 0px;
-                        "
+                        style="width: 201px; height: 268px; left: 78px; top: 0px"
                       />
                       <div class="fotorama__html">
                         <a
@@ -702,10 +654,9 @@
               </div>
               <div class="text-location">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#placeholder"></use>
+                  <use xlink:href="./img/icons.svg#placeholder"></use>
                 </svg>
-                <a
-                  href="https://ussuriysk.olan.ru/ul-komsomolskaya/day-flat/two-rooms"
+                <a href="https://ussuriysk.olan.ru/ul-komsomolskaya/day-flat/two-rooms"
                   >ул Комсомольская</a
                 >,
                 <a
@@ -717,10 +668,9 @@
               <div
                 class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
               >
-                Не для шумных вечеринок!!! Семейным парам, командировочным и
-                гостям города. Лицам моложе 21 года квартиру не сдаём! Цена
-                указана за один комплект постельного белья, дополнительный 500
-                рублей. Заезд в 14:00, выезд в 12:00. Расчётный час в 14:00.
+                Не для шумных вечеринок!!! Семейным парам, командировочным и гостям города. Лицам
+                моложе 21 года квартиру не сдаём! Цена указана за один комплект постельного белья,
+                дополнительный 500 рублей. Заезд в 14:00, выезд в 12:00. Расчётный час в 14:00.
                 После 2...
               </div>
             </div>
@@ -728,7 +678,7 @@
               <span class="label label-default _admin">unknown</span>
               <span class="label label-danger"
                 ><svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#hot"></use>
+                  <use xlink:href="./img/icons.svg#hot"></use>
                 </svg>
                 Горячее</span
               >
@@ -744,7 +694,7 @@
             <div class="object__owner">
               <div class="object__owner-name">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#agent"></use>
+                  <use xlink:href="./img/icons.svg#agent"></use>
                 </svg>
                 <noindex>Агент</noindex>
               </div>
@@ -757,7 +707,7 @@
                   rel="nofollow noopener"
                   yaparam="redirect_url_open"
                   ><svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#phone"></use>
+                    <use xlink:href="./img/icons.svg#phone"></use>
                   </svg>
                   Показать телефон</a
                 ></noindex
@@ -773,7 +723,7 @@
                 type="button"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#favorite"></use>
+                  <use xlink:href="./img/icons.svg#favorite"></use>
                 </svg>
               </button>
             </span>
@@ -790,7 +740,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#hot"></use>
+                  <use xlink:href="./img/icons.svg#hot"></use>
                 </svg></button
               ><input
                 type="hidden"
@@ -811,7 +761,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#top"></use>
+                  <use xlink:href="./img/icons.svg#top"></use>
                 </svg>
               </button>
             </form>
@@ -826,7 +776,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#paint"></use>
+                  <use xlink:href="./img/icons.svg#paint"></use>
                 </svg>
               </button>
             </form>
@@ -843,7 +793,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#del"></use>
+                  <use xlink:href="./img/icons.svg#del"></use>
                 </svg></button
               ><input
                 type="hidden"
@@ -884,11 +834,9 @@
               </div>
               <div class="text-location">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#placeholder"></use>
+                  <use xlink:href="./img/icons.svg#placeholder"></use>
                 </svg>
-                <a
-                  href="https://ussuriysk.olan.ru/ul-polushkina/day-flat/one-room"
-                  >ул Полушкина</a
+                <a href="https://ussuriysk.olan.ru/ul-polushkina/day-flat/one-room">ул Полушкина</a
                 >,
                 <a
                   rel="nofollow"
@@ -899,10 +847,9 @@
               <div
                 class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
               >
-                Постельное белье, полотенца, туалетные принадлежности,
-                стиральная машина, беспроводной интернет Wi-Fi, проводной
-                интернет, телевизор, кондиционер, электроплита, духовка,
-                микроволновка, фильтр для воды, посуда и принадлежности,
+                Постельное белье, полотенца, туалетные принадлежности, стиральная машина,
+                беспроводной интернет Wi-Fi, проводной интернет, телевизор, кондиционер,
+                электроплита, духовка, микроволновка, фильтр для воды, посуда и принадлежности,
                 столовые приборы, электри...
               </div>
             </div>
@@ -920,7 +867,7 @@
             <div class="object__owner">
               <div class="object__owner-name">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#owner"></use>
+                  <use xlink:href="./img/icons.svg#owner"></use>
                 </svg>
                 <noindex>собственник</noindex>
               </div>
@@ -933,7 +880,7 @@
                   rel="nofollow noopener"
                   yaparam="redirect_url_open"
                   ><svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#phone"></use>
+                    <use xlink:href="./img/icons.svg#phone"></use>
                   </svg>
                   Показать телефон</a
                 ></noindex
@@ -949,7 +896,7 @@
                 type="button"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#favorite"></use>
+                  <use xlink:href="./img/icons.svg#favorite"></use>
                 </svg>
               </button>
             </span>
@@ -966,7 +913,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#hot"></use>
+                  <use xlink:href="./img/icons.svg#hot"></use>
                 </svg></button
               ><input
                 type="hidden"
@@ -987,7 +934,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#top"></use>
+                  <use xlink:href="./img/icons.svg#top"></use>
                 </svg>
               </button>
             </form>
@@ -1002,7 +949,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#paint"></use>
+                  <use xlink:href="./img/icons.svg#paint"></use>
                 </svg>
               </button>
             </form>
@@ -1019,7 +966,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#del"></use>
+                  <use xlink:href="./img/icons.svg#del"></use>
                 </svg></button
               ><input
                 type="hidden"
@@ -1057,11 +1004,9 @@
               </div>
               <div class="text-location">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#placeholder"></use>
+                  <use xlink:href="./img/icons.svg#placeholder"></use>
                 </svg>
-                <a
-                  href="https://ussuriysk.olan.ru/ul-razdolnaya/day-flat/one-room"
-                  >ул Раздольная</a
+                <a href="https://ussuriysk.olan.ru/ul-razdolnaya/day-flat/one-room">ул Раздольная</a
                 >,
                 <a
                   rel="nofollow"
@@ -1072,11 +1017,10 @@
               <div
                 class="text-muted object__text-trim text-comment tooltip_comment_action tooltip_comment_loaded"
               >
-                Уютная светлая квартира ждёт своих гостей. Квартира
-                укомплектована всем необходимым для комфортного пребывания до
-                3-х человек: Удобная двухспальная кровать, постельное бельё,
-                ди&lt;текст-удален&gt;олнительное спальное место) Оборудованная
-                кухня для приема и ...
+                Уютная светлая квартира ждёт своих гостей. Квартира укомплектована всем необходимым
+                для комфортного пребывания до 3-х человек: Удобная двухспальная кровать, постельное
+                бельё, ди&lt;текст-удален&gt;олнительное спальное место) Оборудованная кухня для
+                приема и ...
               </div>
             </div>
             <div class="object__status">
@@ -1092,7 +1036,7 @@
             <div class="object__owner">
               <div class="object__owner-name">
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#owner"></use>
+                  <use xlink:href="./img/icons.svg#owner"></use>
                 </svg>
                 <noindex>собственник</noindex>
               </div>
@@ -1105,7 +1049,7 @@
                   rel="nofollow noopener"
                   yaparam="redirect_url_open"
                   ><svg class="icon-default">
-                    <use xlink:href="./img/new-icons.svg#phone"></use>
+                    <use xlink:href="./img/icons.svg#phone"></use>
                   </svg>
                   Показать телефон</a
                 ></noindex
@@ -1121,7 +1065,7 @@
                 type="button"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#favorite"></use>
+                  <use xlink:href="./img/icons.svg#favorite"></use>
                 </svg>
               </button>
             </span>
@@ -1138,7 +1082,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#hot"></use>
+                  <use xlink:href="./img/icons.svg#hot"></use>
                 </svg></button
               ><input
                 type="hidden"
@@ -1159,7 +1103,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#top"></use>
+                  <use xlink:href="./img/icons.svg#top"></use>
                 </svg>
               </button>
             </form>
@@ -1174,7 +1118,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#paint"></use>
+                  <use xlink:href="./img/icons.svg#paint"></use>
                 </svg>
               </button>
             </form>
@@ -1191,7 +1135,7 @@
                 type="submit"
               >
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#del"></use>
+                  <use xlink:href="./img/icons.svg#del"></use>
                 </svg></button
               ><input
                 type="hidden"
@@ -1215,14 +1159,10 @@
           </ul>
           <div class="btn-group pagination pull-right hidden-xs">
             <div class="button-dropdown">
-              <a
-                class="btn btn-default dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-              >
+              <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
                 25 объявлений на страницу
                 <svg class="icon-default">
-                  <use xlink:href="./img/new-icons.svg#dd"></use>
+                  <use xlink:href="./img/icons.svg#chevron-d"></use>
                 </svg>
               </a>
               <ul class="dropdown-menu dropdown-menu-right">
@@ -1294,30 +1234,22 @@
       <div class="h4 center-icon">
         Посмотрите также:
         <svg class="icon-big">
-          <use xlink:href="./img/new-icons.svg#navigator"></use>
+          <use xlink:href="./img/icons.svg#navigator"></use>
         </svg>
       </div>
       <ol class="breadcrumb">
         <li class="small">
-          <a
-            class="yaSend center-icon"
-            yaparam="click_to_breadcrumbs_home"
-            href="https://olan.ru/"
+          <a class="yaSend center-icon" yaparam="click_to_breadcrumbs_home" href="https://olan.ru/"
             ><svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#house"></use>
+              <use xlink:href="./img/icons.svg#house"></use>
             </svg>
             Недвижимость</a
           >
         </li>
         <li class="small">
-          <a
-            class="js-show-breadcrumbs-modal"
-            data-uid="3233229"
-            rel="nofollow"
-            href="#"
-          >
+          <a class="js-show-breadcrumbs-modal" data-uid="3233229" rel="nofollow" href="#">
             <svg class="icon-breadcrumbs">
-              <use xlink:href="./img/new-icons.svg#dd"></use>
+              <use xlink:href="./img/icons.svg#chevron-d"></use>
             </svg>
           </a>
           <a
@@ -1328,33 +1260,18 @@
           >
         </li>
         <li class="small">
-          <a
-            class="js-show-breadcrumbs-modal"
-            data-uid="3236399"
-            rel="nofollow"
-            href="#"
-          >
+          <a class="js-show-breadcrumbs-modal" data-uid="3236399" rel="nofollow" href="#">
             <svg class="icon-breadcrumbs">
-              <use xlink:href="./img/new-icons.svg#dd"></use>
+              <use xlink:href="./img/icons.svg#chevron-d"></use>
             </svg>
           </a>
-          <a
-            class="js-show-breadcrumbs-modal"
-            data-uid="3236399"
-            rel="nofollow"
-            href="#"
+          <a class="js-show-breadcrumbs-modal" data-uid="3236399" rel="nofollow" href="#"
             >г Уссурийск</a
           >
         </li>
         <li class="small js-predictions">
           Выберите
-          <a
-            class="js-show-breadcrumbs-modal"
-            data-type="_street"
-            rel="nofollow"
-            href="#"
-            >улицу</a
-          >
+          <a class="js-show-breadcrumbs-modal" data-type="_street" rel="nofollow" href="#">улицу</a>
         </li>
       </ol>
       <div class="breadcrumb-filter">
@@ -1536,7 +1453,7 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                       yaparam="adv2email-subscribe"
                     >
                       <svg class="icon-default">
-                        <use xlink:href="./img/new-icons.svg#sub"></use>
+                        <use xlink:href="./img/icons.svg#sub"></use>
                       </svg>
                       Подписаться
                     </button>
@@ -1546,12 +1463,9 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
               <div class="form-group">
                 <div class="help-block muted small text-right">
                   Нажимая кнопку «Подписаться», я принимаю условия
-                  <a href="https://olan.ru/offer">Оферты</a> и даю своё согласие
-                  на обработку моих персональных данных на условиях и для целей,
-                  определенных
-                  <a href="https://olan.ru/privacy"
-                    >Политикой конфиденциальности</a
-                  >.
+                  <a href="https://olan.ru/offer">Оферты</a> и даю своё согласие на обработку моих
+                  персональных данных на условиях и для целей, определенных
+                  <a href="https://olan.ru/privacy">Политикой конфиденциальности</a>.
                 </div>
               </div>
             </form>
@@ -1562,24 +1476,18 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
       <div class="ds-tabs">
         <div class="ds-item">
           <div class="ds-question">
-            <h2>
-              🏢 Как посуточно снять квартиру в Уссурийске на сайте Олан ру?
-            </h2>
+            <h2>🏢 Как посуточно снять квартиру в Уссурийске на сайте Олан ру?</h2>
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#arr-down"></use>
+              <use xlink:href="./img/icons.svg#arr-down"></use>
             </svg>
           </div>
           <div class="ds-answer">
             <ul>
+              <li>✓ Ищете объявления посуточная аренда квартир в Уссурийске?</li>
+              <li>✓ В базе Олан ру размещено 529 объявлений квартир в Уссурийске.</li>
               <li>
-                ✓ Ищете объявления посуточная аренда квартир в Уссурийске?
-              </li>
-              <li>
-                ✓ В базе Олан ру размещено 529 объявлений квартир в Уссурийске.
-              </li>
-              <li>
-                ✓ Чтобы посуточная аренда недвижимость, используйте удобную
-                форму поиска, фильтры и быстрые ссылки.
+                ✓ Чтобы посуточная аренда недвижимость, используйте удобную форму поиска, фильтры и
+                быстрые ссылки.
               </li>
             </ul>
           </div>
@@ -1588,7 +1496,7 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
           <div class="ds-question">
             <h2>💸 Сколько стоит посуточно снять квартиру в Уссурийске?</h2>
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#arr-down"></use>
+              <use xlink:href="./img/icons.svg#arr-down"></use>
             </svg>
           </div>
           <div class="ds-answer">
@@ -1614,7 +1522,7 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
           <div class="ds-question">
             <h2>📏 Какая площадь квартир в Уссурийске?</h2>
             <svg class="icon-default">
-              <use xlink:href="./img/new-icons.svg#arr-down"></use>
+              <use xlink:href="./img/icons.svg#arr-down"></use>
             </svg>
           </div>
           <div class="ds-answer">
@@ -1639,9 +1547,7 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                 placeholder="Введите свой отзыв или комментарий здесь..."
                 type="text"
               /><span class="input-group-btn"
-                ><button class="btn btn-primary" type="button">
-                  Оставить отзыв
-                </button></span
+                ><button class="btn btn-primary" type="button">Оставить отзыв</button></span
               >
             </div>
             <div class="row" id="post-review-box" style="display: none">
@@ -1650,12 +1556,12 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                   class="form_ld_comment withoutBootstrapValidator no-default-submit"
                   data-not-disable-submit="true"
                 >
-                  <input
+                  <input type="hidden" name="section_id" id="section_id" value="7015170" /><input
                     type="hidden"
-                    name="section_id"
-                    id="section_id"
-                    value="7015170"
-                  /><input type="hidden" name="rating" id="rating" value="5" />
+                    name="rating"
+                    id="rating"
+                    value="5"
+                  />
                   <div class="form-group">
                     <textarea
                       name="comment"
@@ -1671,16 +1577,10 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                       <span class="text-muted small">Рейтинг</span>
                       <div class="starrr" data-rating="5"></div>
                     </div>
-                    <button
-                      class="btn btn-danger btn-sm"
-                      id="close-review-box"
-                      type="button"
-                    >
+                    <button class="btn btn-danger btn-sm" id="close-review-box" type="button">
                       <span class="glyphicon glyphicon-remove"></span>Отмена
                     </button>
-                    <button class="btn btn-success btn-lg" type="submit">
-                      Сохранить
-                    </button>
+                    <button class="btn btn-success btn-lg" type="submit">Сохранить</button>
                   </div>
                 </form>
               </div>
@@ -1696,25 +1596,19 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
             <div class="footer__inner">
               <div class="footer__left">
                 <div class="footer__copy">© 2007–2024</div>
-                <div class="footer__left-text">
-                  Электронная база недвижимости
-                </div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
               </div>
               <nav class="footer__nav">
                 <div class="footer__nav-column">
                   <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item-title">
-                      Правила и условия
-                    </li>
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
                     <li class="footer__nav-item">
                       <a class="footer__nav-link" href="https://olan.ru/terms"
                         >Условия предоставления услуг</a
                       >
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/offer"
-                        >Оферта</a
-                      >
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
                     </li>
                     <li class="footer__nav-item">
                       <a class="footer__nav-link" href="https://olan.ru/privacy"
@@ -1722,14 +1616,10 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                       >
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/rules"
-                        >Правила</a
-                      >
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
                     </li>
                     <li class="footer__nav-item">
-                      <a
-                        class="footer__nav-link"
-                        href="https://olan.ru/recommendation-technologies"
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
                         >Рекомендательные технологии</a
                       >
                     </li>
@@ -1737,23 +1627,15 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                 </div>
                 <div class="footer__nav-column">
                   <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item-title">
-                      Пользователям
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/xml"
-                        >Пакетная загрузка</a
-                      >
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/tariffs"
-                        >Тарифы</a
-                      >
-                    </li>
-                    <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/payment"
-                        >Способы оплаты</a
-                      >
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
                     </li>
                     <li class="footer__nav-item">
                       <a
@@ -1763,16 +1645,12 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                       >
                     </li>
                     <li class="footer__nav-item">
-                      <a
-                        class="footer__nav-link"
-                        href="https://olan.ru/advertise"
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
                         >Реклама на сайте</a
                       >
                     </li>
                     <li class="footer__nav-item">
-                      <a
-                        class="footer__nav-link"
-                        href="https://olan.ru/deletion"
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
                         >Удаление объявлений</a
                       >
                     </li>
@@ -1780,18 +1658,12 @@ NACx0g0aehOR2ej8gCYIRHuMpLaa77emqtEiacCIzZy+vw==
                 </div>
                 <div class="footer__nav-column">
                   <ul class="footer__nav-list">
-                    <li class="footer__nav-item footer__nav-item-title">
-                      Общая информация
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
                     </li>
                     <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="https://olan.ru/about"
-                        >О проекте</a
-                      >
-                    </li>
-                    <li class="footer__nav-item">
-                      <a class="footer__nav-link" href="/contacts"
-                        >Техподдержка сайта</a
-                      >
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
                     </li>
                   </ul>
                   <div class="footer__social hidden">
