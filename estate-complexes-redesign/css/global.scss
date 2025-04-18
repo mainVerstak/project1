@@ -193,6 +193,10 @@ a {
     color: $color-visited;
     text-decoration: underline;
   }
+  &:visited.not-visited {
+    color: $color-primary;
+    text-decoration: none;
+  }
 }
 
 .text-muted {
@@ -1308,8 +1312,13 @@ a.dropdown-toggle:visited {
 }
 
 // Tariff2
+.tariff2-main {
+  .tariff2-main__balance-btn {
+    max-width: unset;
+    width: unset;
 
-.tariff2-main__balance-btn {
-  max-width: unset;
-  width: unset;
+    &.btn-styled-new2 {
+      height: 44px;
+    }
+  }
 }

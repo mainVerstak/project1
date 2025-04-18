@@ -168,6 +168,10 @@ a:visited {
   color: #c40dd4;
   text-decoration: underline;
 }
+a:visited.not-visited {
+  color: #084c95;
+  text-decoration: none;
+}
 
 .text-muted {
   color: #8c91a6;
@@ -1383,9 +1387,12 @@ a.dropdown-toggle:visited {
   margin-bottom: 8px;
 }
 
-.tariff2-main__balance-btn {
+.tariff2-main .tariff2-main__balance-btn {
   max-width: unset;
   width: unset;
+}
+.tariff2-main .tariff2-main__balance-btn.btn-styled-new2 {
+  height: 44px;
 }
 
 .ds-slider {
@@ -3977,6 +3984,12 @@ header .balance-currency {
   color: #242a3e;
 }
 
+@media (min-width: 768px) {
+  #searchFormModal .search_form_action .btn-group,
+  .searchFormPage .search_form_action .btn-group {
+    margin-left: 1.2px;
+  }
+}
 #searchFormModal .search_form_action .btn-group .dropdown-toggle:hover,
 .searchFormPage .search_form_action .btn-group .dropdown-toggle:hover {
   background-color: #e6eff9;
@@ -4082,6 +4095,9 @@ header .balance-currency {
   #searchFormModal .form-group.offerTypeButtons .btnText,
   #searchFormModal .form-group.categoryButtons .btnText {
     font-size: 14px;
+  }
+  #searchFormModal .modal-body label.btn:only-child {
+    display: flex;
   }
 }
 /* Cards */

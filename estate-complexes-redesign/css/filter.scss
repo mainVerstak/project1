@@ -515,20 +515,27 @@
 
 #searchFormModal,
 .searchFormPage {
-  .search_form_action .btn-group .dropdown-toggle:hover {
-    background-color: $color-secondary;
-    border: 1px solid $color-secondary;
-    color: $color-primary;
-  }
-  .search_form_action .btn-group.open .dropdown-toggle {
-    background-color: $color-secondary;
-    border: 1px solid $color-secondary;
-    color: $color-primary;
-  }
-  .search_form_action .btn-group.open .dropdown-toggle:hover {
-    background-color: $color-secondary;
-    border: 1px solid $color-secondary;
-    color: $color-primary;
+  .search_form_action .btn-group {
+    @media (min-width: 768px) {
+      margin-left: 1.2px;
+    }
+    .dropdown-toggle:hover {
+      background-color: $color-secondary;
+      border: 1px solid $color-secondary;
+      color: $color-primary;
+    }
+    &.open {
+      .dropdown-toggle {
+        background-color: $color-secondary;
+        border: 1px solid $color-secondary;
+        color: $color-primary;
+      }
+      .dropdown-toggle:hover {
+        background-color: $color-secondary;
+        border: 1px solid $color-secondary;
+        color: $color-primary;
+      }
+    }
   }
   .form-group.pull-right.search_buttons {
     display: flex;
@@ -627,5 +634,8 @@
     .form-group.categoryButtons .btnText {
       font-size: 14px;
     }
+  }
+  #searchFormModal .modal-body label.btn:only-child {
+    display: flex;
   }
 }
