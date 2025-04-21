@@ -158,6 +158,17 @@ body {
   fill: currentColor;
 }
 
+.icon-grey {
+  color: $color-grey;
+  transition-duration: 0.1s;
+}
+.active .icon-grey {
+  color: $color-primary;
+}
+label:hover .icon-grey {
+  color: $color-primary;
+}
+
 .well {
   background-color: $color-white;
   box-shadow: none;
@@ -1321,4 +1332,20 @@ a.dropdown-toggle:visited {
       height: 44px;
     }
   }
+}
+
+// Payment
+.payment_form {
+  .cc-selector-2 {
+    display: flex;
+  }
+}
+
+// About
+.about-styled .about-hero__inner {
+  width: 100%;
+}
+
+.help-block {
+  margin-top: 16px;
 }

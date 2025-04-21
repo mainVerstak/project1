@@ -133,6 +133,19 @@ body {
   fill: currentColor;
 }
 
+.icon-grey {
+  color: #8c91a6;
+  transition-duration: 0.1s;
+}
+
+.active .icon-grey {
+  color: #084c95;
+}
+
+label:hover .icon-grey {
+  color: #084c95;
+}
+
 .well {
   background-color: #ffffff;
   box-shadow: none;
@@ -1393,6 +1406,18 @@ a.dropdown-toggle:visited {
 }
 .tariff2-main .tariff2-main__balance-btn.btn-styled-new2 {
   height: 44px;
+}
+
+.payment_form .cc-selector-2 {
+  display: flex;
+}
+
+.about-styled .about-hero__inner {
+  width: 100%;
+}
+
+.help-block {
+  margin-top: 16px;
 }
 
 .ds-slider {
