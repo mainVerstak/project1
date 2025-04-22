@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/_header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-left navbar-nav">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
+                  </svg>
+                  <span> г Ростов-на-Дону, Новое поселение </span>
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#chevron-d"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Новостройки"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#new"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
+                </svg>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
+                </svg>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="loaded sidenav">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <svg class="icon-map-small">
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
+                        </svg>
+                        Москва
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#chevron-d"></use>
+                        </svg>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <svg class="icon-default primary">
+                          <use xlink:href="./img/icons.svg#login"></use>
+                        </svg>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#registration"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="nav-font-color navbar-btn">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#new"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <div class="container container-height-full js-body-container">
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "legalName": "OLAN.RU",
+          "url": "https://olan.ru/",
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+78000000000",
+              "contactType": "Техподдержка сайта"
+            }
+          ],
+          "address": { "@type": "PostalAddress", "addressLocality": "Россия" },
+          "logo": "https://olan.ru/icons/web_hi_res_512.png"
+        }
+      </script>
+      <script>
+        //<![CDATA[
+        require(["application_module"], function () {
+          require(["contacts_css"]);
+        });
+        //]]>
+      </script>
+      <script>
+        //<![CDATA[
+        require(["application_module"], function () {
+          require(["contacts_module"]);
+        });
+        //]]>
+      </script>
+      <h1>Техподдержка сайта</h1>
+      <p class="text-muted small">Для отправки сообщения необходимо заполнить все поля</p>
+      <div class="well contacts-styled">
+        <script>
+          //<![CDATA[
+          require(["application_module"], function () {
+            require(["recaptcha_module"]);
+          });
+          //]]>
+        </script>
+        <form
+          class="form-horizontal form_recaptcha_action withoutBootstrapValidator recaptcha_action fv-form fv-form-bootstrap"
+          data-site-key="6LezGaMUAAAAACkq439JwzYaD6sjiZjCXyYJVWrG"
+          id="new_contact"
+          action="/contacts"
+          accept-charset="UTF-8"
+          method="post"
+          novalidate="novalidate"
+          data-gtm-form-interact-id="0"
+        >
+          <button
+            type="submit"
+            class="fv-hidden-submit"
+            style="display: none; width: 0px; height: 0px"
+          ></button
+          ><input name="utf8" type="hidden" value="✓" /><input
+            type="hidden"
+            name="authenticity_token"
+            value="04A/MSeJ2Lkh+Jr0mgzivnH+I+M0/JBEDnL0toHO1vUGROASKjKh4UUhclEG5aNnGMXDPqNuPjZZsR0H/np6aQ=="
+          />
+          <fieldset>
+            <div class="form-group">
+              <label class="control-label col-sm-2"><i class="fas fa-user"></i> моё имя</label>
+              <div class="col-sm-4">
+                <input
+                  class="form-control focusout_activation_action"
+                  placeholder="моё имя"
+                  autocomplete="off"
+                  type="text"
+                  name="contact[name]"
+                  id="contact_name"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2"><i class="fas fa-at"></i> почта</label>
+              <div class="col-sm-4">
+                <input
+                  class="form-control focusout_activation_action"
+                  placeholder="mail@example.com"
+                  autocomplete="off"
+                  type="text"
+                  name="contact[email]"
+                  id="contact_email"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2"
+                ><i class="fas fa-mobile-alt"></i> телефон</label
+              >
+              <div class="col-sm-4">
+                <input
+                  class="form-control focusout_activation_action"
+                  placeholder="+7(987)6543210"
+                  autocomplete="off"
+                  type="text"
+                  value=""
+                  name="contact[phone]"
+                  id="contact_phone"
+                />
+              </div>
+            </div>
+            <div class="form-group has-feedback has-success">
+              <label class="control-label col-sm-2"
+                ><i class="fas fa-tag"></i> тема сообщения</label
+              >
+              <div class="col-sm-4" id="contacts-dynamic-block">
+                <div class="input-group subject-selector">
+                  <div
+                    class="btn-group bootstrap-select input-group-btn form-control focusout_activation_action"
+                  >
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle btn-default"
+                      data-toggle="dropdown"
+                      data-id="contact_subject"
+                      title="Удаление объявления"
+                      aria-expanded="false"
+                    >
+                      <span class="filter-option pull-left">Удаление объявления</span>&nbsp;<svg
+                        class="icon-default"
+                      >
+                        <use xlink:href="#chevron-d"></use>
+                      </svg>
+                    </button>
+                    <div
+                      class="dropdown-menu open"
+                      style="max-height: 278.75px; overflow: hidden; min-height: 141px"
+                    >
+                      <ul
+                        class="dropdown-menu inner"
+                        role="menu"
+                        style="max-height: 272.75px; overflow-y: auto; min-height: 135px"
+                      >
+                        <li data-original-index="0" class="">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Выберите тему</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="1">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Сообщение об ошибке</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="2">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Модерация объявления</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="3">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Жалоба на объявление</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="4" class="selected">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Удаление объявления</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="5">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Объект размещён без согласия собственника</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="6">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Зачисление или списание средств</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="7">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text"
+                              >Вход на сайт (авторизация, пароль, удаление аккаунта)</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="8">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">XML выгрузка/импорт объявлений из фида</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="9">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Размещение медийной рекламы (баннеров)</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="10">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Предложение сотрудничества</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="11">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">PR/СМИ</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="12">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Запрос от государственных органов</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="13">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Другое</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <select
+                      class="form-control"
+                      autocomplete="off"
+                      name="contact[subject]"
+                      id="contact_subject"
+                      tabindex="-98"
+                      data-fv-field="contact[subject]"
+                      data-gtm-form-interact-field-id="0"
+                    >
+                      <option value="">Выберите тему</option>
+                      <option value="bugreport">Сообщение об ошибке</option>
+                      <option value="adv_moderation">Модерация объявления</option>
+                      <option value="adv_complaint">Жалоба на объявление</option>
+                      <option value="adv_removement">Удаление объявления</option>
+                      <option value="adv_inappropriate">
+                        Объект размещён без согласия собственника
+                      </option>
+                      <option value="funds">Зачисление или списание средств</option>
+                      <option value="account">
+                        Вход на сайт (авторизация, пароль, удаление аккаунта)
+                      </option>
+                      <option value="feed">XML выгрузка/импорт объявлений из фида</option>
+                      <option value="banner">Размещение медийной рекламы (баннеров)</option>
+                      <option value="partnership_proposal">Предложение сотрудничества</option>
+                      <option value="media">PR/СМИ</option>
+                      <option value="government_request">Запрос от государственных органов</option>
+                      <option value="other">Другое</option>
+                    </select>
+                  </div>
+                </div>
+                <i
+                  style=""
+                  class="form-control-feedback fv-bootstrap-icon-input-group fas fa-check"
+                  data-fv-icon-for="contact[subject]"
+                ></i>
+                <div
+                  class="subject-help small"
+                  data-contact-subjects='{ "data": {"bugreport":"Если вы обнаружили любую ошибку в объявлении, то необходимо зайти в расширенную карточку этого объявления и нажать кнопку \"Пожаловаться\".","adv_moderation":null,"adv_complaint":null,"adv_removement":null,"adv_inappropriate":null,"funds":null,"account":"Если ваш аккаунт был заблокирован, то ваша блокировка перманентная и обжалованию не подлежит. При создании нового аккаунта при наличие старого заблокированного аккаунта, новый аккаунт будет заблокирован автоматически.","feed":null,"banner":null,"partnership_proposal":null,"media":null,"government_request":null,"payment_for_calls":null,"payment_for_placement":null,"other":null,"email_reply":null} }'
+                ></div>
+                <small
+                  style="display: none"
+                  class="help-block"
+                  data-fv-validator="notEmpty"
+                  data-fv-for="contact[subject]"
+                  data-fv-result="VALID"
+                  >Пожалуйста, выберите тему сообщения из списка</small
+                >
+              </div>
+            </div>
+            <div class="form-group hidden" id="need_show_advert">
+              <label class="control-label col-sm-2">Ошибка связана с объявлением?</label>
+              <div class="col-sm-4">
+                <div class="input-group subject-selector">
+                  <div class="btn-group bootstrap-select input-group-btn form-control">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle btn-default"
+                      data-toggle="dropdown"
+                      data-id="contact_need_advertisement"
+                      title="Выберите"
+                    >
+                      <span class="filter-option pull-left">Выберите</span>&nbsp;<svg
+                        class="icon-default"
+                      >
+                        <use xlink:href="#chevron-d"></use>
+                      </svg>
+                    </button>
+                    <div class="dropdown-menu open">
+                      <ul class="dropdown-menu inner" role="menu">
+                        <li data-original-index="0" class="selected">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Выберите</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="1">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">да</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="2">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">нет</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <select
+                      class="form-control"
+                      autocomplete="off"
+                      name="contact[need_advertisement]"
+                      id="contact_need_advertisement"
+                      tabindex="-98"
+                    >
+                      <option value="">Выберите</option>
+                      <option value="true">да</option>
+                      <option value="false">нет</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group hidden" id="government_request">
+              <label class="control-label col-sm-2">Тип запроса</label>
+              <div class="col-sm-4">
+                <div class="input-group subject-selector">
+                  <div class="btn-group bootstrap-select input-group-btn form-control">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle btn-default"
+                      data-toggle="dropdown"
+                      data-id="contact_government_request"
+                      title="Выбрать"
+                    >
+                      <span class="filter-option pull-left">Выбрать</span>&nbsp;<svg
+                        class="icon-default"
+                      >
+                        <use xlink:href="#chevron-d"></use>
+                      </svg>
+                    </button>
+                    <div class="dropdown-menu open">
+                      <ul class="dropdown-menu inner" role="menu">
+                        <li data-original-index="0" class="selected">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text">Выбрать</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="1">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text"
+                              >Запрос от правоохранительных органов/адвокатов/судов по объектам
+                              недвижимости</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                        <li data-original-index="2">
+                          <a tabindex="0" class="" style="" data-tokens="null"
+                            ><span class="text"
+                              >Запрос на удаление запрещенной информации от государственных
+                              органов</span
+                            ><span class="glyphicon glyphicon-ok check-mark"></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <select
+                      class="form-control"
+                      autocomplete="off"
+                      name="contact[government_request]"
+                      id="contact_government_request"
+                      tabindex="-98"
+                    >
+                      <option value="">Выбрать</option>
+                      <option value="adv_enforcement_agencies">
+                        Запрос от правоохранительных органов/адвокатов/судов по объектам
+                        недвижимости
+                      </option>
+                      <option value="prohibited">
+                        Запрос на удаление запрещенной информации от государственных органов
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  class="subject-help small"
+                  data-contact-subjects='{ "data": {"adv_enforcement_agencies":"Запрос информации по объектам недвижимости возможен только при наличии подтверждающих документов с печатью. Подтверждающие документы будут обязательно запрошены менеджером сайта olan.ru при обработке обращения. Информация по объектам недвижимости сайта olan.ru предоставляется только документом в цифровом виде с ЭЦП.","prohibited":"Удаление информации возможно только при наличии подтверждающих документов с печатью. Документы будут обязательно запрошены менеджером сайта olan.ru при обработке обращения до удаления запрещенной информации."} }'
+                ></div>
+              </div>
+            </div>
+            <div class="form-group fields-for-contact">
+              <label class="control-label col-sm-2"></label>
+              <div class="col-sm-4 fields-for-contact-child">
+                <div class="fields help-block has-feedback has-error">
+                  <div class="input-group has-feedback has-error">
+                    <input
+                      type="hidden"
+                      name="contact[advertisements_attributes][0][id]"
+                      id="contact_advertisements_attributes_0_id"
+                    /><input
+                      value=""
+                      class="form-control"
+                      placeholder="Ссылка или номер объявления"
+                      autocomplete="off"
+                      type="text"
+                      name="contact[advertisements_attributes][0][url]"
+                      id="contact_advertisements_attributes_0_url"
+                      data-fv-field="contact[advertisements_attributes][0][url]"
+                    /><i
+                      style=""
+                      class="form-control-feedback fv-icon-no-label fas fa-times"
+                      data-fv-icon-for="contact[advertisements_attributes][0][url]"
+                    ></i
+                    ><span class="input-group-btn"
+                      ><input
+                        type="hidden"
+                        value="false"
+                        name="contact[advertisements_attributes][0][_destroy]"
+                        id="contact_advertisements_attributes_0__destroy" /><a
+                        class="btn btn-default remove_nested_fields"
+                        data-association="advertisements"
+                        href="javascript:void(0)"
+                        ><i class="fas fa-minus"></i></a
+                      ><a
+                        data-target=".fields-for-contact-child"
+                        class="btn btn-default add_nested_fields"
+                        data-association="advertisements"
+                        data-blueprint-id="advertisements_fields_blueprint"
+                        href="javascript:void(0)"
+                        ><i class="fas fa-plus"></i></a
+                    ></span>
+                  </div>
+                  <small
+                    style=""
+                    class="help-block"
+                    data-fv-validator="notEmpty"
+                    data-fv-for="contact[advertisements_attributes][0][url]"
+                    data-fv-result="INVALID"
+                    >Пожалуйста, укажите ссылку или номер объявления</small
+                  ><small
+                    style="display: none"
+                    class="help-block"
+                    data-fv-validator="remote"
+                    data-fv-for="contact[advertisements_attributes][0][url]"
+                    data-fv-result="NOT_VALIDATED"
+                    >Пожалуйста, укажите корректную ссылку или номер объявления</small
+                  >
+                </div>
+                <div class="fields">
+                  <div class="input-group">
+                    <input
+                      type="hidden"
+                      name="contact[advertisements_attributes][1][id]"
+                      id="contact_advertisements_attributes_0_advertisements_id"
+                    /><input
+                      value=""
+                      class="form-control focusout_activation_action"
+                      placeholder="Ссылка или номер объявления"
+                      autocomplete="off"
+                      type="text"
+                      name="contact[advertisements_attributes][1][url]"
+                      id="contact_advertisements_attributes_1"
+                    /><span class="input-group-btn"
+                      ><input
+                        type="hidden"
+                        value="false"
+                        name="contact[advertisements_attributes][1][_destroy]"
+                        id="contact_advertisements_attributes_0_advertisements__destroy" /><a
+                        class="btn btn-default remove_nested_fields"
+                        data-association="advertisements"
+                        href="javascript:void(0)"
+                        ><i class="fas fa-minus"></i></a
+                      ><a
+                        data-target=".fields-for-contact-child"
+                        class="btn btn-default add_nested_fields"
+                        data-association="advertisements"
+                        data-blueprint-id="advertisements_fields_blueprint"
+                        href="javascript:void(0)"
+                        ><i class="fas fa-plus"></i></a
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2"><i class="far fa-comment"></i> сообщение</label>
+              <div class="col-sm-4">
+                <textarea
+                  class="form-control focusout_activation_action textarea_loaded"
+                  autocomplete="off"
+                  name="contact[comment]"
+                  id="contact_comment"
+                  style="
+                    overflow: hidden;
+                    overflow-wrap: break-word;
+                    resize: horizontal;
+                    height: 93.6px;
+                  "
+                ></textarea>
+                <div class="help-block small contact-note">
+                  При наличии ссылок на посторонние сайты, запрос в техподдержку сайта olan.ru не
+                  будет обработан
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2"><i class="fab fa-google"></i> каптча</label>
+              <div class="col-sm-4">
+                <div class="f-recaptcha">
+                  <div style="width: 304px; height: 78px">
+                    <div>
+                      <iframe
+                        title="reCAPTCHA"
+                        width="304"
+                        height="78"
+                        role="presentation"
+                        name="a-qjxz4tlnevmi"
+                        frameborder="0"
+                        scrolling="no"
+                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LezGaMUAAAAACkq439JwzYaD6sjiZjCXyYJVWrG&amp;co=aHR0cHM6Ly9kZXYub2xhbi5ydTo0NDM.&amp;hl=ru&amp;v=ItfkQiGBlJCsN5gUMmHbpLEb&amp;size=normal&amp;cb=qtdyschrwmt"
+                      ></iframe>
+                    </div>
+                    <textarea
+                      id="g-recaptcha-response"
+                      name="g-recaptcha-response"
+                      class="g-recaptcha-response"
+                      style="
+                        width: 250px;
+                        height: 40px;
+                        border: 1px solid rgb(193, 193, 193);
+                        margin: 10px 25px;
+                        padding: 0px;
+                        resize: none;
+                        display: none;
+                      "
+                    ></textarea>
+                  </div>
+                  <iframe style="display: none"></iframe>
+                </div>
+                <input
+                  type="hidden"
+                  name="recaptcha_token"
+                  id="recaptcha_token"
+                  class="focusout_activation_action"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-4 col-sm-offset-2">
+                <button
+                  name="button"
+                  type="submit"
+                  class="btn btn-primary btn-lg yaSend button_loading_action"
+                  data-loading-text="Отправка..."
+                >
+                  <i class="fas fa-comment fa-lg"></i> Отправить
+                </button>
+                <div class="help-block small contact-note">
+                  Нажимая кнопку «Отправить», я принимаю условия Предоставления услуг, Оферты и даю
+                  своё согласие на обработку моих персональных данных, в соответствии с Федеральным
+                  законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для
+                  целей, определенных
+                  <a href="https://dev.olan.ru/privacy">Политикой конфиденциальности</a
+                  >.<br /><br />Olan.ru вправе решить уместное обращение с задержкой свыше 72 часов.
+                  Olan.ru вправе не ответить на уместное обращение, но решить его. Olan.ru вправе не
+                  ответить и не решить неуместное обращение.
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div
+            id="advertisements_fields_blueprint"
+            style="display: none"
+            data-blueprint='<div class="fields hidden"><div class="input-group"><input disabled="disabled" type="hidden" name="contact[advertisements_attributes][new_advertisements][id]" id="contact_advertisements_attributes_new_advertisements_id" /><input value="" class="form-control" placeholder="Ссылка или номер объявления" autocomplete="off" disabled="disabled" type="text" name="contact[advertisements_attributes][new_advertisements][url]" id="contact_advertisements_attributes_new_advertisements_url" /><span class="input-group-btn"><input type="hidden" value="false" name="contact[advertisements_attributes][new_advertisements][_destroy]" id="contact_advertisements_attributes_new_advertisements__destroy" /><a class="btn btn-default remove_nested_fields" data-association="advertisements" href="javascript:void(0)"><i class="fas fa-minus"></i></a><a data-target=".fields-for-contact-child" class="btn btn-default add_nested_fields" data-association="advertisements" data-blueprint-id="advertisements_fields_blueprint" href="javascript:void(0)"><i class="fas fa-plus"></i></a></span></div></div>'
+          ></div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

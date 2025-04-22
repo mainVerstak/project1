@@ -169,6 +169,15 @@ label:hover .icon-grey {
   color: $color-primary;
 }
 
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  font-size: 14px;
+}
+
 .well {
   background-color: $color-white;
   box-shadow: none;
@@ -430,7 +439,7 @@ a {
 }
 
 // Inputs
-.form-control {
+.form-control:not(.bootstrap-select) {
   display: flex;
   gap: 10px;
   height: 44px;
@@ -516,7 +525,8 @@ a {
 }
 
 .has-error {
-  .form-control {
+  .form-control:not(.bootstrap-select),
+  .bootstrap-select .dropdown-toggle {
     border: 1px solid $color-invalid;
 
     box-shadow: none;
@@ -549,7 +559,8 @@ a {
 }
 
 .has-success {
-  .form-control {
+  .form-control:not(.bootstrap-select),
+  .bootstrap-select .dropdown-toggle {
     border: 1px solid $color-valid;
 
     box-shadow: none;
@@ -630,6 +641,12 @@ textarea.form-control {
   }
 }
 
+.input-group-addon,
+.input-group-btn {
+  display: flex;
+  width: unset;
+}
+
 // Margin
 .mt-3 {
   margin-top: 1rem !important; // 16px
@@ -653,8 +670,11 @@ textarea.form-control {
   -webkit-box-shadow: none;
   text-shadow: none;
 
-  span.bold {
-    font-weight: 700;
+  span {
+    font-size: 14px;
+    &.bold {
+      font-weight: 700;
+    }
   }
 }
 
@@ -1043,7 +1063,8 @@ a.dropdown-toggle:visited {
     align-items: center;
     justify-content: flex-start;
 
-    > div {
+    > div,
+    div.item {
       color: $color-dark;
       background-color: $color-surface;
       border-radius: 3px;
@@ -1348,4 +1369,20 @@ a.dropdown-toggle:visited {
 
 .help-block {
   margin-top: 16px;
+}
+
+// New User
+#new_user {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+// Support
+#new_contact {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .control-label {
+    white-space: nowrap;
+  }
 }
