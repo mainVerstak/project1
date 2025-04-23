@@ -178,6 +178,17 @@ label:hover .icon-grey {
   font-size: 14px;
 }
 
+.modal {
+  .fa,
+  .fas,
+  .far,
+  .fal,
+  .fad,
+  .fab {
+    font-size: inherit;
+  }
+}
+
 .well {
   background-color: $color-white;
   box-shadow: none;
@@ -437,6 +448,10 @@ a {
     color: $color-white;
   }
 }
+header .dropdown.nav .dropdown-menu.sub-menu .badge {
+  top: 15px;
+  right: 15px;
+}
 
 // Inputs
 .form-control:not(.bootstrap-select) {
@@ -639,12 +654,6 @@ textarea.form-control {
   .btn-info:active:hover {
     background-color: $color-blue-hover;
   }
-}
-
-.input-group-addon,
-.input-group-btn {
-  display: flex;
-  width: unset;
 }
 
 // Margin
@@ -1330,7 +1339,7 @@ a.dropdown-toggle:visited {
 
 // alert
 .alert {
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 // User-edit
@@ -1367,14 +1376,39 @@ a.dropdown-toggle:visited {
   width: 100%;
 }
 
-.help-block {
-  margin-top: 16px;
-}
-
 // New User
 #new_user {
   max-width: 500px;
   margin: 0 auto;
+}
+
+// Edit user
+#edit_user {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .fields .input-group {
+    display: flex;
+  }
+
+  .form-control-static {
+    width: 100%;
+    justify-content: space-between;
+
+    label {
+      margin: 0;
+    }
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+
+  .checkbox .col-sm-4.col-sm-offset-2 {
+    width: 100%;
+  }
 }
 
 // Support
@@ -1382,7 +1416,68 @@ a.dropdown-toggle:visited {
   max-width: 500px;
   margin: 0 auto;
 
+  .input-group-addon,
+  .input-group-btn {
+    display: flex;
+  }
+}
+
+.contacts-styled {
   .control-label {
     white-space: nowrap;
   }
+
+  .input-group,
+  .btn-group {
+    min-height: 44px;
+    display: flex;
+  }
+
+  .contacts-dynamic-block {
+    .subject-selector {
+      height: 44px;
+    }
+  }
+
+  .contact-note {
+    margin-top: 16px;
+  }
+
+  .form-control-feedback.fv-icon-no-label {
+    display: none;
+  }
+}
+
+// favorite
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:visited {
+  background-color: $color-primary;
+  color: $color-white;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nav-pills > li > a,
+.nav-pills > li > a:visited {
+  color: $color-primary;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+// tables
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  vertical-align: middle;
 }

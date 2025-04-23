@@ -155,6 +155,15 @@ label:hover .icon-grey {
   font-size: 14px;
 }
 
+.modal .fa,
+.modal .fas,
+.modal .far,
+.modal .fal,
+.modal .fad,
+.modal .fab {
+  font-size: inherit;
+}
+
 .well {
   background-color: #ffffff;
   box-shadow: none;
@@ -432,6 +441,11 @@ a:visited.not-visited {
   color: #ffffff;
 }
 
+header .dropdown.nav .dropdown-menu.sub-menu .badge {
+  top: 15px;
+  right: 15px;
+}
+
 .form-control:not(.bootstrap-select) {
   display: flex;
   gap: 10px;
@@ -597,12 +611,6 @@ textarea.form-control {
 }
 .btn-phone-floating .btn-info:active:hover {
   background-color: #07386c;
-}
-
-.input-group-addon,
-.input-group-btn {
-  display: flex;
-  width: unset;
 }
 
 .mt-3 {
@@ -1419,7 +1427,7 @@ a.dropdown-toggle:visited {
 }
 
 .alert {
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .edit_user .col-sm-offset-2 {
@@ -1445,21 +1453,91 @@ a.dropdown-toggle:visited {
   width: 100%;
 }
 
-.help-block {
-  margin-top: 16px;
-}
-
 #new_user {
   max-width: 500px;
   margin: 0 auto;
+}
+
+#edit_user {
+  max-width: 500px;
+  margin: 0 auto;
+}
+#edit_user .fields .input-group {
+  display: flex;
+}
+#edit_user .form-control-static {
+  width: 100%;
+  justify-content: space-between;
+}
+#edit_user .form-control-static label {
+  margin: 0;
+}
+#edit_user input[type=radio],
+#edit_user input[type=checkbox] {
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+#edit_user .checkbox .col-sm-4.col-sm-offset-2 {
+  width: 100%;
 }
 
 #new_contact {
   max-width: 500px;
   margin: 0 auto;
 }
-#new_contact .control-label {
+#new_contact .input-group-addon,
+#new_contact .input-group-btn {
+  display: flex;
+}
+
+.contacts-styled .control-label {
   white-space: nowrap;
+}
+.contacts-styled .input-group,
+.contacts-styled .btn-group {
+  min-height: 44px;
+  display: flex;
+}
+.contacts-styled .contacts-dynamic-block .subject-selector {
+  height: 44px;
+}
+.contacts-styled .contact-note {
+  margin-top: 16px;
+}
+.contacts-styled .form-control-feedback.fv-icon-no-label {
+  display: none;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:visited {
+  background-color: #084c95;
+  color: #ffffff;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nav-pills > li > a,
+.nav-pills > li > a:visited {
+  color: #084c95;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  vertical-align: middle;
 }
 
 .ds-slider {
@@ -3003,6 +3081,10 @@ header a:hover {
 header .header-city-btn:hover {
   color: #333333;
 }
+header .dropdown.nav a .dropdown-menu.sub-menu .badge {
+  top: 15px;
+  right: 15px;
+}
 header .dropdown.nav a .badge {
   background-color: #084c95;
   color: #ffffff;
@@ -3108,6 +3190,7 @@ header .dropdown.nav.open .dropdown-menu.sub-menu li a {
   border-radius: 5px;
   height: 44px;
   font-weight: 700;
+  position: relative;
 }
 header .dropdown.nav .dropdown-menu.sub-menu li a:disabled,
 header .dropdown.nav.open .dropdown-menu.sub-menu li a:disabled {

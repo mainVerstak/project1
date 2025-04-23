@@ -290,6 +290,10 @@ header {
   }
 
   .dropdown.nav a {
+    .dropdown-menu.sub-menu .badge {
+      top: 15px;
+      right: 15px;
+    }
     .badge {
       background-color: $color-primary;
       color: $color-white;
@@ -409,6 +413,7 @@ header {
     border-radius: $border-radius;
     height: 44px;
     font-weight: 700;
+    position: relative;
 
     &:disabled {
       color: $color-disabled;
