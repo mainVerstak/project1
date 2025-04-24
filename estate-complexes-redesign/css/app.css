@@ -173,6 +173,9 @@ label:hover .icon-grey {
   border-radius: 5px;
   border: none;
 }
+.well.well-bg-grey {
+  background-color: #f6f7f9;
+}
 
 .well-sm {
   border-radius: 5px;

@@ -197,6 +197,10 @@ label:hover .icon-grey {
   background-repeat: unset;
   border-radius: $border-radius;
   border: none;
+
+  &.well-bg-grey {
+    background-color: $color-surface;
+  }
 }
 
 .well-sm {
