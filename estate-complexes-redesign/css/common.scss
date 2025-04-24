@@ -74,6 +74,10 @@ h3 {
   display: none !important;
 }
 
+.form-horizontal .fields-for-contact .has-feedback .form-control-feedback {
+  display: none !important;
+}
+
 .form-horizontal #reg-phones .fa-sync-alt,
 .form-horizontal #reg-phones .form-control-feedback,
 .form-horizontal #agent-phones .fa-sync-alt,
@@ -719,7 +723,7 @@ a.btn-default:visited {
   display: inline-block;
   width: 140px;
   height: 80px;
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 
 .bank_card_yoo_kassa {

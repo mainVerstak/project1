@@ -268,6 +268,17 @@ a {
     outline: 2px solid $color-dark;
     z-index: 3;
   }
+
+  &.width-fit-content {
+    width: fit-content !important;
+  }
+}
+
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group,
+.btn-group-vertical > .btn-group > .btn {
+  display: flex;
+  justify-content: center;
 }
 
 .btn-default {
@@ -608,7 +619,7 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 textarea.form-control {
-  padding: 13px 15px;
+  padding: 13px 15px !important;
 }
 
 .btn-phone-floating {
@@ -1381,6 +1392,21 @@ a.dropdown-toggle:visited {
   max-width: 500px;
   margin: 0 auto;
 }
+.signup-box {
+  max-width: 500px;
+  margin: 0 auto;
+  border: none;
+  background: transparent;
+
+  .signup-box__item_border {
+    border: none;
+    padding: 0px 30px 20px;
+  }
+
+  .signup-box__row .signup-box__label {
+    padding-top: 12px;
+  }
+}
 
 // Edit user
 #edit_user {
@@ -1419,6 +1445,7 @@ a.dropdown-toggle:visited {
   .input-group-addon,
   .input-group-btn {
     display: flex;
+    width: unset;
   }
 }
 
@@ -1479,5 +1506,17 @@ a.dropdown-toggle:visited {
 .table > tbody > tr > td,
 .table > tfoot > tr > th,
 .table > tfoot > tr > td {
-  vertical-align: middle;
+  // vertical-align: middle;
+}
+
+// Form Adv
+.adv-form {
+  .col-lg-offset-2 {
+    margin-left: 0;
+  }
+  .save-button-advertisement {
+    .help-block {
+      margin-top: 16px;
+    }
+  }
 }

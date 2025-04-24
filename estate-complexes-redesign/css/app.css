@@ -238,6 +238,16 @@ a:visited.not-visited {
   outline: 2px solid #242a3e;
   z-index: 3;
 }
+.btn.width-fit-content {
+  width: fit-content !important;
+}
+
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group,
+.btn-group-vertical > .btn-group > .btn {
+  display: flex;
+  justify-content: center;
+}
 
 .btn-default {
   color: #242a3e;
@@ -569,7 +579,7 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 textarea.form-control {
-  padding: 13px 15px;
+  padding: 13px 15px !important;
 }
 
 .btn-phone-floating .icon-default {
@@ -1458,6 +1468,20 @@ a.dropdown-toggle:visited {
   margin: 0 auto;
 }
 
+.signup-box {
+  max-width: 500px;
+  margin: 0 auto;
+  border: none;
+  background: transparent;
+}
+.signup-box .signup-box__item_border {
+  border: none;
+  padding: 0px 30px 20px;
+}
+.signup-box .signup-box__row .signup-box__label {
+  padding-top: 12px;
+}
+
 #edit_user {
   max-width: 500px;
   margin: 0 auto;
@@ -1488,6 +1512,7 @@ a.dropdown-toggle:visited {
 #new_contact .input-group-addon,
 #new_contact .input-group-btn {
   display: flex;
+  width: unset;
 }
 
 .contacts-styled .control-label {
@@ -1531,13 +1556,11 @@ a.dropdown-toggle:visited {
   gap: 4px;
 }
 
-.table > thead > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > th,
-.table > tbody > tr > td,
-.table > tfoot > tr > th,
-.table > tfoot > tr > td {
-  vertical-align: middle;
+.adv-form .col-lg-offset-2 {
+  margin-left: 0;
+}
+.adv-form .save-button-advertisement .help-block {
+  margin-top: 16px;
 }
 
 .ds-slider {
@@ -4689,6 +4712,8 @@ header .balance-currency {
     padding: 17px;
     padding-left: 0;
     width: unset;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (max-width: 992px) {
@@ -4727,7 +4752,7 @@ header .balance-currency {
     align-items: start;
   }
   .object .object__owner .phone-container {
-    width: calc(100% - 17px);
+    width: calc(100% - 25px);
   }
   .object .object__owner-name {
     margin-bottom: 15px;
@@ -4783,6 +4808,8 @@ header .balance-currency {
     right: 20px;
     position: absolute;
     top: auto;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 .map_panel .map_panel_head .to_filters_btn {

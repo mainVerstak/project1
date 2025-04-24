@@ -480,6 +480,8 @@
       padding: 17px;
       padding-left: 0;
       width: unset;
+      display: flex;
+      flex-direction: column;
     }
   }
   @media (max-width: 992px) {
@@ -519,7 +521,7 @@
       align-items: start;
 
       .phone-container {
-        width: calc(100% - 17px);
+        width: calc(100% - 25px);
       }
     }
     .object__owner-name {
@@ -577,6 +579,8 @@
     right: 20px;
     position: absolute;
     top: auto;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
