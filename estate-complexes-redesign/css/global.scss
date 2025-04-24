@@ -1416,6 +1416,11 @@ a.dropdown-toggle:visited {
   .fields .input-group {
     display: flex;
   }
+  .input-group-addon,
+  .input-group-btn {
+    display: flex;
+    width: unset;
+  }
 
   .form-control-static {
     width: 100%;

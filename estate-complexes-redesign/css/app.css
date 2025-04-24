@@ -1489,6 +1489,11 @@ a.dropdown-toggle:visited {
 #edit_user .fields .input-group {
   display: flex;
 }
+#edit_user .input-group-addon,
+#edit_user .input-group-btn {
+  display: flex;
+  width: unset;
+}
 #edit_user .form-control-static {
   width: 100%;
   justify-content: space-between;
