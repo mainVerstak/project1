@@ -65,6 +65,11 @@ body {
   background-color: #f6f7f9;
 }
 
+.d-flex {
+  display: flex;
+  gap: 8px;
+}
+
 .col-sm-offset-2,
 .col-sm-offset-3 {
   margin-left: 0;
@@ -752,15 +757,15 @@ a.dropdown-toggle:visited {
 .dropdown-multiselect-menu.sub-menu li a,
 .dropdown-multiselect-menu.sub-menu li a,
 .dropdown-multiselect-menu li label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
   color: #242a3e;
   border-radius: 5px;
-  height: 44px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 1px;
+  display: block;
+  padding: 12px;
+  min-height: 44px;
+  height: unset;
 }
 .selectize-dropdown .selectize-dropdown-content .option:visited,
 .selectize-dropdown li a:visited, .selectize-dropdown.open li a:visited, .selectize-dropdown.sub-menu li a:visited, .selectize-dropdown.sub-menu li a:visited,
@@ -879,6 +884,13 @@ a.dropdown-toggle:visited {
   color: #084c95;
   background-color: #e6eff9;
   background-image: none;
+}
+
+.selectize-dropdown-content .option {
+  display: block;
+  padding: 12px;
+  min-height: 44px;
+  height: unset;
 }
 
 .open > .dropdown-multiselect-menu {
@@ -1026,6 +1038,9 @@ a.dropdown-toggle:visited {
 .breadcrumb li a:focus:hover {
   color: #084c95;
   background-color: #e6eff9;
+}
+.breadcrumb li a.btn {
+  display: inline-flex;
 }
 
 .breadcrumb-filter {
@@ -1445,6 +1460,7 @@ a.dropdown-toggle:visited {
 
 .edit_user .col-sm-offset-2 {
   margin-left: 0;
+  padding: 0;
 }
 .edit_user .role-selector-validation label:not(:last-child) {
   margin-bottom: 8px;
@@ -1470,12 +1486,38 @@ a.dropdown-toggle:visited {
   max-width: 500px;
   margin: 0 auto;
 }
+#new_user .form-group {
+  margin-bottom: 8px;
+}
+#new_user .help-block {
+  margin-top: 12px;
+}
 
 .signup-box {
   max-width: 500px;
   margin: 0 auto;
   border: none;
   background: transparent;
+}
+.signup-box .col-sm-offset-1 {
+  margin-left: 0;
+}
+.signup-box .signup-steps__inner {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.signup-box .has-success .control-label {
+  color: inherit;
+}
+.signup-box .form-control-feedback {
+  display: none;
+}
+.signup-box .signup-box__input,
+.signup-box .signup-box__inputs {
+  max-width: unset;
+}
+.signup-box .signup-box__btn {
+  width: 100%;
 }
 .signup-box .signup-box__item_border {
   border: none;
@@ -1485,31 +1527,41 @@ a.dropdown-toggle:visited {
   padding-top: 12px;
 }
 
-#edit_user {
+#edit_user,
+#edit_admin_user {
   max-width: 500px;
   margin: 0 auto;
 }
-#edit_user .fields .input-group {
+#edit_user .fields .input-group,
+#edit_admin_user .fields .input-group {
   display: flex;
+  width: 100%;
 }
 #edit_user .input-group-addon,
-#edit_user .input-group-btn {
+#edit_user .input-group-btn,
+#edit_admin_user .input-group-addon,
+#edit_admin_user .input-group-btn {
   display: flex;
   width: unset;
 }
-#edit_user .form-control-static {
+#edit_user .form-control-static,
+#edit_admin_user .form-control-static {
   width: 100%;
   justify-content: space-between;
 }
-#edit_user .form-control-static label {
+#edit_user .form-control-static label,
+#edit_admin_user .form-control-static label {
   margin: 0;
 }
 #edit_user input[type=radio],
-#edit_user input[type=checkbox] {
+#edit_user input[type=checkbox],
+#edit_admin_user input[type=radio],
+#edit_admin_user input[type=checkbox] {
   margin-top: 3px;
   margin-bottom: 0;
 }
-#edit_user .checkbox .col-sm-4.col-sm-offset-2 {
+#edit_user .checkbox .col-sm-4.col-sm-offset-2,
+#edit_admin_user .checkbox .col-sm-4.col-sm-offset-2 {
   width: 100%;
 }
 
@@ -1520,9 +1572,18 @@ a.dropdown-toggle:visited {
 #new_contact .input-group-addon,
 #new_contact .input-group-btn {
   display: flex;
+}
+#new_contact .fields .input-group-addon,
+#new_contact .fields .input-group-btn {
+  display: flex;
   width: unset;
 }
 
+@media (max-width: 767px) {
+  .contacts-styled.well {
+    padding: 0;
+  }
+}
 .contacts-styled .control-label {
   white-space: nowrap;
 }
@@ -1569,6 +1630,21 @@ a.dropdown-toggle:visited {
 }
 .adv-form .save-button-advertisement .help-block {
   margin-top: 16px;
+}
+
+.fieldset-inline {
+  display: flex;
+  gap: 4px;
+}
+
+#admin_ld_comment_form {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+}
+#admin_ld_comment_form .form-group {
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .ds-slider {
@@ -3982,14 +4058,14 @@ header .balance-currency {
   .searchFormPage .well,
   .searchFormPage.well {
     background-color: #084c95;
-    padding: 7.5px 10px;
+    padding: 0px 10px;
   }
   .shortSearchForm.text-center.link {
     color: #ffffff;
     text-align: start;
     padding-left: 5px;
     display: flex;
-    height: 29px;
+    height: 44px;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
@@ -4420,6 +4496,11 @@ header .balance-currency {
 .object .object__meta {
   padding: 17px 20px !important;
   border-left: 1px solid #ffffff;
+}
+@media (max-width: 767px) {
+  .object .object__meta {
+    padding: 0 17px 15px !important;
+  }
 }
 .object .object__actions {
   margin-top: 10px;
@@ -5765,6 +5846,16 @@ header .balance-currency {
   margin-top: 2px;
 }
 
+.modal .modal-dialog .modal-content .modal-body .subscribe-block {
+  margin-top: 0;
+}
+.modal .modal-dialog .modal-content .modal-body .subscribe-block .well {
+  margin-bottom: 0;
+}
+.modal .modal-dialog .modal-content .modal-body .help-block.text-right {
+  display: unset;
+}
+
 /* Review-box */
 .review-box .well {
   background-color: #ffffff;
@@ -5987,6 +6078,7 @@ footer {
     margin-bottom: 16px;
   }
 }
+.form-vertical .form-group,
 .form-horizontal .form-group {
   display: flex;
   flex-direction: column;
@@ -5994,6 +6086,7 @@ footer {
   margin-left: 0;
   margin-right: 0;
 }
+.form-vertical .form-group .control-label,
 .form-horizontal .form-group .control-label {
   text-align: left;
   font-size: 14px;
@@ -6002,31 +6095,49 @@ footer {
   margin-bottom: 8px;
   padding: 0;
 }
+.form-vertical .form-group .control-label label,
 .form-horizontal .form-group .control-label label {
   font-weight: 400;
 }
-.form-horizontal .form-group > div {
-  width: 100%;
-  padding: 0;
-}
+.form-vertical .form-group.has-error .control-label,
 .form-horizontal .form-group.has-error .control-label {
   color: #8c91a6;
 }
+.form-vertical .form-group.has-error .help-block,
 .form-horizontal .form-group.has-error .help-block {
   color: #f55c3d;
 }
+.form-vertical .form-group.has-error .form-control-feedback,
 .form-horizontal .form-group.has-error .form-control-feedback {
   color: #f55c3d;
   top: 4px;
   opacity: 0;
 }
+.form-vertical .form-group.has-success .control-label,
 .form-horizontal .form-group.has-success .control-label {
   color: #8c91a6;
 }
+.form-vertical .form-group.has-success .form-control-feedback,
 .form-horizontal .form-group.has-success .form-control-feedback {
   color: #acf256;
   top: 4px;
   opacity: 0;
+}
+
+.form-vertical .form-group > div {
+  width: 100%;
+  padding: 0;
+}
+
+.form-horizontal .form-group {
+  flex-direction: row;
+  gap: 8px;
+}
+.form-horizontal .form-group::before {
+  display: none;
+}
+.form-horizontal .form-group > div {
+  padding: 0;
 }
 
 .bootstrap-select > .dropdown-toggle {

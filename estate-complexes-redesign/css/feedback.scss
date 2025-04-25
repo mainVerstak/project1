@@ -77,6 +77,20 @@
   }
 }
 
+// Modal Subscribe
+.modal .modal-dialog .modal-content .modal-body {
+  .subscribe-block {
+    margin-top: 0;
+
+    .well {
+      margin-bottom: 0;
+    }
+  }
+  .help-block.text-right {
+    display: unset;
+  }
+}
+
 /* Review-box */
 .review-box {
   .well {

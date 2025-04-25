@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/_header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-left navbar-nav">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
+                  </svg>
+                  <span> г Ростов-на-Дону, Новое поселение </span>
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#chevron-d"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Новостройки"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#new"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
+                </svg>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
+                </svg>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="loaded sidenav">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <svg class="icon-map-small">
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
+                        </svg>
+                        Москва
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#chevron-d"></use>
+                        </svg>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <svg class="icon-default primary">
+                          <use xlink:href="./img/icons.svg#login"></use>
+                        </svg>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#registration"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="nav-font-color navbar-btn">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#new"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <div class="container container-height-full js-body-container">
+      <h1>Настройки учетной записи</h1>
+      <div class="well">
+        <form
+          class="edit_admin_user fv-form fv-form-bootstrap"
+          id="edit_admin_user"
+          action="/admin/users/106621211"
+          accept-charset="UTF-8"
+          method="post"
+          novalidate="novalidate"
+        >
+          <button
+            type="submit"
+            class="fv-hidden-submit"
+            style="display: none; width: 0px; height: 0px"
+          ></button
+          ><input name="utf8" type="hidden" value="✓" /><input
+            type="hidden"
+            name="_method"
+            value="patch"
+          /><input
+            type="hidden"
+            name="authenticity_token"
+            value="LauXlZklsQbO57ZSLbbAzF2EpwptE7NRnm/rZcx0gcKEwKxWhRXGYI9t/ITgopi9MieboBoPU7eZHYP0qxZgMA=="
+          />
+          <div class="form form-horizontal" role="form">
+            <fieldset>
+              <script>
+                //<![CDATA[
+                require(["application_module"], function () {
+                  require(["phones_module"]);
+                });
+                //]]>
+              </script>
+              <script>
+                //<![CDATA[
+                require(["application_module"], function () {
+                  require(["validation_module"]);
+                });
+                //]]>
+              </script>
+              <script>
+                //<![CDATA[
+                require(["application_module"], function () {
+                  require(["user_module"]);
+                });
+                //]]>
+              </script>
+              <div class="form-group role-selector-validation has-feedback">
+                <label class="control-label col-sm-2" for="radios"></label>
+                <div class="col-sm-6">
+                  <label class="radio-inline" for="advertisement_user_attributes_role_owner"
+                    ><input
+                      required="required"
+                      id="advertisement_user_attributes_role_owner"
+                      type="radio"
+                      value="owner"
+                      checked="checked"
+                      name="admin_user[role]"
+                      data-fv-field="admin_user[role]"
+                    /><svg class="icon-owner"><use xlink:href="#object-owner"></use></svg>
+                    собственник</label
+                  ><br /><label class="radio-inline" for="advertisement_user_attributes_role_agent"
+                    ><input
+                      required="required"
+                      id="advertisement_user_attributes_role_agent"
+                      type="radio"
+                      value="agent"
+                      name="admin_user[role]"
+                      data-fv-field="admin_user[role]"
+                    /><svg class="icon-owner"><use xlink:href="#object-agent"></use></svg>
+                    агент</label
+                  ><br /><label class="radio-inline" for="advertisement_user_attributes_role_agency"
+                    ><input
+                      required="required"
+                      id="advertisement_user_attributes_role_agency"
+                      type="radio"
+                      value="agency"
+                      name="admin_user[role]"
+                      data-fv-field="admin_user[role]"
+                    /><svg class="icon-owner"><use xlink:href="#object-agency"></use></svg>
+                    агентство</label
+                  ><br /><label
+                    class="radio-inline"
+                    for="advertisement_user_attributes_role_partner"
+                    ><input
+                      required="required"
+                      id="advertisement_user_attributes_role_partner"
+                      type="radio"
+                      value="partner"
+                      name="admin_user[role]"
+                      data-fv-field="admin_user[role]"
+                    /><svg class="icon-owner"><use xlink:href="#location"></use></svg>
+                    партнер</label
+                  ><br /><label
+                    class="radio-inline"
+                    for="advertisement_user_attributes_role_developer"
+                    ><input
+                      required="required"
+                      id="advertisement_user_attributes_role_developer"
+                      type="radio"
+                      value="developer"
+                      name="admin_user[role]"
+                      data-fv-field="admin_user[role]"
+                    /><i
+                      style="display: none"
+                      class="form-control-feedback"
+                      data-fv-icon-for="admin_user[role]"
+                    ></i
+                    ><svg class="icon-owner"><use xlink:href="#object-developer"></use></svg>
+                    застройщик</label
+                  ><br /><small
+                    style="display: none"
+                    class="help-block"
+                    data-fv-validator="notEmpty"
+                    data-fv-for="admin_user[role]"
+                    data-fv-result="NOT_VALIDATED"
+                    >Пожалуйста, введите значение</small
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="textinput"
+                  ><i class="fas fa-user"></i> имя пользователя</label
+                >
+                <div class="col-sm-4">
+                  <input
+                    autofocus="autofocus"
+                    class="form-control"
+                    placeholder="Имя пользователя"
+                    autocomplete="off"
+                    type="text"
+                    value=""
+                    name="admin_user[name]"
+                    id="admin_user_name"
+                  />
+                </div>
+              </div>
+              <div class="form-group has-feedback has-success">
+                <label class="control-label col-sm-2" for="reg-phones"
+                  ><i class="fas fa-mobile-alt"></i> телефон</label
+                >
+                <div class="col-sm-4" id="admin-phones">
+                  <div class="fields help-block has-feedback has-success">
+                    <div class="input-group">
+                      <input
+                        class="form-control phone-input mask-phone"
+                        placeholder="+7 ___ ___ __ __"
+                        data-user_id="106621211"
+                        autocomplete="off"
+                        type="text"
+                        value="8 908 011 25 40"
+                        name="admin_user[phones_attributes][0][original]"
+                        id="admin_user_phones_attributes_0_original"
+                        data-fv-field="admin_user[phones_attributes][0][original]"
+                      /><i
+                        style=""
+                        class="form-control-feedback fv-icon-no-label fas fa-check"
+                        data-fv-icon-for="admin_user[phones_attributes][0][original]"
+                      ></i
+                      ><span class="input-group-btn"
+                        ><input
+                          type="hidden"
+                          value="false"
+                          name="admin_user[phones_attributes][0][_destroy]"
+                          id="admin_user_phones_attributes_0__destroy" /><a
+                          class="btn btn-default dell-phone-number remove_nested_fields hidden"
+                          data-association="phones"
+                          href="javascript:void(0)"
+                          ><i class="fas fa-minus"></i></a
+                        ><a
+                          data-target="#admin-phones"
+                          class="btn btn-default add-phone-number add_nested_fields"
+                          data-association="phones"
+                          data-blueprint-id="phones_fields_blueprint"
+                          href="javascript:void(0)"
+                          ><i class="fas fa-plus"></i></a
+                      ></span>
+                    </div>
+                    <input
+                      type="hidden"
+                      value="57320181"
+                      name="admin_user[phones_attributes][0][id]"
+                      id="admin_user_phones_attributes_0_id"
+                    /><small
+                      style="display: none"
+                      class="help-block"
+                      data-fv-validator="phone"
+                      data-fv-for="admin_user[phones_attributes][0][original]"
+                      data-fv-result="VALID"
+                      >Пожалуйста, введите телефон с кодом города/сети</small
+                    ><small
+                      style="display: none"
+                      class="help-block"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="admin_user[phones_attributes][0][original]"
+                      data-fv-result="VALID"
+                      >Пожалуйста, введите телефон</small
+                    ><small
+                      style="display: none"
+                      class="help-block"
+                      data-fv-validator="remote"
+                      data-fv-for="admin_user[phones_attributes][0][original]"
+                      data-fv-result="VALID"
+                      >Такой телефон уже зарегистрирован.</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-2"><i class="fas fa-at"></i> почта</label>
+                <div class="col-sm-4">
+                  <input
+                    class="form-control"
+                    placeholder="mail@example.com"
+                    type="text"
+                    autocomplete="off"
+                    data-is_auth="true"
+                    name="admin_user[email]"
+                    id="admin_user_email"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <div class="input-group">
+                    <button name="button" type="submit" class="btn btn-primary btn-lg">
+                      <i class="far fa-save fa-lg"></i> Сохранить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div
+            id="phones_fields_blueprint"
+            style="display: none"
+            data-blueprint='<div class="fields"><div class="input-group"><input class="form-control phone-input mask-phone" placeholder="+7 ___ ___ __ __" data-user_id="106621211" autocomplete="off" type="text" name="admin_user[phones_attributes][new_phones][original]" id="admin_user_phones_attributes_new_phones_original" /><span class="input-group-btn"><input type="hidden" value="false" name="admin_user[phones_attributes][new_phones][_destroy]" id="admin_user_phones_attributes_new_phones__destroy" /><a class="btn btn-default dell-phone-number  remove_nested_fields" data-association="phones" href="javascript:void(0)"><i class="fas fa-minus"></i></a><a data-target="#admin-phones" class="btn btn-default add-phone-number add_nested_fields" data-association="phones" data-blueprint-id="phones_fields_blueprint" href="javascript:void(0)"><i class="fas fa-plus"></i></a></span></div></div>'
+          ></div>
+        </form>
+      </div>
+      <div class="phone-target-field" value="admin_user[phones_attributes]"></div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

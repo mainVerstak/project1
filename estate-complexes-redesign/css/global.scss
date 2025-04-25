@@ -96,6 +96,11 @@ body {
   background-color: $color-surface;
 }
 
+.d-flex {
+  display: flex;
+  gap: 8px;
+}
+
 // change Botstarp styles
 .col-sm-offset-2,
 .col-sm-offset-3 {
@@ -792,15 +797,18 @@ a.dropdown-toggle:visited {
   &.sub-menu li a,
   &.sub-menu li a,
   li label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    // display: flex;
+    // align-items: center;
+    // gap: 5px;
     color: $color-dark;
     border-radius: $border-radius;
-    height: 44px;
     font-weight: 700;
     margin: 0;
     margin-bottom: 1px;
+    display: block;
+    padding: 12px;
+    min-height: 44px;
+    height: unset;
 
     &:visited {
       color: $color-dark;
@@ -848,6 +856,13 @@ a.dropdown-toggle:visited {
       background-image: none;
     }
   }
+}
+
+.selectize-dropdown-content .option {
+  display: block;
+  padding: 12px;
+  min-height: 44px;
+  height: unset;
 }
 
 .open > .dropdown-multiselect-menu {
@@ -1008,6 +1023,10 @@ a.dropdown-toggle:visited {
           color: $color-primary;
           background-color: $color-secondary;
         }
+      }
+
+      &.btn {
+        display: inline-flex;
       }
     }
   }
@@ -1361,6 +1380,7 @@ a.dropdown-toggle:visited {
 .edit_user {
   .col-sm-offset-2 {
     margin-left: 0;
+    padding: 0;
   }
   .role-selector-validation label:not(:last-child) {
     margin-bottom: 8px;
@@ -1395,12 +1415,45 @@ a.dropdown-toggle:visited {
 #new_user {
   max-width: 500px;
   margin: 0 auto;
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+  .help-block {
+    margin-top: 12px;
+  }
 }
 .signup-box {
   max-width: 500px;
   margin: 0 auto;
   border: none;
   background: transparent;
+
+  .col-sm-offset-1 {
+    margin-left: 0;
+  }
+
+  .signup-steps__inner {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .has-success .control-label {
+    color: inherit;
+  }
+
+  .form-control-feedback {
+    display: none;
+  }
+
+  .signup-box__input,
+  .signup-box__inputs {
+    max-width: unset;
+  }
+
+  .signup-box__btn {
+    width: 100%;
+  }
 
   .signup-box__item_border {
     border: none;
@@ -1413,12 +1466,14 @@ a.dropdown-toggle:visited {
 }
 
 // Edit user
-#edit_user {
+#edit_user,
+#edit_admin_user {
   max-width: 500px;
   margin: 0 auto;
 
   .fields .input-group {
     display: flex;
+    width: 100%;
   }
   .input-group-addon,
   .input-group-btn {
@@ -1454,11 +1509,23 @@ a.dropdown-toggle:visited {
   .input-group-addon,
   .input-group-btn {
     display: flex;
-    width: unset;
+  }
+
+  .fields {
+    .input-group-addon,
+    .input-group-btn {
+      display: flex;
+      width: unset;
+    }
   }
 }
 
 .contacts-styled {
+  &.well {
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
   .control-label {
     white-space: nowrap;
   }
@@ -1527,5 +1594,23 @@ a.dropdown-toggle:visited {
     .help-block {
       margin-top: 16px;
     }
+  }
+}
+
+//advertisement_changes
+.fieldset-inline {
+  display: flex;
+  gap: 4px;
+}
+
+// admin_ld_comment_form
+#admin_ld_comment_form {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 0;
   }
 }
