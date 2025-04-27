@@ -211,6 +211,18 @@ a:visited.not-visited {
   color: #084c95;
   text-decoration: none;
 }
+a.doted {
+  text-decoration: none;
+}
+a.doted:hover {
+  text-decoration: none;
+}
+a.doted:focus {
+  text-decoration: none;
+}
+a.doted:active {
+  text-decoration: none;
+}
 
 .text-muted {
   color: #8c91a6;
@@ -590,6 +602,12 @@ textarea.form-control {
   padding: 13px 15px !important;
 }
 
+.input-group-addon {
+  background-color: #ffffff;
+  border-color: #e6eff9;
+  color: #242a3e;
+}
+
 .btn-phone-floating .icon-default {
   width: 14px;
   height: 14px;
@@ -931,6 +949,7 @@ a.dropdown-toggle:visited {
 }
 .modal-footer {
   display: flex;
+  justify-content: flex-end;
 }
 
 .form-fast-search-locations-modal .selectize-input {
@@ -1020,7 +1039,7 @@ a.dropdown-toggle:visited {
 .breadcrumb li a {
   height: 24px;
   line-height: 1;
-  color: #8c91a6;
+  color: #084c95;
   padding: 3px 5px;
   border-radius: 3px;
   text-decoration: none;
@@ -1032,8 +1051,11 @@ a.dropdown-toggle:visited {
   background-color: #e6eff9;
 }
 .breadcrumb li a:focus {
-  color: #8c91a6;
-  outline: 2px solid #8c91a6;
+  color: #084c95;
+  background-color: #e6eff9;
+  outline: 2px solid #242a3e;
+  position: relative;
+  z-index: 5;
 }
 .breadcrumb li a:focus:hover {
   color: #084c95;
@@ -1175,7 +1197,7 @@ a.dropdown-toggle:visited {
   padding-bottom: 0;
 }
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active {
-  color: #8c91a6;
+  color: #084c95;
 }
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn {
   font-size: 14px;
@@ -1196,7 +1218,7 @@ a.dropdown-toggle:visited {
   border-radius: 5px 0 0 5px !important;
 }
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:nth-child(2):not(:first-child):not(:last-child) {
-  border-radius: 5px 0 0 5px !important;
+  border-radius: 0;
 }
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:last-child:not(:only-child) {
   border-radius: 0 5px 5px 0 !important;
@@ -1402,7 +1424,7 @@ a.dropdown-toggle:visited {
 .animated-radios-and-checkboxes .checkbox .cr .cr-icon,
 .animated-radios-and-checkboxes .radio .cr .cr-icon {
   top: 12%;
-  left: 12%;
+  left: 14%;
 }
 
 .modal-body {
@@ -1459,12 +1481,33 @@ a.dropdown-toggle:visited {
   margin-top: 0;
 }
 
-.edit_user .col-sm-offset-2 {
+.edit_user .col-sm-2,
+.edit_admin_user .col-sm-2 {
+  width: unset;
+}
+.edit_user .col-sm-offset-2,
+.edit_admin_user .col-sm-offset-2 {
   margin-left: 0;
   padding: 0;
 }
-.edit_user .role-selector-validation label:not(:last-child) {
+.edit_user .role-selector-validation label:not(:last-child),
+.edit_admin_user .role-selector-validation label:not(:last-child) {
   margin-bottom: 8px;
+}
+.edit_user .animated-radios-and-checkboxes .checkbox,
+.edit_user .animated-radios-and-checkboxes .radio,
+.edit_admin_user .animated-radios-and-checkboxes .checkbox,
+.edit_admin_user .animated-radios-and-checkboxes .radio {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.edit_user .animated-radios-and-checkboxes .checkbox label,
+.edit_user .animated-radios-and-checkboxes .radio label,
+.edit_admin_user .animated-radios-and-checkboxes .checkbox label,
+.edit_admin_user .animated-radios-and-checkboxes .radio label {
+  height: unset;
+  padding: 0;
+  font-weight: unset;
 }
 
 .tariff2-main .tariff2-main__balance-btn {
@@ -1691,6 +1734,41 @@ a.dropdown-toggle:visited {
 }
 .call-audio-player .btn.btn-sm i {
   font-size: 14px;
+}
+
+.remove_user {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-hotel__btn {
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  background-image: none;
+  font-family: inherit;
+  background-color: #084c95;
+  border-color: #084c95;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 700;
+}
+.search-hotel__btn:hover {
+  background-image: none;
+  background-color: #2167b4;
+  border-color: #2167b4;
+}
+.search-hotel__btn:focus {
+  background-image: none;
+  background-color: #2167b4;
+  border-color: #2167b4;
+  outline: 2px solid #242a3e;
+}
+.search-hotel__btn:active {
+  background-image: none;
+  background-color: #2167b4;
+  border-color: #2167b4;
 }
 
 .ds-slider {
@@ -5762,8 +5840,8 @@ header .balance-currency {
   margin: 0;
 }
 .ds-tabs .ds-answer {
-  padding-left: 10px;
-  margin-top: 20px;
+  padding-left: 0;
+  margin-top: 12px;
   display: none;
 }
 .ds-tabs .ds-answer ul {

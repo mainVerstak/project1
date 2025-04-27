@@ -237,6 +237,20 @@ a {
     color: $color-primary;
     text-decoration: none;
   }
+
+  &.doted {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
 }
 
 .text-muted {
@@ -631,6 +645,12 @@ textarea.form-control {
   padding: 13px 15px !important;
 }
 
+.input-group-addon {
+  background-color: $color-white;
+  border-color: $color-secondary;
+  color: $color-dark;
+}
+
 .btn-phone-floating {
   .icon-default {
     width: 14px;
@@ -908,6 +928,7 @@ a.dropdown-toggle:visited {
 
 .modal-footer {
   display: flex;
+  justify-content: flex-end;
 }
 
 .form-fast-search-locations-modal {
@@ -1004,7 +1025,7 @@ a.dropdown-toggle:visited {
     a {
       height: 24px;
       line-height: 1;
-      color: $color-grey;
+      color: $color-primary;
       padding: $padding-btn-small-sm;
       border-radius: $border-radius-sm;
       text-decoration: none;
@@ -1016,8 +1037,11 @@ a.dropdown-toggle:visited {
         background-color: $color-secondary;
       }
       &:focus {
-        color: $color-grey;
-        outline: 2px solid $color-grey;
+        color: $color-primary;
+        background-color: $color-secondary;
+        outline: 2px solid $color-dark;
+        position: relative;
+        z-index: 5;
 
         &:hover {
           color: $color-primary;
@@ -1160,7 +1184,7 @@ a.dropdown-toggle:visited {
       padding-bottom: 0;
       .breadcrumb {
         .active {
-          color: $color-grey;
+          color: $color-primary;
           &.buttons {
             .btn {
               font-size: 14px;
@@ -1184,7 +1208,8 @@ a.dropdown-toggle:visited {
               }
               // Второй элемент
               &:nth-child(2):not(:first-child):not(:last-child) {
-                border-radius: $border-radius 0 0 $border-radius !important;
+                // border-radius: $border-radius 0 0 $border-radius !important;
+                border-radius: 0;
               }
               // Последний элемент
               &:last-child:not(:only-child) {
@@ -1308,7 +1333,7 @@ a.dropdown-toggle:visited {
 
       .cr-icon {
         top: 12%;
-        left: 12%;
+        left: 14%;
       }
     }
   }
@@ -1378,13 +1403,31 @@ a.dropdown-toggle:visited {
 }
 
 // User-edit
-.edit_user {
+.edit_user,
+.edit_admin_user {
+  .col-sm-2 {
+    width: unset;
+  }
   .col-sm-offset-2 {
     margin-left: 0;
     padding: 0;
   }
   .role-selector-validation label:not(:last-child) {
     margin-bottom: 8px;
+  }
+
+  .animated-radios-and-checkboxes {
+    .checkbox,
+    .radio {
+      margin-bottom: 0;
+      margin-top: 0;
+
+      label {
+        height: unset;
+        padding: 0;
+        font-weight: unset;
+      }
+    }
   }
 }
 
@@ -1674,5 +1717,43 @@ a.dropdown-toggle:visited {
   }
   .btn.btn-sm i {
     font-size: 14px;
+  }
+}
+
+.remove_user {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+// search-hotel
+.search-hotel__btn {
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  background-image: none;
+
+  font-family: inherit;
+  background-color: $color-primary;
+  border-color: $color-primary;
+  color: $color-white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 700;
+
+  &:hover {
+    background-image: none;
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
+  }
+  &:focus {
+    background-image: none;
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
+    outline: 2px solid $color-dark;
+  }
+  &:active {
+    background-image: none;
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
   }
 }
