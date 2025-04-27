@@ -1157,6 +1157,7 @@ a.dropdown-toggle:visited {
 
     .modal-header {
       border-bottom: none;
+      padding-bottom: 0;
       .breadcrumb {
         .active {
           color: $color-grey;
@@ -1437,6 +1438,17 @@ a.dropdown-toggle:visited {
     max-width: 400px;
     margin: 0 auto;
   }
+  .signup-steps__item {
+    color: $color-primary;
+
+    &.current {
+      color: $color-dark;
+    }
+  }
+
+  .signup-steps__item.current ~ .signup-steps__item {
+    color: $color-grey;
+  }
 
   .has-success .control-label {
     color: inherit;
@@ -1451,13 +1463,43 @@ a.dropdown-toggle:visited {
     max-width: unset;
   }
 
+  .signup-box__inputs .list-unstyled .signup-box__role {
+    margin-bottom: 8px;
+  }
+
   .signup-box__btn {
     width: 100%;
   }
 
+  .signup-box__item,
   .signup-box__item_border {
     border: none;
     padding: 0px 30px 20px;
+  }
+
+  .form-control-feedback {
+    top: 5px;
+  }
+
+  .has-feedback.has-error {
+    .control-label,
+    .signup-box__label {
+      color: $color-dark;
+    }
+
+    .form-control-feedback.fas.fa-times {
+      display: none !important;
+    }
+  }
+
+  .has-feedback.has-success {
+    .control-label,
+    .signup-box__label {
+      color: $color-dark;
+    }
+    .form-control-feedback.fas.fa-check {
+      display: none !important;
+    }
   }
 
   .signup-box__row .signup-box__label {
@@ -1585,6 +1627,13 @@ a.dropdown-toggle:visited {
   // vertical-align: middle;
 }
 
+.table-tbody-elements-middle {
+  > tbody > tr > td,
+  > tbody > tr > th {
+    vertical-align: middle;
+  }
+}
+
 // Form Adv
 .adv-form {
   .col-lg-offset-2 {
@@ -1612,5 +1661,18 @@ a.dropdown-toggle:visited {
   .form-group {
     width: 100%;
     margin-bottom: 0;
+  }
+}
+
+// Call audio player
+.call-audio-player {
+  .input-group-addon {
+    border-radius: 5px 0px 0px 5px !important;
+  }
+  .input-group-btn.actions {
+    display: flex;
+  }
+  .btn.btn-sm i {
+    font-size: 14px;
   }
 }

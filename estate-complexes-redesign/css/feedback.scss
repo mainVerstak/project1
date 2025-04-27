@@ -1,7 +1,7 @@
 /* Subscribe */
 .subscribe-block {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 0;
 
   .well {
     padding: 15px;
@@ -81,6 +81,7 @@
 .modal .modal-dialog .modal-content .modal-body {
   .subscribe-block {
     margin-top: 0;
+    margin-bottom: 0;
 
     .well {
       margin-bottom: 0;
@@ -88,6 +89,21 @@
   }
   .help-block.text-right {
     display: unset;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+form.subscribed {
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }
 
