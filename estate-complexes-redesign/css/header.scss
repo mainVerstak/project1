@@ -307,6 +307,11 @@ header {
       &:hover {
         background-color: $color-primary;
       }
+
+      @media (max-width: 767px) {
+        top: 15px;
+        right: 15px;
+      }
     }
     &:hover,
     &:focus {

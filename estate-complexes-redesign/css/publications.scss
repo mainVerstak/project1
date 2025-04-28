@@ -1,426 +1,12 @@
-// from global.scss
-$color-blue: #084c95;
-$color-blue-hover: #07386c;
-$color-blue-light: #23527c;
-$color-blue-superlight: #337ab7;
-$color-cyan: #4db9db;
-$color-cyan-bg: #e3f1fb;
-$color-red: #d9534f;
-$color-yellow: #eda33b;
-$color-yellow-hover: #d39235;
-$color-yellow-bg: #fdfdda;
-$color-green: #53ae53;
-$color-grey-dark: #333333;
-$color-grey-old: #7a7a7a;
-$color-grey-text: #777777;
-$color-grey-superlight: #f5f5f5;
-$color-grey-background: #eeeeee;
-$color-border: #e6e6e6;
-$color-white: #ffffff;
+.publications {
+  .object__show-phone {
+    background-color: $color-white;
+    color: $color-dark !important;
+    border-color: $color-secondary;
 
-$border-radius-sm: 3px;
-$border-radius: 5px;
-$border-radius-big: 10px;
-$padding-btn-small: 6px 10px;
-$padding-btn-small-sm: 3px 5px;
-$padding-btn-big: 15px;
-
-$color-primary: #084c95;
-$color-primary-hover: #2167b4;
-$color-attention-surface: #fbf5ef;
-$color-invalid: #f55c3d;
-$color-valid: #acf256;
-$color-dark: #242a3e;
-$color-grey: #8c91a6;
-$color-secondary: #e6eff9;
-$color-surface: #f6f7f9;
-$color-white: #ffffff;
-$color-disabled: #c4cdd9;
-$color-visited: #c40dd4;
-
-.publications__announcing {
-  .object {
-    background-color: $color-grey-superlight;
-    border-radius: 10px;
-    padding: 5px 0;
-    margin-top: 5px;
-  }
-
-  .object.object_marked {
-    background-color: $color-yellow-bg;
-    box-shadow: none;
-  }
-  .object.object_rise {
-    background-color: $color-cyan-bg;
-    box-shadow: none;
-  }
-
-  .object {
-    a {
-      color: $color-blue;
-    }
-    a:hover {
-      color: $color-blue-hover;
-    }
-    a:visited {
-      color: $color-blue-hover;
-    }
-    .object__gallery-link {
-      color: $color-white;
-    }
-    .object__gallery-link:hover {
-      color: $color-white;
-    }
-    .object__gallery-link:visited {
-      color: $color-white;
-    }
-    // Buttons
-    .btn {
-      text-shadow: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      vertical-align: bottom;
-      border-radius: $border-radius;
-      padding: $padding-btn-small;
-      font-weight: 500;
-      line-height: 1.314;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      height: 32px !important;
-    }
-
-    .btn-info {
+    &:hover {
       background-color: $color-white;
-      border-radius: $border-radius;
-      border-color: $color-border;
-      background-image: none;
-      text-shadow: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-    .btn-info:hover {
-      background-color: $color-white;
-      border: 1px solid $color-border;
-    }
-    .btn-info:focus {
-      background-color: $color-white;
-      border: 1px solid $color-border;
-    }
-    .btn-info:active {
-      background-color: $color-white;
-      border: 1px solid $color-border;
-    }
-    .btn-info:active:hover {
-      background-color: $color-white;
-      border: 1px solid $color-border;
-    }
-
-    .btn-xs {
-      padding: $padding-btn-small;
-      font-size: 14px;
-      height: 32px !important;
-      line-height: 1.42857143;
-    }
-
-    .object__show-phone {
-      color: $color-grey-text !important;
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      height: 34px !important;
-      width: fit-content;
-    }
-    .object__show-phone:visited {
-      color: $color-grey-text !important;
-    }
-
-    .object__gallery,
-    .object__gallery-item {
-      border-radius: 5px;
-    }
-
-    .object__data {
-      padding: 10px 0;
-    }
-
-    .object__meta {
-      padding: 10px 0;
-    }
-
-    .object__actions {
-      margin-top: 10px;
-      position: absolute;
-      right: -10px;
-      bottom: 18px;
-      width: auto;
-    }
-
-    .header_adv_short {
-      font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 5px;
-      color: $color-grey-dark;
-    }
-
-    .header_adv_short:hover {
-      color: $color-grey-dark;
-    }
-
-    .header_adv_short:visited {
-      color: $color-grey-dark;
-    }
-
-    .object__lead {
-      font-size: 28px;
-      font-weight: 700;
-      color: $color-grey-dark;
-      margin-bottom: 5px;
-    }
-
-    .text-location {
-      font-weight: 500;
-      margin-bottom: 5px;
-    }
-
-    .text-location svg {
-      position: relative;
-      top: 2px;
-    }
-
-    .text-muted.object__text-trim.object__text-comment.tooltip_comment_action.tooltip_comment_loaded {
-      font-size: 14px;
-      color: $color-grey-text;
-      font-weight: 400;
-    }
-
-    .object__status {
-      display: flex;
-      align-items: center;
-      color: $color-grey-text;
-      gap: 10px;
-      margin: 0;
-      flex-wrap: wrap;
-      padding: 5px 0;
-    }
-
-    .object__date {
-      margin: 0;
-    }
-
-    .object__status {
-      .label {
-        font-size: 14px;
-        color: $color-white;
-        padding: 6px 10px;
-        border-radius: 5px;
-        font-weight: 500;
-        width: auto;
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-      }
-      .label.label-danger {
-        background-color: $color-red;
-      }
-      .label.label-default {
-        background-color: $color-grey;
-      }
-      .label.label-info {
-        background-color: $color-blue;
-      }
-    }
-
-    .object__owner-name {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .col-xs-1,
-    .col-sm-1,
-    .col-md-1,
-    .col-lg-1,
-    .col-xs-2,
-    .col-sm-2,
-    .col-md-2,
-    .col-lg-2,
-    .col-xs-3,
-    .col-sm-3,
-    .col-md-3,
-    .col-lg-3,
-    .col-xs-4,
-    .col-sm-4,
-    .col-md-4,
-    .col-lg-4,
-    .col-xs-5,
-    .col-sm-5,
-    .col-md-5,
-    .col-lg-5,
-    .col-xs-6,
-    .col-sm-6,
-    .col-md-6,
-    .col-lg-6,
-    .col-xs-7,
-    .col-sm-7,
-    .col-md-7,
-    .col-lg-7,
-    .col-xs-8,
-    .col-sm-8,
-    .col-md-8,
-    .col-lg-8,
-    .col-xs-9,
-    .col-sm-9,
-    .col-md-9,
-    .col-lg-9,
-    .col-xs-10,
-    .col-sm-10,
-    .col-md-10,
-    .col-lg-10,
-    .col-xs-11,
-    .col-sm-11,
-    .col-md-11,
-    .col-lg-11,
-    .col-xs-12,
-    .col-sm-12,
-    .col-md-12,
-    .col-lg-12 {
-      position: relative;
-      min-height: 1px;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-    @media (max-width: 1200px) {
-      .col-xs-1,
-      .col-sm-1,
-      .col-md-1,
-      .col-lg-1,
-      .col-xs-2,
-      .col-sm-2,
-      .col-md-2,
-      .col-lg-2,
-      .col-xs-3,
-      .col-sm-3,
-      .col-md-3,
-      .col-lg-3,
-      .col-xs-4,
-      .col-sm-4,
-      .col-md-4,
-      .col-lg-4,
-      .col-xs-5,
-      .col-sm-5,
-      .col-md-5,
-      .col-lg-5,
-      .col-xs-6,
-      .col-sm-6,
-      .col-md-6,
-      .col-lg-6,
-      .col-xs-7,
-      .col-sm-7,
-      .col-md-7,
-      .col-lg-7,
-      .col-xs-8,
-      .col-sm-8,
-      .col-md-8,
-      .col-lg-8,
-      .col-xs-9,
-      .col-sm-9,
-      .col-md-9,
-      .col-lg-9,
-      .col-xs-10,
-      .col-sm-10,
-      .col-md-10,
-      .col-lg-10,
-      .col-xs-11,
-      .col-sm-11,
-      .col-md-11,
-      .col-lg-11,
-      .col-xs-12,
-      .col-sm-12,
-      .col-md-12,
-      .col-lg-12 {
-        position: relative;
-        min-height: 1px;
-        padding-top: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-    }
-
-    .notepad_action .object__actions-item svg {
-      stroke: currentColor;
-      fill: none;
-    }
-
-    .object__actions-item.active svg {
-      fill: currentColor;
-    }
-
-    .object__actions-item {
-      color: $color-grey-text;
-    }
-    .object__actions-item svg {
-      width: 17px;
-      height: 17px;
-    }
-    .object__actions-item:hover svg {
-      color: $color-grey-dark;
-    }
-
-    .object__owner {
-      margin-bottom: 0 !important;
-    }
-
-    @media (max-width: 1024px) {
-      .object__actions {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        margin: 0;
-        padding: 0;
-        width: unset;
-      }
-    }
-    @media (max-width: 992px) {
-      .object__data {
-        width: 65%;
-      }
-      .object__actions {
-        margin: 0;
-        padding: 0;
-        width: unset;
-      }
-    }
-    @media (max-width: 768px) {
-      .object__actions {
-        top: unset;
-        bottom: 15px;
-      }
-      .object__data {
-        width: unset;
-      }
-      .object__show-phone {
-        height: 36px !important;
-      }
-      .object__owner {
-        margin: 0;
-      }
-    }
-    @media (min-width: 1024px) {
-      .object__actions {
-        right: -15px !important;
-        padding-top: 5px;
-      }
-    }
-    @media (min-width: 768px) {
-      .header_adv_short {
-        margin-top: 5px;
-      }
-      .object__owner-name {
-        margin-top: 5px;
-      }
+      border-color: $color-secondary;
     }
   }
 }
@@ -532,9 +118,9 @@ $color-visited: #c40dd4;
   max-width: 350px;
   width: 100%;
   height: 48px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#75bcd8), to(#58a9cc));
-  background: linear-gradient(180deg, #75bcd8 0%, #58a9cc 100%);
-  border: 1px solid #2fa3c7;
+  background: none;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
   border-radius: 6px;
   padding: 11px 16px 13px;
   font-family: inherit;
@@ -549,25 +135,27 @@ $color-visited: #c40dd4;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  color: $color-white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+
+  &:hover {
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
+    color: $color-white;
+    background-image: none;
+  }
+  &:active {
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
+    color: $color-white;
+    background-image: none;
+  }
 }
 
 .publications__btn-icon {
   margin-right: 10px;
   font-size: 20px;
-}
-
-.publications__btn:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#31aacf), to(#31aacf));
-  background: linear-gradient(180deg, #31aacf 0%, #31aacf 100%);
-}
-
-.publications__btn:active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#29a2c7), to(#29a2c7));
-  background: linear-gradient(180deg, #29a2c7 0%, #29a2c7 100%);
 }
 
 .publications__btn-value::before,
@@ -600,9 +188,9 @@ $color-visited: #c40dd4;
 
 .publication-item__input:active ~ .publication-item__content,
 .publication-item__input:hover ~ .publication-item__content {
-  -webkit-box-shadow: inset 0 0 0 1px #337ab7;
-  box-shadow: inset 0 0 0 1px #337ab7;
-  border: 1px solid #337ab7;
+  // -webkit-box-shadow: inset 0 0 0 1px #337ab7;
+  // box-shadow: inset 0 0 0 1px #337ab7;
+  border: 1px solid $color-primary;
   transition: all 0.2s ease;
 }
 
@@ -615,16 +203,16 @@ $color-visited: #c40dd4;
 }
 
 .publication-item__input:checked ~ .publication-item__content {
-  -webkit-box-shadow: inset 0 0 0 2px #337ab7;
-  box-shadow: inset 0 0 0 2px #337ab7;
-  border: 2px solid #337ab7;
+  // -webkit-box-shadow: inset 0 0 0 2px #337ab7;
+  // box-shadow: inset 0 0 0 2px #337ab7;
+  border: 2px solid $color-primary;
   transition: all 0.2s ease;
 }
 
 .publication-item__input:active ~ .publication-item__content {
-  -webkit-box-shadow: inset 0 0 0 1px #cccdcc;
-  box-shadow: inset 0 0 0 1px #cccdcc;
-  border: 2px solid #337ab7;
+  // -webkit-box-shadow: inset 0 0 0 1px #cccdcc;
+  // box-shadow: inset 0 0 0 1px #cccdcc;
+  border: 2px solid $color-primary;
   transition: all 0.2s ease;
 }
 
@@ -655,7 +243,7 @@ $color-visited: #c40dd4;
 
 .publication-item__checkmark::after {
   content: "";
-  background: #337ab7;
+  background: $color-primary;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -679,8 +267,8 @@ $color-visited: #c40dd4;
   position: relative;
   padding: 15px 25px 15px 63px;
   background: none;
-  -webkit-box-shadow: inset 0 0 0 1px #cacedb;
-  box-shadow: inset 0 0 0 1px #cacedb;
+  // -webkit-box-shadow: inset 0 0 0 1px #cacedb;
+  // box-shadow: inset 0 0 0 1px #cacedb;
   border-radius: 2px;
   font-family: inherit;
   font-weight: normal;
@@ -883,11 +471,11 @@ $color-visited: #c40dd4;
 .publication-card__btn {
   width: auto;
   height: 40px;
-  background: #333c67;
+  background: $color-primary;
   border: none;
   border-radius: 6px;
   padding: 10px 24px;
-  font-family: Helvetica Neue;
+  font-family: inherit;
   font-weight: bold;
   font-size: 16px;
   letter-spacing: -0.004em;
@@ -900,7 +488,7 @@ $color-visited: #c40dd4;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
+  color: $color-white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }

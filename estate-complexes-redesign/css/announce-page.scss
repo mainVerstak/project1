@@ -1,3 +1,7 @@
+.label-info {
+  background-color: $color-primary;
+}
+
 .extendedEntity {
   .apartment-top-container a,
   .main-breadcrumbs.breadcrumb a {
@@ -324,7 +328,7 @@
   }
 
   .label-info {
-    background-color: $color-blue;
+    background-color: $color-primary;
   }
 
   // Breadcrumbs

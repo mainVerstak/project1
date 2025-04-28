@@ -206,6 +206,13 @@ label:hover .icon-grey {
   &.well-bg-grey {
     background-color: $color-surface;
   }
+  &.well-no-padding {
+    padding: 0;
+  }
+  &.well-no-padding-x {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .well-sm {
@@ -488,7 +495,7 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 // Inputs
-.form-control:not(.bootstrap-select) {
+.form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown) {
   display: flex;
   gap: 10px;
   height: 44px;
@@ -574,7 +581,7 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 .has-error {
-  .form-control:not(.bootstrap-select),
+  .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown),
   .bootstrap-select .dropdown-toggle {
     border: 1px solid $color-invalid;
 
@@ -608,7 +615,7 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 .has-success {
-  .form-control:not(.bootstrap-select),
+  .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown),
   .bootstrap-select .dropdown-toggle {
     border: 1px solid $color-valid;
 
@@ -649,6 +656,17 @@ textarea.form-control {
   background-color: $color-white;
   border-color: $color-secondary;
   color: $color-dark;
+}
+
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .btn-phone-floating {
@@ -929,6 +947,16 @@ a.dropdown-toggle:visited {
 .modal-footer {
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 767px) {
+    a:not(:only-child),
+    button:not(:only-child) {
+      width: 100%;
+    }
+  }
+  &:has(#location_list) {
+    justify-content: flex-start;
+  }
 }
 
 .form-fast-search-locations-modal {
@@ -1026,7 +1054,7 @@ a.dropdown-toggle:visited {
       height: 24px;
       line-height: 1;
       color: $color-primary;
-      padding: $padding-btn-small-sm;
+      padding: 3px 1px;
       border-radius: $border-radius-sm;
       text-decoration: none;
       transition-duration: 0.1s;
@@ -1110,6 +1138,7 @@ a.dropdown-toggle:visited {
 // Selectize
 .selectize-control,
 .selectize-control.multi {
+  height: 44px !important;
   &.plugin-remove_button [data-value] .remove {
     display: flex;
     align-items: center;
@@ -1448,6 +1477,12 @@ a.dropdown-toggle:visited {
   .cc-selector-2 {
     display: flex;
   }
+
+  .show_more_payment_methods_action {
+    .fas.fa-level-down-alt {
+      padding-top: 0 !important;
+    }
+  }
 }
 
 // About
@@ -1570,8 +1605,26 @@ a.dropdown-toggle:visited {
     width: 100%;
     justify-content: space-between;
 
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary-hover;
+      border-color: $color-primary-hover;
+    }
+
     label {
       margin: 0;
+    }
+
+    a {
+      color: $color-secondary;
+
+      &:hover {
+        color: $color-secondary;
+        text-decoration: underline;
+      }
     }
   }
 
@@ -1648,6 +1701,13 @@ a.dropdown-toggle:visited {
   align-items: center;
   justify-content: center;
   gap: 4px;
+  border: 1px solid $color-primary;
+
+  &:hover {
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
+    color: $color-white;
+  }
 }
 
 .nav-pills > li > a,
@@ -1658,6 +1718,13 @@ a.dropdown-toggle:visited {
   align-items: center;
   justify-content: center;
   gap: 4px;
+  // border-radius: $border-radius;
+  border: 1px solid $color-secondary;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
 }
 
 // tables
@@ -1755,5 +1822,51 @@ a.dropdown-toggle:visited {
     background-image: none;
     background-color: $color-primary-hover;
     border-color: $color-primary-hover;
+  }
+}
+
+.form-group.direction-row {
+  flex-direction: row !important;
+
+  label {
+    min-width: 80px;
+  }
+}
+
+// Tariff rules
+#tariff_rule_search {
+  &.well {
+    background-color: $color-surface;
+  }
+}
+.add-tariff-rule {
+  margin-bottom: 16px;
+}
+
+.nav-tabs {
+  border-color: $color-secondary;
+  li a {
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-primary;
+      border-color: $color-secondary;
+    }
+    &:visited {
+      color: $color-primary;
+    }
+  }
+  li.active a {
+    color: $color-primary;
+    border-color: $color-secondary;
+    border-bottom-color: transparent;
+    font-weight: 700;
+
+    &:hover {
+      color: $color-dark;
+      border-color: $color-secondary;
+      border-bottom-color: transparent;
+    }
   }
 }
