@@ -1870,3 +1870,10 @@ a.dropdown-toggle:visited {
     }
   }
 }
+
+// Invoice
+.invoice-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

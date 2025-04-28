@@ -1878,6 +1878,12 @@ a.dropdown-toggle:visited {
   border-bottom-color: transparent;
 }
 
+.invoice-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .ds-slider {
   position: relative;
 }
