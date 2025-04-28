@@ -752,3 +752,26 @@
     }
   }
 }
+
+.object:has(+ .overflow-hidden) {
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid $color-white;
+}
+
+.object + .overflow-hidden {
+  border-radius: 0 0 5px 5px;
+  background-color: $color-surface;
+  padding: 8px 0;
+
+  .text-muted {
+    margin-top: 0;
+  }
+
+  .form-group {
+    margin: 0;
+
+    div {
+      border-right: 1px solid $color-white;
+    }
+  }
+}

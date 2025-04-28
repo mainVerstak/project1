@@ -5288,6 +5288,26 @@ header .balance-currency {
   border-color: transparent;
 }
 
+.object:has(+ .overflow-hidden) {
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.object + .overflow-hidden {
+  border-radius: 0 0 5px 5px;
+  background-color: #f6f7f9;
+  padding: 8px 0;
+}
+.object + .overflow-hidden .text-muted {
+  margin-top: 0;
+}
+.object + .overflow-hidden .form-group {
+  margin: 0;
+}
+.object + .overflow-hidden .form-group div {
+  border-right: 1px solid #ffffff;
+}
+
 .label-info {
   background-color: #084c95;
 }
