@@ -1884,6 +1884,14 @@ a.dropdown-toggle:visited {
   gap: 8px;
 }
 
+.label-info {
+  background-color: #084c95;
+}
+
+.label-danger {
+  background-color: #f55c3d;
+}
+
 .ds-slider {
   position: relative;
 }
@@ -5312,10 +5320,6 @@ header .balance-currency {
 }
 .object + .overflow-hidden .form-group div {
   border-right: 1px solid #ffffff;
-}
-
-.label-info {
-  background-color: #084c95;
 }
 
 .extendedEntity {
