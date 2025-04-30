@@ -1877,3 +1877,11 @@ a.dropdown-toggle:visited {
   align-items: center;
   gap: 8px;
 }
+
+// Labels
+.label-info {
+  background-color: $color-primary;
+}
+.label-danger {
+  background-color: $color-danger;
+}
