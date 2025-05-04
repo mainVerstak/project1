@@ -1507,6 +1507,7 @@ a.dropdown-toggle:visited {
 .payment_form {
   .cc-selector-2 {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .show_more_payment_methods_action {

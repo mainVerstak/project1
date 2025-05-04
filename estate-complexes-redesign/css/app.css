@@ -1598,6 +1598,7 @@ a.dropdown-toggle:visited {
 
 .payment_form .cc-selector-2 {
   display: flex;
+  flex-wrap: wrap;
 }
 .payment_form .show_more_payment_methods_action .fas.fa-level-down-alt {
   padding-top: 0 !important;
