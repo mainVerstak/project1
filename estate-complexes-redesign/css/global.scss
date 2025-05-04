@@ -237,7 +237,7 @@ a {
     text-decoration: underline;
   }
   &:visited {
-    color: $color-visited;
+    color: $color-primary;
     text-decoration: underline;
   }
   &:visited.not-visited {
@@ -258,6 +258,10 @@ a {
       text-decoration: none;
     }
   }
+}
+
+.object a:visited {
+  color: $color-visited;
 }
 
 .text-muted {
@@ -536,6 +540,12 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
   &:disabled {
     background-color: $color-surface;
     color: $color-disabled;
+    &:hover {
+      border: 1px solid $color-secondary;
+    }
+    &:active {
+      border: 1px solid $color-secondary;
+    }
   }
   &:active {
     border: 2px solid $color-primary;
@@ -658,7 +668,8 @@ textarea.form-control {
   color: $color-dark;
 }
 
-.input-group .form-control:first-child,
+.input-group
+  .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown):first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group > .btn,
@@ -667,6 +678,16 @@ textarea.form-control {
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+}
+
+.input-group.input-group-responsive
+  .form-control:not(.bootstrap-select):not(.selectize-control):not(
+    .selectize-dropdown
+  ):first-child {
+  @media (max-width: 600px) {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 }
 
 .btn-phone-floating {
@@ -1322,6 +1343,11 @@ a.dropdown-toggle:visited {
           border-color: $color-dark;
           border-width: 2px;
         }
+
+        .cr-icon {
+          top: 8%;
+          left: 12%;
+        }
       }
 
       &:hover {
@@ -1358,6 +1384,11 @@ a.dropdown-toggle:visited {
       &:focus {
         border-color: $color-dark;
         border-width: 2px;
+
+        .cr-icon {
+          top: 8%;
+          left: 12%;
+        }
       }
 
       .cr-icon {
@@ -1804,7 +1835,7 @@ a.dropdown-toggle:visited {
   border-color: $color-primary;
   color: $color-white;
   border: none;
-  padding: 12px 24px;
+  padding: 7px 24px;
   font-weight: 700;
 
   &:hover {
@@ -1884,4 +1915,14 @@ a.dropdown-toggle:visited {
 }
 .label-danger {
   background-color: $color-invalid;
+}
+
+#tariff_rule_modal {
+  .modal-dialog .modal-content .modal-body .form-group {
+    margin-bottom: 15px;
+  }
+}
+
+.panel-body {
+  padding: 0;
 }

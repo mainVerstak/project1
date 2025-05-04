@@ -211,7 +211,7 @@ a:focus {
   text-decoration: underline;
 }
 a:visited {
-  color: #c40dd4;
+  color: #084c95;
   text-decoration: underline;
 }
 a:visited.not-visited {
@@ -229,6 +229,10 @@ a.doted:focus {
 }
 a.doted:active {
   text-decoration: none;
+}
+
+.object a:visited {
+  color: #c40dd4;
 }
 
 .text-muted {
@@ -515,6 +519,12 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
   background-color: #f6f7f9;
   color: #c4cdd9;
 }
+.form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown):disabled:hover {
+  border: 1px solid #e6eff9;
+}
+.form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown):disabled:active {
+  border: 1px solid #e6eff9;
+}
 .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown):active {
   border: 2px solid #084c95;
   box-shadow: none;
@@ -615,7 +625,7 @@ textarea.form-control {
   color: #242a3e;
 }
 
-.input-group .form-control:first-child,
+.input-group .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown):first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group > .btn,
@@ -624,6 +634,13 @@ textarea.form-control {
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+}
+
+@media (max-width: 600px) {
+  .input-group.input-group-responsive .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown):first-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 }
 
 .btn-phone-floating .icon-default {
@@ -1362,6 +1379,31 @@ a.dropdown-toggle:visited {
   border-color: #242a3e;
   border-width: 2px;
 }
+.animated-radios-and-checkboxes .checkbox label:focus-within .cr-icon, .animated-radios-and-checkboxes .checkbox label:focus .cr-icon, .animated-radios-and-checkboxes .checkbox label:focus-visible .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.huge:focus-within .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.huge:focus .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.huge:focus-visible .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.big:focus-within .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.big:focus .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.big:focus-visible .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.bigger:focus-within .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.bigger:focus .cr-icon,
+.animated-radios-and-checkboxes .checkbox label.bigger:focus-visible .cr-icon,
+.animated-radios-and-checkboxes .radio label:focus-within .cr-icon,
+.animated-radios-and-checkboxes .radio label:focus .cr-icon,
+.animated-radios-and-checkboxes .radio label:focus-visible .cr-icon,
+.animated-radios-and-checkboxes .radio label.huge:focus-within .cr-icon,
+.animated-radios-and-checkboxes .radio label.huge:focus .cr-icon,
+.animated-radios-and-checkboxes .radio label.huge:focus-visible .cr-icon,
+.animated-radios-and-checkboxes .radio label.big:focus-within .cr-icon,
+.animated-radios-and-checkboxes .radio label.big:focus .cr-icon,
+.animated-radios-and-checkboxes .radio label.big:focus-visible .cr-icon,
+.animated-radios-and-checkboxes .radio label.bigger:focus-within .cr-icon,
+.animated-radios-and-checkboxes .radio label.bigger:focus .cr-icon,
+.animated-radios-and-checkboxes .radio label.bigger:focus-visible .cr-icon {
+  top: 8%;
+  left: 12%;
+}
 .animated-radios-and-checkboxes .checkbox label:hover,
 .animated-radios-and-checkboxes .checkbox label.huge:hover,
 .animated-radios-and-checkboxes .checkbox label.big:hover,
@@ -1451,6 +1493,11 @@ a.dropdown-toggle:visited {
 .animated-radios-and-checkboxes .radio .cr:focus {
   border-color: #242a3e;
   border-width: 2px;
+}
+.animated-radios-and-checkboxes .checkbox .cr:focus .cr-icon,
+.animated-radios-and-checkboxes .radio .cr:focus .cr-icon {
+  top: 8%;
+  left: 12%;
 }
 .animated-radios-and-checkboxes .checkbox .cr .cr-icon,
 .animated-radios-and-checkboxes .radio .cr .cr-icon {
@@ -1817,7 +1864,7 @@ a.dropdown-toggle:visited {
   border-color: #084c95;
   color: #ffffff;
   border: none;
-  padding: 12px 24px;
+  padding: 7px 24px;
   font-weight: 700;
 }
 .search-hotel__btn:hover {
@@ -1890,6 +1937,14 @@ a.dropdown-toggle:visited {
 
 .label-danger {
   background-color: #f55c3d;
+}
+
+#tariff_rule_modal .modal-dialog .modal-content .modal-body .form-group {
+  margin-bottom: 15px;
+}
+
+.panel-body {
+  padding: 0;
 }
 
 .ds-slider {
@@ -4707,8 +4762,8 @@ header .balance-currency {
     float: none !important;
     display: flex;
     justify-content: center;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .search-result-preview .col-xs-5 .btn-group {
     width: 100%;
@@ -4716,12 +4771,41 @@ header .balance-currency {
   .search-result-preview .col-xs-5 .button-dropdown {
     width: 100%;
   }
+  .search-result-preview .col-xs-5 .button-dropdown.open .dropdown-toggle {
+    text-decoration: none;
+    border: 1px solid #e6eff9;
+  }
+  .search-result-preview .col-xs-5 .button-dropdown.open .dropdown-toggle:hover {
+    border: 1px solid #e6eff9;
+    background-color: #e6eff9;
+    text-decoration: none;
+  }
   .search-result-preview .col-xs-5 .dropdown-toggle {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     line-height: 1.4;
+    border-radius: 8px;
+    border: 1px solid #e6eff9;
+    background-color: #ffffff;
+    text-decoration: none;
+    padding: 7px 15px;
+    height: 44px;
+  }
+  .search-result-preview .col-xs-5 .dropdown-toggle:hover {
+    border: 1px solid #e6eff9;
+    background-color: #e6eff9;
+    text-decoration: none;
+  }
+  .search-result-preview .col-xs-5 .dropdown-toggle:active, .search-result-preview .col-xs-5 .dropdown-toggle.active {
+    border: 1px solid #e6eff9;
+    text-decoration: none;
+  }
+  .search-result-preview .col-xs-5 .dropdown-toggle:active:hover, .search-result-preview .col-xs-5 .dropdown-toggle.active:hover {
+    border: 1px solid #e6eff9;
+    background-color: #e6eff9;
+    text-decoration: none;
   }
 }
 
@@ -4783,7 +4867,7 @@ header .balance-currency {
   color: #242a3e;
 }
 .object .header_adv_short:visited {
-  color: #242a3e;
+  color: #c40dd4;
 }
 .object .object__lead {
   font-size: 20px;
@@ -6421,6 +6505,14 @@ footer {
 }
 .form-horizontal .form-group > div {
   padding: 0;
+}
+@media (max-width: 768px) {
+  .form-horizontal .form-group {
+    flex-direction: column;
+  }
+  .form-horizontal .form-group > div {
+    width: 100%;
+  }
 }
 
 .bootstrap-select > .dropdown-toggle {
