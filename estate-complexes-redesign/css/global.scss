@@ -1926,3 +1926,16 @@ a.dropdown-toggle:visited {
 .panel-body {
   padding: 0;
 }
+
+// New invoice
+.modal .modal-dialog .modal-content .modal-body {
+  form.new_invoice {
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline;
+    }
+  }
+}

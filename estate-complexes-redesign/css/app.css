@@ -1947,6 +1947,13 @@ a.dropdown-toggle:visited {
   padding: 0;
 }
 
+.modal .modal-dialog .modal-content .modal-body form.new_invoice .form-group {
+  margin-bottom: 15px;
+}
+.modal .modal-dialog .modal-content .modal-body form.new_invoice .btn {
+  display: inline;
+}
+
 .ds-slider {
   position: relative;
 }
