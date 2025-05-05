@@ -231,10 +231,6 @@ a.doted:active {
   text-decoration: none;
 }
 
-.object a:visited {
-  color: #c40dd4;
-}
-
 .text-muted {
   color: #8c91a6;
   margin-top: 5px;
@@ -613,6 +609,19 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 .has-success .help-block {
   color: #acf256;
+}
+
+select.form-control::after {
+  content: ">";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 14px;
+  color: #242a3e;
+}
+select.form-control option {
+  height: 44px;
 }
 
 textarea.form-control {
@@ -1600,6 +1609,9 @@ a.dropdown-toggle:visited {
   display: flex;
   flex-wrap: wrap;
 }
+.payment_form .cc-selector-2 input {
+  z-index: 4;
+}
 @media (max-width: 370px) {
   .payment_form .cc-selector-2 .drinkcard-cc {
     width: 100%;
@@ -1950,6 +1962,10 @@ a.dropdown-toggle:visited {
   gap: 8px;
 }
 
+.label {
+  border-radius: 1.25em;
+}
+
 .label-info {
   background-color: #084c95;
 }
@@ -1964,6 +1980,10 @@ a.dropdown-toggle:visited {
 
 .panel-body {
   padding: 0;
+}
+
+.panel .panel-footer .btn {
+  display: inline-flex;
 }
 
 .modal .modal-dialog .modal-content .modal-body form.new_invoice .form-group {
@@ -4390,6 +4410,7 @@ header .balance-currency {
   .searchFormPage .well,
   .searchFormPage.well {
     background-color: #084c95;
+    min-height: 44px;
     padding: 0px 10px;
   }
   .shortSearchForm.text-center.link {
@@ -4696,9 +4717,12 @@ header .balance-currency {
   padding: 3px;
   margin-top: 5px;
 }
-
 .object.object_marked {
   background-color: #fbf5ef;
+  box-shadow: none;
+}
+.object.object_rise {
+  background-color: #e3f1fb;
   box-shadow: none;
 }
 

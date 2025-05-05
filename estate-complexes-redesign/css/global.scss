@@ -260,10 +260,6 @@ a {
   }
 }
 
-.object a:visited {
-  color: $color-visited;
-}
-
 .text-muted {
   color: $color-grey;
   margin-top: 5px;
@@ -655,6 +651,23 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 
   .help-block {
     color: $color-valid;
+  }
+}
+
+select.form-control {
+  &::after {
+    content: ">";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+
+    font-size: 14px;
+    color: $color-dark;
+  }
+
+  option {
+    height: 44px;
   }
 }
 
@@ -1509,6 +1522,10 @@ a.dropdown-toggle:visited {
     display: flex;
     flex-wrap: wrap;
 
+    input {
+      z-index: 4;
+    }
+
     @media (max-width: 370px) {
       .drinkcard-cc {
         width: 100%;
@@ -1932,6 +1949,9 @@ a.dropdown-toggle:visited {
 }
 
 // Labels
+.label {
+  border-radius: 1.25em;
+}
 .label-info {
   background-color: $color-primary;
 }
@@ -1947,6 +1967,10 @@ a.dropdown-toggle:visited {
 
 .panel-body {
   padding: 0;
+}
+
+.panel .panel-footer .btn {
+  display: inline-flex;
 }
 
 // New invoice
