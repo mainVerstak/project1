@@ -1600,6 +1600,11 @@ a.dropdown-toggle:visited {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 370px) {
+  .payment_form .cc-selector-2 .drinkcard-cc {
+    width: 100%;
+  }
+}
 .payment_form .show_more_payment_methods_action .fas.fa-level-down-alt {
   padding-top: 0 !important;
 }
@@ -1773,6 +1778,19 @@ a.dropdown-toggle:visited {
 }
 .contacts-styled .form-control-feedback.fv-icon-no-label {
   display: none;
+}
+
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.nav-pills::before, .nav-pills::after {
+  display: none;
+}
+
+.nav-pills > li + li {
+  margin-left: 0px;
 }
 
 .nav-pills > li.active > a,
