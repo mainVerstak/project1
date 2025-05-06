@@ -20,6 +20,15 @@
       }
     }
 
+    &.direction-row {
+      .col-sm-6 {
+        label.control-label {
+          font-weight: 700;
+          color: $color-dark;
+        }
+      }
+    }
+
     &.has-error {
       .control-label {
         color: $color-grey;

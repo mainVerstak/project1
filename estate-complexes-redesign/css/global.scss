@@ -471,6 +471,11 @@ a {
   }
 }
 
+.btn.btn-inline {
+  display: inline-flex;
+  margin-bottom: 6px;
+}
+
 // Badge
 .badge {
   background-color: $color-primary;
@@ -998,6 +1003,11 @@ a.dropdown-toggle:visited {
     display: flex !important;
     align-items: center !important;
     padding-bottom: 0 !important;
+    height: 44px !important;
+
+    @media (max-width: 768px) {
+      padding-bottom: 13px !important;
+    }
   }
 
   .selectize-control.multi .selectize-input > div {
@@ -1514,6 +1524,13 @@ a.dropdown-toggle:visited {
       height: 44px;
     }
   }
+  @media screen and (max-width: 767px) {
+    .tariff2-main__title {
+      font-size: 24px;
+      padding-top: 20px;
+      margin-bottom: 0;
+    }
+  }
 }
 
 // Payment
@@ -1534,6 +1551,10 @@ a.dropdown-toggle:visited {
   }
 
   .show_more_payment_methods_action {
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+
     .fas.fa-level-down-alt {
       padding-top: 0 !important;
     }
@@ -1804,7 +1825,10 @@ a.dropdown-toggle:visited {
 .table > tbody > tr > td,
 .table > tfoot > tr > th,
 .table > tfoot > tr > td {
-  // vertical-align: middle;
+  border-top: 1px solid $color-secondary;
+}
+.table > thead > tr > th {
+  border-bottom: 2px solid $color-secondary;
 }
 
 .table-tbody-elements-middle {
