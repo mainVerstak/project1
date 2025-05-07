@@ -1491,11 +1491,12 @@ a.dropdown-toggle:visited {
 }
 .modal-application-list {
   background-color: $color-white !important;
-  padding-right: 20px;
+  padding: 0 !important;
+  padding-right: 20px !important;
 
   @media screen and (max-width: 767px) {
-    padding: 0;
-    padding-bottom: 20px;
+    padding: 0 !important;
+    padding-bottom: 20px !important;
   }
 }
 .modal-application__text {
