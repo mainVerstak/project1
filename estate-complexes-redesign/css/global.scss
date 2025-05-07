@@ -481,6 +481,17 @@ a {
   margin-bottom: 6px;
 }
 
+.btn-link {
+  color: $color-primary;
+  text-decoration: none;
+  transition-duration: 0.1s;
+
+  &:hover {
+    color: $color-primary;
+    cursor: pointer;
+  }
+}
+
 // Badge
 .badge {
   background-color: $color-primary;
@@ -1470,12 +1481,22 @@ a.dropdown-toggle:visited {
 }
 .notepad_modal_action {
   .modal-footer {
-    display: flex;
+    display: block;
     flex-direction: column;
+
+    .btn.btn-primary {
+      display: inline;
+    }
   }
 }
 .modal-application-list {
   background-color: $color-white !important;
+  padding-right: 20px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    padding-bottom: 20px;
+  }
 }
 .modal-application__text {
   color: $color-grey;

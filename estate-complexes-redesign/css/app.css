@@ -108,6 +108,12 @@ body {
   fill: none;
 }
 
+.icon-small {
+  width: 10px;
+  height: 10px;
+  fill: currentColor;
+}
+
 .icon-info {
   width: 12px;
   height: 12px;
@@ -465,6 +471,16 @@ a.doted:active {
 .btn.btn-inline {
   display: inline-flex;
   margin-bottom: 6px;
+}
+
+.btn-link {
+  color: #084c95;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+.btn-link:hover {
+  color: #084c95;
+  cursor: pointer;
 }
 
 .badge {
@@ -1559,12 +1575,22 @@ a.dropdown-toggle:visited {
 }
 
 .notepad_modal_action .modal-footer {
-  display: flex;
+  display: block;
   flex-direction: column;
+}
+.notepad_modal_action .modal-footer .btn.btn-primary {
+  display: inline;
 }
 
 .modal-application-list {
   background-color: #ffffff !important;
+  padding-right: 20px;
+}
+@media screen and (max-width: 767px) {
+  .modal-application-list {
+    padding: 0;
+    padding-bottom: 20px;
+  }
 }
 
 .modal-application__text {
@@ -4575,7 +4601,7 @@ header .balance-currency {
 }
 
 .map_panel .additional_search_subcategories_container_action .form-group .btn-group .btn {
-  margin-right: 4px;
+  margin-right: 6px;
   border-radius: 5px;
   margin-bottom: 4px;
 }
@@ -4587,7 +4613,7 @@ header .balance-currency {
 .map_panel .searchFormPage .add_search_link_action:hover {
   color: #07386c;
 }
-.map_panel .map_panel .btn-group .get-search-locations-action {
+.map_panel .btn-group .get-search-locations-action {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -4615,6 +4641,18 @@ header .balance-currency {
 }
 .map_panel .main_search_buttons .btn-primary {
   flex-grow: 0;
+}
+.map_panel .form-group.pull-right.hidden-xs.search_buttons {
+  flex-direction: row;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+}
+.map_panel .form-group.pull-right.hidden-xs.search_buttons .add_search_link_action.btn.btn-default {
+  margin-right: 6px;
+}
+.map_panel .form-group.pull-right.hidden-xs.search_buttons .main_search_buttons .load_points_btn {
+  margin-left: 6px;
 }
 
 .map_panel_hider {
@@ -5257,17 +5295,13 @@ header .balance-currency {
   .object .object__owner {
     flex-direction: column;
     align-items: start;
+    margin-right: 22px;
   }
   .object .object__owner .phone-container {
     width: calc(100% - 25px);
   }
   .object .object__owner-name {
     margin-bottom: 15px;
-  }
-  .object .object__actions {
-    top: unset;
-    bottom: 20px;
-    right: 20px;
   }
   .object .object__data {
     width: unset;
@@ -5319,6 +5353,13 @@ header .balance-currency {
     flex-direction: column-reverse;
   }
 }
+@media screen and (max-width: 767px) {
+  .container:not(.full-size) .object .object__actions,
+  .modal .object .object__actions {
+    bottom: 18px;
+    right: 20px;
+  }
+}
 .map_panel .map_panel_head .to_filters_btn {
   color: #084c95;
   display: flex;
@@ -5365,7 +5406,7 @@ header .balance-currency {
   width: auto;
 }
 .map_panel .object .object__show-phone {
-  height: 34px !important;
+  height: 44px !important;
 }
 .map_panel .object .header_adv_short {
   margin-top: 0;
@@ -5717,7 +5758,7 @@ header .balance-currency {
 }
 .extendedEntity .ds-annouce-info .label.label-default {
   position: relative;
-  bottom: 2px;
+  bottom: 3px;
 }
 .extendedEntity .ds-annouce-info .label {
   height: 20px;
@@ -6577,6 +6618,12 @@ footer {
   color: #acf256;
   top: 4px;
   opacity: 0;
+}
+.form-vertical .form-group .help-block i.form-control-feedback,
+.form-horizontal .form-group .help-block i.form-control-feedback {
+  top: 4px;
+  opacity: 0;
+  display: none !important;
 }
 
 .form-vertical .form-group > div {

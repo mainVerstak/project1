@@ -52,6 +52,13 @@
         opacity: 0;
       }
     }
+    .help-block {
+      i.form-control-feedback {
+        top: 4px;
+        opacity: 0;
+        display: none !important;
+      }
+    }
   }
 }
 

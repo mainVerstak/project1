@@ -562,6 +562,7 @@
     .object__owner {
       flex-direction: column;
       align-items: start;
+      margin-right: 22px;
 
       .phone-container {
         width: calc(100% - 25px);
@@ -569,11 +570,6 @@
     }
     .object__owner-name {
       margin-bottom: 15px;
-    }
-    .object__actions {
-      top: unset;
-      bottom: 20px;
-      right: 20px;
     }
     .object__data {
       width: unset;
@@ -627,6 +623,14 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .container:not(.full-size) .object .object__actions,
+  .modal .object .object__actions {
+    bottom: 18px;
+    right: 20px;
+  }
+}
+
 .map_panel {
   .map_panel_head .to_filters_btn {
     color: $color-primary;
@@ -677,7 +681,7 @@
       width: auto;
     }
     .object__show-phone {
-      height: 34px !important;
+      height: 44px !important;
     }
     .header_adv_short {
       margin-top: 0;

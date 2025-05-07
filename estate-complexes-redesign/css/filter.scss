@@ -458,7 +458,7 @@
 
 .map_panel {
   .additional_search_subcategories_container_action .form-group .btn-group .btn {
-    margin-right: 4px;
+    margin-right: 6px;
     border-radius: 5px;
     margin-bottom: 4px;
   }
@@ -470,7 +470,7 @@
   .searchFormPage .add_search_link_action:hover {
     color: $color-blue-hover;
   }
-  .map_panel .btn-group .get-search-locations-action {
+  .btn-group .get-search-locations-action {
     text-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -499,6 +499,19 @@
 
   .main_search_buttons .btn-primary {
     flex-grow: 0;
+  }
+  .form-group.pull-right.hidden-xs.search_buttons {
+    flex-direction: row;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+
+    .add_search_link_action.btn.btn-default {
+      margin-right: 6px;
+    }
+    .main_search_buttons .load_points_btn {
+      margin-left: 6px;
+    }
   }
 }
 .map_panel_hider {
