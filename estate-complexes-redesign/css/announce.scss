@@ -818,3 +818,11 @@
     }
   }
 }
+
+.object {
+  .fotorama__caption {
+    @media (max-width: 991px) {
+      bottom: 18px;
+    }
+  }
+}

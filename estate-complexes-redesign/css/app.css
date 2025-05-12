@@ -175,6 +175,10 @@ label:hover .icon-grey {
   font-size: inherit;
 }
 
+hr {
+  border-color: #909090;
+}
+
 .well {
   background-color: #ffffff;
   box-shadow: none;
@@ -2058,6 +2062,49 @@ a.dropdown-toggle:visited {
 }
 .modal .modal-dialog .modal-content .modal-body form.new_invoice .btn {
   display: inline;
+}
+
+.abuse_block_action .has-error .radio,
+.abuse_block_action .has-success .radio {
+  color: #242a3e;
+}
+.abuse_block_action .radio input[type=radio] {
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+.abuse_block_action .form-control-feedback {
+  display: none !important;
+}
+
+.rack-box .dropdown-toggle span {
+  font-size: 18px;
+}
+.rack-box .open > .btn-default.dropdown-toggle {
+  color: #323b6a;
+  background-color: #f0f2f7;
+}
+.rack-box .open > .btn-default.dropdown-toggle:hover {
+  color: #323b6a;
+  background-color: #f0f2f7;
+  border-color: #323b6a;
+}
+.rack-box .dropdown-menu li a,
+.rack-box .dropdown-menu.open li a {
+  min-height: unset;
+  border-radius: 0;
+  font-weight: normal;
+  padding: 5px 20px;
+}
+.rack-box .dropdown-menu li a:hover,
+.rack-box .dropdown-menu.open li a:hover {
+  color: #323b6a;
+  background-color: #f0f2f7;
+}
+.rack-box .dropdown-menu li a:focus,
+.rack-box .dropdown-menu.open li a:focus {
+  color: #323b6a;
+  background-color: #f0f2f7;
+  outline: none;
 }
 
 .ds-slider {
@@ -5535,6 +5582,12 @@ header .balance-currency {
   border-right: 1px solid #ffffff;
 }
 
+@media (max-width: 991px) {
+  .object .fotorama__caption {
+    bottom: 18px;
+  }
+}
+
 .extendedEntity {
   /* Icons */
   /* Buttons */
@@ -5896,6 +5949,9 @@ header .balance-currency {
 }
 .extendedEntity .apartment-desc__owner {
   color: #777777;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .extendedEntity .apartment-desc__item {
   padding: 0px 10px 10px 10px;

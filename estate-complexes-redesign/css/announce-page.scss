@@ -362,6 +362,9 @@
   }
   .apartment-desc__owner {
     color: $color-grey-text;
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
   .apartment-desc__item {
     padding: 0px 10px 10px 10px;

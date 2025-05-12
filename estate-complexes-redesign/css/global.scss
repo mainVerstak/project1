@@ -199,6 +199,10 @@ label:hover .icon-grey {
   }
 }
 
+hr {
+  border-color: #909090;
+}
+
 .well {
   background-color: $color-white;
   box-shadow: none;
@@ -2040,6 +2044,60 @@ a.dropdown-toggle:visited {
 
     .btn {
       display: inline;
+    }
+  }
+}
+
+// Abuse
+.abuse_block_action {
+  .has-error,
+  .has-success {
+    .radio {
+      color: $color-dark;
+    }
+  }
+  .radio input[type="radio"] {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+
+  .form-control-feedback {
+    display: none !important;
+  }
+}
+
+// rack-box
+.rack-box {
+  .dropdown-toggle span {
+    font-size: 18px;
+  }
+
+  .open > .btn-default.dropdown-toggle {
+    color: #323b6a;
+    background-color: #f0f2f7;
+
+    &:hover {
+      color: #323b6a;
+      background-color: #f0f2f7;
+      border-color: #323b6a;
+    }
+  }
+
+  .dropdown-menu li a,
+  .dropdown-menu.open li a {
+    min-height: unset;
+    border-radius: 0;
+    font-weight: normal;
+    padding: 5px 20px;
+
+    &:hover {
+      color: #323b6a;
+      background-color: #f0f2f7;
+    }
+    &:focus {
+      color: #323b6a;
+      background-color: #f0f2f7;
+      outline: none;
     }
   }
 }
