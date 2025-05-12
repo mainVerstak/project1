@@ -1202,7 +1202,7 @@ a.dropdown-toggle:visited {
 // Selectize
 .selectize-control,
 .selectize-control.multi {
-  height: 44px !important;
+  min-height: 44px !important;
   &.plugin-remove_button [data-value] .remove {
     display: flex;
     align-items: center;
@@ -1218,10 +1218,11 @@ a.dropdown-toggle:visited {
     border-radius: $border-radius;
     border: 1px solid $color-secondary;
     color: $color-dark;
-    height: 44px;
+    min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
 
     > div,
     div.item {
@@ -1231,6 +1232,7 @@ a.dropdown-toggle:visited {
       padding: 5px;
       font-size: 14px;
       font-weight: 700;
+      text-wrap: nowrap;
     }
 
     &::placeholder,
