@@ -1653,6 +1653,10 @@ a.dropdown-toggle:visited {
   border: none;
   background: transparent;
 
+  .signup-box__btn {
+    max-width: 267px;
+  }
+
   .col-sm-offset-1 {
     margin-left: 0;
   }

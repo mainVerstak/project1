@@ -1739,6 +1739,9 @@ a.dropdown-toggle:visited {
   border: none;
   background: transparent;
 }
+.signup-box .signup-box__btn {
+  max-width: 267px;
+}
 .signup-box .col-sm-offset-1 {
   margin-left: 0;
 }
@@ -5034,6 +5037,7 @@ header .balance-currency {
 .object .object__gallery,
 .object .object__gallery-item {
   border-radius: 5px;
+  background-color: #ffffff;
 }
 .object .object__data {
   padding: 17px 20px !important;
@@ -5511,9 +5515,15 @@ header .balance-currency {
     width: unset;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 767px) {
   .map_panel .object .object__actions {
     right: 2px !important;
+    padding: 17px;
+    width: unset !important;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 4px;
+    flex-direction: column-reverse;
   }
 }
 

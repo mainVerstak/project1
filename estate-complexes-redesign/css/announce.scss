@@ -182,6 +182,7 @@
   .object__gallery,
   .object__gallery-item {
     border-radius: 5px;
+    background-color: $color-white;
   }
 
   .object__data {
@@ -698,9 +699,15 @@
       }
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 767px) {
       .object__actions {
         right: 2px !important;
+        padding: 17px;
+        width: unset !important;
+        margin-top: 10px;
+        position: absolute;
+        bottom: 4px;
+        flex-direction: column-reverse;
       }
     }
   }
