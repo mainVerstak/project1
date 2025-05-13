@@ -176,7 +176,7 @@ label:hover .icon-grey {
 }
 
 hr {
-  border-color: #909090;
+  border-color: #e6eff9;
 }
 
 .well {
@@ -1287,15 +1287,28 @@ a.dropdown-toggle:visited {
   border-bottom: none;
   padding-bottom: 0;
 }
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb {
+  flex-wrap: wrap;
+}
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active {
   color: #084c95;
+}
+#form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons {
+  display: inline-flex;
+  align-items: baseline;
+}
+@media (max-width: 767px) {
+  #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
 }
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn {
   font-size: 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 4px;
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -1308,18 +1321,45 @@ a.dropdown-toggle:visited {
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:first-child:not(:only-child) {
   border-radius: 5px 0 0 5px !important;
 }
+@media (max-width: 767px) {
+  #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:first-child:not(:only-child) {
+    border-radius: 5px !important;
+  }
+}
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:nth-child(2):not(:first-child):not(:last-child) {
   border-radius: 0;
 }
+@media (max-width: 767px) {
+  #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:nth-child(2):not(:first-child):not(:last-child) {
+    border-radius: 5px !important;
+  }
+}
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:last-child:not(:only-child) {
   border-radius: 0 5px 5px 0 !important;
-  margin-left: -5px !important;
+  margin-left: -1px !important;
+}
+@media (max-width: 767px) {
+  #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:last-child:not(:only-child) {
+    border-radius: 5px !important;
+    margin-left: 0 !important;
+  }
 }
 #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:not(:first-child):not(:last-child):not(:nth-child(2)) {
   border-radius: 0 !important;
-  margin-left: -5px !important;
+  margin-left: -1px !important;
+}
+@media (max-width: 767px) {
+  #form_search_locations_modal .modal-dialog .modal-header .breadcrumb .active.buttons .btn:not(:first-child):not(:last-child):not(:nth-child(2)) {
+    border-radius: 5px !important;
+    margin-left: 0 !important;
+  }
 }
 
+@media (max-width: 768px) {
+  .form-fast-search-locations-modal .selectize-input input {
+    height: unset;
+  }
+}
 .modal .modal-content {
   border-radius: 12px;
   border: none;
@@ -1728,13 +1768,10 @@ a.dropdown-toggle:visited {
 .signup-box .signup-box__inputs .list-unstyled .signup-box__role {
   margin-bottom: 8px;
 }
-.signup-box .signup-box__btn {
-  width: 100%;
-}
 .signup-box .signup-box__item,
 .signup-box .signup-box__item_border {
   border: none;
-  padding: 0px 30px 20px;
+  padding: 0px 0px 20px;
 }
 .signup-box .form-control-feedback {
   top: 5px;
@@ -6783,12 +6820,37 @@ footer {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  #new_advertisement .fields .btn {
+    width: unset;
+    margin-bottom: 0;
+    border-radius: 5px;
+  }
+}
 #new_advertisement .fields .save-button-advertisement .help-block {
   margin-top: 16px;
 }
 
-.user-params .btn-group {
+.user-params .fields .btn-group {
   display: inline-flex;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .user-params .fields .btn-group {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .user-params .fields .btn-group > .btn {
+    width: unset;
+    margin-bottom: 0;
+    border-radius: 5px;
+  }
+  .user-params .fields .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 5px;
+  }
+  .user-params .fields .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-radius: 5px;
+  }
 }
 
 .publications .object__show-phone {
