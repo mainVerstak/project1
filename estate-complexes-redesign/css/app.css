@@ -4116,6 +4116,7 @@ header .balance-currency {
   justify-content: center;
   line-height: 1;
   box-shadow: none;
+  min-height: 44px;
 }
 .map_panel .btn-group-xs > .btn,
 #selectBuildingTypeModal .btn-group-xs > .btn,
@@ -4419,6 +4420,30 @@ header .balance-currency {
   overflow-y: auto;
   overflow-x: hidden;
   min-width: 200px;
+}
+.map_panel .form-group.estateTypeButtons .btn-group .btn-xs,
+#selectCategoryModal .form-group.estateTypeButtons .btn-group .btn-xs,
+#selectOfferTypeModal .form-group.estateTypeButtons .btn-group .btn-xs,
+#searchFormModal .form-group.estateTypeButtons .btn-group .btn-xs,
+.searchFormPage .form-group.estateTypeButtons .btn-group .btn-xs {
+  padding: 0 15px;
+}
+.map_panel .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#selectCategoryModal .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#selectOfferTypeModal .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#searchFormModal .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+.searchFormPage .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus) {
+  outline: 2px solid #242a3e;
+  z-index: 5;
+  outline-offset: -2px;
+}
+.map_panel .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+#selectCategoryModal .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+#selectOfferTypeModal .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+#searchFormModal .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+.searchFormPage .form-group.estateTypeButtons .btn-group .btn input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
 }
 .map_panel .dropdown-select-toggle,
 .map_panel .dropdown-multiselect-toggle,
