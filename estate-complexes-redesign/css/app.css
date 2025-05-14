@@ -4421,26 +4421,50 @@ header .balance-currency {
   overflow-x: hidden;
   min-width: 200px;
 }
-.map_panel .form-group.estateTypeButtons .btn-group .btn-xs,
+.map_panel .form-group.buildingTypeButtons .btn-group .btn-xs, .map_panel .form-group.renovationButtons .btn-group .btn-xs, .map_panel .form-group.estateTypeButtons .btn-group .btn-xs,
+#selectCategoryModal .form-group.buildingTypeButtons .btn-group .btn-xs,
+#selectCategoryModal .form-group.renovationButtons .btn-group .btn-xs,
 #selectCategoryModal .form-group.estateTypeButtons .btn-group .btn-xs,
+#selectOfferTypeModal .form-group.buildingTypeButtons .btn-group .btn-xs,
+#selectOfferTypeModal .form-group.renovationButtons .btn-group .btn-xs,
 #selectOfferTypeModal .form-group.estateTypeButtons .btn-group .btn-xs,
+#searchFormModal .form-group.buildingTypeButtons .btn-group .btn-xs,
+#searchFormModal .form-group.renovationButtons .btn-group .btn-xs,
 #searchFormModal .form-group.estateTypeButtons .btn-group .btn-xs,
+.searchFormPage .form-group.buildingTypeButtons .btn-group .btn-xs,
+.searchFormPage .form-group.renovationButtons .btn-group .btn-xs,
 .searchFormPage .form-group.estateTypeButtons .btn-group .btn-xs {
   padding: 0 15px;
 }
-.map_panel .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+.map_panel .form-group.buildingTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus), .map_panel .form-group.renovationButtons .btn-group .btn-default:has(input[type=checkbox]:focus), .map_panel .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#selectCategoryModal .form-group.buildingTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#selectCategoryModal .form-group.renovationButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
 #selectCategoryModal .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#selectOfferTypeModal .form-group.buildingTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#selectOfferTypeModal .form-group.renovationButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
 #selectOfferTypeModal .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#searchFormModal .form-group.buildingTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+#searchFormModal .form-group.renovationButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
 #searchFormModal .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+.searchFormPage .form-group.buildingTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
+.searchFormPage .form-group.renovationButtons .btn-group .btn-default:has(input[type=checkbox]:focus),
 .searchFormPage .form-group.estateTypeButtons .btn-group .btn-default:has(input[type=checkbox]:focus) {
   outline: 2px solid #242a3e;
   z-index: 5;
   outline-offset: -2px;
 }
-.map_panel .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+.map_panel .form-group.buildingTypeButtons .btn-group .btn input[type=checkbox], .map_panel .form-group.renovationButtons .btn-group .btn input[type=checkbox], .map_panel .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+#selectCategoryModal .form-group.buildingTypeButtons .btn-group .btn input[type=checkbox],
+#selectCategoryModal .form-group.renovationButtons .btn-group .btn input[type=checkbox],
 #selectCategoryModal .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+#selectOfferTypeModal .form-group.buildingTypeButtons .btn-group .btn input[type=checkbox],
+#selectOfferTypeModal .form-group.renovationButtons .btn-group .btn input[type=checkbox],
 #selectOfferTypeModal .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+#searchFormModal .form-group.buildingTypeButtons .btn-group .btn input[type=checkbox],
+#searchFormModal .form-group.renovationButtons .btn-group .btn input[type=checkbox],
 #searchFormModal .form-group.estateTypeButtons .btn-group .btn input[type=checkbox],
+.searchFormPage .form-group.buildingTypeButtons .btn-group .btn input[type=checkbox],
+.searchFormPage .form-group.renovationButtons .btn-group .btn input[type=checkbox],
 .searchFormPage .form-group.estateTypeButtons .btn-group .btn input[type=checkbox] {
   opacity: 0;
   position: absolute;
