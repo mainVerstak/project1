@@ -203,7 +203,7 @@
       max-height: 200px;
       overflow-y: auto;
       overflow-x: hidden;
-      min-width: 200px;
+      min-width: unset;
     }
     &.buildingTypeButtons,
     &.renovationButtons,
@@ -228,13 +228,13 @@
   .dropdown-multiselect-toggle {
     font-weight: 400;
     @media (min-width: 768px) {
-      min-width: 200px;
+      min-width: unset;
       justify-content: space-between;
     }
   }
   .dropdown-menu {
     @media (min-width: 768px) {
-      min-width: 200px;
+      min-width: unset;
     }
 
     .selected {

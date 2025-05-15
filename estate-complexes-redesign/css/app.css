@@ -4420,7 +4420,7 @@ header .balance-currency {
   max-height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
-  min-width: 200px;
+  min-width: unset;
 }
 .map_panel .form-group.buildingTypeButtons .btn-group .btn-xs, .map_panel .form-group.renovationButtons .btn-group .btn-xs, .map_panel .form-group.estateTypeButtons .btn-group .btn-xs,
 #selectCategoryModal .form-group.buildingTypeButtons .btn-group .btn-xs,
@@ -4493,7 +4493,7 @@ header .balance-currency {
   #searchFormModal .dropdown-multiselect-toggle,
   .searchFormPage .dropdown-select-toggle,
   .searchFormPage .dropdown-multiselect-toggle {
-    min-width: 200px;
+    min-width: unset;
     justify-content: space-between;
   }
 }
@@ -4503,7 +4503,7 @@ header .balance-currency {
   #selectOfferTypeModal .dropdown-menu,
   #searchFormModal .dropdown-menu,
   .searchFormPage .dropdown-menu {
-    min-width: 200px;
+    min-width: unset;
   }
 }
 .map_panel .dropdown-menu .selected,
@@ -5498,6 +5498,13 @@ header .balance-currency {
     top: auto;
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+@media (min-width: 1024px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    margin-bottom: 0;
+    height: 215px;
   }
 }
 @media screen and (max-width: 767px) {
