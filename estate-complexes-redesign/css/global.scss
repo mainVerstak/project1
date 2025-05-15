@@ -1364,35 +1364,37 @@ a.dropdown-toggle:visited {
   .modal-content {
     border-radius: 12px;
     border: none;
-  }
-  .modal-header {
-    border-bottom: none;
 
-    h4.modal-title {
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
+    .modal-header {
+      border-bottom: none;
 
-    button.close {
-      color: $color-dark;
-      height: 44px;
-      width: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: $border-radius;
-      border: 1px solid $color-secondary;
-      opacity: 1;
+      h4.modal-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
 
-      &:hover {
-        background-color: $color-secondary;
+      button.close {
+        color: $color-dark;
+        height: 44px;
+        width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $border-radius;
+        border: 1px solid $color-secondary;
+        opacity: 1;
+
+        &:hover {
+          background-color: $color-secondary;
+        }
       }
     }
-  }
-  .modal-footer {
-    border-top: 1px solid $color-secondary;
-    gap: 3px;
+    .modal-footer {
+      border-top: 1px solid $color-secondary;
+      gap: 3px;
+      min-height: 75px;
+    }
   }
 }
 

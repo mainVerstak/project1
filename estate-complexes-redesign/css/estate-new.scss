@@ -192,8 +192,16 @@
       margin-bottom: 0;
 
       @media (max-width: 767px) {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 4px;
+        overflow-x: scroll;
+        width: 100%;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
         > .btn {
           width: unset;

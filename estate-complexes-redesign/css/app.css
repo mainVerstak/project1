@@ -1364,15 +1364,15 @@ a.dropdown-toggle:visited {
   border-radius: 12px;
   border: none;
 }
-.modal .modal-header {
+.modal .modal-content .modal-header {
   border-bottom: none;
 }
-.modal .modal-header h4.modal-title {
+.modal .modal-content .modal-header h4.modal-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
 }
-.modal .modal-header button.close {
+.modal .modal-content .modal-header button.close {
   color: #242a3e;
   height: 44px;
   width: 44px;
@@ -1383,12 +1383,13 @@ a.dropdown-toggle:visited {
   border: 1px solid #e6eff9;
   opacity: 1;
 }
-.modal .modal-header button.close:hover {
+.modal .modal-content .modal-header button.close:hover {
   background-color: #e6eff9;
 }
-.modal .modal-footer {
+.modal .modal-content .modal-footer {
   border-top: 1px solid #e6eff9;
   gap: 3px;
+  min-height: 75px;
 }
 
 .animated-radios-and-checkboxes .checkbox,
@@ -4724,6 +4725,10 @@ header .balance-currency {
     display: flex !important;
   }
 }
+#selectCategoryModal .modal-content .modal-footer {
+  max-height: 75px;
+}
+
 .map_container {
   height: calc(100vh - 96px);
 }
@@ -6896,8 +6901,15 @@ footer {
 }
 @media (max-width: 767px) {
   .user-params .fields .btn-group {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 4px;
+    overflow-x: scroll;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .user-params .fields .btn-group::-webkit-scrollbar {
+    display: none;
   }
   .user-params .fields .btn-group > .btn {
     width: unset;

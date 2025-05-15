@@ -460,6 +460,14 @@
   }
 }
 
+#selectCategoryModal {
+  .modal-content {
+    .modal-footer {
+      max-height: 75px;
+    }
+  }
+}
+
 .map_container {
   height: calc(100vh - 96px);
 
