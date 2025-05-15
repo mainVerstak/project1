@@ -605,6 +605,7 @@
   .container:not(.full-size) .object .object__gallery,
   .modal .object .object__gallery {
     width: 100%;
+    height: 100%;
   }
   .container:not(.full-size) .object .object__show-phone,
   .modal .object .object__show-phone {
@@ -628,7 +629,13 @@
   .container:not(.full-size) .object .object__gallery,
   .modal .object .object__gallery {
     margin-bottom: 0;
-    height: 215px;
+    height: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    height: 100%;
   }
 }
 
@@ -830,14 +837,6 @@
 
     div {
       border-right: 1px solid $color-white;
-    }
-  }
-}
-
-.object {
-  .fotorama__caption {
-    @media (max-width: 991px) {
-      bottom: 18px;
     }
   }
 }

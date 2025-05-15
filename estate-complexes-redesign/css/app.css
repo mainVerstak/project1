@@ -5482,6 +5482,7 @@ header .balance-currency {
   .container:not(.full-size) .object .object__gallery,
   .modal .object .object__gallery {
     width: 100%;
+    height: 100%;
   }
   .container:not(.full-size) .object .object__show-phone,
   .modal .object .object__show-phone {
@@ -5504,7 +5505,13 @@ header .balance-currency {
   .container:not(.full-size) .object .object__gallery,
   .modal .object .object__gallery {
     margin-bottom: 0;
-    height: 215px;
+    height: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .container:not(.full-size) .object .object__gallery,
+  .modal .object .object__gallery {
+    height: 100%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5688,12 +5695,6 @@ header .balance-currency {
 }
 .object + .overflow-hidden .form-group div {
   border-right: 1px solid #ffffff;
-}
-
-@media (max-width: 991px) {
-  .object .fotorama__caption {
-    bottom: 18px;
-  }
 }
 
 .extendedEntity {
