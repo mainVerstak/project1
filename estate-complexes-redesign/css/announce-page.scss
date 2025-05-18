@@ -223,6 +223,18 @@
       align-items: center;
       gap: 4px;
     }
+
+    .panel-body-adv-block.badge {
+      position: relative;
+      height: 20px;
+      top: -1px;
+      padding: 0.3em 0.6em 0.3em;
+      border-radius: 1.25em;
+      &.alert-danger {
+        background-color: $color-red;
+        color: $color-white;
+      }
+    }
   }
 
   .panel-body-adv-block noindex {
@@ -296,10 +308,11 @@
     padding: 0;
     border: 1px solid $color-border;
     border-radius: $border-radius;
+    &:hover {
+      background-color: $color-grey-superlight;
+    }
   }
-  .panel-body-adv-block .btn-favorite-icon:hover {
-    background-color: $color-grey-superlight;
-  }
+
   .btn-favorite-icon svg {
     stroke: $color-grey-text;
     fill: none;

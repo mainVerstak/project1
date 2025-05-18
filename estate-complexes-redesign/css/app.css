@@ -1359,6 +1359,9 @@ a.dropdown-toggle:visited {
   .form-fast-search-locations-modal .selectize-input input {
     height: unset;
   }
+  .form-fast-search-locations-modal .selectize-control {
+    height: 44px !important;
+  }
 }
 .modal .modal-content {
   border-radius: 12px;
@@ -1376,7 +1379,7 @@ a.dropdown-toggle:visited {
   color: #242a3e;
   height: 44px;
   width: 44px;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
@@ -1695,6 +1698,12 @@ a.dropdown-toggle:visited {
     font-size: 24px;
     padding-top: 20px;
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tariff-main__title {
+    margin-top: 18px;
   }
 }
 
@@ -5955,6 +5964,17 @@ header .balance-currency {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+}
+.extendedEntity .ds-annouce-info .panel-body-adv-block.badge {
+  position: relative;
+  height: 20px;
+  top: -1px;
+  padding: 0.3em 0.6em 0.3em;
+  border-radius: 1.25em;
+}
+.extendedEntity .ds-annouce-info .panel-body-adv-block.badge.alert-danger {
+  background-color: #d9534f;
+  color: #ffffff;
 }
 .extendedEntity .panel-body-adv-block noindex {
   display: flex;

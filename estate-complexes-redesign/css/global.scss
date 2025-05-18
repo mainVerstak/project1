@@ -1358,6 +1358,9 @@ a.dropdown-toggle:visited {
   .form-fast-search-locations-modal .selectize-input input {
     height: unset;
   }
+  .form-fast-search-locations-modal .selectize-control {
+    height: 44px !important;
+  }
 }
 
 .modal {
@@ -1378,7 +1381,7 @@ a.dropdown-toggle:visited {
         color: $color-dark;
         height: 44px;
         width: 44px;
-        display: flex;
+        display: block;
         align-items: center;
         justify-content: center;
         border-radius: $border-radius;
@@ -1601,6 +1604,12 @@ a.dropdown-toggle:visited {
       padding-top: 20px;
       margin-bottom: 0;
     }
+  }
+}
+
+.tariff-main__title {
+  @media only screen and (max-width: 767px) {
+    margin-top: 18px;
   }
 }
 
