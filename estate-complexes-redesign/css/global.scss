@@ -311,6 +311,10 @@ a {
   &.width-fit-content {
     width: fit-content !important;
   }
+
+  &.inline-flex {
+    display: inline-flex;
+  }
 }
 
 .btn-group-vertical > .btn,
@@ -1590,19 +1594,25 @@ a.dropdown-toggle:visited {
 
 // Tariff2
 .tariff2-main {
+  padding-top: 20px;
+
   .tariff2-main__balance-btn {
     max-width: unset;
     width: unset;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
 
     &.btn-styled-new2 {
       height: 44px;
     }
   }
-  @media screen and (max-width: 767px) {
+  @media (max-width: 767px) {
     .tariff2-main__title {
       font-size: 24px;
-      padding-top: 20px;
-      margin-bottom: 0;
+      // padding-top: 20px;
+      // margin-bottom: 0;
     }
   }
 }
@@ -1615,6 +1625,9 @@ a.dropdown-toggle:visited {
 
 // Payment
 .payment_form {
+  input[type="checkbox"] {
+    margin-top: 2px;
+  }
   .cc-selector-2 {
     display: flex;
     flex-wrap: wrap;
@@ -1743,7 +1756,9 @@ a.dropdown-toggle:visited {
 
 // Edit user
 #edit_user,
-#edit_admin_user {
+#edit_admin_user,
+#new_agent,
+#new_developer_agent {
   max-width: 500px;
   margin: 0 auto;
 
@@ -1916,6 +1931,22 @@ a.dropdown-toggle:visited {
   > tbody > tr > td,
   > tbody > tr > th {
     vertical-align: middle;
+  }
+}
+
+.table-responsive {
+  border: 1px solid $color-secondary;
+  border-top: none;
+  margin-bottom: 20px;
+
+  table {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    border: 1px solid $color-secondary;
+    border-top: none;
+    margin-bottom: 0;
   }
 }
 
@@ -2143,4 +2174,27 @@ a.dropdown-toggle:visited {
       outline: none;
     }
   }
+}
+
+.btn-add-advertisement {
+  width: 100%;
+}
+
+// feeds
+.modal-feed {
+  .modal-footer {
+    .modal-feed__btn {
+      max-width: unset;
+
+      @media (max-width: 767px) {
+        margin: 0 6px 6px;
+      }
+    }
+  }
+}
+.btn-styled-new2_outline {
+  border: solid 1px #2f8dd3;
+  color: #2f8dd3;
+  background: transparent;
+  background-image: none;
 }

@@ -278,6 +278,9 @@ a.doted:active {
 .btn.width-fit-content {
   width: fit-content !important;
 }
+.btn.inline-flex {
+  display: inline-flex;
+}
 
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btn-group,
@@ -1686,18 +1689,24 @@ a.dropdown-toggle:visited {
   font-weight: unset;
 }
 
+.tariff2-main {
+  padding-top: 20px;
+}
 .tariff2-main .tariff2-main__balance-btn {
   max-width: unset;
   width: unset;
 }
+@media (max-width: 767px) {
+  .tariff2-main .tariff2-main__balance-btn {
+    width: 100%;
+  }
+}
 .tariff2-main .tariff2-main__balance-btn.btn-styled-new2 {
   height: 44px;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .tariff2-main .tariff2-main__title {
     font-size: 24px;
-    padding-top: 20px;
-    margin-bottom: 0;
   }
 }
 
@@ -1707,6 +1716,9 @@ a.dropdown-toggle:visited {
   }
 }
 
+.payment_form input[type=checkbox] {
+  margin-top: 2px;
+}
 .payment_form .cc-selector-2 {
   display: flex;
   flex-wrap: wrap;
@@ -1808,24 +1820,34 @@ a.dropdown-toggle:visited {
 }
 
 #edit_user,
-#edit_admin_user {
+#edit_admin_user,
+#new_agent,
+#new_developer_agent {
   max-width: 500px;
   margin: 0 auto;
 }
 #edit_user .fields .input-group,
-#edit_admin_user .fields .input-group {
+#edit_admin_user .fields .input-group,
+#new_agent .fields .input-group,
+#new_developer_agent .fields .input-group {
   display: flex;
   width: 100%;
 }
 #edit_user .input-group-addon,
 #edit_user .input-group-btn,
 #edit_admin_user .input-group-addon,
-#edit_admin_user .input-group-btn {
+#edit_admin_user .input-group-btn,
+#new_agent .input-group-addon,
+#new_agent .input-group-btn,
+#new_developer_agent .input-group-addon,
+#new_developer_agent .input-group-btn {
   display: flex;
   width: unset;
 }
 #edit_user .form-control-static,
-#edit_admin_user .form-control-static {
+#edit_admin_user .form-control-static,
+#new_agent .form-control-static,
+#new_developer_agent .form-control-static {
   width: 100%;
   justify-content: space-between;
   background-color: #ffffff;
@@ -1833,33 +1855,47 @@ a.dropdown-toggle:visited {
   border-color: #084c95;
 }
 #edit_user .form-control-static:hover,
-#edit_admin_user .form-control-static:hover {
+#edit_admin_user .form-control-static:hover,
+#new_agent .form-control-static:hover,
+#new_developer_agent .form-control-static:hover {
   background-color: #ffffff;
   border-color: #084c95;
   border-width: 2px;
 }
 #edit_user .form-control-static label,
-#edit_admin_user .form-control-static label {
+#edit_admin_user .form-control-static label,
+#new_agent .form-control-static label,
+#new_developer_agent .form-control-static label {
   margin: 0;
 }
 #edit_user .form-control-static a,
-#edit_admin_user .form-control-static a {
+#edit_admin_user .form-control-static a,
+#new_agent .form-control-static a,
+#new_developer_agent .form-control-static a {
   color: #242a3e;
 }
 #edit_user .form-control-static a:hover,
-#edit_admin_user .form-control-static a:hover {
+#edit_admin_user .form-control-static a:hover,
+#new_agent .form-control-static a:hover,
+#new_developer_agent .form-control-static a:hover {
   color: #084c95;
   text-decoration: underline;
 }
 #edit_user input[type=radio],
 #edit_user input[type=checkbox],
 #edit_admin_user input[type=radio],
-#edit_admin_user input[type=checkbox] {
+#edit_admin_user input[type=checkbox],
+#new_agent input[type=radio],
+#new_agent input[type=checkbox],
+#new_developer_agent input[type=radio],
+#new_developer_agent input[type=checkbox] {
   margin-top: 3px;
   margin-bottom: 0;
 }
 #edit_user .checkbox .col-sm-4.col-sm-offset-2,
-#edit_admin_user .checkbox .col-sm-4.col-sm-offset-2 {
+#edit_admin_user .checkbox .col-sm-4.col-sm-offset-2,
+#new_agent .checkbox .col-sm-4.col-sm-offset-2,
+#new_developer_agent .checkbox .col-sm-4.col-sm-offset-2 {
   width: 100%;
 }
 
@@ -1967,6 +2003,22 @@ a.dropdown-toggle:visited {
 .table-tbody-elements-middle > tbody > tr > td,
 .table-tbody-elements-middle > tbody > tr > th {
   vertical-align: middle;
+}
+
+.table-responsive {
+  border: 1px solid #e6eff9;
+  border-top: none;
+  margin-bottom: 20px;
+}
+.table-responsive table {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .table-responsive {
+    border: 1px solid #e6eff9;
+    border-top: none;
+    margin-bottom: 0;
+  }
 }
 
 .adv-form .col-lg-offset-2 {
@@ -2155,6 +2207,26 @@ a.dropdown-toggle:visited {
   color: #323b6a;
   background-color: #f0f2f7;
   outline: none;
+}
+
+.btn-add-advertisement {
+  width: 100%;
+}
+
+.modal-feed .modal-footer .modal-feed__btn {
+  max-width: unset;
+}
+@media (max-width: 767px) {
+  .modal-feed .modal-footer .modal-feed__btn {
+    margin: 0 6px 6px;
+  }
+}
+
+.btn-styled-new2_outline {
+  border: solid 1px #2f8dd3;
+  color: #2f8dd3;
+  background: transparent;
+  background-image: none;
 }
 
 .ds-slider {
@@ -3798,7 +3870,7 @@ header .sidenav__inner .dropdown-menu.sub-menu {
   padding: 3px;
   border-color: #e6eff9;
   max-height: 600px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 header .sidenav__inner .dropdown-menu.sub-menu li {
@@ -4050,6 +4122,25 @@ header .balance-currency {
 }
 .form-fast-search-locations-modal .ds-btn {
   height: 44px !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .dropdown.nav {
+    max-width: 245px;
+  }
+  header .dropdown.nav .dropdown-toggle .hidden-sm {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 170px;
+  }
+}
+@media (max-width: 767px) {
+  header .dropdown.nav .dropdown-toggle .hidden-sm {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 
 .searchFormPage,

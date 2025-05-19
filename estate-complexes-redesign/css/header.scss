@@ -403,7 +403,7 @@ header {
     padding: 3px;
     border-color: $color-secondary;
     max-height: 600px;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
   }
   .sidenav__inner .dropdown-menu.sub-menu li {
@@ -669,4 +669,27 @@ header {
 
 .form-fast-search-locations-modal .ds-btn {
   height: 44px !important;
+}
+
+header .dropdown.nav {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    max-width: 245px;
+    .dropdown-toggle {
+      .hidden-sm {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 170px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .dropdown-toggle {
+      .hidden-sm {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
 }
