@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Новое объявление - Шаг 2</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/_header.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/estate-new-step2.css" />
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -33,16 +34,10 @@
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="js/estate-new-service-script.js" defer></script>
   </head>
 
   <body>
-    <script>
-      //<![CDATA[
-      require(["application_module"], function () {
-        require([]);
-      });
-      //]]>
-    </script>
     <header>
       <div class="header-top-nav js-header-top-nav header-top-mobile-hidden">
         <div class="container">
@@ -215,13 +210,6 @@
     <div class="container container-height-full js-body-container">
       <h1>Новое объявление</h1>
       <div class="well well-sm well-xs">
-        <script>
-          //<![CDATA[
-          require(["application_module"], function () {
-            require(["create_module", "validation_module", "user_module"]);
-          });
-          //]]>
-        </script>
         <form
           class="adv-form fileupload new-record form-vertical fv-form fv-form-bootstrap"
           id="new_advertisement"
@@ -237,126 +225,201 @@
             type="submit"
             class="fv-hidden-submit"
             style="display: none; width: 0px; height: 0px"
-          ></button
-          ><input name="utf8" type="hidden" value="✓" /><input
+          ></button>
+          <input name="utf8" type="hidden" value="✓" /><input
             type="hidden"
             name="authenticity_token"
             value="lkJRXzxHR1VVjFMTOfpBEa4cD0cZQrzXlmjJrqkuAWVxuXJP9m4AW3EampKe2VqezWwyZUDhwC/0eUMIdQhHUA=="
-          /><input
+          />
+          <input
             class="latitude-value"
             type="hidden"
             name="advertisement[latitude]"
             id="advertisement_latitude"
             value="56.3195"
-          /><input
+          />
+          <input
             class="longitude-value"
             type="hidden"
             name="advertisement[longitude]"
             id="advertisement_longitude"
             value="40.8890"
-          /><input
+          />
+          <input
             class="zoom-value"
             type="hidden"
             value="16"
             name="advertisement[zoom]"
             id="advertisement_zoom"
           />
-          <div class="user-params">
-            <div class="fields">
-              <script>
-                //<![CDATA[
-                require(["application_module"], function () {
-                  require(["phones_module"]);
-                });
-                //]]>
-              </script>
-              <div class="form-group has-feedback has-success">
-                <label class="control-label col-sm-2" for="radios">
-                  <i class="fas fa-male"></i> тип пользователя
+
+          <div class="form-section">
+            <div class="form-sub-section">
+              <h3 class="form-section-title">Основные параметры</h3>
+
+              <div class="form-group">
+                <label class="control-label" for="bedroom_from">
+                  Отдельных спален
+                  <div class="tooltip-container">
+                    <div class="tooltip-trigger">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#info"></use>
+                      </svg>
+                    </div>
+                    <div class="tooltip-content">
+                      <p>Спальни отдельной комнатой, с дверью</p>
+                    </div>
+                  </div>
                 </label>
-                <div class="col-sm-4">
-                  <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-default" for="advertisement_user_attributes_role_owner"
-                      ><input
-                        required="required"
-                        id="advertisement_user_attributes_role_owner"
-                        class="user_name_changer_action"
-                        type="radio"
-                        value="owner"
-                        name="advertisement[user_attributes][role]"
-                        data-fv-field="advertisement[user_attributes][role]"
-                      /><svg class="icon-default icon-grey">
-                        <use xlink:href="./img/icons.svg#owner"></use>
-                      </svg>
-                      собственник</label
-                    >
-                    <label class="btn btn-default" for="advertisement_user_attributes_role_agent">
-                      <input
-                        required="required"
-                        id="advertisement_user_attributes_role_agent"
-                        class="user_name_changer_action"
-                        type="radio"
-                        value="agent"
-                        name="advertisement[user_attributes][role]"
-                        data-fv-field="advertisement[user_attributes][role]"
-                      />
-                      <svg class="icon-default icon-grey">
-                        <use xlink:href="./img/icons.svg#agent"></use>
-                      </svg>
-                      агент
+                <div class="controls">
+                  <div class="btn-group one_active_bnt_action" data-toggle="buttons">
+                    <label class="btn btn-default">
+                      <input name="advertisement[bedroom_from]" type="checkbox" value="1" />
+                      1
                     </label>
-                    <label class="btn btn-default" for="advertisement_user_attributes_role_agency">
-                      <input
-                        required="required"
-                        id="advertisement_user_attributes_role_agency"
-                        class="user_name_changer_action"
-                        type="radio"
-                        value="agency"
-                        name="advertisement[user_attributes][role]"
-                        data-fv-field="advertisement[user_attributes][role]"
-                      />
-                      <svg class="icon-default icon-grey">
-                        <use xlink:href="./img/icons.svg#users"></use>
-                      </svg>
-                      агентство
+                    <label class="btn btn-default">
+                      <input name="advertisement[bedroom_from]" type="checkbox" value="2" />
+                      2
                     </label>
-                    <label
-                      class="btn btn-default"
-                      for="advertisement_user_attributes_role_developer"
-                    >
-                      <input
-                        required="required"
-                        id="advertisement_user_attributes_role_developer"
-                        class="user_name_changer_action"
-                        type="radio"
-                        value="developer"
-                        name="advertisement[user_attributes][role]"
-                        data-fv-field="advertisement[user_attributes][role]"
-                      />
-                      <i
-                        style="display: inline"
-                        class="form-control-feedback fas fa-check"
-                        data-fv-icon-for="advertisement[user_attributes][role]"
-                      >
-                      </i>
-                      <svg class="icon-default icon-grey">
-                        <use xlink:href="./img/icons.svg#estate"></use>
-                      </svg>
-                      застройщик
+                    <label class="btn btn-default">
+                      <input name="advertisement[bedroom_from]" type="checkbox" value="3" />
+                      3
+                    </label>
+                    <label class="btn btn-default active">
+                      <input name="advertisement[bedroom_from]" type="checkbox" value="4" />
+                      4
+                    </label>
+                    <label class="btn btn-default">
+                      <input name="advertisement[bedroom_from]" type="checkbox" value="5" />
+                      5+
                     </label>
                   </div>
-                  <small
-                    style="display: none"
-                    class="help-block"
-                    data-fv-validator="notEmpty"
-                    data-fv-for="advertisement[user_attributes][role]"
-                    data-fv-result="VALID"
-                    >Пожалуйста, введите значение</small
-                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="bedroom_from">
+                  Максимум гостей
+                  <div class="tooltip-container">
+                    <div class="tooltip-trigger">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#info"></use>
+                      </svg>
+                    </div>
+                    <div class="tooltip-content">
+                      <p>
+                        Количество гостей, которое поместится на всех основных и дополнительных
+                        спальных местах
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <div class="controls">
+                  <div class="form-counter">
+                    <button class="form-counter__btn-minus btn btn-default" type="button">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input
+                      class="form-control form-counter__input"
+                      type="number"
+                      id="max_guests"
+                      name="advertisement[max_guests]"
+                      min="1"
+                      value="1"
+                    />
+                    <button class="form-counter__btn-plus btn btn-default" type="button">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-sub-section">
+                <h3 class="form-section-title">Основные спальные места</h3>
+
+                <div class="form-group dropdown-with-counter">
+                  <div class="btn-group bootstrap-select">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle btn-default"
+                      data-toggle="dropdown"
+                      data-id="advertisement_sleep_place_main"
+                      title="продать"
+                      aria-expanded="false"
+                    >
+                      <span class="filter-option pull-left">продать</span>
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-d"></use>
+                      </svg>
+                    </button>
+                    <div class="dropdown-menu open">
+                      <ul class="dropdown-menu inner" role="menu">
+                        <li data-original-index="0" class="">
+                          <a tabindex="0" class="" data-tokens="null">
+                            <span class="text"></span>
+                          </a>
+                        </li>
+                        <li data-original-index="1" class="selected">
+                          <a tabindex="0" class="" data-tokens="null">
+                            <span class="text">продать</span>
+                          </a>
+                        </li>
+                        <li data-original-index="2">
+                          <a tabindex="0" class="" data-tokens="null">
+                            <span class="text">сдать</span>
+                          </a>
+                        </li>
+                        <li data-original-index="3">
+                          <a tabindex="0" class="" data-tokens="null"
+                            ><span class="text">сдать посуточно</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <select
+                      class="selectpicker AdvOfferType"
+                      data-width="100%"
+                      style="min-height: 34px"
+                      name="advertisement[offer_type]"
+                      id="advertisement_offer_type"
+                      data-fv-field="advertisement[offer_type]"
+                      tabindex="-98"
+                    >
+                      <option value=""></option>
+                      <option value="sale">продать</option>
+                      <option value="for_rent">сдать</option>
+                      <option value="day">сдать посуточно</option>
+                    </select>
+                  </div>
+                  <div class="form-counter">
+                    <button class="form-counter__btn-delete btn btn-default" type="button">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#trash"></use>
+                      </svg>
+                    </button>
+                    <input
+                      class="form-control form-counter__input"
+                      type="number"
+                      id="max_guests"
+                      name="advertisement[max_guests]"
+                      min="1"
+                      value="1"
+                    />
+                    <button class="form-counter__btn-plus btn btn-default" type="button">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="first-step-advertisement">
             <div class="adv-params">
               <div class="form-group has-feedback has-success">
@@ -381,25 +444,25 @@
                     <div class="dropdown-menu open">
                       <ul class="dropdown-menu inner" role="menu">
                         <li data-original-index="0" class="">
-                          <a tabindex="0" class="" style="" data-tokens="null"
+                          <a tabindex="0" class="" data-tokens="null"
                             ><span class="text"></span
                             ><span class="glyphicon glyphicon-ok check-mark"></span
                           ></a>
                         </li>
                         <li data-original-index="1" class="selected">
-                          <a tabindex="0" class="" style="" data-tokens="null"
+                          <a tabindex="0" class="" data-tokens="null"
                             ><span class="text">продать</span
                             ><span class="glyphicon glyphicon-ok check-mark"></span
                           ></a>
                         </li>
                         <li data-original-index="2">
-                          <a tabindex="0" class="" style="" data-tokens="null"
+                          <a tabindex="0" class="" data-tokens="null"
                             ><span class="text">сдать</span
                             ><span class="glyphicon glyphicon-ok check-mark"></span
                           ></a>
                         </li>
                         <li data-original-index="3">
-                          <a tabindex="0" class="" style="" data-tokens="null"
+                          <a tabindex="0" class="" data-tokens="null"
                             ><span class="text">сдать посуточно</span
                             ><span class="glyphicon glyphicon-ok check-mark"></span
                           ></a>
@@ -466,7 +529,7 @@
                             <span class="text"></span>
                           </li>
                           <li data-original-index="0" data-optgroup="1" class="">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text"></span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
@@ -476,19 +539,19 @@
                             <span class="text">жильё</span>
                           </li>
                           <li data-original-index="1" data-optgroup="2" class="selected">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">квартиру</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="2" data-optgroup="2">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">дом</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="3" data-optgroup="2">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">комнату</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
@@ -498,7 +561,7 @@
                             <span class="text">участок</span>
                           </li>
                           <li data-original-index="4" data-optgroup="3">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">землю</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
@@ -508,61 +571,61 @@
                             <span class="text">коммерческую</span>
                           </li>
                           <li data-original-index="5" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">офис</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="6" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">торговое помещение</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="7" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">производственно-складское помещение</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="8" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">помещение под общепит отдых</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="9" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">помещение свободного назначения</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="10" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">помещение под услуги</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="11" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">авто</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="12" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">готовый бизнес</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="13" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">помещение под перевод в нежилой фонд</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="14" data-optgroup="4">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">помещение для спорта</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
@@ -572,13 +635,13 @@
                             <span class="text">гараж</span>
                           </li>
                           <li data-original-index="15" data-optgroup="5">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">гараж</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="16" data-optgroup="5">
-                            <a tabindex="0" class="opt" style="" data-tokens="null"
+                            <a tabindex="0" class="opt" data-tokens="null"
                               ><span class="text">машиноместо</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
@@ -658,25 +721,25 @@
                       <div class="dropdown-menu open">
                         <ul class="dropdown-menu inner" role="menu">
                           <li data-original-index="0" class="">
-                            <a tabindex="0" class="" style="" data-tokens="null"
+                            <a tabindex="0" class="" data-tokens="null"
                               ><span class="text"></span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="1" class="selected">
-                            <a tabindex="0" class="" style="" data-tokens="null"
+                            <a tabindex="0" class="" data-tokens="null"
                               ><span class="text">новостройку</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="2">
-                            <a tabindex="0" class="" style="" data-tokens="null"
+                            <a tabindex="0" class="" data-tokens="null"
                               ><span class="text">вторичку</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
                           </li>
                           <li data-original-index="3">
-                            <a tabindex="0" class="" style="" data-tokens="null"
+                            <a tabindex="0" class="" data-tokens="null"
                               ><span class="text">гостинку</span
                               ><span class="glyphicon glyphicon-ok check-mark"></span
                             ></a>
@@ -916,17 +979,9 @@
                           data-editable="true"
                           data-zoom="12"
                           id="map"
-                          style=""
                         >
                           <!-- здесь будет карта -->
                         </div>
-                        <script>
-                          //<![CDATA[
-                          require(["application_module"], function () {
-                            require(["map_module"]);
-                          });
-                          //]]>
-                        </script>
                       </div>
                     </div>
                   </div>
@@ -957,7 +1012,7 @@
                   </div>
                 </div>
 
-                <script id="template-upload" type="text/x-tmpl">
+                <!-- <script id="template-upload" type="text/x-tmpl">
                   {% for (var i=0, file; file=o.files[i]; i++) { %}
                     <li class="template-upload fade">
                       <div class="preview sortable-handle-action">
@@ -985,9 +1040,9 @@
                       </div>
                     </li>
                   {% } %}
-                </script>
+                </script> -->
 
-                <script id="template-download" type="text/x-tmpl">
+                <!-- <script id="template-download" type="text/x-tmpl">
                   {% for (var i=0, file; file=o.files[i]; i++) { %}
                     <li class="template-download draggable-handle-action">
                       {% if (file.error) { %}
@@ -1021,9 +1076,9 @@
                       {% } %}
                     </li>
                   {% } %}
-                </script>
+                </script> -->
 
-                <script type="text/javascript" charset="utf-8">
+                <!-- <script type="text/javascript" charset="utf-8">
                   require([
                     "routes",
                     "jquery",
@@ -1067,7 +1122,7 @@
                       },
                     });
                   });
-                </script>
+                </script> -->
                 <div class="form-group adv-comment-block">
                   <label class="col-sm-2 control-label"
                     ><i class="fas fa-bullhorn"></i> комментарий</label
@@ -1769,7 +1824,7 @@
             <div class="col-lg-offset-2">
               <a
                 class="btn btn-primary btn-lg next-button-advertisement btn-add-advertisement"
-                href="#"
+                href="/estate-complexes-redesign/estate-new-step-2.html"
                 ><i class="fas fa-arrow-right"></i> Далее</a
               >
               <!-- <div class="save-button-advertisement">

@@ -1,0 +1,125 @@
+.form-section {
+  border: 1px solid #e6eff9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.form-section h3.form-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #242a3e;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.control-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tooltip-container {
+  position: relative;
+  color: #084c95;
+}
+.tooltip-container .tooltip-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6eff9;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+.tooltip-container .tooltip-content {
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e6eff9;
+  width: 190px;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  pointer-events: none;
+}
+.tooltip-container .tooltip-content p {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0;
+}
+.tooltip-container .tooltip-content.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.tooltip-container .tooltip-content::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5px;
+}
+
+.btn-group .btn {
+  min-width: 44px;
+  justify-content: center;
+}
+
+.form-counter {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.form-counter .btn {
+  display: flex;
+}
+.form-counter .form-control.form-counter__input {
+  min-width: 60px;
+  text-align: center;
+  padding-left: 10px !important;
+  -moz-appearance: textfield;
+}
+.form-counter .form-control.form-counter__input::-webkit-inner-spin-button, .form-counter .form-control.form-counter__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .form-counter .form-control.form-counter__input {
+    width: 60px;
+  }
+}
+
+.form-vertical .form-group > div.form-counter {
+  width: unset;
+}
+
+.form-group.dropdown-with-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+@media (min-width: 768px) {
+  .form-group.dropdown-with-counter {
+    flex-direction: row;
+  }
+}
+.form-group.dropdown-with-counter .btn-group.bootstrap-select {
+  display: flex;
+  width: 100%;
+}
+.form-group.dropdown-with-counter .btn-group.bootstrap-select .btn {
+  width: 100%;
+}
+
+/*# sourceMappingURL=estate-new-step2.css.map */

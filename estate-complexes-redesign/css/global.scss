@@ -1267,6 +1267,16 @@ a.dropdown-toggle:visited {
     }
   }
 }
+.selectize-control.user_selectize.single {
+  .selectize-input {
+    padding: 2px 6px;
+    min-height: 24px;
+
+    > div.item {
+      background-color: unset;
+    }
+  }
+}
 
 // Form search locations modal
 #form_search_locations_modal {

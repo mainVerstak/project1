@@ -219,3 +219,11 @@
     }
   }
 }
+
+.help-block.compliment-site {
+  &.small {
+    font-size: 14px;
+    margin-bottom: 24px;
+    color: $color-grey;
+  }
+}
