@@ -1592,37 +1592,6 @@ a.dropdown-toggle:visited {
   }
 }
 
-// Tariff2
-.tariff2-main {
-  padding-top: 20px;
-
-  .tariff2-main__balance-btn {
-    max-width: unset;
-    width: unset;
-
-    @media (max-width: 767px) {
-      width: 100%;
-    }
-
-    &.btn-styled-new2 {
-      height: 44px;
-    }
-  }
-  @media (max-width: 767px) {
-    .tariff2-main__title {
-      font-size: 24px;
-      // padding-top: 20px;
-      // margin-bottom: 0;
-    }
-  }
-}
-
-.tariff-main__title {
-  @media only screen and (max-width: 767px) {
-    margin-top: 18px;
-  }
-}
-
 // Payment
 .payment_form {
   input[type="checkbox"] {
@@ -2180,21 +2149,34 @@ a.dropdown-toggle:visited {
   width: 100%;
 }
 
-// feeds
-.modal-feed {
-  .modal-footer {
-    .modal-feed__btn {
-      max-width: unset;
+// Payments https://dev.olan.ru/payments
+.form-received-services {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 
-      @media (max-width: 767px) {
-        margin: 0 6px 6px;
-      }
-    }
+  label.control-label {
+    width: 100%;
+  }
+
+  .form-control-static {
+    width: 100%;
+  }
+
+  .form-group a:not(.btn) {
+    display: block;
+    margin-top: 8px;
   }
 }
-.btn-styled-new2_outline {
-  border: solid 1px #2f8dd3;
-  color: #2f8dd3;
-  background: transparent;
-  background-image: none;
+
+// Panel
+.panel.panel-danger.panel-pricing {
+  .panel-heading {
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    right: 6px;
+    top: 4px;
+  }
 }

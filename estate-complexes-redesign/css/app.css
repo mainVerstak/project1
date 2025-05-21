@@ -1689,33 +1689,6 @@ a.dropdown-toggle:visited {
   font-weight: unset;
 }
 
-.tariff2-main {
-  padding-top: 20px;
-}
-.tariff2-main .tariff2-main__balance-btn {
-  max-width: unset;
-  width: unset;
-}
-@media (max-width: 767px) {
-  .tariff2-main .tariff2-main__balance-btn {
-    width: 100%;
-  }
-}
-.tariff2-main .tariff2-main__balance-btn.btn-styled-new2 {
-  height: 44px;
-}
-@media (max-width: 767px) {
-  .tariff2-main .tariff2-main__title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .tariff-main__title {
-    margin-top: 18px;
-  }
-}
-
 .payment_form input[type=checkbox] {
   margin-top: 2px;
 }
@@ -2227,6 +2200,31 @@ a.dropdown-toggle:visited {
   color: #2f8dd3;
   background: transparent;
   background-image: none;
+}
+
+.form-received-services {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form-received-services label.control-label {
+  width: 100%;
+}
+.form-received-services .form-control-static {
+  width: 100%;
+}
+.form-received-services .form-group a:not(.btn) {
+  display: block;
+  margin-top: 8px;
+}
+
+.panel.panel-danger.panel-pricing .panel-heading {
+  position: relative;
+}
+.panel.panel-danger.panel-pricing .close {
+  position: absolute;
+  right: 6px;
+  top: 4px;
 }
 
 .ds-slider {

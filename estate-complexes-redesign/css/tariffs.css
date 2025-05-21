@@ -1,0 +1,37 @@
+.tariff2-main {
+  padding-top: 20px;
+}
+.tariff2-main .tariff2-main__balance-btn {
+  max-width: unset;
+  width: unset;
+}
+@media (max-width: 767px) {
+  .tariff2-main .tariff2-main__balance-btn {
+    width: 100%;
+  }
+}
+.tariff2-main .tariff2-main__balance-btn.btn-styled-new2 {
+  height: 44px;
+}
+@media (max-width: 767px) {
+  .tariff2-main .tariff2-main__title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tariff-main__title {
+    margin-top: 18px;
+  }
+}
+
+.modal-feed .modal-footer .modal-feed__btn {
+  max-width: unset;
+}
+@media (max-width: 767px) {
+  .modal-feed .modal-footer .modal-feed__btn {
+    margin: 0 6px 6px;
+  }
+}
+
+/*# sourceMappingURL=tariffs.css.map */
