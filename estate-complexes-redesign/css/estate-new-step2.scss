@@ -25,6 +25,10 @@ $color-visited: #c40dd4;
     line-height: 1.2;
     margin-bottom: 15px;
   }
+
+  &:has(.form-group.animated-radios-and-checkboxes) {
+    padding-bottom: 10px;
+  }
 }
 
 .control-label {
@@ -139,5 +143,96 @@ $color-visited: #c40dd4;
     .btn {
       width: 100%;
     }
+  }
+}
+
+.text-thin {
+  font-weight: 400;
+}
+
+.form-sub-section {
+  margin-bottom: 15px;
+
+  &:last-child,
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+
+  h3.form-section-title,
+  .form-group.dropdown-with-counter {
+    margin-bottom: 10px;
+  }
+}
+.add-field-container {
+  .btn-link {
+    color: $color-primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+
+    &:hover {
+      color: $color-primary-hover;
+      text-decoration: none;
+    }
+    &:active {
+      color: $color-primary-hover;
+    }
+    &:visited {
+      color: $color-primary;
+    }
+  }
+}
+
+.form-wrapper-horizontal {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  @media (max-width: 768px) {
+    gap: 0;
+  }
+}
+
+// Checkbox
+.animated-radios-and-checkboxes {
+  .checkbox {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      padding: 0;
+      height: unset;
+    }
+  }
+
+  &.form-group {
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.step-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  .btn {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 }
