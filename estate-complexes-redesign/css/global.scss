@@ -1915,7 +1915,6 @@ a.dropdown-toggle:visited {
 
 .table-responsive {
   border: 1px solid $color-secondary;
-  border-top: none;
   margin-bottom: 20px;
 
   table {
@@ -2066,6 +2065,7 @@ a.dropdown-toggle:visited {
 // Labels
 .label {
   border-radius: 1.25em;
+  display: inline-flex;
 }
 .label-info {
   background-color: $color-primary;
@@ -2188,5 +2188,12 @@ a.dropdown-toggle:visited {
     position: absolute;
     right: 6px;
     top: 4px;
+  }
+}
+
+// Table
+.hot-pakages-table {
+  .table > tbody > tr > td {
+    vertical-align: middle;
   }
 }

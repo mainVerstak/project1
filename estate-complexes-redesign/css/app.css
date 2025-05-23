@@ -1988,7 +1988,6 @@ a.dropdown-toggle:visited {
 
 .table-responsive {
   border: 1px solid #e6eff9;
-  border-top: none;
   margin-bottom: 20px;
 }
 .table-responsive table {
@@ -2118,6 +2117,7 @@ a.dropdown-toggle:visited {
 
 .label {
   border-radius: 1.25em;
+  display: inline-flex;
 }
 
 .label-info {
@@ -2217,6 +2217,10 @@ a.dropdown-toggle:visited {
   position: absolute;
   right: 6px;
   top: 4px;
+}
+
+.hot-pakages-table .table > tbody > tr > td {
+  vertical-align: middle;
 }
 
 .ds-slider {
@@ -6054,7 +6058,7 @@ header .balance-currency {
   border-radius: 1.25em;
 }
 .extendedEntity .ds-annouce-info .panel-body-adv-block.badge.alert-danger {
-  background-color: #d9534f;
+  background-color: #084c95;
   color: #ffffff;
 }
 .extendedEntity .panel-body-adv-block noindex {
