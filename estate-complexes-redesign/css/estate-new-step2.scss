@@ -121,8 +121,10 @@ $color-visited: #c40dd4;
     }
   }
 }
-.form-vertical .form-group > div.form-counter {
-  width: unset;
+@media (min-width: 768px) {
+  .form-vertical .form-group > div.form-counter {
+    width: unset;
+  }
 }
 
 .form-group.dropdown-with-counter {
@@ -186,12 +188,19 @@ $color-visited: #c40dd4;
 
 .form-wrapper-horizontal {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 
-  @media (max-width: 768px) {
-    gap: 0;
+  .control-label:not(:has(.tooltip-container)) {
+    margin-top: 3px;
+    margin-bottom: 11px;
+  }
+
+  @media (max-width: 767px) {
+    .form-group {
+      margin-bottom: 0;
+      width: 100%;
+    }
   }
 }
 
