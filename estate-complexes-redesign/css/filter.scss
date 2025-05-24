@@ -542,9 +542,6 @@
     }
   }
 }
-.map_panel_hider {
-  top: 10px;
-}
 
 .well .search_form_action .btn-group .dropdown-toggle {
   text-shadow: none;
@@ -672,6 +669,14 @@
     .form-group.offerTypeButtons .btnText,
     .form-group.categoryButtons .btnText {
       font-size: 14px;
+    }
+
+    .additional_search_params_container_action {
+      .form-group {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+      }
     }
   }
   #searchFormModal .modal-body label.btn:only-child {

@@ -2193,7 +2193,68 @@ a.dropdown-toggle:visited {
 
 // Table
 .hot-packages-table {
-  .table > tbody > tr > td {
-    vertical-align: middle;
+  border: 1px solid $color-secondary;
+  border-top: none;
+
+  .table {
+    margin-bottom: 0;
+
+    > tbody > tr > td {
+      vertical-align: middle;
+    }
+  }
+
+  ._span-tabel-label {
+    display: none;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+li.nav-tabs-dropdown {
+  width: 300px;
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.edit-agency {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .col-md-2 {
+    width: 100%;
+  }
+
+  .has-error {
+    .input-group:has(.input-group-addon) {
+      .input-group-addon {
+        border-color: $color-invalid;
+        color: $color-dark;
+        background-color: $color-surface;
+      }
+    }
+  }
+  .has-success {
+    .input-group:has(.input-group-addon) {
+      .input-group-addon {
+        border-color: $color-valid;
+        color: $color-dark;
+        background-color: $color-surface;
+      }
+    }
+  }
+  .input-group:has(.input-group-addon) {
+    .input-group-addon {
+      color: $color-dark;
+      border-color: $color-secondary;
+      background-color: $color-surface;
+    }
+    .form-control {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
   }
 }

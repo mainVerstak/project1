@@ -2219,8 +2219,60 @@ a.dropdown-toggle:visited {
   top: 4px;
 }
 
+.hot-packages-table {
+  border: 1px solid #e6eff9;
+  border-top: none;
+}
+.hot-packages-table .table {
+  margin-bottom: 0;
+}
 .hot-packages-table .table > tbody > tr > td {
   vertical-align: middle;
+}
+.hot-packages-table ._span-tabel-label {
+  display: none;
+}
+@media (max-width: 767px) {
+  .hot-packages-table ._span-tabel-label {
+    display: none;
+  }
+}
+
+li.nav-tabs-dropdown {
+  width: 300px;
+}
+@media (max-width: 767px) {
+  li.nav-tabs-dropdown {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.edit-agency {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.edit-agency .col-md-2 {
+  width: 100%;
+}
+.edit-agency .has-error .input-group:has(.input-group-addon) .input-group-addon {
+  border-color: #f55c3d;
+  color: #242a3e;
+  background-color: #f6f7f9;
+}
+.edit-agency .has-success .input-group:has(.input-group-addon) .input-group-addon {
+  border-color: #acf256;
+  color: #242a3e;
+  background-color: #f6f7f9;
+}
+.edit-agency .input-group:has(.input-group-addon) .input-group-addon {
+  color: #242a3e;
+  border-color: #e6eff9;
+  background-color: #f6f7f9;
+}
+.edit-agency .input-group:has(.input-group-addon) .form-control {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .ds-slider {
@@ -3694,7 +3746,7 @@ a.ds-button:hover {
   font-weight: 700;
 }
 .header-city-btn span {
-  max-width: calc(100vw - 230px);
+  max-width: calc(100vw - 270px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -4896,10 +4948,6 @@ header .balance-currency {
   margin-left: 6px;
 }
 
-.map_panel_hider {
-  top: 10px;
-}
-
 .well .search_form_action .btn-group .dropdown-toggle {
   text-shadow: none;
   -webkit-box-shadow: none;
@@ -5017,6 +5065,11 @@ header .balance-currency {
   #searchFormModal .form-group.offerTypeButtons .btnText,
   #searchFormModal .form-group.categoryButtons .btnText {
     font-size: 14px;
+  }
+  #searchFormModal .additional_search_params_container_action .form-group {
+    flex: unset;
+    max-width: 100%;
+    width: 100%;
   }
   #searchFormModal .modal-body label.btn:only-child {
     display: flex;
