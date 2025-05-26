@@ -25,43 +25,101 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function formCounters() {
-    const formCounters = document.querySelectorAll(".form-counter");
+  function formCounters(counter) {
+    const input = counter.querySelector(".form-counter__input");
+    const btnMinus = counter.querySelector(".form-counter__btn-minus");
+    const btnPlus = counter.querySelector(".form-counter__btn-plus");
 
-    formCounters.forEach((counter) => {
-      const input = counter.querySelector(".form-counter__input");
-      const btnMinus = counter.querySelector(".form-counter__btn-minus");
-      const btnPlus = counter.querySelector(".form-counter__btn-plus");
-      const btnDelete = counter.querySelector(".form-counter__btn-delete");
+    if (btnMinus) {
+      if (input.value <= 1) {
+        btnMinus.disabled = true;
+      }
 
-      if (btnMinus) {
-        if (input.value <= 1) {
+      btnMinus.addEventListener("click", function () {
+        if (input.value > 2) {
+          input.value--;
+        } else {
+          input.value = 1;
           btnMinus.disabled = true;
         }
 
-        btnMinus.addEventListener("click", function () {
-          if (input.value > 2) {
-            input.value--;
-          } else {
-            input.value = 1;
-            btnMinus.disabled = true;
-          }
-        });
-      }
+        formCounterDelete(counter);
+      });
+    }
 
-      if (btnPlus) {
-        btnPlus.addEventListener("click", function () {
-          input.value++;
-          btnMinus.disabled = false;
-        });
-      }
+    if (btnPlus) {
+      btnPlus.addEventListener("click", function () {
+        input.value++;
+        btnMinus.disabled = false;
 
-      if (btnDelete) {
-        return;
-      }
+        formCounterDelete(counter);
+      });
+    }
+  }
+
+  function formCounterDelete(counter) {
+    const input = counter.querySelector(".form-counter__input");
+    const btnMinus = counter.querySelector(".form-counter__btn-minus");
+    const btnDelete = counter.querySelector(".form-counter__btn-delete");
+
+    if (!btnDelete) return;
+
+    if (input.value > 1) {
+      btnMinus.classList.remove("hidden");
+      btnDelete.classList.add("hidden");
+    }
+
+    if (input.value <= 1) {
+      btnDelete.classList.remove("hidden");
+      btnMinus.classList.add("hidden");
+    }
+  }
+
+  function deleteDropdownWithCounter(dropdown) {
+    const btn = dropdown.querySelector(".form-counter__btn-delete");
+    btn.addEventListener("click", function () {
+      dropdown.remove();
     });
   }
 
+  function addDropdownWithCounter(subSection) {
+    const exempleDd = subSection.querySelector(".dropdown-with-counter");
+    const btnContainer = subSection.querySelector(".add-field-container");
+    if (!exempleDd) return;
+    if (!btnContainer) return;
+
+    const btn = btnContainer.querySelector(".add-field");
+    if (!btn) return;
+
+    const exempleDdHtml = exempleDd.innerHTML;
+
+    btn.addEventListener("click", function () {
+      const newDropdown = document.createElement("div");
+      newDropdown.classList.add("form-group", "dropdown-with-counter");
+      newDropdown.innerHTML = exempleDdHtml;
+
+      const formCounter = newDropdown.querySelector(".form-counter");
+
+      btnContainer.prepend(newDropdown);
+      deleteDropdownWithCounter(newDropdown);
+      formCounters(formCounter);
+    });
+  }
+
+  // Initial
+  document.querySelectorAll(".form-counter").forEach((counter) => {
+    formCounters(counter);
+    formCounterDelete(counter);
+  });
+
+  document.querySelectorAll(".dropdown-with-counter").forEach((dropdown) => {
+    deleteDropdownWithCounter(dropdown);
+  });
+
+  document.querySelectorAll(".form-sub-section").forEach((subSection) => {
+    console.log(subSection);
+    addDropdownWithCounter(subSection);
+  });
+
   tooltips();
-  formCounters();
 });

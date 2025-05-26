@@ -2248,31 +2248,52 @@ li.nav-tabs-dropdown {
   }
 }
 
+.edit-developer,
 .edit-agency {
   max-width: 500px;
   margin: 0 auto;
 }
+.edit-developer .col-md-2,
 .edit-agency .col-md-2 {
   width: 100%;
 }
+.edit-developer .has-error .input-group:has(.input-group-addon) .input-group-addon,
 .edit-agency .has-error .input-group:has(.input-group-addon) .input-group-addon {
   border-color: #f55c3d;
   color: #242a3e;
   background-color: #f6f7f9;
 }
+.edit-developer .has-success .input-group:has(.input-group-addon) .input-group-addon,
 .edit-agency .has-success .input-group:has(.input-group-addon) .input-group-addon {
   border-color: #acf256;
   color: #242a3e;
   background-color: #f6f7f9;
 }
+.edit-developer .input-group:has(.input-group-addon) .input-group-addon,
 .edit-agency .input-group:has(.input-group-addon) .input-group-addon {
   color: #242a3e;
   border-color: #e6eff9;
   background-color: #f6f7f9;
 }
+.edit-developer .input-group:has(.input-group-addon) .form-control,
 .edit-agency .input-group:has(.input-group-addon) .form-control {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+}
+
+.container .jumbotron,
+.container-fluid .jumbotron {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .container .jumbotron,
+  .container-fluid .jumbotron {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .ds-slider {
@@ -7081,6 +7102,11 @@ footer {
 }
 #new_advertisement .fields .save-button-advertisement .help-block {
   margin-top: 16px;
+}
+@media (max-width: 767px) {
+  #new_advertisement .fields .save-button-advertisement .btn.btn-add-advertisement {
+    width: 100%;
+  }
 }
 
 .user-params .fields .btn-group {

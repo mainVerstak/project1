@@ -182,6 +182,11 @@
       .help-block {
         margin-top: 16px;
       }
+      .btn.btn-add-advertisement {
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
     }
   }
 }

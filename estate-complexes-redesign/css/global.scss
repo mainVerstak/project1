@@ -2220,6 +2220,7 @@ li.nav-tabs-dropdown {
   }
 }
 
+.edit-developer,
 .edit-agency {
   max-width: 500px;
   margin: 0 auto;
@@ -2255,6 +2256,22 @@ li.nav-tabs-dropdown {
     .form-control {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
+    }
+  }
+}
+
+// Jumbotron
+.container,
+.container-fluid {
+  .jumbotron {
+    padding-left: 0;
+    padding-right: 0;
+
+    background-color: transparent;
+    border: none;
+    @media screen and (min-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
