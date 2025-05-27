@@ -1,0 +1,20 @@
+.result-block {
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.result-block__main {
+  font-size: 16px;
+  font-weight: 400;
+  color: #242a3e;
+  line-height: 150%;
+  margin-bottom: 5px;
+}
+.result-block__additional {
+  font-size: 14px;
+  font-weight: 400;
+  color: #8c91a6;
+  line-height: 130%;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=estate-new-step-final.css.map */

@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новое объявление - Шаг 4</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/_header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/estate-new-step2.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="js/estate-new-service-script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-nav js-header-top-nav header-top-mobile-hidden">
+        <div class="container">
+          <ul class="nav navbar-nav navbar-right" id="js-navbar-right-header">
+            <li>
+              <a href="https://olan.ru/new-complex-total"
+                ><svg class="icon-default"><use xlink:href="./img/icons.svg#new"></use></svg>
+                Новостройки</a
+              >
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="https://olan.ru/new-cottage-total"
+                ><svg class="icon-default"><use xlink:href="./img/icons.svg#house"></use></svg>
+                Коттеджные поселки</a
+              >
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="https://olan.ru/mortgage"
+                ><svg class="icon-default"><use xlink:href="./img/icons.svg#mortgage"></use></svg>
+                Ипотека</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default navbar-small">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
+                </svg></button
+              ><span class="pull-left"
+                ><a class="navbar-brand" href="https://olan.ru/" style="color: #337ab7"
+                  ><img
+                    class="navbar-brand__logo"
+                    src="https://s.olan.ru/assets/olan-5e5de0b95e57292b2612453138976f5d.svg"
+                    title="olan.ru" /></a
+              ></span>
+            </div>
+            <nav class="sidenav loaded">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a title="Подписки о новых объявлениях" href="https://olan.ru/searches"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#search"></use></svg
+                      ><span class="hidden-sm hidden-lg hidden-md">
+                        Подписки о новых объявлениях</span
+                      ></a
+                    >
+                  </li>
+                  <li class="dropdown nav notepads_block_action">
+                    <a href="https://olan.ru/notepads" title="Избранные"
+                      ><i class="far fa-star"></i
+                      ><span class="hidden-sm hidden-lg hidden-md"> Избранные</span></a
+                    >
+                  </li>
+                  <li class="dropdown nav">
+                    <a title="Мои объявления" href="/cabinet"
+                      ><svg class="icon-default"><use xlink:href="./img/icons.svg#list"></use></svg>
+                      <span class="hidden-sm">Мои объявления</span><span class="hidden-sm"></span
+                    ></a>
+                  </li>
+                  <li class="dropdown nav">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#registration"></use></svg
+                      ><span class="hidden-sm"> +77055598146</span
+                      ><svg class="icon-default"><use xlink:href="./img/icons.svg#dd"></use></svg
+                    ></a>
+                    <ul class="dropdown-menu sub-menu">
+                      <li>
+                        <a href="https://olan.ru/balance"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#balance"></use>
+                          </svg>
+                          Баланс <strong>0,00 </strong> <span class="balance-currency">₽</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/payments"
+                          ><i class="far fa-money-bill-alt"></i> Подключенные услуги</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/phone_calls"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#phone"></use>
+                          </svg>
+                          Звонки</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/users-edit"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#setting"></use>
+                          </svg>
+                          Настройки</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          data-no-turbolink="true"
+                          rel="nofollow"
+                          data-method="delete"
+                          href="/sign-out"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#logout"></use>
+                          </svg>
+                          Выход</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#estate"></use>
+                      </svg>
+                      Недвижимость</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/mortgage"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/new-complex-total"
+                      ><svg class="icon-default"><use xlink:href="./img/icons.svg#new"></use></svg>
+                      Новостройки</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/new-cottage-total"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/tariffs"><i class="fas fa-coins"></i> Тарифы</a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/xml"><i class="fa fa-code"></i> Пакетная загрузка</a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/advertise"
+                      ><i class="fa fa-bullhorn"></i> Реклама на сайте</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <button aria-label="Close" class="sidenav__close" type="button">
+                <svg class="icon-default"><use xlink:href="./img/icons.svg#cross"></use></svg>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <div class="container container-height-full js-body-container">
+      <h1>Новое объявление, настройки</h1>
+      <div class="well well-sm well-xs">
+        <form
+          class="adv-form fileupload new-record form-vertical fv-form fv-form-bootstrap"
+          id="new_advertisement_step_4"
+          data-site-key="null"
+          data-adv-id="null"
+          enctype="multipart/form-data"
+          action="/estate"
+          accept-charset="UTF-8"
+          method="post"
+          novalidate="novalidate"
+        >
+          <button
+            type="submit"
+            class="fv-hidden-submit"
+            style="display: none; width: 0px; height: 0px"
+          ></button>
+          <input name="utf8" type="hidden" value="✓" /><input
+            type="hidden"
+            name="authenticity_token"
+            value="lkJRXzxHR1VVjFMTOfpBEa4cD0cZQrzXlmjJrqkuAWVxuXJP9m4AW3EampKe2VqezWwyZUDhwC/0eUMIdQhHUA=="
+          />
+          <input
+            class="latitude-value"
+            type="hidden"
+            name="advertisement[latitude]"
+            id="advertisement_latitude"
+            value="56.3195"
+          />
+          <input
+            class="longitude-value"
+            type="hidden"
+            name="advertisement[longitude]"
+            id="advertisement_longitude"
+            value="40.8890"
+          />
+          <input
+            class="zoom-value"
+            type="hidden"
+            value="16"
+            name="advertisement[zoom]"
+            id="advertisement_zoom"
+          />
+
+          <div class="form-group">
+            <label class="control-label" for="advertisement[checkin_time]">Время заезда</label>
+            <div class="btn-group bootstrap-select" style="width: 100%">
+              <button
+                type="button"
+                class="btn dropdown-toggle btn-default"
+                data-toggle="dropdown"
+                data-id="advertisement_checkin_time"
+                title="с 14:00"
+                aria-expanded="false"
+              >
+                <span class="filter-option pull-left">с 14:00</span>
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#chevron-d"></use>
+                </svg>
+              </button>
+              <div class="dropdown-menu open">
+                <ul class="dropdown-menu inner" role="menu">
+                  <li data-original-index="0">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 01:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="1">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 02:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="2">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 03:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="3">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 04:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="4">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 05:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="5">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 06:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="6">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 07:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="7">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 08:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="8">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 09:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="9">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 10:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="10">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 11:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="11">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 12:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="12">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 13:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="13" class="active">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 14:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="14">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 15:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="15">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 16:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="16">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 17:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="17">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 18:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="18">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 19:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="19">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 20:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="20">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 21:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="21">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 22:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="22">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 23:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="23">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 24:00</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <select
+                class="selectpicker"
+                data-width="100%"
+                style="min-height: 34px"
+                name="advertisement[with_children]"
+                id="advertisement_with_children"
+                data-fv-field="advertisement[with_children]"
+                tabindex="-98"
+              >
+                <option value="01_00">с 01:00</option>
+                <option value="02_00">с 02:00</option>
+                <option value="03_00">с 03:00</option>
+                <option value="04_00">с 04:00</option>
+                <option value="05_00">с 05:00</option>
+                <option value="06_00">с 06:00</option>
+                <option value="07_00">с 07:00</option>
+                <option value="08_00">с 08:00</option>
+                <option value="09_00">с 09:00</option>
+                <option value="10_00">с 10:00</option>
+                <option value="11_00">с 11:00</option>
+                <option value="12_00">с 12:00</option>
+                <option value="13_00">с 13:00</option>
+                <option value="14_00" selected>с 14:00</option>
+                <option value="15_00">с 15:00</option>
+                <option value="16_00">с 16:00</option>
+                <option value="17_00">с 17:00</option>
+                <option value="18_00">с 18:00</option>
+                <option value="19_00">с 19:00</option>
+                <option value="20_00">с 20:00</option>
+                <option value="21_00">с 21:00</option>
+                <option value="22_00">с 22:00</option>
+                <option value="23_00">с 23:00</option>
+                <option value="24_00">с 24:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="advertisement[checkout_time]">Время отъезда</label>
+            <div class="btn-group bootstrap-select" style="width: 100%">
+              <button
+                type="button"
+                class="btn dropdown-toggle btn-default"
+                data-toggle="dropdown"
+                data-id="advertisement_checkout_time"
+                title="с 12:00"
+                aria-expanded="false"
+              >
+                <span class="filter-option pull-left">с 12:00</span>
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#chevron-d"></use>
+                </svg>
+              </button>
+              <div class="dropdown-menu open">
+                <ul class="dropdown-menu inner" role="menu">
+                  <li data-original-index="0">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 01:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="1">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 02:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="2">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 03:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="3">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 04:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="4">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 05:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="5">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 06:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="6">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 07:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="7">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 08:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="8">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 09:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="9">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 10:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="10">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 11:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="11" class="active">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 12:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="12">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 13:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="13">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 14:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="14">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 15:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="15">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 16:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="16">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 17:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="17">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 18:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="18">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 19:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="19">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 20:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="20">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 21:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="21">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 22:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="22">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 23:00</span>
+                    </a>
+                  </li>
+                  <li data-original-index="23">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">с 24:00</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <select
+                class="selectpicker"
+                data-width="100%"
+                style="min-height: 34px"
+                name="advertisement[with_children]"
+                id="advertisement_with_children"
+                data-fv-field="advertisement[with_children]"
+                tabindex="-98"
+              >
+                <option value="01_00">с 01:00</option>
+                <option value="02_00">с 02:00</option>
+                <option value="03_00">с 03:00</option>
+                <option value="04_00">с 04:00</option>
+                <option value="05_00">с 05:00</option>
+                <option value="06_00">с 06:00</option>
+                <option value="07_00">с 07:00</option>
+                <option value="08_00">с 08:00</option>
+                <option value="09_00">с 09:00</option>
+                <option value="10_00">с 10:00</option>
+                <option value="11_00">с 11:00</option>
+                <option value="12_00" selected>с 12:00</option>
+                <option value="13_00">с 13:00</option>
+                <option value="14_00">с 14:00</option>
+                <option value="15_00">с 15:00</option>
+                <option value="16_00">с 16:00</option>
+                <option value="17_00">с 17:00</option>
+                <option value="18_00">с 18:00</option>
+                <option value="19_00">с 19:00</option>
+                <option value="20_00">с 20:00</option>
+                <option value="21_00">с 21:00</option>
+                <option value="22_00">с 22:00</option>
+                <option value="23_00">с 23:00</option>
+                <option value="24_00">с 24:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="radios">Тип бронирования</label>
+
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active" for="advertisement_booking_type_full">
+                <input
+                  required="required"
+                  id="advertisement_booking_type_full"
+                  class="user_name_changer_action"
+                  type="radio"
+                  value="full"
+                  name="advertisement[booking_type]"
+                  data-fv-field="advertisement[booking_type]"
+                  checked
+                />
+                Мнгновенное
+              </label>
+              <label class="btn btn-default" for="advertisement_booking_type_on_request">
+                <input
+                  required="required"
+                  id="advertisement_booking_type_on_request"
+                  class="user_name_changer_action"
+                  type="radio"
+                  value="on_request"
+                  name="advertisement[booking_type]"
+                  data-fv-field="advertisement[booking_type]"
+                />
+                По запросу
+              </label>
+            </div>
+
+            <p id="description_for_booking_type_full">
+              После модерации объявления, объект станет доступным для настройки в календаре
+              бронирования. Гости смогут оформлять заявку на доступные даты сразу без ожидания
+              вашего подтверждения.
+            </p>
+
+            <p id="description_for_booking_type_on_request" class="hidden">
+              Оповещения о бронировании доступны в чате, гости смогут оформить заявку только после
+              вашего одобрения.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="advertisement[booking_to_checkin_time]">
+              От бронирования до заселения
+              <div class="tooltip-container">
+                <div class="tooltip-trigger">
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#info"></use>
+                  </svg>
+                </div>
+                <div class="tooltip-content">
+                  <p>
+                    Если от бронирования до заселения меньше указанного времени, вы получите
+                    оповещение о запросе
+                  </p>
+                </div>
+              </div>
+            </label>
+            <div class="btn-group bootstrap-select" style="width: 100%">
+              <button
+                type="button"
+                class="btn dropdown-toggle btn-default"
+                data-toggle="dropdown"
+                data-id="advertisement_booking_to_checkin_time"
+                title="Не менее 2 часов"
+                aria-expanded="false"
+              >
+                <span class="filter-option pull-left">Не менее 2 часов</span>
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#chevron-d"></use>
+                </svg>
+              </button>
+              <div class="dropdown-menu open">
+                <ul class="dropdown-menu inner" role="menu">
+                  <li data-original-index="0">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Без ограничений</span>
+                    </a>
+                  </li>
+                  <li data-original-index="1">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 1 часа</span>
+                    </a>
+                  </li>
+                  <li data-original-index="2" class="active">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 2 часов</span>
+                    </a>
+                  </li>
+                  <li data-original-index="3">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 3 часов</span>
+                    </a>
+                  </li>
+                  <li data-original-index="4">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 4 часов</span>
+                    </a>
+                  </li>
+                  <li data-original-index="5">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 5 часов</span>
+                    </a>
+                  </li>
+                  <li data-original-index="6">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 6 часов</span>
+                    </a>
+                  </li>
+                  <li data-original-index="7">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 12 часов</span>
+                    </a>
+                  </li>
+                  <li data-original-index="8">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 24 часов (сутки)</span>
+                    </a>
+                  </li>
+                  <li data-original-index="9">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 36 часов</span>
+                    </a>
+                  </li>
+                  <li data-original-index="10">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Не менее 48 часов (двое суток)</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <select
+                class="selectpicker"
+                data-width="100%"
+                style="min-height: 34px"
+                name="advertisement[booking_to_checkin_time]"
+                id="advertisement_booking_to_checkin_time"
+                data-fv-field="advertisement[booking_to_checkin_time]"
+                tabindex="-98"
+              >
+                <option value="all">Без ограничений</option>
+                <option value="1">Не менее 1 часа</option>
+                <option value="2" selected>Не менее 2 часов</option>
+                <option value="3">Не менее 3 часов</option>
+                <option value="4">Не менее 4 часов</option>
+                <option value="5">Не менее 5 часов</option>
+                <option value="6">Не менее 6 часов</option>
+                <option value="12">Не менее 12 часов</option>
+                <option value="24">Не менее 24 часов (сутки)</option>
+                <option value="36">Не менее 36 часов</option>
+                <option value="48">Не менее 48 часов (двое суток)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="advertisement[full_booking_action_period]">
+              Мнгновенное броинрование действует
+              <div class="tooltip-container">
+                <div class="tooltip-trigger">
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#info"></use>
+                  </svg>
+                </div>
+                <div class="tooltip-content">
+                  <p>
+                    Если гость запросит заселение после указанного периода, запрос придёт вам на
+                    согласование. Вы сможете изменить этот параметр в календаре бронирования,
+                    включая индивидуальные настройки по конкретным дням
+                  </p>
+                </div>
+              </div>
+            </label>
+            <div class="btn-group bootstrap-select" style="width: 100%">
+              <button
+                type="button"
+                class="btn dropdown-toggle btn-default"
+                data-toggle="dropdown"
+                data-id="advertisement_full_booking_action_period"
+                title="На 6 месяцев вперед"
+                aria-expanded="false"
+              >
+                <span class="filter-option pull-left">На 6 месяцев вперед</span>
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#chevron-d"></use>
+                </svg>
+              </button>
+              <div class="dropdown-menu open">
+                <ul class="dropdown-menu inner" role="menu">
+                  <li data-original-index="0">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Без ограничений</span>
+                    </a>
+                  </li>
+                  <li data-original-index="1">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">На месяц вперед</span>
+                    </a>
+                  </li>
+                  <li data-original-index="2">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">На 2 месяца вперед</span>
+                    </a>
+                  </li>
+                  <li data-original-index="3">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">На 3 месяца вперед</span>
+                    </a>
+                  </li>
+                  <li data-original-index="4">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">На 4 месяца вперед</span>
+                    </a>
+                  </li>
+                  <li data-original-index="5">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">На 5 месяцев вперед</span>
+                    </a>
+                  </li>
+                  <li data-original-index="6" class="active">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">На 6 месяцев вперед</span>
+                    </a>
+                  </li>
+                  <li data-original-index="7">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">На год вперед</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <select
+                class="selectpicker"
+                data-width="100%"
+                style="min-height: 34px"
+                name="advertisement[booking_to_checkin_time]"
+                id="advertisement_booking_to_checkin_time"
+                data-fv-field="advertisement[booking_to_checkin_time]"
+                tabindex="-98"
+              >
+                <option value="all">Без ограничений</option>
+                <option value="1">На месяц вперед</option>
+                <option value="2">На 2 месяца вперед</option>
+                <option value="3">На 3 месяца вперед</option>
+                <option value="4">На 4 месяца вперед</option>
+                <option value="5">На 5 месяцев вперед</option>
+                <option value="6" selected>На 6 месяцев вперед</option>
+                <option value="12">На год вперед</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label" for="advertisement[final_cleaning]">
+              Финальная уборка
+            </label>
+            <div class="btn-group bootstrap-select" style="width: 100%">
+              <button
+                type="button"
+                class="btn dropdown-toggle btn-default"
+                data-toggle="dropdown"
+                data-id="advertisement_final_cleaning"
+                title="Включена в стоимость аренды"
+                aria-expanded="false"
+              >
+                <span class="filter-option pull-left">Включена в стоимость аренды</span>
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#chevron-d"></use>
+                </svg>
+              </button>
+              <div class="dropdown-menu open">
+                <ul class="dropdown-menu inner" role="menu">
+                  <li data-original-index="0">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text text-thin">Выберите</span>
+                    </a>
+                  </li>
+                  <li data-original-index="1">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Включена в стоимость аренды</span>
+                    </a>
+                  </li>
+                  <li data-original-index="2">
+                    <a tabindex="0" data-tokens="null">
+                      <span class="text">Оплачивается отдельно</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <select
+                class="selectpicker"
+                data-width="100%"
+                style="min-height: 34px"
+                name="advertisement[final_cleaning]"
+                id="advertisement_final_cleaning"
+                data-fv-field="advertisement[final_cleaning]"
+                tabindex="-98"
+              >
+                <option value="">Выберите</option>
+                <option value="1">Включена в стоимость аренды</option>
+                <option value="2">Оплачивается отдельно</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group has-feedback has-error">
+            <label class="control-label" for="deposit">
+              Страховой депозит, руб
+              <div class="tooltip-container">
+                <div class="tooltip-trigger">
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#info"></use>
+                  </svg>
+                </div>
+                <div class="tooltip-content">
+                  <p>Залог с гостя при заезде. При отъезде залог возвращается гостю</p>
+                </div>
+              </div>
+            </label>
+            <div class="controls">
+              <input
+                type="text"
+                name="advertisement[deposit]"
+                id="advertisement_deposit"
+                class="form-control"
+                autocomplete="off"
+                data-fv-field="advertisement[deposit]"
+                placeholder="Введите сумму"
+              />
+              <small
+                class="help-block"
+                data-fv-validator="notEmpty"
+                data-fv-for="advertisement[deposit]"
+                data-fv-result="VALID"
+              >
+                Пожалуйста, введите сумму страхового депозита
+              </small>
+            </div>
+          </div>
+
+          <div class="second-step-advertisement">
+            <!-- <div class="adv-params">
+              <div class="yandex-adv-hide-content"></div>
+            </div> -->
+            <div class="row"><div class="yandex-adv col-sm-offset-2 col-sm-10"></div></div>
+          </div>
+          <div class="fields hide-yandex-adv">
+            <div class="step-buttons">
+              <a
+                class="btn btn-default prev-button-advertisement btn-remove-advertisement"
+                href="/estate-complexes-redesign/estate-new.html"
+              >
+                На шаг назад
+              </a>
+              <a
+                class="btn btn-primary next-button-advertisement btn-add-advertisement"
+                href="/estate-complexes-redesign/estate-new-step-3.html"
+              >
+                Далее
+              </a>
+            </div>
+          </div>
+          <div
+            class="progress-bar progress-bottom"
+            id="add_advertisement_progress"
+            role="progressbar"
+            aria-valuenow="80"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </form>
+      </div>
+      <div class="help-block small compliment-site">
+        Подать объявление о продаже или сдаче в аренду квартиры или иных объектов недвижимости на
+        olan.ru — самый полный сайт по продаже и аренде недвижимости в городе.
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2025</div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+    <noscript
+      ><img alt="" src="//mc.yandex.ru/watch/91087771" style="position: absolute; left: -9999px"
+    /></noscript>
+    <script>
+      window.__firstPartyParams ||= { email: "—", phone_number: "+77055598146", first_name: "—" };
+    </script>
+  </body>
+</html>

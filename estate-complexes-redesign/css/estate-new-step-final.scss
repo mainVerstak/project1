@@ -1,0 +1,23 @@
+$color-dark: #242a3e;
+$color-gray: #8c91a6;
+
+.result-block {
+  margin-bottom: 20px;
+  margin-top: 15px;
+
+  &__main {
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-dark;
+    line-height: 150%;
+    margin-bottom: 5px;
+  }
+
+  &__additional {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-gray;
+    line-height: 130%;
+    margin-bottom: 0;
+  }
+}

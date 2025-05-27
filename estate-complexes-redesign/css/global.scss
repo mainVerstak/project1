@@ -1926,6 +1926,12 @@ a.dropdown-toggle:visited {
     border-top: none;
     margin-bottom: 0;
   }
+
+  @media (max-width: 767px) {
+    tbody > tr > td a {
+      display: inline-flex;
+    }
+  }
 }
 
 // Form Adv
@@ -2062,6 +2068,10 @@ a.dropdown-toggle:visited {
   gap: 8px;
 }
 
+// New Invoce modal
+#newInvoiceModal {
+}
+
 // Labels
 .label {
   border-radius: 1.25em;
@@ -2095,8 +2105,14 @@ a.dropdown-toggle:visited {
       margin-bottom: 15px;
     }
 
+    .btn-flex-row {
+      display: flex;
+      gap: 8px;
+    }
+
     .btn {
-      display: inline;
+      display: inline-flex;
+      width: 100%;
     }
   }
 }

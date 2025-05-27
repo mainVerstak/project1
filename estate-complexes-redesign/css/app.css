@@ -2000,6 +2000,11 @@ a.dropdown-toggle:visited {
     margin-bottom: 0;
   }
 }
+@media (max-width: 767px) {
+  .table-responsive tbody > tr > td a {
+    display: inline-flex;
+  }
+}
 
 .adv-form .col-lg-offset-2 {
   margin-left: 0;
@@ -2143,8 +2148,13 @@ a.dropdown-toggle:visited {
 .modal .modal-dialog .modal-content .modal-body form.new_invoice .form-group {
   margin-bottom: 15px;
 }
+.modal .modal-dialog .modal-content .modal-body form.new_invoice .btn-flex-row {
+  display: flex;
+  gap: 8px;
+}
 .modal .modal-dialog .modal-content .modal-body form.new_invoice .btn {
-  display: inline;
+  display: inline-flex;
+  width: 100%;
 }
 
 .abuse_block_action .has-error .radio,

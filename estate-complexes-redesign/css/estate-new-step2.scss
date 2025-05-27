@@ -245,3 +245,11 @@ $color-visited: #c40dd4;
     justify-content: center;
   }
 }
+
+.form-group p {
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: $color-dark;
+  font-weight: 400;
+}
