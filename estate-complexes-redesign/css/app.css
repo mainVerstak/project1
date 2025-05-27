@@ -1583,6 +1583,7 @@ a.dropdown-toggle:visited {
 .animated-radios-and-checkboxes .checkbox .cr,
 .animated-radios-and-checkboxes .radio .cr {
   width: 20px;
+  min-width: 20px;
   height: 20px;
   border-radius: 5px;
   border: 1px solid #8c91a6;
