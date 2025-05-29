@@ -646,6 +646,10 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 
   .help-block {
     color: $color-invalid;
+
+    &.contact-note {
+      color: #737373;
+    }
   }
 }
 
@@ -680,6 +684,10 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 
   .help-block {
     color: $color-valid;
+
+    &.contact-note {
+      color: #737373;
+    }
   }
 }
 
@@ -2289,6 +2297,26 @@ li.nav-tabs-dropdown {
     @media screen and (min-width: 768px) {
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+}
+
+// New Renovation
+#new_reservation_contact {
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+.modal-application__title.col-sm-12 {
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
+}
+.modal-application__text {
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+    p {
+      margin-bottom: 0;
     }
   }
 }

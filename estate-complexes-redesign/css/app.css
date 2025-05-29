@@ -609,6 +609,9 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 .has-error .help-block {
   color: #f55c3d;
 }
+.has-error .help-block.contact-note {
+  color: #737373;
+}
 
 .has-success .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown),
 .has-success .bootstrap-select .dropdown-toggle {
@@ -637,6 +640,9 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 .has-success .help-block {
   color: #acf256;
+}
+.has-success .help-block.contact-note {
+  color: #737373;
 }
 
 select.form-control::after {
@@ -2304,6 +2310,27 @@ li.nav-tabs-dropdown {
   .container-fluid .jumbotron {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #new_reservation_contact {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-application__title.col-sm-12 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-application__text {
+    margin-bottom: 0;
+  }
+  .modal-application__text p {
+    margin-bottom: 0;
   }
 }
 
@@ -4930,14 +4957,6 @@ header .balance-currency {
   border-radius: 5px;
   margin-bottom: 4px;
 }
-.map_panel .add_search_link_action,
-.map_panel .searchFormPage .add_search_link_action {
-  color: #084c95;
-}
-.map_panel .add_search_link_action:hover,
-.map_panel .searchFormPage .add_search_link_action:hover {
-  color: #07386c;
-}
 .map_panel .btn-group .get-search-locations-action {
   text-shadow: none;
   -webkit-box-shadow: none;
@@ -6992,6 +7011,10 @@ footer {
 .form-vertical .form-group.has-error .help-block,
 .form-horizontal .form-group.has-error .help-block {
   color: #f55c3d;
+}
+.form-vertical .form-group.has-error .help-block.contact-note,
+.form-horizontal .form-group.has-error .help-block.contact-note {
+  color: #737373;
 }
 .form-vertical .form-group.has-error .form-control-feedback,
 .form-horizontal .form-group.has-error .form-control-feedback {

@@ -42,6 +42,9 @@
       }
       .help-block {
         color: $color-invalid;
+        &.contact-note {
+          color: #737373;
+        }
       }
       .form-control-feedback {
         color: $color-invalid;
