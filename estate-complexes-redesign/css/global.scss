@@ -2070,6 +2070,16 @@ a.dropdown-toggle:visited {
   }
 }
 
+.edit-tariff-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+
+  .col-sm-2 {
+    width: 100%;
+  }
+}
+
 // Invoice
 .invoice-btn-container {
   display: flex;

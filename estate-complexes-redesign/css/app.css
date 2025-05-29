@@ -2121,6 +2121,15 @@ a.dropdown-toggle:visited {
   border-bottom-color: transparent;
 }
 
+.edit-tariff-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.edit-tariff-form .col-sm-2 {
+  width: 100%;
+}
+
 .invoice-btn-container {
   display: flex;
   align-items: center;
