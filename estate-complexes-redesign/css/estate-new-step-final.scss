@@ -5,7 +5,7 @@ $color-gray: #8c91a6;
   margin-bottom: 20px;
   margin-top: 15px;
 
-  &__main {
+  .result-block__main {
     font-size: 16px;
     font-weight: 400;
     color: $color-dark;
@@ -13,7 +13,7 @@ $color-gray: #8c91a6;
     margin-bottom: 5px;
   }
 
-  &__additional {
+  .result-block__additional {
     font-size: 14px;
     font-weight: 400;
     color: $color-gray;
