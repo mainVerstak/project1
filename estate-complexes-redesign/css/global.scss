@@ -2210,6 +2210,15 @@ a.dropdown-toggle:visited {
   }
 }
 
+.form-activation-phone {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .col-md-2 {
+    width: 100%;
+  }
+}
+
 // Panel
 .panel.panel-danger.panel-pricing {
   .panel-heading {

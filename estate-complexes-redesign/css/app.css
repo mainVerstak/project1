@@ -2236,6 +2236,14 @@ a.dropdown-toggle:visited {
   margin-top: 8px;
 }
 
+.form-activation-phone {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form-activation-phone .col-md-2 {
+  width: 100%;
+}
+
 .panel.panel-danger.panel-pricing .panel-heading {
   position: relative;
 }
