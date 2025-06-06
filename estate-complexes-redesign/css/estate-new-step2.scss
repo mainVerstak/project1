@@ -276,3 +276,163 @@ $color-visited: #c40dd4;
     }
   }
 }
+
+.select2-custom,
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  border-radius: 5px;
+  border: 1px solid $color-secondary;
+  padding: 0 15px;
+  background-color: $color-white;
+  color: $color-dark;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 130%;
+
+  &:hover {
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $color-primary;
+  }
+
+  &:focus {
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-color: $color-secondary;
+    outline: 2px solid $color-dark;
+    z-index: 1;
+    outline-offset: -2px;
+  }
+
+  .select2-selection__rendered {
+    color: $color-dark;
+    padding-left: 0;
+    padding-right: 20px;
+
+    &[title="Выберите"] {
+      color: $color-primary;
+      font-weight: 400;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    .select2-selection__placeholder {
+      color: $color-dark;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: 0%;
+    }
+  }
+
+  .select2-selection__arrow {
+    right: 12px;
+    top: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.select2-container--default.select2-container--open {
+  &.select2-container--below,
+  &.select2-container--above {
+    .select2-selection--single {
+      border-radius: 5px;
+    }
+  }
+}
+
+.select2-container--default.select2-container--open .select2-selection--single,
+.select2-container--default.select2-container--open .select2-selection--multiple {
+  border-color: $color-secondary;
+  background-color: $color-secondary;
+  color: $color-primary;
+
+  .select2-selection__arrow b {
+    border-color: transparent transparent $color-grey transparent;
+    border-width: 0 4px 5px 4px;
+  }
+}
+
+.select2-dropdown {
+  border: 1px solid $color-secondary;
+  border-radius: 8px;
+  padding: 3px;
+  background-color: $color-white;
+
+  &.select2-dropdown--below {
+    top: calc(100% + 8px);
+  }
+  &.select2-dropdown--above {
+    top: calc(100% - 8px);
+  }
+}
+
+.select2-container--open {
+  .select2-dropdown--below {
+    border-radius: 8px;
+    border-top: 1px solid $color-secondary;
+  }
+  .select2-dropdown--above {
+    border-radius: 8px;
+    border-bottom: 1px solid $color-secondary;
+  }
+}
+
+.select2-container--default .select2-results__option {
+  padding: 8px 12px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-dark;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0%;
+  border-radius: 5px;
+  margin-bottom: 1px;
+
+  &--highlighted[aria-selected] {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+  &--selected {
+    background-color: $color-secondary;
+    color: $color-dark;
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &[aria-selected="true"] {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+}
+// Focus states
+.select2-container--default.select2-container--focus .select2-selection--single {
+  border-color: $color-secondary;
+  color: $color-primary;
+  outline: 2px solid $color-dark;
+  z-index: 1;
+  outline-offset: -2px;
+}
+
+// Disabled state
+.select2-container--default .select2-selection--single.select2-selection--disabled {
+  background-color: $color-secondary;
+  color: $color-grey;
+  cursor: not-allowed;
+  border-color: $color-secondary;
+}

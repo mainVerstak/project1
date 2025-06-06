@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-open-sans.css" />
     <link rel="stylesheet" href="css/fontawesome-all.min.css" />
@@ -35,6 +39,11 @@
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script src="js/estate-new-service-script.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script defer src="js/custom-select-2.js"></script>
   </head>
 
   <body>
@@ -255,356 +264,72 @@
 
           <div class="form-group">
             <label class="control-label" for="advertisement[checkin_time]">Время заезда</label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_checkin_time"
-                title="с 14:00"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">с 14:00</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 01:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 02:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 03:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 04:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="4">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 05:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="5">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 06:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="6">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 07:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="7">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 08:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="8">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 09:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="9">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 10:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="10">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 11:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="11">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 12:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="12">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 13:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="13" class="active">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 14:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="14">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 15:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="15">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 16:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="16">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 17:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="17">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 18:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="18">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 19:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="19">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 20:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="20">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 21:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="21">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 22:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="22">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 23:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="23">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 24:00</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[with_children]"
-                id="advertisement_with_children"
-                data-fv-field="advertisement[with_children]"
-                tabindex="-98"
-              >
-                <option value="01_00">с 01:00</option>
-                <option value="02_00">с 02:00</option>
-                <option value="03_00">с 03:00</option>
-                <option value="04_00">с 04:00</option>
-                <option value="05_00">с 05:00</option>
-                <option value="06_00">с 06:00</option>
-                <option value="07_00">с 07:00</option>
-                <option value="08_00">с 08:00</option>
-                <option value="09_00">с 09:00</option>
-                <option value="10_00">с 10:00</option>
-                <option value="11_00">с 11:00</option>
-                <option value="12_00">с 12:00</option>
-                <option value="13_00">с 13:00</option>
-                <option value="14_00" selected>с 14:00</option>
-                <option value="15_00">с 15:00</option>
-                <option value="16_00">с 16:00</option>
-                <option value="17_00">с 17:00</option>
-                <option value="18_00">с 18:00</option>
-                <option value="19_00">с 19:00</option>
-                <option value="20_00">с 20:00</option>
-                <option value="21_00">с 21:00</option>
-                <option value="22_00">с 22:00</option>
-                <option value="23_00">с 23:00</option>
-                <option value="24_00">с 24:00</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[checkin_time]"
+              id="advertisement_checkin_time"
+              data-fv-field="advertisement[checkin_time]"
+            >
+              <option value="01_00">с 01:00</option>
+              <option value="02_00">с 02:00</option>
+              <option value="03_00">с 03:00</option>
+              <option value="04_00">с 04:00</option>
+              <option value="05_00">с 05:00</option>
+              <option value="06_00">с 06:00</option>
+              <option value="07_00">с 07:00</option>
+              <option value="08_00">с 08:00</option>
+              <option value="09_00">с 09:00</option>
+              <option value="10_00">с 10:00</option>
+              <option value="11_00">с 11:00</option>
+              <option value="12_00">с 12:00</option>
+              <option value="13_00">с 13:00</option>
+              <option value="14_00" selected>с 14:00</option>
+              <option value="15_00">с 15:00</option>
+              <option value="16_00">с 16:00</option>
+              <option value="17_00">с 17:00</option>
+              <option value="18_00">с 18:00</option>
+              <option value="19_00">с 19:00</option>
+              <option value="20_00">с 20:00</option>
+              <option value="21_00">с 21:00</option>
+              <option value="22_00">с 22:00</option>
+              <option value="23_00">с 23:00</option>
+              <option value="24_00">с 24:00</option>
+            </select>
           </div>
 
           <div class="form-group">
             <label class="control-label" for="advertisement[checkout_time]">Время отъезда</label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_checkout_time"
-                title="с 12:00"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">с 12:00</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 01:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 02:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 03:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 04:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="4">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 05:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="5">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 06:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="6">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 07:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="7">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 08:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="8">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 09:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="9">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 10:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="10">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 11:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="11" class="active">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 12:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="12">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 13:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="13">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 14:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="14">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 15:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="15">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 16:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="16">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 17:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="17">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 18:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="18">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 19:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="19">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 20:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="20">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 21:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="21">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 22:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="22">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 23:00</span>
-                    </a>
-                  </li>
-                  <li data-original-index="23">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">с 24:00</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[with_children]"
-                id="advertisement_with_children"
-                data-fv-field="advertisement[with_children]"
-                tabindex="-98"
-              >
-                <option value="01_00">с 01:00</option>
-                <option value="02_00">с 02:00</option>
-                <option value="03_00">с 03:00</option>
-                <option value="04_00">с 04:00</option>
-                <option value="05_00">с 05:00</option>
-                <option value="06_00">с 06:00</option>
-                <option value="07_00">с 07:00</option>
-                <option value="08_00">с 08:00</option>
-                <option value="09_00">с 09:00</option>
-                <option value="10_00">с 10:00</option>
-                <option value="11_00">с 11:00</option>
-                <option value="12_00" selected>с 12:00</option>
-                <option value="13_00">с 13:00</option>
-                <option value="14_00">с 14:00</option>
-                <option value="15_00">с 15:00</option>
-                <option value="16_00">с 16:00</option>
-                <option value="17_00">с 17:00</option>
-                <option value="18_00">с 18:00</option>
-                <option value="19_00">с 19:00</option>
-                <option value="20_00">с 20:00</option>
-                <option value="21_00">с 21:00</option>
-                <option value="22_00">с 22:00</option>
-                <option value="23_00">с 23:00</option>
-                <option value="24_00">с 24:00</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[checkout_time]"
+              id="advertisement_checkout_time"
+              data-fv-field="advertisement[checkout_time]"
+            >
+              <option value="01_00">с 01:00</option>
+              <option value="02_00">с 02:00</option>
+              <option value="03_00">с 03:00</option>
+              <option value="04_00">с 04:00</option>
+              <option value="05_00">с 05:00</option>
+              <option value="06_00">с 06:00</option>
+              <option value="07_00">с 07:00</option>
+              <option value="08_00">с 08:00</option>
+              <option value="09_00">с 09:00</option>
+              <option value="10_00">с 10:00</option>
+              <option value="11_00">с 11:00</option>
+              <option value="12_00" selected>с 12:00</option>
+              <option value="13_00">с 13:00</option>
+              <option value="14_00">с 14:00</option>
+              <option value="15_00">с 15:00</option>
+              <option value="16_00">с 16:00</option>
+              <option value="17_00">с 17:00</option>
+              <option value="18_00">с 18:00</option>
+              <option value="19_00">с 19:00</option>
+              <option value="20_00">с 20:00</option>
+              <option value="21_00">с 21:00</option>
+              <option value="22_00">с 22:00</option>
+              <option value="23_00">с 23:00</option>
+              <option value="24_00">с 24:00</option>
+            </select>
           </div>
 
           <div class="form-group">
@@ -667,101 +392,24 @@
                 </div>
               </div>
             </label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_booking_to_checkin_time"
-                title="Не менее 2 часов"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">Не менее 2 часов</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Без ограничений</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 1 часа</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2" class="active">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 2 часов</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 3 часов</span>
-                    </a>
-                  </li>
-                  <li data-original-index="4">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 4 часов</span>
-                    </a>
-                  </li>
-                  <li data-original-index="5">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 5 часов</span>
-                    </a>
-                  </li>
-                  <li data-original-index="6">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 6 часов</span>
-                    </a>
-                  </li>
-                  <li data-original-index="7">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 12 часов</span>
-                    </a>
-                  </li>
-                  <li data-original-index="8">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 24 часов (сутки)</span>
-                    </a>
-                  </li>
-                  <li data-original-index="9">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 36 часов</span>
-                    </a>
-                  </li>
-                  <li data-original-index="10">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Не менее 48 часов (двое суток)</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[booking_to_checkin_time]"
-                id="advertisement_booking_to_checkin_time"
-                data-fv-field="advertisement[booking_to_checkin_time]"
-                tabindex="-98"
-              >
-                <option value="all">Без ограничений</option>
-                <option value="1">Не менее 1 часа</option>
-                <option value="2" selected>Не менее 2 часов</option>
-                <option value="3">Не менее 3 часов</option>
-                <option value="4">Не менее 4 часов</option>
-                <option value="5">Не менее 5 часов</option>
-                <option value="6">Не менее 6 часов</option>
-                <option value="12">Не менее 12 часов</option>
-                <option value="24">Не менее 24 часов (сутки)</option>
-                <option value="36">Не менее 36 часов</option>
-                <option value="48">Не менее 48 часов (двое суток)</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[booking_to_checkin_time]"
+              id="advertisement_booking_to_checkin_time"
+              data-fv-field="advertisement[booking_to_checkin_time]"
+            >
+              <option value="all">Без ограничений</option>
+              <option value="1">Не менее 1 часа</option>
+              <option value="2" selected>Не менее 2 часов</option>
+              <option value="3">Не менее 3 часов</option>
+              <option value="4">Не менее 4 часов</option>
+              <option value="5">Не менее 5 часов</option>
+              <option value="6">Не менее 6 часов</option>
+              <option value="12">Не менее 12 часов</option>
+              <option value="24">Не менее 24 часов (сутки)</option>
+              <option value="36">Не менее 36 часов</option>
+              <option value="48">Не менее 48 часов (двое суток)</option>
+            </select>
           </div>
 
           <div class="form-group">
@@ -782,136 +430,37 @@
                 </div>
               </div>
             </label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_full_booking_action_period"
-                title="На 6 месяцев вперед"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">На 6 месяцев вперед</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Без ограничений</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">На месяц вперед</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">На 2 месяца вперед</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">На 3 месяца вперед</span>
-                    </a>
-                  </li>
-                  <li data-original-index="4">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">На 4 месяца вперед</span>
-                    </a>
-                  </li>
-                  <li data-original-index="5">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">На 5 месяцев вперед</span>
-                    </a>
-                  </li>
-                  <li data-original-index="6" class="active">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">На 6 месяцев вперед</span>
-                    </a>
-                  </li>
-                  <li data-original-index="7">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">На год вперед</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[booking_to_checkin_time]"
-                id="advertisement_booking_to_checkin_time"
-                data-fv-field="advertisement[booking_to_checkin_time]"
-                tabindex="-98"
-              >
-                <option value="all">Без ограничений</option>
-                <option value="1">На месяц вперед</option>
-                <option value="2">На 2 месяца вперед</option>
-                <option value="3">На 3 месяца вперед</option>
-                <option value="4">На 4 месяца вперед</option>
-                <option value="5">На 5 месяцев вперед</option>
-                <option value="6" selected>На 6 месяцев вперед</option>
-                <option value="12">На год вперед</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[full_booking_action_period]"
+              id="advertisement_full_booking_action_period"
+              data-fv-field="advertisement[full_booking_action_period]"
+            >
+              <option value="all">Без ограничений</option>
+              <option value="1">На месяц вперед</option>
+              <option value="2">На 2 месяца вперед</option>
+              <option value="3">На 3 месяца вперед</option>
+              <option value="4">На 4 месяца вперед</option>
+              <option value="5">На 5 месяцев вперед</option>
+              <option value="6" selected>На 6 месяцев вперед</option>
+              <option value="12">На год вперед</option>
+            </select>
           </div>
 
           <div class="form-group">
             <label class="control-label" for="advertisement[final_cleaning]">
               Финальная уборка
             </label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_final_cleaning"
-                title="Включена в стоимость аренды"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">Включена в стоимость аренды</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text text-thin">Выберите</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Включена в стоимость аренды</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Оплачивается отдельно</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[final_cleaning]"
-                id="advertisement_final_cleaning"
-                data-fv-field="advertisement[final_cleaning]"
-                tabindex="-98"
-              >
-                <option value="">Выберите</option>
-                <option value="1">Включена в стоимость аренды</option>
-                <option value="2">Оплачивается отдельно</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[final_cleaning]"
+              id="advertisement_final_cleaning"
+              data-fv-field="advertisement[final_cleaning]"
+            >
+              <option value="">Выберите</option>
+              <option value="1">Включена в стоимость аренды</option>
+              <option value="2">Оплачивается отдельно</option>
+            </select>
           </div>
 
           <div class="form-group has-feedback has-error">

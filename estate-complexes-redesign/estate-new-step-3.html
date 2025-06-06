@@ -6,7 +6,10 @@
     <title>Новое объявление - Шаг 3</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-open-sans.css" />
@@ -35,6 +38,11 @@
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script src="js/estate-new-service-script.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script defer src="js/custom-select-2.js"></script>
   </head>
 
   <body>
@@ -256,59 +264,17 @@
 
           <div class="form-group">
             <label class="control-label" for="advertisement[with_children]">Можно с детьми</label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_with_children"
-                title="По запросу"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">По запросу</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text text-thin">Выберите</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1" class="active">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">По запросу</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Разрешено</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Запрещено</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[with_children]"
-                id="advertisement_with_children"
-                data-fv-field="advertisement[with_children]"
-                tabindex="-98"
-              >
-                <option value="">Выберите</option>
-                <option value="on_request" selected>По запросу</option>
-                <option value="allowed">Разрешено</option>
-                <option value="denied">Запрещено</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[with_children]"
+              id="advertisement_with_children"
+              data-fv-field="advertisement[with_children]"
+            >
+              <option value="">Выберите</option>
+              <option value="on_request">По запросу</option>
+              <option value="allowed">Разрешено</option>
+              <option value="denied">Запрещено</option>
+            </select>
           </div>
 
           <div class="form-group animated-radios-and-checkboxes">
@@ -334,242 +300,64 @@
 
           <div class="form-group">
             <label class="control-label" for="advertisement[age_children]">Возраст детей</label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_age_children"
-                title="Выберите"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left text-thin">Выберите</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null" class="active">
-                      <span class="text text-thin">Выберите</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">1-3 года</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">3-6 лет</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">6-12 лет</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">12-16 лет</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">16-18 лет</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[with_children]"
-                id="advertisement_with_children"
-                data-fv-field="advertisement[with_children]"
-                tabindex="-98"
-              >
-                <option value="">Выберите</option>
-                <option value="1-3">1-3 года</option>
-                <option value="3-6">3-6 лет</option>
-                <option value="6-12">6-12 лет</option>
-                <option value="12-16">12-16 лет</option>
-                <option value="16-18">16-18 лет</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[age_children]"
+              id="advertisement_age_children"
+              data-fv-field="advertisement[age_children]"
+            >
+              <option value="">Выберите</option>
+              <option value="1-3">1-3 года</option>
+              <option value="3-6">3-6 лет</option>
+              <option value="6-12">6-12 лет</option>
+              <option value="12-16">12-16 лет</option>
+              <option value="16-18">16-18 лет</option>
+            </select>
           </div>
 
           <div class="form-group">
             <label class="control-label" for="advertisement[with_animals]">Можно с животными</label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_with_animals"
-                title="По запросу"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">По запросу</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text text-thin">Выберите</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1" class="active">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">По запросу</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Можно с животными</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Запрещено с животными</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[with_animals]"
-                id="advertisement_with_animals"
-                data-fv-field="advertisement[with_animals]"
-                tabindex="-98"
-              >
-                <option value="">Выберите</option>
-                <option value="on_request" selected>По запросу</option>
-                <option value="allowed">Разрешено</option>
-                <option value="denied">Запрещено</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[with_animals]"
+              id="advertisement_with_animals"
+              data-fv-field="advertisement[with_animals]"
+            >
+              <option value="">Выберите</option>
+              <option value="on_request">По запросу</option>
+              <option value="allowed">Разрешено</option>
+              <option value="denied">Запрещено</option>
+            </select>
           </div>
 
           <div class="form-group">
             <label class="control-label" for="advertisement[smoking]">Курение</label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_smoking"
-                title="Запрещено"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">Запрещено</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text text-thin">Выберите</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1" class="active">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Запрещено</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Разрешено</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Разрешено в специально отведённых местах</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[smoking]"
-                id="advertisement_smoking"
-                data-fv-field="advertisement[smoking]"
-                tabindex="-98"
-              >
-                <option value="">Выберите</option>
-                <option value="denied" selected>Запрещено</option>
-                <option value="allowed">Разрешено</option>
-                <option value="special_place">Разрешено в специально отведённых местах</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[smoking]"
+              id="advertisement_smoking"
+              data-fv-field="advertisement[smoking]"
+            >
+              <option value="">Выберите</option>
+              <option value="denied">Запрещено</option>
+              <option value="allowed">Разрешено</option>
+              <option value="special_place">Разрешено в специально отведённых местах</option>
+            </select>
           </div>
 
           <div class="form-group">
             <label class="control-label" for="advertisement[party]">Вечеринки</label>
-            <div class="btn-group bootstrap-select" style="width: 100%">
-              <button
-                type="button"
-                class="btn dropdown-toggle btn-default"
-                data-toggle="dropdown"
-                data-id="advertisement_party"
-                title="По запросу"
-                aria-expanded="false"
-              >
-                <span class="filter-option pull-left">По запросу</span>
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#chevron-d"></use>
-                </svg>
-              </button>
-              <div class="dropdown-menu open">
-                <ul class="dropdown-menu inner" role="menu">
-                  <li data-original-index="0">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text text-thin">Выберите</span>
-                    </a>
-                  </li>
-                  <li data-original-index="1" class="active">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">По запросу</span>
-                    </a>
-                  </li>
-                  <li data-original-index="2">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Разрешено</span>
-                    </a>
-                  </li>
-                  <li data-original-index="3">
-                    <a tabindex="0" data-tokens="null">
-                      <span class="text">Запрещено</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <select
-                class="selectpicker"
-                data-width="100%"
-                style="min-height: 34px"
-                name="advertisement[party]"
-                id="advertisement_party"
-                data-fv-field="advertisement[party]"
-                tabindex="-98"
-              >
-                <option value="">Выберите</option>
-                <option value="on_request" selected>По запросу</option>
-                <option value="allowed">Разрешено</option>
-                <option value="denied">Запрещено</option>
-              </select>
-            </div>
+            <select
+              class="select2-custom"
+              name="advertisement[party]"
+              id="advertisement_party"
+              data-fv-field="advertisement[party]"
+            >
+              <option value="">Выберите</option>
+              <option value="on_request">По запросу</option>
+              <option value="allowed">Разрешено</option>
+              <option value="denied">Запрещено</option>
+            </select>
           </div>
 
           <div class="second-step-advertisement">
