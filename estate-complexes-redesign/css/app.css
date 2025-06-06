@@ -7200,6 +7200,58 @@ footer {
   line-height: 1.3;
 }
 
+.form-section {
+  border: 1px solid #e6eff9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.form-section h3.form-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #242a3e;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.text-thin {
+  font-weight: 400;
+}
+
+.text-block {
+  margin-bottom: 15px;
+}
+.text-block:last-child {
+  margin-bottom: 0;
+}
+.text-block .text-block__main {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  margin-bottom: 15px;
+}
+.text-block .text-block__additional {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #8c91a6;
+  margin-bottom: 5px;
+}
+.text-block .text-block__additional.black {
+  color: #242a3e;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+.text-block .text-block__additional:last-child {
+  margin-bottom: 0;
+}
+
 .publications .object__show-phone {
   background-color: #ffffff;
   color: #242a3e !important;

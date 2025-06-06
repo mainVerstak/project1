@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Новое объявление</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -1118,6 +1118,175 @@
                           data-fv-result="VALID"
                           >Пожалуйста, введите цену</small
                         >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-section">
+                    <div class="form-sub-section">
+                      <h3 class="form-section-title">Цены</h3>
+
+                      <div class="form-group">
+                        <label class="control-label" for="advertisement[min_rent_period]">
+                          Минимальный срок аренды
+                        </label>
+                        <div class="btn-group bootstrap-select" style="width: 100%">
+                          <button
+                            type="button"
+                            class="btn dropdown-toggle btn-default"
+                            data-toggle="dropdown"
+                            data-id="advertisement_min_rent_period"
+                            title="1 сутки (рекомендуется)"
+                            aria-expanded="false"
+                          >
+                            <span class="filter-option pull-left">1 сутки (рекомендуется)</span>
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#chevron-d"></use>
+                            </svg>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" data-tokens="null">
+                                  <span class="text text-thin">Выберите</span>
+                                </a>
+                              </li>
+                              <li data-original-index="1" class="selected">
+                                <a tabindex="0" data-tokens="null">
+                                  <span class="text">1 сутки (рекомендуется)</span>
+                                </a>
+                              </li>
+                              <li data-original-index="4">
+                                <a tabindex="0" data-tokens="null">
+                                  <span class="text">1 неделя</span>
+                                </a>
+                              </li>
+                              <li data-original-index="7">
+                                <a tabindex="0" data-tokens="null">
+                                  <span class="text">1 месяц</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select
+                            name="advertisement[min_rent_period]"
+                            id="advertisement_min_rent_period"
+                            class="select2-custom"
+                          >
+                            <option value=""></option>
+                            <option value="1_day">1 сутки (рекомендуется)</option>
+                            <option value="1_week">1 неделя</option>
+                            <option value="1_month">1 месяц</option>
+                            <option value="on_request">По запросу</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group has-feedback has-success">
+                        <label class="control-label" for="price_per_day">
+                          Цена за сутки, руб
+                        </label>
+                        <div class="controls">
+                          <div>
+                            <input
+                              type="text"
+                              name="advertisement[price_per_day]"
+                              id="advertisement_price_per_day"
+                              class="form-control"
+                              autocomplete="off"
+                              data-fv-field="advertisement[price_per_day]"
+                            />
+                            <small
+                              style="display: none"
+                              class="help-block"
+                              data-fv-validator="notEmpty"
+                              data-fv-for="advertisement[price_per_day]"
+                              data-fv-result="VALID"
+                              >Пожалуйста, введите цену</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label" for="advertisement[guests_count]">
+                          За сколько гостей
+                        </label>
+                        <div class="btn-group bootstrap-select" style="width: 100%">
+                          <button
+                            type="button"
+                            class="btn dropdown-toggle btn-default"
+                            data-toggle="dropdown"
+                            data-id="advertisement_guests_count"
+                            title="1 гость"
+                            aria-expanded="false"
+                          >
+                            <span class="filter-option pull-left">1 гость</span>
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#chevron-d"></use>
+                            </svg>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" data-tokens="null">
+                                  <span class="text text-thin">Выберите</span>
+                                </a>
+                              </li>
+                              <li data-original-index="1" class="selected">
+                                <a tabindex="0" data-tokens="null">
+                                  <span class="text">За 1 гостя</span>
+                                </a>
+                              </li>
+                              <li data-original-index="4">
+                                <a tabindex="0" data-tokens="null">
+                                  <span class="text">За 2 гостей</span>
+                                </a>
+                              </li>
+                              <li data-original-index="7">
+                                <a tabindex="0" data-tokens="null">
+                                  <span class="text">За 3 гостей</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select
+                            name="advertisement[min_rent_period]"
+                            id="advertisement_min_rent_period"
+                            class="select2-custom"
+                          >
+                            <option value=""></option>
+                            <option value="1_guest">За 1 гостя</option>
+                            <option value="2_guests">За 2 гостей</option>
+                            <option value="3_guests">За 3 гостей</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="text-block">
+                        <p class="text-block__main">
+                          Пример расчёта стоимости проживания 1 человека за 2 суток
+                        </p>
+                        <p class="text-block__additional black">
+                          Общая стоимость = 3 000 руб * 2 суток = 6 000 руб
+                        </p>
+                        <p class="text-block__additional">
+                          Из них 1 200 руб (20% стоимости) арендатор вносит в качестве предоплаты, а
+                          4 800 руб вы получите от гостя при заселении.
+                        </p>
+                      </div>
+                      <div class="text-block">
+                        <p class="text-block__main">Порядок расчётов</p>
+                        <p class="text-block__additional">
+                          При бронировании арендатор вносит предоплату 20%. В это входит
+                          лицензионный платеж, оплачиваемый арендатором
+                        </p>
+                        <p class="text-block__additional">
+                          В день заезда вы получаете напряму от арендатора оставшиеся 80%
+                        </p>
+                        <p class="text-block__additional">
+                          Начисляем вам бонус, равный сумме лицензионного платежа. Этот бонус можно
+                          использовать для услуг на сайте Olan.ru
+                        </p>
                       </div>
                     </div>
                   </div>
