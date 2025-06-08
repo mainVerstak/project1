@@ -1086,7 +1086,7 @@ a.dropdown-toggle:visited {
 }
 
 .container.container-height-full {
-  min-height: calc(100vh - 346px);
+  min-height: calc(100vh - 350px);
 
   @media (max-width: 991px) {
     min-height: unset;
