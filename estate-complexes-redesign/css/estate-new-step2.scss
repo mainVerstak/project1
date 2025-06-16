@@ -402,11 +402,11 @@ $color-visited: #c40dd4;
   border-radius: 5px;
   margin-bottom: 1px;
 
-  &--highlighted[aria-selected] {
+  &.select2-results__option--highlighted[aria-selected] {
     background-color: $color-secondary;
     color: $color-primary;
   }
-  &--selected {
+  &.select2-results__option--selected {
     background-color: $color-secondary;
     color: $color-dark;
   }

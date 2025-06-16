@@ -349,11 +349,11 @@
   border-radius: 5px;
   margin-bottom: 1px;
 }
-.select2-container--default .select2-results__option--highlighted[aria-selected] {
+.select2-container--default .select2-results__option.select2-results__option--highlighted[aria-selected] {
   background-color: #e6eff9;
   color: #084c95;
 }
-.select2-container--default .select2-results__option--selected {
+.select2-container--default .select2-results__option.select2-results__option--selected {
   background-color: #e6eff9;
   color: #242a3e;
 }
