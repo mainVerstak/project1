@@ -117,9 +117,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.querySelectorAll(".form-sub-section").forEach((subSection) => {
-    console.log(subSection);
     addDropdownWithCounter(subSection);
   });
 
+  // Type of booking
+  function typeOfBookingChangeDescription() {
+    const form = document.getElementById("new_advertisement_step_4");
+
+    if (!form) return;
+
+    const descriptionForBookingTypeFull = document.getElementById(
+      "description_for_booking_type_full"
+    );
+    const descriptionForBookingTypeOnRequest = document.getElementById(
+      "description_for_booking_type_on_request"
+    );
+
+    form.addEventListener("change", function (event) {
+      if (event.target.name === "advertisement[booking_type]") {
+        if (event.target.value === "full") {
+          descriptionForBookingTypeFull.classList.remove("hidden");
+          descriptionForBookingTypeOnRequest.classList.add("hidden");
+        } else {
+          descriptionForBookingTypeFull.classList.add("hidden");
+          descriptionForBookingTypeOnRequest.classList.remove("hidden");
+        }
+      }
+    });
+  }
+
   tooltips();
+  typeOfBookingChangeDescription();
 });
