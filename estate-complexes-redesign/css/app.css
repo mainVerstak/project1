@@ -5355,7 +5355,7 @@ header .balance-currency {
   color: #242a3e;
 }
 .object .header_adv_short:visited {
-  color: #c40dd4;
+  color: #242a3e;
 }
 .object .object__lead {
   font-size: 20px;
@@ -7358,7 +7358,7 @@ footer {
   background-color: #084c95;
   border: 1px solid #084c95;
   border-radius: 6px;
-  padding: 11px 16px 13px;
+  padding: 12px 16px 12px;
   font-family: inherit;
   font-weight: bold;
   font-size: 16px;
