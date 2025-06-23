@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-open-sans.css" />
     <link rel="stylesheet" href="css/fontawesome-all.min.css" />
@@ -33,6 +37,11 @@
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script defer src="js/custom-select-2.js"></script>
   </head>
 
   <body>
@@ -1129,56 +1138,18 @@
                         <label class="control-label" for="advertisement[min_rent_period]">
                           Минимальный срок аренды
                         </label>
-                        <div class="btn-group bootstrap-select">
-                          <button
-                            type="button"
-                            class="btn dropdown-toggle btn-default"
-                            data-toggle="dropdown"
-                            data-id="advertisement_min_rent_period"
-                            title="1 сутки (рекомендуется)"
-                            aria-expanded="false"
-                          >
-                            <span class="filter-option pull-left">1 сутки (рекомендуется)</span>
-                            <svg class="icon-default">
-                              <use xlink:href="./img/icons.svg#chevron-d"></use>
-                            </svg>
-                          </button>
-                          <div class="dropdown-menu open">
-                            <ul class="dropdown-menu inner" role="menu">
-                              <li data-original-index="0">
-                                <a tabindex="0" data-tokens="null">
-                                  <span class="text text-thin">Выберите</span>
-                                </a>
-                              </li>
-                              <li data-original-index="1" class="selected">
-                                <a tabindex="0" data-tokens="null">
-                                  <span class="text">1 сутки (рекомендуется)</span>
-                                </a>
-                              </li>
-                              <li data-original-index="4">
-                                <a tabindex="0" data-tokens="null">
-                                  <span class="text">1 неделя</span>
-                                </a>
-                              </li>
-                              <li data-original-index="7">
-                                <a tabindex="0" data-tokens="null">
-                                  <span class="text">1 месяц</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <select
-                            name="advertisement[min_rent_period]"
-                            id="advertisement_min_rent_period"
-                            class="select2-custom"
-                          >
-                            <option value=""></option>
-                            <option value="1_day">1 сутки (рекомендуется)</option>
-                            <option value="1_week">1 неделя</option>
-                            <option value="1_month">1 месяц</option>
-                            <option value="on_request">По запросу</option>
-                          </select>
-                        </div>
+                        <select
+                          class="select2-custom"
+                          id="advertisement_min_rent_period"
+                          name="advertisement[min_rent_period]"
+                          data-fv-field="advertisement[min_rent_period]"
+                        >
+                          <option value="">Выберите</option>
+                          <option value="1_day">1 сутки (рекомендуется)</option>
+                          <option value="1_week">1 неделя</option>
+                          <option value="1_month">1 месяц</option>
+                          <option value="on_request">По запросу</option>
+                        </select>
                       </div>
 
                       <div class="form-group has-feedback has-success">
@@ -1211,55 +1182,17 @@
                         <label class="control-label" for="advertisement[guests_count]">
                           За сколько гостей
                         </label>
-                        <div class="btn-group bootstrap-select">
-                          <button
-                            type="button"
-                            class="btn dropdown-toggle btn-default"
-                            data-toggle="dropdown"
-                            data-id="advertisement_guests_count"
-                            title="1 гость"
-                            aria-expanded="false"
-                          >
-                            <span class="filter-option pull-left">1 гость</span>
-                            <svg class="icon-default">
-                              <use xlink:href="./img/icons.svg#chevron-d"></use>
-                            </svg>
-                          </button>
-                          <div class="dropdown-menu open">
-                            <ul class="dropdown-menu inner" role="menu">
-                              <li data-original-index="0">
-                                <a tabindex="0" data-tokens="null">
-                                  <span class="text text-thin">Выберите</span>
-                                </a>
-                              </li>
-                              <li data-original-index="1" class="selected">
-                                <a tabindex="0" data-tokens="null">
-                                  <span class="text">За 1 гостя</span>
-                                </a>
-                              </li>
-                              <li data-original-index="4">
-                                <a tabindex="0" data-tokens="null">
-                                  <span class="text">За 2 гостей</span>
-                                </a>
-                              </li>
-                              <li data-original-index="7">
-                                <a tabindex="0" data-tokens="null">
-                                  <span class="text">За 3 гостей</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <select
-                            name="advertisement[min_rent_period]"
-                            id="advertisement_min_rent_period"
-                            class="select2-custom"
-                          >
-                            <option value=""></option>
-                            <option value="1_guest">За 1 гостя</option>
-                            <option value="2_guests">За 2 гостей</option>
-                            <option value="3_guests">За 3 гостей</option>
-                          </select>
-                        </div>
+                        <select
+                          class="select2-custom"
+                          name="advertisement[guests_count]"
+                          id="advertisement_guests_count"
+                          data-fv-field="advertisement[guests_count]"
+                        >
+                          <option value="">Выберите</option>
+                          <option value="1_guest">За 1 гостя</option>
+                          <option value="2_guests">За 2 гостей</option>
+                          <option value="3_guests">За 3 гостей</option>
+                        </select>
                       </div>
 
                       <div class="text-block">
