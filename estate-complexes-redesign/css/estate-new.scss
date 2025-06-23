@@ -192,6 +192,12 @@
       }
     }
   }
+
+  &.form-vertical {
+    .bootstrap-select {
+      width: 100%;
+    }
+  }
 }
 .user-params {
   .fields {

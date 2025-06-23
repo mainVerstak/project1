@@ -7163,6 +7163,9 @@ footer {
     width: 100%;
   }
 }
+#new_advertisement.form-vertical .bootstrap-select {
+  width: 100%;
+}
 
 .user-params .fields .btn-group {
   display: inline-flex;
