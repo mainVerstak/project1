@@ -616,7 +616,9 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 .has-error {
-  .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown),
+  .form-control:not(.form-control-without-error):not(.bootstrap-select):not(.selectize-control):not(
+      .selectize-dropdown
+    ),
   .bootstrap-select .dropdown-toggle {
     border: 1px solid $color-invalid;
 
@@ -654,7 +656,9 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 .has-success {
-  .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown),
+  .form-control:not(.form-control-without-error):not(.bootstrap-select):not(.selectize-control):not(
+      .selectize-dropdown
+    ),
   .bootstrap-select .dropdown-toggle {
     border: 1px solid $color-valid;
 

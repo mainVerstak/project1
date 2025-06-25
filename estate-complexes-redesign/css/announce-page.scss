@@ -69,7 +69,7 @@
       display: flex;
       align-items: center;
       gap: 5px;
-      height: 32px !important;
+      height: 32px;
     }
     .btn-default {
       background-image: none;
@@ -107,7 +107,7 @@
     .btn-xs {
       padding: $padding-btn-small;
       font-size: 14px;
-      height: 32px !important;
+      height: 32px;
       line-height: 1.42857143;
     }
     .btn-group-xs > .btn {

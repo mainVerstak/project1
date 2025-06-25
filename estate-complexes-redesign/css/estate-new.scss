@@ -161,7 +161,7 @@
     }
   }
 }
-#new_advertisement {
+.adv-form {
   i {
     display: none;
   }
@@ -363,6 +363,19 @@
     top: 16px;
     width: 16px;
     height: 16px;
+  }
+}
+
+.has-feedback {
+  &.has-success {
+    .select2-container--default .select2-selection--single {
+      border: 1px solid $color-valid;
+    }
+  }
+  &.has-error {
+    .select2-container--default .select2-selection--single {
+      border: 1px solid $color-invalid;
+    }
   }
 }
 

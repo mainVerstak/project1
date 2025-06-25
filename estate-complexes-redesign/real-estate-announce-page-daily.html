@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Аренда квартир посуточно</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/_header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/mortgage.css" />
+    <link rel="stylesheet" href="css/_icons.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/y-map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script defer src="js/custom-select-2.js"></script>
+
+    <script src="js/estate-new-service-script.js"></script>
+
+    <style>
+      .btn-phone-floating {
+        display: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        .btn-phone-floating {
+          display: flex;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+          transition: 0.4s;
+          padding: 0 16px 20px;
+          width: 100%;
+        }
+      }
+
+      .options-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 100%;
+      }
+      .options {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+        z-index: 11;
+      }
+      .options__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .option__close-btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+      .options__active {
+        position: fixed;
+        top: 0;
+        right: 10px;
+        z-index: 10;
+      }
+      .options__active-btn {
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        padding: 0 5px;
+        margin: 0;
+        border-radius: 5px;
+      }
+
+      ._admin {
+        display: none !important;
+      }
+      ._user {
+        display: none !important;
+      }
+      ._guest {
+        display: none !important;
+      }
+      ._admin._on {
+        display: inline-flex !important;
+      }
+      ._user._on {
+        display: inline-flex !important;
+      }
+      ._guest._on {
+        display: inline-flex !important;
+      }
+      ._adm-old._off {
+        display: none !important;
+      }
+      ._adm-blocked._off {
+        display: none !important;
+      }
+      ._adm-notpay._off {
+        display: none !important;
+      }
+      ._adm-draft._off {
+        display: none !important;
+      }
+      ._adm-deleted._off {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="options-container">
+      <div class="options__active" style="display: none">
+        <button class="options__active-btn">
+          <svg class="icon-default">
+            <use xlink:href="./img/icons.svg#dd"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="options">
+        <div class="options__header">
+          Панель настроек
+          <button class="option__close-btn">
+            <svg class="icon-default">
+              <use xlink:href="./img/icons.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="options__item">
+          <button class="btn _admin-btn">Админ</button>
+          <button class="btn _user-btn">Пользователь</button>
+          <button class="btn _guest-btn">Гость</button>
+        </div>
+        <div class="options__footer" style="margin-top: 10px">
+          <button class="btn" id="_adm-old" title="Устаревшее объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/icons.svg#pause"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-blocked" title="Заблокированное объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/icons.svg#cancel"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-notpay" title="Неоплаченное объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/icons.svg#balance"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-draft" title="Черновое объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/icons.svg#paint"></use>
+            </svg>
+          </button>
+          <button class="btn" id="_adm-deleted" title="Удаленное объявление">
+            <svg class="icon-default">
+              <use xlink:href="./img/icons.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+        <script>
+          const options = document.querySelector(".options");
+
+          const optionsActive = document.querySelector(".options__active");
+
+          const adminBtn = document.querySelector("._admin-btn");
+          const userBtn = document.querySelector("._user-btn");
+          const guestBtn = document.querySelector("._guest-btn");
+
+          const optionCloseBtn = document.querySelector(".option__close-btn");
+          const optionActiveBtn = document.querySelector(".options__active-btn");
+
+          function toggleOn(className) {
+            const adminEl = document.querySelectorAll("._admin");
+            const userEl = document.querySelectorAll("._user");
+            const guestEl = document.querySelectorAll("._guest");
+
+            adminEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+            userEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+            guestEl.forEach((el) => {
+              el.classList.remove("_on");
+            });
+
+            document.querySelectorAll(className).forEach((el) => {
+              el.classList.add("_on");
+            });
+            if (className === "._admin") {
+              document.querySelectorAll("._user").forEach((el) => {
+                el.classList.add("_on");
+              });
+            }
+          }
+
+          adminBtn.addEventListener("click", () => toggleOn("._admin"));
+          userBtn.addEventListener("click", () => toggleOn("._user"));
+          guestBtn.addEventListener("click", () => toggleOn("._guest"));
+
+          optionCloseBtn.addEventListener("click", () => {
+            options.style.display = "none";
+            optionsActive.style.display = "block";
+          });
+
+          optionActiveBtn.addEventListener("click", () => {
+            options.style.display = "block";
+            optionsActive.style.display = "none";
+          });
+
+          $("#_adm-old").click(() => {
+            $("._adm-old").toggleClass("_off");
+          });
+          $("#_adm-blocked").click(() => {
+            $("._adm-blocked").toggleClass("_off");
+          });
+          $("#_adm-notpay").click(() => {
+            $("._adm-notpay").toggleClass("_off");
+          });
+          $("#_adm-draft").click(() => {
+            $("._adm-draft").toggleClass("_off");
+          });
+          $("#_adm-deleted").click(() => {
+            $("._adm-deleted").toggleClass("_off");
+          });
+        </script>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-top-mobile-hidden header-top-nav header-top-nav_near">
+        <div class="container">
+          <ul class="nav navbar-left navbar-nav">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#dd"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="yaSend" href="/documents" yaparam="header_document_click">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#new"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
+                </svg>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
+                </svg>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="loaded sidenav">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
+                        </svg>
+                        Москва
+                        <i class="fa-caret-down fas"></i>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#login"></use>
+                        </svg>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#registration"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="nav-font-color navbar-btn">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#new"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="top-breadcrumbs">
+        <ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+          <li
+            class="small"
+            itemprop="itemListElement"
+            itemscope="itemscope"
+            itemtype="http://schema.org/ListItem"
+          >
+            <a
+              class="yaSend"
+              yaparam="click_to_breadcrumbs_in_fullview"
+              itemprop="item"
+              href="https://olan.ru/r-n-simferopolskiy"
+            >
+              <span itemprop="name">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#house"></use>
+                </svg>
+              </span>
+              <meta content="1" itemprop="position" />
+            </a>
+          </li>
+          <li
+            class="small"
+            itemprop="itemListElement"
+            itemscope="itemscope"
+            itemtype="http://schema.org/ListItem"
+          >
+            <a
+              class="yaSend"
+              yaparam="click_to_breadcrumbs_in_fullview"
+              itemprop="item"
+              href="https://olan.ru/r-n-simferopolskiy/s-mirnoe"
+            >
+              <span itemprop="name"> Аренда г. Киров </span>
+              <meta content="2" itemprop="position" />
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#chevron-d"></use>
+              </svg>
+            </a>
+          </li>
+          <li
+            class="small"
+            itemprop="itemListElement"
+            itemscope="itemscope"
+            itemtype="http://schema.org/ListItem"
+          >
+            <a
+              class="yaSend"
+              yaparam="click_to_breadcrumbs_in_fullview"
+              itemprop="item"
+              href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat"
+            >
+              <span itemprop="name">Аренда квартир в Октябрьском районе</span>
+              <meta content="3" itemprop="position" />
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#chevron-d"></use>
+              </svg>
+            </a>
+          </li>
+        </ol>
+      </div>
+
+      <h1>
+        Сдам двухкомнатную квартиру 45.6 м² этаж 3/5 город Киров улица Лепсе Октябрьский район
+      </h1>
+
+      <div class="extendedEntity js-index-form">
+        <!-- TODO: add new class .ds-annouce-info -->
+        <p class="ds-annouce-info">
+          <span class="panel-body-adv-block">
+            <span class="label label-danger label-md">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#hot"></use>
+              </svg>
+              Горячее
+            </span>
+            <span class="_user label label-info label-md">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#top"></use>
+              </svg>
+              Поднято
+            </span>
+            <span class="_admin label label-default">unknown</span>
+          </span>
+          <span class="_adm-old _admin panel-body-adv-block">
+            <span class="label label-default">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#archive"></use>
+              </svg>
+              Устаревшее
+            </span>
+          </span>
+          <span class="_adm-blocked _admin panel-body-adv-block">
+            <span class="label label-default">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#cancel"></use>
+              </svg>
+              Заблокированное
+            </span>
+          </span>
+          <span class="_adm-notpay _admin panel-body-adv-block">
+            <span class="label label-default">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#balance"></use>
+              </svg>
+              Неоплаченное
+            </span>
+          </span>
+          <span class="_adm-draft _admin panel-body-adv-block">
+            <span class="label label-default"> Черновое </span>
+          </span>
+          <span class="_adm-deleted _admin panel-body-adv-block">
+            <span class="label label-default">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#cross"></use>
+              </svg>
+              Удаленное
+            </span>
+          </span>
+          № 132654251 <span class="time-container-action">Размещено</span>
+          <time class="smart_time" datetime="2024-10-22 14:04:05 +0300" time_zone="3"
+            >22 окт в 14:04
+          </time>
+          Просмотров всего
+          <span data-tooltip="Просмотры объявления за все время" data-original-title="" title="">
+            6</span
+          >, сегодня
+          <span data-tooltip="Просмотры объявления за сегодня" data-original-title="" title="">
+            0
+          </span>
+        </p>
+        <div class="row" element_id="132654251">
+          <!-- TODO: many changes, recommended to copy separate button, bloks and paste into your project -->
+          <div class="ds-social">
+            <span class="panel-body-adv-block__scroll-x">
+              <span class="panel-body-adv-block">
+                <span class="notepad_action">
+                  <form
+                    class="withoutBootstrapValidator"
+                    method="post"
+                    action="/notepads?id=135769970&amp;notepad=true"
+                    data-remote="true"
+                  >
+                    <!-- TODO: add new class .btn-favorite-icon and change icon to svg-->
+                    <button
+                      class="btn-favorite-icon object__actions-item"
+                      title="Добавить в избранное"
+                      type="submit"
+                    >
+                      <svg class="icon-default icon-stroke">
+                        <use xlink:href="./img/icons.svg#favorite"></use>
+                      </svg>
+                    </button>
+                    <input
+                      type="hidden"
+                      name="authenticity_token"
+                      value="kC8cZLEObkyXvBjj6LWZmngkXmb09tJi99EM9y+q9sRmNIcH4COHJIQoN4z9UUqEpWGLdFGqFt2uFLlRhnPOaA=="
+                    />
+                  </form>
+                  <!-- TODO: add script to toggle active class and change icon -->
+                  <script>
+                    const favoriteBtn = document.querySelector(".btn-favorite-icon");
+                    favoriteBtn.addEventListener("click", (e) => {
+                      e.preventDefault();
+                      favoriteBtn.classList.toggle("active");
+                      if (favoriteBtn.classList.contains("active")) {
+                        favoriteBtn.innerHTML =
+                          '<svg class="icon-default"><use xlink:href="./img/icons.svg#favorite-fill"></use></svg>';
+                      } else {
+                        favoriteBtn.innerHTML =
+                          '<svg class="icon-default icon-stroke"><use xlink:href="./img/icons.svg#favorite"></use></svg>';
+                      }
+                    });
+                  </script>
+                </span>
+              </span>
+              <!-- вторая и третья кнопки "поделиться в ВК и Одноклассниках" обернуты в .panel-body-adv-block-->
+              <span class="panel-body-adv-block _user">
+                <noindex>
+                  <a
+                    class="btn btn-social-icon btn-vk yaSend"
+                    href="https://vk.com/share.php?url=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4&amp;title=Продам трехкомнатную квартиру в новостройке на улице Крымской весны 1 микрорайон «Жигулина роща» в селе Мирном в районе Симферопольском корп. 4 73.0 м² этаж 8/14 11303600 руб база Олан ру объявление 132654251&amp;image=https://i4.olan.ru/system/photos/entity/001/248/006/227/thumb/img.jpg?1729595132"
+                    rel="nofollow"
+                    target="_blank"
+                    title="Поделиться в Vk"
+                    yaparam="vk_share"
+                  >
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#vk"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="btn btn-social-icon btn-odnoklassniki yaSend"
+                    href="https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&amp;st.shareUrl=https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/newbuild/three-rooms/132654251-73-0-m-etazh-8-14-11303600-rub-ul-krymskoy-vesny-korp-4"
+                    rel="nofollow"
+                    target="_blank"
+                    title="Поделиться в Ok"
+                    yaparam="ok_share"
+                  >
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#ok"></use>
+                    </svg>
+                  </a>
+                </noindex>
+              </span>
+              <!-- четвертая и пятая кнопки "пожаловаться" и "редактировать" обернуты в .panel-body-adv-block-->
+              <span class="panel-body-adv-block"
+                ><script>
+                  //<![CDATA[
+                  require(["application_module"], function () {
+                    require(["validation_module"]);
+                  });
+                  //]]>
+                </script>
+                <a
+                  class="btn btn-default abuse_popover_action open_remote_url_action yaSend"
+                  data-url="/abuses/132654251"
+                  href="#"
+                  rel="nofollow"
+                  type="button"
+                  yaparam="abuse_open"
+                  ><svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#cancel"></use>
+                  </svg>
+                  Пожаловаться</a
+                >
+              </span>
+              <!-- закрывем блок со скролом -->
+            </span>
+            <!-- остальные кнопки не оборачиваем в блок со скролом-->
+            <span class="_user panel-body-adv-block__scroll-x">
+              <span class="panel-body-adv-block">
+                <a
+                  class="btn btn-danger btn-xs open_url_action yaSend"
+                  data-url="/abuses/132654251"
+                  href="#"
+                  rel="nofollow"
+                  type="button"
+                  yaparam="abuse_open"
+                >
+                  <svg class="icon-default hot">
+                    <use xlink:href="./img/icons.svg#hot"></use>
+                  </svg>
+                  Сделать горячим
+                </a>
+              </span>
+              <span class="panel-body-adv-block">
+                <a
+                  class="btn btn-primary btn-xs open_url_action"
+                  data-url="/call-access-new?advertisement_id=132654251"
+                  href="#"
+                >
+                  <svg class="icon-default top">
+                    <use xlink:href="./img/icons.svg#top"></use>
+                  </svg>
+                  Поднять
+                </a>
+              </span>
+            </span>
+            <span class="_admin panel-body-adv-block">
+              <span class="panel-body-adv-block">
+                <a
+                  class="btn btn-default open_url_action"
+                  data-url="/call-access-new?advertisement_id=132654251"
+                  href="#"
+                >
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#trash"></use>
+                  </svg>
+                </a>
+              </span>
+
+              <a
+                class="btn btn-default _admin _on open_url_action"
+                data-url="/call-access-new?advertisement_id=132654251"
+                href="#"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#edit"></use>
+                </svg>
+              </a>
+
+              <a
+                class="btn btn-default"
+                href="https://dev.olan.ru/admin/photos?advertisement_id=121387351"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#block-photo"></use>
+                </svg>
+              </a>
+
+              <div class="btn-group">
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  class="btn btn-default dropdown-toggle"
+                  data-toggle="dropdown"
+                  type="button"
+                >
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#block-location"></use>
+                  </svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      data-remote="true"
+                      data-confirm="Заблокировать объявления в '53'?"
+                      rel="nofollow"
+                      data-method="put"
+                      href="https://dev.olan.ru/admin/suspect_locations/27185523"
+                      >53</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      data-remote="true"
+                      data-confirm="Заблокировать объявления в 'ул Ленина'?"
+                      rel="nofollow"
+                      data-method="put"
+                      href="https://dev.olan.ru/admin/suspect_locations/4073724"
+                      >ул Ленина</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      data-remote="true"
+                      data-confirm="Заблокировать объявления в 'г Судак'?"
+                      rel="nofollow"
+                      data-method="put"
+                      href="https://dev.olan.ru/admin/suspect_locations/4073264"
+                      >г Судак</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      data-remote="true"
+                      data-confirm="Заблокировать объявления в 'Респ Крым'?"
+                      rel="nofollow"
+                      data-method="put"
+                      href="https://dev.olan.ru/admin/suspect_locations/4071806"
+                      >Респ Крым</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <a class="btn btn-default open_modal_action" href="#" rel="nofollow">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#block"></use>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="row yandex_content"><div class="col-lg-12"></div></div>
+        <div data-block-id="R-A-5010170-16" id="scrollLineForAside"></div>
+        <div class="row">
+          <div class="rent-info-container">
+            <div class="rent-info-container__item">
+              <div class="rent-info-container__item__title">гостей</div>
+              <div class="rent-info-container__item__value">4</div>
+            </div>
+            <div class="rent-info-container__item">
+              <div class="rent-info-container__item__title">кроватей</div>
+              <div class="rent-info-container__item__value">2</div>
+            </div>
+            <div class="rent-info-container__item">
+              <div class="rent-info-container__item__title">площадь</div>
+              <div class="rent-info-container__item__value">45.6 м.кв.</div>
+            </div>
+            <div class="rent-info-container__item">
+              <div class="rent-info-container__item__title">комнат</div>
+              <div class="rent-info-container__item__value">3</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="apartment-top-container">
+            <div class="col-lg-7 col-md-12 apartment-gallery">
+              <div class="gallery-with-nav-thumbs">
+                <style>
+                  .fotorama1729862083523 .fotorama__nav--thumbs .fotorama__nav__frame {
+                    padding: 2px;
+                    height: 64px;
+                  }
+                  .fotorama1729862083523 .fotorama__thumb-border {
+                    height: 60px;
+                    border-width: 2px;
+                    margin-top: 2px;
+                  }
+                </style>
+                <div class="fotorama--hidden"></div>
+                <div
+                  class="extendedFotoramaAction extendedLoadedFotorama fotorama fotorama1729862083523"
+                  style="padding-top: 5px; padding-bottom: 10px"
+                  data-fotorama-active-index="0"
+                >
+                  <div
+                    class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--no-controls fotorama__wrap--slide fotorama__wrap--toggle-arrows"
+                    style="width: 100%; min-width: 0px; max-width: 100%"
+                  >
+                    <div
+                      class="fotorama__pointer fotorama__stage"
+                      style="width: 653px; height: 490px"
+                    >
+                      <div class="fotorama__fullscreen-icon" tabindex="0" role="button"></div>
+                      <div
+                        class="fotorama__stage__shaft"
+                        style="
+                          transition-duration: 0ms;
+                          transform: translate3d(0px, 0px, 0px);
+                          width: 653px;
+                          margin-left: 0px;
+                        "
+                      >
+                        <div
+                          class="fotorama__active fotorama__loaded fotorama__loaded--img fotorama__stage__frame"
+                          style="left: 0px"
+                        >
+                          <img
+                            src="https://i4.olan.ru/system/photos/entity/001/248/006/227/medium/img.jpg?1729595132"
+                            class="fotorama__img"
+                            style="width: 653px; height: 328.141px; left: 0px; top: 80.9297px"
+                          />
+                          <div
+                            class="fotorama__background"
+                            style="
+                              background: url('https://i4.olan.ru/system/photos/entity/001/248/006/227/medium/img.jpg?1729595132')
+                                50% 50% / cover no-repeat;
+                            "
+                          >
+                            <div class="fotorama__background__wrap"></div>
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__loaded fotorama__loaded--img fotorama__stage__frame"
+                          style="left: -655px"
+                        >
+                          <img
+                            src="https://i.olan.ru/system/photos/entity/001/248/006/599/medium/img.jpg?1729595155"
+                            class="fotorama__img"
+                            style="width: 653px; height: 428.1px; left: 0px; top: 30.9502px"
+                          />
+                          <div
+                            class="fotorama__background"
+                            style="
+                              background: url('https://i.olan.ru/system/photos/entity/001/248/006/599/medium/img.jpg?1729595155')
+                                50% 50% / cover no-repeat;
+                            "
+                          >
+                            <div class="fotorama__background__wrap"></div>
+                          </div>
+                        </div>
+                        <div
+                          class="fotorama__loaded fotorama__loaded--img fotorama__stage__frame"
+                          style="left: 655px"
+                        >
+                          <img
+                            src="https://i4.olan.ru/system/photos/entity/001/248/006/263/medium/img.jpg?1729595134"
+                            class="fotorama__img"
+                            style="width: 526.296px; height: 490px; left: 63.3519px; top: 0px"
+                          />
+                          <div class="fotorama__background">
+                            <div class="fotorama__background__wrap">
+                              https://i4.olan.ru/system/photos/entity/001/248/006/263/medium/img.jpg?1729595134
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="fotorama__arr fotorama__arr--prev"
+                        tabindex="0"
+                        role="button"
+                      ></div>
+                      <div
+                        class="fotorama__arr fotorama__arr--next"
+                        tabindex="0"
+                        role="button"
+                      ></div>
+                      <div class="fotorama__video-close"></div>
+                    </div>
+                    <div class="fotorama__nav-wrap">
+                      <div class="fotorama__nav fotorama__nav--thumbs" style="width: 653px">
+                        <div
+                          class="fotorama__nav__shaft"
+                          style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px)"
+                        >
+                          <div
+                            class="fotorama__thumb-border"
+                            style="
+                              transition-duration: 0ms;
+                              transform: translate3d(0px, 0px, 0px);
+                              width: 60px;
+                            "
+                          ></div>
+                          <div
+                            class="fotorama__active fotorama__nav__frame fotorama__nav__frame--thumb"
+                            tabindex="0"
+                            role="button"
+                            style="width: 64px"
+                          >
+                            <div class="fotorama__loaded fotorama__loaded--img fotorama__thumb">
+                              <img
+                                src="https://i4.olan.ru/system/photos/entity/001/248/006/227/thumb/img.jpg?1729595132"
+                                class="fotorama__img"
+                                style="width: 127.123px; height: 64px; left: -31.5616px; top: 0px"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                            tabindex="0"
+                            role="button"
+                            style="width: 64px"
+                          >
+                            <div class="fotorama__loaded fotorama__loaded--img fotorama__thumb">
+                              <img
+                                src="https://i4.olan.ru/system/photos/entity/001/248/006/263/thumb/img.jpg?1729595134"
+                                class="fotorama__img"
+                                style="width: 68.9778px; height: 64px; left: -2.48889px; top: 0px"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                            tabindex="0"
+                            role="button"
+                            style="width: 64px"
+                          >
+                            <div class="fotorama__loaded fotorama__loaded--img fotorama__thumb">
+                              <img
+                                src="https://i5.olan.ru/system/photos/entity/001/248/006/257/thumb/img.jpg?1729595132"
+                                class="fotorama__img"
+                                style="width: 105.455px; height: 64px; left: -20.7273px; top: 0px"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                            tabindex="0"
+                            role="button"
+                            style="width: 64px"
+                          >
+                            <div class="fotorama__loaded fotorama__loaded--img fotorama__thumb">
+                              <img
+                                src="https://i4.olan.ru/system/photos/entity/001/248/006/273/thumb/img.jpg?1729595135"
+                                class="fotorama__img"
+                                style="width: 128.889px; height: 64px; left: -32.4444px; top: 0px"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                            tabindex="0"
+                            role="button"
+                            style="width: 64px"
+                          >
+                            <div class="fotorama__loaded fotorama__loaded--img fotorama__thumb">
+                              <img
+                                src="https://i2.olan.ru/system/photos/entity/001/248/006/561/thumb/img.jpg?1729595151"
+                                class="fotorama__img"
+                                style="width: 105.455px; height: 64px; left: -20.7273px; top: 0px"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                            tabindex="0"
+                            role="button"
+                            style="width: 64px"
+                          >
+                            <div class="fotorama__loaded fotorama__loaded--img fotorama__thumb">
+                              <img
+                                src="https://i.olan.ru/system/photos/entity/001/248/006/525/thumb/img.jpg?1729595152"
+                                class="fotorama__img"
+                                style="width: 128.889px; height: 64px; left: -32.4444px; top: 0px"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                            tabindex="0"
+                            role="button"
+                            style="width: 64px"
+                          >
+                            <div class="fotorama__loaded fotorama__loaded--img fotorama__thumb">
+                              <img
+                                src="https://i2.olan.ru/system/photos/entity/001/248/006/593/thumb/img.jpg?1729595155"
+                                class="fotorama__img"
+                                style="width: 127.123px; height: 64px; left: -31.5616px; top: 0px"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="fotorama__nav__frame fotorama__nav__frame--thumb"
+                            tabindex="0"
+                            role="button"
+                            style="width: 64px"
+                          >
+                            <div class="fotorama__loaded fotorama__loaded--img fotorama__thumb">
+                              <img
+                                src="https://i.olan.ru/system/photos/entity/001/248/006/599/thumb/img.jpg?1729595155"
+                                class="fotorama__img"
+                                style="width: 97.4222px; height: 64px; left: -16.7111px; top: 0px"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+              <div class="rent-offer-container">
+                <form action="" class="rent-offer-form form-vertical" id="rent_offer">
+                  <div class="rent-date">
+                    <div class="form-group">
+                      <label for="rent-date-in">Дата заезда</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="rent-date-in"
+                        name="rent-date-in"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="rent-date-out">Дата выезда</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="rent-date-out"
+                        name="rent-date-out"
+                      />
+                    </div>
+                  </div>
+                  <div class="rent-guest">
+                    <div class="form-group">
+                      <label for="rent-guest">Гости</label>
+                      <select class="select2-custom" id="rent-guest" name="rent-guest">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="rent-phone">
+                    <div class="form-group">
+                      <label for="rent-phone">Телефон</label>
+                      <select class="select2-custom" id="rent-phone" name="rent-phone">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="rent-prices">
+                    <div class="bordered-row">
+                      <label class="bordered-row-label" for="total-for">Итого за 31 сутки</label>
+                      <div class="bordered-row-value">
+                        <input type="hidden" name="total-for" value="1000" />
+                        <span class="value">1000</span>
+                        <span class="currency">₽</span>
+                      </div>
+                    </div>
+                    <div class="bordered-row">
+                      <label class="bordered-row-label" for="prepayment">Предоплата</label>
+                      <div class="bordered-row-value">
+                        <input type="hidden" name="prepayment" value="1000" />
+                        <span class="value">1000</span>
+                        <span class="currency">₽</span>
+                      </div>
+                    </div>
+                    <div class="bordered-row">
+                      <label class="bordered-row-label" for="pay-for-rent"
+                        >Оплата при заселении</label
+                      >
+                      <div class="bordered-row-value">
+                        <input type="hidden" name="pay-for-rent" value="1000" />
+                        <span class="value">1000</span>
+                        <span class="currency">₽</span>
+                      </div>
+                    </div>
+                    <div class="rent-submit">
+                      <button class="btn btn-primary">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#phone"></use>
+                        </svg>
+                        Забронировать
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <p class="rent-description">
+                  Нажимая кнопку «Забронировать», я даю своё согласие на обработку моих персональных
+                  данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                  персональных данных», на условиях и для целей, определенных Политикой
+                  конфиденциальности.
+                </p>
+                <div class="rent-info">
+                  <div class="bordered-row">
+                    <div class="bordered-row-label">Этаж</div>
+                    <div class="bordered-row-value">
+                      <span class="value">3</span>
+                    </div>
+                  </div>
+                  <div class="bordered-row">
+                    <div class="bordered-row-label">Этажей</div>
+                    <div class="bordered-row-value">
+                      <span class="value">5</span>
+                    </div>
+                  </div>
+                  <div class="bordered-row">
+                    <div class="bordered-row-label">Ремонт</div>
+                    <div class="bordered-row-value">
+                      <span class="value">евроремонт</span>
+                    </div>
+                  </div>
+                  <div class="bordered-row">
+                    <div class="bordered-row-label">Тип дома</div>
+                    <div class="bordered-row-value">
+                      <span class="value">кирпично-монолитный</span>
+                    </div>
+                  </div>
+                  <div class="bordered-row">
+                    <div class="bordered-row-label">Адрес:</div>
+                    <div class="bordered-row-value">
+                      <a href="#" class="value">г Москва, п Первомайское, ул Центральная, 4</a>
+                    </div>
+                  </div>
+                  <div class="bordered-row">
+                    <div class="bordered-row-label">Метро:</div>
+                    <div class="bordered-row-value">
+                      <a href="#" class="value">метро Варшавская</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            // for sticky gallery on announce page
+            const infoContainer = $(".apartment-top-container .col-md-12.col-lg-5");
+
+            const apartmentGallery = $(".apartment-gallery");
+
+            function heightForStickyGallery() {
+              const adsHeight = infoContainer.height();
+              const galleryHeight = $(".gallery-with-nav-thumbs").height();
+
+              console.log(adsHeight, galleryHeight);
+              if (adsHeight >= galleryHeight && window.innerWidth >= 1200) {
+                apartmentGallery.css("height", `${adsHeight}px`);
+              }
+            }
+            window.addEventListener("resize", () => {
+              if (window.innerWidth < 1200) {
+                apartmentGallery.css("height", "");
+              }
+            });
+
+            const resizeObserver = new ResizeObserver(heightForStickyGallery);
+            resizeObserver.observe(infoContainer[0]);
+
+            // Note: Imitation load yandex ads. NO COPY!
+            async function addHeight() {
+              return new Promise((resolve) =>
+                setTimeout(() => {
+                  $(".apartment-top-container .col-md-12.col-lg-5 .yandex_content").css(
+                    "height",
+                    "700px"
+                  );
+                  resolve();
+                }, 1000)
+              );
+            }
+
+            addHeight();
+          </script>
+          <div class="col-lg-12 col-xs-12 description-container">
+            Предлагается в аренду уютная 2-комнатная квартира в Кирове с балконом, расположенная на
+            3-м этаже. Пространство наполнено светом и теплом. Район отличается спокойной
+            атмосферой, двор благоустроен: детская площадка, зелёные зоны, достаточное количество
+            парковок. В шаговой доступности — вся необходимая инфраструктура: сад, школа,
+            поликлиника, ТЦ и МФЦ. В 100 метрах — автобусная остановка. Звоните — расскажу
+            подробности!
+          </div>
+
+          <div class="col-lg-12 col-xs-12">
+            <div class="rules-layout">
+              <h2>Правила объекта размещения</h2>
+
+              <div class="rules-layout-col-3">
+                <div class="time-rule">
+                  <div class="title">Заезд</div>
+                  <div class="description">после 14:00</div>
+                </div>
+                <div class="time-rule">
+                  <div class="title">Отъезд</div>
+                  <div class="description">до 12:00</div>
+                </div>
+                <div class="time-rule">
+                  <div class="title">Минимальный срок проживания</div>
+                  <div class="description">от 2 суток</div>
+                </div>
+              </div>
+
+              <div class="rules-layout-col-2">
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#kids"></use>
+                  </svg>
+                  можно с детьми любого возраста
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#kids_aprove"></use>
+                  </svg>
+                  можно с детьми по согласованию
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#kids_less"></use>
+                  </svg>
+                  хозяин не разрешает размещение с детьми
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#smoking"></use>
+                  </svg>
+                  курение разрешено
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#smoking_aprove"></use>
+                  </svg>
+                  курение разрешено в специально отведённых местах
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#smoking_less"></use>
+                  </svg>
+                  курение разрешено
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#pets"></use>
+                  </svg>
+                  можно с питомцами
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#pets_aprove"></use>
+                  </svg>
+                  можно с питомцами по согласованию
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#pets_less"></use>
+                  </svg>
+                  хозяин не разрешает размещение с питомцами
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#parties"></use>
+                  </svg>
+                  вечеринки и мероприятия разрешены
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#parties_aprove"></use>
+                  </svg>
+                  вечеринки и мероприятия по согласованию
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#parties_less"></use>
+                  </svg>
+                  без вечеринок и мероприятий
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#docs"></use>
+                  </svg>
+                  владелец предоставляет отчетные документы о проживании
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#docs_aprove"></use>
+                  </svg>
+                  владелец предоставляет отчетные документы о проживании по согласованию
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#docs_less"></use>
+                  </svg>
+                  владелец не предоставляет отчётные документы о проживании
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#cleaning"></use>
+                  </svg>
+                  финальная уборка включена в стоимость аренды
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#cleaning_payment"></use>
+                  </svg>
+                  финальная уборка оплачивается отдельно
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#parking"></use>
+                  </svg>
+                  Есть парковка, бесплатная
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#parking"></use>
+                  </svg>
+                  Есть парковка, бесплатная
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#parking_aprove"></use>
+                  </svg>
+                  Есть парковка, платная
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#parking_less"></use>
+                  </svg>
+                  Нет парковки
+                </div>
+              </div>
+
+              <div class="rules-message">
+                <strong>2 000 руб</strong> страховой депозит (не входит в стоимость проживания,
+                возвращается при отъезде)
+                <div class="tooltip-container">
+                  <div class="tooltip-trigger">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#info"></use>
+                    </svg>
+                  </div>
+                  <div class="tooltip-content">
+                    <p>Спальни отдельной комнатой, с дверью</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 col-xs-12">
+            <div class="rules-layout">
+              <h2>Удобства</h2>
+
+              <div class="rules-layout-col-2">
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#balcony"></use>
+                  </svg>
+                  балкон
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#wi-fi"></use>
+                  </svg>
+                  wi-fi
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#ramp"></use>
+                  </svg>
+                  пандус
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#air"></use>
+                  </svg>
+                  кондиционер
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#towel"></use>
+                  </svg>
+                  полотенца
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#bedding"></use>
+                  </svg>
+                  постельное белье
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#tv"></use>
+                  </svg>
+                  телевизор
+                </div>
+                <div class="rule">
+                  <svg class="icon-rent">
+                    <use xlink:href="./img/rent-icons.svg#kettle"></use>
+                  </svg>
+                  чайник
+                </div>
+              </div>
+
+              <div class="rules-show-more">
+                <button class="btn btn-default" onclick="showComfortList()">Показать все</button>
+              </div>
+
+              <div class="comfort-list-container hidden">
+                <div class="rules-layout-col-2">
+                  <div>
+                    <ul class="comfort-list">
+                      <li class="title">Ванная комната</li>
+                      <li>Ванных комнат с туалетом: 1</li>
+                      <li>Ванных комнат без туалета: 1</li>
+                      <li>биде</li>
+                      <li>гигенический душ</li>
+                      <li>ванна</li>
+                      <li>душ</li>
+                      <li>полотенца</li>
+                      <li>тапочки</li>
+                      <li>фен</li>
+                      <li>халат</li>
+                      <li>сауна</li>
+                    </ul>
+
+                    <ul class="comfort-list">
+                      <li class="title">Кухня</li>
+                      <li>барная стойка</li>
+                      <li>газовая плита</li>
+                      <li>кофеварка</li>
+                      <li>блендер</li>
+                      <li>духовка</li>
+                      <li>кухонный гарнитур</li>
+                      <li>обеденный стол</li>
+                      <li>морозильник</li>
+                      <li>мультиварка</li>
+                      <li>микроволновка</li>
+                      <li>холодильник</li>
+                      <li>электроплита</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <ul class="comfort-list">
+                      <li class="title">Оснащение</li>
+                      <li>бассейн</li>
+                      <li>домофон</li>
+                      <li>джакузи</li>
+                      <li>гардеробная</li>
+                      <li>стиральная машина</li>
+                      <li>центральное отопление</li>
+                    </ul>
+
+                    <ul class="comfort-list">
+                      <li class="title">Развлечения</li>
+                      <li>игровая консоль</li>
+                      <li>книги</li>
+                      <li>кабельное</li>
+                      <li>smart tv</li>
+                      <li>настольные игры</li>
+                    </ul>
+
+                    <ul class="comfort-list">
+                      <li class="title">Инфраструктура рядом</li>
+                      <li>spa</li>
+                      <li>частный сектор</li>
+                      <li>парк</li>
+                      <li>лес</li>
+                      <li>прокат велосипедов</li>
+                      <li>прокат самокатов</li>
+                      <li>пруд/озеро</li>
+                      <li>театр</li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="btn btn-default" onclick="hideComfortList()">Скрыть удобства</button>
+              </div>
+
+              <script>
+                // NOTE: service script
+                function showComfortList(e) {
+                  const comfortListContainer = document.querySelector(".comfort-list-container");
+                  comfortListContainer.classList.remove("hidden");
+                  const showMoreButton = document.querySelector(".rules-show-more");
+                  showMoreButton.classList.add("hidden");
+                }
+
+                function hideComfortList() {
+                  const comfortListContainer = document.querySelector(".comfort-list-container");
+                  comfortListContainer.classList.add("hidden");
+
+                  const showMoreButton = document.querySelector(".rules-show-more");
+                  showMoreButton.classList.remove("hidden");
+                }
+              </script>
+            </div>
+          </div>
+
+          <div class="col-lg-12 col-xs-12">
+            <div class="h4">Объявление на карте</div>
+            <div
+              class="loaded-map map"
+              data-agency_id="38703025"
+              data-category="flat"
+              data-editable="false"
+              data-id="132654251"
+              data-latitude="44.97344"
+              data-longitude="34.0756"
+              data-offer_type="sale"
+              data-zoom="12"
+              id="map"
+              style="background-color: #f6f7f9"
+            ></div>
+            <script>
+              //<![CDATA[
+              require(["application_module"], function () {
+                require(["map_module"]);
+              });
+              //]]>
+            </script>
+          </div>
+
+          <div class="col-lg-12 col-xs-12">
+            <div class="h4">Вам могут подойти эти варианты</div>
+            <ul class="list-unstyled js-search-results">
+              <li class="clearfix media object" element_id="115711054">
+                <div class="col-lg-5 col-md-4 col-sm-4">
+                  <div
+                    class="fotorama fotoramaAction object__gallery"
+                    data-data='[{"img":"https://i3.olan.ru/system/photos/entity/001/232/178/553/small/img?1727931175","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"115711054\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
+                    data-fotorama-active-index="0"
+                  ></div>
+                </div>
+                <div class="col-lg-6 col-md-5 col-sm-8 col-xs-12 object__data">
+                  <a
+                    class="header_adv_short"
+                    href="https://ussuriysk.olan.ru/day-flat/one-room/115711054-33-0-m-etazh-5-5-2875-rub-ul-polushkina"
+                    id="fake_href_id115711054"
+                    target=""
+                    yaparam="click_to_simular"
+                    >1-комнатная 33.0 м² этаж 5/5</a
+                  >
+                  <div
+                    class="fake_href_action object__description"
+                    data-blank="false"
+                    data-fake_href_id="115711054"
+                  >
+                    <div class="text-location">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#placeholder"></use>
+                      </svg>
+                      <a href="https://ussuriysk.olan.ru/ul-polushkina/day-flat/one-room"
+                        >ул Полушкина</a
+                      >,
+                      <a
+                        rel="nofollow"
+                        href="https://ussuriysk.olan.ru/ul-polushkina/136/day-flat/one-room"
+                        >136</a
+                      >
+                    </div>
+                    <div
+                      class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
+                    >
+                      Постельное белье, полотенца, туалетные принадлежности, стиральная машина,
+                      беспроводной интернет Wi-Fi, проводной интернет, телевизор, кондиционер,
+                      электроплита, духовка, микроволновка, фильтр для воды, посуда и
+                      принадлежности, столовые приборы, электри...
+                    </div>
+                  </div>
+                  <div class="object__lead">
+                    <span class="formatRub loaded-format-rub">2 875</span>
+                    ₽
+                    <span>/за сутки</span>
+                  </div>
+                  <div class="object__status">
+                    <span class="_admin label label-default">unknown</span>
+                    <time
+                      class="object__date smart_time"
+                      datetime="2024-10-23 05:26:25 +0300"
+                      time_zone="3"
+                    >
+                      сегодня в 05:26
+                    </time>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 object__meta">
+                  <div class="object__owner">
+                    <div class="object__owner-name">
+                      <svg class="icon-owner">
+                        <use xlink:href="./img/icons.svg#object-owner"></use>
+                      </svg>
+                      <noindex>собственник</noindex>
+                    </div>
+                    <noindex>
+                      <a
+                        class="btn btn-info btn-xs object__show-phone open_url_in_new_tab yaSend"
+                        data-modal-url="/redirects/115711054/phone_modal"
+                        data-url="/redirects?advertisement_id=115711054"
+                        href="#"
+                        rel="nofollow noopener"
+                        yaparam="redirect_url_open"
+                      >
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#phone"></use>
+                        </svg>
+                        Показать телефон
+                      </a>
+                    </noindex>
+                  </div>
+                </div>
+                <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
+                  <span class="notepad_action">
+                    <button
+                      class="object__actions-item ShowAdvNotepadAction"
+                      data-id="115711054"
+                      title="Добавить в избранное"
+                      type="button"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#favorite"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <form
+                    class="_admin withoutBootstrapValidator"
+                    method="post"
+                    action="/estate/129137431"
+                    data-remote="true"
+                  >
+                    <input type="hidden" name="_method" value="delete" />
+                    <button
+                      class="hidden-xs object__actions-item"
+                      title="Сделать горячим"
+                      data-confirm="Сделать горячим?"
+                      type="submit"
+                    >
+                      <svg class="icon-default invalid">
+                        <use xlink:href="./img/icons.svg#hot"></use>
+                      </svg>
+                    </button>
+                    <input
+                      type="hidden"
+                      name="authenticity_token"
+                      value="qrhZpulWdY8VEF9S5/yHX0R06FGyFe4oGXHQFYQ3JaFjArdF8qrUbVSCcjuAAf2iuEqRUsUQT/lorO3j6yUGUA=="
+                    />
+                  </form>
+                  <form
+                    class="_admin withoutBootstrapValidator"
+                    method="get"
+                    action="/estate/129137431/top?from_full_card=true"
+                    data-remote="true"
+                  >
+                    <button
+                      class="hidden-xs object__actions-item yaSend"
+                      yaparam="entity_top"
+                      title="Поднять объявление"
+                      type="submit"
+                    >
+                      <svg class="icon-default primary">
+                        <use xlink:href="./img/icons.svg#top"></use>
+                      </svg>
+                    </button>
+                  </form>
+                  <form
+                    class="_admin withoutBootstrapValidator"
+                    method="get"
+                    action="https://dev.olan.ru/estate/129137431/edit"
+                  >
+                    <button
+                      class="hidden-xs object__actions-item"
+                      title="Редактировать объявление"
+                      type="submit"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                  </form>
+                  <form
+                    class="_admin withoutBootstrapValidator"
+                    method="post"
+                    action="/estate/129137431"
+                    data-remote="true"
+                  >
+                    <input type="hidden" name="_method" value="delete" />
+                    <button
+                      class="hidden-xs object__actions-item"
+                      title="Удалить объявление"
+                      data-confirm="Удалить это объявление?"
+                      type="submit"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#trash"></use>
+                      </svg>
+                    </button>
+                    <input
+                      type="hidden"
+                      name="authenticity_token"
+                      value="qrhZpulWdY8VEF9S5/yHX0R06FGyFe4oGXHQFYQ3JaFjArdF8qrUbVSCcjuAAf2iuEqRUsUQT/lorO3j6yUGUA=="
+                    />
+                  </form>
+                </div>
+              </li>
+              <li class="clearfix media object object_even" element_id="115855240">
+                <div class="col-lg-5 col-md-4 col-sm-4">
+                  <div
+                    class="fotorama fotoramaAction object__gallery"
+                    data-data='[{"img":"https://i2.olan.ru/system/photos/entity/001/068/697/474/small/img?1711294713","background":"#fbfafa","html":"\u003ca class=\"object__gallery-link fake_href_action\" data-fake_href_id=\"115855240\" href=\"#\"\u003e\u0026nbsp;\u003c/a\u003e"}]'
+                    data-fotorama-active-index="0"
+                  ></div>
+                </div>
+                <div class="col-lg-6 col-md-5 col-sm-8 col-xs-12 object__data">
+                  <a
+                    class="header_adv_short"
+                    href="https://ussuriysk.olan.ru/day-flat/one-room/115855240-37-0-m-etazh-2-5-2800-rub-ul-razdolnaya"
+                    id="fake_href_id115855240"
+                    target=""
+                    yaparam="click_to_simular"
+                  >
+                    1-комнатная 37.0 м² этаж 2/5
+                  </a>
+                  <div
+                    class="fake_href_action object__description"
+                    data-blank="false"
+                    data-fake_href_id="115855240"
+                  >
+                    <div class="text-location">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#placeholder"></use>
+                      </svg>
+                      <a href="https://ussuriysk.olan.ru/ul-razdolnaya/day-flat/one-room">
+                        ул Раздольная </a
+                      >,
+                      <a
+                        rel="nofollow"
+                        href="https://ussuriysk.olan.ru/ul-razdolnaya/26/day-flat/one-room"
+                      >
+                        26
+                      </a>
+                    </div>
+                    <div
+                      class="text-comment text-muted object__text-trim tooltip_comment_action tooltip_comment_loaded"
+                    >
+                      Уютная светлая квартира ждёт своих гостей. Квартира укомплектована всем
+                      необходимым для комфортного пребывания до 3-х человек: Удобная двухспальная
+                      кровать, постельное бельё, ди&lt;текст-удален&gt;олнительное спальное место)
+                      Оборудованная кухня для приема и ...
+                    </div>
+                  </div>
+                  <div class="object__lead">
+                    <span class="formatRub loaded-format-rub">6 000 000</span>
+                    ₽
+                    <span class="text-muted">
+                      <span class="formatRub loaded-format-rub">100 000</span>
+                      ₽
+                      <small>
+                        <span>/м²</span>
+                      </small>
+                    </span>
+                  </div>
+                  <div class="object__status">
+                    <time
+                      class="object__date smart_time"
+                      datetime="2024-10-23 05:26:08 +0300"
+                      time_zone="3"
+                    >
+                      сегодня в 05:26
+                    </time>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 object__meta">
+                  <div class="object__owner">
+                    <div class="object__owner-name">
+                      <svg class="icon-owner">
+                        <use xlink:href="./img/icons.svg#object-agency"></use>
+                      </svg>
+                      <noindex>Агентство Отдел продаж Аренда бизнес парк</noindex>
+                    </div>
+                    <noindex>
+                      <a
+                        class="btn btn-info btn-xs object__show-phone open_url_in_new_tab yaSend"
+                        data-modal-url="/redirects/115855240/phone_modal"
+                        data-url="/redirects?advertisement_id=115855240"
+                        href="#"
+                        rel="nofollow noopener"
+                        yaparam="redirect_url_open"
+                      >
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#phone"></use>
+                        </svg>
+                        Показать телефон
+                      </a>
+                    </noindex>
+                  </div>
+                </div>
+                <div class="col-lg-1 col-sm-1 col-xs-12 object__actions">
+                  <span class="notepad_action">
+                    <button
+                      class="object__actions-item ShowAdvNotepadAction"
+                      data-id="115855240"
+                      title="Добавить в избранное"
+                      type="button"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#favorite"></use>
+                      </svg>
+                    </button>
+                  </span>
+                  <form
+                    class="_admin withoutBootstrapValidator"
+                    method="post"
+                    action="/estate/129137431"
+                    data-remote="true"
+                  >
+                    <input type="hidden" name="_method" value="delete" />
+                    <button
+                      class="hidden-xs object__actions-item"
+                      title="Сделать горячим"
+                      data-confirm="Сделать горячим?"
+                      type="submit"
+                    >
+                      <svg class="icon-default invalid">
+                        <use xlink:href="./img/icons.svg#hot"></use>
+                      </svg>
+                    </button>
+                    <input
+                      type="hidden"
+                      name="authenticity_token"
+                      value="qrhZpulWdY8VEF9S5/yHX0R06FGyFe4oGXHQFYQ3JaFjArdF8qrUbVSCcjuAAf2iuEqRUsUQT/lorO3j6yUGUA=="
+                    />
+                  </form>
+                  <form
+                    class="_admin withoutBootstrapValidator"
+                    method="get"
+                    action="/estate/129137431/top?from_full_card=true"
+                    data-remote="true"
+                  >
+                    <button
+                      class="hidden-xs object__actions-item yaSend"
+                      yaparam="entity_top"
+                      title="Поднять объявление"
+                      type="submit"
+                    >
+                      <svg class="icon-default primary">
+                        <use xlink:href="./img/icons.svg#top"></use>
+                      </svg>
+                    </button>
+                  </form>
+                  <form
+                    class="_admin withoutBootstrapValidator"
+                    method="get"
+                    action="https://dev.olan.ru/estate/129137431/edit"
+                  >
+                    <button
+                      class="hidden-xs object__actions-item"
+                      title="Редактировать объявление"
+                      type="submit"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                  </form>
+                  <form
+                    class="_admin withoutBootstrapValidator"
+                    method="post"
+                    action="/estate/129137431"
+                    data-remote="true"
+                  >
+                    <input type="hidden" name="_method" value="delete" />
+                    <button
+                      class="hidden-xs object__actions-item"
+                      title="Удалить объявление"
+                      data-confirm="Удалить это объявление?"
+                      type="submit"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#trash"></use>
+                      </svg>
+                    </button>
+                    <input
+                      type="hidden"
+                      name="authenticity_token"
+                      value="qrhZpulWdY8VEF9S5/yHX0R06FGyFe4oGXHQFYQ3JaFjArdF8qrUbVSCcjuAAf2iuEqRUsUQT/lorO3j6yUGUA=="
+                    />
+                  </form>
+                </div>
+              </li>
+            </ul>
+
+            <div class="row yandex_content">
+              <div class="col-lg-12"></div>
+            </div>
+
+            <div class="owner-info">
+              <h3>Информация об арендодателе</h3>
+              <div class="owner-info-content">
+                <div class="bordered-row">
+                  <div class="bordered-row-label">Арендодатель</div>
+                  <div class="bordered-row-value">
+                    <span class="value">собственник</span>
+                  </div>
+                </div>
+                <div class="bordered-row">
+                  <div class="bordered-row-label">Дата регистрации</div>
+                  <div class="bordered-row-value">
+                    <span class="value">01 янв 2025</span>
+                  </div>
+                </div>
+                <div class="bordered-row">
+                  <div class="bordered-row-label">Отвечает на заявки</div>
+                  <div class="bordered-row-value">
+                    <span class="value">всегда</span>
+                  </div>
+                </div>
+                <div class="bordered-row">
+                  <div class="bordered-row-label">Среднее время отклика</div>
+                  <div class="bordered-row-value">
+                    <span class="value"> 20 минут </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ol class="breadcrumb breadcrumb-bottom">
+              <li class="small">
+                <a class="yaSend" yaparam="click_to_home" href="https://olan.ru/">
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#house"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="small">
+                <a
+                  class="yaSend"
+                  yaparam="click_to_sections_in_fullview"
+                  href="https://olan.ru/estate/"
+                >
+                  Недвижимость
+                </a>
+              </li>
+              <li class="small">
+                <a
+                  class="yaSend"
+                  yaparam="click_to_sections_in_fullview"
+                  href="https://olan.ru/estate/"
+                >
+                  <span>Киров</span>
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#chevron-d"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="small">
+                Выберите <a href="#" class="colored">район</a>, <a href="#" class="colored">ЖК</a>,
+                <a href="#" class="colored">сад</a> или
+                <a href="#" class="colored">улицу</a>
+              </li>
+            </ol>
+            <div class="breadcrumb-filter breadcrumb-filter-bottom">
+              <div class="breadcrumb-filter__inner">
+                <div class="breadcrumb-filter__list">
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/cheap"
+                  >
+                    недорого
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/map"
+                    >на карте
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/twenty-millions"
+                    >до 20 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/thirty-millions"
+                  >
+                    до 30 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/fifteen-millions"
+                  >
+                    до 15 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/twenty-five-millions"
+                  >
+                    до 25 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/cheap"
+                  >
+                    недорого
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/map"
+                    >на карте
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/twenty-millions"
+                    >до 20 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/thirty-millions"
+                  >
+                    до 30 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/fifteen-millions"
+                  >
+                    до 15 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/twenty-five-millions"
+                  >
+                    до 25 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/cheap"
+                  >
+                    недорого
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/map"
+                    >на карте
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/twenty-millions"
+                    >до 20 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/s-mirnoe/sale-flat/thirty-millions"
+                  >
+                    до 30 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/fifteen-millions"
+                  >
+                    до 15 миллионов
+                  </a>
+                  <a
+                    class="breadcrumb-filter__item breadcrumb-filter__item_small yaSend"
+                    yaparam="click_to_breadcrumbs_badge"
+                    href="https://olan.ru/r-n-simferopolskiy/sale-flat/twenty-five-millions"
+                  >
+                    до 25 миллионов
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+    <div class="btn-phone-floating">
+      <script>
+        //<![CDATA[
+        require(["application_module"], function () {
+          require(["adv_show_module"]);
+        });
+        //]]>
+      </script>
+      <button
+        class="btn btn-info btn-phone-floating__btn js-floating-mobile-phone-block-required ShowAdvPhoneAction"
+        data-id="132137639"
+        style="width: 100%"
+      >
+        <svg class="icon-default">
+          <use xlink:href="./img/icons.svg#phone"></use>
+        </svg>
+        Показать телефон
+      </button>
+    </div>
+  </body>
+</html>
