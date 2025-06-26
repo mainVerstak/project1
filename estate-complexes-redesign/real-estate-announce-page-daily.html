@@ -74,8 +74,14 @@
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 10;
+        z-index: 100;
         width: 100%;
+      }
+      .options__item {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
       }
       .options {
         position: absolute;
@@ -84,7 +90,15 @@
         background-color: #fff;
         padding: 16px;
         border-radius: 8px;
+        max-width: 285px;
         z-index: 11;
+      }
+      .options__panel {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        margin-top: 10px;
       }
       .options__header {
         display: flex;
@@ -154,7 +168,7 @@
       <div class="options__active" style="display: none">
         <button class="options__active-btn">
           <svg class="icon-default">
-            <use xlink:href="./img/icons.svg#dd"></use>
+            <use xlink:href="./img/icons.svg#chevron-d"></use>
           </svg>
         </button>
       </div>
@@ -172,10 +186,10 @@
           <button class="btn _user-btn">Пользователь</button>
           <button class="btn _guest-btn">Гость</button>
         </div>
-        <div class="options__footer" style="margin-top: 10px">
+        <div class="options__panel">
           <button class="btn" id="_adm-old" title="Устаревшее объявление">
             <svg class="icon-default">
-              <use xlink:href="./img/icons.svg#pause"></use>
+              <use xlink:href="./img/icons.svg#archive"></use>
             </svg>
           </button>
           <button class="btn" id="_adm-blocked" title="Заблокированное объявление">
@@ -190,7 +204,7 @@
           </button>
           <button class="btn" id="_adm-draft" title="Черновое объявление">
             <svg class="icon-default">
-              <use xlink:href="./img/icons.svg#paint"></use>
+              <use xlink:href="./img/icons.svg#edit"></use>
             </svg>
           </button>
           <button class="btn" id="_adm-deleted" title="Удаленное объявление">
@@ -198,6 +212,15 @@
               <use xlink:href="./img/icons.svg#cross"></use>
             </svg>
           </button>
+        </div>
+        <div class="options__panel">
+          <div style="width: 100%">Модалки</div>
+          <button class="btn" onclick="showModal('form_code_call_modal')">code call</button>
+          <button class="btn" onclick="showModal('form_unauth_modal')">unauth</button>
+          <button class="btn" onclick="showModal('form_code_sms_modal'); startCountdown()">
+            sms code
+          </button>
+          <button class="btn" onclick="showModal('form_guests_modal')">guests</button>
         </div>
         <script>
           const options = document.querySelector(".options");
@@ -265,6 +288,26 @@
           $("#_adm-deleted").click(() => {
             $("._adm-deleted").toggleClass("_off");
           });
+
+          function showModal(id) {
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            modal.style.display = "block";
+            modal.classList.add("in");
+            const backdrop = document.querySelector(".modal-backdrop");
+            backdrop.style.display = "block";
+            backdrop.classList.add("in");
+          }
+
+          function _hideModal(id) {
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            modal.style.display = "none";
+            modal.classList.remove("in");
+            const backdrop = document.querySelector(".modal-backdrop");
+            backdrop.style.display = "none";
+            backdrop.classList.remove("in");
+          }
         </script>
       </div>
     </div>
@@ -797,7 +840,6 @@
             </span>
           </div>
         </div>
-        <div class="row yandex_content"><div class="col-lg-12"></div></div>
         <div data-block-id="R-A-5010170-16" id="scrollLineForAside"></div>
         <div class="row">
           <div class="rent-info-container">
@@ -1385,8 +1427,10 @@
               </div>
 
               <div class="rules-message">
-                <strong>2 000 руб</strong> страховой депозит (не входит в стоимость проживания,
-                возвращается при отъезде)
+                <div>
+                  <strong>2 000 руб</strong> страховой депозит (не входит в стоимость проживания,
+                  возвращается при отъезде)
+                </div>
                 <div class="tooltip-container">
                   <div class="tooltip-trigger">
                     <svg class="icon-default">
@@ -1552,7 +1596,7 @@
           </div>
 
           <div class="col-lg-12 col-xs-12">
-            <div class="h4">Объявление на карте</div>
+            <h2>Объявление на карте</h2>
             <div
               class="loaded-map map"
               data-agency_id="38703025"
@@ -2229,6 +2273,386 @@
         </div>
       </footer>
     </div>
+
+    <div class="modal" id="form_code_call_modal" aria-hidden="false">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('form_code_call_modal')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Код подтверждения</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_code_call" class="form-vertical" action="">
+              <p>Введите последние 4 цифры номера, с которго совершен звонок.</p>
+              <div class="form-group">
+                <label for="code_call" class="text-muted">Код</label>
+                <input type="text" id="code_call" class="form-control" placeholder="****" />
+              </div>
+              <div class="text-muted">Запросить код повторно через <span>45</span> сек.</div>
+              <button type="submit" class="btn btn-primary" disabled>Подтвердить</button>
+
+              <div class="text-muted">
+                Нажимая кнопку «Подтвердить», я даю своё согласие на обработку моих персональных
+                данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                персональных данных», на условиях и для целей, определенных Политикой
+                конфиденциальности.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="form_unauth_modal" aria-hidden="false">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('form_unauth_modal')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Укажите номер</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_unauth" class="form-vertical" action="">
+              <p>На указанный номер вы получите уведомления о статусе бронирования</p>
+              <div class="form-group">
+                <input type="text" id="unauth_phone" class="form-control" placeholder="+7" />
+              </div>
+              <button type="submit" class="btn btn-primary">Получить код</button>
+
+              <div class="text-muted">
+                Нажимая кнопку «Получить код», я даю своё согласие на обработку моих персональных
+                данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                персональных данных», на условиях и для целей, определенных Политикой
+                конфиденциальности.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="form_code_sms_modal" aria-hidden="false">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('form_code_sms_modal')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Код подтверждения</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_code_sms" class="form-vertical" action="">
+              <p>Введите код из СМС, отправленный на номер +7922*******85</p>
+              <div class="sms-code-input">
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="one-time-code"
+                  maxlength="6"
+                  pattern="[0-9]*"
+                  id="sms-code"
+                  class="sms-input"
+                />
+                <div class="code-boxes">
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                </div>
+              </div>
+              <div class="sms-code-feedback-error hidden">Код неверный</div>
+              <div class="text-muted sms-code-countdown">
+                Запросить код повторно через <span id="countdown">45</span> сек.
+              </div>
+              <button
+                type="button"
+                id="resend-sms-code"
+                class="btn btn-default resend-sms-code-trigger"
+                onclick="startCountdown()"
+              >
+                Запросить код повторно
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="form_guests_modal" aria-hidden="false">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('form_guests_modal')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Гости</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_guests" class="form-vertical" action="">
+              <p>Жилье расчитано до 4 гостей</p>
+
+              <hr />
+
+              <div class="form-group">
+                <label class="control-label control-label-xl" for="max_guests"
+                  >Взрослые, от 18 лет</label
+                >
+                <div class="controls">
+                  <div class="form-counter">
+                    <button class="form-counter__btn-minus btn btn-default" type="button">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input
+                      class="form-control form-counter__input"
+                      type="number"
+                      id="max_guests"
+                      name="advertisement[max_guests]"
+                      min="1"
+                      value="1"
+                    />
+                    <button class="form-counter__btn-plus btn btn-default" type="button">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="form-group">
+                <label class="control-label control-label-xl" for="advertisement[with_children]">
+                  Дети, до 17 лет
+                </label>
+                <select
+                  class="select2-custom"
+                  name="advertisement[with_children]"
+                  id="advertisement_with_children"
+                  data-fv-field="advertisement[with_children]"
+                >
+                  <option value="">Выберите</option>
+                  <option value="on_request">По запросу</option>
+                  <option value="allowed">Разрешено</option>
+                  <option value="denied">Запрещено</option>
+                </select>
+              </div>
+              <div class="add-field-container">
+                <button type="button" class="btn-link add-field">+ Добавить</button>
+              </div>
+
+              <hr />
+
+              <div class="form-group animated-radios-and-checkboxes">
+                <div class="checkbox-wrapper">
+                  <div class="checkbox">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="allowed_pets"
+                        value="0"
+                        data-gtm-form-interact-field-id="0"
+                      />
+                      <span class="cr">
+                        <svg class="icon-default cr-icon">
+                          <use xlink:href="./img/icons.svg#check"></use>
+                        </svg>
+                      </span>
+                      С питомцами
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="with-pets-container hidden">
+                <div class="form-group">
+                  <label for="pet_description">Описание питомца</label>
+                  <input
+                    type="text"
+                    id="pet_description"
+                    class="form-control"
+                    placeholder="Например: мопс весом 7 кг"
+                  />
+                </div>
+
+                <div class="message-invalid">
+                  Хозяин не принимает гостей с животными. Пожалуйста, удалите это поле или выберите
+                  другое жилье.
+                </div>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" style="display: none"></div>
+
+    <script>
+      // Скрипты для модалки с SMS кодом
+      // NOTE: Эти скрипты для наглядности!!!
+      const smsInput = document.getElementById("sms-code");
+      const codeBoxes = document.querySelectorAll(".code-box");
+
+      const countdown = document.getElementById("countdown");
+      const resendSmsCodeButton = document.getElementById("resend-sms-code");
+      const smsCodeCountdown = document.querySelector(".sms-code-countdown");
+
+      const smsCodeFeedbackError = document.querySelector(".sms-code-feedback-error");
+
+      smsInput.addEventListener("input", function (e) {
+        const value = e.target.value.replace(/[^0-9]/g, "");
+        e.target.value = value;
+
+        // Обновляем визуальные боксы
+        codeBoxes.forEach((box, index) => {
+          box.textContent = value[index] || "";
+          box.classList.toggle("filled", index < value.length);
+          box.classList.toggle("active", index === value.length);
+        });
+
+        // Если код введен полностью
+        if (e.target.value.length === 6) {
+          // Небольшая задержка для лучшего UX
+          setTimeout(() => {
+            smsCodeFeedbackError.classList.add("hidden");
+            smsCodeCountdown.classList.add("hidden");
+            resendSmsCodeButton.classList.add("hidden");
+            // Отправка формы или вызов API
+            submitCode(e.target.value);
+          }, 300);
+        }
+      });
+
+      smsInput.addEventListener("focus", function () {
+        const currentLength = this.value.length;
+        codeBoxes.forEach((box, index) => {
+          box.classList.toggle("active", index === currentLength);
+        });
+      });
+      smsInput.addEventListener("paste", function (e) {
+        e.preventDefault();
+        const paste = (e.clipboardData || window.clipboardData).getData("text");
+        const code = paste.replace(/[^0-9]/g, "").slice(0, 6);
+
+        this.value = code;
+        this.dispatchEvent(new Event("input")); // Trigger input event
+      });
+
+      function submitCode(code) {
+        const codeInputContainer = document.querySelector(".sms-code-input");
+        codeInputContainer.classList.add("has-feedback");
+        codeInputContainer.classList.remove("has-error");
+        codeInputContainer.classList.remove("has-success");
+        smsCodeFeedbackError.classList.add("hidden");
+
+        if (code === "123456") {
+          codeInputContainer.classList.add("has-success");
+        } else {
+          codeInputContainer.classList.add("has-error");
+          smsCodeFeedbackError.classList.remove("hidden");
+        }
+      }
+
+      function startCountdown() {
+        resendSmsCodeButton.style.display = "none";
+        smsCodeCountdown.style.display = "inline-block";
+        let timeLeft = 5;
+        countdown.textContent = timeLeft;
+        const promise = new Promise((resolve, reject) => {
+          const timer = setInterval(() => {
+            timeLeft--;
+            countdown.textContent = timeLeft;
+            if (timeLeft <= 0) {
+              clearInterval(timer);
+              resolve();
+            }
+          }, 1000);
+        });
+        promise.then(() => {
+          resendSmsCodeButton.style.display = "inline-block";
+          smsCodeCountdown.style.display = "none";
+        });
+      }
+
+      // Pets
+      function controlWithPets() {
+        const formGuests = document.getElementById("form_guests");
+        if (!formGuests) return;
+
+        formGuests.addEventListener("change", function (e) {
+          if (e.target.name === "allowed_pets") {
+            e.target.checked ? showWithPets() : hideWithPets();
+          }
+        });
+      }
+
+      function showWithPets() {
+        const withPetsContainer = document.querySelector(".with-pets-container");
+        if (withPetsContainer) {
+          withPetsContainer.classList.remove("hidden");
+        }
+      }
+
+      function hideWithPets() {
+        const withPetsContainer = document.querySelector(".with-pets-container");
+        if (withPetsContainer) {
+          withPetsContainer.classList.add("hidden");
+        }
+      }
+
+      controlWithPets();
+    </script>
+
     <div class="btn-phone-floating">
       <script>
         //<![CDATA[

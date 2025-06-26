@@ -8085,6 +8085,12 @@ footer {
   margin-bottom: 30px;
 }
 
+.extendedEntity h2 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+}
 .extendedEntity .ds-annouce-info {
   color: #8c91a6;
   font-size: 14px;
@@ -8117,6 +8123,7 @@ footer {
 .extendedEntity .ds-social {
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 10px;
 }
 .extendedEntity .ds-social .object__actions-item {
   display: inline-flex;
@@ -8267,6 +8274,7 @@ footer {
   padding-left: 15px;
   padding-right: 15px;
   gap: 10px;
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   .extendedEntity .rent-info-container {
@@ -8390,21 +8398,27 @@ footer {
   gap: 15px;
   margin-bottom: 30px;
 }
-.rules-layout h2 {
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 700;
-  margin: 0;
-}
 .rules-layout .rules-layout-col-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
 }
+@media (max-width: 767px) {
+  .rules-layout .rules-layout-col-2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+}
 .rules-layout .rules-layout-col-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
+}
+@media (max-width: 767px) {
+  .rules-layout .rules-layout-col-3 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
 }
 .rules-layout .time-rule {
   display: flex;
@@ -8423,7 +8437,8 @@ footer {
   font-weight: 400;
 }
 .rules-layout .rule {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50px 1fr;
   align-items: center;
   gap: 10px;
   font-size: 14px;
@@ -8509,6 +8524,202 @@ footer {
   transform: translateX(-50%);
   width: 100%;
   height: 5px;
+}
+
+#form_code_call_modal .modal-dialog,
+#form_unauth_modal .modal-dialog,
+#form_code_sms_modal .modal-dialog,
+#form_guests_modal .modal-dialog {
+  width: 400px;
+}
+#form_code_call_modal .modal-body,
+#form_unauth_modal .modal-body,
+#form_code_sms_modal .modal-body,
+#form_guests_modal .modal-body {
+  padding: 0 20px 20px;
+}
+#form_code_call_modal .modal-header .modal-title,
+#form_unauth_modal .modal-header .modal-title,
+#form_code_sms_modal .modal-header .modal-title,
+#form_guests_modal .modal-header .modal-title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #242a3e;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+#form_code_call_modal form label,
+#form_unauth_modal form label,
+#form_code_sms_modal form label,
+#form_guests_modal form label {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #8c91a6;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+#form_code_call_modal form label.control-label-xl,
+#form_unauth_modal form label.control-label-xl,
+#form_code_sms_modal form label.control-label-xl,
+#form_guests_modal form label.control-label-xl {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #242a3e;
+  margin-bottom: 10px;
+}
+#form_code_call_modal form p,
+#form_unauth_modal form p,
+#form_code_sms_modal form p,
+#form_guests_modal form p {
+  margin-bottom: 15px;
+}
+#form_code_call_modal form .form-group,
+#form_unauth_modal form .form-group,
+#form_code_sms_modal form .form-group,
+#form_guests_modal form .form-group {
+  margin-bottom: 15px;
+}
+#form_code_call_modal form .text-muted,
+#form_unauth_modal form .text-muted,
+#form_code_sms_modal form .text-muted,
+#form_guests_modal form .text-muted {
+  font-size: 14px;
+  line-height: 1.3;
+}
+#form_code_call_modal form button[type=submit],
+#form_unauth_modal form button[type=submit],
+#form_code_sms_modal form button[type=submit],
+#form_guests_modal form button[type=submit] {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#form_code_call_modal hr,
+#form_unauth_modal hr,
+#form_code_sms_modal hr,
+#form_guests_modal hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#form_code_sms_modal form .sms-code-countdown {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+#form_code_sms_modal form .resend-sms-code-trigger {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+#form_code_sms_modal form .sms-code-feedback-error {
+  color: #f55c3d;
+  font-size: 14px;
+  line-height: 1.3;
+  margin-top: 15px;
+}
+
+#form_guests_modal form .animated-radios-and-checkboxes .checkbox {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#form_guests_modal form .animated-radios-and-checkboxes label {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #242a3e;
+  font-weight: 400;
+  margin-bottom: 0;
+  height: 20px;
+  padding: 0;
+}
+
+.sms-code-input {
+  position: relative;
+  width: 100%;
+}
+.sms-code-input .sms-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  opacity: 0;
+  font-size: 16px;
+  letter-spacing: 20px;
+  text-align: center;
+  z-index: 2;
+}
+.sms-code-input .code-boxes {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  pointer-events: none;
+}
+.sms-code-input .code-box {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e6eff9;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative;
+}
+.sms-code-input .code-box.filled {
+  border-color: #e6eff9;
+}
+.sms-code-input .code-box.active {
+  border-width: 2px;
+  border-color: #084c95;
+}
+.sms-code-input.has-feedback.has-success .code-box {
+  border-color: #acf256;
+}
+.sms-code-input.has-feedback.has-error .code-box {
+  border-color: #f55c3d;
+}
+
+.controls > div {
+  width: 100%;
+  padding: 0;
+}
+
+.form-counter {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.form-counter .btn {
+  display: flex;
+  width: 44px;
+}
+.form-counter .form-control.form-counter__input {
+  min-width: 60px;
+  text-align: center;
+  padding-left: 10px !important;
+  -moz-appearance: textfield;
+}
+.form-counter .form-control.form-counter__input::-webkit-inner-spin-button, .form-counter .form-control.form-counter__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.message-invalid {
+  color: #f55c3d;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fbf5ef;
 }
 
 /*# sourceMappingURL=app.css.map */
