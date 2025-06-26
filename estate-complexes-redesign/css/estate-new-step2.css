@@ -211,6 +211,12 @@
   justify-content: center;
 }
 
+@media (max-width: 767px) {
+  .adv-form .fields .step-buttons .btn {
+    width: 100%;
+  }
+}
+
 .form-group p {
   font-size: 14px;
   line-height: 130%;

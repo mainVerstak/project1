@@ -245,6 +245,17 @@ $color-visited: #c40dd4;
     justify-content: center;
   }
 }
+.adv-form {
+  .fields {
+    .step-buttons {
+      .btn {
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 
 .form-group p {
   font-size: 14px;
