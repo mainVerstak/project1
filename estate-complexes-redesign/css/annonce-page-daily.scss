@@ -742,19 +742,20 @@
 }
 
 // AirDatepicker
-.date-picker {
+
+.datepicker {
   width: 316px;
   border-color: $color-secondary;
 
-  .air-datepicker-nav {
+  .datepicker--nav {
     border-color: $color-secondary;
   }
 
-  .air-datepicker--pointer::after {
+  .datepicker--pointer {
     border-color: $color-secondary;
   }
 
-  .air-datepicker-nav--action {
+  .datepicker--nav-action {
     width: 44px;
     height: 44px;
 
@@ -762,16 +763,13 @@
       background-color: $color-secondary;
     }
   }
-  .air-datepicker-nav--title:hover {
+  .datepicker--nav-title:hover {
     background-color: $color-secondary;
   }
-  .air-datepicker-body--day-name {
+  .datepicker--day-name {
     color: $color-grey;
   }
-  .air-datepicker-body--cells.-days- {
-    grid-auto-rows: 44px;
-  }
-  .air-datepicker-cell {
+  .datepicker--cell {
     width: 44px;
     height: 44px;
 
@@ -791,5 +789,23 @@
     &.-focus- {
       background-color: $color-secondary;
     }
+  }
+}
+
+.date-picker-input {
+  position: relative;
+
+  .form-control {
+    padding-left: 39px !important;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    color: $color-grey;
   }
 }

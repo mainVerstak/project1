@@ -10,7 +10,24 @@
       href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/air-datepicker.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"
+      integrity="sha512-sM9DpZQXHGs+rFjJYXE1OcuCviEgaXoQIvgsH7nejZB64A09lKeTU4nrs/K6YxFs6f+9FF2awNeJTkaLuplBhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css"
+      integrity="sha512-Ujn3LMQ8mHWqy7EPP32eqGKBhBU8v39JRIfCer4nTZqlsSZIwy5g3Wz9SaZrd6pp3vmjI34yyzguZ2KQ66CLSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -50,7 +67,6 @@
     <script defer src="js/custom-select-2.js"></script>
 
     <script src="js/estate-new-service-script.js"></script>
-    <script src="js/air-datepicker.js"></script>
 
     <style>
       .btn-phone-floating {
@@ -1108,36 +1124,38 @@
                   <div class="rent-date">
                     <div class="form-group">
                       <label for="rent-date-in">Дата заезда</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="rent-date-in"
-                        name="rent-date-in"
-                        placeholder="Выберите"
-                      />
+                      <div class="date-picker-input">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#calendar"></use>
+                        </svg>
+                        <input
+                          type="text"
+                          class="form-control datepicker-here"
+                          id="rent-date-in"
+                          name="rent-date-in"
+                          placeholder="Выберите"
+                          data-position="bottom left"
+                          data-auto-close="true"
+                        />
+                      </div>
                     </div>
-                    <script>
-                      const datepickerIn = new AirDatepicker("#rent-date-in", {
-                        classes: "date-picker",
-                        position: "bottom left",
-                      });
-                    </script>
                     <div class="form-group">
                       <label for="rent-date-out">Дата выезда</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="rent-date-out"
-                        name="rent-date-out"
-                        placeholder="Выберите"
-                      />
+                      <div class="date-picker-input">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#calendar"></use>
+                        </svg>
+                        <input
+                          type="text"
+                          class="form-control datepicker-here"
+                          id="rent-date-out"
+                          name="rent-date-out"
+                          placeholder="Выберите"
+                          data-position="bottom right"
+                          data-auto-close="true"
+                        />
+                      </div>
                     </div>
-                    <script>
-                      const datepickerOut = new AirDatepicker("#rent-date-out", {
-                        classes: "date-picker",
-                        position: "bottom right",
-                      });
-                    </script>
                   </div>
                   <div class="rent-guest">
                     <div class="form-group">
