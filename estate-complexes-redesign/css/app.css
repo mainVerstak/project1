@@ -8722,4 +8722,48 @@ footer {
   background-color: #fbf5ef;
 }
 
+.date-picker {
+  width: 316px;
+  border-color: #e6eff9;
+}
+.date-picker .air-datepicker-nav {
+  border-color: #e6eff9;
+}
+.date-picker .air-datepicker--pointer::after {
+  border-color: #e6eff9;
+}
+.date-picker .air-datepicker-nav--action {
+  width: 44px;
+  height: 44px;
+}
+.date-picker .air-datepicker-nav--action:hover {
+  background-color: #e6eff9;
+}
+.date-picker .air-datepicker-nav--title:hover {
+  background-color: #e6eff9;
+}
+.date-picker .air-datepicker-body--day-name {
+  color: #8c91a6;
+}
+.date-picker .air-datepicker-body--cells.-days- {
+  grid-auto-rows: 44px;
+}
+.date-picker .air-datepicker-cell {
+  width: 44px;
+  height: 44px;
+}
+.date-picker .air-datepicker-cell.-current- {
+  color: #084c95;
+}
+.date-picker .air-datepicker-cell.-selected- {
+  background-color: #084c95;
+  color: #ffffff;
+}
+.date-picker .air-datepicker-cell.-selected-:hover {
+  background-color: #2167b4;
+}
+.date-picker .air-datepicker-cell.-focus- {
+  background-color: #e6eff9;
+}
+
 /*# sourceMappingURL=app.css.map */

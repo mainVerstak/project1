@@ -10,8 +10,10 @@
       href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/air-datepicker.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-open-sans.css" />
     <link rel="stylesheet" href="css/fontawesome-all.min.css" />
@@ -48,6 +50,7 @@
     <script defer src="js/custom-select-2.js"></script>
 
     <script src="js/estate-new-service-script.js"></script>
+    <script src="js/air-datepicker.js"></script>
 
     <style>
       .btn-phone-floating {
@@ -1106,21 +1109,35 @@
                     <div class="form-group">
                       <label for="rent-date-in">Дата заезда</label>
                       <input
-                        type="date"
+                        type="text"
                         class="form-control"
                         id="rent-date-in"
                         name="rent-date-in"
+                        placeholder="Выберите"
                       />
                     </div>
+                    <script>
+                      const datepickerIn = new AirDatepicker("#rent-date-in", {
+                        classes: "date-picker",
+                        position: "bottom left",
+                      });
+                    </script>
                     <div class="form-group">
                       <label for="rent-date-out">Дата выезда</label>
                       <input
-                        type="date"
+                        type="text"
                         class="form-control"
                         id="rent-date-out"
                         name="rent-date-out"
+                        placeholder="Выберите"
                       />
                     </div>
+                    <script>
+                      const datepickerOut = new AirDatepicker("#rent-date-out", {
+                        classes: "date-picker",
+                        position: "bottom right",
+                      });
+                    </script>
                   </div>
                   <div class="rent-guest">
                     <div class="form-group">
