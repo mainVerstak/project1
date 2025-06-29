@@ -5996,7 +5996,6 @@ header .balance-currency {
   gap: 5px;
 }
 .extendedEntity #banki-ru-widget .btn,
-.extendedEntity .apartment-top-container .btn,
 .extendedEntity .ds-social .btn {
   text-shadow: none;
   -webkit-box-shadow: none;
@@ -6012,7 +6011,6 @@ header .balance-currency {
   height: 32px;
 }
 .extendedEntity #banki-ru-widget .btn-default,
-.extendedEntity .apartment-top-container .btn-default,
 .extendedEntity .ds-social .btn-default {
   background-image: none;
   filter: none;
@@ -6025,27 +6023,23 @@ header .balance-currency {
   line-height: 1.42857143;
 }
 .extendedEntity #banki-ru-widget .btn-default:hover,
-.extendedEntity .apartment-top-container .btn-default:hover,
 .extendedEntity .ds-social .btn-default:hover {
   background-color: #f5f5f5;
   border: 1px solid #e6e6e6;
   color: #333333;
 }
 .extendedEntity #banki-ru-widget .btn-default.active,
-.extendedEntity .apartment-top-container .btn-default.active,
 .extendedEntity .ds-social .btn-default.active {
   background-color: #e6e6e6;
   border: 1px solid #e6e6e6;
   color: #333333;
 }
 .extendedEntity #banki-ru-widget .btn-default.active:hover,
-.extendedEntity .apartment-top-container .btn-default.active:hover,
 .extendedEntity .ds-social .btn-default.active:hover {
   border: 1px solid #e6e6e6;
   color: #333333;
 }
 .extendedEntity #banki-ru-widget .btn-default:focus,
-.extendedEntity .apartment-top-container .btn-default:focus,
 .extendedEntity .ds-social .btn-default:focus {
   box-shadow: none;
   border: 1px solid #333333;
@@ -8777,6 +8771,11 @@ footer {
   width: 14px;
   height: 14px;
   color: #8c91a6;
+}
+
+.rent-guest-btn {
+  width: 100%;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=app.css.map */

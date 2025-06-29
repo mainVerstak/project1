@@ -161,8 +161,14 @@
       ._user._on {
         display: inline-flex !important;
       }
+      .apartment-top-container ._user._on {
+        display: flex !important;
+      }
       ._guest._on {
         display: inline-flex !important;
+      }
+      .apartment-top-container ._guest._on {
+        display: flex !important;
       }
       ._adm-old._off {
         display: none !important;
@@ -242,70 +248,72 @@
           <button class="btn" onclick="showModal('form_guests_modal')">guests</button>
         </div>
         <script>
-          const options = document.querySelector(".options");
+          document.addEventListener("DOMContentLoaded", () => {
+            const options = document.querySelector(".options");
 
-          const optionsActive = document.querySelector(".options__active");
+            const optionsActive = document.querySelector(".options__active");
 
-          const adminBtn = document.querySelector("._admin-btn");
-          const userBtn = document.querySelector("._user-btn");
-          const guestBtn = document.querySelector("._guest-btn");
+            const adminBtn = document.querySelector("._admin-btn");
+            const userBtn = document.querySelector("._user-btn");
+            const guestBtn = document.querySelector("._guest-btn");
 
-          const optionCloseBtn = document.querySelector(".option__close-btn");
-          const optionActiveBtn = document.querySelector(".options__active-btn");
+            const optionCloseBtn = document.querySelector(".option__close-btn");
+            const optionActiveBtn = document.querySelector(".options__active-btn");
 
-          function toggleOn(className) {
-            const adminEl = document.querySelectorAll("._admin");
-            const userEl = document.querySelectorAll("._user");
-            const guestEl = document.querySelectorAll("._guest");
+            function toggleOn(className) {
+              const adminEl = document.querySelectorAll("._admin");
+              const userEl = document.querySelectorAll("._user");
+              const guestEl = document.querySelectorAll("._guest");
 
-            adminEl.forEach((el) => {
-              el.classList.remove("_on");
-            });
-            userEl.forEach((el) => {
-              el.classList.remove("_on");
-            });
-            guestEl.forEach((el) => {
-              el.classList.remove("_on");
-            });
+              adminEl.forEach((el) => {
+                el.classList.remove("_on");
+              });
+              userEl.forEach((el) => {
+                el.classList.remove("_on");
+              });
+              guestEl.forEach((el) => {
+                el.classList.remove("_on");
+              });
 
-            document.querySelectorAll(className).forEach((el) => {
-              el.classList.add("_on");
-            });
-            if (className === "._admin") {
-              document.querySelectorAll("._user").forEach((el) => {
+              document.querySelectorAll(className).forEach((el) => {
                 el.classList.add("_on");
               });
+              if (className === "._admin") {
+                document.querySelectorAll("._user").forEach((el) => {
+                  el.classList.add("_on");
+                });
+              }
             }
-          }
 
-          adminBtn.addEventListener("click", () => toggleOn("._admin"));
-          userBtn.addEventListener("click", () => toggleOn("._user"));
-          guestBtn.addEventListener("click", () => toggleOn("._guest"));
+            adminBtn.addEventListener("click", () => toggleOn("._admin"));
+            userBtn.addEventListener("click", () => toggleOn("._user"));
+            guestBtn.addEventListener("click", () => toggleOn("._guest"));
 
-          optionCloseBtn.addEventListener("click", () => {
-            options.style.display = "none";
-            optionsActive.style.display = "block";
-          });
+            optionCloseBtn.addEventListener("click", () => {
+              options.style.display = "none";
+              optionsActive.style.display = "block";
+            });
 
-          optionActiveBtn.addEventListener("click", () => {
-            options.style.display = "block";
-            optionsActive.style.display = "none";
-          });
+            optionActiveBtn.addEventListener("click", () => {
+              options.style.display = "block";
+              optionsActive.style.display = "none";
+            });
 
-          $("#_adm-old").click(() => {
-            $("._adm-old").toggleClass("_off");
-          });
-          $("#_adm-blocked").click(() => {
-            $("._adm-blocked").toggleClass("_off");
-          });
-          $("#_adm-notpay").click(() => {
-            $("._adm-notpay").toggleClass("_off");
-          });
-          $("#_adm-draft").click(() => {
-            $("._adm-draft").toggleClass("_off");
-          });
-          $("#_adm-deleted").click(() => {
-            $("._adm-deleted").toggleClass("_off");
+            $("#_adm-old").click(() => {
+              $("._adm-old").toggleClass("_off");
+            });
+            $("#_adm-blocked").click(() => {
+              $("._adm-blocked").toggleClass("_off");
+            });
+            $("#_adm-notpay").click(() => {
+              $("._adm-notpay").toggleClass("_off");
+            });
+            $("#_adm-draft").click(() => {
+              $("._adm-draft").toggleClass("_off");
+            });
+            $("#_adm-deleted").click(() => {
+              $("._adm-deleted").toggleClass("_off");
+            });
           });
 
           function showModal(id) {
@@ -1160,25 +1168,35 @@
                   <div class="rent-guest">
                     <div class="form-group">
                       <label for="rent-guest">Гости</label>
-                      <select class="select2-custom" id="rent-guest" name="rent-guest">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
+                      <button
+                        type="button"
+                        class="btn btn-default rent-guest-btn"
+                        onclick="showModal('form_guests_modal')"
+                      >
+                        <span class="value">1 Взрослый, 1 ребёнок</span>
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#chevron-d"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                   <div class="rent-phone">
-                    <div class="form-group">
-                      <label for="rent-phone">Телефон</label>
+                    <div class="form-group _user">
+                      <label for="rent-phone">Телефон для бронирования</label>
                       <select class="select2-custom" id="rent-phone" name="rent-phone">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                        <option value="+79000000000">+7 900 000 00 00</option>
+                        <option value="+79998887766">+7 999 888 77 66</option>
                       </select>
+                    </div>
+                    <div class="form-group _guest _on">
+                      <label for="rent-phone">Телефон для бронирования</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="rent-phone"
+                        name="rent-phone"
+                        placeholder="Введите телефон"
+                      />
                     </div>
                   </div>
                   <div class="rent-prices">
