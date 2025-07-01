@@ -5395,8 +5395,9 @@ header .balance-currency {
   align-items: center;
   flex-wrap: wrap;
   color: #8c91a6;
-  gap: 10px;
+  gap: 4px;
   margin: 0;
+  margin-top: 4px;
 }
 .object .object__status .label.label-danger {
   font-size: 14px;
