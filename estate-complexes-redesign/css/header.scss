@@ -630,6 +630,20 @@ header {
 .tariff2-main__balance {
   margin-top: 0;
   margin-bottom: 12px;
+
+  &.tariff2-main__balance_red {
+    background-image: none;
+    background-color: #f2dede;
+    border: none;
+  }
+
+  .tariff2-main__balance-btn {
+    max-width: 216px;
+
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+  }
 }
 
 .about-styled .about-hero::before {

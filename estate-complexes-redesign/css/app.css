@@ -4211,6 +4211,19 @@ header .balance-currency {
   margin-top: 0;
   margin-bottom: 12px;
 }
+.tariff2-main__balance.tariff2-main__balance_red {
+  background-image: none;
+  background-color: #f2dede;
+  border: none;
+}
+.tariff2-main__balance .tariff2-main__balance-btn {
+  max-width: 216px;
+}
+@media (max-width: 767px) {
+  .tariff2-main__balance .tariff2-main__balance-btn {
+    max-width: 100%;
+  }
+}
 
 .about-styled .about-hero::before {
   top: 20px !important;
