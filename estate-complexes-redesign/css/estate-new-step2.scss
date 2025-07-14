@@ -279,8 +279,8 @@ $color-visited: #c40dd4;
       color: $color-primary;
     }
     &:has(input:focus) {
-      background-color: $color-secondary;
-      color: $color-primary;
+      background-color: #fff;
+      color: $color-dark;
       outline-offset: -2px;
       outline: 2px solid $color-dark;
       z-index: 1;

@@ -2346,3 +2346,124 @@ li.nav-tabs-dropdown {
     margin-bottom: 0;
   }
 }
+
+// Forms
+.form-vertical,
+.form-horizontal {
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+
+    .control-label {
+      text-align: left;
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-grey;
+      margin-bottom: 8px;
+      padding: 0;
+
+      label {
+        font-weight: 400;
+      }
+
+      i {
+        font-weight: 600;
+      }
+    }
+
+    &.direction-row {
+      .col-sm-6 {
+        label.control-label {
+          font-weight: 700;
+          color: $color-dark;
+          i {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &.has-error {
+      .control-label {
+        color: $color-grey;
+      }
+      .help-block {
+        color: $color-invalid;
+        &.contact-note {
+          color: #737373;
+        }
+      }
+      .form-control-feedback {
+        color: $color-invalid;
+        top: 4px;
+        opacity: 0;
+      }
+    }
+    &.has-success {
+      .control-label {
+        color: $color-grey;
+      }
+      .form-control-feedback {
+        color: $color-valid;
+        top: 4px;
+        opacity: 0;
+      }
+    }
+    .help-block {
+      i.form-control-feedback {
+        top: 4px;
+        opacity: 0;
+        display: none !important;
+      }
+    }
+  }
+}
+.form-vertical {
+  .form-group {
+    > div {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+.adv-form {
+  i {
+    display: none;
+  }
+  .fields {
+    .col-lg-offset-2 {
+      margin-left: 0;
+    }
+
+    .btn {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 767px) {
+        width: unset;
+        margin-bottom: 0;
+        border-radius: 5px;
+      }
+    }
+    .save-button-advertisement {
+      .help-block {
+        margin-top: 16px;
+      }
+      .btn.btn-add-advertisement {
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.form-vertical {
+    .bootstrap-select {
+      width: 100%;
+    }
+  }
+}
