@@ -6278,7 +6278,7 @@ header .balance-currency {
 }
 .extendedEntity .ds-annouce-info .label.label-default {
   position: relative;
-  bottom: 3px;
+  bottom: 2px;
 }
 .extendedEntity .ds-annouce-info .label {
   height: 20px;
@@ -8223,7 +8223,7 @@ footer {
 }
 .extendedEntity .ds-annouce-info .label.label-default {
   margin: 0;
-  bottom: unset;
+  bottom: 2px;
   background-color: #fff;
   color: #8c91a6;
   border: 1px solid #e6eff9;
@@ -8894,6 +8894,13 @@ footer {
 .rent-guest-btn {
   width: 100%;
   justify-content: space-between;
+}
+
+.select-with-delete {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=app.css.map */

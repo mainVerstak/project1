@@ -66,7 +66,7 @@
     ></script>
     <script defer src="js/custom-select-2.js"></script>
 
-    <script src="js/estate-new-service-script.js"></script>
+    <script defer src="js/estate-new-service-script.js"></script>
 
     <style>
       .btn-phone-floating {
@@ -2525,17 +2525,27 @@
                 <label class="control-label control-label-xl" for="advertisement[with_children]">
                   Дети, до 17 лет
                 </label>
-                <select
-                  class="select2-custom"
-                  name="advertisement[with_children]"
-                  id="advertisement_with_children"
-                  data-fv-field="advertisement[with_children]"
-                >
-                  <option value="">Выберите</option>
-                  <option value="on_request">По запросу</option>
-                  <option value="allowed">Разрешено</option>
-                  <option value="denied">Запрещено</option>
-                </select>
+                <div class="select-with-delete">
+                  <select
+                    class="select2-custom"
+                    name="advertisement[with_children]"
+                    id="advertisement_with_children"
+                    data-fv-field="advertisement[with_children]"
+                  >
+                    <option value="">Выберите возраст</option>
+                    <option value="1">До 1 года</option>
+                    <option value="1-3">1-3 года</option>
+                    <option value="3-6">3-6 лет</option>
+                    <option value="6-12">6-12 лет</option>
+                    <option value="12-16">12-16 лет</option>
+                    <option value="16-18">16-18 лет</option>
+                  </select>
+                  <button type="button" class="btn btn-default delete-field hidden">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#trash"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div class="add-field-container">
                 <button type="button" class="btn-link add-field">+ Добавить</button>
@@ -2704,6 +2714,54 @@
       }
 
       controlWithPets();
+    </script>
+
+    <script>
+      // Этот скрипт для наглядности!!!
+      // Показывает кнопку удаления селекта и навешивает обработчик на нее
+      function deleteButtonSelectWithDelete() {
+        const form = document.getElementById("form_guests");
+        if (!form) return;
+
+        const selectWithDelete = form.querySelectorAll(".select-with-delete");
+        selectWithDelete.forEach((selectContainer) => {
+          const select = selectContainer.querySelector("select");
+          const deleteButton = selectContainer.querySelector(".delete-field");
+
+          // Навешиваем обработчик на изменение селекта
+          $(select).on("select2:select", function (e) {
+            if (e.params.data.id) {
+              deleteButton.classList.remove("hidden");
+            } else {
+              deleteButton.classList.add("hidden");
+            }
+          });
+
+          // Навешиваем обработчик на кнопку удаления
+          deleteButton.addEventListener("click", function () {
+            selectContainer.remove();
+          });
+        });
+      }
+
+      // Добавляет селект с кнопкой удаления
+      function addSelectWithDelete() {
+        const form = document.getElementById("form_guests");
+        if (!form) return;
+
+        let addButton = document.querySelector(".add-field");
+        if (!addButton) return;
+
+        const selectWithDelete = form.querySelector(".select-with-delete");
+        const newSelect = selectWithDelete.cloneNode(true);
+        addButton.addEventListener("click", function () {
+          selectWithDelete.after(newSelect);
+          deleteButtonSelectWithDelete();
+        });
+      }
+
+      deleteButtonSelectWithDelete();
+      addSelectWithDelete();
     </script>
 
     <div class="btn-phone-floating">
