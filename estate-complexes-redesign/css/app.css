@@ -8413,9 +8413,6 @@ footer {
   font-size: 24px;
   font-weight: 700;
 }
-.extendedEntity .apartment-top-container {
-  margin-top: 10px;
-}
 .extendedEntity .description-container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -8442,6 +8439,14 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+}
+.rent-offer-container .h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #242a3e;
 }
 
 .bordered-row {
