@@ -727,6 +727,9 @@ textarea.form-control {
 .btn-phone-floating .btn-info:active:hover {
   background-color: #07386c;
 }
+.btn-phone-floating .apartment-desc__owner {
+  display: none;
+}
 
 .mt-3 {
   margin-top: 1rem !important;
@@ -8906,6 +8909,12 @@ footer {
   align-items: center;
   gap: 15px;
   margin-bottom: 5px;
+}
+
+.rent-calendar {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=app.css.map */

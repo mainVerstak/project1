@@ -791,6 +791,10 @@ textarea.form-control {
   .btn-info:active:hover {
     background-color: $color-blue-hover;
   }
+
+  .apartment-desc__owner {
+    display: none;
+  }
 }
 
 // Margin

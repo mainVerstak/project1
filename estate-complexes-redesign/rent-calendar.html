@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Аренда квартир посуточно</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"
+      integrity="sha512-sM9DpZQXHGs+rFjJYXE1OcuCviEgaXoQIvgsH7nejZB64A09lKeTU4nrs/K6YxFs6f+9FF2awNeJTkaLuplBhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css"
+      integrity="sha512-Ujn3LMQ8mHWqy7EPP32eqGKBhBU8v39JRIfCer4nTZqlsSZIwy5g3Wz9SaZrd6pp3vmjI34yyzguZ2KQ66CLSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-open-sans.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/fotorama.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="css/_header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/mortgage.css" />
+    <link rel="stylesheet" href="css/_icons.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/fotorama.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/y-map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script defer src="js/custom-select-2.js"></script>
+
+    <script defer src="js/estate-new-service-script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top-mobile-hidden header-top-nav header-top-nav_near">
+        <div class="container">
+          <ul class="nav navbar-left navbar-nav">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#dd"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="yaSend" href="/documents" yaparam="header_document_click">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#new"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
+                </svg>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
+                </svg>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="loaded sidenav">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
+                        </svg>
+                        Москва
+                        <i class="fa-caret-down fas"></i>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#login"></use>
+                        </svg>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#registration"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="nav-font-color navbar-btn">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#new"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Календарь бронирования</h1>
+
+      <div class="rent-calendar">
+        <div class="rent-calendar-sidebar">
+          <div class="rent-calendar-search-panel"></div>
+          <div class="rent-calendar-announces-container">
+            <div class="rent-calendar-announce-item"></div>
+          </div>
+        </div>
+        <div class="rent-calendar-content"></div>
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal" id="form_code_call_modal" aria-hidden="false">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('form_code_call_modal')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Код подтверждения</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_code_call" class="form-vertical" action="">
+              <p>Введите последние 4 цифры номера, с которго совершен звонок.</p>
+              <div class="form-group">
+                <label for="code_call" class="text-muted">Код</label>
+                <input type="text" id="code_call" class="form-control" placeholder="****" />
+              </div>
+              <div class="text-muted">Запросить код повторно через <span>45</span> сек.</div>
+              <button type="submit" class="btn btn-primary" disabled>Подтвердить</button>
+
+              <div class="text-muted">
+                Нажимая кнопку «Подтвердить», я даю своё согласие на обработку моих персональных
+                данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                персональных данных», на условиях и для целей, определенных Политикой
+                конфиденциальности.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="form_unauth_modal" aria-hidden="false">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('form_unauth_modal')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Укажите номер</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_unauth" class="form-vertical" action="">
+              <p>На указанный номер вы получите уведомления о статусе бронирования</p>
+              <div class="form-group">
+                <input type="text" id="unauth_phone" class="form-control" placeholder="+7" />
+              </div>
+              <button type="submit" class="btn btn-primary">Получить код</button>
+
+              <div class="text-muted">
+                Нажимая кнопку «Получить код», я даю своё согласие на обработку моих персональных
+                данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                персональных данных», на условиях и для целей, определенных Политикой
+                конфиденциальности.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="form_code_sms_modal" aria-hidden="false">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('form_code_sms_modal')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Код подтверждения</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_code_sms" class="form-vertical" action="">
+              <p>Введите код из СМС, отправленный на номер +7922*******85</p>
+              <div class="sms-code-input">
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="one-time-code"
+                  maxlength="6"
+                  pattern="[0-9]*"
+                  id="sms-code"
+                  class="sms-input"
+                />
+                <div class="code-boxes">
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                  <span class="code-box"></span>
+                </div>
+              </div>
+              <div class="sms-code-feedback-error hidden">Код неверный</div>
+              <div class="text-muted sms-code-countdown">
+                Запросить код повторно через <span id="countdown">45</span> сек.
+              </div>
+              <button
+                type="button"
+                id="resend-sms-code"
+                class="btn btn-default resend-sms-code-trigger"
+                onclick="startCountdown()"
+              >
+                Запросить код повторно
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="form_guests_modal" aria-hidden="false">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('form_guests_modal')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Гости</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_guests" class="form-vertical" action="">
+              <p>Жилье расчитано до 4 гостей</p>
+
+              <hr />
+
+              <div class="form-group">
+                <label class="control-label control-label-xl" for="max_guests"
+                  >Взрослые, от 18 лет</label
+                >
+                <div class="controls">
+                  <div class="form-counter">
+                    <button class="form-counter__btn-minus btn btn-default" type="button">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input
+                      class="form-control form-counter__input"
+                      type="number"
+                      id="max_guests"
+                      name="advertisement[max_guests]"
+                      min="1"
+                      value="1"
+                    />
+                    <button class="form-counter__btn-plus btn btn-default" type="button">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="form-group">
+                <label class="control-label control-label-xl" for="advertisement[with_children]">
+                  Дети, до 17 лет
+                </label>
+                <div class="select-with-delete">
+                  <select
+                    class="select2-custom"
+                    name="advertisement[with_children]"
+                    id="advertisement_with_children"
+                    data-fv-field="advertisement[with_children]"
+                  >
+                    <option value="">Выберите возраст</option>
+                    <option value="1">До 1 года</option>
+                    <option value="1-3">1-3 года</option>
+                    <option value="3-6">3-6 лет</option>
+                    <option value="6-12">6-12 лет</option>
+                    <option value="12-16">12-16 лет</option>
+                    <option value="16-18">16-18 лет</option>
+                  </select>
+                  <button type="button" class="btn btn-default delete-field hidden">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#trash"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="add-field-container">
+                <button type="button" class="btn-link add-field">+ Добавить</button>
+              </div>
+
+              <hr />
+
+              <div class="form-group animated-radios-and-checkboxes">
+                <div class="checkbox-wrapper">
+                  <div class="checkbox">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="allowed_pets"
+                        value="0"
+                        data-gtm-form-interact-field-id="0"
+                      />
+                      <span class="cr">
+                        <svg class="icon-default cr-icon">
+                          <use xlink:href="./img/icons.svg#check"></use>
+                        </svg>
+                      </span>
+                      С питомцами
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="with-pets-container hidden">
+                <div class="form-group">
+                  <label for="pet_description">Описание питомца</label>
+                  <input
+                    type="text"
+                    id="pet_description"
+                    class="form-control"
+                    placeholder="Например: мопс весом 7 кг"
+                  />
+                </div>
+
+                <div class="message-invalid">
+                  Хозяин не принимает гостей с животными. Пожалуйста, удалите это поле или выберите
+                  другое жилье.
+                </div>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" style="display: none"></div>
+  </body>
+</html>
