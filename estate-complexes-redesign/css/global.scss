@@ -2378,6 +2378,10 @@ li.nav-tabs-dropdown {
       }
     }
 
+    > div {
+      padding: 0;
+    }
+
     &.direction-row {
       .col-sm-6 {
         label.control-label {
