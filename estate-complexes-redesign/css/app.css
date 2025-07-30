@@ -2383,6 +2383,10 @@ li.nav-tabs-dropdown {
 .form-horizontal .form-group .control-label i {
   font-weight: 600;
 }
+.form-vertical .form-group > div,
+.form-horizontal .form-group > div {
+  padding: 0;
+}
 .form-vertical .form-group.direction-row .col-sm-6 label.control-label,
 .form-horizontal .form-group.direction-row .col-sm-6 label.control-label {
   font-weight: 700;
@@ -9002,8 +9006,10 @@ footer {
 .rent-calendar .rent-calendar-sidebar .rent-calendar-pagination {
   background-color: #fff;
   padding: 5px;
+  display: flex;
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-pagination .pagination.pagination-alt {
+  display: flex;
   margin: 0;
   width: 100%;
   display: flex;
@@ -9011,13 +9017,23 @@ footer {
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-pagination .pagination.pagination-alt ul {
   margin: 0;
-  padding: 0;
+  padding: 0 3px;
   display: flex;
   gap: 3px;
   list-style: none;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-.rent-calendar .rent-calendar-sidebar .rent-calendar-pagination .pagination.pagination-alt ul a,
+.rent-calendar .rent-calendar-sidebar .rent-calendar-pagination .pagination.pagination-alt ul::-webkit-scrollbar {
+  display: none;
+}
 .rent-calendar .rent-calendar-sidebar .rent-calendar-pagination .pagination.pagination-alt ul span {
+  margin: 0;
+  text-decoration: none;
+}
+.rent-calendar .rent-calendar-sidebar .rent-calendar-pagination .pagination.pagination-alt ul a {
   margin: 0;
   text-decoration: none;
 }
@@ -9114,6 +9130,13 @@ footer {
   justify-content: space-between;
   position: relative;
 }
+@media (max-width: 500px) {
+  .rent-calendar .rent-calendar-content .calendar .calendar-body .day {
+    aspect-ratio: unset;
+    width: 100%;
+    height: 90px;
+  }
+}
 .rent-calendar .rent-calendar-content .calendar .calendar-body .day.rented {
   background-color: #f6f7f9;
 }
@@ -9152,6 +9175,113 @@ footer {
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
+}
+.rent-calendar .form-group.search-input {
+  position: relative;
+}
+.rent-calendar .form-group.search-input svg.icon-default {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: #8c91a6;
+}
+.rent-calendar .form-group.search-input input.form-control {
+  padding-left: 34px !important;
+}
+.rent-calendar .form-group.search-input.selectize-input input {
+  padding-left: 24px !important;
+}
+.rent-calendar .rent-calendar-search-announce-container {
+  display: none;
+}
+@media (max-width: 991px) {
+  .rent-calendar .rent-calendar-search-announce-container {
+    display: block;
+  }
+}
+.rent-calendar .selectize-control .selectize-input,
+.rent-calendar .selectize-control.multi .selectize-input {
+  padding: 10px 13px;
+  margin-bottom: 20px;
+}
+
+.one_active_btn_action label {
+  position: relative;
+}
+.one_active_btn_action label input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.one_active_btn_action label:has(input:checked) {
+  background-color: #e6eff9;
+  color: #084c95;
+}
+.one_active_btn_action label:has(input:focus) {
+  outline-offset: -2px;
+  outline: 2px solid #242a3e;
+  z-index: 1;
+}
+
+.multiple_active_btn_action label {
+  position: relative;
+}
+.multiple_active_btn_action label input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.multiple_active_btn_action label:has(input:checked) {
+  background-color: #e6eff9;
+  color: #084c95;
+}
+.multiple_active_btn_action label:has(input:focus) {
+  outline-offset: -2px;
+  outline: 2px solid #242a3e;
+  z-index: 1;
+}
+.multiple_active_btn_action.one-line {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.multiple_active_btn_action.one-line label {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-settings-modal .modal-dialog {
+  max-width: 330px;
+}
+@media (max-width: 767px) {
+  .calendar-settings-modal .modal-dialog {
+    max-width: unset;
+  }
+}
+.calendar-settings-modal .modal-buttons-submit {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+.calendar-settings-modal .modal-buttons-submit button {
+  width: 100%;
+}
+.calendar-settings-modal .form-group,
+.calendar-settings-modal .btn-group {
+  margin-bottom: 15px;
+}
+.calendar-settings-modal input[type=number]::-webkit-outer-spin-button,
+.calendar-settings-modal input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calendar-settings-modal input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -246,7 +246,10 @@
       <div class="rent-calendar">
         <div class="rent-calendar-sidebar">
           <div class="rent-calendar-search-panel">
-            <div class="form-group">
+            <div class="form-group search-input">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#search"></use>
+              </svg>
               <input
                 type="text"
                 id="calendar_announce_find"
@@ -388,6 +391,51 @@
           </div>
         </div>
         <div class="rent-calendar-content">
+          <div class="rent-calendar-search-announce-container">
+            <div
+              class="selectize-control multi autocomplete-search-announce plugin-restore_on_backspace"
+              parent_id=""
+              parent_type=""
+            >
+              <div class="selectize-input items not-full has-options form-group search-input">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#search"></use>
+                </svg>
+                <input
+                  type="text"
+                  autocomplete="off"
+                  tabindex=""
+                  placeholder="Поиск по объявлениям"
+                />
+              </div>
+              <div
+                class="selectize-dropdown multi autocomplete-search-announce plugin-restore_on_backspace"
+                parent_id=""
+                parent_type=""
+              >
+                <div class="selectize-dropdown-content">
+                  <div data-value="4046592" data-selectable="" class="option">
+                    Сдаю коттедж 00.0 м² на участке 00.0 сот
+                  </div>
+                  <div data-value="3935434" data-selectable="" class="option">
+                    Сдаю коттедж 00.0 м² на участке 00.0 сот
+                  </div>
+                  <div data-value="3246001" data-selectable="" class="option">
+                    Сдаю коттедж 00.0 м² на участке 00.0 сот
+                  </div>
+                  <div data-value="3493712" data-selectable="" class="option">
+                    Сдаю коттедж 00.0 м² на участке 00.0 сот
+                  </div>
+                  <div data-value="2935395" data-selectable="" class="option">
+                    Сдаю коттедж 00.0 м² на участке 00.0 сот
+                  </div>
+                  <div data-value="3618840" data-selectable="" class="option">
+                    Сдаю коттедж 00.0 м² на участке 00.0 сот
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <h4 class="rent-calendar-content-title">Сдаю коттедж 00.0 м² на участке 00.0 сот</h4>
           <p class="rent-calendar-content-address">
             квартал, улица, район, область, округ, Город, направление, шоссе
@@ -421,7 +469,10 @@
                 </select>
               </div>
             </div>
-            <button class="btn btn-primary calendar-settings-btn">
+            <button
+              class="btn btn-primary calendar-settings-btn"
+              onclick="_showModal('calendar_price_and_limit')"
+            >
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#setting"></use>
               </svg>
@@ -969,7 +1020,7 @@
       </footer>
     </div>
 
-    <div class="modal" id="form_code_call_modal" aria-hidden="false">
+    <div class="modal calendar-settings-modal" id="calendar_price_and_limit" aria-hidden="false">
       <div class="modal-dialog modal-md">
         <div class="modal-content">
           <div class="modal-header">
@@ -977,7 +1028,7 @@
               class="close"
               data-dismiss="modal"
               type="button"
-              onclick="_hideModal('form_code_call_modal')"
+              onclick="_hideModal('calendar_price_and_limit')"
             >
               <span aria-hidden="true">
                 <svg class="icon-default">
@@ -986,254 +1037,68 @@
               </span>
               <span class="sr-only">Закрыть</span>
             </button>
-            <h4 class="modal-title">Код подтверждения</h4>
+            <h4 class="modal-title">Настройка дат</h4>
           </div>
           <div class="modal-body">
-            <form id="form_code_call" class="form-vertical" action="">
-              <p>Введите последние 4 цифры номера, с которго совершен звонок.</p>
-              <div class="form-group">
-                <label for="code_call" class="text-muted">Код</label>
-                <input type="text" id="code_call" class="form-control" placeholder="****" />
-              </div>
-              <div class="text-muted">Запросить код повторно через <span>45</span> сек.</div>
-              <button type="submit" class="btn btn-primary" disabled>Подтвердить</button>
-
-              <div class="text-muted">
-                Нажимая кнопку «Подтвердить», я даю своё согласие на обработку моих персональных
-                данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
-                персональных данных», на условиях и для целей, определенных Политикой
-                конфиденциальности.
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal" id="form_unauth_modal" aria-hidden="false">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              class="close"
-              data-dismiss="modal"
-              type="button"
-              onclick="_hideModal('form_unauth_modal')"
-            >
-              <span aria-hidden="true">
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#cross"></use>
-                </svg>
-              </span>
-              <span class="sr-only">Закрыть</span>
-            </button>
-            <h4 class="modal-title">Укажите номер</h4>
-          </div>
-          <div class="modal-body">
-            <form id="form_unauth" class="form-vertical" action="">
-              <p>На указанный номер вы получите уведомления о статусе бронирования</p>
-              <div class="form-group">
-                <input type="text" id="unauth_phone" class="form-control" placeholder="+7" />
-              </div>
-              <button type="submit" class="btn btn-primary">Получить код</button>
-
-              <div class="text-muted">
-                Нажимая кнопку «Получить код», я даю своё согласие на обработку моих персональных
-                данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
-                персональных данных», на условиях и для целей, определенных Политикой
-                конфиденциальности.
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal" id="form_code_sms_modal" aria-hidden="false">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              class="close"
-              data-dismiss="modal"
-              type="button"
-              onclick="_hideModal('form_code_sms_modal')"
-            >
-              <span aria-hidden="true">
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#cross"></use>
-                </svg>
-              </span>
-              <span class="sr-only">Закрыть</span>
-            </button>
-            <h4 class="modal-title">Код подтверждения</h4>
-          </div>
-          <div class="modal-body">
-            <form id="form_code_sms" class="form-vertical" action="">
-              <p>Введите код из СМС, отправленный на номер +7922*******85</p>
-              <div class="sms-code-input">
-                <input
-                  type="text"
-                  inputmode="numeric"
-                  autocomplete="one-time-code"
-                  maxlength="6"
-                  pattern="[0-9]*"
-                  id="sms-code"
-                  class="sms-input"
-                />
-                <div class="code-boxes">
-                  <span class="code-box"></span>
-                  <span class="code-box"></span>
-                  <span class="code-box"></span>
-                  <span class="code-box"></span>
-                  <span class="code-box"></span>
-                  <span class="code-box"></span>
-                </div>
-              </div>
-              <div class="sms-code-feedback-error hidden">Код неверный</div>
-              <div class="text-muted sms-code-countdown">
-                Запросить код повторно через <span id="countdown">45</span> сек.
-              </div>
-              <button
-                type="button"
-                id="resend-sms-code"
-                class="btn btn-default resend-sms-code-trigger"
-                onclick="startCountdown()"
-              >
-                Запросить код повторно
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal" id="form_guests_modal" aria-hidden="false">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              class="close"
-              data-dismiss="modal"
-              type="button"
-              onclick="_hideModal('form_guests_modal')"
-            >
-              <span aria-hidden="true">
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#cross"></use>
-                </svg>
-              </span>
-              <span class="sr-only">Закрыть</span>
-            </button>
-            <h4 class="modal-title">Гости</h4>
-          </div>
-          <div class="modal-body">
-            <form id="form_guests" class="form-vertical" action="">
-              <p>Жилье расчитано до 4 гостей</p>
-
-              <hr />
-
-              <div class="form-group">
-                <label class="control-label control-label-xl" for="max_guests"
-                  >Взрослые, от 18 лет</label
-                >
-                <div class="controls">
-                  <div class="form-counter">
-                    <button class="form-counter__btn-minus btn btn-default" type="button">
-                      <svg class="icon-default">
-                        <use xlink:href="./img/icons.svg#minus"></use>
-                      </svg>
-                    </button>
-                    <input
-                      class="form-control form-counter__input"
-                      type="number"
-                      id="max_guests"
-                      name="advertisement[max_guests]"
-                      min="1"
-                      value="1"
-                    />
-                    <button class="form-counter__btn-plus btn btn-default" type="button">
-                      <svg class="icon-default">
-                        <use xlink:href="./img/icons.svg#plus"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <hr />
-
-              <div class="form-group">
-                <label class="control-label control-label-xl" for="advertisement[with_children]">
-                  Дети, до 17 лет
+            <form id="calendar_price_and_limit" class="form-vertical" action="">
+              <div class="btn-group one_active_btn_action">
+                <label class="btn btn-default">
+                  <input
+                    name="advertisement[date_selected_type]"
+                    type="radio"
+                    value="selected"
+                    checked
+                  />
+                  Выбранные
                 </label>
-                <div class="select-with-delete">
-                  <select
-                    class="select2-custom"
-                    name="advertisement[with_children]"
-                    id="advertisement_with_children"
-                    data-fv-field="advertisement[with_children]"
-                  >
-                    <option value="">Выберите возраст</option>
-                    <option value="1">До 1 года</option>
-                    <option value="1-3">1-3 года</option>
-                    <option value="3-6">3-6 лет</option>
-                    <option value="6-12">6-12 лет</option>
-                    <option value="12-16">12-16 лет</option>
-                    <option value="16-18">16-18 лет</option>
-                  </select>
-                  <button type="button" class="btn btn-default delete-field hidden">
-                    <svg class="icon-default">
-                      <use xlink:href="./img/icons.svg#trash"></use>
-                    </svg>
-                  </button>
-                </div>
+                <label class="btn btn-default">
+                  <input name="advertisement[date_selected_type]" type="radio" value="by_days" />
+                  По дням недели
+                </label>
               </div>
-              <div class="add-field-container">
-                <button type="button" class="btn-link add-field">+ Добавить</button>
-              </div>
-
-              <hr />
-
-              <div class="form-group animated-radios-and-checkboxes">
-                <div class="checkbox-wrapper">
-                  <div class="checkbox">
-                    <label>
-                      <input
-                        type="checkbox"
-                        name="allowed_pets"
-                        value="0"
-                        data-gtm-form-interact-field-id="0"
-                      />
-                      <span class="cr">
-                        <svg class="icon-default cr-icon">
-                          <use xlink:href="./img/icons.svg#check"></use>
-                        </svg>
-                      </span>
-                      С питомцами
+              <div class="form-group selected-days">
+                <label class="control-label">По дням недели</label>
+                <div class="controls">
+                  <div class="btn-group multiple_active_btn_action one-line">
+                    <label class="btn btn-default">
+                      <input name="advertisement[date_selected_type]" type="checkbox" value="1" />
+                      Пн
+                    </label>
+                    <label class="btn btn-default">
+                      <input name="advertisement[date_selected_type]" type="checkbox" value="2" />
+                      Вт
+                    </label>
+                    <label class="btn btn-default">
+                      <input name="advertisement[date_selected_type]" type="checkbox" value="3" />
+                      Ср
+                    </label>
+                    <label class="btn btn-default">
+                      <input name="advertisement[date_selected_type]" type="checkbox" value="4" />
+                      Чт
+                    </label>
+                    <label class="btn btn-default">
+                      <input name="advertisement[date_selected_type]" type="checkbox" value="5" />
+                      Пт
+                    </label>
+                    <label class="btn btn-default">
+                      <input name="advertisement[date_selected_type]" type="checkbox" value="6" />
+                      Сб
+                    </label>
+                    <label class="btn btn-default">
+                      <input name="advertisement[date_selected_type]" type="checkbox" value="7" />
+                      Вс
                     </label>
                   </div>
                 </div>
               </div>
-
-              <div class="with-pets-container hidden">
-                <div class="form-group">
-                  <label for="pet_description">Описание питомца</label>
-                  <input
-                    type="text"
-                    id="pet_description"
-                    class="form-control"
-                    placeholder="Например: мопс весом 7 кг"
-                  />
-                </div>
-
-                <div class="message-invalid">
-                  Хозяин не принимает гостей с животными. Пожалуйста, удалите это поле или выберите
-                  другое жилье.
-                </div>
+              <div class="form-group">
+                <label class="control-label">Стоимость за сутки, руб</label>
+                <input type="number" class="form-control" placeholder="0" />
               </div>
-
-              <button class="btn btn-primary" type="submit">Сохранить</button>
+              <div class="modal-buttons-submit">
+                <button class="btn btn-default" type="button">Заблокировать</button>
+                <button class="btn btn-primary" type="button">Изменить цену</button>
+              </div>
             </form>
           </div>
         </div>
@@ -1241,5 +1106,71 @@
     </div>
 
     <div class="modal-backdrop" style="display: none"></div>
+
+    <script>
+      // Для выбора типа дат
+      function showSelectedDays(selectedType) {
+        const selectedDays = document.querySelector(".selected-days");
+        if (!selectedDays) return;
+
+        if (selectedType === "by_days") {
+          selectedDays.style.display = "block";
+        } else {
+          selectedDays.style.display = "none";
+        }
+      }
+      function showSelectedDaysByDays() {
+        const form = document.querySelector("#calendar_price_and_limit");
+
+        form.addEventListener("change", (e) => {
+          const valueSelectedType = form.querySelector(
+            '[name="advertisement[date_selected_type]"]:checked'
+          ).value;
+          showSelectedDays(valueSelectedType);
+        });
+      }
+      showSelectedDays("selected");
+      showSelectedDaysByDays();
+
+      // Для изменения цены в мобильной версии
+      function calendarMobilePrices() {
+        window.addEventListener("resize", () => {
+          document.querySelectorAll(".day-price").forEach((dayPrice) => {
+            const text = dayPrice.textContent;
+            if (text === "") return;
+            if (window.innerWidth < 500) {
+              const newText = text.replace("000 ₽", " т.₽");
+              dayPrice.textContent = newText;
+            } else {
+              const newText = text.replace(" т.₽", "000 ₽");
+              dayPrice.textContent = newText;
+            }
+          });
+        });
+      }
+      calendarMobilePrices();
+
+      // Для открытия модального окна
+      function _showModal(id) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.style.display = "block";
+        modal.classList.add("in");
+        const backdrop = document.querySelector(".modal-backdrop");
+        backdrop.style.display = "block";
+        backdrop.classList.add("in");
+      }
+
+      // Для закрытия модального окна
+      function _hideModal(id) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.style.display = "none";
+        modal.classList.remove("in");
+        const backdrop = document.querySelector(".modal-backdrop");
+        backdrop.style.display = "none";
+        backdrop.classList.remove("in");
+      }
+    </script>
   </body>
 </html>

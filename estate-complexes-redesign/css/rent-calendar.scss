@@ -97,8 +97,10 @@
     .rent-calendar-pagination {
       background-color: #fff;
       padding: 5px;
+      display: flex;
 
       .pagination.pagination-alt {
+        display: flex;
         margin: 0;
         width: 100%;
         display: flex;
@@ -106,13 +108,26 @@
 
         ul {
           margin: 0;
-          padding: 0;
+          padding: 0 3px;
           display: flex;
           gap: 3px;
           list-style: none;
+          display: flex;
+          overflow-x: auto;
 
-          a,
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
           span {
+            margin: 0;
+            text-decoration: none;
+          }
+
+          a {
             margin: 0;
             text-decoration: none;
           }
@@ -231,6 +246,12 @@
           justify-content: space-between;
           position: relative;
 
+          @media (max-width: 500px) {
+            aspect-ratio: unset;
+            width: 100%;
+            height: 90px;
+          }
+
           &.rented {
             background-color: $color-surface;
           }
@@ -280,5 +301,129 @@
         }
       }
     }
+  }
+
+  .form-group.search-input {
+    position: relative;
+
+    svg.icon-default {
+      position: absolute;
+
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      color: $color-grey;
+    }
+
+    input.form-control {
+      padding-left: 34px !important;
+    }
+    &.selectize-input {
+      input {
+        padding-left: 24px !important;
+      }
+    }
+  }
+
+  .rent-calendar-search-announce-container {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+
+  // Selectize input
+  .selectize-control .selectize-input,
+  .selectize-control.multi .selectize-input {
+    padding: 10px 13px;
+    margin-bottom: 20px;
+  }
+}
+
+// Form
+.one_active_btn_action {
+  label {
+    position: relative;
+    input[type="radio"] {
+      opacity: 0;
+      position: absolute;
+      cursor: pointer;
+    }
+
+    &:has(input:checked) {
+      background-color: $color-secondary;
+      color: $color-primary;
+    }
+    &:has(input:focus) {
+      outline-offset: -2px;
+      outline: 2px solid $color-dark;
+      z-index: 1;
+    }
+  }
+}
+.multiple_active_btn_action {
+  label {
+    position: relative;
+    input[type="checkbox"] {
+      opacity: 0;
+      position: absolute;
+      cursor: pointer;
+    }
+
+    &:has(input:checked) {
+      background-color: $color-secondary;
+      color: $color-primary;
+    }
+    &:has(input:focus) {
+      outline-offset: -2px;
+      outline: 2px solid $color-dark;
+      z-index: 1;
+    }
+  }
+
+  &.one-line {
+    display: flex;
+    flex-wrap: nowrap;
+
+    label {
+      width: 100%;
+      min-width: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+// Модапльное окно
+.calendar-settings-modal {
+  .modal-dialog {
+    max-width: 330px;
+    @media (max-width: 767px) {
+      max-width: unset;
+    }
+  }
+  .modal-buttons-submit {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+
+    button {
+      width: 100%;
+    }
+  }
+  .form-group,
+  .btn-group {
+    margin-bottom: 15px;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 }
