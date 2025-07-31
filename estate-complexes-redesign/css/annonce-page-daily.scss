@@ -298,11 +298,12 @@
   }
 
   .apartment-top-container {
+    display: flex;
     margin-bottom: 15px;
   }
   .description-container {
-    margin-top: 30px;
-    margin-bottom: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
     color: $color-dark;
