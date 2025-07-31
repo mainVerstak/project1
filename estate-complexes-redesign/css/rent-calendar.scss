@@ -158,6 +158,7 @@
   }
 
   .rent-calendar-content {
+    position: relative;
     h4.rent-calendar-content-title {
       margin-bottom: 5px;
       margin-top: 0;
@@ -184,6 +185,25 @@
       position: relative;
       z-index: 1;
 
+      &.fixed-menu {
+        position: fixed;
+        top: 10px;
+        z-index: 10;
+        background-color: #fff;
+        width: 726px;
+
+        @media (max-width: 1199px) {
+          width: 620px;
+        }
+
+        @media (max-width: 991px) {
+          width: 720px;
+        }
+        @media (max-width: 767px) {
+          width: calc(100vw - 30px);
+        }
+      }
+
       .form-group {
         margin-bottom: 0;
       }
@@ -205,10 +225,6 @@
           display: none;
         }
       }
-    }
-    .rent-calendar-wrapper {
-      overflow-y: auto;
-      max-height: 720px;
     }
 
     .calendar-month {

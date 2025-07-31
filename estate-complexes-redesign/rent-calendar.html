@@ -495,6 +495,43 @@
               <span class="calendar-settings-btn-text"> Настроить </span>
             </button>
           </div>
+          <script>
+            // Для того чтобы фиксировать меню при скролле
+            $(document).ready(function () {
+              const $menu = $(".rent-calendar-menu");
+              const $container = $(".rent-calendar-content");
+
+              if ($menu.length === 0 || $container.length === 0) return;
+
+              // Получаем изначальную позицию меню
+              const initialOffset = $menu.offset().top;
+              const menuHeight = $menu.outerHeight();
+
+              // Создаем placeholder для избежания скачков
+              const $placeholder = $('<div class="menu-placeholder"></div>').css({
+                height: menuHeight + "px",
+                display: "none",
+              });
+              $menu.before($placeholder);
+
+              $(window).scroll(function () {
+                const scrollTop = $(window).scrollTop();
+                const containerLeft = $container.offset().left;
+                const containerWidth = $container.outerWidth();
+
+                // Проверяем, достиг ли скролл позиции меню
+                if (scrollTop >= initialOffset - 10) {
+                  // Делаем меню фиксированным
+                  $menu.addClass("fixed-menu");
+                  $placeholder.show();
+                } else {
+                  // Возвращаем меню в обычное состояние
+                  $menu.removeClass("fixed-menu");
+                  $placeholder.hide();
+                }
+              });
+            });
+          </script>
           <div class="rent-calendar-wrapper">
             <div class="calendar-month">
               <div class="calendar-month-title">
