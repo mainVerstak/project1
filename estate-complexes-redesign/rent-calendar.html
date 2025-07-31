@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Аренда квартир посуточно</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
@@ -15,21 +14,19 @@
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"
-      integrity="sha512-sM9DpZQXHGs+rFjJYXE1OcuCviEgaXoQIvgsH7nejZB64A09lKeTU4nrs/K6YxFs6f+9FF2awNeJTkaLuplBhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css"
-      integrity="sha512-Ujn3LMQ8mHWqy7EPP32eqGKBhBU8v39JRIfCer4nTZqlsSZIwy5g3Wz9SaZrd6pp3vmjI34yyzguZ2KQ66CLSQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+      integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+      integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-open-sans.css" />
@@ -38,26 +35,13 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="css/fotorama.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
     <link rel="stylesheet" href="css/_header.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/_icons.css" />
     <link rel="stylesheet" href="css/app.css" />
 
-    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
 
-    <script src="js/fotorama.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-
-    <script src="js/script.js"></script>
-    <script src="js/y-map.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
       defer
@@ -392,49 +376,81 @@
         </div>
         <div class="rent-calendar-content">
           <div class="rent-calendar-search-announce-container">
-            <div
-              class="selectize-control multi autocomplete-search-announce plugin-restore_on_backspace"
-              parent_id=""
-              parent_type=""
-            >
-              <div class="selectize-input items not-full has-options form-group search-input">
-                <svg class="icon-default">
-                  <use xlink:href="./img/icons.svg#search"></use>
-                </svg>
-                <input
-                  type="text"
-                  autocomplete="off"
-                  tabindex=""
-                  placeholder="Поиск по объявлениям"
-                />
-              </div>
-              <div
-                class="selectize-dropdown multi autocomplete-search-announce plugin-restore_on_backspace"
-                parent_id=""
-                parent_type=""
-              >
-                <div class="selectize-dropdown-content">
-                  <div data-value="4046592" data-selectable="" class="option">
-                    Сдаю коттедж 00.0 м² на участке 00.0 сот
-                  </div>
-                  <div data-value="3935434" data-selectable="" class="option">
-                    Сдаю коттедж 00.0 м² на участке 00.0 сот
-                  </div>
-                  <div data-value="3246001" data-selectable="" class="option">
-                    Сдаю коттедж 00.0 м² на участке 00.0 сот
-                  </div>
-                  <div data-value="3493712" data-selectable="" class="option">
-                    Сдаю коттедж 00.0 м² на участке 00.0 сот
-                  </div>
-                  <div data-value="2935395" data-selectable="" class="option">
-                    Сдаю коттедж 00.0 м² на участке 00.0 сот
-                  </div>
-                  <div data-value="3618840" data-selectable="" class="option">
-                    Сдаю коттедж 00.0 м² на участке 00.0 сот
-                  </div>
-                </div>
-              </div>
-            </div>
+            <select id="select-tools" multiple placeholder="Поиск по объявлениям"></select>
+            <script>
+              // Пример для работы с selectize
+              var $select = $("#select-tools").selectize({
+                maxItems: 1,
+                valueField: "id",
+                labelField: "title",
+                searchField: "title",
+                options: [
+                  {
+                    id: 1,
+                    title: "Сдаю коттедж 00.0 м² на участке 00.0 сот",
+                    number: "№ 000000000",
+                    address: "квартал, улица, район, область, округ, Город, направление, шоссе",
+                    image: "./img/slide.jpg",
+                    url: "http://en.wikipedia.org/wiki/Spectrometers",
+                  },
+                  {
+                    id: 2,
+                    title: "Сдаю коттедж 00.0 м² на участке 00.0 сот",
+                    number: "№ 000000000",
+                    address: "квартал, улица, район, область, округ, Город, направление, шоссе",
+                    image: "./img/slide.jpg",
+                    url: "http://en.wikipedia.org/wiki/Star_chart",
+                  },
+                  {
+                    id: 3,
+                    title: "Сдаю коттедж 00.0 м² на участке 00.0 сот",
+                    number: "№ 000000000",
+                    address: "квартал, улица, район, область, округ, Город, направление, шоссе",
+                    image: "./img/slide.jpg",
+                    url: "http://en.wikipedia.org/wiki/Electrical_tape",
+                  },
+                  {
+                    id: 4,
+                    title: "Сдаю коттедж 00.0 м² на участке 00.0 сот",
+                    number: "№ 000000000",
+                    address: "квартал, улица, район, область, округ, Город, направление, шоссе",
+                    image: "./img/slide.jpg",
+                    url: "http://en.wikipedia.org/wiki/Electrical_tape",
+                  },
+                  {
+                    id: 5,
+                    title: "Сдаю коттедж 00.0 м² на участке 00.0 сот",
+                    number: "№ 000000000",
+                    address: "квартал, улица, район, область, округ, Город, направление, шоссе",
+                    image: "./img/slide.jpg",
+                    url: "http://en.wikipedia.org/wiki/Electrical_tape",
+                  },
+                ],
+                create: false,
+                render: {
+                  option: function (item, escape) {
+                    return `
+                      <div class="option rent-calendar-announce-card">
+                        <img class="calendar-announce-card-image" src="${item.image}" alt="image" />
+                        <div class="calendar-announce-card-info">
+                          <div class="calendar-announce-card-number">${item.number}</div>
+                          <div class="calendar-announce-card-name">
+                            ${item.title}
+                          </div>
+                          <div class="calendar-announce-card-address">
+                            ${item.address}
+                          </div>
+                        </div>
+                      </div>`;
+                  },
+                  item: function (item, escape) {
+                    return `<div class="item">${item.title}</div>`;
+                  },
+                },
+              });
+
+              var control = $select[0].selectize;
+            </script>
           </div>
           <h4 class="rent-calendar-content-title">Сдаю коттедж 00.0 м² на участке 00.0 сот</h4>
           <p class="rent-calendar-content-address">
