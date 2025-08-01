@@ -1163,7 +1163,9 @@ a.dropdown-toggle:visited {
 }
 
 .breadcrumb-filter {
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
 }
 .breadcrumb-filter .breadcrumb-filter__list {
   display: flex;
@@ -2464,6 +2466,24 @@ li.nav-tabs-dropdown {
 }
 .adv-form.form-vertical .bootstrap-select {
   width: 100%;
+}
+
+.new_invoice input[type=file] {
+  padding: 4px !important;
+}
+.new_invoice input[type=file]::file-selector-button {
+  background: #084c95;
+  border: 1px solid #084c95;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-right: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #ffffff;
+}
+.new_invoice input[type=file]::file-selector-button:hover {
+  background: #2167b4;
+  border-color: #2167b4;
 }
 
 .ds-slider {
@@ -8913,63 +8933,6 @@ footer {
   padding: 10px;
   border-radius: 5px;
   background-color: #fbf5ef;
-}
-
-.datepicker {
-  width: 316px;
-  border-color: #e6eff9;
-}
-.datepicker .datepicker--nav {
-  border-color: #e6eff9;
-}
-.datepicker .datepicker--pointer {
-  border-color: #e6eff9;
-}
-.datepicker .datepicker--nav-action {
-  width: 44px;
-  height: 44px;
-}
-.datepicker .datepicker--nav-action:hover {
-  background-color: #e6eff9;
-}
-.datepicker .datepicker--nav-title:hover {
-  background-color: #e6eff9;
-}
-.datepicker .datepicker--day-name {
-  color: #8c91a6;
-}
-.datepicker .datepicker--cell {
-  width: 44px;
-  height: 44px;
-}
-.datepicker .datepicker--cell.-current- {
-  color: #084c95;
-}
-.datepicker .datepicker--cell.-selected- {
-  background-color: #084c95;
-  color: #ffffff;
-}
-.datepicker .datepicker--cell.-selected-:hover {
-  background-color: #2167b4;
-}
-.datepicker .datepicker--cell.-focus- {
-  background-color: #e6eff9;
-}
-
-.date-picker-input {
-  position: relative;
-}
-.date-picker-input .form-control {
-  padding-left: 39px !important;
-}
-.date-picker-input svg {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
-  color: #8c91a6;
 }
 
 .rent-guest-btn {

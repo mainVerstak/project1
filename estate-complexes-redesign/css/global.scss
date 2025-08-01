@@ -1173,7 +1173,9 @@ a.dropdown-toggle:visited {
 }
 
 .breadcrumb-filter {
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
 
   .breadcrumb-filter__list {
     display: flex;
@@ -2473,5 +2475,26 @@ li.nav-tabs-dropdown {
     .bootstrap-select {
       width: 100%;
     }
+  }
+}
+
+.new_invoice {
+  input[type="file"] {
+    padding: 4px !important;
+  }
+  input[type="file"]::file-selector-button {
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: $color-white;
+  }
+
+  input[type="file"]::file-selector-button:hover {
+    background: $color-primary-hover;
+    border-color: $color-primary-hover;
   }
 }
