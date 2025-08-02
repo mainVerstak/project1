@@ -9207,6 +9207,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  margin: 0;
 }
 @media (max-width: 500px) {
   .rent-calendar .rent-calendar-content .calendar .calendar-body .day {
@@ -9215,11 +9216,36 @@ footer {
     height: 90px;
   }
 }
-.rent-calendar .rent-calendar-content .calendar .calendar-body .day.rented {
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day:hover {
+  background-color: #f6f7f9;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day:hover:has(input[type=checkbox]:disabled) {
+  background-color: #fff;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day:has(input[type=checkbox]:focus) {
+  outline: 2px solid #242a3e;
+  z-index: 1;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day.reserv {
+  background-color: #f6f7f9;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day.reserv:hover {
+  background-color: #f6f7f9;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day.reserv:hover:has(input[type=checkbox]:disabled) {
   background-color: #f6f7f9;
 }
 .rent-calendar .rent-calendar-content .calendar .calendar-body .day.locked .day-status {
   color: #f55c3d;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day.locked:hover {
+  background-color: #f6f7f9;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day.locked:hover:has(input[type=checkbox]:disabled) {
+  background-color: #f6f7f9;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day.custom-price {
+  background-color: #e6eff9;
 }
 .rent-calendar .rent-calendar-content .calendar .calendar-body .day .day-number {
   padding-top: 3px;
@@ -9253,6 +9279,19 @@ footer {
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day:has(input[type=checkbox]:checked) {
+  outline: 2px solid #084c95;
+  z-index: 1;
 }
 .rent-calendar .form-group.search-input {
   position: relative;

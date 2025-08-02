@@ -266,6 +266,7 @@
           flex-direction: column;
           justify-content: space-between;
           position: relative;
+          margin: 0;
 
           @media (max-width: 500px) {
             aspect-ratio: unset;
@@ -273,14 +274,47 @@
             height: 90px;
           }
 
-          &.rented {
+          &:hover {
             background-color: $color-surface;
+
+            &:has(input[type="checkbox"]:disabled) {
+              background-color: #fff;
+            }
+          }
+
+          &:has(input[type="checkbox"]:focus) {
+            outline: 2px solid $color-dark;
+            z-index: 1;
+          }
+
+          &.reserv {
+            background-color: $color-surface;
+
+            &:hover {
+              background-color: $color-surface;
+
+              &:has(input[type="checkbox"]:disabled) {
+                background-color: $color-surface;
+              }
+            }
           }
 
           &.locked {
             .day-status {
               color: $color-invalid;
             }
+
+            &:hover {
+              background-color: $color-surface;
+
+              &:has(input[type="checkbox"]:disabled) {
+                background-color: $color-surface;
+              }
+            }
+          }
+
+          &.custom-price {
+            background-color: $color-secondary;
           }
 
           .day-number {
@@ -318,6 +352,21 @@
             font-weight: 700;
             font-size: 14px;
             line-height: 1;
+          }
+
+          input[type="checkbox"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+          }
+
+          &:has(input[type="checkbox"]:checked) {
+            outline: 2px solid $color-primary;
+            z-index: 1;
           }
         }
       }
