@@ -691,6 +691,9 @@ textarea.form-control {
   }
 }
 
+.btn-phone-floating {
+  width: 100vw;
+}
 .btn-phone-floating .icon-default {
   width: 14px;
   height: 14px;
