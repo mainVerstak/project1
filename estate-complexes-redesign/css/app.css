@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -8744,6 +8748,14 @@ footer {
 #form_code_sms_modal .modal-dialog,
 #form_guests_modal .modal-dialog {
   width: 400px;
+}
+@media (max-width: 767px) {
+  #form_code_call_modal .modal-dialog,
+  #form_unauth_modal .modal-dialog,
+  #form_code_sms_modal .modal-dialog,
+  #form_guests_modal .modal-dialog {
+    width: 100%;
+  }
 }
 #form_code_call_modal .modal-body,
 #form_unauth_modal .modal-body,

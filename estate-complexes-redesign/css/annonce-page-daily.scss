@@ -560,6 +560,9 @@
 #form_guests_modal {
   .modal-dialog {
     width: 400px;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
   .modal-body {
     padding: 0 20px 20px;
