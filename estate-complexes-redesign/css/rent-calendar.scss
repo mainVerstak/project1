@@ -108,6 +108,10 @@
     border-radius: 10px;
 
     &:hover {
+      background-color: $color-surface;
+    }
+
+    &.active {
       background-color: $color-secondary;
     }
 
