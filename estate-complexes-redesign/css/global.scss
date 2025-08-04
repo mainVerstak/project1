@@ -2008,39 +2008,6 @@ a.dropdown-toggle:visited {
   margin: 0 auto;
 }
 
-// search-hotel
-.search-hotel__btn {
-  box-shadow: none;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  background-image: none;
-
-  font-family: inherit;
-  background-color: $color-primary;
-  border-color: $color-primary;
-  color: $color-white;
-  border: none;
-  padding: 7px 24px;
-  font-weight: 700;
-
-  &:hover {
-    background-image: none;
-    background-color: $color-primary-hover;
-    border-color: $color-primary-hover;
-  }
-  &:focus {
-    background-image: none;
-    background-color: $color-primary-hover;
-    border-color: $color-primary-hover;
-    outline: 2px solid $color-dark;
-  }
-  &:active {
-    background-image: none;
-    background-color: $color-primary-hover;
-    border-color: $color-primary-hover;
-  }
-}
-
 .form-group.direction-row {
   flex-direction: row !important;
 

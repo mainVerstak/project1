@@ -2062,36 +2062,6 @@ a.dropdown-toggle:visited {
   margin: 0 auto;
 }
 
-.search-hotel__btn {
-  box-shadow: none;
-  text-shadow: none;
-  -webkit-box-shadow: none;
-  background-image: none;
-  font-family: inherit;
-  background-color: #084c95;
-  border-color: #084c95;
-  color: #ffffff;
-  border: none;
-  padding: 7px 24px;
-  font-weight: 700;
-}
-.search-hotel__btn:hover {
-  background-image: none;
-  background-color: #2167b4;
-  border-color: #2167b4;
-}
-.search-hotel__btn:focus {
-  background-image: none;
-  background-color: #2167b4;
-  border-color: #2167b4;
-  outline: 2px solid #242a3e;
-}
-.search-hotel__btn:active {
-  background-image: none;
-  background-color: #2167b4;
-  border-color: #2167b4;
-}
-
 .form-group.direction-row {
   flex-direction: row !important;
 }
