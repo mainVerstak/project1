@@ -7549,63 +7549,6 @@ footer {
   border-color: #e6eff9;
 }
 
-.datepicker {
-  width: 316px;
-  border-color: #e6eff9;
-}
-.datepicker .datepicker--nav {
-  border-color: #e6eff9;
-}
-.datepicker .datepicker--pointer {
-  border-color: #e6eff9;
-}
-.datepicker .datepicker--nav-action {
-  width: 44px;
-  height: 44px;
-}
-.datepicker .datepicker--nav-action:hover {
-  background-color: #e6eff9;
-}
-.datepicker .datepicker--nav-title:hover {
-  background-color: #e6eff9;
-}
-.datepicker .datepicker--day-name {
-  color: #8c91a6;
-}
-.datepicker .datepicker--cell {
-  width: 44px;
-  height: 44px;
-}
-.datepicker .datepicker--cell.-current- {
-  color: #084c95;
-}
-.datepicker .datepicker--cell.-selected- {
-  background-color: #084c95;
-  color: #ffffff;
-}
-.datepicker .datepicker--cell.-selected-:hover {
-  background-color: #2167b4;
-}
-.datepicker .datepicker--cell.-focus- {
-  background-color: #e6eff9;
-}
-
-.date-picker-input {
-  position: relative;
-}
-.date-picker-input .form-control {
-  padding-left: 39px !important;
-}
-.date-picker-input svg {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
-  color: #8c91a6;
-}
-
 .publications .object__show-phone {
   background-color: #ffffff;
   color: #242a3e !important;
@@ -9433,6 +9376,63 @@ footer {
 }
 .calendar-settings-modal input[type=number] {
   -moz-appearance: textfield;
+}
+
+.datepicker {
+  width: 316px;
+  border-color: #e6eff9;
+}
+.datepicker .datepicker--nav {
+  border-color: #e6eff9;
+}
+.datepicker .datepicker--pointer {
+  border-color: #e6eff9;
+}
+.datepicker .datepicker--nav-action {
+  width: 44px;
+  height: 44px;
+}
+.datepicker .datepicker--nav-action:hover {
+  background-color: #e6eff9;
+}
+.datepicker .datepicker--nav-title:hover {
+  background-color: #e6eff9;
+}
+.datepicker .datepicker--day-name {
+  color: #8c91a6;
+}
+.datepicker .datepicker--cell {
+  width: 44px;
+  height: 44px;
+}
+.datepicker .datepicker--cell.-current- {
+  color: #084c95;
+}
+.datepicker .datepicker--cell.-selected- {
+  background-color: #084c95;
+  color: #ffffff;
+}
+.datepicker .datepicker--cell.-selected-:hover {
+  background-color: #2167b4;
+}
+.datepicker .datepicker--cell.-focus- {
+  background-color: #e6eff9;
+}
+
+.date-picker-input {
+  position: relative;
+}
+.date-picker-input .form-control {
+  padding-left: 39px !important;
+}
+.date-picker-input svg {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: #8c91a6;
 }
 
 /*# sourceMappingURL=app.css.map */
