@@ -262,6 +262,52 @@
             color: $color-primary;
           }
         }
+
+        &.btn-primary {
+          background-color: $color-primary;
+          border-color: $color-primary;
+          color: $color-white;
+
+          @media (hover: hover) {
+            &:hover {
+              background-color: $color-primary-hover;
+              border-color: $color-primary-hover;
+              color: $color-white;
+            }
+          }
+          @media (hover: none) {
+            &:active,
+            &.active {
+              background-color: $color-primary-hover;
+              border-color: $color-primary-hover;
+              color: $color-white;
+            }
+          }
+
+          &:focus,
+          &.focus {
+            outline: 2px solid $color-dark;
+            background-color: $color-primary;
+            border-color: $color-primary;
+            color: $color-white;
+
+            @media (hover: hover) {
+              &:hover {
+                background-color: $color-primary-hover;
+                border-color: $color-primary-hover;
+                color: $color-white;
+              }
+            }
+            @media (hover: none) {
+              &:active,
+              &.active {
+                background-color: $color-primary-hover;
+                border-color: $color-primary-hover;
+                color: $color-white;
+              }
+            }
+          }
+        }
       }
     }
   }
