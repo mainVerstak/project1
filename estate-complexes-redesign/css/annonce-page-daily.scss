@@ -367,10 +367,14 @@
     text-align: right;
     font-size: 14px;
     font-weight: 700;
-  }
 
-  .bordered-row-value a {
-    font-weight: 400;
+    a {
+      font-weight: 400;
+    }
+
+    .currency {
+      margin-left: 4px;
+    }
   }
 }
 
