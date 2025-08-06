@@ -1242,7 +1242,7 @@ a.dropdown-toggle:visited {
 }
 .selectize-control .selectize-input,
 .selectize-control.multi .selectize-input {
-  padding: 13px 15px;
+  padding: 11px 15px;
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid #e6eff9;
@@ -4941,6 +4941,7 @@ header .balance-currency {
   border-radius: 10px;
   box-shadow: none;
   background-image: none;
+  margin-bottom: 5px;
 }
 #searchFormModal.well-sm,
 .searchFormPage.well-sm {
