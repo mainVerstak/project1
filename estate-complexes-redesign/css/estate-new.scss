@@ -72,6 +72,22 @@
   }
 }
 
+.form-horizontal {
+  .form-group:has(.col-sm-4) {
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 8px;
+
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
 .form-vertical {
   .form-group {
     > div {

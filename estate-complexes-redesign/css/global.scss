@@ -39,11 +39,6 @@ $color-white: #ffffff;
 $color-disabled: #c4cdd9;
 $color-visited: #c40dd4;
 
-// Scroll smooth - if you need it
-html {
-  scroll-behavior: smooth;
-}
-
 // Typography
 h1,
 h2,
@@ -234,6 +229,11 @@ hr {
 }
 .well-xs {
   padding: 0 !important;
+}
+
+// for yandex adv hide
+.yandex_content {
+  overflow: hidden;
 }
 
 // Links

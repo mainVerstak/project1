@@ -1,8 +1,4 @@
 @charset "UTF-8";
-html {
-  scroll-behavior: smooth;
-}
-
 h1,
 h2,
 h3,
@@ -209,6 +205,10 @@ hr {
 
 .well-xs {
   padding: 0 !important;
+}
+
+.yandex_content {
+  overflow: hidden;
 }
 
 a {
@@ -7176,6 +7176,20 @@ footer {
   display: none !important;
 }
 
+.form-horizontal .form-group:has(.col-sm-4) {
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+@media (max-width: 767px) {
+  .form-horizontal .form-group:has(.col-sm-4) {
+    flex-wrap: wrap;
+  }
+}
+.form-horizontal .form-group:has(.col-sm-4)::before {
+  content: none;
+}
+
 .form-vertical .form-group > div {
   width: 100%;
   padding: 0;
@@ -8217,7 +8231,7 @@ footer {
 }
 .extendedEntity .ds-annouce-info .panel-body-adv-block:not(:has(.label svg)) {
   position: relative;
-  top: -2px;
+  top: 0;
 }
 .extendedEntity .ds-annouce-info .label {
   height: 26px;
@@ -8699,6 +8713,16 @@ footer {
   transform: translateX(-50%);
   width: 100%;
   height: 5px;
+}
+.tooltip-container .tooltip-content.to_left_side {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
+.tooltip-container .tooltip-content.to_right_side {
+  left: 0;
+  right: auto;
+  transform: translateX(0);
 }
 
 #form_code_call_modal .modal-dialog,

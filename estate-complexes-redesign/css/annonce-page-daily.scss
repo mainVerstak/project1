@@ -58,7 +58,7 @@
 
     .panel-body-adv-block:not(:has(.label svg)) {
       position: relative;
-      top: -2px;
+      top: 0;
     }
 
     .label {
@@ -600,6 +600,16 @@
       transform: translateX(-50%);
       width: 100%;
       height: 5px;
+    }
+    &.to_left_side {
+      left: auto;
+      right: 0;
+      transform: translateX(0);
+    }
+    &.to_right_side {
+      left: 0;
+      right: auto;
+      transform: translateX(0);
     }
   }
 }
