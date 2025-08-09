@@ -1739,6 +1739,15 @@ a.dropdown-toggle:visited {
 .payment_form .show_more_payment_methods_action .fas.fa-level-down-alt {
   padding-top: 0 !important;
 }
+@media (max-width: 767px) {
+  .payment_form .show_more_payment_methods_action {
+    width: 140px;
+    align-items: start;
+  }
+  .payment_form .show_more_payment_methods_action .fas.fa-level-down-alt {
+    padding-left: 8px;
+  }
+}
 
 .about-styled .about-hero__inner {
   width: 100%;
@@ -7190,6 +7199,11 @@ footer {
 .form-horizontal .form-group:has(.col-sm-4)::before {
   content: none;
 }
+@media (max-width: 600px) {
+  .form-horizontal .form-group .col-sm-6:has(.input-group.input-group-responsive) {
+    width: 100%;
+  }
+}
 
 .form-vertical .form-group > div {
   width: 100%;
@@ -8228,7 +8242,7 @@ footer {
   line-height: 1.3;
 }
 .extendedEntity .ds-annouce-info:has(.label) {
-  line-height: 1.9;
+  line-height: 2.2;
 }
 .extendedEntity .ds-annouce-info .panel-body-adv-block:not(:has(.label svg)) {
   position: relative;

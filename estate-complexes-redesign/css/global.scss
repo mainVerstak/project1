@@ -1656,6 +1656,15 @@ a.dropdown-toggle:visited {
     .fas.fa-level-down-alt {
       padding-top: 0 !important;
     }
+
+    @media (max-width: 767px) {
+      width: 140px;
+      align-items: start;
+
+      .fas.fa-level-down-alt {
+        padding-left: 8px;
+      }
+    }
   }
 }
 

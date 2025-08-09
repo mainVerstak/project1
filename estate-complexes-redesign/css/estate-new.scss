@@ -73,17 +73,24 @@
 }
 
 .form-horizontal {
-  .form-group:has(.col-sm-4) {
-    flex-direction: row;
-    gap: 8px;
-    margin-bottom: 8px;
+  .form-group {
+    &:has(.col-sm-4) {
+      flex-direction: row;
+      gap: 8px;
+      margin-bottom: 8px;
 
-    @media (max-width: 767px) {
-      flex-wrap: wrap;
+      @media (max-width: 767px) {
+        flex-wrap: wrap;
+      }
+
+      &::before {
+        content: none;
+      }
     }
-
-    &::before {
-      content: none;
+    @media (max-width: 600px) {
+      .col-sm-6:has(.input-group.input-group-responsive) {
+        width: 100%;
+      }
     }
   }
 }
