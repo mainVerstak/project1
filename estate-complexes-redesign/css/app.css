@@ -1748,6 +1748,11 @@ a.dropdown-toggle:visited {
     padding-left: 8px;
   }
 }
+@media (max-width: 767px) {
+  .payment_form .form-group .paymentSubmit {
+    width: 100%;
+  }
+}
 
 .about-styled .about-hero__inner {
   width: 100%;

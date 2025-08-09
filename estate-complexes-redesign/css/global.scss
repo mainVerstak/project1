@@ -1657,12 +1657,21 @@ a.dropdown-toggle:visited {
       padding-top: 0 !important;
     }
 
+    // если что убрать
     @media (max-width: 767px) {
       width: 140px;
       align-items: start;
 
       .fas.fa-level-down-alt {
         padding-left: 8px;
+      }
+    }
+  }
+
+  .form-group {
+    .paymentSubmit {
+      @media (max-width: 767px) {
+        width: 100%;
       }
     }
   }
