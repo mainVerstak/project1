@@ -622,7 +622,7 @@
   .modal-dialog {
     width: 400px;
     @media (max-width: 767px) {
-      width: 100%;
+      width: calc(100vw - 20px);
     }
   }
   .modal-body {

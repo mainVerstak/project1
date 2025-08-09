@@ -8737,7 +8737,7 @@ footer {
   #form_unauth_modal .modal-dialog,
   #form_code_sms_modal .modal-dialog,
   #form_guests_modal .modal-dialog {
-    width: 100%;
+    width: calc(100vw - 20px);
   }
 }
 #form_code_call_modal .modal-body,
