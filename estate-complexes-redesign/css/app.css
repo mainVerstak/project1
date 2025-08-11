@@ -1168,6 +1168,23 @@ a.dropdown-toggle:visited {
 .breadcrumb li a.btn {
   display: inline-flex;
 }
+@media (min-width: 768px) {
+  .breadcrumb {
+    display: inline;
+  }
+  .breadcrumb > li + li::before {
+    margin-left: 3px;
+  }
+  .breadcrumb > li {
+    display: inline;
+  }
+  .breadcrumb li {
+    white-space: wrap;
+  }
+  .breadcrumb li a {
+    margin-bottom: 3px;
+  }
+}
 
 .breadcrumb-filter {
   margin-top: 0 !important;
@@ -1738,15 +1755,6 @@ a.dropdown-toggle:visited {
 }
 .payment_form .show_more_payment_methods_action .fas.fa-level-down-alt {
   padding-top: 0 !important;
-}
-@media (max-width: 767px) {
-  .payment_form .show_more_payment_methods_action {
-    width: 140px;
-    align-items: start;
-  }
-  .payment_form .show_more_payment_methods_action .fas.fa-level-down-alt {
-    padding-left: 8px;
-  }
 }
 @media (max-width: 767px) {
   .payment_form .form-group .paymentSubmit {
@@ -2457,6 +2465,44 @@ li.nav-tabs-dropdown {
 }
 .adv-form.form-vertical .bootstrap-select {
   width: 100%;
+}
+
+.form-horizontal .form-group:has(.col-sm-4) {
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+@media (max-width: 767px) {
+  .form-horizontal .form-group:has(.col-sm-4) {
+    flex-wrap: wrap;
+  }
+}
+.form-horizontal .form-group:has(.col-sm-4)::before {
+  content: none;
+}
+@media (max-width: 600px) {
+  .form-horizontal .form-group .col-sm-6:has(.input-group.input-group-responsive) {
+    width: 100%;
+  }
+}
+
+.form-horizontal .form-group {
+  flex-direction: row;
+  gap: 8px;
+}
+.form-horizontal .form-group::before {
+  display: none;
+}
+.form-horizontal .form-group > div {
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .form-horizontal .form-group {
+    flex-direction: column;
+  }
+  .form-horizontal .form-group > div {
+    width: 100%;
+  }
 }
 
 .new_invoice input[type=file] {
@@ -7405,8 +7451,7 @@ footer {
   margin-bottom: 0;
 }
 
-.select2-custom,
-.select2-container {
+.select2.select2-container {
   width: 100% !important;
 }
 

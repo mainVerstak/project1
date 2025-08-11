@@ -71,6 +71,16 @@
   width: 100%;
   height: 5px;
 }
+.tooltip-container .tooltip-content.to_left_side {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
+.tooltip-container .tooltip-content.to_right_side {
+  left: 0;
+  right: auto;
+  transform: translateX(0);
+}
 
 .btn-group .btn {
   min-width: 44px;
@@ -241,11 +251,6 @@
   outline-offset: -2px;
   outline: 2px solid #242a3e;
   z-index: 1;
-}
-
-.select2-custom,
-.select2-container {
-  width: 100% !important;
 }
 
 .select2-container--default .select2-selection--single {

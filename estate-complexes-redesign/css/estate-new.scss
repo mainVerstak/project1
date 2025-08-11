@@ -87,8 +87,8 @@
         content: none;
       }
     }
-    @media (max-width: 600px) {
-      .col-sm-6:has(.input-group.input-group-responsive) {
+    .col-sm-6:has(.input-group.input-group-responsive) {
+      @media (max-width: 600px) {
         width: 100%;
       }
     }
@@ -324,8 +324,7 @@
 }
 
 // Select2
-.select2-custom,
-.select2-container {
+.select2.select2-container {
   width: 100% !important;
 }
 
