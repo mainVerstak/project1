@@ -2523,6 +2523,24 @@ li.nav-tabs-dropdown {
   border-color: #2167b4;
 }
 
+.admin-location-btns-group {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .admin-location-btns-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .admin-location-btns-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .ds-slider {
   position: relative;
 }
@@ -5327,6 +5345,16 @@ header .balance-currency {
   }
   #searchFormModal .modal-body label.btn:only-child {
     display: flex;
+  }
+}
+@media (max-width: 767px) {
+  #searchFormModal .modal-body .btn-group .btn.btn-default:hover {
+    background-color: #fff;
+    border: 1px solid #e6eff9;
+  }
+  #searchFormModal .modal-body .btn-group .btn.btn-default.active:hover {
+    background-color: #e6eff9;
+    border: 1px solid #e6eff9;
   }
 }
 /* Cards */
@@ -8580,6 +8608,11 @@ footer {
   margin-top: 0;
   margin-bottom: 20px;
   color: #242a3e;
+}
+@media (max-width: 767px) {
+  .rent-offer-container .btn.btn-primary {
+    justify-content: center;
+  }
 }
 
 .bordered-row {
