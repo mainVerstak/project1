@@ -2523,4 +2523,22 @@ li.nav-tabs-dropdown {
   border-color: #2167b4;
 }
 
+.admin-location-btns-group {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .admin-location-btns-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .admin-location-btns-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=global.css.map */

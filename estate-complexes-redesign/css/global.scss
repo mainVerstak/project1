@@ -2544,3 +2544,20 @@ li.nav-tabs-dropdown {
     border-color: $color-primary-hover;
   }
 }
+
+// admin-location-btns-group
+.admin-location-btns-group {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+
+  @media (max-width: 991px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 520px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
