@@ -676,3 +676,12 @@
     display: flex;
   }
 }
+
+@media (max-width: 767px) {
+  #searchFormModal .modal-body .btn-group .btn.btn-default:hover {
+    background-color: #fff;
+    border: 1px solid #f6f7f9;
+    outline: 2px solid #242a3e;
+    outline-offset: -2px;
+  }
+}

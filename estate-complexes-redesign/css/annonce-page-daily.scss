@@ -391,6 +391,11 @@
     margin-bottom: 20px;
     color: $color-dark;
   }
+  @media (max-width: 767px) {
+    .btn.btn-primary {
+      justify-content: center;
+    }
+  }
 }
 
 .bordered-row {
