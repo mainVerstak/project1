@@ -2561,3 +2561,11 @@ li.nav-tabs-dropdown {
     flex-direction: column;
   }
 }
+
+// for centred contaner
+@media (min-width: 768px) {
+  .centred-container-sm {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
