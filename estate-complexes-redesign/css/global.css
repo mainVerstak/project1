@@ -2541,4 +2541,25 @@ li.nav-tabs-dropdown {
   }
 }
 
+@media (min-width: 768px) {
+  .centred-container-sm {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+.btn-place-an-ad {
+  position: fixed;
+  bottom: 0;
+  transition: all 0.3s;
+}
+.btn-place-an-ad .btn {
+  width: calc(100vw - 30px);
+  margin: 0 15px 15px;
+  justify-content: center;
+}
+.btn-place-an-ad.invisible {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
 /*# sourceMappingURL=global.css.map */
