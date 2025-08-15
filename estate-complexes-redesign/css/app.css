@@ -198,6 +198,11 @@ hr {
   padding-left: 0;
   padding-right: 0;
 }
+@media (max-width: 768px) {
+  .well.well-no-padding-x .flash-messages {
+    margin-top: -20px;
+  }
+}
 
 .well-sm {
   border-radius: 5px;
@@ -2539,6 +2544,27 @@ li.nav-tabs-dropdown {
     display: flex;
     flex-direction: column;
   }
+}
+
+@media (min-width: 768px) {
+  .centred-container-sm {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+.btn-place-an-ad {
+  position: fixed;
+  bottom: 0;
+  transition: all 0.3s;
+}
+.btn-place-an-ad .btn {
+  width: calc(100vw - 30px);
+  margin: 0 15px 15px;
+  justify-content: center;
+}
+.btn-place-an-ad.invisible {
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .ds-slider {
