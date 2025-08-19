@@ -8665,6 +8665,9 @@ footer {
 .bordered-row .bordered-row-value a {
   font-weight: 400;
 }
+.bordered-row .bordered-row-value:has(a) {
+  font-weight: 400;
+}
 .bordered-row .bordered-row-value .currency {
   margin-left: 4px;
 }

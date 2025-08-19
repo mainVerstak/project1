@@ -423,6 +423,10 @@
       font-weight: 400;
     }
 
+    &:has(a) {
+      font-weight: 400;
+    }
+
     .currency {
       margin-left: 4px;
     }
