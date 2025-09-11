@@ -8643,7 +8643,7 @@ footer {
 
 .bordered-row {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: 5px;
   padding: 10px 0;
@@ -9084,6 +9084,9 @@ footer {
   .rent-calendar {
     grid-template-columns: 1fr;
   }
+  .rent-calendar .rent-announce {
+    display: none;
+  }
 }
 .rent-calendar .rent-calendar-sidebar {
   display: flex;
@@ -9398,6 +9401,31 @@ footer {
 .rent-calendar .rent-calendar-content .calendar .calendar-body .day:has(input[type=checkbox]:checked) {
   outline: 2px solid #084c95;
   z-index: 1;
+}
+.rent-calendar .rent-calendar-wrapper .loader {
+  display: none;
+}
+.rent-calendar .rent-calendar-wrapper.loading {
+  position: relative;
+  z-index: 1;
+}
+.rent-calendar .rent-calendar-wrapper.loading .loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.8901960784);
+  top: 0;
+}
+.rent-calendar .rent-calendar-wrapper.loading .loader img {
+  top: calc(25% - 21px);
+  width: 42px;
+  height: 42px;
+  position: relative;
+  z-index: 6;
 }
 .rent-calendar .form-group.search-input {
   position: relative;

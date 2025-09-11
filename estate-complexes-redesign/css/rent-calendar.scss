@@ -11,6 +11,10 @@
 
   @media (max-width: 991px) {
     grid-template-columns: 1fr;
+
+    .rent-announce {
+      display: none;
+    }
   }
 
   .rent-calendar-sidebar {
@@ -372,6 +376,34 @@
             outline: 2px solid $color-primary;
             z-index: 1;
           }
+        }
+      }
+    }
+  }
+
+  .rent-calendar-wrapper {
+    .loader {
+      display: none;
+    }
+    &.loading {
+      position: relative;
+      z-index: 1;
+      .loader {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        position: absolute;
+        z-index: 5;
+        background-color: #ffffffe3;
+        top: 0;
+        img {
+          top: calc(100% / 4 - 21px);
+          width: 42px;
+          height: 42px;
+          position: relative;
+          z-index: 6;
         }
       }
     }
