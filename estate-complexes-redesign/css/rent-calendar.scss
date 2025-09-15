@@ -11,6 +11,7 @@
 
   @media (max-width: 991px) {
     grid-template-columns: 1fr;
+    gap: 4px;
 
     .rent-announce {
       display: none;
@@ -24,14 +25,22 @@
     border: 1px solid $color-secondary;
     padding: 3px;
     max-height: 840px;
+    background-color: #fff;
+    position: relative;
 
     @media (max-width: 991px) {
-      display: none;
+      max-height: unset;
+      border: none;
+      padding: 0;
     }
 
     .rent-calendar-search-panel {
       .form-group {
         margin-bottom: 3px;
+
+        .selected {
+          font-weight: 700;
+        }
       }
     }
 
@@ -40,12 +49,33 @@
       flex-direction: column;
       overflow-y: auto;
       flex: 1;
+      background-color: #fff;
+      transition: all 0.3s ease;
+
+      @media (max-width: 991px) {
+        max-height: 0;
+        overflow-x: hidden;
+        position: absolute;
+        z-index: 2;
+        width: calc(100vw - 30px);
+        top: 48px;
+
+        &.active {
+          max-height: 400px;
+          border-radius: 8px;
+          border: 1px solid $color-secondary;
+        }
+      }
     }
 
     .rent-calendar-pagination {
       background-color: #fff;
       padding: 5px;
       display: flex;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
 
       .pagination.pagination-alt {
         display: flex;
@@ -138,8 +168,6 @@
       .calendar-announce-card-number,
       .calendar-announce-card-name,
       .calendar-announce-card-address {
-        width: 100%;
-        min-width: 0;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -415,16 +443,38 @@
     svg.icon-default {
       position: absolute;
 
-      left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 14px;
-      height: 14px;
-      color: $color-grey;
+      &.search-icon {
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+        color: $color-grey;
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+
+      &.chevron-icon {
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+
+        @media (min-width: 992px) {
+          display: none;
+        }
+      }
     }
 
     input.form-control {
       padding-left: 34px !important;
+
+      @media (max-width: 991px) {
+        padding-left: 14px !important;
+      }
     }
     &.selectize-input {
       input {

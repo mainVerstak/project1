@@ -9083,6 +9083,7 @@ footer {
 @media (max-width: 991px) {
   .rent-calendar {
     grid-template-columns: 1fr;
+    gap: 4px;
   }
   .rent-calendar .rent-announce {
     display: none;
@@ -9095,25 +9096,54 @@ footer {
   border: 1px solid #e6eff9;
   padding: 3px;
   max-height: 840px;
+  background-color: #fff;
+  position: relative;
 }
 @media (max-width: 991px) {
   .rent-calendar .rent-calendar-sidebar {
-    display: none;
+    max-height: unset;
+    border: none;
+    padding: 0;
   }
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-search-panel .form-group {
   margin-bottom: 3px;
+}
+.rent-calendar .rent-calendar-sidebar .rent-calendar-search-panel .form-group .selected {
+  font-weight: 700;
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-announces-container {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   flex: 1;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+@media (max-width: 991px) {
+  .rent-calendar .rent-calendar-sidebar .rent-calendar-announces-container {
+    max-height: 0;
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 2;
+    width: calc(100vw - 30px);
+    top: 48px;
+  }
+  .rent-calendar .rent-calendar-sidebar .rent-calendar-announces-container.active {
+    max-height: 400px;
+    border-radius: 8px;
+    border: 1px solid #e6eff9;
+  }
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-pagination {
   background-color: #fff;
   padding: 5px;
   display: flex;
+}
+@media (max-width: 991px) {
+  .rent-calendar .rent-calendar-sidebar .rent-calendar-pagination {
+    display: none;
+  }
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-pagination .pagination.pagination-alt {
   display: flex;
@@ -9190,8 +9220,6 @@ footer {
 .rent-calendar .rent-calendar-announce-card .calendar-announce-card-info .calendar-announce-card-number,
 .rent-calendar .rent-calendar-announce-card .calendar-announce-card-info .calendar-announce-card-name,
 .rent-calendar .rent-calendar-announce-card .calendar-announce-card-info .calendar-announce-card-address {
-  width: 100%;
-  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9432,6 +9460,8 @@ footer {
 }
 .rent-calendar .form-group.search-input svg.icon-default {
   position: absolute;
+}
+.rent-calendar .form-group.search-input svg.icon-default.search-icon {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
@@ -9439,8 +9469,30 @@ footer {
   height: 14px;
   color: #8c91a6;
 }
+@media (max-width: 991px) {
+  .rent-calendar .form-group.search-input svg.icon-default.search-icon {
+    display: none;
+  }
+}
+.rent-calendar .form-group.search-input svg.icon-default.chevron-icon {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+}
+@media (min-width: 992px) {
+  .rent-calendar .form-group.search-input svg.icon-default.chevron-icon {
+    display: none;
+  }
+}
 .rent-calendar .form-group.search-input input.form-control {
   padding-left: 34px !important;
+}
+@media (max-width: 991px) {
+  .rent-calendar .form-group.search-input input.form-control {
+    padding-left: 14px !important;
+  }
 }
 .rent-calendar .form-group.search-input.selectize-input input {
   padding-left: 24px !important;

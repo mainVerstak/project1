@@ -239,7 +239,7 @@
         <div class="rent-calendar-sidebar">
           <div class="rent-calendar-search-panel">
             <div class="form-group search-input">
-              <svg class="icon-default">
+              <svg class="icon-default search-icon">
                 <use xlink:href="./img/icons.svg#search"></use>
               </svg>
               <input
@@ -248,6 +248,9 @@
                 class="form-control"
                 placeholder="Поиск по объявлениям"
               />
+              <svg class="icon-default chevron-icon">
+                <use xlink:href="./img/icons.svg#chevron-d"></use>
+              </svg>
             </div>
           </div>
           <div class="rent-calendar-announces-container">
@@ -426,94 +429,33 @@
               </a>
             </div>
           </div>
+          <script>
+            // Скрипт для отображения поиска объявлений на мобилке
+            $("#calendar_announce_find").on("focus", function () {
+              $(".rent-calendar-announces-container").addClass("active");
+            });
+            $("#calendar_announce_find").on("focusout", function () {
+              $(".rent-calendar-announces-container").removeClass("active");
+            });
+
+            $("#calendar_announce_find").on("input", function () {
+              const input = $("#calendar_announce_find");
+              input.removeClass("selected");
+            });
+
+            $(".rent-calendar-announce-card").on("click", function (e) {
+              const cards = $(".rent-calendar-announces-container");
+              const input = $("#calendar_announce_find");
+              input.val(
+                e.currentTarget.querySelector(".calendar-announce-card-name")
+                  .innerText
+              );
+              input.addClass("selected");
+              cards.removeClass("active");
+            });
+          </script>
         </div>
         <div class="rent-calendar-content">
-          <div class="rent-calendar-search-announce-container">
-            <select
-              id="select-tools"
-              multiple
-              placeholder="Поиск по объявлениям"
-            ></select>
-            <script>
-              // Пример для работы с selectize
-              var $select = $("#select-tools").selectize({
-                maxItems: 1,
-                valueField: "id",
-                labelField: "title",
-                searchField: "title",
-                options: [
-                  {
-                    id: 1,
-                    title: "Сдаю коттедж 01.0 м² на участке 00.0 сот",
-                    number: "№ 000000000",
-                    address:
-                      "квартал, улица, район, область, округ, Город, направление, шоссе",
-                    image: "./img/slide.jpg",
-                    url: "http://en.wikipedia.org/wiki/Spectrometers",
-                  },
-                  {
-                    id: 2,
-                    title: "Сдаю коттедж 02.0 м² на участке 00.0 сот",
-                    number: "№ 000000000",
-                    address:
-                      "квартал, улица, район, область, округ, Город, направление, шоссе",
-                    image: "./img/slide.jpg",
-                    url: "http://en.wikipedia.org/wiki/Star_chart",
-                  },
-                  {
-                    id: 3,
-                    title: "Сдаю коттедж 03.0 м² на участке 00.0 сот",
-                    number: "№ 000000000",
-                    address:
-                      "квартал, улица, район, область, округ, Город, направление, шоссе",
-                    image: "./img/slide.jpg",
-                    url: "http://en.wikipedia.org/wiki/Electrical_tape",
-                  },
-                  {
-                    id: 4,
-                    title: "Сдаю коттедж 04.0 м² на участке 00.0 сот",
-                    number: "№ 000000000",
-                    address:
-                      "квартал, улица, район, область, округ, Город, направление, шоссе",
-                    image: "./img/slide.jpg",
-                    url: "http://en.wikipedia.org/wiki/Electrical_tape",
-                  },
-                  {
-                    id: 5,
-                    title: "Сдаю коттедж 05.0 м² на участке 00.0 сот",
-                    number: "№ 000000000",
-                    address:
-                      "квартал, улица, район, область, округ, Город, направление, шоссе",
-                    image: "./img/slide.jpg",
-                    url: "http://en.wikipedia.org/wiki/Electrical_tape",
-                  },
-                ],
-                create: false,
-                render: {
-                  option: function (item, escape) {
-                    return `
-                      <div class="option rent-calendar-announce-card">
-                        <img class="calendar-announce-card-image" src="${item.image}" alt="image" />
-                        <div class="calendar-announce-card-info">
-                          <div class="calendar-announce-card-number">${item.number}</div>
-                          <div class="calendar-announce-card-name">
-                            ${item.title}
-                          </div>
-                          <div class="calendar-announce-card-address">
-                            ${item.address}
-                          </div>
-                        </div>
-                      </div>`;
-                  },
-                  item: function (item, escape) {
-                    return `<div class="item">${item.title}</div>`;
-                  },
-                },
-              });
-
-              var control = $select[0].selectize;
-            </script>
-          </div>
           <div class="rent-announce">
             <h4 class="rent-calendar-content-title">
               Сдаю коттедж 00.0 м² на участке 00.0 сот
@@ -612,7 +554,7 @@
                 <div class="calendar-month-title">
                   <h4>
                     <span class="current-month">Август</span>
-                    <span class="current-ears">2025</span>
+                    <span class="current-years">2025</span>
                   </h4>
                 </div>
                 <div class="calendar">
@@ -1107,7 +1049,7 @@
                 <div class="calendar-month-title">
                   <h4>
                     <span class="current-month">Сентябрь</span>
-                    <span class="current-ears">2025</span>
+                    <span class="current-years">2025</span>
                   </h4>
                 </div>
                 <div class="calendar">
