@@ -2567,6 +2567,33 @@ li.nav-tabs-dropdown {
   opacity: 0;
 }
 
+.location_change .form-inline {
+  display: flex;
+  gap: 4px;
+}
+.location_change .process_buttons div {
+  display: flex;
+  gap: 4px;
+}
+
+.edit_location .col-sm-12,
+.add_location_modal_action .col-sm-12 {
+  padding: 0;
+}
+.edit_location label.col-sm-12,
+.add_location_modal_action label.col-sm-12 {
+  margin-top: 8px;
+}
+.edit_location .modal-footer::after, .edit_location .modal-footer::before,
+.add_location_modal_action .modal-footer::after,
+.add_location_modal_action .modal-footer::before {
+  display: none;
+}
+.edit_location .modal-footer .btn,
+.add_location_modal_action .modal-footer .btn {
+  width: 100%;
+}
+
 .ds-slider {
   position: relative;
 }
