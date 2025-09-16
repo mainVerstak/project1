@@ -435,6 +435,8 @@
             // Скрипт для отображения поиска объявлений на мобилке
             $("#calendar_announce_find").on("click", function () {
               $(".rent-calendar-announces-container").addClass("active");
+              // Если нужно чтобы на десктопе тоже появлялась кнопка очистки, убрать проверку
+              if (window.innerWidth > 991) return;
               $(".clear-input").show();
             });
             $(document).on("click", function (e) {

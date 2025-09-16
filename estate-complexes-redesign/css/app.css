@@ -9129,11 +9129,15 @@ footer {
 @media (max-width: 991px) {
   .rent-calendar .rent-calendar-sidebar {
     max-height: unset;
-    padding: 4px;
   }
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-search-panel .form-group {
-  margin-bottom: 0;
+  margin-bottom: 3px;
+}
+@media (max-width: 991px) {
+  .rent-calendar .rent-calendar-sidebar .rent-calendar-search-panel .form-group {
+    margin-bottom: 0;
+  }
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-search-panel .form-group .selected {
   font-weight: 700;
@@ -9484,7 +9488,7 @@ footer {
 .rent-calendar .form-group.search-input {
   position: relative;
   display: flex;
-  gap: 5px;
+  gap: 3px;
   transition: all 0.3s ease;
 }
 .rent-calendar .form-group.search-input svg.icon-default {
@@ -9497,6 +9501,7 @@ footer {
   width: 14px;
   height: 14px;
   color: #8c91a6;
+  z-index: 5;
 }
 @media (max-width: 991px) {
   .rent-calendar .form-group.search-input svg.icon-default.search-icon {

@@ -30,12 +30,14 @@
 
     @media (max-width: 991px) {
       max-height: unset;
-      padding: 4px;
     }
 
     .rent-calendar-search-panel {
       .form-group {
-        margin-bottom: 0;
+        margin-bottom: 3px;
+        @media (max-width: 991px) {
+          margin-bottom: 0;
+        }
 
         .selected {
           font-weight: 700;
@@ -441,7 +443,7 @@
   .form-group.search-input {
     position: relative;
     display: flex;
-    gap: 5px;
+    gap: 3px;
     transition: all 0.3s ease;
 
     svg.icon-default {
@@ -454,6 +456,7 @@
         width: 14px;
         height: 14px;
         color: $color-grey;
+        z-index: 5;
 
         @media (max-width: 991px) {
           display: none;
