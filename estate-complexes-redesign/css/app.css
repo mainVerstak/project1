@@ -9129,12 +9129,11 @@ footer {
 @media (max-width: 991px) {
   .rent-calendar .rent-calendar-sidebar {
     max-height: unset;
-    border: none;
-    padding: 0;
+    padding: 4px;
   }
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-search-panel .form-group {
-  margin-bottom: 3px;
+  margin-bottom: 0;
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-search-panel .form-group .selected {
   font-weight: 700;
@@ -9151,15 +9150,15 @@ footer {
   .rent-calendar .rent-calendar-sidebar .rent-calendar-announces-container {
     max-height: 0;
     overflow-x: hidden;
-    position: absolute;
     z-index: 2;
-    width: calc(100vw - 30px);
+    width: calc(100vw - 40px);
     top: 48px;
   }
   .rent-calendar .rent-calendar-sidebar .rent-calendar-announces-container.active {
-    max-height: 400px;
+    max-height: calc(100vh - 200px);
     border-radius: 8px;
     border: 1px solid #e6eff9;
+    margin-top: 4px;
   }
 }
 .rent-calendar .rent-calendar-sidebar .rent-calendar-pagination {
@@ -9484,6 +9483,9 @@ footer {
 }
 .rent-calendar .form-group.search-input {
   position: relative;
+  display: flex;
+  gap: 5px;
+  transition: all 0.3s ease;
 }
 .rent-calendar .form-group.search-input svg.icon-default {
   position: absolute;
@@ -9523,6 +9525,16 @@ footer {
 }
 .rent-calendar .form-group.search-input.selectize-input input {
   padding-left: 24px !important;
+}
+.rent-calendar .form-group.search-input .btn.clear-input {
+  display: none;
+  padding: 0 14px;
+}
+.rent-calendar .form-group.search-input .btn.clear-input.view {
+  display: flex;
+}
+.rent-calendar .form-group.search-input .btn.clear-input svg {
+  position: static;
 }
 .rent-calendar .rent-calendar-search-announce-container {
   display: none;

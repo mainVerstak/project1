@@ -248,9 +248,11 @@
                 class="form-control"
                 placeholder="Поиск по объявлениям"
               />
-              <svg class="icon-default chevron-icon">
-                <use xlink:href="./img/icons.svg#chevron-d"></use>
-              </svg>
+              <button type="button" class="btn btn-default clear-input">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </button>
             </div>
           </div>
           <div class="rent-calendar-announces-container">
@@ -431,11 +433,34 @@
           </div>
           <script>
             // Скрипт для отображения поиска объявлений на мобилке
-            $("#calendar_announce_find").on("focus", function () {
+            $("#calendar_announce_find").on("click", function () {
               $(".rent-calendar-announces-container").addClass("active");
+              $(".clear-input").show();
             });
-            $("#calendar_announce_find").on("focusout", function () {
-              $(".rent-calendar-announces-container").removeClass("active");
+            $(document).on("click", function (e) {
+              const sidebar = $(".rent-calendar-sidebar");
+              const container = $(".rent-calendar-announces-container");
+              const clearBtn = $(".clear-input");
+
+              // Проверяем был ли клик вне области sidebar и его потомков
+              if (!sidebar.is(e.target) && sidebar.has(e.target).length === 0) {
+                container.removeClass("active");
+                clearBtn.hide();
+              }
+            });
+
+            $(".clear-input").on("click", function () {
+              const input = $("#calendar_announce_find");
+              input.val("");
+              input.removeClass("selected");
+              $(this).hide();
+              const cards = $(".rent-calendar-announces-container");
+              cards.removeClass("active");
+            });
+
+            // Предотвращаем срабатывание клика по document при клике внутри sidebar
+            $(".rent-calendar-sidebar").on("click", function (e) {
+              e.stopPropagation();
             });
 
             $("#calendar_announce_find").on("input", function () {
@@ -451,7 +476,6 @@
                   .innerText
               );
               input.addClass("selected");
-              cards.removeClass("active");
             });
           </script>
         </div>
