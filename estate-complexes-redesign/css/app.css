@@ -9425,7 +9425,7 @@ footer {
 .rent-calendar .rent-calendar-content .calendar .calendar-body .day.locked:hover:has(input[type=checkbox]:disabled) {
   background-color: #f6f7f9;
 }
-.rent-calendar .rent-calendar-content .calendar .calendar-body .day.custom-price {
+.rent-calendar .rent-calendar-content .calendar .calendar-body .day:has(input[type=checkbox]:checked) {
   background-color: #e6eff9;
 }
 .rent-calendar .rent-calendar-content .calendar .calendar-body .day .day-number {
