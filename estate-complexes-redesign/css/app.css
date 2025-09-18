@@ -1188,6 +1188,7 @@ a.dropdown-toggle:visited {
   }
   .breadcrumb li a {
     margin-bottom: 3px;
+    white-space: wrap;
   }
 }
 
@@ -7647,6 +7648,9 @@ footer {
   letter-spacing: 0%;
   border-radius: 5px;
   margin-bottom: 1px;
+}
+.select2-container--default .select2-results__option.hidden {
+  display: none;
 }
 .select2-container--default .select2-results__option.select2-results__option--highlighted[aria-selected] {
   background-color: #e6eff9;

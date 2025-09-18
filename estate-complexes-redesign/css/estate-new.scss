@@ -411,7 +411,8 @@
 }
 
 .select2-container--default.select2-container--open .select2-selection--single,
-.select2-container--default.select2-container--open .select2-selection--multiple {
+.select2-container--default.select2-container--open
+  .select2-selection--multiple {
   border-color: $color-secondary;
   background-color: $color-secondary;
   color: $color-primary;
@@ -461,6 +462,10 @@
   border-radius: 5px;
   margin-bottom: 1px;
 
+  &.hidden {
+    display: none;
+  }
+
   &.select2-results__option--highlighted[aria-selected] {
     background-color: $color-secondary;
     color: $color-primary;
@@ -480,7 +485,8 @@
   }
 }
 // Focus states
-.select2-container--default.select2-container--focus .select2-selection--single {
+.select2-container--default.select2-container--focus
+  .select2-selection--single {
   border-color: $color-secondary;
   color: $color-primary;
   outline: 2px solid $color-dark;
@@ -489,7 +495,8 @@
 }
 
 // Disabled state
-.select2-container--default .select2-selection--single.select2-selection--disabled {
+.select2-container--default
+  .select2-selection--single.select2-selection--disabled {
   background-color: $color-secondary;
   color: $color-grey;
   cursor: not-allowed;
