@@ -462,10 +462,6 @@
   border-radius: 5px;
   margin-bottom: 1px;
 
-  &.hidden {
-    display: none;
-  }
-
   &.select2-results__option--highlighted[aria-selected] {
     background-color: $color-secondary;
     color: $color-primary;
@@ -483,6 +479,10 @@
     background-color: $color-secondary;
     color: $color-primary;
   }
+}
+
+.select2-container--default .select2-results__option[aria-disabled="true"] {
+  display: none;
 }
 // Focus states
 .select2-container--default.select2-container--focus

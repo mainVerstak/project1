@@ -504,7 +504,7 @@
                     id="calendar-month"
                     class="select2-custom"
                   >
-                    <!-- <option value="01">Январь</option>
+                    <option value="01">Январь</option>
                     <option value="02">Февраль</option>
                     <option value="03">Март</option>
                     <option value="04">Апрель</option>
@@ -515,17 +515,17 @@
                     <option value="09">Сентябрь</option>
                     <option value="10">Октябрь</option>
                     <option value="11">Ноябрь</option>
-                    <option value="12">Декабрь</option> -->
+                    <option value="12">Декабрь</option>
                   </select>
                 </div>
                 <div class="form-group calendar-date-year">
                   <select name="year" id="calendar-year" class="select2-custom">
-                    <!-- <option value="2025">2025</option>
+                    <option value="2025">2025</option>
                     <option value="2026">2026</option>
                     <option value="2027">2027</option>
                     <option value="2028">2028</option>
                     <option value="2029">2029</option>
-                    <option value="2030">2030</option> -->
+                    <option value="2030">2030</option>
                   </select>
                 </div>
               </div>
@@ -576,97 +576,6 @@
                     $menu.removeClass("fixed-menu");
                     $placeholder.hide();
                   }
-                });
-              });
-            </script>
-            <script>
-              // Скрипт для кастомных селектов с датами (Select2)
-
-              // Массив месяцев
-              const monthList = [
-                { id: "01", text: "Январь" },
-                { id: "02", text: "Февраль" },
-                { id: "03", text: "Март" },
-                { id: "04", text: "Апрель" },
-                { id: "05", text: "Май" },
-                { id: "06", text: "Июнь" },
-                { id: "07", text: "Июль" },
-                { id: "08", text: "Август" },
-                { id: "09", text: "Сентябрь" },
-                { id: "10", text: "Октябрь" },
-                { id: "11", text: "Ноябрь" },
-                { id: "12", text: "Декабрь" },
-              ];
-
-              // Функция для получения массива лет, начиная с текущего года
-              function getYearsList() {
-                const yearList = [];
-                for (let i = 0; i < 5; i++) {
-                  yearList.push({
-                    id: new Date().getFullYear() + i,
-                    text: new Date().getFullYear() + i,
-                  });
-                }
-                return yearList;
-              }
-
-              // Инициализация Select2 для месяцев и лет
-              $(document).ready(function () {
-                // Инициализируем список лет
-                const yearList = getYearsList();
-
-                // Настраиваем проброс данных в селект для года
-                $("#calendar-year").select2({
-                  data: yearList,
-                  minimumResultsForSearch: Infinity,
-                });
-
-                // Добавляем обработчик событий для изменения месяца при смене года
-                $("#calendar-year").on("change", function () {
-                  year = $(this).val();
-
-                  let filteredMonth;
-
-                  // Если выбран текущий год, показываем месяцы начиная с текущего
-                  if (+year === new Date().getFullYear()) {
-                    filteredMonth = monthList.filter(
-                      (month) => month.id >= new Date().getMonth() + 1
-                    );
-                    // Если выбран не текущий год, показываем все месяцы
-                  } else {
-                    filteredMonth = monthList;
-                  }
-
-                  // Обновляем селект для месяца
-                  $("#calendar-month").empty().select2({
-                    data: filteredMonth,
-                    minimumResultsForSearch: Infinity,
-                  });
-                });
-
-                // Инициализируем список месяцев начальное состояние
-                // Если выбран текущий год, показываем месяцы начиная с текущего
-                const filteredMonth = monthList.filter(
-                  (month) => month.id >= new Date().getMonth() + 1
-                );
-                // Настраиваем проброс данных в селект для месяца
-                $("#calendar-month").select2({
-                  data: filteredMonth,
-                  minimumResultsForSearch: Infinity,
-                });
-
-                // Добавление кастомной стрелки для селекта
-                // Это нужно чтобы заменить изначальную стрелку селекта на нашу SVG
-                $(".select2-custom").each(function () {
-                  const container = $(this).next(".select2-container");
-                  const arrow = container.find(".select2-selection__arrow");
-
-                  // Очищаем содержимое стрелки и добавляем SVG
-                  arrow.html(`
-                    <svg class="icon-default select2-arrow-icon">
-                      <use xlink:href="./img/icons.svg#chevron-d"></use>
-                    </svg>
-                  `);
                 });
               });
             </script>
