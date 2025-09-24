@@ -765,6 +765,7 @@ textarea.form-control {
 
 .btn-phone-floating {
   width: 100vw;
+  z-index: 1050;
 
   .icon-default {
     width: 14px;
@@ -1337,6 +1338,8 @@ a.dropdown-toggle:visited {
 // Form search locations modal
 #form_search_locations_modal {
   .modal-dialog {
+    margin-top: 80px;
+
     .btn {
       font-size: 14px;
       display: inline-flex;
@@ -2586,6 +2589,7 @@ li.nav-tabs-dropdown {
   position: fixed;
   bottom: 0;
   transition: all 0.3s;
+  z-index: 1050;
 
   .btn {
     width: calc(100vw - 30px);
