@@ -140,7 +140,9 @@
     border-radius: 0 $border-radius $border-radius 0 !important;
   }
   /* Элемент не первый, не последний и не предпоследний */
-  input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
+  input.form-control:not(:first-child):not(:last-child):not(
+      :nth-last-child(2)
+    ) {
     border-radius: 0 !important;
   }
 
@@ -486,7 +488,10 @@
 }
 
 .map_panel {
-  .additional_search_subcategories_container_action .form-group .btn-group .btn {
+  .additional_search_subcategories_container_action
+    .form-group
+    .btn-group
+    .btn {
     margin-right: 6px;
     border-radius: 5px;
     margin-bottom: 4px;
@@ -495,24 +500,24 @@
     text-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background-color: $color-grey;
-    border: 1px solid $color-grey;
-    color: $color-white;
+    background-color: $color-white;
+    border: 1px solid $color-secondary;
+    color: $color-dark;
   }
   .btn-group .get-search-locations-action:hover {
-    background-color: $color-dark;
-    border: 1px solid $color-dark;
-    color: $color-white;
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+    color: $color-primary;
   }
   .btn-group.open .get-search-locations-action {
-    background-color: $color-dark;
-    border: 1px solid $color-dark;
-    color: $color-white;
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+    color: $color-primary;
   }
   .btn-group.open .get-search-locations-action:hover {
-    background-color: $color-dark;
-    border: 1px solid $color-dark;
-    color: $color-white;
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+    color: $color-primary;
   }
   .main_search_buttons {
     margin-bottom: 16px;
@@ -657,8 +662,12 @@
 
 @media screen and (max-width: 900px) {
   #searchFormModal {
-    .additional_search_params_container_action .form-group.renovationButtons .btnText,
-    .additional_search_params_container_action .form-group.buildingTypeButtons .btnText,
+    .additional_search_params_container_action
+      .form-group.renovationButtons
+      .btnText,
+    .additional_search_params_container_action
+      .form-group.buildingTypeButtons
+      .btnText,
     .form-group.offerTypeButtons .btnText,
     .form-group.categoryButtons .btnText {
       font-size: 14px;

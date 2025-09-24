@@ -1326,9 +1326,6 @@ a.dropdown-toggle:visited {
   background-color: unset;
 }
 
-#form_search_locations_modal .modal-dialog {
-  margin-top: 80px;
-}
 #form_search_locations_modal .modal-dialog .btn {
   font-size: 14px;
   display: inline-flex;
@@ -2628,16 +2625,20 @@ li.nav-tabs-dropdown {
 }
 .ds-slider__content {
   position: absolute;
-  padding: 40px 24px;
+  padding: 20px 17px;
   z-index: 2;
   color: #fff;
-  top: 0;
-  left: 0;
+  left: 10px;
+  bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 100%;
-  height: 100%;
+  text-shadow: #000000 0px 0 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.15);
+  pointer-events: none;
 }
 @media (max-width: 600px) {
   .ds-slider__content {
@@ -2744,7 +2745,7 @@ li.nav-tabs-dropdown {
   border-radius: 0 0 3px 3px;
   color: #000;
   padding: 16px 0;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   border-top: 0;
 }
 @media (max-width: 600px) {
@@ -2808,7 +2809,7 @@ li.nav-tabs-dropdown {
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  color: #8E95A5;
+  color: #8e95a5;
 }
 .ds-info__content span {
   color: #000;
@@ -3545,7 +3546,7 @@ a.ds-button {
   height: 44px;
   border-radius: 6px;
   color: #333333 !important;
-  background: #F2F2F2;
+  background: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3598,7 +3599,8 @@ a.ds-button:hover {
   }
 }
 
-.map_panel > .search_form_action, .searchFormPage > .search_form_action {
+.map_panel > .search_form_action,
+.searchFormPage > .search_form_action {
   height: auto;
 }
 
@@ -3648,7 +3650,7 @@ a.ds-button:hover {
   top: calc(100% + 10px);
   background: #fff;
   padding: 20px 20px 24px;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   border-radius: 8px;
   min-width: 400px;
   opacity: 0;
@@ -3668,6 +3670,20 @@ a.ds-button:hover {
   .ds-share {
     min-width: 240px;
   }
+}
+.ds-share .btn-social-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-share .btn-social-icon > :first-child {
+  position: relative;
+}
+.ds-share noindex {
+  display: flex;
+  gap: 10px;
 }
 
 .ds-swiper-2 {
@@ -3752,7 +3768,8 @@ a.ds-button:hover {
     height: 100%;
   }
 }
-.ds-map__map img, .ds-map__map iframe {
+.ds-map__map img,
+.ds-map__map iframe {
   width: 100%;
   height: 100%;
 }
@@ -3791,7 +3808,8 @@ a.ds-button:hover {
   color: #333333;
   position: relative;
 }
-.ds-map__item img, .ds-map__item svg {
+.ds-map__item img,
+.ds-map__item svg {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -5241,24 +5259,24 @@ header .balance-currency {
   text-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  background-color: #8c91a6;
-  border: 1px solid #8c91a6;
-  color: #ffffff;
+  background-color: #ffffff;
+  border: 1px solid #e6eff9;
+  color: #242a3e;
 }
 .map_panel .btn-group .get-search-locations-action:hover {
-  background-color: #242a3e;
-  border: 1px solid #242a3e;
-  color: #ffffff;
+  background-color: #e6eff9;
+  border: 1px solid #e6eff9;
+  color: #084c95;
 }
 .map_panel .btn-group.open .get-search-locations-action {
-  background-color: #242a3e;
-  border: 1px solid #242a3e;
-  color: #ffffff;
+  background-color: #e6eff9;
+  border: 1px solid #e6eff9;
+  color: #084c95;
 }
 .map_panel .btn-group.open .get-search-locations-action:hover {
-  background-color: #242a3e;
-  border: 1px solid #242a3e;
-  color: #ffffff;
+  background-color: #e6eff9;
+  border: 1px solid #e6eff9;
+  color: #084c95;
 }
 .map_panel .main_search_buttons {
   margin-bottom: 16px;
