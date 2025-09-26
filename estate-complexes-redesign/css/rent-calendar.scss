@@ -1,3 +1,44 @@
+// Old colors
+$color-blue: #084c95;
+$color-blue-hover: #07386c;
+$color-blue-light: #23527c;
+$color-blue-superlight: #337ab7;
+$color-cyan: #4db9db;
+$color-cyan-bg: #e3f1fb;
+$color-red: #d9534f;
+$color-yellow: #eda33b;
+$color-yellow-hover: #d39235;
+$color-yellow-bg: #fdfdda;
+$color-green: #53ae53;
+$color-grey-dark: #333333;
+$color-grey-old: #7a7a7a;
+$color-grey-text: #777777;
+$color-grey-superlight: #f5f5f5;
+$color-grey-background: #eeeeee;
+$color-border: #e6e6e6;
+
+// Border radius
+$border-radius-sm: 3px;
+$border-radius: 5px;
+$border-radius-big: 10px;
+$padding-btn-small: 6px 10px;
+$padding-btn-small-sm: 3px 5px;
+$padding-btn-big: 15px;
+
+// New colors
+$color-primary: #084c95;
+$color-primary-hover: #2167b4;
+$color-attention-surface: #fbf5ef;
+$color-invalid: #f55c3d;
+$color-valid: #acf256;
+$color-dark: #242a3e;
+$color-grey: #8c91a6;
+$color-secondary: #e6eff9;
+$color-surface: #f6f7f9;
+$color-white: #ffffff;
+$color-disabled: #c4cdd9;
+$color-visited: #c40dd4;
+
 .rent-calendar {
   display: grid;
   grid-template-columns: 394px 1fr;
@@ -20,12 +61,21 @@
     align-items: center;
     gap: 10px;
 
-    div {
+    div,
+    a.announce-link {
       display: flex;
       min-width: 0;
       flex: 1;
       flex-direction: column;
       width: 0;
+
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        outline: none;
+        text-decoration: none;
+      }
     }
 
     .rent-calendar-content-title,
@@ -537,6 +587,13 @@
     }
 
     .btn.clear-input {
+      @media (hover: none) {
+        &:focus {
+          -webkit-tap-highlight-color: transparent;
+          outline: none;
+          border-color: $color-secondary;
+        }
+      }
       &.view {
         display: flex;
       }

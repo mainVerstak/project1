@@ -2597,6 +2597,10 @@ li.nav-tabs-dropdown {
   width: 100%;
 }
 
+.mortgage-main__city i .fas.fa-map-marker-alt {
+  font-size: 28px;
+}
+
 .ds-slider {
   position: relative;
 }
@@ -9147,12 +9151,22 @@ footer {
   align-items: center;
   gap: 10px;
 }
-.rent-calendar .rent-announce div {
+.rent-calendar .rent-announce div,
+.rent-calendar .rent-announce a.announce-link {
   display: flex;
   min-width: 0;
   flex: 1;
   flex-direction: column;
   width: 0;
+}
+.rent-calendar .rent-announce div:hover,
+.rent-calendar .rent-announce a.announce-link:hover {
+  text-decoration: none;
+}
+.rent-calendar .rent-announce div:focus,
+.rent-calendar .rent-announce a.announce-link:focus {
+  outline: none;
+  text-decoration: none;
 }
 .rent-calendar .rent-announce .rent-calendar-content-title,
 .rent-calendar .rent-announce .rent-calendar-content-address {
@@ -9608,6 +9622,13 @@ footer {
 .rent-calendar .form-group.search-input .btn.clear-input {
   display: none;
   padding: 0 14px;
+}
+@media (hover: none) {
+  .rent-calendar .form-group.search-input .btn.clear-input:focus {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border-color: #e6eff9;
+  }
 }
 .rent-calendar .form-group.search-input .btn.clear-input.view {
   display: flex;
