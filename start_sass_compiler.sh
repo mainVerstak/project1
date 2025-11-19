@@ -3,11 +3,11 @@
 # Получаем имя файла из параметра или используем по умолчанию
 if [ -z "$1" ]; then
     FILENAME="app"
-    echo "Используется имя файла по умолчанию: app"
+    echo "Use file name as default: app"
 else
     FILENAME="$1"
-    echo "Используется имя файла: $FILENAME"
+    echo "Use file name: $FILENAME"
 fi
 
-echo "Запуск: sass --watch для $FILENAME.scss"
-sass --watch ./estate-complexes-redesign/css/$FILENAME.scss:estate-complexes-redesign/css/$FILENAME.css
+echo "Run: sass --watch для $FILENAME.scss"
+sass --watch ./blog/css/$FILENAME.scss:blog/css/$FILENAME.css
