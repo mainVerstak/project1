@@ -2444,6 +2444,17 @@ li.nav-tabs-dropdown {
   padding: 0;
 }
 
+#unauthorizedReviewModal .modal-header h4.modal-title {
+  font-family: Arial;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
 .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body {
   padding-bottom: 0;
 }
@@ -2455,6 +2466,9 @@ li.nav-tabs-dropdown {
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 5px;
+}
+.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group .f-recaptcha > div {
+  width: 420px !important;
 }
 .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer {
   border-top: none;

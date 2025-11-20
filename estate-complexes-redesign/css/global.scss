@@ -2453,6 +2453,68 @@ li.nav-tabs-dropdown {
     }
   }
 }
+
+// unautorized
+#unauthorizedReviewModal {
+  .modal-header h4.modal-title {
+    font-family: Arial;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap {
+    .modal-body {
+      padding-bottom: 0;
+
+      .form-group {
+        margin-bottom: 15px;
+
+        label {
+          color: $color-grey;
+          font-size: 14px;
+          font-weight: 400;
+          margin-bottom: 5px;
+        }
+
+        .f-recaptcha > div {
+          width: 420px !important;
+        }
+      }
+    }
+
+    .modal-footer {
+      border-top: none;
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+
+      .btn {
+        justify-content: center;
+      }
+
+      &::before,
+      &::after {
+        content: none;
+      }
+
+      .help-block.small {
+        font-family: Arial;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 0%;
+        color: $color-grey;
+      }
+    }
+  }
+}
+
 .adv-form {
   i {
     display: none;
