@@ -2454,35 +2454,34 @@ li.nav-tabs-dropdown {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-
-.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body {
+#unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body {
   padding-bottom: 0;
 }
-.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group {
+#unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group {
   margin-bottom: 15px;
 }
-.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group label {
+#unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group label {
   color: #8c91a6;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 5px;
 }
-.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group .f-recaptcha > div {
-  width: 420px !important;
+#unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group .f-recaptcha > div {
+  width: 100% !important;
 }
-.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer {
+#unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer {
   border-top: none;
   display: flex;
   flex-direction: column;
   padding-top: 0;
 }
-.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer .btn {
+#unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer .btn {
   justify-content: center;
 }
-.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer::before, .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer::after {
+#unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer::before, #unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer::after {
   content: none;
 }
-.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer .help-block.small {
+#unauthorizedReviewModal .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer .help-block.small {
   font-family: Arial;
   font-weight: 400;
   font-style: Regular;
