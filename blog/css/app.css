@@ -2444,6 +2444,40 @@ li.nav-tabs-dropdown {
   padding: 0;
 }
 
+.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body {
+  padding-bottom: 0;
+}
+.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group {
+  margin-bottom: 15px;
+}
+.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-body .form-group label {
+  color: #8c91a6;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer {
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+}
+.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer .btn {
+  justify-content: center;
+}
+.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer::before, .form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer::after {
+  content: none;
+}
+.form_recaptcha_action.no-default-submit.fv-form.fv-form-bootstrap .modal-footer .help-block.small {
+  font-family: Arial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #8c91a6;
+}
+
 .adv-form i {
   display: none;
 }
@@ -4714,7 +4748,7 @@ footer {
   margin: 0;
   padding: 0;
 }
-.blog__header {
+.blog .blog__header {
   display: grid;
   grid-template-columns: 44px 1fr 1fr;
   gap: 10px;
@@ -4723,31 +4757,31 @@ footer {
   background: linear-gradient(90deg, #88a1bf 0%, #c6d4de 50%, #d4dade 100%);
 }
 @media (max-width: 767px) {
-  .blog__header {
+  .blog .blog__header {
     display: none;
   }
 }
-.blog__header-title-container {
+.blog .blog__header .blog__header-title-container {
   display: flex;
   flex-direction: column;
 }
-.blog__header .section__header-title {
+.blog .blog__header .section__header-title {
   color: #ffffff;
 }
-.blog__header .section__header-subtitle {
+.blog .blog__header .section__header-subtitle {
   color: #fff;
 }
-.blog__header .form-group.search-input {
+.blog .blog__header .form-group.search-input {
   position: relative;
   display: flex;
   gap: 3px;
   transition: all 0.3s ease;
   margin: 0;
 }
-.blog__header .form-group.search-input svg.icon-default {
+.blog .blog__header .form-group.search-input svg.icon-default {
   position: absolute;
 }
-.blog__header .form-group.search-input svg.icon-default.search-icon {
+.blog .blog__header .form-group.search-input svg.icon-default.search-icon {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
@@ -4756,7 +4790,7 @@ footer {
   color: #8c91a6;
   z-index: 5;
 }
-.blog__header .form-group.search-input svg.icon-default.chevron-icon {
+.blog .blog__header .form-group.search-input svg.icon-default.chevron-icon {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
@@ -4764,39 +4798,39 @@ footer {
   height: 14px;
 }
 @media (min-width: 992px) {
-  .blog__header .form-group.search-input svg.icon-default.chevron-icon {
+  .blog .blog__header .form-group.search-input svg.icon-default.chevron-icon {
     display: none;
   }
 }
-.blog__header .form-group.search-input input.form-control {
+.blog .blog__header .form-group.search-input input.form-control {
   padding-left: 34px !important;
 }
 @media (max-width: 991px) {
-  .blog__header .form-group.search-input input.form-control {
+  .blog .blog__header .form-group.search-input input.form-control {
     font-size: 16px;
   }
 }
-.blog__header .form-group.search-input.selectize-input input {
+.blog .blog__header .form-group.search-input.selectize-input input {
   padding-left: 24px !important;
 }
-.blog__header .form-group.search-input .btn.clear-input {
+.blog .blog__header .form-group.search-input .btn.clear-input {
   display: none;
   padding: 0 14px;
 }
 @media (hover: none) {
-  .blog__header .form-group.search-input .btn.clear-input:focus {
+  .blog .blog__header .form-group.search-input .btn.clear-input:focus {
     -webkit-tap-highlight-color: transparent;
     outline: none;
     border-color: #e6eff9;
   }
 }
-.blog__header .form-group.search-input .btn.clear-input.view {
+.blog .blog__header .form-group.search-input .btn.clear-input.view {
   display: flex;
 }
-.blog__header .form-group.search-input .btn.clear-input svg {
+.blog .blog__header .form-group.search-input .btn.clear-input svg {
   position: static;
 }
-.blog__tapbar {
+.blog .blog__tapbar {
   display: none;
   position: fixed;
   padding: 3px 15px;
@@ -4806,19 +4840,19 @@ footer {
   left: 0;
 }
 @media (max-width: 767px) {
-  .blog__tapbar {
+  .blog .blog__tapbar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.blog__tapbar .tapbar__item {
+.blog .blog__tapbar .tapbar__item {
   display: flex;
   gap: 5px;
   flex-direction: column;
   align-items: center;
   justify-content: end;
 }
-.blog__tapbar .tapbar__item-home {
+.blog .blog__tapbar .tapbar__item-home {
   display: grid;
   grid-template-columns: 30px 1fr;
   gap: 5px;
@@ -4827,41 +4861,41 @@ footer {
   padding: 5px;
   background: linear-gradient(90deg, #88a1bf 0%, #c6d4de 50%, #d4dade 100%);
 }
-.blog__tapbar .tapbar__item-home .tapbar__item-icon {
+.blog .blog__tapbar .tapbar__item-home .tapbar__item-icon {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
 }
-.blog__tapbar .tapbar__item-home .tapbar__item-icon img {
+.blog .blog__tapbar .tapbar__item-home .tapbar__item-icon img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.blog__tapbar .tapbar__item-home .tapbar__item-title {
+.blog .blog__tapbar .tapbar__item-home .tapbar__item-title {
   font-size: 14px;
   font-weight: 700;
   line-height: 100%;
   color: #fff;
 }
-.blog__tapbar .tapbar__item-icon {
+.blog .blog__tapbar .tapbar__item-icon {
   width: 14px;
   height: 14px;
 }
-.blog__tapbar .tapbar__item-title {
+.blog .blog__tapbar .tapbar__item-title {
   font-size: 14px;
   font-weight: 700;
   line-height: 100%;
   color: #242a3e;
 }
-.blog__tapbar .tapbar__item.active {
+.blog .blog__tapbar .tapbar__item.active {
   color: #084c95;
 }
-.blog__tapbar .tapbar__item.active .tapbar__item-icon {
+.blog .blog__tapbar .tapbar__item.active .tapbar__item-icon {
   color: #084c95;
 }
-.blog__tapbar .tapbar__item.active .tapbar__item-title {
+.blog .blog__tapbar .tapbar__item.active .tapbar__item-title {
   color: #084c95;
 }
 
