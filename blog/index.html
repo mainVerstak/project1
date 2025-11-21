@@ -20,8 +20,7 @@
     <link rel="stylesheet" href="css/app.css" />
 
     <script src="js/bootstrap.js"></script>
-    <script defer src="js/custom-select-2.js"></script>
-    <script defer src="js/scripts.js"></script>
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <header>
@@ -208,36 +207,44 @@
       <div class="blog">
         <!-- Mobile tapbar -->
         <div class="blog__tapbar">
-          <div class="tapbar__item-home">
+          <a href="/blog/index.html" class="tapbar__item-home" data-id="home">
             <div class="tapbar__item-icon">
               <img src="./img/header.png" alt="header" />
             </div>
             <div class="tapbar__item-title">Журнал Олан</div>
-          </div>
-          <div class="tapbar__item active">
+          </a>
+          <a href="/blog/index.html" class="tapbar__item active" data-id="new">
             <div class="tapbar__item-icon">
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#tapbar-new"></use>
               </svg>
             </div>
             <div class="tapbar__item-title">Свежее</div>
-          </div>
-          <div class="tapbar__item">
+          </a>
+          <button
+            class="tapbar__item"
+            data-id="themes"
+            onclick="_showModal('catalog_themes')"
+          >
             <div class="tapbar__item-icon">
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#tapbar-catalog"></use>
               </svg>
             </div>
             <div class="tapbar__item-title">Темы</div>
-          </div>
-          <div class="tapbar__item">
+          </button>
+          <button
+            class="tapbar__item"
+            data-id="search"
+            onclick="openMobileSearch()"
+          >
             <div class="tapbar__item-icon">
               <svg class="icon-default">
                 <use xlink:href="./img/icons.svg#search"></use>
               </svg>
             </div>
             <div class="tapbar__item-title">Поиск</div>
-          </div>
+          </button>
         </div>
         <!-- End tapbar -->
 
@@ -257,11 +264,16 @@
                 </svg>
                 <input
                   type="text"
-                  id="calendar_announce_find"
+                  id="live_search_input"
                   class="form-control"
                   placeholder="Поиск по статьям"
+                  onclick="showSearchResult()"
                 />
-                <button type="button" class="btn btn-default clear-input">
+                <button
+                  type="button"
+                  class="btn btn-default clear-input view"
+                  onclick="hideSearchReasult()"
+                >
                   <svg class="icon-default">
                     <use xlink:href="./img/icons.svg#cross"></use>
                   </svg>
@@ -302,9 +314,129 @@
                 </button>
               </div>
             </div>
-            <div class="search-result results">
+            <div class="search-result results hide">
               <div class="search-result__title">Найдено: 11</div>
               <div class="search-result__content">
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
                 <a href="#" class="article-preview__mini">
                   <div class="article-preview__image">
                     <img src="./img/article_1.png" alt="img" />
@@ -489,7 +621,11 @@
       </footer>
     </div>
 
-    <div class="modal blog__modal" id="" aria-hidden="false">
+    <div
+      class="modal blog__modal-catalog"
+      id="catalog_themes"
+      aria-hidden="false"
+    >
       <div class="modal-dialog modal-md">
         <div class="modal-content">
           <div class="modal-header">
@@ -497,7 +633,7 @@
               class="close"
               data-dismiss="modal"
               type="button"
-              onclick="_hideModal('calendar_price_and_limit')"
+              onclick="_hideModal('catalog_themes')"
             >
               <span aria-hidden="true">
                 <svg class="icon-default">
@@ -513,6 +649,10 @@
       </div>
     </div>
 
-    <div class="modal-backdrop" style="display: none"></div>
+    <div
+      class="modal-backdrop"
+      style="display: none"
+      onclick="hideSearchReasult()"
+    ></div>
   </body>
 </html>
