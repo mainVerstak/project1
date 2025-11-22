@@ -622,11 +622,12 @@
     </div>
 
     <div
-      class="modal blog__modal-catalog"
+      class="modal blog blog__modal-catalog in"
+      style="display: block"
       id="catalog_themes"
       aria-hidden="false"
     >
-      <div class="modal-dialog modal-md">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button
@@ -644,15 +645,83 @@
             </button>
             <h4 class="modal-title">Каталог тем</h4>
           </div>
-          <div class="modal-body"></div>
+          <div class="modal-body">
+            <div class="catalog-sidebar">
+              <button href="#" class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_6.png" alt="s3" />
+                </div>
+                <div class="blog-section__title">Новости</div>
+              </button>
+              <button href="#" class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_3.png" alt="s3" />
+                </div>
+                <div class="blog-section__title">Недвижимость</div>
+              </button>
+              <button href="#" class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_5.png" alt="s3" />
+                </div>
+                <div class="blog-section__title">Аренда</div>
+              </button>
+              <button class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_1.png" alt="s2" />
+                </div>
+                <div class="blog-section__title">Загородная недвижимость</div>
+              </button>
+              <button class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_4.png" alt="s2" />
+                </div>
+                <div class="blog-section__title">Финансы и инвестиции</div>
+              </button>
+              <button class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_7.png" alt="s2" />
+                </div>
+                <div class="blog-section__title">Дизайн и ремонт</div>
+              </button>
+              <button class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_2.png" alt="s1" />
+                </div>
+                <div class="blog-section__title">Образ жизни</div>
+              </button>
+            </div>
+            <div class="catalog-content">
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">Образ жизни</div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div
+    <!-- <div
       class="modal-backdrop"
       style="display: none"
       onclick="hideSearchReasult()"
-    ></div>
+    ></div> -->
+    <div class="modal-backdrop in" onclick="hideSearchReasult()"></div>
   </body>
 </html>
