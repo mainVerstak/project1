@@ -5196,7 +5196,9 @@ footer {
   color: #8c91a6;
 }
 .blog .article-preview__mini .article-preview__views,
-.blog .article-preview__without-img .article-preview__views {
+.blog .article-preview__mini .article-preview__post-time,
+.blog .article-preview__without-img .article-preview__views,
+.blog .article-preview__without-img .article-preview__post-time {
   display: flex;
   align-items: center;
   gap: 3px;
@@ -5208,7 +5210,6 @@ footer {
   display: none;
 }
 .blog .article-preview__without-img .article-preview__title {
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 .blog .blog__header {
@@ -5625,6 +5626,7 @@ footer {
 }
 .blog .section-group .section-group__articles-container {
   display: grid;
+  gap: 15px;
   grid-template-columns: 1fr 1fr;
 }
 @media (max-width: 767px) {

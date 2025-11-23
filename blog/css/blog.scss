@@ -450,7 +450,8 @@ $color-blog-subscribe: #dfe9e0;
       letter-spacing: 0%;
       color: $color-grey;
     }
-    .article-preview__views {
+    .article-preview__views,
+    .article-preview__post-time {
       display: flex;
       align-items: center;
       gap: 3px;
@@ -464,7 +465,7 @@ $color-blog-subscribe: #dfe9e0;
     }
     .article-preview__title {
       // white-space: nowrap;
-      overflow: hidden;
+      // overflow: hidden;
       text-overflow: ellipsis;
     }
   }
@@ -931,6 +932,7 @@ $color-blog-subscribe: #dfe9e0;
 
     .section-group__articles-container {
       display: grid;
+      gap: 15px;
       grid-template-columns: 1fr 1fr;
       @media (max-width: 767px) {
         display: flex;
