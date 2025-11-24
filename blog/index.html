@@ -598,7 +598,7 @@
             </div>
 
             <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+            <!-- <div class="swiper-scrollbar"></div> -->
           </div>
         </div>
 
@@ -1745,54 +1745,83 @@
           <h2 class="adv_themes__title">Эти темы могут быть интересны</h2>
 
           <div class="tags-scroll-container">
-            <a href="#" class="blog-section">
-              <div class="blog-section__image">
-                <img src="./img/section_ico_0.png" alt="s3" />
+            <!-- Slider main container -->
+            <div class="swiper swiper2">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="#" class="blog-section">
+                    <div class="blog-section__image">
+                      <img src="./img/section_ico_0.png" alt="s3" />
+                    </div>
+                    <div class="blog-section__title">Новости</div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="blog-section">
+                    <div class="blog-section__image">
+                      <img src="./img/section_ico_1.png" alt="s3" />
+                    </div>
+                    <div class="blog-section__title">Недвижимость</div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="blog-section">
+                    <div class="blog-section__image">
+                      <img src="./img/section_ico_2.png" alt="s3" />
+                    </div>
+                    <div class="blog-section__title">Аренда</div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="blog-section">
+                    <div class="blog-section__image">
+                      <img src="./img/section_ico_3.png" alt="s2" />
+                    </div>
+                    <div class="blog-section__title">
+                      Загородная недвижимость
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="blog-section">
+                    <div class="blog-section__image">
+                      <img src="./img/section_ico_4.png" alt="s2" />
+                    </div>
+                    <div class="blog-section__title">Финансы и инвестиции</div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="blog-section">
+                    <div class="blog-section__image">
+                      <img src="./img/section_ico_5.png" alt="s2" />
+                    </div>
+                    <div class="blog-section__title">Дизайн и ремонт</div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="blog-section">
+                    <div class="blog-section__image">
+                      <img src="./img/section_ico_6.png" alt="s1" />
+                    </div>
+                    <div class="blog-section__title">Образ жизни</div>
+                  </a>
+                </div>
               </div>
-              <div class="blog-section__title">Новости</div>
-            </a>
 
-            <a href="#" class="blog-section">
-              <div class="blog-section__image">
-                <img src="./img/section_ico_1.png" alt="s3" />
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#chevron-l"></use>
+                </svg>
               </div>
-              <div class="blog-section__title">Недвижимость</div>
-            </a>
-
-            <a href="#" class="blog-section">
-              <div class="blog-section__image">
-                <img src="./img/section_ico_2.png" alt="s3" />
+              <div class="swiper-button-next">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#chevron-r"></use>
+                </svg>
               </div>
-              <div class="blog-section__title">Аренда</div>
-            </a>
-
-            <a class="blog-section">
-              <div class="blog-section__image">
-                <img src="./img/section_ico_3.png" alt="s2" />
-              </div>
-              <div class="blog-section__title">Загородная недвижимость</div>
-            </a>
-
-            <a href="#" class="blog-section">
-              <div class="blog-section__image">
-                <img src="./img/section_ico_4.png" alt="s2" />
-              </div>
-              <div class="blog-section__title">Финансы и инвестиции</div>
-            </a>
-
-            <a href="#" class="blog-section">
-              <div class="blog-section__image">
-                <img src="./img/section_ico_5.png" alt="s2" />
-              </div>
-              <div class="blog-section__title">Дизайн и ремонт</div>
-            </a>
-
-            <a href="#" class="blog-section">
-              <div class="blog-section__image">
-                <img src="./img/section_ico_6.png" alt="s1" />
-              </div>
-              <div class="blog-section__title">Образ жизни</div>
-            </a>
+            </div>
           </div>
         </div>
 
@@ -2494,14 +2523,14 @@
                     </svg>
                   </a>
                 </li>
-                <li class="active"><span>1</span></li>
-                <li><a data-remote="" href="/blog?page=2">2</a></li>
+                <li><a href="/blog/index.html">1</a></li>
+                <li><a data-remote="" href="/blog/blog_2.html">2</a></li>
                 <li><a data-remote="" href="/blog?page=3">3</a></li>
                 <li><a data-remote="" href="/blog?page=4">4</a></li>
                 <li><a href="">...</a></li>
                 <li><a data-remote="" href="/blog?page=9">9</a></li>
                 <li>
-                  <a data-remote="" href="/blog?page=2">
+                  <a data-remote="" href="/blog/blog_2.html">
                     <svg class="icon-default">
                       <use xlink:href="./img/icons.svg#chevron-r"></use>
                     </svg>
@@ -2816,6 +2845,28 @@
               </button>
             </div>
             <div class="catalog-content">
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Новости рынка недвижимости
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>

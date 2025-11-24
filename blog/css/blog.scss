@@ -147,7 +147,8 @@ $color-blog-subscribe: #dfe9e0;
     }
 
     &:hover .blog-section__title,
-    &:active .blog-section__title {
+    &:active .blog-section__title,
+    &.active .blog-section__title {
       background-color: $color-secondary;
       color: $color-primary;
       text-decoration: none;
@@ -210,7 +211,7 @@ $color-blog-subscribe: #dfe9e0;
     }
 
     .article-preview__content {
-      margin-top: -50%;
+      margin-top: -43%;
       padding: 20px;
       padding-top: 20%;
 
@@ -495,14 +496,31 @@ $color-blog-subscribe: #dfe9e0;
     @media (max-width: 767px) {
       display: none;
 
+      &.other_page {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+
+        .live-search {
+          display: none;
+        }
+
+        .blog__header-title-container,
+        .section__header-icon {
+          display: block;
+        }
+      }
+
       &.in {
         display: grid;
         grid-template-columns: 1fr;
-      }
 
-      .blog__header-title-container,
-      .section__header-icon {
-        display: none;
+        .live-search {
+          display: block;
+        }
+        .blog__header-title-container,
+        .section__header-icon {
+          display: none;
+        }
       }
     }
 
@@ -733,40 +751,42 @@ $color-blog-subscribe: #dfe9e0;
     }
 
     // swiper
-    .swiper {
-      .swiper-slide {
-        width: fit-content !important;
-      }
-      .swiper-button-next {
-        right: 0;
-      }
-      .swiper-button-prev {
-        left: 0;
+  }
+  .swiper {
+    .swiper-slide {
+      // width: fit-content !important;
+      width: auto; /* позволяет слайду подстраиваться под контент */
+      display: inline-block;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 44px;
+      height: 44px;
+      color: $color-dark;
+      background-color: #fff;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      .icon-default {
+        width: 14px;
+        height: 14px;
       }
 
-      .swiper-button-next,
-      .swiper-button-prev {
-        width: 44px;
-        height: 44px;
-        color: $color-dark;
-        background-color: #fff;
-        border: 1px solid #fff;
-        border-radius: 5px;
-        .icon-default {
-          width: 14px;
-          height: 14px;
-        }
-
-        &:hover {
-          background-color: $color-secondary;
-          border-color: $color-secondary;
-        }
-        &::after {
-          content: "";
-        }
-        &.swiper-button-disabled {
-          opacity: 0;
-        }
+      &:hover {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+      }
+      &::after {
+        content: "";
+      }
+      &.swiper-button-disabled {
+        opacity: 0;
       }
     }
   }
@@ -867,6 +887,10 @@ $color-blog-subscribe: #dfe9e0;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
@@ -949,7 +973,6 @@ $color-blog-subscribe: #dfe9e0;
     margin-bottom: 40px;
     .section-group {
       margin-bottom: 15px;
-      height: 378px;
     }
   }
 
@@ -1053,18 +1076,36 @@ $color-blog-subscribe: #dfe9e0;
         padding: 0;
         grid-template-columns: 1fr 2.8fr;
 
+        @media (max-width: 767px) {
+          display: flex;
+          flex-direction: column;
+
+          .blog-section__title {
+            width: 100%;
+            text-align: left;
+          }
+        }
+
         .catalog-sidebar {
           padding: 20px;
           display: flex;
           flex-direction: column;
           gap: 10px;
           border-right: 1px solid $color-secondary;
+
+          @media (max-width: 767px) {
+            border-right: none;
+          }
         }
         .catalog-content {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 20px;
           padding: 20px;
+
+          @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+          }
 
           .catalog-content__section-articles {
             margin-top: 10px;

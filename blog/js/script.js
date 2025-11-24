@@ -122,38 +122,37 @@ function showResults() {
 showResults();
 
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 10,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1.5,
-      spaceBetween: 10,
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 2.5,
-      spaceBetween: 10,
-    },
-    // when window width is >= 640px
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-    },
-  },
-
+  // auto width for slide
+  slidesPerView: "auto",
+  // like gap
+  spaceBetween: 10,
+  // for swipe
+  freeMode: true,
+  // for scroll
   mousewheel: {
     invert: false,
   },
-
-  // Navigation arrows
+  // navigation btns
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    hide: true,
+const swiper2 = new Swiper(".swiper2", {
+  // auto width for slide
+  slidesPerView: "auto",
+  // like gap
+  spaceBetween: 10,
+  // for swipe
+  freeMode: true,
+  // for scroll
+  mousewheel: {
+    invert: false,
+  },
+  // navigation btns
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });

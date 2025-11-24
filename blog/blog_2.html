@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блог</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/common/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/common/font-open-sans.css" />
+    <link rel="stylesheet" href="css/common/application.css" />
+
+    <link rel="stylesheet" href="css/common/_header.css" />
+    <link rel="stylesheet" href="css/common/style.css" />
+    <link rel="stylesheet" href="css/common/_icons.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/bootstrap.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-top-mobile-hidden header-top-nav header-top-nav_near">
+        <div class="container">
+          <ul class="nav navbar-left navbar-nav">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#dd"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#new"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
+                </svg>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
+                </svg>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="loaded sidenav">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
+                        </svg>
+                        Москва
+                        <i class="fa-caret-down fas"></i>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-in">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#login"></use>
+                        </svg>
+                        Войти
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <a href="/sign-up">
+                      <div class="navbar-link">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#registration"></use>
+                        </svg>
+                        Зарегистрироваться
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="nav-font-color navbar-btn">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#new"></use>
+                      </svg>
+                      Новостройки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a
+                      class="yaSend"
+                      href="/documents"
+                      title="Выписки из ЕГРН"
+                      yaparam="header_document_click"
+                    >
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки
+                    </a>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                aria-label="Close"
+                class="navbar-toggle sidenav__close"
+                type="button"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="blog">
+        <!-- Mobile tapbar -->
+        <div class="blog__tapbar">
+          <a href="/blog/index.html" class="tapbar__item-home" data-id="home">
+            <div class="tapbar__item-icon">
+              <img src="./img/header.png" alt="header" />
+            </div>
+            <div class="tapbar__item-title">Журнал Олан</div>
+          </a>
+          <a href="/blog/index.html" class="tapbar__item active" data-id="new">
+            <div class="tapbar__item-icon">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#tapbar-new"></use>
+              </svg>
+            </div>
+            <div class="tapbar__item-title">Свежее</div>
+          </a>
+          <button
+            class="tapbar__item"
+            data-id="themes"
+            onclick="_showModal('catalog_themes')"
+          >
+            <div class="tapbar__item-icon">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#tapbar-catalog"></use>
+              </svg>
+            </div>
+            <div class="tapbar__item-title">Темы</div>
+          </button>
+          <button
+            class="tapbar__item"
+            data-id="search"
+            onclick="openMobileSearch()"
+          >
+            <div class="tapbar__item-icon">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#search"></use>
+              </svg>
+            </div>
+            <div class="tapbar__item-title">Поиск</div>
+          </button>
+        </div>
+        <!-- End tapbar -->
+
+        <div class="blog__header">
+          <div class="section__header-icon">
+            <img src="./img/header.png" alt="header" />
+          </div>
+          <div class="blog__header-title-container">
+            <h2 class="section__header-title">Журнал Олан — страница 2</h2>
+            <p class="section__header-subtitle">О недвижимости и вокруг неё</p>
+          </div>
+          <div class="live-search">
+            <form action="" id="blog_live_search">
+              <div class="form-group search-input">
+                <svg class="icon-default search-icon">
+                  <use xlink:href="./img/icons.svg#search"></use>
+                </svg>
+                <input
+                  type="text"
+                  id="live_search_input"
+                  class="form-control"
+                  placeholder="Поиск по статьям"
+                  onclick="showSearchResult()"
+                />
+                <button
+                  type="button"
+                  class="btn btn-default clear-input view"
+                  onclick="hideSearchReasult()"
+                >
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#cross"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="live-search__results">
+            <div class="search-result last-search">
+              <div class="search-result__title">Вы искали</div>
+              <div class="search-result__content">
+                <button class="blog-tag">Снять кваритру</button>
+                <button class="blog-tag">Посуточная аренда</button>
+                <button class="blog-tag">Продажа недвижимости</button>
+                <button class="blog-tag">Инвестиции в квартиру</button>
+              </div>
+            </div>
+            <div class="search-result top-search">
+              <div class="search-result__title">Часто ищут</div>
+              <div class="search-result__content">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_3.png" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">Недвижимость</div>
+                </a>
+                <button class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_2.png" alt="s2" />
+                  </div>
+                  <div class="blog-section__title">Загородная недвижимость</div>
+                </button>
+                <button class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_1.png" alt="s1" />
+                  </div>
+                  <div class="blog-section__title">Образ жизни</div>
+                </button>
+              </div>
+            </div>
+            <div class="search-result results hide">
+              <div class="search-result__title">Найдено: 11</div>
+              <div class="search-result__content">
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_3.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Сделке быть! Пошаговая инструкция по покупке квартиры от А
+                      до Я
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date"
+                        >29 окт 2025</span
+                      >
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_2.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии,
+                      которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date">1 ноя 2025</span>
+                      <span class="article-preview__views">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blog__navigation">
+          <div class="blog__catalog-button">
+            <button
+              class="btn btn-default activated"
+              onclick="_showModal('catalog_themes')"
+            >
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#tapbar-catalog"></use>
+              </svg>
+              <span>Каталог тем</span>
+            </button>
+          </div>
+
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_ico_0.png" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">Новости</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_ico_1.png" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">Недвижимость</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_ico_2.png" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">Аренда</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_ico_3.png" alt="s2" />
+                  </div>
+                  <div class="blog-section__title">Загородная недвижимость</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_ico_4.png" alt="s2" />
+                  </div>
+                  <div class="blog-section__title">Финансы и инвестиции</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_ico_5.png" alt="s2" />
+                  </div>
+                  <div class="blog-section__title">Дизайн и ремонт</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/section_ico_6.png" alt="s1" />
+                  </div>
+                  <div class="blog-section__title">Образ жизни</div>
+                </a>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#chevron-l"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#chevron-r"></use>
+              </svg>
+            </div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__content">
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_5.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_3.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_4.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_2.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_10.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_9.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_5.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_6.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_7.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_1.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_2.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="article-preview__under-img">
+              <div class="article-preview__image">
+                <img src="./img/article_8.png" alt="img" />
+              </div>
+              <div class="article-preview__content">
+                <h5 class="article-preview__title">
+                  Как торговаться при покупке недвижимости: стратегии, которые
+                  работают
+                </h5>
+                <div class="article-preview__other-info">
+                  <span class="article-preview__post-date">1 ноя 2025</span>
+                  <span class="article-preview__post-time">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#wait"></use>
+                    </svg>
+                    5 мин
+                  </span>
+                  <span class="article-preview__views">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#views"></use>
+                    </svg>
+                    15К
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="row js-row-pagination">
+            <div class="col-xs-12">
+              <ul class="pagination pagination-lg pull-left">
+                <li>
+                  <a data-remote="" href="/blog/index.html">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-l"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li><a data-remote="" href="/blog/index.html">1</a></li>
+                <li class="active">
+                  <a href="/blog?page=2">2</a>
+                </li>
+                <li><a data-remote="" href="#">3</a></li>
+                <li><a href="">...</a></li>
+                <li><a data-remote="" href="#">9</a></li>
+                <li>
+                  <a data-remote="" href="#">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="h4">Остались вопросы?</div>
+        <div class="ds-tabs">
+          <div class="ds-item active">
+            <div class="ds-question">
+              <h2>
+                🏢 Как снять квартиру на длительный срок в Москве на сайте Олан
+                ру?
+              </h2>
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#minus"></use>
+              </svg>
+            </div>
+            <div class="ds-answer">
+              <ul>
+                <li>
+                  ✓ Ищете объявления посуточная аренда квартир в Уссурийске?
+                </li>
+                <li>
+                  ✓ В базе Олан ру размещено 529 объявлений квартир в
+                  Уссурийске.
+                </li>
+                <li>
+                  ✓ Чтобы посуточная аренда недвижимость, используйте удобную
+                  форму поиска, фильтры и быстрые ссылки.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="ds-item">
+            <div class="ds-question">
+              <h2>
+                💸 Сколько стоит снять квартиру на длительный срок в Москве?
+              </h2>
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#plus"></use>
+              </svg>
+            </div>
+            <div class="ds-answer">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>🔷 Средняя цена посуточной аренды:</td>
+                    <td>4,2 тыс. руб.;</td>
+                  </tr>
+                  <tr>
+                    <td>🔷 Минимальная стоимость жилья:</td>
+                    <td>1,5 тыс. руб.;</td>
+                  </tr>
+                  <tr>
+                    <td>🔷 Самый дорогой объект:</td>
+                    <td>6,9 тыс. руб..</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="ds-item">
+            <div class="ds-question">
+              <h2>🤔 Где можно снять квартиру в Москве?</h2>
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#plus"></use>
+              </svg>
+            </div>
+            <div class="ds-answer">
+              <ul>
+                <li>✅ Минимальная площадь: 10.0 м²</li>
+                <li>✅ Объект наибольшей площади: 86.0 м²</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ds-item">
+            <div class="ds-question">
+              <h2>🔍 Какие документы нужны для аренды квартиры в Москве?</h2>
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#plus"></use>
+              </svg>
+            </div>
+            <div class="ds-answer">
+              <ul>
+                <li>✅ Минимальная площадь: 10.0 м²</li>
+                <li>✅ Объект наибольшей площади: 86.0 м²</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ds-item">
+            <div class="ds-question">
+              <h2>🗓️ Как долго можно арендовать квартиру в Москве?</h2>
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#plus"></use>
+              </svg>
+            </div>
+            <div class="ds-answer">
+              <ul>
+                <li>✅ Минимальная площадь: 10.0 м²</li>
+                <li>✅ Объект наибольшей площади: 86.0 м²</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script>
+          const dsItems = document.querySelectorAll(".ds-item");
+          dsItems.forEach((item) => {
+            item.addEventListener("click", () => {
+              item.classList.toggle("active");
+              if (item.classList.contains("active")) {
+                const icon = item.querySelector(".icon-default");
+                icon.innerHTML =
+                  '<use xlink:href="./img/icons.svg#minus"></use>';
+              } else {
+                const icon = item.querySelector(".icon-default");
+                icon.innerHTML =
+                  '<use xlink:href="./img/icons.svg#plus"></use>';
+              }
+            });
+          });
+        </script>
+        <!--  -->
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2024</div>
+                <div class="footer__left-text">
+                  Электронная база недвижимости
+                </div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Правила и условия
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer"
+                        >Оферта</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules"
+                        >Правила</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Пользователям
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml"
+                        >Пакетная загрузка</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs"
+                        >Тарифы</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment"
+                        >Способы оплаты</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://ussuriysk.olan.ru/sign-up?developer=true"
+                        >Для застройщика</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a
+                        class="footer__nav-link"
+                        href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">
+                      Общая информация
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about"
+                        >О проекте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts"
+                        >Техподдержка сайта</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+
+    <div
+      class="modal blog blog__modal-catalog"
+      id="catalog_themes"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="close"
+              data-dismiss="modal"
+              type="button"
+              onclick="_hideModal('catalog_themes')"
+            >
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+            <h4 class="modal-title">Каталог тем</h4>
+          </div>
+          <div class="modal-body">
+            <div class="catalog-sidebar">
+              <button href="#" class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_ico_0.png" alt="s3" />
+                </div>
+                <div class="blog-section__title">Новости</div>
+              </button>
+              <button href="#" class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_ico_1.png" alt="s3" />
+                </div>
+                <div class="blog-section__title">Недвижимость</div>
+              </button>
+              <button href="#" class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_ico_2.png" alt="s3" />
+                </div>
+                <div class="blog-section__title">Аренда</div>
+              </button>
+              <button class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_ico_3.png" alt="s2" />
+                </div>
+                <div class="blog-section__title">Загородная недвижимость</div>
+              </button>
+              <button class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_ico_4.png" alt="s2" />
+                </div>
+                <div class="blog-section__title">Финансы и инвестиции</div>
+              </button>
+              <button class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_ico_5.png" alt="s2" />
+                </div>
+                <div class="blog-section__title">Дизайн и ремонт</div>
+              </button>
+              <button class="blog-section">
+                <div class="blog-section__image">
+                  <img src="./img/section_ico_6.png" alt="s1" />
+                </div>
+                <div class="blog-section__title">Образ жизни</div>
+              </button>
+            </div>
+            <div class="catalog-content">
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">Образ жизни</div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal-backdrop"
+      style="display: none"
+      onclick="hideSearchReasult()"
+    ></div>
+  </body>
+</html>
