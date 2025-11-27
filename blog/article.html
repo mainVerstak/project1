@@ -211,8 +211,72 @@
     </header>
     <div class="container">
       <div class="blog">
+        <!-- Mobile tapbar -->
+        <div class="blog__tapbar">
+          <a href="/blog/index.html" class="tapbar__item-home" data-id="home">
+            <div class="tapbar__item-icon">
+              <img src="./img/header.png" alt="header" />
+            </div>
+            <div class="tapbar__item-title">Журнал Олан</div>
+          </a>
+          <a href="/blog/index.html" class="tapbar__item active" data-id="new">
+            <div class="tapbar__item-icon">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#tapbar-new"></use>
+              </svg>
+            </div>
+            <div class="tapbar__item-title">Свежее</div>
+          </a>
+          <button
+            class="tapbar__item"
+            data-id="themes"
+            onclick="_showModal('catalog_themes')"
+          >
+            <div class="tapbar__item-icon">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#tapbar-catalog"></use>
+              </svg>
+            </div>
+            <div class="tapbar__item-title">Темы</div>
+          </button>
+          <button
+            class="tapbar__item"
+            data-id="search"
+            onclick="openMobileSearch()"
+          >
+            <div class="tapbar__item-icon">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#search"></use>
+              </svg>
+            </div>
+            <div class="tapbar__item-title">Поиск</div>
+          </button>
+        </div>
+        <!-- End tapbar -->
         <div class="with_sidebar-rigth">
           <div>
+            <ol class="breadcrumb">
+              <li class="small">
+                <a class="yaSend" href="./index.html">
+                  <span itemprop="name">Блог</span>
+                </a>
+              </li>
+
+              <li class="small">
+                <a class="yaSend" href="./real_estate.html">
+                  <span itemprop="name">Недвижимость</span>
+                </a>
+              </li>
+
+              <li class="small">
+                <a class="yaSend" href="./article.html">
+                  <span itemprop="name">Новостройки</span>
+                </a>
+              </li>
+            </ol>
+            <h1 class="blog-article-title">
+              Как проверить квартиру перед покупкой? Чек-лист из 10 пунктов
+            </h1>
             <div class="section">
               <div class="section__title">
                 <div class="section__header">
@@ -480,49 +544,47 @@
               </div>
             </div>
           </div>
+          <div class="blog-article-sidebar">
+            <div class="blog-article-sidebar__container">
+              <p class="blog-article-sidebar__title">Содержание</p>
+              <div class="blog-article-sidebar__contents">
+                <a href="#start">Начало</a>
+                <a href="#legal-check">Юридическая проверка: основа основ</a>
+                <a href="#tech-check">Технический осмотр: за фасадом красоты</a>
+                <a href="#neighbours"
+                  >Санузел и отопление: зона повышенного риска</a
+                >
+                <a href="#check-repair-cost"
+                  >Шумоизоляция и соседи: слушаем и смотрим</a
+                >
+                <a href="#mini-case">
+                  Оцениваем будущие вложения: скрытая стоимость ремонта
+                </a>
+                <a href="#start">Ваш мини-чемоданчик для осмотра </a>
+                <a href="#end">Заключение</a>
+                <a href="#faq">Заключение</a>
+              </div>
+              <div class="blog-article-sidebar__actions">
+                <button class="btn btn-default">
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#comment"></use>
+                  </svg>
+                </button>
+                <button class="btn btn-default">
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#like"></use>
+                  </svg>
+                </button>
+                <button class="btn btn-default">
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#share"></use>
+                  </svg>
+                  Поделиться
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Mobile tapbar -->
-        <div class="blog__tapbar">
-          <a href="/blog/index.html" class="tapbar__item-home" data-id="home">
-            <div class="tapbar__item-icon">
-              <img src="./img/header.png" alt="header" />
-            </div>
-            <div class="tapbar__item-title">Журнал Олан</div>
-          </a>
-          <a href="/blog/index.html" class="tapbar__item active" data-id="new">
-            <div class="tapbar__item-icon">
-              <svg class="icon-default">
-                <use xlink:href="./img/icons.svg#tapbar-new"></use>
-              </svg>
-            </div>
-            <div class="tapbar__item-title">Свежее</div>
-          </a>
-          <button
-            class="tapbar__item"
-            data-id="themes"
-            onclick="_showModal('catalog_themes')"
-          >
-            <div class="tapbar__item-icon">
-              <svg class="icon-default">
-                <use xlink:href="./img/icons.svg#tapbar-catalog"></use>
-              </svg>
-            </div>
-            <div class="tapbar__item-title">Темы</div>
-          </button>
-          <button
-            class="tapbar__item"
-            data-id="search"
-            onclick="openMobileSearch()"
-          >
-            <div class="tapbar__item-icon">
-              <svg class="icon-default">
-                <use xlink:href="./img/icons.svg#search"></use>
-              </svg>
-            </div>
-            <div class="tapbar__item-title">Поиск</div>
-          </button>
-        </div>
-        <!-- End tapbar -->
       </div>
       <!--  -->
     </div>
