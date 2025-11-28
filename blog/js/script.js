@@ -158,10 +158,19 @@ const swiper2 = new Swiper(".swiper2", {
 });
 
 const swiperAnnounces = new Swiper(".swiper_announces", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 15,
+
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+  },
+
   navigation: {
     nextEl: ".swiper_annonces-button-next",
     prevEl: ".swiper_annonces-button-prev",
   },
+  mousewheel: false,
 });
