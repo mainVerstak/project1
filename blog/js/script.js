@@ -156,3 +156,12 @@ const swiper2 = new Swiper(".swiper2", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+const swiperAnnounces = new Swiper(".swiper_announces", {
+  slidesPerView: 2,
+  spaceBetween: 15,
+  navigation: {
+    nextEl: ".swiper_annonces-button-next",
+    prevEl: ".swiper_annonces-button-prev",
+  },
+});
