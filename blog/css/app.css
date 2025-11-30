@@ -5899,6 +5899,11 @@ footer {
   flex-direction: column;
   justify-content: start;
 }
+@media (max-width: 767px) {
+  .blog .article-preview__in-bg {
+    height: unset;
+  }
+}
 .blog .article-preview__in-bg:hover, .blog .article-preview__in-bg:focus {
   text-decoration: none;
   outline: none;
