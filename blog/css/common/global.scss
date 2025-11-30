@@ -326,6 +326,10 @@ a {
   &.inline-flex {
     display: inline-flex;
   }
+
+  &:has(.badge) {
+    position: relative;
+  }
 }
 
 .btn-group-vertical > .btn,
@@ -512,7 +516,8 @@ a {
 }
 
 // Badge
-.badge {
+.badge,
+.btn .badge {
   background-color: $color-primary;
   color: $color-white;
   position: absolute;

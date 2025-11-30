@@ -174,3 +174,58 @@ const swiperAnnounces = new Swiper(".swiper_announces", {
   },
   mousewheel: false,
 });
+
+function closePopup(id) {
+  const popup = document.getElementById(id);
+  console.log("close", id);
+  popup.style.display = "none";
+}
+function openPopup(id) {
+  const popup = document.getElementById(id);
+  console.log("open", id);
+  popup.style.display = "block";
+}
+
+class CatalogDesktop {
+  constructor() {
+    this.btns = document.querySelectorAll(".js-catalog-category-switch-btn");
+    this.sections = document.querySelectorAll(
+      "js-catalog-category-switch-section"
+    );
+  }
+
+  show = (id) => {
+    this.sections.forEach((section) => {
+      if ((section.dataset.id = id)) {
+        section.style.display = "grid";
+      }
+    });
+  };
+
+  hide = (id) => {
+    this.sections.forEach((section) => {
+      if ((section.dataset.id = id)) {
+        section.style.display = "none";
+      }
+    });
+  };
+
+  hideAll = () => {
+    this.sections.forEach((section) => {
+      section.style.display = "none";
+    });
+  };
+
+  init = () => {
+    console.log(this.sections);
+    this.hideAll();
+
+    this.btns.forEach((btn) => {
+      btn.addEventListener("click", () => {});
+    });
+  };
+}
+
+const catalogDesktop = new CatalogDesktop();
+
+catalogDesktop.init();

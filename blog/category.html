@@ -254,9 +254,11 @@
         </div>
         <!-- End tapbar -->
 
-        <div class="blog__header-secondary">
-          <img src="./img/estate_bg.png" alt="real_estate" />
-          <div class="blog__header_title-container">
+        <div class="blog__header blog__header-category">
+          <div class="blog__header-bg">
+            <img src="./img/estate_bg.png" alt="header" />
+          </div>
+          <div class="blog__header-title-container">
             <h1 class="blog__header_title-title">Недвижимость</h1>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
@@ -274,6 +276,31 @@
               </span>
             </div>
           </div>
+          <div class="live-search">
+            <form action="" id="blog_live_search">
+              <div class="form-group search-input">
+                <svg class="icon-default search-icon">
+                  <use xlink:href="./img/icons.svg#search"></use>
+                </svg>
+                <input
+                  type="text"
+                  id="live_search_input"
+                  class="form-control"
+                  placeholder="Поиск по статьям"
+                  onclick="showSearchResult()"
+                />
+                <button
+                  type="button"
+                  class="btn btn-default clear-input view"
+                  onclick="hideSearchReasult()"
+                >
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#cross"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
           <div class="live-search__results">
             <div class="search-result last-search">
               <div class="search-result__title">Вы искали</div>
@@ -287,7 +314,7 @@
             <div class="search-result top-search">
               <div class="search-result__title">Часто ищут</div>
               <div class="search-result__content">
-                <a href="./real_estate.html" class="blog-section">
+                <a href="./category.html" class="blog-section">
                   <div class="blog-section__image">
                     <img src="./img/section_3.png" alt="s3" />
                   </div>
@@ -523,7 +550,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="./real_estate.html" class="blog-section">
+                <a href="./category.html" class="blog-section">
                   <div class="blog-section__image">
                     <img src="./img/section_ico_1.png" alt="s3" />
                   </div>
