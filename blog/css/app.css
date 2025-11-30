@@ -7549,6 +7549,7 @@ footer {
   .blog__modal-catalog .modal-dialog .modal-content .modal-body .catalog-content {
     grid-template-columns: 1fr;
     border-top: 1px solid #e6eff9;
+    gap: 10px;
   }
 }
 .blog__modal-catalog .modal-dialog .modal-content .modal-body .catalog-content .catalog-content-view_more-message {

@@ -2163,6 +2163,7 @@ $color-blog-subscribe: #dfe9e0;
           @media (max-width: 767px) {
             grid-template-columns: 1fr;
             border-top: 1px solid $color-secondary;
+            gap: 10px;
           }
 
           .catalog-content-view_more-message {

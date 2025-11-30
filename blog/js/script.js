@@ -187,22 +187,29 @@ function openPopup(id) {
   popup.style.display = "block";
 }
 
+// Catalog main class
 class CatalogDesktop {
   constructor() {
-    this.btns = document.querySelectorAll(".js-catalog-category-switch-btn");
     this.sections = document.querySelectorAll(
       ".js-catalog-category-switch-section"
+    );
+    this.subSections = document.querySelectorAll(
+      ".js-catalog-category-switch-subsection"
+    );
+    this.articles = document.querySelectorAll(
+      ".js-catalog-category-switch-acrticles"
     );
     this.backButton = document.querySelector(
       ".js-catalog-category-switch-back"
     );
     this.activeSection = "";
+    this.activeSubSection = "";
     this.isMobile = false;
     this.lvl = 1;
   }
 
   addActiveClass = (id) => {
-    this.btns.forEach((btn) => {
+    this.sections.forEach((btn) => {
       if (btn.dataset.id === id) {
         btn.classList.add("active");
       } else {
@@ -211,8 +218,8 @@ class CatalogDesktop {
     });
   };
 
-  show = (id) => {
-    this.sections.forEach((section) => {
+  showSubSection = (id) => {
+    this.subSections.forEach((section) => {
       if (section.dataset.id === id) {
         section.style.display = "grid";
       } else {
@@ -220,22 +227,45 @@ class CatalogDesktop {
       }
     });
   };
+  showArticles = (id) => {
+    this.articles.forEach((articles) => {
+      if (articles.dataset.id === id) {
+        articles.style.display = "flex";
+      } else {
+        articles.style.display = "none";
+      }
+    });
+  };
 
   hideAll = () => {
-    this.sections.forEach((section) => {
+    this.subSections.forEach((section) => {
       section.style.display = "none";
     });
   };
 
   hideSections = () => {
-    this.btns.forEach((btn) => {
+    this.sections.forEach((btn) => {
       if (this.activeSection !== btn.dataset.id) {
         btn.style.display = "none";
       }
     });
   };
 
-  hideSubCategories = () => {};
+  // hideSubSections = () => {
+  //   this.subSections.forEach((btn) => {
+  //     if (this.activeSubSection !== btn.dataset.id) {
+  //       btn.style.display = "none";
+  //     }
+  //   });
+  // };
+
+  hideArticles = () => {
+    this.articles.forEach((subSection) => {
+      if (this.activeSubSection !== subSection.dataset.subSectionId) {
+        subSection.style.display = "none";
+      }
+    });
+  };
 
   hideOrShowBackButton = () => {
     if (this.lvl > 1) {
@@ -246,13 +276,13 @@ class CatalogDesktop {
   };
 
   handelSwitch = (e) => {
-    const btn = e.target.closest(".js-catalog-category-switch-btn");
+    const btn = e.target.closest(".js-catalog-category-switch-section");
     const id = btn.dataset.id;
     this.addActiveClass(id);
     this.activeSection = id;
     this.lvl++;
     this.lvlControl();
-    this.show(id);
+    this.showSubSection(id);
   };
 
   handleBack = () => {
@@ -276,11 +306,20 @@ class CatalogDesktop {
     console.log("lvlControl", this.lvl);
     if (this.isMobile) {
       this.hideOrShowBackButton();
-      if ((this.lvl = 1)) {
+      if (this.lvl === 1) {
+        this.hideSections();
+      }
+      if (this.lvl === 2) {
+        this.hideSections();
+        this.hideArticles();
+      }
+      if (this.lvl === 3) {
         this.hideSections();
       }
     }
   };
+
+  onUpdate = () => {};
 
   init = () => {
     this.hideAll();
@@ -289,14 +328,14 @@ class CatalogDesktop {
 
     this.handleBack();
 
-    console.log(this.backButton);
+    console.log(this.articles);
 
     this.resizeControl();
     window.addEventListener("resize", () => this.resizeControl);
 
-    this.show(this.activeSection);
-    this.btns.forEach((btn) => {
-      btn.addEventListener("click", this.handelSwitch);
+    this.showSubSection(this.activeSection);
+    this.sections.forEach((section) => {
+      section.addEventListener("click", this.handelSwitch);
     });
   };
 }
