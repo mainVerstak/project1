@@ -1021,10 +1021,21 @@ $color-blog-subscribe: #dfe9e0;
     @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
+      height: 100%;
+      margin-bottom: 65px;
     }
 
     .section-pop {
       background-color: $color-blog-main;
+    }
+
+    .article-preview__in-img {
+      .article-preview__image {
+        @media (max-width: 767px) {
+          height: 100%;
+          aspect-ratio: 1/1;
+        }
+      }
     }
   }
 
@@ -1063,6 +1074,10 @@ $color-blog-subscribe: #dfe9e0;
     &.absolute {
       position: absolute;
       width: 370px;
+
+      @media (max-width: 767px) {
+        width: calc(100vw - 30px);
+      }
     }
 
     /* hide scrollbar by default */
@@ -1109,6 +1124,10 @@ $color-blog-subscribe: #dfe9e0;
       display: flex;
       justify-content: space-between;
       margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   .section__content {
