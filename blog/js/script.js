@@ -85,6 +85,7 @@ function openMobileSearch() {
   const header = document.querySelector(".blog__header");
   if (!header && !button) return;
   header.classList.add("in");
+  header.scrollIntoView({ behavior: "smooth", block: "center" });
   showSearchResult();
   onBackdrop();
 }
@@ -190,21 +191,31 @@ class CatalogDesktop {
   constructor() {
     this.btns = document.querySelectorAll(".js-catalog-category-switch-btn");
     this.sections = document.querySelectorAll(
-      "js-catalog-category-switch-section"
+      ".js-catalog-category-switch-section"
     );
+    this.backButton = document.querySelector(
+      ".js-catalog-category-switch-back"
+    );
+    this.activeSection = "";
+    this.isMobile = false;
+    this.lvl = 1;
   }
 
-  show = (id) => {
-    this.sections.forEach((section) => {
-      if ((section.dataset.id = id)) {
-        section.style.display = "grid";
+  addActiveClass = (id) => {
+    this.btns.forEach((btn) => {
+      if (btn.dataset.id === id) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
       }
     });
   };
 
-  hide = (id) => {
+  show = (id) => {
     this.sections.forEach((section) => {
-      if ((section.dataset.id = id)) {
+      if (section.dataset.id === id) {
+        section.style.display = "grid";
+      } else {
         section.style.display = "none";
       }
     });
@@ -216,12 +227,76 @@ class CatalogDesktop {
     });
   };
 
-  init = () => {
-    console.log(this.sections);
-    this.hideAll();
-
+  hideSections = () => {
     this.btns.forEach((btn) => {
-      btn.addEventListener("click", () => {});
+      if (this.activeSection !== btn.dataset.id) {
+        btn.style.display = "none";
+      }
+    });
+  };
+
+  hideSubCategories = () => {};
+
+  hideOrShowBackButton = () => {
+    if (this.lvl > 1) {
+      this.backButton.style.display = "block";
+    } else {
+      this.backButton.style.display = "none";
+    }
+  };
+
+  handelSwitch = (e) => {
+    const btn = e.target.closest(".js-catalog-category-switch-btn");
+    const id = btn.dataset.id;
+    this.addActiveClass(id);
+    this.activeSection = id;
+    this.lvl++;
+    this.lvlControl();
+    this.show(id);
+  };
+
+  handleBack = () => {
+    console.log("back");
+    this.backButton.addEventListener("click", () => {
+      if (this.lvl > 1) {
+        this.lvl--;
+      }
+    });
+  };
+
+  resizeControl = () => {
+    if (window.screen.width <= 767) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+    }
+  };
+
+  lvlControl = () => {
+    console.log("lvlControl", this.lvl);
+    if (this.isMobile) {
+      this.hideOrShowBackButton();
+      if ((this.lvl = 1)) {
+        this.hideSections();
+      }
+    }
+  };
+
+  init = () => {
+    this.hideAll();
+    this.hideOrShowBackButton();
+    this.resizeControl();
+
+    this.handleBack();
+
+    console.log(this.backButton);
+
+    this.resizeControl();
+    window.addEventListener("resize", () => this.resizeControl);
+
+    this.show(this.activeSection);
+    this.btns.forEach((btn) => {
+      btn.addEventListener("click", this.handelSwitch);
     });
   };
 }
