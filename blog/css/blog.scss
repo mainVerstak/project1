@@ -549,73 +549,72 @@ $color-blog-subscribe: #dfe9e0;
         }
       }
     }
+  }
+  .form-group.search-input {
+    position: relative;
+    display: flex;
+    gap: 3px;
+    transition: all 0.3s ease;
+    margin: 0;
 
-    .form-group.search-input {
-      position: relative;
-      display: flex;
-      gap: 3px;
-      transition: all 0.3s ease;
-      margin: 0;
+    svg.icon-default {
+      position: absolute;
 
-      svg.icon-default {
-        position: absolute;
+      &.search-icon {
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+        color: $color-grey;
+        z-index: 5;
+      }
 
-        &.search-icon {
-          left: 15px;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 14px;
-          height: 14px;
-          color: $color-grey;
-          z-index: 5;
+      &.chevron-icon {
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+
+        @media (min-width: 992px) {
+          display: none;
         }
+      }
+    }
 
-        &.chevron-icon {
-          right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 14px;
-          height: 14px;
+    input.form-control {
+      padding-left: 34px !important;
 
-          @media (min-width: 992px) {
-            display: none;
-          }
+      // Это пофиксит автоматический зум на мобилах при фокусе на инпуте
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+    }
+    &.selectize-input {
+      input {
+        padding-left: 24px !important;
+      }
+    }
+
+    .btn.clear-input {
+      @media (hover: none) {
+        &:focus {
+          -webkit-tap-highlight-color: transparent;
+          outline: none;
+          border-color: $color-secondary;
+        }
+      }
+      @media (max-width: 767px) {
+        &.view {
+          display: flex;
         }
       }
 
-      input.form-control {
-        padding-left: 34px !important;
-
-        // Это пофиксит автоматический зум на мобилах при фокусе на инпуте
-        @media (max-width: 991px) {
-          font-size: 16px;
-        }
-      }
-      &.selectize-input {
-        input {
-          padding-left: 24px !important;
-        }
-      }
-
-      .btn.clear-input {
-        @media (hover: none) {
-          &:focus {
-            -webkit-tap-highlight-color: transparent;
-            outline: none;
-            border-color: $color-secondary;
-          }
-        }
-        @media (max-width: 767px) {
-          &.view {
-            display: flex;
-          }
-        }
-
-        display: none;
-        padding: 0 14px;
-        svg {
-          position: static;
-        }
+      display: none;
+      padding: 0 14px;
+      svg {
+        position: static;
       }
     }
   }
@@ -1705,6 +1704,215 @@ $color-blog-subscribe: #dfe9e0;
             line-height: 130%;
           }
         }
+      }
+    }
+  }
+
+  // Authors
+  .blog_authors__contaner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    @media (max-width: 922px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .blog_author__card {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid $color-secondary;
+    border-radius: 10px;
+
+    .blog_author__card-base_info {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .blog_author__card-thumblail {
+      width: 70px;
+      height: 70px;
+      border-radius: 3px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .blog_author__card-name {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 120%;
+      margin: 0;
+    }
+    .blog_author__card-job_title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      margin: 3px 0 10px 0;
+    }
+    .blog_author__card-post_count {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      color: $color-grey;
+    }
+    .blog_author__card-description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0%;
+
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 8;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      margin-bottom: 30px;
+    }
+    .btn.btn-default {
+      width: fit-content;
+    }
+  }
+
+  // Author single
+  .blog__author {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog__author-thubnail {
+      width: 180px;
+      height: 180px;
+      border-radius: 10px;
+      overflow: hidden;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/1;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .blog__author-name {
+      margin-bottom: 5px;
+      font-family: Arial;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 120%;
+    }
+    .blog__author-job_title {
+      margin-bottom: 20px;
+      color: $color-grey;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: 0%;
+    }
+    .blog__author-description {
+      margin-bottom: 15px;
+      font-family: Arial;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0%;
+    }
+  }
+
+  // Dictionary
+  .blog__dictionary-form {
+    padding: 20px;
+    background-color: $color-surface;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    form {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+
+      .form-group {
+        margin: 0;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+
+        .form-control {
+          width: 290px;
+
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+        }
+      }
+      .btn.btn-default {
+        min-width: 44px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .blog__dictionary-symbol_card {
+    padding: 20px;
+    background-color: $color-surface;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+    .blog__dictionary-symbol {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 120%;
+      letter-spacing: 0%;
+      margin-bottom: 20px;
+    }
+
+    .blog__dictionary-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+
+      @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+      }
+
+      .blog__dictionary-item {
+        color: $color-grey;
+      }
+    }
+  }
+
+  // Blog Map
+  .blog__map-links {
+    display: flex;
+    flex-direction: column;
+
+    a.blog__map-link {
+      margin-bottom: 10px;
+      color: $color-grey;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

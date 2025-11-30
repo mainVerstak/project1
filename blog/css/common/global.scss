@@ -1151,6 +1151,22 @@ a.dropdown-toggle:visited {
   .small {
     font-size: 14px;
   }
+
+  .disabled {
+    a {
+      color: $color-disabled;
+      cursor: auto;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-disabled;
+        background-color: transparent;
+        outline: none;
+      }
+    }
+  }
+
   li {
     padding: 0;
     white-space: nowrap;
