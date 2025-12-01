@@ -26,6 +26,10 @@ $color-blog-subscribe: #dfe9e0;
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  .hidden {
+    display: none !important;
+  }
+
   .with_sidebar-rigth {
     &::before,
     &::after {

@@ -5620,6 +5620,9 @@ footer {
 .blog * {
   font-family: Arial, Helvetica, sans-serif;
 }
+.blog .hidden {
+  display: none !important;
+}
 .blog .with_sidebar-rigth {
   display: grid;
   grid-template-columns: 820px 300px;

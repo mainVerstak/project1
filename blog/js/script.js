@@ -108,13 +108,13 @@ function showResults() {
       if (!last && !top && !results) return;
 
       if (input.value) {
-        last.classList.add("hide");
-        top.classList.add("hide");
-        results.classList.remove("hide");
+        last.classList.add("hidden");
+        top.classList.add("hidden");
+        results.classList.remove("hidden");
       } else {
-        last.classList.remove("hide");
-        top.classList.remove("hide");
-        results.classList.add("hide");
+        last.classList.remove("hidden");
+        top.classList.remove("hidden");
+        results.classList.add("hidden");
       }
     });
   }
@@ -187,29 +187,53 @@ function openPopup(id) {
   popup.style.display = "block";
 }
 
-// Catalog main class
-class CatalogDesktop {
+// Catalog main class for desktop
+class Catalog {
   constructor() {
+    this.btns = document.querySelectorAll(
+      ".js-catalog-category-switch-section-btn"
+    );
     this.sections = document.querySelectorAll(
-      ".js-catalog-category-switch-section"
+      ".js-catalog-category-switch-section-inner"
     );
-    this.subSections = document.querySelectorAll(
-      ".js-catalog-category-switch-subsection"
-    );
-    this.articles = document.querySelectorAll(
-      ".js-catalog-category-switch-acrticles"
-    );
-    this.backButton = document.querySelector(
-      ".js-catalog-category-switch-back"
-    );
-    this.activeSection = "";
-    this.activeSubSection = "";
-    this.isMobile = false;
-    this.lvl = 1;
+
+    this.activeId = "";
+
+    // run script
+    this.init();
   }
 
-  addActiveClass = (id) => {
-    this.sections.forEach((btn) => {
+  // Hide elements
+  hideElements = (elements) => {
+    elements.forEach((el) => {
+      el.classList.add("hidden");
+    });
+  };
+
+  // Show elements by ID
+  showElementById = (elements, id) => {
+    elements.forEach((el) => {
+      if (el.dataset.id === id) {
+        el.classList.remove("hidden");
+      }
+    });
+  };
+
+  // Event Listenet for clicks
+  handlePick = (btns, selector) => {
+    btns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const id = e.target.closest(selector).dataset.id;
+        this.activeId = id;
+
+        this.control();
+      });
+    });
+  };
+
+  // Add class active for pick btn
+  lightBtn = (btns, id) => {
+    btns.forEach((btn) => {
       if (btn.dataset.id === id) {
         btn.classList.add("active");
       } else {
@@ -218,128 +242,18 @@ class CatalogDesktop {
     });
   };
 
-  showSubSection = (id) => {
-    this.subSections.forEach((section) => {
-      if (section.dataset.id === id) {
-        section.style.display = "grid";
-      } else {
-        section.style.display = "none";
-      }
-    });
-  };
-  showArticles = (id) => {
-    this.articles.forEach((articles) => {
-      if (articles.dataset.id === id) {
-        articles.style.display = "flex";
-      } else {
-        articles.style.display = "none";
-      }
-    });
+  // Main actions
+  control = () => {
+    this.hideElements(this.sections);
+    this.showElementById(this.sections, this.activeId);
+    this.lightBtn(this.btns, this.activeId);
   };
 
-  hideAll = () => {
-    this.subSections.forEach((section) => {
-      section.style.display = "none";
-    });
-  };
-
-  hideSections = () => {
-    this.sections.forEach((btn) => {
-      if (this.activeSection !== btn.dataset.id) {
-        btn.style.display = "none";
-      }
-    });
-  };
-
-  // hideSubSections = () => {
-  //   this.subSections.forEach((btn) => {
-  //     if (this.activeSubSection !== btn.dataset.id) {
-  //       btn.style.display = "none";
-  //     }
-  //   });
-  // };
-
-  hideArticles = () => {
-    this.articles.forEach((subSection) => {
-      if (this.activeSubSection !== subSection.dataset.subSectionId) {
-        subSection.style.display = "none";
-      }
-    });
-  };
-
-  hideOrShowBackButton = () => {
-    if (this.lvl > 1) {
-      this.backButton.style.display = "block";
-    } else {
-      this.backButton.style.display = "none";
-    }
-  };
-
-  handelSwitch = (e) => {
-    const btn = e.target.closest(".js-catalog-category-switch-section");
-    const id = btn.dataset.id;
-    this.addActiveClass(id);
-    this.activeSection = id;
-    this.lvl++;
-    this.lvlControl();
-    this.showSubSection(id);
-  };
-
-  handleBack = () => {
-    console.log("back");
-    this.backButton.addEventListener("click", () => {
-      if (this.lvl > 1) {
-        this.lvl--;
-      }
-    });
-  };
-
-  resizeControl = () => {
-    if (window.screen.width <= 767) {
-      this.isMobile = true;
-    } else {
-      this.isMobile = false;
-    }
-  };
-
-  lvlControl = () => {
-    console.log("lvlControl", this.lvl);
-    if (this.isMobile) {
-      this.hideOrShowBackButton();
-      if (this.lvl === 1) {
-        this.hideSections();
-      }
-      if (this.lvl === 2) {
-        this.hideSections();
-        this.hideArticles();
-      }
-      if (this.lvl === 3) {
-        this.hideSections();
-      }
-    }
-  };
-
-  onUpdate = () => {};
-
+  // Run class
   init = () => {
-    this.hideAll();
-    this.hideOrShowBackButton();
-    this.resizeControl();
-
-    this.handleBack();
-
-    console.log(this.articles);
-
-    this.resizeControl();
-    window.addEventListener("resize", () => this.resizeControl);
-
-    this.showSubSection(this.activeSection);
-    this.sections.forEach((section) => {
-      section.addEventListener("click", this.handelSwitch);
-    });
+    this.control();
+    this.handlePick(this.btns, ".js-catalog-category-switch-section-btn");
   };
 }
 
-const catalogDesktop = new CatalogDesktop();
-
-catalogDesktop.init();
+const desktopCatalogEvents = new Catalog();
