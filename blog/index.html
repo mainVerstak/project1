@@ -255,13 +255,13 @@
         <!-- End tapbar -->
 
         <div class="blog__header">
-          <div class="section__header-icon">
+          <a href="#" class="section__header-icon">
             <img src="./img/header.png" alt="header" />
-          </div>
-          <div class="blog__header-title-container">
+          </a>
+          <a href="#" class="blog__header-title-container">
             <h2 class="section__header-title">Журнал Олан</h2>
             <p class="section__header-subtitle">О недвижимости и вокруг неё</p>
-          </div>
+          </a>
           <div class="live-search">
             <form action="" id="blog_live_search">
               <div class="form-group search-input">
@@ -320,7 +320,7 @@
                 </button>
               </div>
             </div>
-            <div class="search-result results hide">
+            <div class="search-result results hidden">
               <div class="search-result__title">Найдено: 11</div>
               <div class="search-result__content">
                 <a href="#" class="article-preview__mini">
@@ -2806,7 +2806,10 @@
             </button>
             <h4 class="modal-title">Каталог тем</h4>
           </div>
-          <div class="modal-body">
+          <div
+            class="modal-body js-catalog-category-switch-modal-body"
+            data-level="1"
+          >
             <div class="catalog-sidebar">
               <button
                 class="blog-section js-catalog-category-switch-section-btn"
@@ -2815,7 +2818,10 @@
                 <div class="blog-section__image">
                   <img src="./img/section_ico_0.png" alt="s3" />
                 </div>
-                <div class="blog-section__title">Новости</div>
+                <div class="blog-section__title">
+                  Новости
+                  <span>Изучить тему</span>
+                </div>
               </button>
               <button
                 class="blog-section js-catalog-category-switch-section-btn"
@@ -2824,7 +2830,10 @@
                 <div class="blog-section__image">
                   <img src="./img/section_ico_1.png" alt="s3" />
                 </div>
-                <div class="blog-section__title">Недвижимость</div>
+                <div class="blog-section__title">
+                  Недвижимость
+                  <span>Изучить тему</span>
+                </div>
               </button>
               <button
                 class="blog-section js-catalog-category-switch-section-btn"
@@ -2833,7 +2842,10 @@
                 <div class="blog-section__image">
                   <img src="./img/section_ico_2.png" alt="s3" />
                 </div>
-                <div class="blog-section__title">Аренда</div>
+                <div class="blog-section__title">
+                  Аренда
+                  <span>Изучить тему</span>
+                </div>
               </button>
               <button
                 class="blog-section js-catalog-category-switch-section-btn"
@@ -2842,7 +2854,10 @@
                 <div class="blog-section__image">
                   <img src="./img/section_ico_3.png" alt="s2" />
                 </div>
-                <div class="blog-section__title">Загородная недвижимость</div>
+                <div class="blog-section__title">
+                  Загородная недвижимость
+                  <span>Изучить тему</span>
+                </div>
               </button>
               <button
                 class="blog-section js-catalog-category-switch-section-btn"
@@ -2851,7 +2866,10 @@
                 <div class="blog-section__image">
                   <img src="./img/section_ico_4.png" alt="s2" />
                 </div>
-                <div class="blog-section__title">Финансы и инвестиции</div>
+                <div class="blog-section__title">
+                  Финансы и инвестиции
+                  <span>Изучить тему</span>
+                </div>
               </button>
               <button
                 class="blog-section js-catalog-category-switch-section-btn"
@@ -2860,7 +2878,10 @@
                 <div class="blog-section__image">
                   <img src="./img/section_ico_5.png" alt="s2" />
                 </div>
-                <div class="blog-section__title">Дизайн и ремонт</div>
+                <div class="blog-section__title">
+                  Дизайн и ремонт
+                  <span>Изучить тему</span>
+                </div>
               </button>
               <button
                 class="blog-section js-catalog-category-switch-section-btn"
@@ -2869,14 +2890,22 @@
                 <div class="blog-section__image">
                   <img src="./img/section_ico_6.png" alt="s1" />
                 </div>
-                <div class="blog-section__title">Образ жизни</div>
+                <div class="blog-section__title">
+                  Образ жизни
+                  <span>Изучить тему</span>
+                </div>
               </button>
             </div>
             <div
               class="catalog-content js-catalog-category-switch-section-inner"
               data-id="news"
             >
-              <div class="catalog-content-view_more-message">Ещё по теме</div>
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="news"
+              >
+                Ещё по теме
+              </div>
 
               <div class="catalog-content__section">
                 <button
@@ -2886,13 +2915,17 @@
                   <div class="blog-section__image"></div>
                   <div class="blog-section__title">
                     Новости рынка недвижимости
+                    <span>Изучить тему</span>
                   </div>
                 </button>
                 <div
                   class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
                   data-id="news_market"
                 >
-                  <div class="catalog-content-view_more-message">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
                     Ещё по теме
                   </div>
                   <a href="#" class="catalog-content__section-article">
@@ -2914,7 +2947,11 @@
               class="catalog-content js-catalog-category-switch-section-inner"
               data-id="estate"
             >
-              <div class="catalog-content-view_more-message">Ещё по теме</div>
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
 
               <div class="catalog-content__section">
                 <button
@@ -2922,13 +2959,18 @@
                   data-id="new_estate"
                 >
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Новостройки</div>
+                  <div class="blog-section__title">
+                    Новостройки
+                    <span>Изучить тему</span>
+                  </div>
                 </button>
                 <div
                   class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
                   data-id="new_estate"
                 >
-                  <div class="catalog-content-view_more-message">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                  >
                     Ещё по теме
                   </div>
                   <a href="#" class="catalog-content__section-article">
@@ -2951,12 +2993,21 @@
                   data-id="old_estate"
                 >
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Вторичная недвижимость</div>
+                  <div class="blog-section__title">
+                    Вторичная недвижимость
+                    <span>Изучить тему</span>
+                  </div>
                 </button>
                 <div
                   class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
                   data-id="old_estate"
                 >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -2979,12 +3030,19 @@
                   <div class="blog-section__image"></div>
                   <div class="blog-section__title">
                     Коммерческая недвижимость
+                    <span>Изучить тему</span>
                   </div>
                 </button>
                 <div
                   class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
                   data-id="commercial"
                 >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3005,12 +3063,21 @@
                   data-id="foregion"
                 >
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Зарубежная недвижимость</div>
+                  <div class="blog-section__title">
+                    Зарубежная недвижимость
+                    <span>Изучить тему</span>
+                  </div>
                 </button>
                 <div
                   class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
                   data-id="foregion"
                 >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3030,12 +3097,26 @@
               class="catalog-content js-catalog-category-switch-section-inner"
               data-id="rent"
             >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Аренда недвижимости</div>
+                  <div class="blog-section__title">
+                    Аренда недвижимости
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3055,9 +3136,16 @@
                   <div class="blog-section__image"></div>
                   <div class="blog-section__title">
                     Посуточная аренда недвижимости
+                    <span>Изучить тему</span>
                   </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3075,9 +3163,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Загородная аренда</div>
+                  <div class="blog-section__title">
+                    Загородная аренда
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3095,9 +3192,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Посуточная загородная</div>
+                  <div class="blog-section__title">
+                    Посуточная загородная
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3117,14 +3223,26 @@
               class="catalog-content js-catalog-category-switch-section-inner"
               data-id="village"
             >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
                   <div class="blog-section__title">
                     Загородная: Дом, дача, участок
+                    <span>Изучить тему</span>
                   </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3142,9 +3260,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Строим дом</div>
+                  <div class="blog-section__title">
+                    Строим дом
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3164,12 +3291,26 @@
               class="catalog-content js-catalog-category-switch-section-inner"
               data-id="invest"
             >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Ипотека</div>
+                  <div class="blog-section__title">
+                    Ипотека
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3187,9 +3328,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Кредиты</div>
+                  <div class="blog-section__title">
+                    Кредиты
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3207,9 +3357,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Инвестиции</div>
+                  <div class="blog-section__title">
+                    Инвестиции
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3227,9 +3386,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Накопления</div>
+                  <div class="blog-section__title">
+                    Накопления
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3247,9 +3415,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Страхование</div>
+                  <div class="blog-section__title">
+                    Страхование
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3267,9 +3444,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Аналитика</div>
+                  <div class="blog-section__title">
+                    Аналитика
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3289,12 +3475,26 @@
               class="catalog-content js-catalog-category-switch-section-inner"
               data-id="repair"
             >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Дизайн и ремонт</div>
+                  <div class="blog-section__title">
+                    Дизайн и ремонт
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3314,12 +3514,26 @@
               class="catalog-content js-catalog-category-switch-section-inner"
               data-id="lifeStyle"
             >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Жизнь города</div>
+                  <div class="blog-section__title">
+                    Жизнь города
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3337,9 +3551,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Развлечения</div>
+                  <div class="blog-section__title">
+                    Развлечения
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3357,9 +3580,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Гайды</div>
+                  <div class="blog-section__title">
+                    Гайды
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -3377,9 +3609,18 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Как это работает</div>
+                  <div class="blog-section__title">
+                    Как это работает
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>

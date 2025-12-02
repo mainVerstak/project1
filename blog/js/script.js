@@ -187,26 +187,65 @@ function openPopup(id) {
   popup.style.display = "block";
 }
 
-// Catalog main class for desktop
+// Catalog main
 class Catalog {
   constructor() {
+    // Elements
     this.btns = document.querySelectorAll(
       ".js-catalog-category-switch-section-btn"
     );
     this.sections = document.querySelectorAll(
       ".js-catalog-category-switch-section-inner"
     );
+    this.moreMessage = document.querySelectorAll(
+      ".js-catalog-category-switch-section-more-message"
+    );
+    this.subBtns = document.querySelectorAll(
+      ".js-catalog-category-switch-subsection-btn"
+    );
+    this.subSection = document.querySelectorAll(
+      ".js-catalog-category-switch-subsection-inner"
+    );
+    this.subMoreMessage = document.querySelectorAll(
+      ".js-catalog-category-switch-subsection-more-message"
+    );
+    this.backBtn = document.querySelector(".js-catalog-category-switch-back");
+    this.sidebar = document.querySelector(".catalog-sidebar");
+    this.modalBody = document.querySelector(
+      ".js-catalog-category-switch-modal-body"
+    );
 
-    this.activeId = "";
+    // state variables
+    this.ids = ["", ""];
+    this.level = 1;
+    this.isMobile = false;
 
     // run script
     this.init();
+    this.mobileControl();
   }
 
+  // Hide single element
+  hideElement = (element) => {
+    element.classList.add("hidden");
+  };
+
   // Hide elements
-  hideElements = (elements) => {
+  hideElementsAll = (elements) => {
     elements.forEach((el) => {
-      el.classList.add("hidden");
+      this.hideElement(el);
+    });
+  };
+
+  // Show single element
+  showElement = (element) => {
+    element.classList.remove("hidden");
+  };
+
+  // Show elements
+  showElementsAll = (elements) => {
+    elements.forEach((el) => {
+      this.showElement(el);
     });
   };
 
@@ -214,7 +253,7 @@ class Catalog {
   showElementById = (elements, id) => {
     elements.forEach((el) => {
       if (el.dataset.id === id) {
-        el.classList.remove("hidden");
+        this.showElement(el);
       }
     });
   };
@@ -224,15 +263,26 @@ class Catalog {
     btns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const id = e.target.closest(selector).dataset.id;
-        this.activeId = id;
+        this.ids[this.level - 1] = id;
+        this.isMobile && this.levelUp();
 
-        this.control();
+        this.controls();
       });
     });
   };
 
+  // Event Listener for back
+  handleBack = () => {
+    this.backBtn.addEventListener("click", () => {
+      this.levelDown();
+      this.ids[this.level - 1] = "";
+
+      this.controls();
+    });
+  };
+
   // Add class active for pick btn
-  lightBtn = (btns, id) => {
+  addActiveClass = (btns, id) => {
     btns.forEach((btn) => {
       if (btn.dataset.id === id) {
         btn.classList.add("active");
@@ -242,17 +292,132 @@ class Catalog {
     });
   };
 
+  // Delete active class
+  removeActiveClass = (btns) => {
+    btns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+  };
+
+  // Check mobile with function
+  mobileCheck = () => {
+    if (window.innerWidth < 768) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+      this.level = 1;
+      this.modalBody.dataset.level = this.level;
+      this.ids = ["", ""];
+    }
+    this.controls();
+  };
+
+  // Listener resize window and check mobile
+  mobileControl = () => {
+    this.mobileCheck();
+    window.addEventListener("resize", this.mobileCheck);
+  };
+
   // Main actions
-  control = () => {
-    this.hideElements(this.sections);
-    this.showElementById(this.sections, this.activeId);
-    this.lightBtn(this.btns, this.activeId);
+  controls = () => {
+    this.modalBody.dataset.level = this.level;
+    this.levelControl();
+    console.log("mobile", this.isMobile);
+    console.log("lvl", this.level);
+    console.log("id", this.ids);
+  };
+
+  // Actions by level
+  levelControl = () => {
+    switch (this.level) {
+      case 1:
+        // hide
+        this.hideElementsAll(this.sections);
+        this.hideElement(this.backBtn);
+
+        // show
+        this.showElement(this.sidebar);
+        this.showElementsAll(this.btns);
+        this.showElementById(this.sections, this.ids[0]);
+
+        this.addActiveClass(this.btns, this.ids[0]);
+
+        if (!this.isMobile) {
+          // this.showElementsAll(this.sections);
+          this.showElementsAll(this.subBtns);
+          this.showElementsAll(this.subSection);
+        }
+
+        break;
+
+      case 2:
+        // hide
+        this.hideElementsAll(this.subMoreMessage);
+        this.hideElementsAll(this.btns);
+        this.hideElementsAll(this.subSection);
+
+        // show
+        this.showElement(this.backBtn);
+        this.showElement(this.sidebar);
+        this.showElementById(this.btns, this.ids[0]);
+        this.showElementById(this.sections, this.ids[0]);
+        this.showElementsAll(this.subBtns);
+        this.showElementsAll(this.moreMessage);
+
+        this.addActiveClass(this.btns, this.ids[0]);
+        this.removeActiveClass(this.subBtns);
+
+        break;
+
+      case 3:
+        // hide
+        this.hideElement(this.sidebar);
+        this.hideElementsAll(this.moreMessage);
+        this.hideElementsAll(this.btns);
+        this.hideElementsAll(this.subBtns);
+
+        // show
+        this.showElementById(this.subMoreMessage, this.ids[1]);
+        this.showElementById(this.subBtns, this.ids[1]);
+        this.showElementById(this.subSection, this.ids[1]);
+        this.showElementsAll(this.subMoreMessage);
+
+        this.addActiveClass(this.subBtns, this.ids[1]);
+
+        break;
+    }
+  };
+
+  // Level up
+  levelUp = () => {
+    switch (this.level) {
+      case 1:
+        this.level = 2;
+        break;
+      case 2:
+        this.level = 3;
+        break;
+    }
+  };
+
+  // Level down
+  levelDown = () => {
+    switch (this.level) {
+      case 3:
+        this.level = 2;
+        break;
+      case 2:
+        this.level = 1;
+        break;
+    }
   };
 
   // Run class
   init = () => {
-    this.control();
+    this.controls();
     this.handlePick(this.btns, ".js-catalog-category-switch-section-btn");
+    this.handlePick(this.subBtns, ".js-catalog-category-switch-subsection-btn");
+    this.handleBack();
   };
 }
 
