@@ -216,13 +216,13 @@ class Catalog {
     );
 
     // state variables
-    this.ids = ["", ""];
+    this.ids = ["news", ""];
     this.level = 1;
     this.isMobile = false;
 
     // run script
-    this.init();
     this.mobileControl();
+    this.init();
   }
 
   // Hide single element
@@ -258,15 +258,20 @@ class Catalog {
     });
   };
 
+  // Click function
+  onPick = (id) => {
+    this.ids[this.level - 1] = id;
+    this.isMobile && this.levelUp();
+
+    this.controls();
+  };
+
   // Event Listenet for clicks
   handlePick = (btns, selector) => {
     btns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const id = e.target.closest(selector).dataset.id;
-        this.ids[this.level - 1] = id;
-        this.isMobile && this.levelUp();
-
-        this.controls();
+        this.onPick(id);
       });
     });
   };
@@ -307,7 +312,6 @@ class Catalog {
       this.isMobile = false;
       this.level = 1;
       this.modalBody.dataset.level = this.level;
-      this.ids = ["", ""];
     }
     this.controls();
   };
@@ -418,6 +422,10 @@ class Catalog {
     this.handlePick(this.btns, ".js-catalog-category-switch-section-btn");
     this.handlePick(this.subBtns, ".js-catalog-category-switch-subsection-btn");
     this.handleBack();
+
+    // default values
+    this.ids = ["news", ""];
+    this.onPick("news");
   };
 }
 

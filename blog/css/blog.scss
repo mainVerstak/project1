@@ -87,8 +87,10 @@ $color-blog-subscribe: #dfe9e0;
       color: $color-primary;
       background-color: $color-secondary;
 
-      &:hover {
-        background-color: #fff;
+      &:hover,
+      &:active {
+        color: #fff;
+        background-color: $color-primary;
       }
     }
 
@@ -258,7 +260,7 @@ $color-blog-subscribe: #dfe9e0;
       bottom: 0;
       padding: 20px;
       padding-top: 20%;
-
+      width: 100%;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     }
 
@@ -523,7 +525,7 @@ $color-blog-subscribe: #dfe9e0;
     display: grid;
     grid-template-columns: 44px 1fr 1fr;
     gap: 10px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 15px;
     background: $blog-head-gradient;
     z-index: 1041;
@@ -546,7 +548,7 @@ $color-blog-subscribe: #dfe9e0;
       color: #ffffff;
     }
     .section__header-subtitle {
-      font-weight: 700;
+      font-weight: 400;
       color: #fff;
     }
 
@@ -933,9 +935,13 @@ $color-blog-subscribe: #dfe9e0;
     }
     .swiper-button-next {
       right: 0;
+      opacity: 0;
+      transition: all ease 0.3s;
     }
     .swiper-button-prev {
       left: 0;
+      opacity: 0;
+      transition: all ease 0.3s;
     }
 
     .swiper-button-next,
@@ -961,10 +967,28 @@ $color-blog-subscribe: #dfe9e0;
       &.swiper-button-disabled {
         opacity: 0;
       }
+
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .swiper-button-prev,
+      .swiper-button-next,
+      .swiper_annonces-button-prev,
+      .swiper_annonces-button-next {
+        opacity: 1;
+
+        &.swiper-button-disabled {
+          opacity: 0;
+        }
+      }
     }
   }
   .swiper_annonces-button-prev,
   .swiper_annonces-button-next {
+    opacity: 0;
     &.swiper-button-disabled {
       cursor: auto;
       background-color: $color-surface;
@@ -2132,7 +2156,7 @@ $color-blog-subscribe: #dfe9e0;
 .blog__modal-catalog {
   .modal-dialog {
     width: 100%;
-    max-width: 1150px;
+    max-width: 1190px;
     max-height: 500px;
     padding: 0 10px;
 
@@ -2195,7 +2219,11 @@ $color-blog-subscribe: #dfe9e0;
         }
 
         .blog-section {
+          width: 100%;
           .blog-section__title {
+            width: 100%;
+            text-align: left;
+
             span {
               display: none;
             }
@@ -2203,7 +2231,7 @@ $color-blog-subscribe: #dfe9e0;
         }
         @media (max-width: 767px) {
           .blog-section {
-            width: 100%;
+            // width: 100%;
 
             .blog-section__image {
               min-width: 44px;
