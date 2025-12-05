@@ -461,7 +461,7 @@ function onProgress(btn) {
 // active all progress fuction for form
 function activeProgress() {
   const form = document.getElementById("progress_form");
-
+  if (!form) return;
   const btns = form.querySelectorAll(".progress-bar");
 
   btns.forEach((btn) => {

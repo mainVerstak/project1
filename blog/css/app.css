@@ -5785,7 +5785,6 @@ footer {
 }
 .blog .article-preview__in-img {
   position: relative;
-  overflow: hidden;
   border-radius: 10px;
   width: 100%;
   height: 100%;
@@ -5817,6 +5816,7 @@ footer {
   overflow: hidden;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 .blog .article-preview__in-img .article-preview__image img {
   width: 100%;
@@ -5831,6 +5831,7 @@ footer {
   padding-top: 20%;
   width: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  border-radius: 10px;
 }
 .blog .article-preview__in-img .article-preview__title {
   width: 100%;
@@ -6469,7 +6470,7 @@ footer {
 .blog .swiper .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .blog .swiper .swiper-button-next,
   .blog .swiper .swiper-button-prev {
     display: none;
