@@ -6109,7 +6109,7 @@ footer {
     display: none;
   }
   .blog .blog__header.other_page {
-    display: none;
+    display: flex;
   }
   .blog .blog__header.other_page .live-search {
     display: none;
@@ -6118,8 +6118,11 @@ footer {
   .blog .blog__header.other_page .section__header-icon {
     display: block;
   }
-  .blog .blog__header.blog__header-category {
+  .blog .blog__header.other_page.hide-mobile {
     display: none;
+  }
+  .blog .blog__header.blog__header-category {
+    display: flex;
   }
   .blog .blog__header.blog__header-category .live-search {
     display: none;

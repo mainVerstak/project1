@@ -569,7 +569,7 @@ $color-blog-subscribe: #dfe9e0;
       display: none;
 
       &.other_page {
-        display: none;
+        display: flex;
         .live-search {
           display: none;
         }
@@ -578,10 +578,14 @@ $color-blog-subscribe: #dfe9e0;
         .section__header-icon {
           display: block;
         }
+
+        &.hide-mobile {
+          display: none;
+        }
       }
 
       &.blog__header-category {
-        display: none;
+        display: flex;
 
         .live-search {
           display: none;
