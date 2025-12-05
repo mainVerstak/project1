@@ -569,7 +569,7 @@ $color-blog-subscribe: #dfe9e0;
       display: none;
 
       &.other_page {
-        display: flex;
+        display: none;
         .live-search {
           display: none;
         }
@@ -581,7 +581,7 @@ $color-blog-subscribe: #dfe9e0;
       }
 
       &.blog__header-category {
-        display: flex;
+        display: none;
 
         .live-search {
           display: none;
@@ -1590,6 +1590,12 @@ $color-blog-subscribe: #dfe9e0;
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
+
+    @media (max-width: 767px) {
+      overflow: hidden;
+      gap: 5px;
+    }
+
     .blog_article__author-name {
       font-weight: 700;
       font-size: 14px;
