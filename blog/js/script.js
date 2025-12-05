@@ -122,7 +122,7 @@ function showResults() {
 
 showResults();
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".main-swiper", {
   // auto width for slide
   slidesPerView: "auto",
   // like gap
@@ -174,6 +174,24 @@ const swiperAnnounces = new Swiper(".swiper_announces", {
     prevEl: ".swiper_annonces-button-prev",
   },
   mousewheel: false,
+});
+
+const swiperTags = new Swiper(".swiper-tags", {
+  // auto width for slide
+  slidesPerView: "auto",
+  // like gap
+  spaceBetween: 10,
+  // for swipe
+  freeMode: true,
+  // for scroll
+  mousewheel: {
+    invert: false,
+  },
+  // navigation btns
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 function closePopup(id) {
@@ -311,6 +329,7 @@ class Catalog {
     } else {
       this.isMobile = false;
       this.level = 1;
+      this.ids = ["", ""];
       this.modalBody.dataset.level = this.level;
     }
     this.controls();
@@ -326,9 +345,6 @@ class Catalog {
   controls = () => {
     this.modalBody.dataset.level = this.level;
     this.levelControl();
-    console.log("mobile", this.isMobile);
-    console.log("lvl", this.level);
-    console.log("id", this.ids);
   };
 
   // Actions by level
@@ -430,3 +446,30 @@ class Catalog {
 }
 
 const desktopCatalogEvents = new Catalog();
+
+// progress bar click function
+function onProgress(btn) {
+  const persent = btn.dataset.persent;
+  const progress = btn.querySelector(".progress");
+
+  console.log("progress", persent);
+  btn.classList.add("active");
+
+  progress.style.paddingRight = `${persent}%`;
+}
+
+// active all progress fuction for form
+function activeProgress() {
+  const form = document.getElementById("progress_form");
+
+  const btns = form.querySelectorAll(".progress-bar");
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      onProgress(btn);
+      btns.forEach((btn) => onProgress(btn));
+    });
+  });
+}
+
+activeProgress();

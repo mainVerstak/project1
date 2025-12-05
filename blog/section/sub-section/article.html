@@ -310,13 +310,13 @@
                   <div class="search-result__content">
                     <a href="#" class="blog-section">
                       <div class="blog-section__image">
-                        <img src="../../img/section_3.png" alt="s3" />
+                        <img src="../../img/section_ico_1.png" alt="s3" />
                       </div>
                       <div class="blog-section__title">Недвижимость</div>
                     </a>
                     <button class="blog-section">
                       <div class="blog-section__image">
-                        <img src="../../img/section_2.png" alt="s2" />
+                        <img src="../../img/section_ico_3.png" alt="s2" />
                       </div>
                       <div class="blog-section__title">
                         Загородная недвижимость
@@ -324,7 +324,7 @@
                     </button>
                     <button class="blog-section">
                       <div class="blog-section__image">
-                        <img src="../../img/section_1.png" alt="s1" />
+                        <img src="../../img/section_ico_6.png" alt="s1" />
                       </div>
                       <div class="blog-section__title">Образ жизни</div>
                     </button>
@@ -1736,8 +1736,10 @@
 
             <div class="blog_article__banner">
               <div class="blog_article__banner-left">
-                <h2>Поможем найти квартиру под ваш бюджет</h2>
-                <p>Ваш персональный подборщик</p>
+                <div>
+                  <h2>Поможем найти квартиру под ваш бюджет</h2>
+                  <p>Ваш персональный подборщик</p>
+                </div>
                 <button class="btn btn-default white-border">
                   <svg class="icon-default">
                     <use xlink:href="../../img/icons.svg#search"></use>
@@ -1877,18 +1879,44 @@
             <div class="blog_article__banner checklist-banner">
               <div class="blog_article__banner-left">
                 <h2>Кому вы доверите проверку кваритры в новостройки?</h2>
-                <button class="btn btn-default white-border">
-                  😏 Сам все проверю
-                </button>
-                <button class="btn btn-default white-border">
-                  🙋 Найму технического эксперта
-                </button>
-                <button class="btn btn-default white-border">
-                  📑 Обращусь к юристу
-                </button>
-                <button class="btn btn-default white-border">
-                  🏢 Доверю риелтору
-                </button>
+                <form id="progress_form">
+                  <button
+                    type="button"
+                    class="btn btn-default white-border progress-bar"
+                    data-persent="31"
+                  >
+                    😏 Сам все проверю
+                    <span class="result">31%</span>
+                    <span class="progress"></span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-default white-border progress-bar"
+                    data-persent="46"
+                  >
+                    🙋 Найму технического эксперта
+                    <span class="result">46%</span>
+                    <span class="progress"></span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-default white-border progress-bar"
+                    data-persent="15"
+                  >
+                    📑 Обращусь к юристу
+                    <span class="result">15%</span>
+                    <span class="progress"></span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-default white-border progress-bar"
+                    data-persent="8"
+                  >
+                    🏢 Доверю риелтору
+                    <span class="result">8%</span>
+                    <span class="progress"></span>
+                  </button>
+                </form>
               </div>
               <div class="blog_article__banner-right">
                 <img src="../../img/banner_2.png" alt="banner" />
@@ -1979,7 +2007,7 @@
               <a href="#" class="blog-tag">Инвестиции в квартиру</a>
             </div>
 
-            <div class="blog_article__feedback">
+            <div id="comments" class="blog_article__feedback">
               <div class="blog_article__like">
                 <h2>Понравилась статья?</h2>
                 <div>
@@ -2129,12 +2157,12 @@
                 <a href="#faq">Вопросы и ответы</a>
               </div>
               <div class="blog_article__sidebar-actions">
-                <button class="btn btn-default">
+                <a href="#comments" class="btn btn-default">
                   <svg class="icon-default">
                     <use xlink:href="../../img/icons.svg#comment"></use>
                   </svg>
                   <span class="badge">6</span>
-                </button>
+                </a>
                 <button class="btn btn-default">
                   <svg class="icon-default">
                     <use xlink:href="../../img/icons.svg#reaction"></use>
@@ -2316,62 +2344,326 @@
               </span>
               <span class="sr-only">Закрыть</span>
             </button>
+            <button
+              class="btn btn-default back js-catalog-category-switch-back"
+            >
+              <svg class="icon-default">
+                <use xlink:href="../../img/icons.svg#chevron-l"></use>
+              </svg>
+            </button>
             <h4 class="modal-title">Каталог тем</h4>
           </div>
-          <div class="modal-body">
+          <div
+            class="modal-body js-catalog-category-switch-modal-body"
+            data-level="1"
+          >
             <div class="catalog-sidebar">
-              <button href="#" class="blog-section">
+              <button
+                class="blog-section js-catalog-category-switch-section-btn"
+                data-id="news"
+              >
                 <div class="blog-section__image">
                   <img src="../../img/section_ico_0.png" alt="s3" />
                 </div>
-                <div class="blog-section__title">Новости</div>
+                <div class="blog-section__title">
+                  Новости
+                  <span>Изучить тему</span>
+                </div>
               </button>
-              <button href="#" class="blog-section">
+              <button
+                class="blog-section js-catalog-category-switch-section-btn"
+                data-id="estate"
+              >
                 <div class="blog-section__image">
                   <img src="../../img/section_ico_1.png" alt="s3" />
                 </div>
-                <div class="blog-section__title">Недвижимость</div>
+                <div class="blog-section__title">
+                  Недвижимость
+                  <span>Изучить тему</span>
+                </div>
               </button>
-              <button href="#" class="blog-section">
+              <button
+                class="blog-section js-catalog-category-switch-section-btn"
+                data-id="rent"
+              >
                 <div class="blog-section__image">
                   <img src="../../img/section_ico_2.png" alt="s3" />
                 </div>
-                <div class="blog-section__title">Аренда</div>
+                <div class="blog-section__title">
+                  Аренда
+                  <span>Изучить тему</span>
+                </div>
               </button>
-              <button class="blog-section">
+              <button
+                class="blog-section js-catalog-category-switch-section-btn"
+                data-id="village"
+              >
                 <div class="blog-section__image">
                   <img src="../../img/section_ico_3.png" alt="s2" />
                 </div>
-                <div class="blog-section__title">Загородная недвижимость</div>
+                <div class="blog-section__title">
+                  Загородная недвижимость
+                  <span>Изучить тему</span>
+                </div>
               </button>
-              <button class="blog-section">
+              <button
+                class="blog-section js-catalog-category-switch-section-btn"
+                data-id="invest"
+              >
                 <div class="blog-section__image">
                   <img src="../../img/section_ico_4.png" alt="s2" />
                 </div>
-                <div class="blog-section__title">Финансы и инвестиции</div>
+                <div class="blog-section__title">
+                  Финансы и инвестиции
+                  <span>Изучить тему</span>
+                </div>
               </button>
-              <button class="blog-section">
+              <button
+                class="blog-section js-catalog-category-switch-section-btn"
+                data-id="repair"
+              >
                 <div class="blog-section__image">
                   <img src="../../img/section_ico_5.png" alt="s2" />
                 </div>
-                <div class="blog-section__title">Дизайн и ремонт</div>
+                <div class="blog-section__title">
+                  Дизайн и ремонт
+                  <span>Изучить тему</span>
+                </div>
               </button>
-              <button class="blog-section">
+              <button
+                class="blog-section js-catalog-category-switch-section-btn"
+                data-id="lifeStyle"
+              >
                 <div class="blog-section__image">
                   <img src="../../img/section_ico_6.png" alt="s1" />
                 </div>
-                <div class="blog-section__title">Образ жизни</div>
+                <div class="blog-section__title">
+                  Образ жизни
+                  <span>Изучить тему</span>
+                </div>
               </button>
             </div>
-            <div class="catalog-content">
+            <div
+              class="catalog-content js-catalog-category-switch-section-inner"
+              data-id="news"
+            >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="news"
+              >
+                Ещё по теме
+              </div>
+
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="news_market"
+                >
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Новости рынка недвижимости
+                    <span>Изучить тему</span>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="news_market"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="catalog-content js-catalog-category-switch-section-inner"
+              data-id="estate"
+            >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
+
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="new_estate"
+                >
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Новостройки
+                    <span>Изучить тему</span>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="new_estate"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="old_estate"
+                >
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Вторичная недвижимость
+                    <span>Изучить тему</span>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="old_estate"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="commercial"
+                >
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Коммерческая недвижимость
+                    <span>Изучить тему</span>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="commercial"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="foregion"
+                >
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Зарубежная недвижимость
+                    <span>Изучить тему</span>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="foregion"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="catalog-content js-catalog-category-switch-section-inner"
+              data-id="rent"
+            >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
                   <div class="blog-section__title">
-                    Новости рынка недвижимости
+                    Аренда недвижимости
+                    <span>Изучить тему</span>
                   </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -2389,9 +2681,493 @@
               <div class="catalog-content__section">
                 <div class="blog-section">
                   <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Образ жизни</div>
+                  <div class="blog-section__title">
+                    Посуточная аренда недвижимости
+                    <span>Изучить тему</span>
+                  </div>
                 </div>
                 <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Загородная аренда
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Посуточная загородная
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="catalog-content js-catalog-category-switch-section-inner"
+              data-id="village"
+            >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Загородная: Дом, дача, участок
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Строим дом
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="catalog-content js-catalog-category-switch-section-inner"
+              data-id="invest"
+            >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Ипотека
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Кредиты
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Инвестиции
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Накопления
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Страхование
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Аналитика
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="catalog-content js-catalog-category-switch-section-inner"
+              data-id="repair"
+            >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Дизайн и ремонт
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="catalog-content js-catalog-category-switch-section-inner"
+              data-id="lifeStyle"
+            >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Жизнь города
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Развлечения
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Гайды
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Госпрограммы поддержки
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <div class="blog-section">
+                  <div class="blog-section__image"></div>
+                  <div class="blog-section__title">
+                    Как это работает
+                    <span>Изучить тему</span>
+                  </div>
+                </div>
+                <div class="catalog-content__section-articles">
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
