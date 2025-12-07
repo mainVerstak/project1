@@ -221,7 +221,7 @@ $color-blog-subscribe: #dfe9e0;
     display: flex;
     flex-direction: column;
 
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       height: 330px;
     }
 
@@ -539,7 +539,7 @@ $color-blog-subscribe: #dfe9e0;
     grid-template-columns: 44px 1fr 1fr;
     gap: 10px;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     background: $blog-head-gradient;
     z-index: 1041;
 
@@ -1146,11 +1146,11 @@ $color-blog-subscribe: #dfe9e0;
     height: 378px;
     margin-bottom: 20px;
 
-    @media (max-width: 1199px) {
-      grid-template-columns: 1fr 1fr;
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr 350px;
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -1270,11 +1270,11 @@ $color-blog-subscribe: #dfe9e0;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 
-    @media (max-width: 1199px) {
+    @media (max-width: 991px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
     }
@@ -1288,6 +1288,12 @@ $color-blog-subscribe: #dfe9e0;
     }
     &.alt_painted {
       grid-template-columns: repeat(4, 1fr);
+      @media (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
     }
     &.alt_slider {
       display: flex;
@@ -1341,21 +1347,29 @@ $color-blog-subscribe: #dfe9e0;
     gap: 15px;
     margin-bottom: 40px;
 
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr 350px;
+    }
+
     &.left-pop {
       grid-template-columns: 370px 1fr;
+
+      @media (max-width: 991px) {
+        grid-template-columns: 350px 1fr;
+      }
     }
 
     .section-group__articles-container {
       display: grid;
       gap: 15px;
       grid-template-columns: 1fr 1fr;
-      @media (max-width: 991px) {
+      @media (max-width: 767px) {
         display: flex;
         flex-direction: column;
       }
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       display: flex;
       flex-direction: column-reverse;
     }
@@ -1382,6 +1396,9 @@ $color-blog-subscribe: #dfe9e0;
     margin-bottom: 40px;
 
     @media (max-width: 991px) {
+      max-height: unset;
+    }
+    @media (max-width: 767px) {
       padding-top: 20px;
       flex-direction: column;
       max-height: unset;
@@ -1510,6 +1527,10 @@ $color-blog-subscribe: #dfe9e0;
 
     @media (max-width: 1199px) {
       padding: 10px 0;
+    }
+
+    @media (max-width: 991px) {
+      display: none;
     }
   }
 
@@ -1885,6 +1906,12 @@ $color-blog-subscribe: #dfe9e0;
     overflow: hidden;
 
     @media (max-width: 991px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 767px) {
+      display: flex;
       flex-direction: column;
     }
 
@@ -1897,7 +1924,7 @@ $color-blog-subscribe: #dfe9e0;
       flex-direction: column;
       justify-content: space-between;
 
-      @media (max-width: 991px) {
+      @media (max-width: 767px) {
         padding: 30px;
 
         .btn {
@@ -2053,11 +2080,11 @@ $color-blog-subscribe: #dfe9e0;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 
-    @media (max-width: 1199px) {
+    @media (max-width: 991px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       grid-template-columns: 1fr;
     }
   }
@@ -2130,7 +2157,7 @@ $color-blog-subscribe: #dfe9e0;
     grid-template-columns: 180px 1fr;
     gap: 30px;
 
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
     }
@@ -2141,7 +2168,7 @@ $color-blog-subscribe: #dfe9e0;
       border-radius: 10px;
       overflow: hidden;
 
-      @media (max-width: 991px) {
+      @media (max-width: 767px) {
         width: 100%;
         height: 100%;
         aspect-ratio: 1/1;
@@ -2262,11 +2289,13 @@ $color-blog-subscribe: #dfe9e0;
     &:hover,
     &:focus {
       .tooltip {
+        display: block;
         opacity: 1;
       }
     }
 
     .tooltip {
+      display: none;
       position: absolute;
       top: 100%;
       left: 50%;
@@ -2295,8 +2324,13 @@ $color-blog-subscribe: #dfe9e0;
   .modal-dialog {
     width: 100%;
     max-width: 1190px;
-    max-height: 500px;
+    max-height: 600px;
     padding: 0 10px;
+
+    @media (max-width: 1199px) {
+      max-width: 970px;
+      padding: 0;
+    }
 
     @media (max-width: 991px) {
       padding: 0;

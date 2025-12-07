@@ -133,6 +133,7 @@ const swiper = new Swiper(".main-swiper", {
   mousewheel: {
     invert: false,
   },
+  setTranslate: 500,
   // navigation btns
   navigation: {
     nextEl: ".swiper-button-next",
