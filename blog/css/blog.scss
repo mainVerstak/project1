@@ -1639,8 +1639,8 @@ $color-blog-subscribe: #dfe9e0;
       aspect-ratio: 1/1;
 
       @media (max-width: 991px) {
-        aspect-ratio: 16/8;
-        height: unset;
+        aspect-ratio: 1/1;
+        height: 100%;
       }
 
       img {

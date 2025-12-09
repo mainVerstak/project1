@@ -7117,8 +7117,8 @@ footer {
 }
 @media (max-width: 991px) {
   .blog .blog_article__image div {
-    aspect-ratio: 16/8;
-    height: unset;
+    aspect-ratio: 1/1;
+    height: 100%;
   }
 }
 .blog .blog_article__image div img {
