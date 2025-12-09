@@ -125,6 +125,7 @@ showResults();
 const swiper = new Swiper(".main-swiper", {
   // auto width for slide
   slidesPerView: "auto",
+  slidesPerGroup: 3,
   // like gap
   spaceBetween: 10,
   // for swipe
@@ -144,6 +145,7 @@ const swiper = new Swiper(".main-swiper", {
 const swiper2 = new Swiper(".swiper2", {
   // auto width for slide
   slidesPerView: "auto",
+  slidesPerGroup: 3,
   // like gap
   spaceBetween: 10,
   // for swipe
@@ -180,6 +182,7 @@ const swiperAnnounces = new Swiper(".swiper_announces", {
 const swiperTags = new Swiper(".swiper-tags", {
   // auto width for slide
   slidesPerView: "auto",
+  slidesPerGroup: 3,
   // like gap
   spaceBetween: 10,
   // for swipe
@@ -210,29 +213,19 @@ function openPopup(id) {
 class Catalog {
   constructor() {
     // Elements
-    this.btns = document.querySelectorAll(
-      ".js-catalog-category-switch-section-btn"
-    );
-    this.sections = document.querySelectorAll(
-      ".js-catalog-category-switch-section-inner"
-    );
+    this.btns = document.querySelectorAll(".js-catalog-category-switch-section-btn");
+    this.sections = document.querySelectorAll(".js-catalog-category-switch-section-inner");
     this.moreMessage = document.querySelectorAll(
       ".js-catalog-category-switch-section-more-message"
     );
-    this.subBtns = document.querySelectorAll(
-      ".js-catalog-category-switch-subsection-btn"
-    );
-    this.subSection = document.querySelectorAll(
-      ".js-catalog-category-switch-subsection-inner"
-    );
+    this.subBtns = document.querySelectorAll(".js-catalog-category-switch-subsection-btn");
+    this.subSection = document.querySelectorAll(".js-catalog-category-switch-subsection-inner");
     this.subMoreMessage = document.querySelectorAll(
       ".js-catalog-category-switch-subsection-more-message"
     );
     this.backBtn = document.querySelector(".js-catalog-category-switch-back");
     this.sidebar = document.querySelector(".catalog-sidebar");
-    this.modalBody = document.querySelector(
-      ".js-catalog-category-switch-modal-body"
-    );
+    this.modalBody = document.querySelector(".js-catalog-category-switch-modal-body");
 
     // state variables
     this.ids = ["news", ""];

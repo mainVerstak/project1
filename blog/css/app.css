@@ -7110,9 +7110,10 @@ footer {
 .blog .blog_article__image div {
   margin-bottom: 10px;
   width: 100%;
-  height: 360px;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
+  aspect-ratio: 1/1;
 }
 @media (max-width: 991px) {
   .blog .blog_article__image div {
