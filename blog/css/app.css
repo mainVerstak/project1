@@ -7115,12 +7115,6 @@ footer {
   overflow: hidden;
   aspect-ratio: 1/1;
 }
-@media (max-width: 991px) {
-  .blog .blog_article__image div {
-    aspect-ratio: 1/1;
-    height: 100%;
-  }
-}
 .blog .blog_article__image div img {
   width: 100%;
   height: 100%;
