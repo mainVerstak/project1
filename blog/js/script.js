@@ -467,3 +467,14 @@ function activeProgress() {
 }
 
 activeProgress();
+
+function collapsesBlock(element) {
+  const head = element.querySelector(".js-block-collapses-head");
+  head.addEventListener("click", () => {
+    element.classList.toggle("active");
+  });
+}
+
+document.querySelectorAll(".js-block-collapses").forEach((block) => {
+  collapsesBlock(block);
+});
