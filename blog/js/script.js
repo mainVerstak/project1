@@ -478,3 +478,9 @@ function collapsesBlock(element) {
 document.querySelectorAll(".js-block-collapses").forEach((block) => {
   collapsesBlock(block);
 });
+
+function toggleActiveClass(event, parentElement = ".btn") {
+  const element = event.target.closest(parentElement);
+  console.log(element);
+  element.classList.toggle("active");
+}
