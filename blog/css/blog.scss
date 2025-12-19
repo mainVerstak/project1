@@ -55,6 +55,9 @@ $color-blog-subscribe: #dfe9e0;
     @media (max-width: 767px) {
       grid-template-columns: calc(100vw - 30px);
     }
+    .blog__header {
+      z-index: unset;
+    }
   }
 
   .color_main {
@@ -1458,6 +1461,10 @@ $color-blog-subscribe: #dfe9e0;
 
       .small {
         margin: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
       }
     }
   }

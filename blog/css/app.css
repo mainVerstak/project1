@@ -5656,6 +5656,9 @@ footer {
     grid-template-columns: calc(100vw - 30px);
   }
 }
+.blog .with_sidebar-rigth .blog__header {
+  z-index: unset;
+}
 .blog .color_main {
   background-color: #faf8f0;
 }
@@ -6940,6 +6943,10 @@ footer {
 }
 .blog .subscribe .subscribe-form .small {
   margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 .blog .adv_themes {
   padding: 20px;
