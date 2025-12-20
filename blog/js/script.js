@@ -460,6 +460,7 @@ function activeProgress() {
 
   btns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
+      e.preventDefault();
       onProgress(btn);
       btns.forEach((btn) => onProgress(btn));
     });

@@ -2097,13 +2097,21 @@ $color-blog-subscribe: #dfe9e0;
           position: relative;
           z-index: 1;
           border: none;
+          text-wrap: wrap;
+          text-align: start;
+          padding: 15px;
+          height: unset;
 
           &:hover {
             transition: hover 0.1s ease;
           }
 
           .result {
-            display: none;
+            visibility: hidden;
+          }
+
+          .progress {
+            position: absolute;
           }
 
           &.active {
@@ -2123,7 +2131,7 @@ $color-blog-subscribe: #dfe9e0;
 
             .result {
               color: $color-primary;
-              display: block;
+              visibility: visible;
             }
           }
         }

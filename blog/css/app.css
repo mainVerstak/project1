@@ -7517,12 +7517,19 @@ footer {
   position: relative;
   z-index: 1;
   border: none;
+  text-wrap: wrap;
+  text-align: start;
+  padding: 15px;
+  height: unset;
 }
 .blog .blog_article__banner.checklist-banner .blog_article__banner-left .progress-bar:hover {
   transition: hover 0.1s ease;
 }
 .blog .blog_article__banner.checklist-banner .blog_article__banner-left .progress-bar .result {
-  display: none;
+  visibility: hidden;
+}
+.blog .blog_article__banner.checklist-banner .blog_article__banner-left .progress-bar .progress {
+  position: absolute;
 }
 .blog .blog_article__banner.checklist-banner .blog_article__banner-left .progress-bar.active {
   background-color: #fff;
@@ -7540,7 +7547,7 @@ footer {
 }
 .blog .blog_article__banner.checklist-banner .blog_article__banner-left .progress-bar.active .result {
   color: #084c95;
-  display: block;
+  visibility: visible;
 }
 .blog .blog_article__feedback {
   margin-bottom: 30px;
