@@ -6474,6 +6474,7 @@ footer {
   background-color: #fff;
   border: 1px solid #e6eff9;
   border-radius: 5px;
+  top: 0;
 }
 .blog .swiper .swiper-button-next .icon-default,
 .blog .swiper .swiper-button-prev .icon-default {
@@ -8018,6 +8019,13 @@ footer {
     margin-left: -20px;
     margin-right: -20px;
   }
+}
+.blog__modal-catalog .ds-tabs .ds-item h2 {
+  color: #242a3e;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0%;
 }
 
 /* Pagination */
