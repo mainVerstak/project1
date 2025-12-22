@@ -2464,6 +2464,14 @@ $color-blog-subscribe: #dfe9e0;
       text-wrap: nowrap;
     }
   }
+
+  .ds-tabs .ds-item h2 {
+    color: #242a3e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+  }
 }
 
 // modal
@@ -2664,13 +2672,6 @@ $color-blog-subscribe: #dfe9e0;
         }
       }
     }
-  }
-  .ds-tabs .ds-item h2 {
-    color: #242a3e;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0%;
   }
 }
 

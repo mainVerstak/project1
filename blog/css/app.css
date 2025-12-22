@@ -7837,6 +7837,13 @@ footer {
   border-radius: 5px;
   text-wrap: nowrap;
 }
+.blog .ds-tabs .ds-item h2 {
+  color: #242a3e;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
 
 .blog__modal-catalog .modal-dialog {
   width: 100%;
@@ -8019,13 +8026,6 @@ footer {
     margin-left: -20px;
     margin-right: -20px;
   }
-}
-.blog__modal-catalog .ds-tabs .ds-item h2 {
-  color: #242a3e;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 150%;
-  letter-spacing: 0%;
 }
 
 /* Pagination */
