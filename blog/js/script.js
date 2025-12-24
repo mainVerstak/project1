@@ -495,3 +495,71 @@ function visibleBadge(parentElement) {
     badge.style.display = "none";
   }
 }
+
+function renderSharePopup({ top, left }) {
+  const sharePopup = document.createElement("div");
+  sharePopup.classList.add("blog", "popup_share");
+  sharePopup.id = "share_popup";
+
+  if (window.innerWidth < 991) {
+    sharePopup.classList.add("popup_share_mobile");
+  } else {
+    sharePopup.classList.add("popup_share_desktop");
+  }
+
+  sharePopup.style.top = `${top + 60}px`;
+  sharePopup.style.left = `${left}px`;
+
+  const innerSharePopup = `
+    <div class="popup_share__title">
+      <h3>Поделитесь</h3>
+      <button class="btn btn-default btn-close" onclick="removeSharePopup()">
+        <svg class="icon-default">
+          <use xlink:href="../../img/icons.svg#cross"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="popup_share__btns">
+      <a href="#" class="btn btn-default btn-vk">
+        <svg class="icon-default">
+          <use xlink:href="../../img/icons.svg#vk"></use>
+        </svg>
+      </a>
+      <a href="#" class="btn btn-default btn-odnoklassniki">
+        <svg class="icon-default">
+          <use xlink:href="../../img/icons.svg#ok"></use>
+        </svg>
+      </a>
+    </div>
+  `;
+
+  sharePopup.innerHTML = innerSharePopup;
+  document.body.appendChild(sharePopup);
+}
+
+function removeSharePopup() {
+  const sharePopup = document.getElementById("share_popup");
+  if (sharePopup) {
+    sharePopup.remove();
+  }
+}
+
+function onShowSharePopup(event) {
+  const button = event.target.closest(".btn");
+
+  const { top, left } = getElementDocumentPosition(button);
+
+  removeSharePopup();
+  renderSharePopup({ top, left });
+}
+
+function getElementDocumentPosition(element) {
+  const rect = element.getBoundingClientRect();
+  const scrollX = window.scrollX || document.documentElement.scrollLeft;
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+  return {
+    top: rect.top + scrollY,
+    left: rect.left + scrollX - element.offsetWidth,
+  };
+}

@@ -7062,75 +7062,66 @@ footer {
     display: none;
   }
 }
-.blog .popup_share {
+.blog.popup_share {
   position: absolute;
-  top: 100%;
-  right: 36px;
   padding: 20px;
   border: 1px solid #e6eff9;
   border-radius: 8px;
   max-width: 400px;
   width: 100%;
+  max-width: 300px;
   background-color: #fff;
   box-shadow: 0px 4px 30px 0px rgba(8, 76, 149, 0.1019607843);
 }
-@media (max-width: 1199px) {
-  .blog .popup_share {
-    right: 0;
-    flex-direction: column;
+@media (min-width: 992px) {
+  .blog.popup_share.popup_share_mobile {
+    display: none;
   }
 }
 @media (max-width: 991px) {
-  .blog .popup_share {
-    right: unset;
-    left: 0;
+  .blog.popup_share.popup_share_desktop {
+    display: none;
   }
 }
-.blog .popup_share .popup_share__title {
+.blog.popup_share .popup_share__title {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-@media (max-width: 991px) {
-  .blog .popup_share .popup_share__title {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-.blog .popup_share .popup_share__title h3 {
+.blog.popup_share .popup_share__title h3 {
   margin: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 120%;
   letter-spacing: 0%;
 }
-.blog .popup_share .popup_share__title .btn-close {
+.blog.popup_share .popup_share__title .btn-close {
   position: absolute;
   right: -15px;
   top: -15px;
   border-color: transparent;
 }
-.blog .popup_share .popup_share__btns {
+.blog.popup_share .popup_share__btns {
   display: flex;
   gap: 3px;
 }
-.blog .popup_share .popup_share__btns .btn {
+.blog.popup_share .popup_share__btns .btn {
   width: 44px;
   color: #fff;
   border-color: transparent;
 }
-.blog .popup_share .popup_share__btns .btn.btn-vk {
+.blog.popup_share .popup_share__btns .btn.btn-vk {
   background-color: #587ea3;
 }
-.blog .popup_share .popup_share__btns .btn.btn-vk:hover {
+.blog.popup_share .popup_share__btns .btn.btn-vk:hover {
   background-color: #337ab7;
 }
-.blog .popup_share .popup_share__btns .btn.btn-odnoklassniki {
+.blog.popup_share .popup_share__btns .btn.btn-odnoklassniki {
   background-color: #f4731c;
 }
-.blog .popup_share .popup_share__btns .btn.btn-odnoklassniki:hover {
+.blog.popup_share .popup_share__btns .btn.btn-odnoklassniki:hover {
   background-color: #eda33b;
 }
 .blog article .photo {
@@ -7595,10 +7586,6 @@ footer {
   display: flex;
   gap: 10px;
 }
-.blog .blog_article__feedback .blog_article__like .popup_share {
-  right: 0;
-  display: block;
-}
 .blog .blog_article__feedback .blog_article__comment-send .form-group textarea {
   min-height: 100px;
   margin-bottom: 10px;
@@ -7895,6 +7882,10 @@ footer {
 .btn .badge:hover {
   background-color: #084c95;
   color: #ffffff;
+}
+
+.btn:has(.badge) {
+  position: relative;
 }
 
 .blog__modal-catalog .modal-dialog {
