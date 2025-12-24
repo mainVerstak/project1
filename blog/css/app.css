@@ -7837,12 +7837,27 @@ footer {
   border-radius: 5px;
   text-wrap: nowrap;
 }
+.blog .ds-tabs .ds-item {
+  padding: 0;
+}
+.blog .ds-tabs .ds-item .ds-question {
+  padding: 15px 20px;
+}
+.blog .ds-tabs .ds-item.active {
+  padding: 15px 20px;
+}
+.blog .ds-tabs .ds-item.active .ds-question {
+  padding: 0;
+}
 .blog .ds-tabs .ds-item h2 {
   color: #242a3e;
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0%;
+}
+.blog blockquote p {
+  margin-bottom: 0;
 }
 
 .blog__modal-catalog .modal-dialog {

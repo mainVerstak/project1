@@ -2465,12 +2465,34 @@ $color-blog-subscribe: #dfe9e0;
     }
   }
 
-  .ds-tabs .ds-item h2 {
-    color: #242a3e;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0%;
+  .ds-tabs .ds-item {
+    padding: 0;
+
+    .ds-question {
+      padding: 15px 20px;
+    }
+
+    &.active {
+      padding: 15px 20px;
+
+      .ds-question {
+        padding: 0;
+      }
+    }
+
+    h2 {
+      color: #242a3e;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: 0%;
+    }
+  }
+
+  blockquote {
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 
