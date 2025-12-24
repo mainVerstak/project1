@@ -482,6 +482,16 @@ document.querySelectorAll(".js-block-collapses").forEach((block) => {
 
 function toggleActiveClass(event, parentElement = ".btn") {
   const element = event.target.closest(parentElement);
-  console.log(element);
   element.classList.toggle("active");
+  visibleBadge(element);
+}
+
+function visibleBadge(parentElement) {
+  const badge = parentElement.querySelector(".badge");
+
+  if (parentElement.classList.contains("active")) {
+    badge.style.display = "block";
+  } else {
+    badge.style.display = "none";
+  }
 }

@@ -1592,7 +1592,6 @@ $color-blog-subscribe: #dfe9e0;
   }
 
   .popup_share {
-    display: none;
     position: absolute;
     top: 100%;
     right: 36px;
@@ -2185,6 +2184,7 @@ $color-blog-subscribe: #dfe9e0;
 
       .popup_share {
         right: 0;
+        display: block;
       }
     }
 
