@@ -7063,6 +7063,7 @@ footer {
   }
 }
 .blog .popup_share {
+  display: none;
   position: absolute;
   top: 100%;
   right: 36px;
@@ -7076,6 +7077,13 @@ footer {
 }
 @media (max-width: 1199px) {
   .blog .popup_share {
+    right: 0;
+    flex-direction: column;
+  }
+}
+@media (max-width: 991px) {
+  .blog .popup_share {
+    right: unset;
     left: 0;
   }
 }
@@ -7085,6 +7093,12 @@ footer {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+}
+@media (max-width: 991px) {
+  .blog .popup_share .popup_share__title {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .blog .popup_share .popup_share__title h3 {
   margin: 0;
@@ -7562,6 +7576,7 @@ footer {
   justify-content: space-between;
   gap: 5px;
   margin-bottom: 30px;
+  position: relative;
 }
 @media (max-width: 991px) {
   .blog .blog_article__feedback .blog_article__like {
@@ -7580,6 +7595,9 @@ footer {
 .blog .blog_article__feedback .blog_article__like div {
   display: flex;
   gap: 10px;
+}
+.blog .blog_article__feedback .blog_article__like .popup_share {
+  right: 0;
 }
 .blog .blog_article__feedback .blog_article__comment-send .form-group textarea {
   min-height: 100px;
@@ -7858,6 +7876,25 @@ footer {
 }
 .blog blockquote p {
   margin-bottom: 0;
+}
+
+.badge,
+.btn .badge {
+  background-color: #084c95;
+  color: #ffffff;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 1px 2px;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.badge:focus, .badge:hover,
+.btn .badge:focus,
+.btn .badge:hover {
+  background-color: #084c95;
+  color: #ffffff;
 }
 
 .blog__modal-catalog .modal-dialog {

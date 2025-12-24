@@ -2052,13 +2052,39 @@
                       <use xlink:href="../../img/icons.svg#reaction"></use>
                     </svg>
                     Понравилась
+                    <span class="badge">6</span>
                   </button>
-                  <button class="btn btn-default">
+                  <button class="btn btn-default" onclick="openPopup('share_mobile')">
                     <svg class="icon-default">
                       <use xlink:href="../../img/icons.svg#share"></use>
                     </svg>
                     Поделиться
                   </button>
+                  <div id="share_mobile" class="popup_share">
+                    <div class="popup_share__title">
+                      <h3>Поделитесь</h3>
+                      <button
+                        class="btn btn-default btn-close"
+                        onclick="closePopup('share_mobile')"
+                      >
+                        <svg class="icon-default">
+                          <use xlink:href="../../img/icons.svg#cross"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="popup_share__btns">
+                      <a href="#" class="btn btn-default btn-vk">
+                        <svg class="icon-default">
+                          <use xlink:href="../../img/icons.svg#vk"></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="btn btn-default btn-odnoklassniki">
+                        <svg class="icon-default">
+                          <use xlink:href="../../img/icons.svg#ok"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="blog_article__comment-send">
