@@ -1417,6 +1417,10 @@ $color-blog-subscribe: #dfe9e0;
     img {
       max-width: 380px;
       object-fit: contain;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
 
     .subscribe-form {
@@ -2144,6 +2148,13 @@ $color-blog-subscribe: #dfe9e0;
           }
         }
       }
+      .blog_article__banner-right {
+        img {
+          @media (max-width: 767px) {
+            display: none;
+          }
+        }
+      }
     }
   }
 
@@ -2187,7 +2198,11 @@ $color-blog-subscribe: #dfe9e0;
           resize: none;
         }
 
-        div {
+        &:has(+ .bottom-actions) {
+          margin-bottom: 10px;
+        }
+
+        &.bottom-actions {
           display: flex;
           align-items: center;
           gap: 20px;

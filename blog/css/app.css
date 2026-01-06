@@ -6902,6 +6902,11 @@ footer {
   max-width: 380px;
   object-fit: contain;
 }
+@media (max-width: 767px) {
+  .blog .subscribe img {
+    display: none;
+  }
+}
 .blog .subscribe .subscribe-form {
   padding: 30px;
 }
@@ -7554,6 +7559,11 @@ footer {
   color: #084c95;
   visibility: visible;
 }
+@media (max-width: 767px) {
+  .blog .blog_article__banner.checklist-banner .blog_article__banner-right img {
+    display: none;
+  }
+}
 .blog .blog_article__feedback {
   margin-bottom: 30px;
 }
@@ -7591,7 +7601,10 @@ footer {
   margin-bottom: 10px;
   resize: none;
 }
-.blog .blog_article__feedback .blog_article__comment-send .form-group div {
+.blog .blog_article__feedback .blog_article__comment-send .form-group:has(+ .bottom-actions) {
+  margin-bottom: 10px;
+}
+.blog .blog_article__feedback .blog_article__comment-send .form-group.bottom-actions {
   display: flex;
   align-items: center;
   gap: 20px;
