@@ -5616,6 +5616,10 @@ footer {
   margin-left: 10px;
 }
 
+:root {
+  --swiper-navigation-size: null;
+}
+
 .blog {
   padding-bottom: 15px;
 }
