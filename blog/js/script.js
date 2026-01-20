@@ -9,7 +9,7 @@ class ActiveTapbarButtonSwitcher {
     this.buttons.forEach((btn) =>
       btn.addEventListener("click", (e) => {
         this.on(e.target.closest(".tapbar__item").dataset.id);
-      })
+      }),
     );
   }
 
@@ -216,12 +216,12 @@ class Catalog {
     this.btns = document.querySelectorAll(".js-catalog-category-switch-section-btn");
     this.sections = document.querySelectorAll(".js-catalog-category-switch-section-inner");
     this.moreMessage = document.querySelectorAll(
-      ".js-catalog-category-switch-section-more-message"
+      ".js-catalog-category-switch-section-more-message",
     );
     this.subBtns = document.querySelectorAll(".js-catalog-category-switch-subsection-btn");
     this.subSection = document.querySelectorAll(".js-catalog-category-switch-subsection-inner");
     this.subMoreMessage = document.querySelectorAll(
-      ".js-catalog-category-switch-subsection-more-message"
+      ".js-catalog-category-switch-subsection-more-message",
     );
     this.backBtn = document.querySelector(".js-catalog-category-switch-back");
     this.sidebar = document.querySelector(".catalog-sidebar");
@@ -563,3 +563,14 @@ function getElementDocumentPosition(element) {
     left: rect.left + scrollX - element.offsetWidth,
   };
 }
+
+// for imitate lazy load for images
+const srcs = [];
+document.querySelectorAll(".article-preview__image img").forEach((img, index) => {
+  srcs[index] = img.src;
+  img.src = "img/loading.gif";
+  setTimeout(() => {
+    img.src = srcs[index];
+    img.classList.add("loaded");
+  }, 5000);
+});
