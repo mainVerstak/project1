@@ -1,12 +1,7 @@
 $font-size-section-title: 20px;
 $font-size-section-subtitle: 14px;
 
-$blog-head-gradient: linear-gradient(
-  90deg,
-  #88a1bf 0%,
-  #c6d4de 50%,
-  #d4dade 100%
-);
+$blog-head-gradient: linear-gradient(90deg, #88a1bf 0%, #c6d4de 50%, #d4dade 100%);
 
 // New colors
 $color-blog-main: #faf8f0;
@@ -825,21 +820,13 @@ $color-blog-subscribe: #dfe9e0;
 
       @media (max-width: 991px) {
         padding: 15px;
-        background: linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0.3) 0%,
-          rgba(0, 0, 0, 0) 100%
-        );
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
         border-radius: 15px;
       }
     }
     .blog__header-title-container {
       display: flex;
-      background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0) 100%
-      );
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
       padding: 15px 0 15px 15px;
       border-radius: 10px;
 
@@ -2137,7 +2124,7 @@ $color-blog-subscribe: #dfe9e0;
     overflow: hidden;
 
     &.bg-blue {
-      background-color: $color-blog-estate;
+      background-color: #dbd9f2;
     }
     &.bg-brown {
       background-color: #bfb7b5;
