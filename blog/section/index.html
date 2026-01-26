@@ -1186,14 +1186,38 @@
         <div class="subscribe">
           <img src="../img/mail.png" alt="mail" />
           <div class="subscribe-form">
-            <form>
+            <form class="form-inline">
               <h2 class="subscribe-form__title">Новости о недвижимости в вашей почте</h2>
               <p class="subscribe-form__description">
                 Полезные статьи о покупке, аренде, инвестициях и прочем
               </p>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Введите e-mail" />
-                <button class="btn btn-primary">Подписаться</button>
+              <div class="form-group has-error">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Введите e-mail"
+                    value="random@email.com"
+                  />
+                  <button class="btn btn-primary">Подписаться</button>
+                </div>
+                <!-- Здесь идут блоки help-block + иконка <i> -->
+                <i
+                  style="display: inline"
+                  class="form-control-feedback fv-icon-no-label fas fa-times"
+                  data-fv-icon-for="user[email]"
+                ></i>
+                <small
+                  style=""
+                  class="help-block"
+                  data-fv-validator="remote"
+                  data-fv-for="user[email]"
+                  data-fv-result="INVALID"
+                  >Такой email уже зарегистрирован или не доступен на нашем сайте.<br /><a
+                    href="/sign-in"
+                    >Выполнить вход</a
+                  >.</small
+                >
               </div>
             </form>
             <p class="small">
