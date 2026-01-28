@@ -7198,7 +7198,7 @@ footer {
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  aspect-ratio: 1/1;
+  aspect-ratio: 16/9;
 }
 .blog article .photo div:has(img:not(.loaded)) {
   display: flex;
@@ -7279,6 +7279,9 @@ footer {
 .blog article p:has(+ ul), .blog article p:has(+ ol) {
   margin-bottom: 15px;
 }
+.blog article p + ol {
+  margin-top: 15px;
+}
 .blog article ul {
   margin-bottom: 30px;
   list-style: none;
@@ -7301,6 +7304,12 @@ footer {
   position: relative;
   bottom: 5px;
 }
+.blog article ul li:has(p) {
+  margin-bottom: 30px;
+}
+.blog article ul li p {
+  display: inline;
+}
 .blog article ol:not(.breadcrumb) {
   margin-bottom: 30px;
   font-weight: 400;
@@ -7310,6 +7319,9 @@ footer {
 }
 .blog article ol:not(.breadcrumb) li {
   margin-bottom: 5px;
+}
+.blog article ol:not(.breadcrumb) li:before {
+  content: none;
 }
 .blog article table {
   table-layout: fixed;

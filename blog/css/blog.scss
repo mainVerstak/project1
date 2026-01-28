@@ -1750,7 +1750,7 @@ $color-blog-subscribe: #dfe9e0;
         height: 100%;
         border-radius: 10px;
         overflow: hidden;
-        aspect-ratio: 1/1;
+        aspect-ratio: 16/9;
 
         &:has(img:not(.loaded)) {
           display: flex;
@@ -1836,6 +1836,10 @@ $color-blog-subscribe: #dfe9e0;
       &:has(+ ol) {
         margin-bottom: 15px;
       }
+
+      + ol {
+        margin-top: 15px;
+      }
     }
 
     ul {
@@ -1860,6 +1864,14 @@ $color-blog-subscribe: #dfe9e0;
           position: relative;
           bottom: 5px;
         }
+
+        &:has(p) {
+          margin-bottom: 30px;
+        }
+
+        p {
+          display: inline;
+        }
       }
     }
     ol:not(.breadcrumb) {
@@ -1871,6 +1883,10 @@ $color-blog-subscribe: #dfe9e0;
 
       li {
         margin-bottom: 5px;
+
+        &:before {
+          content: none;
+        }
       }
     }
 
