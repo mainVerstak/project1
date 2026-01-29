@@ -7320,6 +7320,18 @@ footer {
 .blog article ul li p {
   display: inline;
 }
+.blog article ul li:has(ul li) {
+  font-weight: 700;
+}
+.blog article ul li:has(ul li)::before {
+  content: none;
+}
+.blog article ul li:has(ul li) ul {
+  margin-left: 15px;
+}
+.blog article ul li:has(ol li) ol {
+  margin-left: 15px;
+}
 .blog article ol:not(.breadcrumb) {
   margin-bottom: 30px;
   font-weight: 400;

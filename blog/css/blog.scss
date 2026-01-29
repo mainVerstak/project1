@@ -1891,6 +1891,24 @@ $color-blog-subscribe: #dfe9e0;
         p {
           display: inline;
         }
+
+        &:has(ul li) {
+          font-weight: 700;
+
+          &::before {
+            content: none;
+          }
+
+          ul {
+            margin-left: 15px;
+          }
+        }
+
+        &:has(ol li) {
+          ol {
+            margin-left: 15px;
+          }
+        }
       }
     }
     ol:not(.breadcrumb) {
