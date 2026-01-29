@@ -29,6 +29,13 @@ $color-blog-subscribe: #dfe9e0;
     }
   }
 
+  blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    border-left: none;
+  }
+
   .hidden {
     display: none !important;
   }
@@ -615,6 +622,10 @@ $color-blog-subscribe: #dfe9e0;
       grid-template-columns: 44px 1fr;
       gap: 10px;
       text-decoration: none;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
 
     &:has(+ .breadcrumb) {
@@ -639,11 +650,17 @@ $color-blog-subscribe: #dfe9e0;
       color: #fff;
     }
 
+    &.hide-desktop {
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+
     @media (max-width: 991px) {
       display: none;
 
       &.other_page {
-        display: flex;
+        display: none;
         .live-search {
           display: none;
         }
@@ -651,10 +668,6 @@ $color-blog-subscribe: #dfe9e0;
         .blog__header-title-container,
         .section__header-icon {
           display: block;
-        }
-
-        &.hide-mobile {
-          display: none;
         }
       }
 
@@ -825,7 +838,7 @@ $color-blog-subscribe: #dfe9e0;
       @media (max-width: 991px) {
         padding: 15px;
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
-        border-radius: 15px;
+        border-radius: 10px;
       }
     }
     .blog__header-title-container {
@@ -940,6 +953,12 @@ $color-blog-subscribe: #dfe9e0;
       &:focus,
       &:active {
         text-decoration: none;
+      }
+
+      &.btn.btn-default {
+        padding: 0;
+        width: 100%;
+        height: 100%;
       }
     }
     .tapbar__item-home {

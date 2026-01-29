@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -38,7 +38,7 @@
 
     <script src="js/bootstrap.js"></script>
     <script defer src="js/dictionary.js"></script>
-    <!-- <script defer src="js/script.js"></script> -->
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <header>
@@ -249,6 +249,289 @@
           </button>
         </div>
         <!-- End tapbar -->
+
+        <div class="blog__header hide-desktop">
+          <a class="blog__header-link" href="#">
+            <div class="section__header-icon">
+              <img src="./img/header.png" alt="header" />
+            </div>
+            <div class="blog__header-title-container">
+              <h2 class="section__header-title">Журнал Олан</h2>
+              <p class="section__header-subtitle">О недвижимости и вокруг неё</p>
+            </div>
+          </a>
+          <div class="live-search">
+            <form action="" id="blog_live_search">
+              <div class="form-group search-input">
+                <svg class="icon-default search-icon">
+                  <use xlink:href="./img/icons.svg#search"></use>
+                </svg>
+                <input
+                  type="text"
+                  id="live_search_input"
+                  class="form-control"
+                  placeholder="Поиск по статьям"
+                  onclick="showSearchResult()"
+                />
+                <button
+                  type="button"
+                  class="btn btn-default clear-input view"
+                  onclick="hideSearchReasult()"
+                >
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#cross"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="live-search__results">
+            <div class="search-result last-search">
+              <div class="search-result__title">Вы искали</div>
+              <div class="search-result__content">
+                <button class="blog-tag">Снять кваритру</button>
+                <button class="blog-tag">Посуточная аренда</button>
+                <button class="blog-tag">Продажа недвижимости</button>
+                <button class="blog-tag">Инвестиции в квартиру</button>
+              </div>
+            </div>
+            <div class="search-result top-search">
+              <div class="search-result__title">Часто ищут</div>
+              <div class="search-result__content">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/estate/realty.jpg" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">Недвижимость</div>
+                </a>
+                <button class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/contryside-estate/suburban_estate.jpg" alt="s2" />
+                  </div>
+                  <div class="blog-section__title">Загородная недвижимость</div>
+                </button>
+                <button class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="./img/life-style/lifestyle.jpg" alt="s1" />
+                  </div>
+                  <div class="blog-section__title">Образ жизни</div>
+                </button>
+              </div>
+            </div>
+            <div class="search-result results hidden">
+              <div class="search-result__title">Найдено: 11</div>
+              <div class="search-result__content">
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии, которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date with-tooltip">
+                        1 ноя 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии, которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date with-tooltip">
+                        1 ноя 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии, которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date with-tooltip">
+                        1 ноя 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии, которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date with-tooltip">
+                        1 ноя 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии, которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date with-tooltip">
+                        1 ноя 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии, которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date with-tooltip">
+                        1 ноя 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_1.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии, которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date with-tooltip">
+                        1 ноя 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_3.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Сделке быть! Пошаговая инструкция по покупке квартиры от А до Я
+                    </div>
+                    <div class="article-preview__other-info with-tooltip">
+                      <span class="article-preview__post-date">
+                        29 окт 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="article-preview__mini">
+                  <div class="article-preview__image">
+                    <img src="./img/article_2.png" alt="img" />
+                  </div>
+                  <div class="article-preview__content">
+                    <div class="article-preview__title">
+                      Как торговаться при покупке недвижимости: стратегии, которые работают
+                    </div>
+                    <div class="article-preview__other-info">
+                      <span class="article-preview__post-date with-tooltip">
+                        1 ноя 2025
+                        <span class="tooltip">Дата публикации</span>
+                      </span>
+                      <span class="article-preview__views with-tooltip">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#views"></use>
+                        </svg>
+                        15К
+                        <span class="tooltip">Количество просмотров</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <ol class="breadcrumb">
           <li class="small">
