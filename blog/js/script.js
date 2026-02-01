@@ -279,9 +279,16 @@ class Catalog {
   };
 
   // Event Listenet for clicks
-  handlePick = (btns, selector) => {
+  handlePick = (btns, selector, impassableLevel = null) => {
     btns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
+        if (e.target.tagName === "A" || e.target.closest("a")) {
+          return;
+        }
+        if (this.level === impassableLevel) {
+          return;
+        }
+
         const id = e.target.closest(selector).dataset.id;
         this.onPick(id);
       });
@@ -429,13 +436,23 @@ class Catalog {
   // Run class
   init = () => {
     this.controls();
-    this.handlePick(this.btns, ".js-catalog-category-switch-section-btn");
-    this.handlePick(this.subBtns, ".js-catalog-category-switch-subsection-btn");
+    this.handlePick(this.btns, ".js-catalog-category-switch-section-btn", 2);
+    this.handlePick(
+      this.subBtns,
+      ".js-catalog-category-switch-subsection-btn",
+      this.isMobile ? 3 : 1,
+    );
     this.handleBack();
 
     // default values
     this.ids = ["news", ""];
     this.onPick("news");
+
+    if (this.isMobile) {
+      this.level = 1;
+      this.ids = [];
+      this.levelControl();
+    }
   };
 }
 

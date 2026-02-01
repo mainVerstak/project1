@@ -2923,6 +2923,7 @@ $color-blog-subscribe: #dfe9e0;
           &[data-level="3"] {
             .catalog-content {
               border-top: none;
+              gap: 0;
             }
             .catalog-content__section-articles {
               border-top: 1px solid $color-secondary;

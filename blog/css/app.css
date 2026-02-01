@@ -8231,6 +8231,7 @@ footer {
 @media (max-width: 991px) {
   .blog__modal-catalog .modal-dialog .modal-content .modal-body[data-level="3"] .catalog-content {
     border-top: none;
+    gap: 0;
   }
   .blog__modal-catalog .modal-dialog .modal-content .modal-body[data-level="3"] .catalog-content__section-articles {
     border-top: 1px solid #e6eff9;
