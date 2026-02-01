@@ -1808,7 +1808,6 @@ $color-blog-subscribe: #dfe9e0;
           display: flex;
           justify-content: center;
           align-items: center;
-          aspect-ratio: unset;
         }
 
         img {
@@ -1818,7 +1817,7 @@ $color-blog-subscribe: #dfe9e0;
 
           &:not(.loaded) {
             width: 10%;
-            height: 10%;
+            object-fit: contain;
           }
         }
       }

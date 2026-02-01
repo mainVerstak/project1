@@ -7245,7 +7245,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: unset;
 }
 .blog article .photo div img {
   width: 100%;
@@ -7254,7 +7253,7 @@ footer {
 }
 .blog article .photo div img:not(.loaded) {
   width: 10%;
-  height: 10%;
+  object-fit: contain;
 }
 .blog article .photo p {
   font-weight: 400;

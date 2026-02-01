@@ -241,6 +241,62 @@
         </div>
         <!-- End tapbar -->
 
+        <!-- Раздел "Популярные" -->
+        <div class="blog__header blog__header-category">
+          <div class="blog__header-bg">
+            <img src="../img/main/pop_cover.jpg" alt="header" />
+          </div>
+          <div class="blog__header-title-container">
+            <h1 class="blog__header_title-title">Популярные</h1>
+            <div class="blog__header_title-info">
+              <span>Cтатей: 123 </span>
+              <span>
+                <svg class="icon-default">
+                  <use xlink:href="../img/icons.svg#views"></use>
+                </svg>
+                15К
+              </span>
+              <span>
+                <svg class="icon-default">
+                  <use xlink:href="../img/icons.svg#comment"></use>
+                </svg>
+                124
+              </span>
+            </div>
+          </div>
+          <div class="live-search">
+            <form action="" id="blog_live_search">
+              <div class="form-group search-input">
+                <svg class="icon-default search-icon">
+                  <use xlink:href="../img/icons.svg#search"></use>
+                </svg>
+                <input
+                  type="text"
+                  id="live_search_input"
+                  class="form-control"
+                  placeholder="Поиск по статьям"
+                  onclick="showSearchResult()"
+                />
+                <button
+                  type="button"
+                  class="btn btn-default clear-input view"
+                  onclick="hideSearchReasult()"
+                >
+                  <svg class="icon-default">
+                    <use xlink:href="../img/icons.svg#cross"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- Здесь должен быть live-search__results -->
+        </div>
+
+        <!-- Разделитель для того чтобы не слипались 
+          <br /> Убрать в реальной верстке 
+        -->
+        <br />
+
         <!-- Раздел "Новости" -->
         <div class="blog__header blog__header-category">
           <div class="blog__header-bg">
@@ -852,6 +908,14 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
+              <div class="swiper-slide">
+                <a href="#" class="blog-section">
+                  <div class="blog-section__image">
+                    <img src="../img/main/pop.jpg" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">Популярные</div>
+                </a>
+              </div>
               <div class="swiper-slide">
                 <a href="#" class="blog-section">
                   <div class="blog-section__image">
