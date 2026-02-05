@@ -28,6 +28,17 @@ $color-blog-subscribe: #dfe9e0;
       color: $color-primary-hover;
     }
   }
+  a.btn {
+    &.btn-default {
+      color: $color-dark;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    &.btn-primary {
+      color: #fff;
+    }
+  }
 
   blockquote {
     padding: 0;
@@ -1273,7 +1284,6 @@ $color-blog-subscribe: #dfe9e0;
       display: flex;
       flex-direction: column;
       height: 100%;
-      margin-bottom: 65px;
     }
 
     .section-pop {
@@ -1905,6 +1915,10 @@ $color-blog-subscribe: #dfe9e0;
       + ol {
         margin-top: 15px;
       }
+    }
+
+    span.strong {
+      font-weight: 700;
     }
 
     ul {
