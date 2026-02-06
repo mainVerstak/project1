@@ -1983,11 +1983,9 @@ $color-blog-subscribe: #dfe9e0;
       }
     }
     ol {
-      &:has(li:only-child) {
-        padding-left: 0;
-      }
       li:only-child {
         list-style: none;
+        margin-left: -26px;
       }
     }
 

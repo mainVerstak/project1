@@ -7405,11 +7405,9 @@ footer {
 .blog article ol:not(.breadcrumb) li {
   margin-bottom: 5px;
 }
-.blog article ol:has(li:only-child) {
-  padding-left: 0;
-}
 .blog article ol li:only-child {
   list-style: none;
+  margin-left: -26px;
 }
 .blog article table {
   table-layout: fixed;
