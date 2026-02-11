@@ -40,6 +40,23 @@ $color-blog-subscribe: #dfe9e0;
     }
   }
 
+  .breadcrumb {
+    li.disabled {
+      a {
+        color: $color-disabled;
+        cursor: auto;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $color-disabled;
+          background-color: transparent;
+          outline: none;
+        }
+      }
+    }
+  }
+
   blockquote {
     padding: 0;
     margin: 0;
@@ -2526,6 +2543,10 @@ $color-blog-subscribe: #dfe9e0;
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 30px;
+
+    &:has(div:only-child) {
+      display: flex;
+    }
 
     @media (max-width: 767px) {
       display: flex;
