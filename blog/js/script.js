@@ -585,7 +585,6 @@ function getElementDocumentPosition(element) {
 const srcs = [];
 document.querySelectorAll(".article-preview__image img").forEach((img, index) => {
   srcs[index] = img.src;
-  img.classList.add("lazy");
   img.src = "img/loading.gif";
   setTimeout(() => {
     img.src = srcs[index];
