@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -24,6 +24,13 @@
 
     <script src="../js/bootstrap.js"></script>
     <script defer src="../js/script.js"></script>
+    <style type="text/css">
+      /* Не копировать к себе */
+      :root {
+        --swiper-navigation-size: null;
+        --loading-image: url("../img/loading.gif");
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -701,73 +708,175 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button
-              class="close"
-              data-dismiss="modal"
-              type="button"
-              onclick="_hideModal('catalog_themes')"
-            >
+            <button class="close" data-dismiss="modal" type="button" onclick="hideCatalog()">
               <span aria-hidden="true">
                 <svg class="icon-default">
-                  <use xlink:href="../img/icons.svg#cross"></use>
+                  <use xlink:href="./img/icons.svg#cross"></use>
                 </svg>
               </span>
               <span class="sr-only">Закрыть</span>
             </button>
+            <button class="btn btn-default back js-catalog-category-switch-back">
+              <svg class="icon-default">
+                <use xlink:href="./img/icons.svg#chevron-l"></use>
+              </svg>
+            </button>
             <h4 class="modal-title">Каталог тем</h4>
           </div>
-          <div class="modal-body">
+          <div class="modal-body js-catalog-category-switch-modal-body" data-level="1">
             <div class="catalog-sidebar">
-              <button href="#" class="blog-section">
+              <button class="blog-section js-catalog-category-switch-section-btn" data-id="popular">
                 <div class="blog-section__image">
-                  <img src="../img/news/news.jpg" alt="s3" />
+                  <img src="./img/main/pop.jpg" alt="s3" />
                 </div>
-                <div class="blog-section__title">Новости</div>
+                <div class="blog-section__title">
+                  Популярное
+                  <span>Изучить тему</span>
+                  <a href="#" class="btn btn-default blog-section__title-link">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </div>
               </button>
-              <button href="#" class="blog-section">
+              <button class="blog-section js-catalog-category-switch-section-btn" data-id="news">
                 <div class="blog-section__image">
-                  <img src="../img/estate/realty.jpg" alt="s3" />
+                  <img src="./img/news/news.jpg" alt="s3" />
                 </div>
-                <div class="blog-section__title">Недвижимость</div>
+                <div class="blog-section__title">
+                  Новости
+                  <span>Изучить тему</span>
+                  <a href="#" class="btn btn-default blog-section__title-link">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </div>
               </button>
-              <button href="#" class="blog-section">
+              <button class="blog-section js-catalog-category-switch-section-btn" data-id="estate">
                 <div class="blog-section__image">
-                  <img src="../img/rent/rent.jpg" alt="s3" />
+                  <img src="./img/estate/realty.jpg" alt="s3" />
                 </div>
-                <div class="blog-section__title">Аренда</div>
+                <div class="blog-section__title">
+                  Недвижимость
+                  <span>Изучить тему</span>
+                  <a href="#" class="btn btn-default blog-section__title-link">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </div>
               </button>
-              <button class="blog-section">
+              <button class="blog-section js-catalog-category-switch-section-btn" data-id="rent">
                 <div class="blog-section__image">
-                  <img src="../img/contryside-estate/suburban_estate.jpg" alt="s2" />
+                  <img src="./img/rent/rent.jpg" alt="s3" />
                 </div>
-                <div class="blog-section__title">Загородная недвижимость</div>
+                <div class="blog-section__title">
+                  Аренда
+                  <span>Изучить тему</span>
+                  <a href="#" class="btn btn-default blog-section__title-link">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </div>
               </button>
-              <button class="blog-section">
+              <button class="blog-section js-catalog-category-switch-section-btn" data-id="village">
                 <div class="blog-section__image">
-                  <img src="../img/finance-and-invest/finance-invest.jpg" alt="s2" />
+                  <img src="./img/contryside-estate/suburban_estate.jpg" alt="s2" />
                 </div>
-                <div class="blog-section__title">Финансы и инвестиции</div>
+                <div class="blog-section__title">
+                  Загородная недвижимость
+                  <span>Изучить тему</span>
+                  <a href="#" class="btn btn-default blog-section__title-link">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </div>
               </button>
-              <button class="blog-section">
+              <button class="blog-section js-catalog-category-switch-section-btn" data-id="invest">
                 <div class="blog-section__image">
-                  <img src="../img/design-and-repair/design.png" alt="s2" />
+                  <img src="./img/finance-and-invest/finance-invest.jpg" alt="s2" />
                 </div>
-                <div class="blog-section__title">Дизайн и ремонт</div>
+                <div class="blog-section__title">
+                  Финансы и инвестиции
+                  <span>Изучить тему</span>
+                  <a href="#" class="btn btn-default blog-section__title-link">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </div>
               </button>
-              <button class="blog-section">
+              <button class="blog-section js-catalog-category-switch-section-btn" data-id="repair">
                 <div class="blog-section__image">
-                  <img src="../img/life-style/lifestyle.jpg" alt="s1" />
+                  <img src="./img/design-and-repair/design.png" alt="s2" />
                 </div>
-                <div class="blog-section__title">Образ жизни</div>
+                <div class="blog-section__title">
+                  Дизайн и ремонт
+                  <span>Изучить тему</span>
+                  <a href="#" class="btn btn-default blog-section__title-link">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </div>
+              </button>
+              <button
+                class="blog-section js-catalog-category-switch-section-btn"
+                data-id="lifeStyle"
+              >
+                <div class="blog-section__image">
+                  <img src="./img/life-style/lifestyle.jpg" alt="s1" />
+                </div>
+                <div class="blog-section__title">
+                  Образ жизни
+                  <span>Изучить тему</span>
+                  <a href="#" class="btn btn-default blog-section__title-link">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#chevron-r"></use>
+                    </svg>
+                  </a>
+                </div>
               </button>
             </div>
-            <div class="catalog-content">
+            <div class="catalog-content js-catalog-category-switch-section-inner" data-id="popular">
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="popular"
+              >
+                Ещё по теме
+              </div>
+
               <div class="catalog-content__section">
-                <div class="blog-section">
-                  <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Новости рынка недвижимости</div>
-                </div>
-                <div class="catalog-content__section-articles">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="now"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/main/now.jpg" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">
+                    Сейчас читают
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="now"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="now"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>
@@ -781,11 +890,1053 @@
                 </div>
               </div>
               <div class="catalog-content__section">
-                <div class="blog-section">
-                  <div class="blog-section__image"></div>
-                  <div class="blog-section__title">Образ жизни</div>
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="last"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/main/last.jpg" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">
+                    Последние
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="last"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="last"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
                 </div>
-                <div class="catalog-content__section-articles">
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="all"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/main/all.jpg" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">
+                    Все статьи
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="all"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="all"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-content js-catalog-category-switch-section-inner" data-id="news">
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="news"
+              >
+                Ещё по теме
+              </div>
+
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="news_market"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/news/news-estate.jpg" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">
+                    Новости рынка недвижимости
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="news_market"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="finn_news"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/news/finn_news.jpg" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">
+                    Финансовые новости
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="finn_news"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="finn_news"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-content js-catalog-category-switch-section-inner" data-id="estate">
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="estate"
+              >
+                Ещё по теме
+              </div>
+
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="new_estate"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/estate/new.jpg" alt="s3" />
+                  </div>
+                  <div class="blog-section__title">
+                    Новостройки
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="new_estate"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="old_estate"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/estate/secondary.jpg" alt="secondary" />
+                  </div>
+                  <div class="blog-section__title">
+                    Вторичная недвижимость
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="old_estate"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="commercial"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/estate/comm.jpg" alt="commercial" />
+                  </div>
+                  <div class="blog-section__title">
+                    Коммерческая недвижимость
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="commercial"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="foregion"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/estate/foreign.jpg" alt="foreign" />
+                  </div>
+                  <div class="blog-section__title">
+                    Зарубежная недвижимость
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="foregion"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-content js-catalog-category-switch-section-inner" data-id="rent">
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="rent"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="rentEstate"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/rent/rent-estate.jpg" alt="rent estate" />
+                  </div>
+                  <div class="blog-section__title">
+                    Аренда недвижимости
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="rentEstate"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="rent"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="daily"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/rent/daily.jpg" alt="daily" />
+                  </div>
+                  <div class="blog-section__title">
+                    Посуточная аренда недвижимости
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="daily"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="rent"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="suburban"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/rent/suburban.jpg" alt="suburban" />
+                  </div>
+                  <div class="blog-section__title">
+                    Загородная аренда
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="daily"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="rent"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="suurbanDaily"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/rent/suburban-daily.jpg" alt="syburban daily" />
+                  </div>
+                  <div class="blog-section__title">
+                    Посуточная загородная
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="suburbanDaily"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="rent"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-content js-catalog-category-switch-section-inner" data-id="village">
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="village"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="cottage"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/contryside-estate/cottage.jpg" alt="cottage" />
+                  </div>
+                  <div class="blog-section__title">
+                    Загородная: Дом, дача, участок
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="cottage"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="village"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="bulding"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/contryside-estate/bulding.jpg" alt="" />
+                  </div>
+                  <div class="blog-section__title">
+                    Строим дом
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="bulding"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="village"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-content js-catalog-category-switch-section-inner" data-id="invest">
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="invest"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="mortgage"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/finance-and-invest/mortgage.jpg" alt="mortgage" />
+                  </div>
+                  <div class="blog-section__title">
+                    Ипотека
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="mortgage"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="invest"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="credit"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/finance-and-invest/credit.jpg" alt="credit" />
+                  </div>
+                  <div class="blog-section__title">
+                    Кредиты
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="credit"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="invest"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="investments"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/finance-and-invest/invest.jpg" alt="invest" />
+                  </div>
+                  <div class="blog-section__title">
+                    Инвестиции
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="investments"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="news_market"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="capital"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/finance-and-invest/capital.jpg" alt="" />
+                  </div>
+                  <div class="blog-section__title">
+                    Накопления
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="capital"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="invest"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="insurance"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/finance-and-invest/Insurance.jpg" alt="insurance" />
+                  </div>
+                  <div class="blog-section__title">
+                    Страхование
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="insurance"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="invest"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="analytics"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/finance-and-invest/analytics.jpg" alt="analytics" />
+                  </div>
+                  <div class="blog-section__title">
+                    Аналитика
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="analytics"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="invest"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-content js-catalog-category-switch-section-inner" data-id="repair">
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="repair"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="design"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/design-and-repair/design.png" alt="design" />
+                  </div>
+                  <div class="blog-section__title">
+                    Дизайн и ремонт
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="design"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="repair"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="catalog-content js-catalog-category-switch-section-inner"
+              data-id="lifeStyle"
+            >
+              <div
+                class="catalog-content-view_more-message js-catalog-category-switch-section-more-message"
+                data-id="lifeStyle"
+              >
+                Ещё по теме
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="cityLife"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/life-style/city-life.jpg" alt="city life" />
+                  </div>
+                  <div class="blog-section__title">
+                    Жизнь города
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="cityLife"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="lifeStyle"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="fun"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/life-style/fun.jpg" alt="fun" />
+                  </div>
+                  <div class="blog-section__title">
+                    Развлечения
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="fun"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="lifeStyle"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="guides"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/life-style/guides.jpg" alt="guides" />
+                  </div>
+                  <div class="blog-section__title">
+                    Гайды
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="guides"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="lifeStyle"
+                  >
+                    Ещё по теме
+                  </div>
+                  <a href="#" class="catalog-content__section-article">
+                    Ключевая ставка ЦБ и ипотека
+                  </a>
+                  <a href="#" class="catalog-content__section-article"> Госпрограммы поддержки </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Изменения в законодательстве
+                  </a>
+                  <a href="#" class="catalog-content__section-article">
+                    Бюджетная и фискальная политика
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-content__section">
+                <button
+                  class="blog-section js-catalog-category-switch-subsection-btn"
+                  data-id="howItWorks"
+                >
+                  <div class="blog-section__image">
+                    <img src="./img/life-style/how.jpg" alt="how" />
+                  </div>
+                  <div class="blog-section__title">
+                    Как это работает
+                    <span>Изучить тему</span>
+                    <a href="#" class="btn btn-default blog-section__title-link">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </button>
+                <div
+                  class="catalog-content__section-articles js-catalog-category-switch-subsection-inner"
+                  data-id="howItWorks"
+                >
+                  <div
+                    class="catalog-content-view_more-message js-catalog-category-switch-subsection-more-message"
+                    data-id="lifeStyle"
+                  >
+                    Ещё по теме
+                  </div>
                   <a href="#" class="catalog-content__section-article">
                     Ключевая ставка ЦБ и ипотека
                   </a>

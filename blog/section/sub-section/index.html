@@ -28,6 +28,7 @@
       /* Не копировать к себе */
       :root {
         --swiper-navigation-size: null;
+        --loading-image: url("../img/loading.gif");
       }
     </style>
   </head>
@@ -3263,7 +3264,7 @@
               class="close"
               data-dismiss="modal"
               type="button"
-              onclick="_hideModal('catalog_themes')"
+              onclick="hideCatalog()"
             >
               <span aria-hidden="true">
                 <svg class="icon-default">

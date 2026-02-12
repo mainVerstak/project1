@@ -2718,14 +2718,3 @@ li.nav-tabs-dropdown {
     }
   }
 }
-
-// Lazy loading images
-div:has(> .blog-lazy:not(.loaded)) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-img.blog-lazy:not(.loaded) {
-  max-width: 35px !important;
-  object-fit: contain !important;
-}

@@ -28,6 +28,7 @@
       /* Не копировать к себе */
       :root {
         --swiper-navigation-size: null;
+        --loading-image: url("../img/loading.gif");
       }
       /* На дэв эти стили добавляются ИНЛАЙН */
       /* Копировать не нужно !!! */
@@ -2358,12 +2359,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button
-              class="close"
-              data-dismiss="modal"
-              type="button"
-              onclick="_hideModal('catalog_themes')"
-            >
+            <button class="close" data-dismiss="modal" type="button" onclick="hideCatalog()">
               <span aria-hidden="true">
                 <svg class="icon-default">
                   <use xlink:href="../../img/icons.svg#cross"></use>

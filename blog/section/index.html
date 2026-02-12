@@ -28,6 +28,7 @@
       /* Не копировать к себе */
       :root {
         --swiper-navigation-size: null;
+        --loading-image: url("../img/loading.gif");
       }
     </style>
   </head>
@@ -247,7 +248,7 @@
             <img src="../img/main/pop_cover.jpg" alt="header" />
           </div>
           <div class="blog__header-title-container">
-            <h1 class="blog__header_title-title">Популярные</h1>
+            <a href="#" class="blog__header_title-title">Популярные</a>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
               <span>
@@ -303,7 +304,7 @@
             <img src="../img/news/news_cover.jpg" alt="header" />
           </div>
           <div class="blog__header-title-container">
-            <h1 class="blog__header_title-title">Новости</h1>
+            <a href="#" class="blog__header_title-title">Новости</a>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
               <span>
@@ -568,7 +569,7 @@
             <img src="../img/estate/realty_cover.jpg" alt="header" />
           </div>
           <div class="blog__header-title-container">
-            <h1 class="blog__header_title-title">Недвижимость</h1>
+            <a href="#" class="blog__header_title-title">Недвижимость</a>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
               <span>
@@ -624,7 +625,7 @@
             <img src="../img/rent/rent_cover.jpg" alt="header" />
           </div>
           <div class="blog__header-title-container">
-            <h1 class="blog__header_title-title">Аренда</h1>
+            <a href="#" class="blog__header_title-title">Аренда</a>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
               <span>
@@ -680,7 +681,7 @@
             <img src="../img/contryside-estate/suburban_estate_cover.jpg" alt="header" />
           </div>
           <div class="blog__header-title-container">
-            <h1 class="blog__header_title-title">Загородная недвижимость</h1>
+            <a href="#" class="blog__header_title-title">Загородная недвижимость</a>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
               <span>
@@ -736,7 +737,7 @@
             <img src="../img/finance-and-invest/finance-invest_cover.jpg" alt="header" />
           </div>
           <div class="blog__header-title-container">
-            <h1 class="blog__header_title-title">Финансы и инвестиции</h1>
+            <a href="#" class="blog__header_title-title">Финансы и инвестиции</a>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
               <span>
@@ -792,7 +793,7 @@
             <img src="../img/design-and-repair/design_cover.jpg" alt="header" />
           </div>
           <div class="blog__header-title-container">
-            <h1 class="blog__header_title-title">Дизайн и ремонт</h1>
+            <a href="#" class="blog__header_title-title">Дизайн и ремонт</a>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
               <span>
@@ -848,7 +849,7 @@
             <img src="../img/life-style/lifestyle_cover.jpg" alt="header" />
           </div>
           <div class="blog__header-title-container">
-            <h1 class="blog__header_title-title">Образ жизни</h1>
+            <a href="#" class="blog__header_title-title">Образ жизни</a>
             <div class="blog__header_title-info">
               <span>Cтатей: 123 </span>
               <span>
@@ -2301,12 +2302,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button
-              class="close"
-              data-dismiss="modal"
-              type="button"
-              onclick="_hideModal('catalog_themes')"
-            >
+            <button class="close" data-dismiss="modal" type="button" onclick="hideCatalog()">
               <span aria-hidden="true">
                 <svg class="icon-default">
                   <use xlink:href="../img/icons.svg#cross"></use>

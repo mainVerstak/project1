@@ -6,6 +6,7 @@ class ActiveTapbarButtonSwitcher {
 
   // запуск
   run() {
+    this.checkRoute();
     this.buttons.forEach((btn) =>
       btn.addEventListener("click", (e) => {
         this.on(e.target.closest(".tapbar__item").dataset.id);
@@ -26,6 +27,23 @@ class ActiveTapbarButtonSwitcher {
     this.buttons.forEach((btn) => {
       btn.classList.remove("active");
     });
+  }
+
+  checkRoute() {
+    /* 
+      Для переключения 
+      Если на главной то ставим ее активной !!! у вас "/neuro" || "/neuro/"
+      Если не главная выключаем все
+    */
+    if (
+      window.location.pathname === "/blog/index.html" ||
+      window.location.pathname === "/blog/" ||
+      window.location.pathname === "/blog"
+    ) {
+      this.on("new");
+    } else {
+      this.off();
+    }
   }
 }
 
@@ -63,6 +81,13 @@ function _hideModal(id) {
   offBackdrop();
 }
 
+// Для закрытия каталога
+function hideCatalog() {
+  switchTapbar.checkRoute();
+  _hideModal("catalog_themes");
+}
+
+// Поиск
 function showSearchResult() {
   const container = document.querySelector(".live-search__results");
   if (!container) return;
@@ -78,7 +103,7 @@ function hideSearchReasult() {
   container.classList.remove("in");
   offBackdrop();
   clearSearch();
-  switchTapbar.on("new");
+  switchTapbar.checkRoute();
 }
 
 function openMobileSearch() {
@@ -582,12 +607,36 @@ function getElementDocumentPosition(element) {
 }
 
 // for imitate lazy load for images
-const srcs = [];
-document.querySelectorAll(".article-preview__image img").forEach((img, index) => {
-  srcs[index] = img.src;
-  img.src = "img/loading.gif";
-  setTimeout(() => {
-    img.src = srcs[index];
-    img.classList.add("loaded");
-  }, 5000);
-});
+function lazyLoadImages(selector, srcs = []) {
+  document.querySelectorAll(selector).forEach((img, index) => {
+    srcs[index] = img.src;
+
+    // вычисляю путь к картинке чтобы у меня работало на всех старницах а не только на главной
+    const preloaderPath = `${window.location.origin}/${window.location.host === "mainverstak.github.io" ? "project1/" : ""}blog/img/loading.gif`;
+
+    img.src = preloaderPath;
+    setTimeout(() => {
+      img.src = srcs[index];
+      img.classList.add("loaded");
+    }, 5000);
+  });
+}
+
+// imitate lazy load for images NEW
+function newLazy(wrapperSelector) {
+  document.querySelectorAll(wrapperSelector).forEach((wrapper) => {
+    const img = wrapper.querySelector("img");
+    img.classList.add("hidden");
+    wrapper.classList.add("loading");
+
+    setTimeout(() => {
+      img.classList.remove("hidden");
+      wrapper.classList.remove("loading");
+    }, 5000);
+  });
+}
+
+newLazy(".article-preview__image");
+newLazy(".blog__author-thubnail");
+newLazy(".blog_author__card-thumblail");
+newLazy(".photo div");
