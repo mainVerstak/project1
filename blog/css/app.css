@@ -8309,6 +8309,16 @@ footer {
     display: block;
   }
 }
+@media (max-width: 991px) and (hover: none) {
+  .blog__modal-catalog .modal-dialog .modal-content .modal-header .back:hover {
+    background-color: transparent;
+    color: #242a3e;
+    border-color: #e6eff9;
+  }
+  .blog__modal-catalog .modal-dialog .modal-content .modal-header .back:active, .blog__modal-catalog .modal-dialog .modal-content .modal-header .back:focus {
+    background-color: #e6eff9;
+  }
+}
 .blog__modal-catalog .modal-dialog .modal-content .modal-header .modal-title {
   margin-left: 15px;
   margin-top: 10px;
@@ -8357,6 +8367,18 @@ footer {
     width: 100%;
     text-align: left;
   }
+}
+@media (max-width: 991px) and (hover: none) {
+  .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section:hover .blog-section__title {
+    background-color: transparent;
+    color: #242a3e;
+  }
+  .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section:active .blog-section__title, .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section:focus .blog-section__title {
+    background-color: #e6eff9;
+    color: #084c95;
+  }
+}
+@media (max-width: 991px) {
   .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title {
     display: flex;
     flex-direction: column;
@@ -8368,9 +8390,18 @@ footer {
     background-color: #fff;
     height: 44px;
   }
-  .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title:hover, .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title:active {
+}
+@media (max-width: 991px) and (hover: hover) {
+  .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title:hover, .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title:focus, .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title:active {
     background-color: #e6eff9;
   }
+}
+@media (max-width: 991px) and (hover: none) {
+  .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title:active, .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title:focus {
+    background-color: #e6eff9;
+  }
+}
+@media (max-width: 991px) {
   .blog__modal-catalog .modal-dialog .modal-content .modal-body .blog-section.active .blog-section__title span {
     display: block;
     font-weight: 400;

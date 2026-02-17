@@ -3040,6 +3040,18 @@ $color-blog-subscribe: #dfe9e0;
 
           @media (max-width: 991px) {
             display: block;
+
+            @media (hover: none) {
+              &:hover {
+                background-color: transparent;
+                color: $color-dark;
+                border-color: $color-secondary;
+              }
+              &:active,
+              &:focus {
+                background-color: $color-secondary;
+              }
+            }
           }
         }
 
@@ -3095,6 +3107,22 @@ $color-blog-subscribe: #dfe9e0;
               text-align: left;
             }
 
+            @media (hover: none) {
+              &:hover {
+                .blog-section__title {
+                  background-color: transparent;
+                  color: $color-dark;
+                }
+              }
+              &:active,
+              &:focus {
+                .blog-section__title {
+                  background-color: $color-secondary;
+                  color: $color-primary;
+                }
+              }
+            }
+
             &.active {
               .blog-section__title {
                 display: flex;
@@ -3107,9 +3135,19 @@ $color-blog-subscribe: #dfe9e0;
                 background-color: #fff;
                 height: 44px;
 
-                &:hover,
-                &:active {
-                  background-color: $color-secondary;
+                @media (hover: hover) {
+                  &:hover,
+                  &:focus,
+                  &:active {
+                    background-color: $color-secondary;
+                  }
+                }
+
+                @media (hover: none) {
+                  &:active,
+                  &:focus {
+                    background-color: $color-secondary;
+                  }
                 }
 
                 span {
