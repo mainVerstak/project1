@@ -6571,7 +6571,8 @@ footer {
   padding: 15px 0 15px 15px;
   border-radius: 10px;
 }
-.blog .blog__header-category .blog__header-title-container .blog__header_title-title {
+.blog .blog__header-category .blog__header-title-container .blog__header_title-title,
+.blog .blog__header-category .blog__header-title-container .blog__header_title-title h1 {
   color: #fff;
   font-weight: 700;
   font-size: 20px;

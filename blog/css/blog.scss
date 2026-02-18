@@ -1090,7 +1090,8 @@ $color-blog-subscribe: #dfe9e0;
       padding: 15px 0 15px 15px;
       border-radius: 10px;
 
-      .blog__header_title-title {
+      .blog__header_title-title,
+      .blog__header_title-title h1 {
         color: #fff;
         font-weight: 700;
         font-size: 20px;
