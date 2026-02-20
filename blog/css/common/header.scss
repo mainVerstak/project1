@@ -723,10 +723,27 @@ header .navbar.navbar-default {
     margin-left: auto;
     width: fit-content;
 
-    &:hover {
-      background-color: $color-secondary;
-      border-color: $color-secondary;
-      color: $color-primary;
+    @media (hover: hover) {
+      &:hover,
+      &:active {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+        color: $color-primary;
+      }
+    }
+
+    @media (hover: none) {
+      &:hover {
+        background-color: $color-white;
+        border-color: $color-secondary;
+        color: $color-primary;
+      }
+      &:active,
+      &:focus {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+        color: $color-primary;
+      }
     }
 
     @media (max-width: 767px) {

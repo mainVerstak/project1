@@ -4623,10 +4623,24 @@ header .navbar.navbar-default .header-blog-link {
   margin-left: auto;
   width: fit-content;
 }
-header .navbar.navbar-default .header-blog-link:hover {
-  background-color: #e6eff9;
-  border-color: #e6eff9;
-  color: #084c95;
+@media (hover: hover) {
+  header .navbar.navbar-default .header-blog-link:hover, header .navbar.navbar-default .header-blog-link:active {
+    background-color: #e6eff9;
+    border-color: #e6eff9;
+    color: #084c95;
+  }
+}
+@media (hover: none) {
+  header .navbar.navbar-default .header-blog-link:hover {
+    background-color: #ffffff;
+    border-color: #e6eff9;
+    color: #084c95;
+  }
+  header .navbar.navbar-default .header-blog-link:active, header .navbar.navbar-default .header-blog-link:focus {
+    background-color: #e6eff9;
+    border-color: #e6eff9;
+    color: #084c95;
+  }
 }
 @media (max-width: 767px) {
   header .navbar.navbar-default .header-blog-link {
