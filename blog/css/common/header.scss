@@ -723,8 +723,14 @@ header .navbar.navbar-default {
     margin-left: auto;
     width: fit-content;
 
+    &:hover {
+      background-color: $color-secondary;
+      border-color: $color-secondary;
+      color: $color-primary;
+    }
+
     @media (max-width: 767px) {
-      margin-right: 61px;
+      transform: translateX(-3px);
     }
 
     @media (min-width: 768px) {
