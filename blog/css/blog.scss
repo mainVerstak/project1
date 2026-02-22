@@ -74,7 +74,8 @@ $color-blog-subscribe: #dfe9e0;
     display: none !important;
   }
 
-  .loading {
+  .loading > div:has(img),
+  .loading:has(> img) {
     position: relative;
 
     &::before {
