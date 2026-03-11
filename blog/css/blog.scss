@@ -2361,6 +2361,21 @@ $color-blog-subscribe: #dfe9e0;
     ol {
       margin-bottom: 0;
     }
+
+    blockquote {
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: none;
+
+      &::after {
+        content: none;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .blog_article__tg {
