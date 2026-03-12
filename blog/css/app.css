@@ -8308,6 +8308,18 @@ footer {
   font-size: 16px;
   line-height: 150%;
 }
+.blog blockquote:has(.blog__attention) {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+.blog blockquote:has(.blog__attention)::after {
+  content: none;
+}
+.blog blockquote:has(.blog__attention) p {
+  margin-bottom: 0;
+}
 
 .badge,
 .btn .badge {

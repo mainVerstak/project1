@@ -3000,6 +3000,21 @@ $color-blog-subscribe: #dfe9e0;
       font-size: 16px;
       line-height: 150%;
     }
+
+    &:has(.blog__attention) {
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: none;
+
+      &::after {
+        content: none;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
