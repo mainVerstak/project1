@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -242,7 +242,13 @@
           <div style="width: 100%">Модалки</div>
           <button class="btn" onclick="showModal('form_code_call_modal')">code call</button>
           <button class="btn" onclick="showModal('form_unauth_modal')">unauth</button>
-          <button class="btn" onclick="showModal('form_code_sms_modal'); startCountdown()">
+          <button
+            class="btn"
+            onclick="
+              showModal('form_code_sms_modal');
+              startCountdown();
+            "
+          >
             sms code
           </button>
           <button class="btn" onclick="showModal('form_guests_modal')">guests</button>
@@ -950,7 +956,7 @@
                           <div
                             class="fotorama__background"
                             style="
-                              background: url('https://i4.olan.ru/system/photos/entity/001/248/006/227/medium/img.jpg?1729595132')
+                              background: url(&quot;https://i4.olan.ru/system/photos/entity/001/248/006/227/medium/img.jpg?1729595132&quot;)
                                 50% 50% / cover no-repeat;
                             "
                           >
@@ -969,7 +975,7 @@
                           <div
                             class="fotorama__background"
                             style="
-                              background: url('https://i.olan.ru/system/photos/entity/001/248/006/599/medium/img.jpg?1729595155')
+                              background: url(&quot;https://i.olan.ru/system/photos/entity/001/248/006/599/medium/img.jpg?1729595155&quot;)
                                 50% 50% / cover no-repeat;
                             "
                           >
@@ -1330,10 +1336,10 @@
                 setTimeout(() => {
                   $(".apartment-top-container .col-md-12.col-lg-5 .yandex_content").css(
                     "height",
-                    "700px"
+                    "700px",
                   );
                   resolve();
-                }, 1000)
+                }, 1000),
               );
             }
 
@@ -2053,6 +2059,85 @@
                       value="qrhZpulWdY8VEF9S5/yHX0R06FGyFe4oGXHQFYQ3JaFjArdF8qrUbVSCcjuAAf2iuEqRUsUQT/lorO3j6yUGUA=="
                     />
                   </form>
+                </div>
+              </li>
+              <!-- Секция с блогом -->
+              <li>
+                <div class="blog-section">
+                  <div class="section__title">
+                    <div class="section__header">
+                      <div class="section__header-icon">
+                        <img src="./img/articles.png" alt="art" />
+                      </div>
+                      <div class="section__header-title-container">
+                        <p class="section__header-subtitle">Сейчас читают</p>
+                        <h2 class="section__header-title">Статьи</h2>
+                      </div>
+                    </div>
+                    <a href="#" class="btn btn-default activated">Все статьи</a>
+                  </div>
+                  <div class="section__content alt_double">
+                    <a href="#" class="article-preview__under-img">
+                      <div class="article-preview__image">
+                        <img src="./img/article_6.png" alt="img" />
+                      </div>
+                      <div class="article-preview__content">
+                        <h5 class="article-preview__title">
+                          Аренда vs Покупка: что выгоднее в долгосрочной перспективе?
+                        </h5>
+                        <div class="article-preview__other-info">
+                          <span class="article-preview__post-date with-tooltip">
+                            1 ноя 2025
+                            <span class="tooltip">Дата публикации</span>
+                          </span>
+                          <span class="article-preview__post-time with-tooltip">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#wait"></use>
+                            </svg>
+                            5 мин
+                            <span class="tooltip">Количество просмотров</span>
+                          </span>
+                          <span class="article-preview__views with-tooltip">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#views"></use>
+                            </svg>
+                            15К
+                            <span class="tooltip">Количество просмотров</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="article-preview__under-img">
+                      <div class="article-preview__image">
+                        <img src="./img/article_7.png" alt="img" />
+                      </div>
+                      <div class="article-preview__content">
+                        <h5 class="article-preview__title">
+                          Продажа без посредников: реальная экономия или огромные риски?
+                        </h5>
+                        <div class="article-preview__other-info">
+                          <span class="article-preview__post-date with-tooltip">
+                            1 ноя 2025
+                            <span class="tooltip">Дата публикации</span>
+                          </span>
+                          <span class="article-preview__post-time with-tooltip">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#wait"></use>
+                            </svg>
+                            5 мин
+                            <span class="tooltip">Количество просмотров</span>
+                          </span>
+                          <span class="article-preview__views with-tooltip">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#views"></use>
+                            </svg>
+                            15К
+                            <span class="tooltip">Количество просмотров</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </li>
             </ul>
