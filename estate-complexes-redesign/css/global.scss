@@ -228,6 +228,10 @@ hr {
       }
     }
   }
+  &.well-max-width-500 {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 
 .well-sm {
@@ -535,9 +539,7 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 // Inputs
-.form-control:not(.bootstrap-select):not(.selectize-control):not(
-    .selectize-dropdown
-  ) {
+.form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown) {
   display: flex;
   gap: 10px;
   height: 44px;
@@ -629,9 +631,9 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 .has-error {
-  .form-control:not(.form-control-without-error):not(.bootstrap-select):not(
-      .selectize-control
-    ):not(.selectize-dropdown),
+  .form-control:not(.form-control-without-error):not(.bootstrap-select):not(.selectize-control):not(
+      .selectize-dropdown
+    ),
   .bootstrap-select .dropdown-toggle {
     border: 1px solid $color-invalid;
 
@@ -669,9 +671,9 @@ header .dropdown.nav .dropdown-menu.sub-menu .badge {
 }
 
 .has-success {
-  .form-control:not(.form-control-without-error):not(.bootstrap-select):not(
-      .selectize-control
-    ):not(.selectize-dropdown),
+  .form-control:not(.form-control-without-error):not(.bootstrap-select):not(.selectize-control):not(
+      .selectize-dropdown
+    ),
   .bootstrap-select .dropdown-toggle {
     border: 1px solid $color-valid;
 
@@ -736,13 +738,11 @@ textarea.form-control {
 }
 
 .input-group
-  .form-control:not(.bootstrap-select):not(.selectize-control):not(
-    .selectize-dropdown
-  ):first-child,
+  .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown):first-child,
 .input-group
-  .form-control:not(.bootstrap-select):not(.selectize-control):not(
-    .selectize-dropdown
-  ):not(:last-child),
+  .form-control:not(.bootstrap-select):not(.selectize-control):not(.selectize-dropdown):not(
+    :last-child
+  ),
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group > .btn,

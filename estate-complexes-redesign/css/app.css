@@ -203,6 +203,10 @@ hr {
     margin-top: -20px;
   }
 }
+.well.well-max-width-500 {
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 .well-sm {
   border-radius: 5px;
