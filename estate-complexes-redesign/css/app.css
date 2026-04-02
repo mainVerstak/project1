@@ -9898,8 +9898,11 @@ footer {
   color: #8c91a6;
 }
 
+li.media.clearfix.object:has(.blog-section) {
+  background-color: transparent;
+}
+
 .blog-section {
-  margin-top: 15px;
   margin-bottom: 40px;
 }
 .blog-section .section__title {

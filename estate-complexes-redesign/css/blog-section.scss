@@ -1,9 +1,12 @@
 $font-size-section-title: 20px;
 $font-size-section-subtitle: 14px;
 
+li.media.clearfix.object:has(.blog-section) {
+  background-color: transparent;
+}
+
 // section
 .blog-section {
-  margin-top: 15px;
   margin-bottom: 40px;
 
   .section__title {
