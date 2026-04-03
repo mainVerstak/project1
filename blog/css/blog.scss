@@ -17,12 +17,6 @@ $color-blog-subscribe: #dfe9e0;
 .blog {
   padding-bottom: 15px;
 
-  // Шрифты для соответствия дизайну блога
-  // Можно убрать, если глобально уже заданы
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
   a {
     color: $color-primary;
 

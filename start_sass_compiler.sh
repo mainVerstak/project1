@@ -11,3 +11,4 @@ fi
 
 echo "Run: sass --watch для $FILENAME.scss"
 sass --watch ./estate-complexes-redesign/css/$FILENAME.scss:./estate-complexes-redesign/css/$FILENAME.css
+# sass --watch ./blog/css/$FILENAME.scss:./blog/css/$FILENAME.css

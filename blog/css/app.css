@@ -5661,9 +5661,6 @@ footer {
 .blog {
   padding-bottom: 15px;
 }
-.blog * {
-  font-family: Arial, Helvetica, sans-serif;
-}
 .blog a {
   color: #084c95;
 }
