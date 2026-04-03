@@ -2722,21 +2722,21 @@ li.nav-tabs-dropdown {
 }
 
 // Height for blog section
-li.media.clearfix.object:has(.blog-section) {
+li.media.clearfix.object.blog-object {
   min-height: 362px;
-  &:has(.article-preview__under-img:only-child) {
+  &.blog-object-single {
     min-height: 196px;
   }
   @media (max-width: 991px) {
     min-height: 267px;
 
-    &:has(.article-preview__under-img:only-child) {
+    &.blog-object-single {
       min-height: 191px;
     }
   }
   @media (max-width: 767px) {
     min-height: 543px;
-    &:has(.article-preview__under-img:only-child) {
+    &.blog-object-single {
       min-height: 282px;
     }
   }

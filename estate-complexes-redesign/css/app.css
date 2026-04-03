@@ -2663,25 +2663,25 @@ li.nav-tabs-dropdown {
   font-size: 28px;
 }
 
-li.media.clearfix.object:has(.blog-section) {
+li.media.clearfix.object.blog-object {
   min-height: 362px;
 }
-li.media.clearfix.object:has(.blog-section):has(.article-preview__under-img:only-child) {
+li.media.clearfix.object.blog-object.blog-object-single {
   min-height: 196px;
 }
 @media (max-width: 991px) {
-  li.media.clearfix.object:has(.blog-section) {
+  li.media.clearfix.object.blog-object {
     min-height: 267px;
   }
-  li.media.clearfix.object:has(.blog-section):has(.article-preview__under-img:only-child) {
+  li.media.clearfix.object.blog-object.blog-object-single {
     min-height: 191px;
   }
 }
 @media (max-width: 767px) {
-  li.media.clearfix.object:has(.blog-section) {
+  li.media.clearfix.object.blog-object {
     min-height: 543px;
   }
-  li.media.clearfix.object:has(.blog-section):has(.article-preview__under-img:only-child) {
+  li.media.clearfix.object.blog-object.blog-object-single {
     min-height: 282px;
   }
 }
