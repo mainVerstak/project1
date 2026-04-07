@@ -2724,20 +2724,10 @@ li.nav-tabs-dropdown {
 // Height for blog section
 li.media.clearfix.object.blog-object {
   min-height: 362px;
-  &.blog-object-single {
-    min-height: 196px;
-  }
   @media (max-width: 991px) {
     min-height: 267px;
-
-    &.blog-object-single {
-      min-height: 191px;
-    }
   }
   @media (max-width: 767px) {
     min-height: 543px;
-    &.blog-object-single {
-      min-height: 282px;
-    }
   }
 }
