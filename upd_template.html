@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>УПД</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 24px;
+      background: #f3f3f3;
+      font-family: Arial, sans-serif;
+      font-size: 7.5px;
+      color: #000;
+    "
+  >
+    <div
+      style="
+        width: 1240px;
+        margin: 0 auto;
+        background: #fff;
+        box-shadow: 0 0 0 1px #aaa;
+        padding: 10px 12px;
+        box-sizing: border-box;
+      "
+    >
+      <!-- ╔══════════════════════════════════════╗ -->
+      <!-- ║  ШАПКА: УПД + Счёт-фактура + Прил.  ║ -->
+      <!-- ╚══════════════════════════════════════╝ -->
+      <table style="width: 100%; border-collapse: collapse; margin-top: 30px; font-size: 10px">
+        <tr>
+          <!-- Левая ячейка: "Универсальный передаточный документ" -->
+          <td
+            style="
+              width: 85px;
+              vertical-align: middle;
+              padding: 2px 6px 2px 0;
+              border-right: 2px solid #000;
+            "
+          >
+            Универсальный<br />передаточный<br />документ
+          </td>
+
+          <!-- Центральная ячейка: Счёт-фактура / Исправление -->
+          <td style="vertical-align: top; padding: 2px 8px">
+            <table style="border-collapse: collapse">
+              <tr>
+                <td style="white-space: nowrap; padding-right: 4px; vertical-align: bottom">
+                  Счет-фактура №
+                </td>
+                <td
+                  style="
+                    border-bottom: 1px solid #000;
+                    min-width: 80px;
+                    padding: 0 4px;
+                    vertical-align: bottom;
+                  "
+                >
+                  <!-- ПОЛЕ: номер счёт-фактуры -->
+                  15725
+                </td>
+                <td style="font-size: 8px; padding: 0 6px; vertical-align: bottom">от</td>
+                <td
+                  style="
+                    border-bottom: 1px solid #000;
+                    min-width: 80px;
+                    padding: 0 4px;
+                    vertical-align: bottom;
+                  "
+                >
+                  <!-- ПОЛЕ: дата счёт-фактуры -->
+                  17.03.2026
+                </td>
+                <td style="font-size: 8px; padding-left: 4px; vertical-align: bottom">(1)</td>
+              </tr>
+              <tr>
+                <td colspan="5" style="height: 4px"></td>
+              </tr>
+              <tr>
+                <td style="white-space: nowrap; padding-right: 4px; vertical-align: bottom">
+                  Исправление №
+                </td>
+                <td
+                  style="
+                    border-bottom: 1px solid #000;
+                    min-width: 80px;
+                    padding: 0 4px;
+                    vertical-align: bottom;
+                  "
+                >
+                  <!-- ПОЛЕ: номер исправления -->
+                  —
+                </td>
+                <td style="font-size: 8px; padding: 0 6px; vertical-align: bottom">от</td>
+                <td
+                  style="
+                    border-bottom: 1px solid #000;
+                    min-width: 80px;
+
+                    padding: 0 4px;
+                    vertical-align: bottom;
+                  "
+                >
+                  <!-- ПОЛЕ: дата исправления -->
+                  —
+                </td>
+                <td style="font-size: 8px; padding-left: 4px; vertical-align: bottom">(1а)</td>
+              </tr>
+            </table>
+          </td>
+
+          <!-- Правая ячейка: ссылка на постановление -->
+          <td style="font-size: 8px; vertical-align: top; text-align: right; padding: 2px 0">
+            Приложение № 1 к постановлению Правительства Российской Федерации от 26 декабря 2011 г.
+            № 1137
+            <br />
+            (в редакции постановления Правительства Российской Федерации от 16 августа 2024 г. №
+            1096)
+          </td>
+        </tr>
+      </table>
+      <!-- ╔═══════════════════════════════════╗ -->
+      <!-- ║  БЛОК: ПРОДАВЕЦ / ПОКУПАТЕЛЬ      ║ -->
+      <!-- ╚═══════════════════════════════════╝ -->
+      <table style="width: 100%; border-collapse: collapse; font-size: 10px">
+        <!-- СТРОКА 1: Продавец / Покупатель -->
+        <tr>
+          <!-- Статус — узкий левый столбец, объединяет несколько строк -->
+          <td
+            rowspan="7"
+            style="
+              width: 85px;
+              border-right: 2px solid #000;
+              vertical-align: top;
+              padding: 20px 6px 6px 0;
+            "
+          >
+            <div style="margin-bottom: 6px">
+              <span>Статус:</span>
+              <span
+                style="
+                  font-size: 8px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  border: 1px solid #000;
+                  padding: 0 3px;
+                "
+              >
+                <!-- ПОЛЕ: статус 1 или 2 -->
+                2
+              </span>
+            </div>
+            <div style="font-size: 8px; margin-top: 8px">
+              1 – счет-фактура и передаточный документ (акт)<br /><br />
+              2 – передаточный документ (акт)
+            </div>
+          </td>
+
+          <!-- Продавец: лейбл -->
+          <td style="width: 150px; padding: 3px 5px; font-weight: bold; vertical-align: top">
+            Продавец:
+          </td>
+          <!-- Продавец: значение -->
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: наименование продавца -->
+            Индивидуальный предприниматель Рошаль Александр Сергеевич
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(2)</span>
+          </td>
+          <!-- Покупатель: лейбл -->
+          <td style="width: 150px; padding: 3px 5px; font-weight: bold; vertical-align: top">
+            Покупатель:
+          </td>
+          <!-- Покупатель: значение -->
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: наименование покупателя -->
+            Общество с ограниченной ответственностью "ПЛАТЕЖНЫЙ СЕРВИС ПРОВАЙДЕР"
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(6)</span>
+          </td>
+        </tr>
+
+        <!-- СТРОКА 2: Адрес продавца / Адрес покупателя -->
+        <tr>
+          <td style="padding: 3px 5px; vertical-align: top">Адрес:</td>
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: адрес продавца -->
+            Россия, 344090, Ростовская обл., г. Ростов-на-Дону, ул Содружества, д. 3, кв. 10
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(2а)</span>
+          </td>
+          <td style="padding: 3px 5px; vertical-align: top">Адрес:</td>
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: адрес покупателя -->
+            115280, муниципальный округ Даниловский вн.тер.г., Москва, Ленинская Слобода ул, 19,
+            пом. 67/1
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(6а)</span>
+          </td>
+        </tr>
+
+        <!-- СТРОКА 3: ИНН/КПП -->
+        <tr>
+          <td style="padding: 3px 5px; vertical-align: top">ИНН/КПП продавца:</td>
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: ИНН/КПП продавца -->
+            616516198340 / —
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(2б)</span>
+          </td>
+          <td style="padding: 3px 5px; vertical-align: top">ИНН/КПП покупателя:</td>
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: ИНН/КПП покупателя -->
+            9701010050 / 772501001
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(6б)</span>
+          </td>
+        </tr>
+
+        <!-- СТРОКА 4: Грузоотправитель / Валюта -->
+        <tr>
+          <td style="padding: 3px 5px; vertical-align: top">Грузоотправитель и его адрес:</td>
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: грузоотправитель -->
+            —
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(3)</span>
+          </td>
+          <td style="padding: 3px 5px; vertical-align: top">Валюта: наименование, код</td>
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: валюта -->
+            Российский рубль, 643
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(7)</span>
+          </td>
+        </tr>
+
+        <!-- СТРОКА 5: Грузополучатель / Идентификатор гос.контракта -->
+        <tr>
+          <td style="padding: 3px 5px; vertical-align: top">Грузополучатель и его адрес:</td>
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: грузополучатель -->
+            —
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(4)</span>
+          </td>
+          <td colspan="2" style="padding: 3px 0 3px 0px; vertical-align: top">
+            <table style="width: 100%">
+              <tr>
+                <td style="width: 50%">
+                  Идентификатор государственного контракта, договора (соглашения) (при наличии):
+                </td>
+                <td style="border-bottom: 1px solid #000; padding: 3px 5px">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(8)</span>
+          </td>
+        </tr>
+
+        <!-- СТРОКА 6: К платёжно-расчётному документу -->
+        <tr>
+          <td style="padding: 3px 5px; vertical-align: top">К платежно-расчетному документу №</td>
+          <td style="border-bottom: 1px solid #000; padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: № и дата платёжного документа -->
+            &nbsp; от &nbsp;
+          </td>
+          <td style="width: 10px">
+            <span style="font-size: 8px; margin-left: 4px">(5)</span>
+          </td>
+        </tr>
+
+        <!-- СТРОКА 7: Документ об отгрузке -->
+        <tr>
+          <td style="padding: 3px 5px 12px 5px; vertical-align: top">Документ об отгрузке</td>
+          <td colspan="1" style="padding: 3px 5px; vertical-align: top">
+            <!-- ПОЛЕ: документ об отгрузке -->
+            Передаточный документ № 15725 от 17.03.2026
+          </td>
+          <td style="width: 10px; padding-bottom: 12px">
+            <span style="font-size: 8px; margin-left: 4px">(5а)</span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- ╔══════════════════════════════════╗ -->
+      <!-- ║  ТАБЛИЦА ТОВАРОВ                 ║ -->
+      <!-- ╚══════════════════════════════════╝ -->
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          border: 1px solid #000;
+          border-top: none;
+          font-size: 10px;
+          text-align: center;
+        "
+      >
+        <thead>
+          <tr style="border-bottom: 1px solid #000; border-top: 1px solid #000">
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 52px;
+              "
+            >
+              Код товара/<br />работ, услуг
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 18px;
+              "
+            >
+              №<br />п/п
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 130px;
+              "
+            >
+              Наименование товара (описание выполненных работ, оказанных услуг), имущественного
+              права
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 32px;
+              "
+            >
+              Код вида<br />товара
+            </td>
+            <td
+              colspan="2"
+              style="
+                border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+              "
+            >
+              Единица измерения
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 32px;
+              "
+            >
+              Коли-<br />чество<br />(объем)
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 50px;
+              "
+            >
+              Цена (тариф)<br />за единицу<br />измерения
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 56px;
+              "
+            >
+              Стоимость товаров (работ, услуг), имущест-венных прав без налога — всего
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 40px;
+              "
+            >
+              В том числе сумма акциза
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 40px;
+              "
+            >
+              Налоговая ставка
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 50px;
+              "
+            >
+              Сумма налога, предъявляемая покупателю
+            </td>
+            <td
+              rowspan="2"
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 56px;
+              "
+            >
+              Стоимость товаров (работ, услуг), имущест-венных прав с налогом — всего
+            </td>
+            <td
+              colspan="2"
+              style="
+                border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+              "
+            >
+              Страна<br />происхождения<br />товара
+            </td>
+            <td rowspan="2" style="padding: 3px 2px; vertical-align: middle; width: 72px">
+              Регистрационный номер декларации на товары или рег. номер партии товара, подлежащего
+              прослеживаемости
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #000">
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 24px;
+              "
+            >
+              код
+            </td>
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 36px;
+              "
+            >
+              условное обозна-чение (нацио-нальное)
+            </td>
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 26px;
+              "
+            >
+              цифровой код
+            </td>
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 2px;
+                vertical-align: middle;
+                width: 40px;
+              "
+            >
+              краткое наименование
+            </td>
+          </tr>
+
+          <!-- Строка с обозначениями колонок А, 1, 1а … 11 -->
+          <tr style="border-bottom: 1px solid #000">
+            <td style="border-right: 1px solid #000; padding: 2px">А</td>
+            <td style="border-right: 1px solid #000; padding: 2px">1</td>
+            <td style="border-right: 1px solid #000; padding: 2px">1а</td>
+            <td style="border-right: 1px solid #000; padding: 2px">1б</td>
+            <td style="border-right: 1px solid #000; padding: 2px">2</td>
+            <td style="border-right: 1px solid #000; padding: 2px">2а</td>
+            <td style="border-right: 1px solid #000; padding: 2px">3</td>
+            <td style="border-right: 1px solid #000; padding: 2px">4</td>
+            <td style="border-right: 1px solid #000; padding: 2px">5</td>
+            <td style="border-right: 1px solid #000; padding: 2px">6</td>
+            <td style="border-right: 1px solid #000; padding: 2px">7</td>
+            <td style="border-right: 1px solid #000; padding: 2px">8</td>
+            <td style="border-right: 1px solid #000; padding: 2px">9</td>
+            <td style="border-right: 1px solid #000; padding: 2px">10</td>
+            <td style="border-right: 1px solid #000; padding: 2px">10а</td>
+            <td style="padding: 2px">11</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- ═══ СТРОКА ТОВАРА ═══ (копируй <tr>...</tr> для каждого нового товара) -->
+          <tr style="border-bottom: 1px solid #000">
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 4px;
+                text-align: left;
+                vertical-align: top;
+              "
+            >
+              ПС-00001057
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">1</td>
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 4px;
+                text-align: left;
+                vertical-align: top;
+              "
+            >
+              Лицензия на ПО для ЭВМ LIFE POS (Облачная касса — Онлайн) c 27.03.2026 по 19.06.2027
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">—</td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">—</td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">шт</td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">1</td>
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 4px;
+                text-align: right;
+                vertical-align: top;
+              "
+            >
+              13 000
+            </td>
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 4px;
+                text-align: right;
+                vertical-align: top;
+              "
+            >
+              13 000
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">
+              Без акциза
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">
+              Без НДС
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">
+              Без НДС
+            </td>
+            <td
+              style="
+                border-right: 1px solid #000;
+                padding: 3px 4px;
+                text-align: right;
+                vertical-align: top;
+              "
+            >
+              13 000
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">—</td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px; vertical-align: top">—</td>
+            <td style="padding: 3px 2px; vertical-align: top">—</td>
+          </tr>
+
+          <!--
+      ╔══════════════════════════════════════════════════════════════════╗
+      ║  ШАБЛОН СТРОКИ ТОВАРА — скопируй блок <tr>...</tr> и заполни   ║
+      ╚══════════════════════════════════════════════════════════════════╝
+      <tr style="border-bottom:1px solid #000;">
+        <td style="border-right:1px solid #000; padding:3px 4px; text-align:left; vertical-align:top;">КОД</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">№</td>
+        <td style="border-right:1px solid #000; padding:3px 4px; text-align:left; vertical-align:top;">Наименование товара или услуги</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">—</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">—</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">шт</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">1</td>
+        <td style="border-right:1px solid #000; padding:3px 4px; text-align:right; vertical-align:top;">0,00</td>
+        <td style="border-right:1px solid #000; padding:3px 4px; text-align:right; vertical-align:top;">0,00</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">Без акциза</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">Без НДС</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">Без НДС</td>
+        <td style="border-right:1px solid #000; padding:3px 4px; text-align:right; vertical-align:top;">0,00</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">—</td>
+        <td style="border-right:1px solid #000; padding:3px 2px; vertical-align:top;">—</td>
+        <td style="padding:3px 2px; vertical-align:top;">—</td>
+      </tr>
+      -->
+        </tbody>
+
+        <!-- ИТОГО -->
+        <tfoot>
+          <tr style="border-top: 1px solid #000">
+            <td style="border-right: 1px solid #000"></td>
+            <td
+              colspan="7"
+              style="
+                border-right: 1px solid #000;
+                padding: 4px 6px;
+                font-weight: bold;
+                text-align: left;
+              "
+            >
+              Всего к оплате (9)
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 4px; text-align: right">
+              <!-- ПОЛЕ: итого без НДС -->
+              13 000
+            </td>
+            <!-- <td style="border-right: 1px solid #000; padding: 3px 2px">&nbsp;</td> -->
+            <td
+              colspan="2"
+              style="border-right: 1px solid #000; padding: 3px 2px; font-weight: bold"
+            >
+              Х
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 2px">
+              <!-- ПОЛЕ: итого НДС -->
+              Без НДС
+            </td>
+            <td style="border-right: 1px solid #000; padding: 3px 4px; text-align: right">
+              <!-- ПОЛЕ: итого с НДС -->
+              13 000
+            </td>
+            <td colspan="3" style="padding: 3px 2px">&nbsp;</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- ╔══════════════════════════════════════════╗ -->
+      <!-- ║  БЛОК ПОДПИСЕЙ СЧЁТ-ФАКТУРЫ              ║ -->
+      <!-- ╚══════════════════════════════════════════╝ -->
+      <table style="width: 100%; border-collapse: collapse; border-top: none; font-size: 10px">
+        <tr>
+          <!-- "Документ составлен на N листе" -->
+          <td
+            rowspan="4"
+            style="
+              width: 85px;
+              border-right: 2px solid #000;
+              padding: 12px 6px 5px 0;
+              vertical-align: top;
+            "
+          >
+            Документ<br />составлен на<br />1 листе
+          </td>
+          <!-- Руководитель организации -->
+          <td style="padding: 12px 8px 0px 8px; width: 12%">
+            Руководитель организации<br />или иное уполномоченное лицо
+          </td>
+          <td style="border-bottom: 1px solid #000; text-align: center; width: 20%"></td>
+          <td style="border-bottom: 1px solid #000; text-align: center; width: 20%"></td>
+          <!-- Главный бухгалтер -->
+          <td style="padding: 12px 8px 0px 8px; width: 12%">
+            Главный бухгалтер<br />или иное уполномоченное лицо
+          </td>
+          <td style="border-bottom: 1px solid #000; text-align: center; width: 120"></td>
+          <td style="border-bottom: 1px solid #000; text-align: center; width: 120"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="font-size: 8px; text-align: center">(подпись)</td>
+          <td style="font-size: 8px; text-align: center">(ф.и.о.)</td>
+          <td></td>
+          <td style="font-size: 8px; text-align: center">(подпись)</td>
+          <td style="font-size: 8px; text-align: center">(ф.и.о.)</td>
+        </tr>
+        <!-- ИП -->
+        <tr>
+          <td style="padding: 0 5px 0 8px">
+            Индивидуальный предприниматель<br />или иное уполномоченное лицо
+          </td>
+          <td style="border-bottom: 1px solid #000; text-align: center"></td>
+          <td style="border-bottom: 1px solid #000; text-align: center"></td>
+          <td
+            colspan="3"
+            style="
+              color: #000;
+              border-bottom: 1px solid #000;
+              text-align: center;
+              vertical-align: bottom;
+            "
+          >
+            <!-- ПОЛЕ: реквизиты свидетельства ИП -->
+            Дата регистрации 02.02.2017, ИНН: 616516198340, ОГРНИП: 317619600020516
+          </td>
+        </tr>
+        <tr style="border-bottom: 2px solid #000">
+          <td></td>
+          <td style="font-size: 8px; text-align: center">(подпись)</td>
+          <td style="font-size: 8px; text-align: center">(ф.и.о.)</td>
+          <td colspan="3" style="font-size: 8px; color: #555; text-align: center">
+            (реквизиты свидетельства о государственной регистрации индивидуального предпринимателя)
+          </td>
+        </tr>
+      </table>
+
+      <!-- ╔══════════════════════════════════════════════╗ -->
+      <!-- ║  НИЖНЯЯ ЧАСТЬ УПД (двойная линия сверху)     ║ -->
+      <!-- ╚══════════════════════════════════════════════╝ -->
+      <table style="width: 100%; border-collapse: collapse; margin-top: 0; font-size: 10px">
+        <!-- СТРОКА: Основание передачи -->
+        <tr>
+          <td style="width: 230px; padding: 4px 6px 4px 0; vertical-align: top">
+            Основание передачи (сдачи) / получения (приемки)
+          </td>
+          <td style="padding: 4px 6px; vertical-align: top">
+            <!-- ПОЛЕ: основание (номер и дата договора) -->
+            Основной договор (с покупателем) № Основной договор (с покупателем) от 28.05.2021
+            <div
+              style="
+                font-size: 8px;
+                border-top: 1px solid #000;
+                margin-top: 6px;
+                padding-top: 1px;
+                text-align: center;
+              "
+            >
+              (договор; доверенность и др.)
+            </div>
+          </td>
+          <td style="width: 28px; padding: 4px 4px; vertical-align: top; font-size: 8px">[8]</td>
+        </tr>
+
+        <!-- СТРОКА: Данные о транспортировке -->
+        <tr>
+          <td style="padding: 4px 6px 4px 0; vertical-align: top">
+            Данные о транспортировке и грузе
+          </td>
+          <td style="padding: 4px 6px; vertical-align: top; font-size: 8px">
+            <!-- ПОЛЕ: транспортные данные -->
+            <div
+              style="
+                border-top: 1px solid #000;
+                padding-top: 1px;
+                margin-top: 6px;
+                text-align: center;
+              "
+            >
+              (транспортная накладная, поручение экспедитору, экспедиторская / складская расписка и
+              др. / масса нетто/брутто груза, если не приведены ссылки на транспортные документы,
+              содержащие эти сведения)
+            </div>
+          </td>
+          <td style="padding: 4px 4px; vertical-align: top; font-size: 8px">[9]</td>
+        </tr>
+      </table>
+      <table style="width: 100%; border-collapse: collapse; font-size: 10px; margin-bottom: 30px">
+        <!-- СТРОКА: заголовки "Передал / Получил" + подписи -->
+        <tr>
+          <td colspan="4" style="width: 50%; border-right: 2px solid #000">
+            Товар (груз) передал / услуги, результаты работ, права сдал
+          </td>
+          <td colspan="4" style="width: 50%">
+            Товар (груз) получил / услуги, результаты работ, права принял
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom: 1px solid #000"></td>
+          <td style="border-bottom: 1px solid #000"></td>
+          <td style="border-bottom: 1px solid #000"></td>
+          <td style="font-size: 8px; border-right: 2px solid #000; padding-right: 5px">[10]</td>
+          <td style="border-bottom: 1px solid #000">Сотрудник</td>
+          <td style="border-bottom: 1px solid #000">Электронная подпись</td>
+          <td style="border-bottom: 1px solid #000">Бабакина Елена Алексеевна</td>
+          <td style="font-size: 8px">[15]</td>
+        </tr>
+        <tr>
+          <td style="font-size: 8px; text-align: center">(должность)</td>
+          <td style="font-size: 8px; text-align: center">(подпись)</td>
+          <td style="font-size: 8px; text-align: center">(ф.и.о.)</td>
+          <td style="border-right: 2px solid #000"></td>
+          <td style="font-size: 8px; text-align: center">(должность)</td>
+          <td style="font-size: 8px; text-align: center">(подпись)</td>
+          <td style="font-size: 8px; text-align: center">(ф.и.о.)</td>
+          <td></td>
+        </tr>
+
+        <!-- СТРОКА: Даты отгрузки / получения -->
+        <tr>
+          <td>Дата отгрузки, передачи (сдачи)</td>
+          <td style="border-bottom: 1px solid #000">«17» марта 2026 года</td>
+          <td></td>
+          <td style="font-size: 8px; border-right: 2px solid #000; padding-right: 5px">[11]</td>
+          <td>Дата получения (приемки)</td>
+          <td style="border-bottom: 1px solid #000">«25» марта 2026 года</td>
+          <td></td>
+          <td style="font-size: 8px">[16]</td>
+        </tr>
+
+        <!-- СТРОКА: Иные сведения -->
+        <tr>
+          <td colspan="4" style="border-right: 2px solid #000">
+            Иные сведения об отгрузке, передаче
+          </td>
+          <td colspan="4">Иные сведения о получении, приемке</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="border-bottom: 1px solid #000"></td>
+          <td style="font-size: 8px; border-right: 2px solid #000; padding-right: 5px">[12]</td>
+          <td colspan="3" style="border-bottom: 1px solid #000"></td>
+          <td style="font-size: 8px">[17]</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="font-size: 8px; text-align: center">
+            (ссылки на неотъемлемые приложения, сопутствующие документы, иные документы и т.п.)
+          </td>
+          <td style="border-right: 2px solid #000"></td>
+          <td colspan="3" style="font-size: 8px; text-align: center">
+            (информация о наличии/отсутствии претензии; ссылки на неотъемлемые приложения, и другие
+            документы и т.п.)
+          </td>
+          <td></td>
+        </tr>
+
+        <!-- СТРОКА: Ответственный — заголовки + подписи -->
+        <tr>
+          <td colspan="4" style="padding: 4px 6px; width: 50%; border-right: 2px solid #000">
+            Ответственный за правильность оформления факта хозяйственной жизни
+          </td>
+          <td colspan="4" style="padding: 4px 6px; width: 50%">
+            Ответственный за правильность оформления факта хозяйственной жизни
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom: 1px solid #000">ИП</td>
+          <td style="border-bottom: 1px solid #000">Электронная подпись</td>
+          <td style="border-bottom: 1px solid #000">Рошаль Александр Сергеевич</td>
+          <td style="font-size: 8px; border-right: 2px solid #000; padding-right: 5px">[13]</td>
+          <td style="border-bottom: 1px solid #000">Сотрудник</td>
+          <td style="border-bottom: 1px solid #000">Электронная подпись</td>
+          <td style="border-bottom: 1px solid #000">Бабакина Елена Алексеевна</td>
+          <td style="font-size: 8px">[18]</td>
+        </tr>
+        <tr>
+          <td style="font-size: 8px; text-align: center">(должность)</td>
+          <td style="font-size: 8px; text-align: center">(подпись)</td>
+          <td style="font-size: 8px; text-align: center">(ф.и.о.)</td>
+          <td style="border-right: 2px solid #000"></td>
+          <td style="font-size: 8px; text-align: center">(должность)</td>
+          <td style="font-size: 8px; text-align: center">(подпись)</td>
+          <td style="font-size: 8px; text-align: center">(ф.и.о.)</td>
+          <td></td>
+        </tr>
+
+        <!-- СТРОКА: Наименование составителя — заголовок + реквизиты + М.П. -->
+        <tr>
+          <td colspan="4" style="border-right: 2px solid #000">
+            Наименование экономического субъекта – составителя документа (в т.ч. комиссионера /
+            агента)
+          </td>
+          <td colspan="4">Наименование экономического субъекта – составителя документа</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="border-bottom: 1px solid #000">
+            Индивидуальный предприниматель Рошаль Александр Сергеевич, ИНН: 616516198340
+          </td>
+          <td style="font-size: 8px; border-right: 2px solid #000; padding-right: 5px">[14]</td>
+          <td colspan="3" style="border-bottom: 1px solid #000">
+            Общество с ограниченной ответственностью "ПЛАТЕЖНЫЙ СЕРВИС ПРОВАЙДЕР"
+          </td>
+          <td style="font-size: 8px">[19]</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="font-size: 8px; text-align: center">
+            (может не заполняться при проставлении печати в М.П., может быть указан ИНН / КПП)
+          </td>
+          <td style="border-right: 2px solid #000"></td>
+          <td colspan="3" style="font-size: 8px; text-align: center">
+            (может не заполняться при проставлении печати в М.П., может быть указан ИНН / КПП)
+          </td>
+          <td></td>
+        </tr>
+        <!-- СТРОКА: М.П. -->
+        <tr>
+          <td colspan="4" style="border-right: 2px solid #000; padding-left: 40px">М.П.</td>
+          <td colspan="4" style="padding-left: 40px">М.П.</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
