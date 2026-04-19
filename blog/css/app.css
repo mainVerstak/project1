@@ -7515,7 +7515,8 @@ footer {
 .blog article .author {
   display: flex;
   gap: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  padding: 5px 0;
 }
 @media (max-width: 767px) {
   .blog article .author {
@@ -7533,6 +7534,37 @@ footer {
 }
 .blog article .author .post_time,
 .blog article .author .views {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #8c91a6;
+}
+.blog article .publish-info {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+.blog article .publish-info .publish-info__block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blog article .publish-info .post_date::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: #8c91a6;
+  border-radius: 50%;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.blog article .publish-info .post_update {
+  color: #8c91a6;
+}
+.blog article .publish-info .read_time,
+.blog article .publish-info .views {
   display: flex;
   align-items: center;
   gap: 3px;
@@ -7818,6 +7850,18 @@ footer {
   border-radius: 10px;
   position: relative;
   margin-bottom: 30px;
+}
+.blog .blog_article__quote.expert {
+  background-color: #e6eff9;
+}
+.blog .blog_article__quote .blog_article__quote-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  margin-bottom: 20px;
 }
 .blog .blog_article__quote p {
   margin-bottom: 20px;
