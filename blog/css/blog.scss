@@ -2500,6 +2500,33 @@ $color-blog-subscribe: #dfe9e0;
     }
   }
 
+  .expert-feedback {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .blog_article__quote {
+      margin-bottom: 0;
+    }
+
+    h5 {
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 135%;
+    }
+    a {
+      color: $color-dark;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
   .blog_article__quote {
     padding: 20px;
     background-color: #dfe9e0;
@@ -2509,6 +2536,10 @@ $color-blog-subscribe: #dfe9e0;
 
     &.expert {
       background-color: #e6eff9;
+
+      p:has(+ svg) {
+        margin-bottom: 0;
+      }
     }
 
     .blog_article__quote-title {
@@ -2969,6 +3000,62 @@ $color-blog-subscribe: #dfe9e0;
         height: 100%;
         object-fit: cover;
       }
+    }
+
+    ul {
+      margin-bottom: 30px;
+      list-style: none;
+      list-style-type: none;
+      padding-left: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+
+      > li {
+        margin-bottom: 5px;
+
+        &::before {
+          content: " ";
+          display: inline-block;
+          width: 6px;
+          height: 2px;
+          background-color: $color-dark;
+          margin: 0 10px;
+          position: relative;
+          bottom: 5px;
+        }
+
+        &:has(p) {
+          margin-bottom: 30px;
+        }
+
+        p {
+          display: inline;
+        }
+
+        &:has(ul li) {
+          font-weight: 700;
+
+          &::before {
+            content: none;
+          }
+
+          ul {
+            margin-left: 15px;
+          }
+        }
+
+        &:has(ol li) {
+          ol {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 120%;
     }
   }
 
