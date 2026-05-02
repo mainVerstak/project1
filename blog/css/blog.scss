@@ -2066,8 +2066,9 @@ $color-blog-subscribe: #dfe9e0;
       }
     }
     .author {
-      display: flex;
-      gap: 15px;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 10px;
       margin-bottom: 10px;
       padding: 10px;
       border: 1px solid $color-secondary;
@@ -2106,19 +2107,20 @@ $color-blog-subscribe: #dfe9e0;
       }
     }
     .label-checked-expert {
-      display: inline-flex;
-      align-items: center;
+      display: inline-block;
+      vertical-align: middle;
       gap: 3px;
       padding: 5px;
       background-color: $color-secondary;
       color: $color-dark;
       font-size: 14px;
       line-height: 130%;
+      letter-spacing: 0;
       border-radius: 8px;
       margin-bottom: 30px;
 
       svg {
-        margin: 2px;
+        margin: 2px 2px -2px 2px;
         width: 14px;
         height: 14px;
         color: $color-primary;
