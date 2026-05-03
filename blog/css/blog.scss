@@ -2565,7 +2565,8 @@ $color-blog-subscribe: #dfe9e0;
       font-weight: 400;
       font-size: 14px;
       line-height: 130%;
-      display: flex;
+      display: grid;
+      grid-template-columns: 30px 1fr;
       gap: 5px;
       align-items: center;
 
