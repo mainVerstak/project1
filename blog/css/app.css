@@ -7306,6 +7306,9 @@ footer {
   margin-bottom: 40px;
 }
 .blog .adv_themes .adv_themes__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
   margin-bottom: 15px;
 }
 .blog .blog_article__sidebar {
@@ -8128,7 +8131,14 @@ footer {
   align-items: center;
   gap: 20px;
 }
-.blog .blog_article__feedback .blog_article__comments h2.blog_article-h2 span {
+.blog .blog_article__feedback .blog_article__comments h2.blog_article-h2,
+.blog .blog_article__feedback .blog_article__comments .blog_article-h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+}
+.blog .blog_article__feedback .blog_article__comments h2.blog_article-h2 span,
+.blog .blog_article__feedback .blog_article__comments .blog_article-h2 span {
   color: #8c91a6;
 }
 .blog .blog_article__feedback .blog_article__comments .blog_article__comment {

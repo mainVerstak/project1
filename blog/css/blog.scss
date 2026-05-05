@@ -1836,6 +1836,9 @@ $color-blog-subscribe: #dfe9e0;
     margin-bottom: 40px;
 
     .adv_themes__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
       margin-bottom: 15px;
     }
   }
@@ -2782,7 +2785,11 @@ $color-blog-subscribe: #dfe9e0;
       }
     }
     .blog_article__comments {
-      h2.blog_article-h2 {
+      h2.blog_article-h2,
+      .blog_article-h2 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
         span {
           color: $color-grey;
         }
