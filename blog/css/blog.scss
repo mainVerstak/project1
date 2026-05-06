@@ -2648,6 +2648,13 @@ $color-blog-subscribe: #dfe9e0;
       flex-direction: column;
       justify-content: space-between;
 
+      div {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+        margin-bottom: 20px;
+      }
+
       @media (max-width: 767px) {
         padding: 30px;
 
@@ -2765,6 +2772,14 @@ $color-blog-subscribe: #dfe9e0;
       div {
         display: flex;
         gap: 10px;
+
+        &:first-child {
+          font-weight: 700;
+          font-size: 21px;
+          line-height: 120%;
+          letter-spacing: 0%;
+          margin: 0;
+        }
       }
     }
 
