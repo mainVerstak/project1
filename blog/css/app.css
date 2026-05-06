@@ -8484,6 +8484,12 @@ footer {
 .blog .ds-tabs .ds-item .ds-question {
   padding: 15px 20px;
 }
+.blog .ds-tabs .ds-item .ds-question div {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
 .blog .ds-tabs .ds-item.active {
   padding: 15px 20px;
 }
