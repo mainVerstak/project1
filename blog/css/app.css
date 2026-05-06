@@ -7605,6 +7605,9 @@ footer {
   margin-left: 5px;
   vertical-align: middle;
 }
+.blog article .publish-info .post_date:last-child::after {
+  display: none;
+}
 .blog article .publish-info .post_update {
   color: #8c91a6;
 }

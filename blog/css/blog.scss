@@ -2173,6 +2173,9 @@ $color-blog-subscribe: #dfe9e0;
           margin-left: 5px;
           vertical-align: middle;
         }
+        &:last-child::after {
+          display: none;
+        }
       }
       .post_update {
         color: $color-grey;
