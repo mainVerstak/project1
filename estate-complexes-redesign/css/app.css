@@ -2666,24 +2666,65 @@ li.nav-tabs-dropdown {
 li.media.clearfix.object.blog-object {
   min-height: 362px;
 }
-li.media.clearfix.object.blog-object.blog-object-single {
-  min-height: 196px;
-}
 @media (max-width: 991px) {
   li.media.clearfix.object.blog-object {
     min-height: 267px;
-  }
-  li.media.clearfix.object.blog-object.blog-object-single {
-    min-height: 191px;
   }
 }
 @media (max-width: 767px) {
   li.media.clearfix.object.blog-object {
     min-height: 543px;
   }
-  li.media.clearfix.object.blog-object.blog-object-single {
-    min-height: 282px;
+}
+
+.cookies-notice {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  max-width: 295px;
+  z-index: 1050;
+}
+@media (max-width: 991px) {
+  .cookies-notice {
+    bottom: 70px;
+    max-width: unset;
+    width: calc(100vw - 30px);
   }
+}
+.cookies-notice .cookies-notice__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 5px;
+  background-color: #8c91a6;
+  border-radius: 8px;
+}
+.cookies-notice .cookies-notice__text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  margin: 4px 0 4px 5px;
+  color: #ffffff;
+}
+.cookies-notice .cookies-notice__text a {
+  text-decoration: underline;
+}
+.cookies-notice .cookies-notice__btn {
+  background-color: #e6eff9;
+  color: #084c95;
+  transition: all ease 0.3s;
+}
+.cookies-notice .cookies-notice__btn:visited {
+  color: #084c95;
+}
+.cookies-notice .cookies-notice__btn:hover, .cookies-notice .cookies-notice__btn:active {
+  background-color: #084c95;
+  color: #ffffff;
+  border-color: #084c95;
 }
 
 .ds-slider {
@@ -3232,6 +3273,7 @@ li.media.clearfix.object.blog-object.blog-object-single {
   align-items: center;
   justify-content: space-between;
   color: #000 !important;
+  border-bottom: 1px solid #e5e5e5;
 }
 .appartments__item:hover {
   text-decoration: none;
@@ -3241,9 +3283,6 @@ li.media.clearfix.object.blog-object.blog-object-single {
 }
 .appartments__item:first-child {
   border-top: 1px solid #e5e5e5;
-}
-.appartments__item {
-  border-bottom: 1px solid #e5e5e5;
 }
 .appartments__item.active {
   border-bottom: 1px solid transparent;
@@ -4839,19 +4878,23 @@ header .balance-currency {
 }
 
 /* Inputs */
-.map_panel label,
-#selectCategoryModal label,
-#selectOfferTypeModal label,
-#searchFormModal label,
-.searchFormPage label {
-  vertical-align: middle;
-}
 .map_panel,
 #selectCategoryModal,
 #selectOfferTypeModal,
 #searchFormModal,
 .searchFormPage {
   /* Единственный элемент */
+  /* Первый элемент */
+  /* Последний элемент */
+  /* Предпоследний элемент (не первый и не последний) */
+  /* Элемент не первый, не последний и не предпоследний */
+}
+.map_panel label,
+#selectCategoryModal label,
+#selectOfferTypeModal label,
+#searchFormModal label,
+.searchFormPage label {
+  vertical-align: middle;
 }
 .map_panel input.form-control:only-child,
 #selectCategoryModal input.form-control:only-child,
@@ -4860,26 +4903,12 @@ header .balance-currency {
 .searchFormPage input.form-control:only-child {
   border-radius: 5px !important;
 }
-.map_panel,
-#selectCategoryModal,
-#selectOfferTypeModal,
-#searchFormModal,
-.searchFormPage {
-  /* Первый элемент */
-}
 .map_panel input.form-control:first-child:not(:only-child),
 #selectCategoryModal input.form-control:first-child:not(:only-child),
 #selectOfferTypeModal input.form-control:first-child:not(:only-child),
 #searchFormModal input.form-control:first-child:not(:only-child),
 .searchFormPage input.form-control:first-child:not(:only-child) {
   border-radius: 5px 0 0 5px !important;
-}
-.map_panel,
-#selectCategoryModal,
-#selectOfferTypeModal,
-#searchFormModal,
-.searchFormPage {
-  /* Последний элемент */
 }
 .map_panel input.form-control:last-child:not(:only-child),
 #selectCategoryModal input.form-control:last-child:not(:only-child),
@@ -4888,26 +4917,12 @@ header .balance-currency {
 .searchFormPage input.form-control:last-child:not(:only-child) {
   border-radius: 0 5px 5px 0 !important;
 }
-.map_panel,
-#selectCategoryModal,
-#selectOfferTypeModal,
-#searchFormModal,
-.searchFormPage {
-  /* Предпоследний элемент (не первый и не последний) */
-}
 .map_panel input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #selectCategoryModal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #selectOfferTypeModal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 #searchFormModal input.form-control:nth-last-child(2):not(:first-child):not(:last-child),
 .searchFormPage input.form-control:nth-last-child(2):not(:first-child):not(:last-child) {
   border-radius: 0 5px 5px 0 !important;
-}
-.map_panel,
-#selectCategoryModal,
-#selectOfferTypeModal,
-#searchFormModal,
-.searchFormPage {
-  /* Элемент не первый, не последний и не предпоследний */
 }
 .map_panel input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
 #selectCategoryModal input.form-control:not(:first-child):not(:last-child):not(:nth-last-child(2)),
@@ -5497,14 +5512,12 @@ header .balance-currency {
   border: 1px solid #e6eff9;
   background-color: #ffffff;
   color: #242a3e;
+  margin-bottom: 0;
 }
 #searchFormModal .modal-footer .ds-search-save:hover {
   background-color: #e6eff9;
   border: 1px solid #e6eff9;
   color: #084c95;
-}
-#searchFormModal .modal-footer .ds-search-save {
-  margin-bottom: 0;
 }
 #searchFormModal .modal-footer::before {
   content: none;
@@ -6343,6 +6356,12 @@ header .balance-currency {
   border-right: 1px solid #ffffff;
 }
 
+.extendedEntity {
+  /* Icons */
+  /* Buttons */
+  /* Slider big */
+  /* Mortgage */
+}
 .extendedEntity .apartment-top-container a,
 .extendedEntity .main-breadcrumbs.breadcrumb a {
   color: #084c95;
@@ -6354,9 +6373,6 @@ header .balance-currency {
 .extendedEntity .apartment-top-container a:visited,
 .extendedEntity .main-breadcrumbs.breadcrumb a:visited {
   color: #07386c;
-}
-.extendedEntity {
-  /* Icons */
 }
 .extendedEntity .icon-map-small {
   width: 12px;
@@ -6396,9 +6412,6 @@ header .balance-currency {
   display: flex;
   align-items: center;
   gap: 5px;
-}
-.extendedEntity {
-  /* Buttons */
 }
 .extendedEntity #banki-ru-widget .btn,
 .extendedEntity .ds-social .btn {
@@ -6682,9 +6695,6 @@ header .balance-currency {
 .extendedEntity .main-breadcrumbs.breadcrumb li.small {
   font-size: 14px;
 }
-.extendedEntity {
-  /* Slider big */
-}
 .extendedEntity .apartment-gallery .fotorama__stage {
   border-radius: 5px;
   background-color: #ffffff;
@@ -6722,9 +6732,6 @@ header .balance-currency {
 .extendedEntity .apartment-desc__item a {
   font-weight: 500;
 }
-.extendedEntity {
-  /* Mortgage */
-}
 .extendedEntity #banki-ru-widget {
   padding: 0 15px;
 }
@@ -6742,6 +6749,12 @@ header .balance-currency {
   border-top: none;
   border-radius: 0 0 10px 10px;
   margin-bottom: 15px;
+}
+.extendedEntity #banki-ru-widget {
+  /* .calc-mortgage__result {
+    width: 100%;
+    justify-content: center;
+  } */
 }
 .extendedEntity #banki-ru-widget .btn-styled-new2 {
   background-color: #084c95;
@@ -6847,12 +6860,6 @@ header .balance-currency {
 .extendedEntity #banki-ru-widget .calc-mortgage__result::after,
 .extendedEntity #banki-ru-widget .calc-mortgage__result::before {
   content: none;
-}
-.extendedEntity #banki-ru-widget {
-  /* .calc-mortgage__result {
-    width: 100%;
-    justify-content: center;
-  } */
 }
 .extendedEntity #banki-ru-widget .calc-mortgage__result .calc-mortgage__sum {
   font-size: 21px;
@@ -9737,6 +9744,10 @@ footer {
 .rent-calendar .form-group.search-input.selectize-input input {
   padding-left: 24px !important;
 }
+.rent-calendar .form-group.search-input .btn.clear-input {
+  display: none;
+  padding: 0 14px;
+}
 @media (hover: none) {
   .rent-calendar .form-group.search-input .btn.clear-input:focus {
     -webkit-tap-highlight-color: transparent;
@@ -9746,10 +9757,6 @@ footer {
 }
 .rent-calendar .form-group.search-input .btn.clear-input.view {
   display: flex;
-}
-.rent-calendar .form-group.search-input .btn.clear-input {
-  display: none;
-  padding: 0 14px;
 }
 .rent-calendar .form-group.search-input .btn.clear-input svg {
   position: static;
