@@ -3012,14 +3012,18 @@ $color-blog-subscribe: #dfe9e0;
       line-height: 150%;
       letter-spacing: 0%;
     }
-    .blog__author-guild {
+    .blog__author-other {
       display: grid;
       grid-template-columns: 30px 1fr;
       align-items: center;
       gap: 10px;
       margin-top: 20px;
+
+      &:has(div:only-child) {
+        display: flex;
+      }
     }
-    .blog__author-guild-icon {
+    .blog__author-other-icon {
       width: 30px;
       height: 30px;
       border-radius: 50%;
