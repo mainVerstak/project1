@@ -1,0 +1,67 @@
+// AirDatepicker
+.datepicker {
+  width: 316px;
+  border-color: $color-secondary;
+
+  .datepicker--nav {
+    border-color: $color-secondary;
+  }
+
+  .datepicker--pointer {
+    border-color: $color-secondary;
+  }
+
+  .datepicker--nav-action {
+    width: 44px;
+    height: 44px;
+
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+  .datepicker--nav-title:hover {
+    background-color: $color-secondary;
+  }
+  .datepicker--day-name {
+    color: $color-grey;
+  }
+  .datepicker--cell {
+    width: 44px;
+    height: 44px;
+
+    &.-current- {
+      color: $color-primary;
+    }
+
+    &.-selected- {
+      background-color: $color-primary;
+      color: $color-white;
+
+      &:hover {
+        background-color: #2167b4;
+      }
+    }
+
+    &.-focus- {
+      background-color: $color-secondary;
+    }
+  }
+}
+
+.date-picker-input {
+  position: relative;
+
+  .form-control {
+    padding-left: 39px !important;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    color: $color-grey;
+  }
+}

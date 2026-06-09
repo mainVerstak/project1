@@ -1,0 +1,248 @@
+// Payment and Confirmition
+.payment {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 20px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr 300px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // utils style
+  .tooltip-trigger {
+    width: unset;
+    height: unset;
+    color: $color-disabled;
+    background-color: unset;
+  }
+
+  .w-fit {
+    width: fit-content !important;
+  }
+
+  .payment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    .payment-content__section {
+      border: 1px solid $color-secondary;
+      border-radius: 10px;
+      padding: 20px;
+
+      .form-group {
+        margin-bottom: 15px;
+        &:last-child,
+        &:only-child {
+          margin-bottom: 0;
+        }
+        &.form-group__muted-labels label {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          padding: 3px 0;
+          color: $color-grey;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.3;
+          letter-spacing: 0;
+        }
+
+        &:has(input:disabled),
+        &:has(select:disabled) {
+          label {
+            color: $color-disabled;
+          }
+        }
+      }
+      &.simple-section {
+        padding: 0;
+        border: none;
+
+        .form-group {
+          margin: 0;
+        }
+      }
+
+      .horizontal-group {
+        display: grid;
+        grid-template-columns: 1fr 100px;
+        gap: 15px;
+      }
+      .horizontal-group-cols-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      ul.muted-text {
+        margin: 0;
+        padding-left: 15px;
+        color: $color-grey;
+        .unmuted-text {
+          color: black;
+        }
+      }
+
+      .payment-details__rows {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 15px;
+
+        .payment-details__rows-item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+    .payment-content__section-label {
+      margin-bottom: 15px;
+    }
+  }
+
+  .cc-selector-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .drinkcard-cc {
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color-secondary;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    background-size: auto;
+    background-repeat: unset;
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s;
+
+    &:has(input[type="radio"]:checked) {
+      background-color: $color-secondary;
+
+      .drinkcard-cc-img {
+        background-color: $color-white;
+      }
+    }
+
+    .payment-radio {
+      margin: 0;
+      position: absolute;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-grey;
+      border-radius: 50%;
+      padding: 3px;
+
+      transition: border-color 0.3s;
+      &::after {
+        content: "";
+        transition: background-color 0.3s;
+      }
+
+      &:has(input[type="radio"]:checked) {
+        border-color: $color-primary;
+        &::after {
+          display: flex;
+          border-radius: 50%;
+          background-color: $color-primary;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      input[type="radio"] {
+        visibility: hidden;
+      }
+    }
+
+    .drinkcard-cc-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      background-color: $color-surface;
+      margin-bottom: 15px;
+      transition: background-color 0.3s;
+    }
+    .drinkcard-cc-name {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .drinkcard-cc-desc {
+      color: $color-grey;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+  }
+
+  // Details and confirmition block
+  .payment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 30px;
+
+    h3 {
+      margin: 0;
+    }
+
+    p.text-muted {
+      font-size: 14px;
+      line-height: 130%;
+      margin: 0;
+    }
+  }
+  .payment-data {
+    .payment-data__field {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid $color-secondary;
+
+      span {
+        &:first-child {
+          color: $color-grey;
+        }
+
+        &:last-child {
+          font-weight: 700;
+        }
+      }
+    }
+    .payment-data__field-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: $color-surface;
+      font-weight: 700;
+    }
+  }
+  .payment-reaction {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .btn {
+      justify-content: center;
+    }
+  }
+}

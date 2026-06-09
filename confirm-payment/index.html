@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Подтверждение и оплата</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"
+      integrity="sha512-sM9DpZQXHGs+rFjJYXE1OcuCviEgaXoQIvgsH7nejZB64A09lKeTU4nrs/K6YxFs6f+9FF2awNeJTkaLuplBhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css"
+      integrity="sha512-Ujn3LMQ8mHWqy7EPP32eqGKBhBU8v39JRIfCer4nTZqlsSZIwy5g3Wz9SaZrd6pp3vmjI34yyzguZ2KQ66CLSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/common/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/common/font-open-sans.css" />
+    <link rel="stylesheet" href="css/common/application.css" />
+
+    <link rel="stylesheet" href="css/common/_header.css" />
+    <link rel="stylesheet" href="css/common/style.css" />
+    <link rel="stylesheet" href="css/common/_icons.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/bootstrap.js"></script>
+    <script defer src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script defer src="js/custom-select-2.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+
+  <body style="background-color: #f6f7f9">
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-left navbar-nav">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#chevron-d"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Новостройки"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#new"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
+                </svg>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
+                </svg>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="loaded sidenav">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <svg class="icon-map-small">
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
+                        </svg>
+                        Москва
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#chevron-d"></use>
+                        </svg>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- <li>
+                    <a
+                      title="Подписки о новых объявлениях"
+                      href="https://olan.ru/searches"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#search"></use>
+                      </svg>
+                      <span class="hidden-lg hidden-md hidden-sm">
+                        Подписки о новых объявлениях</span
+                      ></a
+                    >
+                  </li> -->
+                  <li class="dropdown nav notepads_block_action">
+                    <a href="https://olan.ru/notepads" title="Избранные"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                      </svg>
+                      <span class="hidden-lg hidden-md hidden-sm"> Избранные</span
+                      ><span class="badge">6</span></a
+                    >
+                  </li>
+                  <li class="dropdown nav notepads_block_action">
+                    <a href="https://olan.ru/notepads" title="Избранные"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#message"></use>
+                      </svg>
+                      <span class="hidden-lg hidden-md hidden-sm"> Сообщения</span
+                      ><span class="badge">1</span></a
+                    >
+                  </li>
+                  <li class="dropdown nav">
+                    <a title="Мои объявления" href="/cabinet"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#list"></use>
+                      </svg>
+                      <span class="hidden-sm">Мои объявления</span><span class="hidden-sm"></span
+                      ><span class="badge">4</span></a
+                    >
+                  </li>
+                  <li class="dropdown nav">
+                    <a title="Мои объявления" href="/cabinet"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#comm"></use>
+                      </svg>
+                      <span class="hidden-sm">Бронирования</span><span class="hidden-sm"></span
+                    ></a>
+                  </li>
+                  <li class="dropdown nav">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#registration"></use></svg
+                      ><span class="hidden-sm"> Степан Бушуев</span
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-d"></use></svg
+                    ></a>
+                    <ul class="dropdown-menu sub-menu">
+                      <li>
+                        <a href="https://olan.ru/balance"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#balance"></use>
+                          </svg>
+                          Баланс
+                          <strong>0,00 </strong>
+                          <span class="balance-currency">₽</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/payments"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#service"></use>
+                          </svg>
+                          Подключенные услуги</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/phone_calls"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#phone"></use>
+                          </svg>
+                          Звонки</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/rent-calendar"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#calendar"></use>
+                          </svg>
+                          Календарь бронирования</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/users-edit"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#setting"></use>
+                          </svg>
+                          Настройки</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          data-no-turbolink="true"
+                          rel="nofollow"
+                          data-method="delete"
+                          href="/sign-out"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#logout"></use>
+                          </svg>
+                          Выход</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="nav-font-color navbar-btn">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#estate"></use>
+                      </svg>
+                      Недвижимость</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/mortgage"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/new-complex-total"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#new"></use>
+                      </svg>
+                      Новостройки</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/new-cottage-total"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/tariffs"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#tarif"></use>
+                      </svg>
+                      Тарифы</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/xml"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#pocket"></use>
+                      </svg>
+                      Пакетная загрузка</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/advertise"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#adv"></use>
+                      </svg>
+                      Реклама на сайте</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <!-- This container use for example -->
+    <div class="container">
+      <h1>Подтверждение и оплата</h1>
+      <form
+        class="payment_form"
+        role="form"
+        data-not-disable-submit="true"
+        action="/payments"
+        accept-charset="UTF-8"
+        method="post"
+        novalidate="novalidate"
+      >
+        <div class="payment">
+          <div class="payment-content">
+            <div class="payment-content__section"></div>
+            <!-- taked from https://dev.olan.ru/balance -->
+            <div class="payment-content__section simple-section">
+              <fieldset>
+                <h2 class="payment-content__section-label">Способ оплаты</h2>
+                <div class="form-group has-feedback">
+                  <div class="cc-selector-2">
+                    <label class="drinkcard-cc payment_method_action" for="bank_card_cloudpayments">
+                      <div class="payment-radio">
+                        <input
+                          id="bank_card_cloudpayments"
+                          name="payment_method[method]"
+                          type="radio"
+                          value="bank_card_cloudpayments"
+                          data-fv-field="payment_method[method]"
+                        />
+                      </div>
+                      <div class="drinkcard-cc-img">
+                        <img src="./img/methods/card.png" alt="card" />
+                      </div>
+                      <div class="drinkcard-cc-name">Банковская карта</div>
+                      <div class="drinkcard-cc-desc">Карты РФ</div>
+                    </label>
+                    <label class="drinkcard-cc payment_method_action" for="sbp">
+                      <div class="payment-radio">
+                        <input
+                          id="sbp"
+                          name="payment_method[method]"
+                          type="radio"
+                          value="sbp"
+                          data-fv-field="payment_method[method]"
+                        />
+                      </div>
+                      <div class="drinkcard-cc-img">
+                        <img src="./img/methods/sbp.png" alt="spb" />
+                      </div>
+                      <div class="drinkcard-cc-name">СБП</div>
+                      <div class="drinkcard-cc-desc">Приложение банка</div>
+                    </label>
+                    <label class="drinkcard-cc payment_method_action" for="yoo_money">
+                      <div class="payment-radio">
+                        <input
+                          id="yoo_money"
+                          name="payment_method[method]"
+                          type="radio"
+                          value="yoo_money"
+                          data-fv-field="payment_method[method]"
+                        />
+                      </div>
+                      <div class="drinkcard-cc-img">
+                        <img src="./img/methods/yoomoney.png" alt="yoomoney" />
+                      </div>
+                      <div class="drinkcard-cc-name">ЮMoney</div>
+                      <div class="drinkcard-cc-desc">Электронные платежи</div>
+                    </label>
+                    <label class="drinkcard-cc payment_method_action" for="webmoney">
+                      <div class="payment-radio">
+                        <input
+                          id="webmoney"
+                          name="payment_method[method]"
+                          type="radio"
+                          value="webmoney"
+                          data-fv-field="payment_method[method]"
+                        />
+                      </div>
+                      <div class="drinkcard-cc-img">
+                        <img src="./img/methods/webmoney.png" alt="webmoney" />
+                      </div>
+                      <div class="drinkcard-cc-name">WebMoney</div>
+                      <div class="drinkcard-cc-desc">Электронные платежи</div>
+                    </label>
+                    <label class="drinkcard-cc payment_method_action" for="sberbank">
+                      <div class="payment-radio">
+                        <input
+                          id="sberbank"
+                          name="payment_method[method]"
+                          type="radio"
+                          value="sberbank"
+                          data-fv-field="payment_method[method]"
+                        />
+                      </div>
+                      <div class="drinkcard-cc-img">
+                        <img src="./img/methods/sber.png" alt="sber" />
+                      </div>
+                      <div class="drinkcard-cc-name">Сбербанк Онлайн</div>
+                      <div class="drinkcard-cc-desc">Приложение банка</div>
+                    </label>
+                    <label class="drinkcard-cc payment_method_action" for="tinkoff_bank">
+                      <div class="payment-radio">
+                        <input
+                          id="tinkoff_bank"
+                          name="payment_method[method]"
+                          type="radio"
+                          value="tinkoff_bank"
+                          data-fv-field="payment_method[method]"
+                        />
+                      </div>
+                      <div class="drinkcard-cc-img">
+                        <img src="./img/methods/tbank.png" alt="tbank" />
+                      </div>
+                      <div class="drinkcard-cc-name">Тинькофф банк</div>
+                      <div class="drinkcard-cc-desc">Приложение банка</div>
+                    </label>
+                    <label class="drinkcard-cc payment_method_action" for="cash">
+                      <div class="payment-radio">
+                        <input
+                          id="cash"
+                          name="payment_method[method]"
+                          type="radio"
+                          value="cash"
+                          data-fv-field="payment_method[method]"
+                        />
+                      </div>
+                      <div class="drinkcard-cc-img">
+                        <img src="./img/methods/cash.png" alt="cash" />
+                      </div>
+                      <div class="drinkcard-cc-name">Через терминал</div>
+                      <div class="drinkcard-cc-desc">Наличными оффлайн</div>
+                    </label>
+                  </div>
+                  <small
+                    style="display: none"
+                    class="help-block"
+                    data-fv-validator="callback"
+                    data-fv-for="payment_method[method]"
+                    data-fv-result="NOT_VALIDATED"
+                  >
+                    Пожалуйста, выберите способ оплаты
+                  </small>
+                </div>
+                <div class="form-group qiwi_phone_action hidden has-feedback">
+                  <label class="control-label col-sm-3"
+                    ><i class="fas fa-mobile-alt"></i> Qiwi Кошелек</label
+                  >
+                  <div class="col-sm-4">
+                    <input
+                      type="text"
+                      name="payment_method[qiwi_phone]"
+                      id="payment_method_qiwi_phone"
+                      class="form-control"
+                      placeholder="+7(987)6543210"
+                      autocomplete="off"
+                      data-fv-field="payment_method[qiwi_phone]"
+                    /><i
+                      style="display: none"
+                      class="form-control-feedback"
+                      data-fv-icon-for="payment_method[qiwi_phone]"
+                    ></i
+                    ><small
+                      style="display: none"
+                      class="help-block"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="payment_method[qiwi_phone]"
+                      data-fv-result="NOT_VALIDATED"
+                      >Пожалуйста, введите Qiwi Кошелек</small
+                    ><small
+                      style="display: none"
+                      class="help-block"
+                      data-fv-validator="phone"
+                      data-fv-for="payment_method[qiwi_phone]"
+                      data-fv-result="NOT_VALIDATED"
+                      >Пожалуйста, введите телефон с кодом города/сети</small
+                    >
+                  </div>
+                </div>
+                <div class="form-group alfabank_login_action hidden has-feedback">
+                  <label class="control-label col-sm-3"
+                    ><i class="fas fa-user"></i> Альфа-Клик логин</label
+                  >
+                  <div class="col-sm-4">
+                    <input
+                      type="text"
+                      name="payment_method[alfabank_login]"
+                      id="payment_method_alfabank_login"
+                      class="form-control"
+                      placeholder="79990000000"
+                      autocomplete="off"
+                      data-fv-field="payment_method[alfabank_login]"
+                    /><i
+                      style="display: none"
+                      class="form-control-feedback"
+                      data-fv-icon-for="payment_method[alfabank_login]"
+                    ></i
+                    ><small
+                      style="display: none"
+                      class="help-block"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="payment_method[alfabank_login]"
+                      data-fv-result="NOT_VALIDATED"
+                      >Пожалуйста, введите Альфа-Клик логин</small
+                    >
+                  </div>
+                </div>
+                <div class="form-group mobile_balance_phone_action hidden has-feedback">
+                  <label class="control-label col-sm-3"
+                    ><i class="fas fa-user"></i> Номер телефона</label
+                  >
+                  <div class="col-sm-4">
+                    <input
+                      type="text"
+                      name="payment_method[mobile_balance_phone]"
+                      id="payment_method_mobile_balance_phone"
+                      value="+77055598146"
+                      class="form-control"
+                      placeholder="79990000000"
+                      autocomplete="off"
+                      data-fv-field="payment_method[mobile_balance_phone]"
+                    /><i
+                      style="display: none"
+                      class="form-control-feedback"
+                      data-fv-icon-for="payment_method[mobile_balance_phone]"
+                    ></i
+                    ><small
+                      style="display: none"
+                      class="help-block"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="payment_method[mobile_balance_phone]"
+                      data-fv-result="NOT_VALIDATED"
+                      >Пожалуйста, введите номер телефона для платежей</small
+                    >
+                  </div>
+                </div>
+                <div class="form-group card_binding_id_action hidden">
+                  <input
+                    type="hidden"
+                    name="card_count"
+                    id="card_count"
+                    value="0"
+                    disabled="disabled"
+                  />
+                  <div class="col-sm-4 col-sm-offset-3">
+                    <div class="checkbox">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="payment_method[use_card_binding_id]"
+                          id="payment_method_use_card_binding_id"
+                          value="true"
+                          checked="checked"
+                        />
+                        Запомнить карту для последующих оплат
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="payment-content__section">
+              <h2 class="payment-content__section-label">Детали бронирования</h2>
+              <div class="form-group form-group__muted-labels">
+                <label for="advertisement_checkin_date">Заезд</label>
+                <div class="horizontal-group">
+                  <div class="date-picker-input">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#calendar"></use>
+                    </svg>
+                    <input
+                      type="text"
+                      class="form-control datepicker-here"
+                      id="advertisement_checkin_date"
+                      name="advertisement_checkin_date"
+                      placeholder="Выберите"
+                      data-position="bottom left"
+                      data-auto-close="true"
+                    />
+                  </div>
+                  <select
+                    class="select2-custom"
+                    name="advertisement[checkin_time]"
+                    id="advertisement_checkin_time"
+                    data-fv-field="advertisement[checkin_time]"
+                  >
+                    <option value="01_00">01:00</option>
+                    <option value="02_00">02:00</option>
+                    <option value="03_00">03:00</option>
+                    <option value="04_00">04:00</option>
+                    <option value="05_00">05:00</option>
+                    <option value="06_00">06:00</option>
+                    <option value="07_00">07:00</option>
+                    <option value="08_00">08:00</option>
+                    <option value="09_00">09:00</option>
+                    <option value="10_00">10:00</option>
+                    <option value="11_00">11:00</option>
+                    <option value="12_00">12:00</option>
+                    <option value="13_00">13:00</option>
+                    <option value="14_00" selected>14:00</option>
+                    <option value="15_00">15:00</option>
+                    <option value="16_00">16:00</option>
+                    <option value="17_00">17:00</option>
+                    <option value="18_00">18:00</option>
+                    <option value="19_00">19:00</option>
+                    <option value="20_00">20:00</option>
+                    <option value="21_00">21:00</option>
+                    <option value="22_00">22:00</option>
+                    <option value="23_00">23:00</option>
+                    <option value="24_00">24:00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group form-group__muted-labels">
+                <label for="advertisement_checkout_date">Выезд</label>
+                <div class="horizontal-group">
+                  <div class="date-picker-input">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/icons.svg#calendar"></use>
+                    </svg>
+                    <input
+                      type="text"
+                      class="form-control datepicker-here"
+                      id="advertisement_checkout_date"
+                      name="advertisement_checkout_date"
+                      placeholder="Выберите"
+                      data-position="bottom right"
+                      data-auto-close="true"
+                    />
+                  </div>
+                  <select
+                    class="select2-custom"
+                    name="advertisement[checkout_time]"
+                    id="advertisement_checkout_time"
+                    data-fv-field="advertisement[checkout_time]"
+                  >
+                    <option value="01_00">01:00</option>
+                    <option value="02_00">02:00</option>
+                    <option value="03_00">03:00</option>
+                    <option value="04_00">04:00</option>
+                    <option value="05_00">05:00</option>
+                    <option value="06_00">06:00</option>
+                    <option value="07_00">07:00</option>
+                    <option value="08_00">08:00</option>
+                    <option value="09_00">09:00</option>
+                    <option value="10_00">10:00</option>
+                    <option value="11_00">11:00</option>
+                    <option value="12_00">12:00</option>
+                    <option value="13_00">13:00</option>
+                    <option value="14_00" selected>14:00</option>
+                    <option value="15_00">15:00</option>
+                    <option value="16_00">16:00</option>
+                    <option value="17_00">17:00</option>
+                    <option value="18_00">18:00</option>
+                    <option value="19_00">19:00</option>
+                    <option value="20_00">20:00</option>
+                    <option value="21_00">21:00</option>
+                    <option value="22_00">22:00</option>
+                    <option value="23_00">23:00</option>
+                    <option value="24_00">24:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="payment-content__section">
+              <h2 class="payment-content__section-label">Гости</h2>
+            </div>
+            <div class="payment-content__section">
+              <h2 class="payment-content__section-label">Контактные данные</h2>
+              <div class="horizontal-group-cols-2">
+                <div class="form-group form-group__muted-labels has-feedback">
+                  <label class="control-label" for="deposit">Имя</label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      name="advertisement[deposit]"
+                      id="advertisement_deposit"
+                      class="form-control"
+                      autocomplete="off"
+                      data-fv-field="advertisement[deposit]"
+                      placeholder="Введите имя"
+                      value="Степан"
+                    />
+                    <small
+                      class="help-block hidden"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="advertisement[deposit]"
+                      data-fv-result="VALID"
+                    >
+                      Пожалуйста, введите имя
+                    </small>
+                  </div>
+                </div>
+                <div class="form-group form-group__muted-labels has-feedback">
+                  <label class="control-label" for="deposit">Фамилия</label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      name="advertisement[deposit]"
+                      id="advertisement_deposit"
+                      class="form-control"
+                      autocomplete="off"
+                      data-fv-field="advertisement[deposit]"
+                      placeholder="Введите фамилию"
+                      value="Бушуев"
+                    />
+                    <small
+                      class="help-block hidden"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="advertisement[deposit]"
+                      data-fv-result="VALID"
+                    >
+                      Пожалуйста, введите фамилию
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="horizontal-group-cols-2">
+                <div class="form-group form-group__muted-labels has-feedback">
+                  <label class="control-label" for="advertisement_phone"
+                    >Телефон для бронирования</label
+                  >
+                  <div class="controls">
+                    <select
+                      class="select2-custom"
+                      name="advertisement[phone]"
+                      id="advertisement_phone"
+                      data-fv-field="advertisement[phone]"
+                      disabled
+                    >
+                      <option value="01_00" selected>+7 900 000 00 00</option>
+                    </select>
+                    <small
+                      class="help-block hidden"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="advertisement[phone]"
+                      data-fv-result="VALID"
+                    >
+                      Пожалуйста, выберите телефон для бронирования
+                    </small>
+                  </div>
+                </div>
+                <div class="form-group form-group__muted-labels has-feedback">
+                  <label class="control-label" for="advertisement_email">
+                    e-mail
+                    <div class="tooltip-container">
+                      <div class="tooltip-trigger">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#info-square"></use>
+                        </svg>
+                      </div>
+                      <div class="tooltip-content">
+                        <p>e-mail</p>
+                      </div>
+                    </div>
+                  </label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      name="advertisement[e-mail]"
+                      id="advertisement_email"
+                      class="form-control"
+                      autocomplete="off"
+                      data-fv-field="advertisement[e-mail]"
+                      placeholder="olan@olan.ru"
+                    />
+                    <small
+                      class="help-block hidden"
+                      data-fv-validator="notEmpty"
+                      data-fv-for="advertisement[e-mail]"
+                      data-fv-result="VALID"
+                    >
+                      Пожалуйста, введите e-mail
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment-content__section">
+              <h2 class="payment-content__section-label">Правила проживания</h2>
+              <div class="payment-details__rows">
+                <div class="payment-details__rows-item">
+                  Страховой депозит - 1 000 руб
+                  <div class="tooltip-container">
+                    <div class="tooltip-trigger">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#info-square"></use>
+                      </svg>
+                    </div>
+                    <div class="tooltip-content">
+                      <p>
+                        Если от бронирования до заселения меньше указанного времени, вы получите
+                        оповещение о запросе
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="payment-details__rows-item">Можно с детьми</div>
+                <div class="payment-details__rows-item">Курение запрещено</div>
+              </div>
+              <a href="#" class="btn btn-default w-fit">Все правила</a>
+            </div>
+            <div class="payment-content__section">
+              <h2 class="payment-content__section-label">Условия отмены</h2>
+              <ul class="muted-text">
+                <li>
+                  При отмене с <span class="unmuted-text">18 янв, сб</span> предоплата не
+                  возвращается
+                </li>
+                <li>
+                  30% от полной стоимости проживания — при отмене менее чем за 7 дней до заселения
+                </li>
+              </ul>
+            </div>
+            <div class="payment-content__section simple-section">
+              <h2 class="payment-content__section-label">Информация об арендодателе</h2>
+              <div class="payment-data">
+                <div class="payment-data__field">
+                  <span>Арендодатель</span>
+                  <span>собственник</span>
+                </div>
+                <div class="payment-data__field">
+                  <span>Дата регистрации</span>
+                  <span>01 янв 2025</span>
+                </div>
+                <div class="payment-data__field">
+                  <span>Отвечает на заявки</span>
+                  <span>всегда</span>
+                </div>
+                <div class="payment-data__field">
+                  <span>Среднее время отклика</span>
+                  <span>20 минут</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Details and confirmition -->
+          <div class="payment-details">
+            <h3>Детали стоимости</h3>
+            <div class="payment-data">
+              <div class="payment-data__field-total">
+                <span>Стоимость за 1 сутки</span>
+                <span>2 500 руб</span>
+              </div>
+              <div class="payment-data__field">
+                <span>Предоплата</span>
+                <span>500 руб</span>
+              </div>
+              <div class="payment-data__field">
+                <span>Оплата при заселении</span>
+                <span>2 000 руб</span>
+              </div>
+            </div>
+            <div class="payment-reaction">
+              <button class="btn btn-primary" type="submit">Внести предоплату 500 руб</button>
+              <button class="btn btn-default" type="reset">Отменить бронирование</button>
+            </div>
+            <p class="text-muted">
+              Нажимая кнопку «Внести предоплату 500 руб», я даю своё согласие на обработку моих
+              персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ
+              «О персональных данных», на условиях и для целей, определенных Политикой
+              конфиденциальности.
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2025</div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
