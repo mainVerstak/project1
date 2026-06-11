@@ -39,16 +39,17 @@
     align-items: center;
     gap: 15px;
 
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: start;
+    }
+
     .payment-object-img {
       width: 100px;
       height: 70px;
       background-color: $color-grey;
       border-radius: 5px;
       overflow: hidden;
-
-      @media (max-width: 767px) {
-        display: none;
-      }
 
       img {
         width: 100%;

@@ -47,6 +47,27 @@
     ></script>
     <script defer src="js/custom-select-2.js"></script>
     <script defer src="js/script.js"></script>
+    <style>
+      .btn-phone-floating {
+        display: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        .btn-phone-floating {
+          display: flex;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+          transition: 0.4s;
+          padding: 0 16px 20px;
+          width: 100%;
+        }
+      }
+    </style>
   </head>
 
   <body style="background-color: #f6f7f9">
@@ -386,34 +407,21 @@
                     id="payment_method"
                     data-fv-field="payment_method[method]"
                   >
-                    <option value="card" selected>
-                      <div><img src="./img/methods/card.png" alt="card" /></div>
+                    <option value="card" data-image="./img/methods/card.png" selected>
                       Банковская карта
                     </option>
-                    <option value="spb">
-                      <div><img src="./img/methods/sbp.png" alt="spb" /></div>
-                      СПБ
-                    </option>
-                    <option value="yoo_money">
-                      <div><img src="./img/methods/yoomoney.png" alt="yoomoney" /></div>
+                    <option value="spb" data-image="./img/methods/sbp.png">СПБ</option>
+                    <option value="yoo_money" data-image="./img/methods/yoomoney.png">
                       ЮMoney
                     </option>
-                    <option value="webmoney">
-                      <div><img src="./img/methods/webmoney.png" alt="webmoney" /></div>
+                    <option value="webmoney" data-image="./img/methods/webmoney.png">
                       WebMoney
                     </option>
-                    <option value="sber">
-                      <div><img src="./img/methods/sber.png" alt="sber" /></div>
+                    <option value="sber" data-image="./img/methods/sber.png">
                       Сбербанк Онлайн
                     </option>
-                    <option value="tbank">
-                      <div><img src="./img/methods/tbank.png" alt="tbank" /></div>
-                      Т банк
-                    </option>
-                    <option value="cash">
-                      <div><img src="./img/methods/cash.png" alt="cash" /></div>
-                      Через терминал
-                    </option>
+                    <option value="tbank" data-image="./img/methods/tbank.png">Т банк</option>
+                    <option value="cash" data-image="./img/methods/cash.png">Через терминал</option>
                   </select>
                 </div>
                 <div class="form-group hide-mobile has-feedback">
@@ -1254,5 +1262,25 @@
     </div>
 
     <div class="modal-backdrop" style="display: none"></div>
+
+    <div class="btn-phone-floating">
+      <script>
+        //<![CDATA[
+        require(["application_module"], function () {
+          require(["adv_show_module"]);
+        });
+        //]]>
+      </script>
+      <button
+        class="btn btn-info btn-phone-floating__btn js-floating-mobile-phone-block-required ShowAdvPhoneAction"
+        data-id="132137639"
+        style="width: 100%"
+      >
+        <svg class="icon-default">
+          <use xlink:href="./img/icons.svg#phone"></use>
+        </svg>
+        Показать телефон
+      </button>
+    </div>
   </body>
 </html>

@@ -5978,17 +5978,18 @@ footer {
   align-items: center;
   gap: 15px;
 }
+@media (max-width: 767px) {
+  .payment .payment-object {
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .payment .payment-object .payment-object-img {
   width: 100px;
   height: 70px;
   background-color: #8c91a6;
   border-radius: 5px;
   overflow: hidden;
-}
-@media (max-width: 767px) {
-  .payment .payment-object .payment-object-img {
-    display: none;
-  }
 }
 .payment .payment-object .payment-object-img img {
   width: 100%;
