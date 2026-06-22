@@ -8910,4 +8910,54 @@ footer {
   border: 1px solid #f6f7f9;
 }
 
+#unauthorizedArticleCommentModal .modal-body {
+  padding-bottom: 16px;
+}
+#unauthorizedArticleCommentModal .modal-body .form-group {
+  margin-bottom: 15px;
+}
+#unauthorizedArticleCommentModal .modal-body .f-recaptcha > div {
+  width: 100% !important;
+}
+#unauthorizedArticleCommentModal .modal-footer {
+  align-items: flex-start;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 0;
+  text-align: left;
+}
+#unauthorizedArticleCommentModal .modal-footer::before, #unauthorizedArticleCommentModal .modal-footer::after {
+  content: none;
+}
+#unauthorizedArticleCommentModal .modal-footer .btn.btn-primary {
+  align-items: center;
+  height: auto;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  white-space: normal;
+}
+#unauthorizedArticleCommentModal .modal-footer .help-block.small {
+  color: #8c91a6;
+  line-height: 1.3;
+  margin: 0;
+  max-width: 100%;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  #unauthorizedArticleCommentModal .modal-footer {
+    align-items: stretch;
+  }
+  #unauthorizedArticleCommentModal .modal-footer .btn.btn-primary {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */

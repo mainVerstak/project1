@@ -3657,3 +3657,64 @@ $color-blog-subscribe: #dfe9e0;
     }
   }
 }
+
+#unauthorizedArticleCommentModal {
+  .modal-body {
+    padding-bottom: 16px;
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .f-recaptcha > div {
+      width: 100% !important;
+    }
+  }
+
+  .modal-footer {
+    align-items: flex-start;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 0;
+    text-align: left;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    .btn.btn-primary {
+      align-items: center;
+      height: auto;
+      justify-content: center;
+      line-height: 1.25;
+      margin: 0;
+      max-width: 100%;
+      min-height: 44px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .help-block.small {
+      color: $color-grey;
+      line-height: 1.3;
+      margin: 0;
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .modal-footer {
+      align-items: stretch;
+
+      .btn.btn-primary {
+        width: 100%;
+      }
+    }
+  }
+}
