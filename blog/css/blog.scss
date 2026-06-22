@@ -30,9 +30,19 @@ $color-blog-subscribe: #dfe9e0;
       &:hover {
         color: $color-primary;
       }
+      &:visited {
+        color: $color-dark;
+        background-color: #fff;
+        border-color: $color-secondary;
+      }
     }
     &.btn-primary {
       color: #fff;
+      &:visited {
+        color: #fff;
+        background-color: $color-primary;
+        border-color: $color-primary;
+      }
     }
   }
 
@@ -3550,6 +3560,17 @@ $color-blog-subscribe: #dfe9e0;
             }
           }
         }
+      }
+    }
+  }
+}
+
+.article_user_like_modal_action {
+  #new_user {
+    .modal-footer {
+      flex-direction: column;
+      .btn {
+        justify-content: center;
       }
     }
   }
