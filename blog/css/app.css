@@ -5667,22 +5667,31 @@ footer {
 .blog a:hover {
   color: #2167b4;
 }
-.blog a.btn.btn-default {
+.blog .btn.btn-default {
   color: #242a3e;
 }
-.blog a.btn.btn-default:hover {
+.blog .btn.btn-default.active {
+  background-color: #ffffff;
+}
+.blog .btn.btn-default.active:hover {
+  background-color: #e6eff9;
+}
+.blog .btn.btn-default:hover {
   color: #084c95;
 }
-.blog a.btn.btn-default:visited {
+.blog .btn.btn-default:visited {
   color: #242a3e;
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #e6eff9;
 }
-.blog a.btn.btn-primary {
-  color: #fff;
+.blog .btn.btn-primary {
+  color: #ffffff;
 }
-.blog a.btn.btn-primary:visited {
-  color: #fff;
+.blog .btn.btn-primary.active {
+  background-color: #ffffff;
+}
+.blog .btn.btn-primary:visited {
+  color: #ffffff;
   background-color: #084c95;
   border-color: #084c95;
 }

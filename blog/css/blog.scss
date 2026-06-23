@@ -24,22 +24,31 @@ $color-blog-subscribe: #dfe9e0;
       color: $color-primary-hover;
     }
   }
-  a.btn {
+  .btn {
     &.btn-default {
       color: $color-dark;
+      &.active {
+        background-color: $color-white;
+        &:hover {
+          background-color: $color-secondary;
+        }
+      }
       &:hover {
         color: $color-primary;
       }
       &:visited {
         color: $color-dark;
-        background-color: #fff;
+        background-color: $color-white;
         border-color: $color-secondary;
       }
     }
     &.btn-primary {
-      color: #fff;
+      color: $color-white;
+      &.active {
+        background-color: $color-white;
+      }
       &:visited {
-        color: #fff;
+        color: $color-white;
         background-color: $color-primary;
         border-color: $color-primary;
       }
