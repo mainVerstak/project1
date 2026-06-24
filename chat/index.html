@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Чат</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"
+      integrity="sha512-sM9DpZQXHGs+rFjJYXE1OcuCviEgaXoQIvgsH7nejZB64A09lKeTU4nrs/K6YxFs6f+9FF2awNeJTkaLuplBhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css"
+      integrity="sha512-Ujn3LMQ8mHWqy7EPP32eqGKBhBU8v39JRIfCer4nTZqlsSZIwy5g3Wz9SaZrd6pp3vmjI34yyzguZ2KQ66CLSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/common/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/common/font-open-sans.css" />
+    <link rel="stylesheet" href="css/common/application.css" />
+
+    <link rel="stylesheet" href="css/common/_header.css" />
+    <link rel="stylesheet" href="css/common/style.css" />
+    <link rel="stylesheet" href="css/common/_icons.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="js/bootstrap.js"></script>
+    <script defer src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script defer src="js/custom-select-2.js"></script>
+    <script defer src="js/script.js"></script>
+    <style>
+      .btn-phone-floating {
+        display: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        .btn-phone-floating {
+          display: flex;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+          transition: 0.4s;
+          padding: 0 16px 20px;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #f6f7f9">
+    <header>
+      <div class="header-top-nav">
+        <div class="container">
+          <ul class="nav navbar-left navbar-nav">
+            <li>
+              <div class="dropdown header-city">
+                <div
+                  class="dropdown-toggle header-city-btn"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon-map-small">
+                    <use xlink:href="./img/icons.svg#placeholder"></use>
+                  </svg>
+                  Москва
+                  <svg class="icon-default">
+                    <use xlink:href="./img/icons.svg#chevron-d"></use>
+                  </svg>
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Москва</a></li>
+                  <li><a href="#">Москва2</a></li>
+                  <li><a href="#">Москва3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a
+                class="yaSend"
+                href="/documents"
+                title="Новостройки"
+                yaparam="header_document_click"
+              >
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#new"></use>
+                </svg>
+                Новостройки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile">
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#house"></use>
+                </svg>
+                Коттеджные поселки
+              </a>
+            </li>
+            <li class="navbar-nav__hide-mobile" i>
+              <a href="#">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#mortgage"></use>
+                </svg>
+                Ипотека
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle sidenav-button" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#sandwich"></use>
+                </svg>
+              </button>
+              <span class="pull-left">
+                <a class="navbar-brand" href="/">
+                  <img src="img/logo.svg" class="navbar-brand__logo" />
+                </a>
+              </span>
+            </div>
+            <nav class="loaded sidenav">
+              <div class="sidenav__inner">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="sidenav__hide-desktop">
+                    <div class="dropdown header-city">
+                      <div
+                        class="dropdown-toggle header-city-btn"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <svg class="icon-map-small">
+                          <use xlink:href="./img/icons.svg#placeholder"></use>
+                        </svg>
+                        Москва
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#chevron-d"></use>
+                        </svg>
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва2</a></li>
+                        <li><a href="#">Москва3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- <li>
+                    <a
+                      title="Подписки о новых объявлениях"
+                      href="https://olan.ru/searches"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#search"></use>
+                      </svg>
+                      <span class="hidden-lg hidden-md hidden-sm">
+                        Подписки о новых объявлениях</span
+                      ></a
+                    >
+                  </li> -->
+                  <li class="dropdown nav notepads_block_action">
+                    <a href="https://olan.ru/notepads" title="Избранные"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                      </svg>
+                      <span class="hidden-lg hidden-md hidden-sm"> Избранные</span
+                      ><span class="badge">6</span></a
+                    >
+                  </li>
+                  <li class="dropdown nav notepads_block_action">
+                    <a href="https://olan.ru/notepads" title="Избранные"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#message"></use>
+                      </svg>
+                      <span class="hidden-lg hidden-md hidden-sm"> Сообщения</span
+                      ><span class="badge">1</span></a
+                    >
+                  </li>
+                  <li class="dropdown nav">
+                    <a title="Мои объявления" href="/cabinet"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#list"></use>
+                      </svg>
+                      <span class="hidden-sm">Мои объявления</span><span class="hidden-sm"></span
+                      ><span class="badge">4</span></a
+                    >
+                  </li>
+                  <li class="dropdown nav">
+                    <a title="Мои объявления" href="/cabinet"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#comm"></use>
+                      </svg>
+                      <span class="hidden-sm">Бронирования</span><span class="hidden-sm"></span
+                    ></a>
+                  </li>
+                  <li class="dropdown nav">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#registration"></use></svg
+                      ><span class="hidden-sm"> Степан Бушуев</span
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-d"></use></svg
+                    ></a>
+                    <ul class="dropdown-menu sub-menu">
+                      <li>
+                        <a href="https://olan.ru/balance"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#balance"></use>
+                          </svg>
+                          Баланс
+                          <strong>0,00 </strong>
+                          <span class="balance-currency">₽</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/payments"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#service"></use>
+                          </svg>
+                          Подключенные услуги</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/phone_calls"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#phone"></use>
+                          </svg>
+                          Звонки</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/rent-calendar"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#calendar"></use>
+                          </svg>
+                          Календарь бронирования</a
+                        >
+                      </li>
+                      <li>
+                        <a href="https://olan.ru/users-edit"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#setting"></use>
+                          </svg>
+                          Настройки</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          data-no-turbolink="true"
+                          rel="nofollow"
+                          data-method="delete"
+                          href="/sign-out"
+                          ><svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#logout"></use>
+                          </svg>
+                          Выход</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav navbar-nav">
+                    <div class="nav-font-color navbar-btn">
+                      <a data-no-turbolink="true" href="/estate-new">
+                        <div class="btn btn-warning">
+                          <svg class="icon-default">
+                            <use xlink:href="./img/icons.svg#plus"></use>
+                          </svg>
+                          Подать объявление
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#estate"></use>
+                      </svg>
+                      Недвижимость</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/mortgage"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#mortgage"></use>
+                      </svg>
+                      Ипотека</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/new-complex-total"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#new"></use>
+                      </svg>
+                      Новостройки</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/new-cottage-total"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#house"></use>
+                      </svg>
+                      Коттеджные поселки</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/tariffs"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#tarif"></use>
+                      </svg>
+                      Тарифы</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/xml"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#pocket"></use>
+                      </svg>
+                      Пакетная загрузка</a
+                    >
+                  </li>
+                  <li class="sidenav__hide-desktop">
+                    <a href="https://olan.ru/advertise"
+                      ><svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#adv"></use>
+                      </svg>
+                      Реклама на сайте</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <button aria-label="Close" class="navbar-toggle sidenav__close" type="button">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </button>
+            </nav>
+            <div class="sidenav-overlay"></div>
+          </div>
+        </div>
+        <div class="notifications top-right"></div>
+      </div>
+    </header>
+    <!-- NOTE: No copy inline style -->
+    <div class="container" style="height: 80%">
+      <h1>Чат</h1>
+      <!-- Main content -->
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <footer class="footer">
+            <div class="footer__inner">
+              <div class="footer__left">
+                <div class="footer__copy">© 2007–2025</div>
+                <div class="footer__left-text">Электронная база недвижимости</div>
+              </div>
+              <nav class="footer__nav">
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Правила и условия</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/terms"
+                        >Условия предоставления услуг</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/offer">Оферта</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/privacy"
+                        >Политика конфиденциальности</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/rules">Правила</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/recommendation-technologies"
+                        >Рекомендательные технологии</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Пользователям</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/xml">Пакетная загрузка</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/tariffs">Тарифы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/payment">Способы оплаты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/advertise"
+                        >Реклама на сайте</a
+                      >
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/deletion"
+                        >Удаление объявлений</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav-column">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item footer__nav-item-title">Общая информация</li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="https://olan.ru/about">О проекте</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a class="footer__nav-link" href="/contacts">Техподдержка сайта</a>
+                    </li>
+                  </ul>
+                  <div class="footer__social hidden">
+                    <div class="footer__social-text">В соцсетях:</div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </footer>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal chat" id="chat" aria-hidden="false">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal" type="button" onclick="_hideModal('chat')">
+              <span aria-hidden="true">
+                <svg class="icon-default">
+                  <use xlink:href="./img/icons.svg#cross"></use>
+                </svg>
+              </span>
+              <span class="sr-only">Закрыть</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="chat-list">
+              <div class="chat-list-content">
+                <div class="chat-list-item message-preview selected">
+                  <div class="message-preview-img">
+                    <img src="./img/img.jpg" alt="img" />
+                  </div>
+                  <div class="message-preview-content">
+                    <div class="message-preview-title">
+                      <h3>1-комнатная 35.0 м² этаж 1/9</h3>
+                      <div class="message-preview-info">
+                        <span class="message-preview-time">12:00</span>
+                        <span class="message-preview-badge">2</span>
+                      </div>
+                    </div>
+                    <div class="message-preview-description">г Москва, метро Молодежная</div>
+                    <div class="message-preview-status invalid">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/chat-icons.svg#card"></use>
+                      </svg>
+                      Ожидает оплаты
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-list-item message-preview">
+                  <div class="message-preview-img">
+                    <img src="./img/img.jpg" alt="img" />
+                  </div>
+                  <div class="message-preview-content">
+                    <div class="message-preview-title">
+                      <h3>Жалоба на объявление</h3>
+                      <div class="message-preview-info">
+                        <span class="message-preview-time">25 окт 2025</span>
+                        <span class="message-preview-badge">12</span>
+                      </div>
+                    </div>
+                    <div class="message-preview-description">
+                      Текст сообщения в техподдержку, в одну строку
+                    </div>
+                    <div class="message-preview-status primary">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/chat-icons.svg#wait"></use>
+                      </svg>
+                      на рассмотрении
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-list-item message-preview">
+                  <div class="message-preview-img">
+                    <img src="./img/img.jpg" alt="img" />
+                  </div>
+                  <div class="message-preview-content">
+                    <div class="message-preview-title">
+                      <h3>Квартира</h3>
+                      <div class="message-preview-info">
+                        <span class="message-preview-time">5 окт 2025</span>
+                        <span class="message-preview-badge">1</span>
+                      </div>
+                    </div>
+                    <div class="message-preview-description">
+                      г Москва, пр-кт Мира, 182, муниципальный округ Алексеевский
+                    </div>
+                    <div class="message-preview-status valid">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/chat-icons.svg#active"></use>
+                      </svg>
+                      активно
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-list-item message-preview completed">
+                  <div class="message-preview-img">
+                    <img src="./img/img.jpg" alt="img" />
+                  </div>
+                  <div class="message-preview-content">
+                    <div class="message-preview-title">
+                      <h3>Объявление</h3>
+                      <div class="message-preview-info">
+                        <span class="message-preview-time">4 окт 2025</span>
+                      </div>
+                    </div>
+                    <div class="message-preview-description">
+                      квартал, улица, район, область, округ, Город, направление, шоссе
+                    </div>
+                    <div class="message-preview-status muted">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/chat-icons.svg#cancel"></use>
+                      </svg>
+                      Вы отменили бронь
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-list-item message-preview">
+                  <div class="message-preview-img">
+                    <img src="./img/img.jpg" alt="img" />
+                  </div>
+                  <div class="message-preview-content">
+                    <div class="message-preview-title">
+                      <h3>2-комнатная 40.0 м² этаж 7/9 метро Молодежная</h3>
+                      <div class="message-preview-info">
+                        <span class="message-preview-time">1 окт 2025</span>
+                      </div>
+                    </div>
+                    <div class="message-preview-description">
+                      квартал, улица, район, область, округ, Город, направление, шоссе
+                    </div>
+                    <div class="message-preview-status primary">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/chat-icons.svg#message"></use>
+                      </svg>
+                      Ожидает оценки
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-list-item message-preview completed">
+                  <div class="message-preview-img">
+                    <img src="./img/img.jpg" alt="img" />
+                  </div>
+                  <div class="message-preview-content">
+                    <div class="message-preview-title">
+                      <h3>Объявление</h3>
+                      <div class="message-preview-info">
+                        <span class="message-preview-time">12 мар 2025</span>
+                      </div>
+                    </div>
+                    <div class="message-preview-description">
+                      квартал, улица, район, область, округ, Город, направление, шоссе
+                    </div>
+                    <div class="message-preview-status muted">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/chat-icons.svg#archive"></use>
+                      </svg>
+                      Завершено
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-list-item message-preview completed">
+                  <div class="message-preview-img">
+                    <img src="./img/img.jpg" alt="img" />
+                  </div>
+                  <div class="message-preview-content">
+                    <div class="message-preview-title">
+                      <h3>Сообщение об ошибке</h3>
+                      <div class="message-preview-info">
+                        <span class="message-preview-time">1 янв 2025</span>
+                      </div>
+                    </div>
+                    <div class="message-preview-description">
+                      Текст сообщения в техподдержку, в одну строку
+                    </div>
+                    <div class="message-preview-status muted">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/chat-icons.svg#archive"></use>
+                      </svg>
+                      Завершено
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-list-pagination js-row-pagination">
+                <ul class="pagination pagination-lg">
+                  <li>
+                    <a data-remote="" href="/blog/index.html">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-l"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li><a data-remote="" href="/blog/index.html">1</a></li>
+                  <li class="active">
+                    <a href="/blog?page=2">2</a>
+                  </li>
+                  <li><a data-remote="" href="#">3</a></li>
+                  <li><a href="">...</a></li>
+                  <li><a data-remote="" href="#">9</a></li>
+                  <li>
+                    <a data-remote="" href="#">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/icons.svg#chevron-r"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="chat-body">
+              <div class="chat-body-header">
+                <div class="chat-body-header-info">
+                  <div class="chat-body-header-info-title">1-комнатная 35.0 м² этаж 1/9</div>
+                  <div class="chat-body-header-info-description">г Москва, метро Молодежная</div>
+                </div>
+                <div class="chat-body-header-actions">
+                  <button class="btn btn-default">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/chat-icons.svg#info"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn-default">
+                    <svg class="icon-default">
+                      <use xlink:href="./img/chat-icons.svg#support"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="chat-body-messages">
+                <div class="message outgoing">
+                  <div class="message-body">
+                    <div class="message-content"></div>
+                    <div class="message-status"></div>
+                  </div>
+                </div>
+                <div class="message system incoming">
+                  <div class="message-owner-ava">
+                    <img src="./img/img.jpg" alt="owner" />
+                  </div>
+                  <div class="message-body">
+                    <div class="message-owner-name">Olan</div>
+                    <div class="message-content"></div>
+                    <div class="message-status"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-body-footer">
+                <form action="">
+                  <div class="form-group">
+                    <input type="text" placeholder="Введите сообщение" class="form-control" />
+                    <button class="btn btn-default">
+                      <svg class="icon-default">
+                        <use xlink:href="./img/chat-icons.svg#send"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" style="display: none"></div>
+  </body>
+</html>
