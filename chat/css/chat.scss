@@ -332,12 +332,21 @@
       padding: 20px;
 
       .message {
-        display: flex;
+        display: grid;
         margin-bottom: 15px;
         position: relative;
 
         &.incoming {
           justify-content: start;
+          align-items: end;
+          grid-template-columns: 35px fit-content(100%);
+
+          &:has(.message-buttons) {
+            &::after {
+              content: "";
+              order: 3;
+            }
+          }
           .message-body {
             margin-left: 10px;
             border-radius: 8px 8px 8px 0;
@@ -406,12 +415,65 @@
           position: relative;
           padding: 10px;
         }
+        .message-owner-name {
+          font-weight: 700;
+          margin-bottom: 5px;
+          a {
+            text-decoration: none;
+            &:hover {
+              color: $color-primary-hover;
+            }
+          }
+        }
+        .message-content {
+          font-size: 14px;
+          p {
+            font-size: 14px;
+            margin: 0;
+            margin-bottom: 5px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: 0%;
+          }
+        }
+        .message-status {
+          position: absolute;
+          top: -9px;
+          right: 5px;
+          background-color: $color-white;
+          padding: 1px 1px 1px 3px;
+          border: 2px solid $color-surface;
+          border-radius: 8px;
+          display: flex;
+          gap: 3px;
+          align-items: center;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          color: $color-grey;
+        }
+        .message-buttons {
+          order: 4;
+          margin-top: 5px;
+          margin-left: 10px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+        }
         &.system {
           .message-body {
             background-color: $color-secondary;
             &::before {
               background-color: $color-secondary;
             }
+          }
+          .message-status {
+            border-color: $color-secondary;
+          }
+          .message-owner-name {
+            color: $color-primary;
           }
         }
         &.admin {
@@ -420,6 +482,12 @@
             &::before {
               background-color: $color-attention-surface;
             }
+          }
+          .message-status {
+            border-color: $color-attention-surface;
+          }
+          .message-owner-name {
+            color: $color-invalid;
           }
         }
       }
