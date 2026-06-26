@@ -165,6 +165,7 @@
       overflow: hidden;
       border-radius: 5px;
       margin: 1px 0;
+      background-color: $color-white;
 
       img {
         width: 100%;
@@ -402,7 +403,7 @@
         .message-owner-ava {
           width: 35px;
           height: 35px;
-          border-radius: 50%;
+          border-radius: 5px;
           overflow: hidden;
           img {
             width: 100%;
@@ -423,6 +424,9 @@
             &:hover {
               color: $color-primary-hover;
             }
+          }
+          span {
+            font-weight: 400;
           }
         }
         .message-content {
@@ -453,6 +457,11 @@
           line-height: 100%;
           letter-spacing: 0%;
           color: $color-grey;
+
+          svg.sended-icon {
+            width: 11px;
+            height: 8px;
+          }
         }
         .message-buttons {
           order: 4;
