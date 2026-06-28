@@ -184,7 +184,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tooltips();
   typeOfBookingChangeDescription();
+
+  // for activate animation
+  const track = document.querySelector(".modal-body-track");
+  document.querySelectorAll(".message-preview").forEach((message) => {
+    message.addEventListener("click", () => {
+      track.classList.add("is-chat-active");
+    });
+  });
 });
+
+function _chatBack() {
+  const track = document.querySelector(".modal-body-track");
+  track.classList.remove("is-chat-active");
+}
 
 function onBackdrop() {
   const backdrop = document.querySelector(".modal-backdrop");
