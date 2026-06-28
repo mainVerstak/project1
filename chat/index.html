@@ -372,6 +372,16 @@
     <!-- NOTE: No copy inline style -->
     <div class="container" style="height: 60%">
       <h1>Чат</h1>
+
+      <!-- NOTE: No copy this code. It's for show -->
+      <div style="display: flex; gap: 5px; flex-wrap: wrap">
+        <button class="btn btn-default _js-serv-role-btn active" data-role-id="guest">Гость</button>
+        <button class="btn btn-default _js-serv-role-btn" data-role-id="lessor">
+          Арендодатель
+        </button>
+        <button class="btn btn-default _js-serv-role-btn" data-role-id="admin">Админ</button>
+        <button class="btn btn-primary" onclick="_showModal('chat')">Открыть чат</button>
+      </div>
       <!-- Main content -->
     </div>
     <div class="container">
@@ -472,7 +482,11 @@
             <div class="modal-body-track">
               <div class="chat-list">
                 <div class="chat-list-content">
-                  <div class="chat-list-item message-preview selected">
+                  <div
+                    class="chat-list-item message-preview selected"
+                    data-chat-id="1"
+                    data-chat-roles="guest, lessor"
+                  >
                     <div class="message-preview-img">
                       <img src="./img/img.jpg" alt="img" />
                     </div>
@@ -493,7 +507,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-list-item message-preview">
+                  <div
+                    class="chat-list-item message-preview"
+                    data-chat-id="2"
+                    data-chat-roles="guest, admin"
+                  >
                     <div class="message-preview-img">
                       <img src="./img/support_big.svg" alt="img" />
                     </div>
@@ -516,7 +534,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-list-item message-preview">
+                  <div
+                    class="chat-list-item message-preview"
+                    data-chat-id="3"
+                    data-chat-roles="guest, lessor"
+                  >
                     <div class="message-preview-img">
                       <img src="./img/img.jpg" alt="img" />
                     </div>
@@ -539,7 +561,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-list-item message-preview completed">
+                  <div
+                    class="chat-list-item message-preview completed"
+                    data-chat-id="4"
+                    data-chat-roles="guest, lessor"
+                  >
                     <div class="message-preview-img">
                       <img src="./img/img.jpg" alt="img" />
                     </div>
@@ -561,7 +587,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-list-item message-preview">
+                  <div
+                    class="chat-list-item message-preview"
+                    data-chat-id="5"
+                    data-chat-roles="guest, lessor"
+                  >
                     <div class="message-preview-img">
                       <img src="./img/img.jpg" alt="img" />
                     </div>
@@ -583,13 +613,17 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-list-item message-preview completed">
+                  <div
+                    class="chat-list-item message-preview completed"
+                    data-chat-id="6"
+                    data-chat-roles="guest, lessor, admin"
+                  >
                     <div class="message-preview-img">
                       <img src="./img/img.jpg" alt="img" />
                     </div>
                     <div class="message-preview-content">
                       <div class="message-preview-title">
-                        <h3>Объявление</h3>
+                        <h3>Сдаю коттедж 00.0 м² на участке 00.0 сот</h3>
                         <div class="message-preview-info">
                           <span class="message-preview-time">12 мар 2025</span>
                         </div>
@@ -605,7 +639,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="chat-list-item message-preview completed">
+                  <div
+                    class="chat-list-item message-preview completed"
+                    data-chat-id="7"
+                    data-chat-roles="guest, admin"
+                  >
                     <div class="message-preview-img">
                       <img src="./img/support_big.svg" alt="img" />
                     </div>
@@ -684,7 +722,10 @@
                   </div>
                 </div>
                 <div class="chat-body-messages">
-                  <div class="message outgoing">
+                  <!-- by Guest -->
+                  <!-- NO COPY data-chat-id="1" data-for-role="guest" IT'S FOR SHOW -->
+                  <!-- chat 1 -->
+                  <div class="message outgoing" data-chat-id="1" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <p><b>Бронь: Сдаю коттедж 00.0 м² на участке 00.0 сот</b></p>
@@ -716,7 +757,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message system incoming">
+                  <div class="message system incoming" data-chat-id="1" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/logo_cat.svg" alt="Olan" />
                     </div>
@@ -758,7 +799,9 @@
                       </button>
                     </div>
                   </div>
-                  <div class="message outgoing">
+
+                  <!-- chat 2 -->
+                  <div class="message outgoing" data-chat-id="2" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <p>
@@ -774,7 +817,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message system incoming">
+                  <div class="message system incoming" data-chat-id="2" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/logo_cat.svg" alt="Olan" />
                     </div>
@@ -788,7 +831,7 @@
                       <div class="message-status">5 окт 2025 09:12</div>
                     </div>
                   </div>
-                  <div class="message outgoing">
+                  <div class="message outgoing" data-chat-id="2" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <p>Как долго рассматривается жалоба?</p>
@@ -801,7 +844,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message admin incoming">
+                  <div class="message admin incoming" data-chat-id="2" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/support.svg" alt="admin" />
                     </div>
@@ -816,7 +859,7 @@
                       <div class="message-status">14:22</div>
                     </div>
                   </div>
-                  <div class="message outgoing">
+                  <div class="message outgoing" data-chat-id="2" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <p>
@@ -831,7 +874,42 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message system incoming">
+
+                  <!-- chat 3 + common -->
+                  <div class="message outgoing" data-chat-id="3, 4, 5" data-for-role="guest">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p><b>Бронь: Сдаю коттедж 00.0 м² на участке 00.0 сот</b></p>
+                        <p>
+                          <span class="text-muted">Адрес:</span>
+                          квартал, улица, район, область, округ, Город, направление, шоссе
+                          <br />
+                          <span class="text-muted">Заезд:</span>
+                          20.01.2025, 12:00
+                          <br />
+                          <span class="text-muted"> Отъезд: </span>
+                          21.01.2025, 12:00
+                          <br />
+                          <span class="text-muted"> Телефон: </span>
+                          8 900 000-00-00
+                          <br />
+                          <span class="text-muted"> Гости: </span>
+                          2 взрослых, 1 ребёнок до 5 лет
+                          <br />
+                          <span class="text-muted"> Стоимость: </span>
+                          4 000 ₽
+                        </p>
+                        <p class="text-muted">Следите за решением арендодателя в этом чате.</p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        12:00
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="3, 4, 5" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/logo_cat.svg" alt="Olan" />
                     </div>
@@ -859,7 +937,7 @@
                       <div class="message-status">5 окт 2025 11:03</div>
                     </div>
                   </div>
-                  <div class="message outgoing">
+                  <div class="message outgoing" data-chat-id="3, 4" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <p>
@@ -877,7 +955,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message system incoming">
+                  <div class="message system incoming" data-chat-id="3, 4, 5" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/logo_cat.svg" alt="Olan" />
                     </div>
@@ -894,7 +972,74 @@
                       <div class="message-status">5 окт 2025 11:03</div>
                     </div>
                   </div>
-                  <div class="message system incoming">
+                  <div class="message incoming" data-chat-id="3, 5" data-for-role="guest">
+                    <div class="message-body">
+                      <div class="message-owner-name">
+                        <a href="#">Имя арендодателя</a>
+                      </div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Бронь подтверждена, ожидаю к заселению
+                            <a href="#">20.01.2025, Понедельник, в 12:00</a>.
+                          </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="3, 5" data-for-role="guest">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Напоминаем вам, что арендодатель готов принять вас к заселению
+                            <a href="#">20.01.2025, Понедельник, в 12:00</a>.
+                          </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="3, 5, 6" data-for-role="guest">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b> Вам удалось заселиться? </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message outgoing" data-chat-id="3, 5, 6" data-for-role="guest">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/chat-icons.svg#active"></use>
+                          </svg>
+                          <b> Да, удалось </b>
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        5 окт 2025 11:03
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- chat 4 -->
+                  <div class="message system incoming" data-chat-id="4" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/owner.svg" alt="owner" />
                     </div>
@@ -913,7 +1058,7 @@
                       <div class="message-status">5 окт 2025 11:03</div>
                     </div>
                   </div>
-                  <div class="message outgoing">
+                  <div class="message outgoing" data-chat-id="4" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <p>
@@ -931,7 +1076,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message system incoming">
+                  <div class="message system incoming" data-chat-id="4" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/logo_cat.svg" alt="Olan" />
                     </div>
@@ -955,76 +1100,8 @@
                       </button>
                     </div>
                   </div>
-                  <div class="message incoming">
-                    <div class="message-body">
-                      <div class="message-owner-name">
-                        <a href="#">Имя арендодателя</a>
-                      </div>
-                      <div class="message-content">
-                        <p>
-                          <b>
-                            Бронь подтверждена, ожидаю к заселению
-                            <a href="#">20.01.2025, Понедельник, в 12:00</a>.
-                          </b>
-                        </p>
-                      </div>
-                      <div class="message-status">5 окт 2025 11:03</div>
-                    </div>
-                  </div>
-                  <div class="message system incoming">
-                    <div class="message-owner-ava">
-                      <img src="./img/logo_cat.svg" alt="Olan" />
-                    </div>
-                    <div class="message-body">
-                      <div class="message-owner-name">
-                        <a href="#">Olan</a>
-                      </div>
-                      <div class="message-content">
-                        <p>
-                          <b
-                            >Напоминаем вам, что арендодатель готов принять вас к заселению
-                            <a href="#">20.01.2025, Понедельник, в 12:00.</a></b
-                          >
-                        </p>
-                      </div>
-                      <div class="message-status">5 окт 2025 11:03</div>
-                    </div>
-                  </div>
-                  <div class="message system incoming">
-                    <div class="message-owner-ava">
-                      <img src="./img/logo_cat.svg" alt="Olan" />
-                    </div>
-                    <div class="message-body">
-                      <div class="message-owner-name">
-                        <a href="#">Olan</a>
-                      </div>
-                      <div class="message-content">
-                        <p>
-                          <b>Вам удалось заселиться?</b>
-                        </p>
-                      </div>
-                      <div class="message-status">5 окт 2025 11:03</div>
-                    </div>
-                  </div>
-                  <div class="message outgoing">
-                    <div class="message-body">
-                      <div class="message-content">
-                        <p>
-                          <svg class="icon-default">
-                            <use xlink:href="./img/chat-icons.svg#active"></use>
-                          </svg>
-                          <b>Да, удалось</b>
-                        </p>
-                      </div>
-                      <div class="message-status">
-                        <svg class="icon-default">
-                          <use xlink:href="./img/chat-icons.svg#status"></use>
-                        </svg>
-                        5 окт 2025 11:03
-                      </div>
-                    </div>
-                  </div>
-                  <div class="message system incoming">
+                  <!-- chat 5 -->
+                  <div class="message system incoming" data-chat-id="5" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/logo_cat.svg" alt="Olan" />
                     </div>
@@ -1076,7 +1153,9 @@
                       <button class="btn btn-primary">Оставить отзыв</button>
                     </div>
                   </div>
-                  <div class="message outgoing">
+
+                  <!-- chat 6 -->
+                  <div class="message outgoing" data-chat-id="6" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <p><b> Обращение к модератору </b></p>
@@ -1094,7 +1173,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message admin incoming">
+                  <div class="message admin incoming" data-chat-id="6" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/support.svg" alt="admin" />
                     </div>
@@ -1109,7 +1188,7 @@
                       <div class="message-status">14:22</div>
                     </div>
                   </div>
-                  <div class="message outgoing">
+                  <div class="message outgoing" data-chat-id="6" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <p>
@@ -1127,7 +1206,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message system incoming">
+                  <div class="message system incoming" data-chat-id="6" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/logo_cat.svg" alt="Olan" />
                     </div>
@@ -1144,7 +1223,7 @@
                       <div class="message-status">12:00</div>
                     </div>
                   </div>
-                  <div class="message outgoing">
+                  <div class="message outgoing" data-chat-id="6" data-for-role="guest">
                     <div class="message-body">
                       <div class="message-content">
                         <div class="starrr selected" data-rating="4">
@@ -1183,7 +1262,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="message system incoming">
+                  <div class="message system incoming" data-chat-id="6" data-for-role="guest">
                     <div class="message-owner-ava">
                       <img src="./img/logo_cat.svg" alt="Olan" />
                     </div>
@@ -1192,6 +1271,832 @@
                       <div class="message-content">
                         <p>
                           <b> Спасибо за ваш отзыв! </b>
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                  </div>
+
+                  <!-- chat 7 -->
+                  <div class="message outgoing" data-chat-id="7" data-for-role="guest">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          <b>Объявление: Сдаю коттедж 00.0 м² на участке 00.0 сот</b>
+                        </p>
+                        <p class="text-muted">
+                          При попытке оформить аренду недоступен выбор количества гостей
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        5 окт 2025 11:03
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="7" data-for-role="guest">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>Обращение принято, пожалуйста, ожидайте ответ от модератора</b>
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                  </div>
+                  <div class="message admin incoming" data-chat-id="7" data-for-role="guest">
+                    <div class="message-owner-ava">
+                      <img src="./img/support.svg" alt="admin" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name">Администратор</div>
+                      <div class="message-content">
+                        <p>
+                          Здравствуйте, арендодатель неверно указал данные при заполнении
+                          объявления, мы исправили проблему, вы можете снова попробовать оформить
+                          аренду данного объявления. Удалось решить вашу проблему?
+                        </p>
+                      </div>
+                      <div class="message-status">14:22</div>
+                    </div>
+                  </div>
+                  <div class="message outgoing" data-chat-id="7" data-for-role="guest">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/chat-icons.svg#active"></use>
+                          </svg>
+                          <b> Да, удалось </b>
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        5 окт 2025 11:03
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="7" data-for-role="guest">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>Обращение закрыто</b>
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                  </div>
+
+                  <!-- by Lessor -->
+                  <!-- chat 1 -->
+                  <div class="message incoming" data-chat-id="1, 3, 4, 5" data-for-role="lessor">
+                    <div class="message-body">
+                      <div class="message-owner-name">Имя пользователя</div>
+                      <div class="message-content">
+                        <p><b>Бронь: Сдаю коттедж 00.0 м² на участке 00.0 сот</b></p>
+                        <p>
+                          <span class="text-muted">Адрес:</span>
+                          квартал, улица, район, область, округ, Город, направление, шоссе
+                          <br />
+                          <span class="text-muted">Заезд:</span>
+                          20.01.2025, 12:00
+                          <br />
+                          <span class="text-muted"> Отъезд: </span>
+                          21.01.2025, 12:00
+                          <br />
+                          <span class="text-muted"> Телефон: </span>
+                          8 900 000-00-00
+                          <br />
+                          <span class="text-muted"> Гости: </span>
+                          2 взрослых, 1 ребёнок до 5 лет
+                          <br />
+                          <span class="text-muted"> Итоговая стоимость: </span>
+                          4 000 ₽
+                          <br />
+                          <span class="text-muted"> Предоплата: </span>
+                          1 000 ₽
+                          <br />
+                          <span class="text-muted"> При заселении: </span>
+                          3 000 ₽
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        12:00
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="1" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Для подтверждения брони необходимо внести предоплату за 24 часа до
+                            заселения.
+                          </b>
+                        </p>
+                        <p>
+                          <span class="text-muted"> Итоговая стоимость: </span>
+                          4 000 ₽ <br />
+                          <span class="text-muted"> Предоплата: </span>
+                          1 000 ₽ <br />
+                          <span class="text-muted"> При заселении: </span>
+                          3 000 ₽ <br />
+                        </p>
+                        <p class="text-muted">
+                          Предоплата поступит владельцу на следующий день после успешного заселения.
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                    <div class="message-buttons">
+                      <button class="btn btn-default">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#cancel"></use>
+                        </svg>
+                        Отклонить бронь
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- chat 3 + common -->
+                  <div
+                    class="message system incoming"
+                    data-chat-id="3, 4, 5"
+                    data-for-role="lessor"
+                  >
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Для подтверждения брони необходимо внести предоплату за 24 часа до
+                            заселения.
+                          </b>
+                        </p>
+                        <p>
+                          <span class="text-muted"> Итоговая стоимость: </span>
+                          4 000 ₽ <br />
+                          <span class="text-muted"> Предоплата: </span>
+                          1 000 ₽ <br />
+                          <span class="text-muted"> При заселении: </span>
+                          3 000 ₽ <br />
+                        </p>
+                        <p class="text-muted">
+                          Предоплата поступит владельцу на следующий день после успешного заселения.
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div
+                    class="message system incoming"
+                    data-chat-id="3, 4, 5"
+                    data-for-role="lessor"
+                  >
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Гость внёс предполату 1 000 ₽. Подтвердите бронь и ожидайте заселения.
+                          </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message outgoing" data-chat-id="3, 4, 5" data-for-role="lessor">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/chat-icons.svg#active"></use>
+                          </svg>
+                          <b> Подтвердить бронь </b>
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        5 окт 2025 11:03
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="3, 5" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Вы подтвердили бронь, ожидайте гостей к заселению
+                            <a href="#">20.01.2025, Понедельник, в 12:00</a>.
+                          </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="3, 5" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Напоминаем вам, что гости готовы заселиться
+                            <a href="#">20.01.2025, Понедельник, в 12:00</a>.
+                          </b>
+                        </p>
+                        <p class="text-muted">
+                          Предоплата поступит вам на следующий день после успешного заселения.
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div
+                    class="message system incoming"
+                    data-chat-id="3, 5, 6"
+                    data-for-role="lessor"
+                  >
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b> Гостю удалось заселиться? </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message outgoing" data-chat-id="3, 5, 6" data-for-role="lessor">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/chat-icons.svg#active"></use>
+                          </svg>
+                          <b> Да, удалось </b>
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        5 окт 2025 11:03
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- chat 4 -->
+                  <div class="message system incoming" data-chat-id="4" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/owner.svg" alt="owner" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name">
+                        <a href="#">Имя арендодателя</a> <span class="text-muted">Системное</span>
+                      </div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Вы подтвердили бронь, ожидайте гостей к заселению
+                            <a href="#">20.01.2025, Понедельник, в 12:00.</a>
+                          </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="4" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name">
+                        <a href="#">Olan</a>
+                      </div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Гость отменил бронь. Выбранные гостем даты снова доступны для поиска.
+                          </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+
+                  <!-- chat 5 -->
+                  <div class="message system incoming" data-chat-id="5" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name">
+                        <a href="#">Olan</a>
+                      </div>
+                      <div class="message-content">
+                        <p>
+                          <b> Вам понравился гость? Пожалуйста, оставьте отзыв о нём. </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                    <div class="message-buttons">
+                      <div class="message-review-box">
+                        <div class="starrr" data-rating="4">
+                          <a href="#" class="active">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="active">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="active">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="active">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <button class="btn btn-primary">Оставить отзыв</button>
+                    </div>
+                  </div>
+
+                  <!-- chat 6 -->
+                  <div class="message incoming" data-chat-id="6" data-for-role="lessor">
+                    <div class="message-body">
+                      <div class="message-owner-name">
+                        <a href="#">Имя отправителя</a>
+                      </div>
+                      <div class="message-content">
+                        <p><b> Обращение к модератору </b></p>
+                        <p class="text-muted">
+                          Арендодатель указал неверные данные, в квартире не оказалось указанных в
+                          объявлении спальных мест. Для завершения сделки пришлось ждать
+                          арендодателя несколько часов.
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        5 окт 2025 11:03
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message admin incoming" data-chat-id="6" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/support.svg" alt="admin" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name">Администратор</div>
+                      <div class="message-content">
+                        <p>
+                          Здравствуйте, мы приняли ваше обращение, спасибо за ваши комментарии.
+                          Удалось решить ваш вопрос?
+                        </p>
+                      </div>
+                      <div class="message-status">14:22</div>
+                    </div>
+                  </div>
+                  <div class="message incoming" data-chat-id="6" data-for-role="lessor">
+                    <div class="message-body">
+                      <div class="message-owner-name">
+                        <a href="#">Имя отправителя</a>
+                      </div>
+                      <div class="message-content">
+                        <p>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/chat-icons.svg#cancel"></use>
+                          </svg>
+                          <b>Нет</b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="6" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b> Вам понравился гость? Пожалуйста, оставьте отзыв о нём. </b>
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                  </div>
+                  <div class="message outgoing" data-chat-id="6" data-for-role="lessor">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <div class="starrr selected" data-rating="4">
+                          <a href="#" class="active">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        5 окт 2025 11:03
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="6" data-for-role="lessor">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b> Спасибо за ваш отзыв! </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+
+                  <!-- by Admin -->
+                  <!-- chat 2 -->
+                  <div class="message incoming" data-chat-id="2" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Имя отправителя</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>Объявление: Сдаю коттедж 00.0 м² на участке 00.0 сот</b>
+                        </p>
+                        <p class="text-muted">Арендодатель не отвечает на звонки и сообщения</p>
+                      </div>
+                      <div class="message-status">5 окт 2025 09:12</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="2" data-for-role="admin">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b> Обращение принято, пожалуйста, ожидайте ответ от модератора </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 09:12</div>
+                    </div>
+                  </div>
+                  <div class="message incoming" data-chat-id="2" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Имя отправителя</a></div>
+                      <div class="message-content">
+                        <p>Как долго рассматривается жалоба?</p>
+                      </div>
+                      <div class="message-status">5 окт 2025 09:12</div>
+                    </div>
+                  </div>
+                  <div class="message admin outgoing" data-chat-id="2" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          Здравствуйте, ваша жалоба рассмотрена, арендодатель в сети. Пожалуйста,
+                          опишите проблему подробнее.
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default sended-icon">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        14:22
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message incoming" data-chat-id="2" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Имя отправителя</a></div>
+                      <div class="message-content">
+                        <p>
+                          Арендодатель не отвечал 5.10 в течение всего дня, ни на звонки, ни в чате
+                        </p>
+                      </div>
+                      <div class="message-status">14:23</div>
+                    </div>
+                  </div>
+                  <div class="message outgoing" data-chat-id="2" data-for-role="admin">
+                    <div class="message-buttons">
+                      <button class="btn btn-default">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/icons.svg#link"></use>
+                        </svg>
+                        Открыть объявление
+                      </button>
+                      <button class="btn btn-default">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#archive"></use>
+                        </svg>
+                        Закрыть тикет
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- chat 6 -->
+                  <div class="message incoming" data-chat-id="6" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Имя отправителя</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b> Здравствуйте, со двора первый от торца дома, со стороны шоссе </b>
+                        </p>
+                      </div>
+                      <div class="message-status">14:23</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="6" data-for-role="admin">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b> Вам удалось заселиться? </b>
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                  </div>
+                  <div class="message outgoing" data-chat-id="6" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/chat-icons.svg#active"></use>
+                          </svg>
+                          <b> Да, удалось </b>
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        5 окт 2025 11:03
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message incoming" data-chat-id="6" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Имя отправителя</a></div>
+                      <div class="message-content">
+                        <p><b> Обращение к модератору </b></p>
+                        <p class="text-muted">
+                          Арендодатель указал неверные данные, в квартире не оказалось указанных в
+                          объявлении спальных мест. Для завершения сделки пришлось ждать
+                          арендодателя несколько часов.
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message admin outgoing" data-chat-id="6" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          Здравствуйте, мы приняли ваше обращение, спасибо за ваши комментарии.
+                          Удалось решить ваш вопрос?
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        14:22
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message incoming" data-chat-id="6" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Имя отправителя</a></div>
+                      <div class="message-content">
+                        <p>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/chat-icons.svg#cancel"></use>
+                          </svg>
+                          <b>Нет</b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="6" data-for-role="admin">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>
+                            Вам понравилось в Сдаю коттедж 00.0 м² на участке 00.0 сот? Пожалуйста,
+                            оставьте отзыв о проживании – это поможет другим путешественникам.
+                          </b>
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                  </div>
+                  <div class="message incoming" data-chat-id="6" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Имя отправителя</a></div>
+                      <div class="message-content">
+                        <div class="starrr selected" data-rating="4">
+                          <a href="#" class="active">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                          <a href="#">
+                            <svg class="icon-default">
+                              <use xlink:href="./img/icons.svg#favorite-fill"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="6" data-for-role="admin">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b> Спасибо за ваш отзыв! </b>
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                  </div>
+
+                  <!-- chat 7 -->
+                  <div class="message incoming" data-chat-id="7" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Степан Бушуев</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>Объявление: Сдаю коттедж 00.0 м² на участке 00.0 сот</b>
+                        </p>
+                        <p class="text-muted">
+                          При попытке оформить аренду недоступен выбор количества гостей
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="7" data-for-role="admin">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>Обращение принято, пожалуйста, ожидайте ответ от модератора</b>
+                        </p>
+                      </div>
+                      <div class="message-status">12:00</div>
+                    </div>
+                  </div>
+                  <div class="message admin outgoing" data-chat-id="7" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-content">
+                        <p>
+                          Здравствуйте, арендодатель неверно указал данные при заполнении
+                          объявления, мы исправили проблему, вы можете снова попробовать оформить
+                          аренду данного объявления. Удалось решить вашу проблему?
+                        </p>
+                      </div>
+                      <div class="message-status">
+                        <svg class="icon-default">
+                          <use xlink:href="./img/chat-icons.svg#status"></use>
+                        </svg>
+                        14:22
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message incoming" data-chat-id="7" data-for-role="admin">
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Степан Бушуев</a></div>
+                      <div class="message-content">
+                        <p>
+                          <svg class="icon-default">
+                            <use xlink:href="./img/chat-icons.svg#active"></use>
+                          </svg>
+                          <b> Да, удалось </b>
+                        </p>
+                      </div>
+                      <div class="message-status">5 окт 2025 11:03</div>
+                    </div>
+                  </div>
+                  <div class="message system incoming" data-chat-id="7" data-for-role="admin">
+                    <div class="message-owner-ava">
+                      <img src="./img/logo_cat.svg" alt="Olan" />
+                    </div>
+                    <div class="message-body">
+                      <div class="message-owner-name"><a href="#">Olan</a></div>
+                      <div class="message-content">
+                        <p>
+                          <b>Обращение закрыто</b>
                         </p>
                       </div>
                       <div class="message-status">12:00</div>

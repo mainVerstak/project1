@@ -185,6 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
   tooltips();
   typeOfBookingChangeDescription();
 
+  // Messages
   // for activate animation
   const track = document.querySelector(".modal-body-track");
   document.querySelectorAll(".message-preview").forEach((message) => {
@@ -192,6 +193,103 @@ document.addEventListener("DOMContentLoaded", function () {
       track.classList.add("is-chat-active");
     });
   });
+
+  // No copy it just for preview
+  const previews = document.querySelectorAll(".message-preview");
+  const allMessages = document.querySelectorAll(".message");
+  let roleId = "guest";
+  let openChatId = "1";
+
+  function selectPreview(id) {
+    previews.forEach((preview) => {
+      preview.classList.remove("selected");
+      if (preview.dataset.chatId == id) {
+        preview.classList.add("selected");
+      }
+    });
+  }
+
+  function showMessagesByChatId(id, role) {
+    allMessages.forEach((message) => {
+      message.style.display = "none";
+      const chatIds = message.dataset.chatId.split(", ");
+      const forRole = message.dataset.forRole;
+      if (chatIds.includes(id) && role == forRole) {
+        message.style.display = "grid";
+      }
+    });
+  }
+
+  function switchChat(id, role) {
+    selectPreview(id);
+    showMessagesByChatId(id, role);
+    showForCurrentRole(role);
+  }
+
+  function showForCurrentRole(role) {
+    previews.forEach((preview) => {
+      preview.style.display = "none";
+      const roles = preview.dataset.chatRoles.split(", ");
+      if (roles.includes(role)) {
+        preview.style.display = "grid";
+      }
+    });
+  }
+
+  function changeStatusBadgeCollorByRole(role) {
+    previews.forEach((preview) => {
+      if (role === "lessor") {
+        if (preview.dataset.chatId == 1) {
+          const statusEl = preview.querySelector(".message-preview-status");
+          statusEl.classList.remove("invalid");
+          statusEl.classList.add("primary");
+        }
+      } else if (role === "admin") {
+        if (preview.dataset.chatId == 2) {
+          const statusEl = preview.querySelector(".message-preview-status");
+          statusEl.classList.remove("primary");
+          statusEl.classList.add("invalid");
+        }
+      } else {
+        const statusEl = preview.querySelector(".message-preview-status");
+        if (preview.dataset.chatId == 1) {
+          statusEl.classList.remove("primary");
+          statusEl.classList.add("invalid");
+        }
+        if (preview.dataset.chatId == 2) {
+          statusEl.classList.remove("invalid");
+          statusEl.classList.add("primary");
+        }
+      }
+    });
+  }
+
+  document.querySelectorAll("._js-serv-role-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      document.querySelectorAll("._js-serv-role-btn").forEach((btn) => {
+        btn.classList.remove("active");
+      });
+      const b = e.target;
+      b.classList.add("active");
+      roleId = b.dataset.roleId;
+      changeStatusBadgeCollorByRole(roleId);
+      if (roleId === "admin") {
+        switchChat("2", roleId);
+      } else {
+        switchChat("1", roleId);
+      }
+    });
+  });
+
+  previews.forEach((preview) => {
+    preview.addEventListener("click", (e) => {
+      const previewElement = e.target.closest(".message-preview");
+      const id = previewElement.dataset.chatId;
+      switchChat(id, roleId);
+    });
+  });
+
+  switchChat(openChatId, roleId);
 });
 
 function _chatBack() {

@@ -6119,12 +6119,13 @@ footer {
 .chat .message-preview:hover {
   background-color: #f6f7f9;
 }
+.chat .message-preview.completed {
+  opacity: 50%;
+}
 .chat .message-preview.selected {
   background-color: #e6eff9;
   cursor: auto;
-}
-.chat .message-preview.completed {
-  opacity: 50%;
+  opacity: 100%;
 }
 .chat .message-preview .message-preview-img {
   width: 70px;
@@ -6361,6 +6362,9 @@ footer {
 }
 .chat .chat-body .chat-body-messages .message.outgoing {
   justify-content: end;
+}
+.chat .chat-body .chat-body-messages .message.outgoing .message-owner-ava {
+  display: none;
 }
 .chat .chat-body .chat-body-messages .message.outgoing .message-body {
   margin-left: 10px;

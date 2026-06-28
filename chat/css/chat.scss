@@ -187,13 +187,14 @@
       background-color: $color-surface;
     }
 
+    &.completed {
+      opacity: 50%;
+    }
+
     &.selected {
       background-color: $color-secondary;
       cursor: auto;
-    }
-
-    &.completed {
-      opacity: 50%;
+      opacity: 100%;
     }
 
     .message-preview-img {
@@ -445,6 +446,9 @@
         }
         &.outgoing {
           justify-content: end;
+          .message-owner-ava {
+            display: none;
+          }
           .message-body {
             margin-left: 10px;
             border-radius: 8px 8px 0 8px;
