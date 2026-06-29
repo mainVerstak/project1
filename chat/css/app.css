@@ -6079,7 +6079,6 @@ footer {
   border-radius: 8px;
   height: calc(100% - 54px);
   overflow-y: auto;
-  scrollbar-gutter: stable;
 }
 .chat .chat-list .chat-list-pagination ul.pagination {
   width: 100%;
@@ -6198,7 +6197,7 @@ footer {
   line-height: 130%;
   letter-spacing: 0%;
   min-width: 0;
-  max-width: 300px;
+  max-width: 290px;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -6206,12 +6205,12 @@ footer {
 }
 @media (max-width: 1199px) {
   .chat .message-preview .message-preview-description {
-    max-width: 250px;
+    max-width: 240px;
   }
 }
 @media (max-width: 991px) {
   .chat .message-preview .message-preview-description {
-    max-width: 200px;
+    max-width: 190px;
   }
 }
 @media (max-width: 767px) {
