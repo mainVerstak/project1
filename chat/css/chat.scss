@@ -751,3 +751,88 @@
     }
   }
 }
+
+//sms
+#form_unauth_modal,
+#form_code_call_modal,
+#form_code_sms_modal {
+  .modal-dialog.modal-md {
+    max-width: 400px;
+  }
+}
+#form_code_call_modal form,
+#form_code_sms_modal form {
+  .sms-code-countdown {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  .resend-sms-code-trigger {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .sms-code-feedback-error {
+    color: $color-invalid;
+    font-size: 14px;
+    line-height: 1.3;
+    margin-top: 15px;
+  }
+}
+.sms-code-input {
+  position: relative;
+  width: 100%;
+
+  .sms-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    opacity: 0;
+    font-size: 16px;
+    letter-spacing: 20px;
+    text-align: center;
+    z-index: 10;
+  }
+  .code-boxes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .code-box {
+    width: 44px;
+    height: 44px;
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+  }
+  .code-box.filled {
+    border-color: $color-secondary;
+  }
+  .code-box.active {
+    border-width: 2px;
+    border-color: $color-primary;
+  }
+
+  &.has-feedback {
+    &.has-success {
+      .code-box {
+        border-color: $color-valid;
+      }
+    }
+    &.has-error {
+      .code-box {
+        border-color: $color-invalid;
+      }
+    }
+  }
+}
