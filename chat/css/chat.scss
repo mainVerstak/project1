@@ -31,6 +31,7 @@
         }
         @media (max-width: 767px) {
           width: calc(100vw - 20px);
+          height: calc(100vh - 20px);
           left: 0;
           transform: translateX(0) translateY(-50%);
           padding: 0;
@@ -354,6 +355,9 @@
         @media (min-width: 768px) {
           display: none;
         }
+        .badge {
+          min-width: 14px;
+        }
       }
 
       .chat-body-header-info {
@@ -607,17 +611,29 @@
             &.active {
               color: #f5ce4f;
             }
+            &:focus,
+            &:focus-visible,
+            &:focus-within {
+              outline: none;
+              color: #f5ce4f;
+            }
           }
 
           // if need
           &:not(.selected) {
             a {
               &:hover,
-              &:has(~ a:hover) {
+              &:focus,
+              &:focus-visible,
+              &:has(~ a:hover),
+              &:has(~ a:focus),
+              &:has(~ a:focus-visible) {
                 color: #f5ce4f;
               }
             }
-            a:hover ~ a {
+            a:hover ~ a,
+            a:focus ~ a,
+            a:focus-visible ~ a {
               color: $color-secondary;
             }
           }

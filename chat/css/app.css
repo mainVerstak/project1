@@ -5974,6 +5974,7 @@ footer {
 @media (max-width: 767px) {
   .chat.modal .modal-dialog.modal-xl {
     width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
     left: 0;
     transform: translateX(0) translateY(-50%);
     padding: 0;
@@ -6282,6 +6283,9 @@ footer {
     display: none;
   }
 }
+.chat .chat-body .chat-body-header .chat-back .badge {
+  min-width: 14px;
+}
 .chat .chat-body .chat-body-header .chat-body-header-info {
   display: flex;
   flex-direction: column;
@@ -6515,10 +6519,16 @@ footer {
 .chat .chat-body .chat-body-messages .message .starrr a.active {
   color: #f5ce4f;
 }
-.chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:hover, .chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:has(~ a:hover) {
+.chat .chat-body .chat-body-messages .message .starrr a:focus, .chat .chat-body .chat-body-messages .message .starrr a:focus-visible, .chat .chat-body .chat-body-messages .message .starrr a:focus-within {
+  outline: none;
   color: #f5ce4f;
 }
-.chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:hover ~ a {
+.chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:hover, .chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:focus, .chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:focus-visible, .chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:has(~ a:hover), .chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:has(~ a:focus), .chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:has(~ a:focus-visible) {
+  color: #f5ce4f;
+}
+.chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:hover ~ a,
+.chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:focus ~ a,
+.chat .chat-body .chat-body-messages .message .starrr:not(.selected) a:focus-visible ~ a {
   color: #e6eff9;
 }
 .chat .chat-body .chat-body-footer {
