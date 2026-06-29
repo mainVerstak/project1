@@ -5938,6 +5938,9 @@ footer {
   transform: translateX(0);
 }
 
+.chat.modal .modal-backdrop {
+  z-index: 0;
+}
 .chat.modal .modal-dialog {
   padding: 0 64px;
 }
@@ -6176,7 +6179,8 @@ footer {
   letter-spacing: 0%;
 }
 .chat .message-preview .message-preview-title .message-preview-badge {
-  width: 14px;
+  min-width: 14px;
+  padding: 2px;
   height: 14px;
   display: flex;
   align-items: center;
@@ -6314,6 +6318,7 @@ footer {
   gap: 3px;
 }
 .chat .chat-body .chat-body-messages {
+  scroll-behavior: smooth;
   height: calc(100% - 130px);
   overflow-y: auto;
   padding: 20px;
@@ -6324,6 +6329,7 @@ footer {
   position: relative;
 }
 .chat .chat-body .chat-body-messages .message.incoming {
+  margin-right: 25px;
   justify-content: start;
   align-items: end;
   grid-template-columns: 35px fit-content(100%);
@@ -6361,6 +6367,7 @@ footer {
 }
 .chat .chat-body .chat-body-messages .message.outgoing {
   justify-content: end;
+  margin-left: 25px;
 }
 .chat .chat-body .chat-body-messages .message.outgoing .message-owner-ava {
   display: none;
@@ -6529,6 +6536,9 @@ footer {
   }
 }
 
+.chat-submodal .modal-backdrop {
+  z-index: 0;
+}
 .chat-submodal .modal-dialog.modal-md {
   margin-top: 0;
   margin-bottom: 0;
@@ -6633,6 +6643,81 @@ footer {
 }
 .chat-submodal .chat-support-form .recaptcha {
   margin-bottom: 20px;
+}
+
+#form_unauth_modal .modal-dialog.modal-md,
+#form_code_call_modal .modal-dialog.modal-md,
+#form_code_sms_modal .modal-dialog.modal-md {
+  max-width: 400px;
+}
+
+#form_code_call_modal form .sms-code-countdown,
+#form_code_sms_modal form .sms-code-countdown {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+#form_code_call_modal form .resend-sms-code-trigger,
+#form_code_sms_modal form .resend-sms-code-trigger {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+#form_code_call_modal form .sms-code-feedback-error,
+#form_code_sms_modal form .sms-code-feedback-error {
+  color: #f55c3d;
+  font-size: 14px;
+  line-height: 1.3;
+  margin-top: 15px;
+}
+
+.sms-code-input {
+  position: relative;
+  width: 100%;
+}
+.sms-code-input .sms-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  opacity: 0;
+  font-size: 16px;
+  letter-spacing: 20px;
+  text-align: center;
+  z-index: 10;
+}
+.sms-code-input .code-boxes {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  pointer-events: none;
+}
+.sms-code-input .code-box {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e6eff9;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative;
+}
+.sms-code-input .code-box.filled {
+  border-color: #e6eff9;
+}
+.sms-code-input .code-box.active {
+  border-width: 2px;
+  border-color: #084c95;
+}
+.sms-code-input.has-feedback.has-success .code-box {
+  border-color: #acf256;
+}
+.sms-code-input.has-feedback.has-error .code-box {
+  border-color: #f55c3d;
 }
 
 /*# sourceMappingURL=app.css.map */
