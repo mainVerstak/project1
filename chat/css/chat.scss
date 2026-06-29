@@ -1,5 +1,8 @@
 .chat {
   &.modal {
+    .modal-backdrop {
+      z-index: 0;
+    }
     .modal-dialog {
       padding: 0 64px;
 
@@ -250,7 +253,8 @@
         letter-spacing: 0%;
       }
       .message-preview-badge {
-        width: 14px;
+        min-width: 14px;
+        padding: 2px;
         height: 14px;
         display: flex;
         align-items: center;
@@ -392,6 +396,7 @@
       }
     }
     .chat-body-messages {
+      scroll-behavior: smooth;
       height: calc(100% - 130px);
       overflow-y: auto;
       padding: 20px;
@@ -402,6 +407,7 @@
         position: relative;
 
         &.incoming {
+          margin-right: 25px;
           justify-content: start;
           align-items: end;
           grid-template-columns: 35px fit-content(100%);
@@ -446,6 +452,7 @@
         }
         &.outgoing {
           justify-content: end;
+          margin-left: 25px;
           .message-owner-ava {
             display: none;
           }
@@ -637,6 +644,9 @@
 }
 
 .chat-submodal {
+  .modal-backdrop {
+    z-index: 0;
+  }
   // Need to check
   .modal-dialog.modal-md {
     margin-top: 0;

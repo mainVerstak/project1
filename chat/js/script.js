@@ -286,6 +286,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const previewElement = e.target.closest(".message-preview");
       const id = previewElement.dataset.chatId;
       switchChat(id, roleId);
+
+      const chatMessages = document.querySelector(".chat-body-messages");
+      if (chatMessages) {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
     });
   });
 
@@ -397,16 +402,23 @@ function _chatBack() {
   track.classList.remove("is-chat-active");
 }
 
-function onBackdrop() {
-  const backdrop = document.querySelector(".modal-backdrop");
+function onBackdrop(id) {
+  const modal = document.getElementById(id);
+  const backdrop = document.createElement("div");
+  backdrop.id = `backdrop_for_${id}`;
+  backdrop.classList.add("modal-backdrop");
   backdrop.style.display = "block";
   backdrop.classList.add("in");
+  backdrop.addEventListener("click", (e) => {
+    console.log("click on backdrop", e.target);
+    _hideModal(id);
+  });
+  modal.prepend(backdrop);
 }
 
-function offBackdrop() {
-  const backdrop = document.querySelector(".modal-backdrop");
-  backdrop.style.display = "none";
-  backdrop.classList.remove("in");
+function offBackdrop(backdropId) {
+  const backdrop = document.getElementById(backdropId);
+  backdrop.remove();
 }
 
 // Для открытия модального окна
@@ -415,7 +427,7 @@ function _showModal(id) {
   if (!modal) return;
   modal.style.display = "block";
   modal.classList.add("in");
-  onBackdrop();
+  onBackdrop(id);
 }
 
 // Для закрытия модального окна
@@ -424,7 +436,7 @@ function _hideModal(id) {
   if (!modal) return;
   modal.style.display = "none";
   modal.classList.remove("in");
-  offBackdrop();
+  offBackdrop(`backdrop_for_${id}`);
 }
 
 _showModal("chat");
