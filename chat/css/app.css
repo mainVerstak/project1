@@ -3209,6 +3209,7 @@ li.nav-tabs-dropdown {
   align-items: center;
   justify-content: space-between;
   color: #000 !important;
+  border-bottom: 1px solid #e5e5e5;
 }
 .appartments__item:hover {
   text-decoration: none;
@@ -3218,9 +3219,6 @@ li.nav-tabs-dropdown {
 }
 .appartments__item:first-child {
   border-top: 1px solid #e5e5e5;
-}
-.appartments__item {
-  border-bottom: 1px solid #e5e5e5;
 }
 .appartments__item.active {
   border-bottom: 1px solid transparent;
@@ -5991,12 +5989,12 @@ footer {
     overflow: hidden;
   }
 }
-.chat.modal .modal-content .modal-header::after, .chat.modal .modal-content .modal-header::before {
-  content: none;
-}
 .chat.modal .modal-content .modal-header {
   position: relative;
   padding: 20px;
+}
+.chat.modal .modal-content .modal-header::after, .chat.modal .modal-content .modal-header::before {
+  content: none;
 }
 @media (max-width: 767px) {
   .chat.modal .modal-content .modal-header {
@@ -6245,7 +6243,7 @@ footer {
   color: #f55c3d;
 }
 .chat .message-preview .message-preview-status.valid {
-  color: #acf256;
+  color: #90ca48;
 }
 .chat .message-preview .message-preview-status.primary {
   color: #084c95;
@@ -6415,7 +6413,7 @@ footer {
 .chat .chat-body .chat-body-messages .message .message-body {
   background-color: #f6f7f9;
   position: relative;
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
 }
 .chat .chat-body .chat-body-messages .message .message-owner-name {
   font-weight: 700;
@@ -6508,10 +6506,12 @@ footer {
 }
 .chat .chat-body .chat-body-messages .message .message-review-box .starrr {
   gap: 10px;
+  margin-bottom: 0;
 }
 .chat .chat-body .chat-body-messages .message .starrr {
   display: flex;
   gap: 5px;
+  margin-bottom: 5px;
 }
 .chat .chat-body .chat-body-messages .message .starrr a {
   display: flex;

@@ -314,7 +314,7 @@
         color: $color-invalid;
       }
       &.valid {
-        color: $color-valid;
+        color: #90ca48;
       }
       &.primary {
         color: $color-primary;
@@ -499,7 +499,7 @@
         .message-body {
           background-color: $color-surface;
           position: relative;
-          padding: 10px;
+          padding: 10px 10px 5px 10px;
         }
         .message-owner-name {
           font-weight: 700;
@@ -598,11 +598,13 @@
           padding: 15px;
           .starrr {
             gap: 10px;
+            margin-bottom: 0;
           }
         }
         .starrr {
           display: flex;
           gap: 5px;
+          margin-bottom: 5px;
 
           a {
             display: flex;
